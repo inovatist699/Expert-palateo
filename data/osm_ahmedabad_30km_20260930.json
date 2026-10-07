@@ -1,0 +1,3753 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-09-30T06:26:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 440339381,
+      "lat": 22.9936417,
+      "lon": 72.5357058,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "name": "Vishala"
+      }
+    },
+    {
+      "type": "node",
+      "id": 440339389,
+      "lat": 23.0042051,
+      "lon": 72.5397742,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Rajvadu Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 632066507,
+      "lat": 23.0227338,
+      "lon": 72.5920852,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Mangaldas Ni Haveli"
+      }
+    },
+    {
+      "type": "node",
+      "id": 695666626,
+      "lat": 23.0317635,
+      "lon": 72.5701852,
+      "tags": {
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:ur": "مکڈونلڈز",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "brand:wikipedia:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:wikipedia:ur": "مکڈونلڈز",
+        "cuisine": "burger",
+        "name": "McDonald's",
+        "name:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "name:ur": "مکڈونلڈز"
+      }
+    },
+    {
+      "type": "node",
+      "id": 695666627,
+      "lat": 23.0422876,
+      "lon": 72.5699576,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Cyber Cafe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1313805176,
+      "lat": 23.0410467,
+      "lon": 72.5485619,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Cafe Souq"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1313805177,
+      "lat": 23.0407234,
+      "lon": 72.5485324,
+      "tags": {
+        "amenity": "cafe",
+        "cost:coffee": "$3",
+        "name": "Chocolate Room"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1313805178,
+      "lat": 23.0427079,
+      "lon": 72.5494685,
+      "tags": {
+        "amenity": "cafe",
+        "cost:coffee": "$2",
+        "name": "Barrista, Vijay 4 Roads"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1313805179,
+      "lat": 23.0312796,
+      "lon": 72.5493907,
+      "tags": {
+        "amenity": "cafe",
+        "cost:coffee": "$2",
+        "name": "Cafe Coffee Day"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1313805181,
+      "lat": 23.0412121,
+      "lon": 72.5485673,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "Aarohi Complex",
+        "addr:postcode": "380009",
+        "addr:street": "Vijay Cross Roads",
+        "amenity": "restaurant",
+        "capacity": "40",
+        "cuisine": "international",
+        "name": "Upper Crust Cafe",
+        "opening_hours": "07:00-23:00",
+        "phone": "91-79-26401554",
+        "smoking": "no",
+        "source": "http://www.cafeuppercrust.com/cafe-uppercrust.php",
+        "website": "https://www.cafeuppercrust.com/",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1343052725,
+      "lat": 23.1887134,
+      "lon": 72.6268235,
+      "tags": {
+        "amenity": "fast_food",
+        "int_name": "Cafeteria",
+        "name": "Cafeteria",
+        "operator": "DAIICT"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1429887846,
+      "lat": 23.0120603,
+      "lon": 72.5691606,
+      "tags": {
+        "amenity": "cafe",
+        "cost:coffee": "$2",
+        "cuisine": "indian",
+        "name": "Chai Gate!!!",
+        "wifi": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1561520723,
+      "lat": 23.0116852,
+      "lon": 72.568823,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Amul"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1779118412,
+      "lat": 23.0457522,
+      "lon": 72.5524611,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Dinner Bell"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1964926897,
+      "lat": 23.0376713,
+      "lon": 72.565775,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "italian",
+        "name": "Havmor Restaurant",
+        "operator": "indian&international"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1973440767,
+      "lat": 23.0328812,
+      "lon": 72.5655478,
+      "tags": {
+        "addr:housename": "Shri Krishna Centre",
+        "addr:postcode": "380009",
+        "addr:street": "Law Garden Road",
+        "amenity": "fast_food",
+        "cuisine": "ice_cream",
+        "name": "Natural Ice Cream",
+        "website": "https://naturalicecreams.in/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1973442552,
+      "lat": 23.0270378,
+      "lon": 72.5816167,
+      "tags": {
+        "addr:housename": "The House of MG",
+        "amenity": "restaurant",
+        "cuisine": "regional",
+        "name": "Agashiye Restaurant",
+        "source": "local_knowledge",
+        "website": "https://houseofmg.com/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2211694435,
+      "lat": 23.0847638,
+      "lon": 72.5647629,
+      "tags": {
+        "addr:postcode": "382480",
+        "addr:street": "GST Crossing",
+        "amenity": "restaurant",
+        "capacity": "50",
+        "diet:vegetarian": "only",
+        "name": "Food Temple",
+        "smoking": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2376626693,
+      "lat": 23.0523024,
+      "lon": 72.4998803,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Black Salt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2377178378,
+      "lat": 23.0272633,
+      "lon": 72.5816108,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:postcode": "380001",
+        "addr:street": "Opposite Sidi Saiyad Jali",
+        "amenity": "restaurant",
+        "capacity": "60",
+        "check_date": "2023-10-22",
+        "cuisine": "regional",
+        "name": "Green House Restaurant",
+        "opening_hours": "Mo-Su 7:00-22:00",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "smoking": "outside"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2477174077,
+      "lat": 23.0674245,
+      "lon": 72.5645716,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "Punjabi,_SouthIndia,_Gujarati Thali.",
+        "historic": "monument",
+        "name": "Vrundavan Restaurant;AKHBAR NAGAR CIRCLE",
+        "name:en": "AKHBAR NAGAR CIRCLE"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2679948361,
+      "lat": 23.1964319,
+      "lon": 72.6328106,
+      "tags": {
+        "addr:city": "Gandhinagar",
+        "addr:housename": "1st Floor, Super Mall 2",
+        "addr:housenumber": "148-A",
+        "addr:postcode": "382009",
+        "addr:street": "NH8C",
+        "amenity": "cafe",
+        "cuisine": "Gujarati",
+        "internet_access": "yes",
+        "name": "Ken's Koffee Plus Plus",
+        "opening_hours": "09:30-21:30",
+        "phone": "+91 8758637922"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2908966984,
+      "lat": 23.0212619,
+      "lon": 72.543503,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:street": "Nehrunagar",
+        "amenity": "restaurant",
+        "cuisine": "pizza",
+        "name": "Real Paprika"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3204975264,
+      "lat": 23.0200882,
+      "lon": 72.5860331,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:postcode": "380001",
+        "amenity": "fast_food",
+        "cuisine": "regional",
+        "name": "Gol Limbda Bhajiya and Nashta House",
+        "opening_hours": "06:30-21:30",
+        "smoking": "outside"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3239361169,
+      "lat": 23.0362229,
+      "lon": 72.5494261,
+      "tags": {
+        "amenity": "cafe",
+        "cuisine": "coffee;snack",
+        "internet_access": "no",
+        "internet_access:fee": "no",
+        "name": "Zen Cafe",
+        "opening_hours": "16:00-20:00",
+        "smoking": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3241011933,
+      "lat": 23.0480405,
+      "lon": 72.526862,
+      "tags": {
+        "addr:city": "ahmedabad",
+        "amenity": "restaurant",
+        "cuisine": "regional",
+        "name": "Barbeque Nation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3242226330,
+      "lat": 23.0329764,
+      "lon": 72.5600005,
+      "tags": {
+        "amenity": "cafe",
+        "brand": "Cafe Coffee Day",
+        "brand:wikidata": "Q5017235",
+        "cuisine": "coffee_shop",
+        "internet_access": "no",
+        "internet_access:fee": "no",
+        "name": "Cafe Coffee Day",
+        "opening_hours": "Mo-Su 09:00-23:00",
+        "operator": "Cafe Coffee Day",
+        "phone": "+91 93776 19151",
+        "smoking": "no",
+        "takeaway": "yes",
+        "website": "https://www.cafecoffeeday.com/",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3293763762,
+      "lat": 23.0423379,
+      "lon": 72.549193,
+      "tags": {
+        "amenity": "fast_food",
+        "delivery": "yes",
+        "name": "Shreeji krupa vadapav",
+        "opening_hours": "Mo-Su 10:00-22:00",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3293792062,
+      "lat": 23.0423816,
+      "lon": 72.5486525,
+      "tags": {
+        "addr:street": "120 Feet Ring Road",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:ur": "مکڈونلڈز",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "brand:wikipedia:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:wikipedia:ur": "مکڈونلڈز",
+        "cuisine": "burger",
+        "name": "McDonald's",
+        "name:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "name:ur": "مکڈونلڈز",
+        "opening_hours": "24/7",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3294081761,
+      "lat": 23.0426757,
+      "lon": 72.5492422,
+      "tags": {
+        "addr:street": "120 Feet Ring Road",
+        "amenity": "fast_food",
+        "cuisine": "ice_cream",
+        "name": "Asharfilal Kulfi",
+        "opening_hours": "24/7"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3306683246,
+      "lat": 23.0246187,
+      "lon": 72.5828928,
+      "tags": {
+        "amenity": "cafe",
+        "cuisine": "ice_cream",
+        "name": "Ghandi Cold Drink House"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3306683251,
+      "lat": 23.027562,
+      "lon": 72.5811204,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Lucky Tea Shop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3306683254,
+      "lat": 23.0552316,
+      "lon": 72.5908571,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Naeeka",
+        "tourism": "hotel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3306683255,
+      "lat": 23.0248713,
+      "lon": 72.5829376,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Nishat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3306683256,
+      "lat": 23.0248607,
+      "lon": 72.5830856,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Nishat"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3306683257,
+      "lat": 23.0245678,
+      "lon": 72.5823659,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Paramount"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3306683649,
+      "lat": 23.0263181,
+      "lon": 72.5830356,
+      "tags": {
+        "amenity": "cafe",
+        "internet_access": "yes",
+        "internet_access:fee": "yes",
+        "name": "Relief Cyber Cafe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3426621651,
+      "lat": 23.0206812,
+      "lon": 72.5540845,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Jasuben Pizza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3459655264,
+      "lat": 23.1862186,
+      "lon": 72.6329653,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Canteen"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3500459658,
+      "lat": 23.0839448,
+      "lon": 72.5892158,
+      "tags": {
+        "amenity": "fast_food",
+        "cuisine": "regional",
+        "delivery": "no",
+        "name": "MAHARAJ Food Corner",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3776238973,
+      "lat": 23.0342579,
+      "lon": 72.5609251,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "waah"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3776238974,
+      "lat": 23.0342641,
+      "lon": 72.5608446,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "regional",
+        "name": "havmor"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3776238977,
+      "lat": 23.0344517,
+      "lon": 72.5612536,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "pizza",
+        "name": "choice"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3776238978,
+      "lat": 23.0358422,
+      "lon": 72.5617312,
+      "tags": {
+        "amenity": "cafe",
+        "name": "chocolate room"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3776238979,
+      "lat": 23.0342345,
+      "lon": 72.5610096,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "purohit"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4199023903,
+      "lat": 23.0245018,
+      "lon": 72.5073318,
+      "tags": {
+        "amenity": "cafe",
+        "brand": "Cafe Coffee Day",
+        "brand:wikidata": "Q5017235",
+        "cuisine": "coffee_shop",
+        "name": "Cafe Coffee Day",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4199023904,
+      "lat": 23.0385865,
+      "lon": 72.5126614,
+      "tags": {
+        "amenity": "restaurant",
+        "diet:vegetarian": "yes",
+        "name": "Honest"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4199023905,
+      "lat": 23.0385075,
+      "lon": 72.512884,
+      "tags": {
+        "amenity": "fast_food",
+        "brand": "Subway",
+        "brand:pa": "ਸਬਵੇਅ",
+        "brand:ur": "سب وے",
+        "brand:wikidata": "Q244457",
+        "brand:wikipedia": "en:Subway (restaurant)",
+        "cuisine": "sandwich",
+        "name": "Subway",
+        "name:pa": "ਸਬਵੇਅ",
+        "name:ur": "سب وے",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4199023906,
+      "lat": 23.0244178,
+      "lon": 72.507327,
+      "tags": {
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "cuisine": "burger",
+        "name": "McDonald's",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4199023907,
+      "lat": 23.0381817,
+      "lon": 72.5122645,
+      "tags": {
+        "amenity": "restaurant",
+        "diet:vegetarian": "yes",
+        "name": "Havmor"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4292013893,
+      "lat": 23.2184113,
+      "lon": 72.5151861,
+      "tags": {
+        "addr:street": "sh 41",
+        "amenity": "fast_food",
+        "name": "JANTA ice cream"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4292013895,
+      "lat": 23.241203,
+      "lon": 72.4875858,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "MD masala"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4292039993,
+      "lat": 23.2070953,
+      "lon": 72.5343354,
+      "tags": {
+        "addr:street": "SH 41",
+        "amenity": "fast_food",
+        "name": "Gruh laxmi spices"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4301914793,
+      "lat": 23.2456191,
+      "lon": 72.4978359,
+      "tags": {
+        "addr:street": "Siddheshwari Society Road",
+        "amenity": "fast_food",
+        "name": "lucky tea center"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4303548193,
+      "lat": 23.2484269,
+      "lon": 72.4848601,
+      "tags": {
+        "addr:street": "ahmedabad palnpur road",
+        "amenity": "restaurant",
+        "name": "Sattadhar bhojnalay"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4303553216,
+      "lat": 23.2527008,
+      "lon": 72.4840286,
+      "tags": {
+        "addr:street": "Ahmedabad",
+        "amenity": "restaurant",
+        "name": "Hotel Musafir"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4305633595,
+      "lat": 23.2529063,
+      "lon": 72.483675,
+      "tags": {
+        "addr:street": "Ahmedabad -Mehsana highway",
+        "amenity": "fast_food",
+        "name": "Jay bhavani vadapav",
+        "phone": "8000266665"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4312193691,
+      "lat": 23.2408637,
+      "lon": 72.5010327,
+      "tags": {
+        "addr:street": "Siddheshwari Society Road",
+        "amenity": "fast_food",
+        "name": "Pooja fastfood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4319362053,
+      "lat": 23.0371357,
+      "lon": 72.5443257,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Nescafe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4326501193,
+      "lat": 23.005805,
+      "lon": 72.5552881,
+      "tags": {
+        "addr:street": "Ashram Road",
+        "amenity": "fast_food",
+        "name": "TGB"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4358562689,
+      "lat": 23.051025,
+      "lon": 72.64396,
+      "tags": {
+        "amenity": "fast_food",
+        "brand": "Domino's",
+        "brand:ks": "ڈومینوز",
+        "brand:pa": "ਡੋਮੀਨੋਜ਼",
+        "brand:ur": "ڈومینوز",
+        "brand:wikidata": "Q839466",
+        "brand:wikipedia": "en:Domino's Pizza",
+        "cuisine": "pizza",
+        "name": "Domino's",
+        "name:ks": "ڈومینوز",
+        "name:pa": "ਡੋਮੀਨੋਜ਼",
+        "name:ur": "ڈومینوز",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4358562690,
+      "lat": 23.0510167,
+      "lon": 72.64456,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "TGB"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4358562889,
+      "lat": 23.0512085,
+      "lon": 72.643756,
+      "tags": {
+        "addr:street": "NH8",
+        "amenity": "fast_food",
+        "name": "Spoons n straws"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4368272090,
+      "lat": 23.0142097,
+      "lon": 72.597377,
+      "tags": {
+        "amenity": "restaurant",
+        "brand": "McDonald's",
+        "brand:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:ur": "مکڈونلڈز",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "brand:wikipedia:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:wikipedia:ur": "مکڈونلڈز",
+        "name": "McDonald's",
+        "name:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "name:ur": "مکڈونلڈز"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4369863491,
+      "lat": 23.0464898,
+      "lon": 72.5294517,
+      "tags": {
+        "amenity": "restaurant",
+        "brand": "Subway",
+        "brand:pa": "ਸਬਵੇਅ",
+        "brand:ur": "سب وے",
+        "brand:wikidata": "Q244457",
+        "brand:wikipedia": "en:Subway (restaurant)",
+        "name": "Subway",
+        "name:pa": "ਸਬਵੇਅ",
+        "name:ur": "سب وے"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4380552160,
+      "lat": 23.1799492,
+      "lon": 72.5730115,
+      "tags": {
+        "amenity": "fast_food",
+        "cuisine": "regional",
+        "name": "Bhojnalaya - Unodri Bhavan"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4422047292,
+      "lat": 23.1103852,
+      "lon": 72.6748785,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Kaka fast food"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4422082966,
+      "lat": 23.1113356,
+      "lon": 72.6718897,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Kaka ni bhajipav"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4422101589,
+      "lat": 23.1104061,
+      "lon": 72.6748011,
+      "tags": {
+        "addr:street": "Sardar Patel Ring Road",
+        "amenity": "fast_food",
+        "name": "Kaka fastfood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4445025289,
+      "lat": 23.0381074,
+      "lon": 72.5138086,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "delivery": "yes",
+        "name": "Atithi Dining Hall",
+        "name:en": "Atithi Dining Hall",
+        "opening_hours": "Mo-Su 11:00-15:00,19:00-22:00",
+        "takeaway": "yes",
+        "website": "https://www.atithiindia.com/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4477740673,
+      "lat": 23.2370307,
+      "lon": 72.4938701,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Shreeeji Milk Palace"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4478346292,
+      "lat": 23.0591783,
+      "lon": 72.6708433,
+      "tags": {
+        "addr:street": "Dmart road / nikol naroda road",
+        "amenity": "restaurant",
+        "name": "Sabri Kathiyavadi,panjabi",
+        "name:en": "Sabri Kathiyavadi,panjabi"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4479025200,
+      "lat": 23.2322383,
+      "lon": 72.6490567,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Food point 51 hotels",
+        "name:en": "Food point 51 hotels"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4479107496,
+      "lat": 23.2322032,
+      "lon": 72.6494087,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Food point Restaurant",
+        "name:en": "Food point Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4481077289,
+      "lat": 23.2324893,
+      "lon": 72.6491648,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Food Court sec.16",
+        "name:en": "Food Court sec.16",
+        "name:hi": "फ़ूड कोर्ट"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4481532989,
+      "lat": 23.111054,
+      "lon": 72.6050699,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "AFC Garden Restaurant",
+        "name:en": "AFC Garden Restaurant",
+        "name:hi": "ऐ.फ.सी रेस्टोरेंट"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4483404102,
+      "lat": 23.0795581,
+      "lon": 72.6690656,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Kabir Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4510519793,
+      "lat": 23.030136,
+      "lon": 72.600163,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "name": "arbi",
+        "name:en": "arbi"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4534049990,
+      "lat": 23.035392,
+      "lon": 72.5065,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Cooking Culture",
+        "name:en": "Cooking Culture"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4585364197,
+      "lat": 23.0659846,
+      "lon": 72.5827993,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "HANDI HOTEL",
+        "name:en": "HANDI HOTEL"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4595604995,
+      "lat": 23.0324134,
+      "lon": 72.5082222,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Little Italy",
+        "name:en": "Little Italy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4633783690,
+      "lat": 23.0199957,
+      "lon": 72.5580704,
+      "tags": {
+        "addr:housenumber": "Gf-7",
+        "addr:postcode": "380006",
+        "addr:street": "Chimanlal Girdharlal Road",
+        "amenity": "restaurant",
+        "cuisine": "burger;sandwich;regional;ice_cream;grill;cake;coffee_shop;pasta;noodles;pancake;pizza;chicken;fish_and_chips;curry;indian;fish;breakfast;savory_pancakes;tea;seafood;sausage;local;barbecue",
+        "diet:vegan": "yes",
+        "email": "tandoorworkz@gmail.com",
+        "name": "Tandoorworkz",
+        "name:en": "Tandoorworkz",
+        "opening_hours": "Mo-Su 11:30-18:30",
+        "phone": "+91 90168 61000"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4636987374,
+      "lat": 22.9818481,
+      "lon": 72.6317943,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Annapurna"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4637012137,
+      "lat": 22.9811933,
+      "lon": 72.6319432,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Gayatri"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4637012138,
+      "lat": 22.9815706,
+      "lon": 72.6329291,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Royal Pride"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4685354589,
+      "lat": 23.0550362,
+      "lon": 72.5398877,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "nilam snacks",
+        "name:en": "nilam snacks"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4704651212,
+      "lat": 23.0071778,
+      "lon": 72.6638136,
+      "tags": {
+        "addr:postcode": "382418",
+        "addr:street": "tanman chokdi",
+        "amenity": "fast_food",
+        "cuisine": "indian",
+        "name": "Tan-man bhaji pav",
+        "name:en": "Tan-man bhaji pav",
+        "name:hi": "Tan-man bhaji pav"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4718583250,
+      "lat": 23.0168753,
+      "lon": 72.4703195,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "regional",
+        "name": "Upper Crest"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4721512569,
+      "lat": 23.1653459,
+      "lon": 72.812201,
+      "tags": {
+        "amenity": "cafe",
+        "cuisine": "regional",
+        "name": "Shmbhu's cafe",
+        "smoking": "outside"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4721512586,
+      "lat": 23.1646237,
+      "lon": 72.8107969,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Kutchi King"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4721512587,
+      "lat": 23.1647419,
+      "lon": 72.8109707,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Apun Ka Adda"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4721520831,
+      "lat": 23.1655503,
+      "lon": 72.8133323,
+      "tags": {
+        "amenity": "cafe",
+        "cuisine": "regional",
+        "name": "Yash Farsan"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4722413220,
+      "lat": 23.1663714,
+      "lon": 72.8139376,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Jay Bhole"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4723369292,
+      "lat": 23.1617132,
+      "lon": 72.8079774,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Tulsi Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4723369307,
+      "lat": 23.1569882,
+      "lon": 72.7993084,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Green Leaf Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4726558401,
+      "lat": 23.1684338,
+      "lon": 72.8170668,
+      "tags": {
+        "amenity": "food_court",
+        "internet_access": "no",
+        "name": "Bikaner",
+        "opening_hours": "Mo-Fr 08:30-20:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4797415998,
+      "lat": 23.0422816,
+      "lon": 72.549183,
+      "tags": {
+        "amenity": "fast_food",
+        "brand": "Subway",
+        "brand:pa": "ਸਬਵੇਅ",
+        "brand:ur": "سب وے",
+        "brand:wikidata": "Q244457",
+        "brand:wikipedia": "en:Subway (restaurant)",
+        "cuisine": "sandwich",
+        "name": "Subway",
+        "name:pa": "ਸਬਵੇਅ",
+        "name:ur": "سب وے",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4797416004,
+      "lat": 23.042429,
+      "lon": 72.5486687,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "G2 Yash Aqua",
+        "addr:postcode": "380009",
+        "addr:street": "Vijay Cross Road, Navarangpura",
+        "amenity": "cafe",
+        "cuisine": "pizza",
+        "name": "Fullfills Ahmedabad",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4797416005,
+      "lat": 23.0416337,
+      "lon": 72.5490709,
+      "tags": {
+        "amenity": "cafe",
+        "cuisine": "pizza",
+        "name": "quinches"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4797416006,
+      "lat": 23.042389,
+      "lon": 72.5492178,
+      "tags": {
+        "amenity": "cafe",
+        "name": "uno pizza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4810670481,
+      "lat": 23.1871084,
+      "lon": 72.5728883,
+      "tags": {
+        "amenity": "restaurant",
+        "capacity": "20",
+        "cuisine": "regional",
+        "delivery": "yes",
+        "name": "Nishra Restaurant",
+        "opening_hours": "11:00-22:00",
+        "outdoor_seating": "no",
+        "smoking": "no",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5029238558,
+      "lat": 23.0444534,
+      "lon": 72.5505062,
+      "tags": {
+        "addr:city": "ahmedabad",
+        "addr:housenumber": "34",
+        "addr:street": "memnagar",
+        "amenity": "cafe",
+        "cuisine": "Multi_Cuisine",
+        "name": "The Cafe Baraco",
+        "opening_hours": "11:00-01:00",
+        "outdoor_seating": "no",
+        "smoking": "outside"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5140818187,
+      "lat": 23.0398379,
+      "lon": 72.5276503,
+      "tags": {
+        "amenity": "fast_food",
+        "delivery": "no",
+        "drive_through": "no",
+        "name": "Iscon Ghantiya",
+        "outdoor_seating": "no",
+        "smoking": "no",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5154580839,
+      "lat": 23.2170442,
+      "lon": 72.6496663,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "diet:vegetarian": "yes",
+        "name": "Bansari Traditional"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5164984218,
+      "lat": 23.1270148,
+      "lon": 72.5456021,
+      "tags": {
+        "amenity": "food_court",
+        "name": "Management Mess"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5164984325,
+      "lat": 23.1283124,
+      "lon": 72.5473147,
+      "tags": {
+        "amenity": "food_court",
+        "name": "F1 Pharma Canteen"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5177688241,
+      "lat": 22.9945198,
+      "lon": 72.665834,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "name": "Hotel Purohit Por"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5197470721,
+      "lat": 23.0287895,
+      "lon": 72.4775187,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Havmor restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5276640722,
+      "lat": 23.0346667,
+      "lon": 72.5603703,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Seva Cafe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5329590125,
+      "lat": 23.033026,
+      "lon": 72.5577346,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Unlocked"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5340470022,
+      "lat": 23.0320819,
+      "lon": 72.5600295,
+      "tags": {
+        "addr:street": "Chimanlal Girdharlal Road",
+        "amenity": "cafe",
+        "name": "Cafe udipi richi"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5403772221,
+      "lat": 23.0742871,
+      "lon": 72.6506214,
+      "tags": {
+        "addr:street": "Kotar pur-airport road",
+        "amenity": "restaurant",
+        "name": "Hotel Emerland"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5407346983,
+      "lat": 23.0122064,
+      "lon": 72.5062163,
+      "tags": {
+        "amenity": "cafe",
+        "name": "In-Garden Cafe",
+        "outdoor_seating": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5496066223,
+      "lat": 23.0236978,
+      "lon": 72.5995018,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Sanmani Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5527659737,
+      "lat": 23.0275402,
+      "lon": 72.559229,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Takshshila Food Court"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5527662483,
+      "lat": 23.0246356,
+      "lon": 72.5714777,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "gujarati;kathiawari;punjabi",
+        "name": "Jai Jalaram Parontha House"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5527662869,
+      "lat": 23.0144058,
+      "lon": 72.565418,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Udipi Cafe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5546134536,
+      "lat": 23.1800841,
+      "lon": 72.5735839,
+      "tags": {
+        "amenity": "restaurant",
+        "capacity": "50",
+        "cuisine": "indian;regional",
+        "delivery": "no",
+        "name": "Samrasi - Premium Bhojnalaya",
+        "outdoor_seating": "no",
+        "payment:cash": "yes",
+        "payment:coins": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "smoking": "no",
+        "takeaway": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5753441521,
+      "lat": 23.0284866,
+      "lon": 72.4766561,
+      "tags": {
+        "addr:street": "Ambli Bopal Road",
+        "amenity": "restaurant",
+        "name": "Jalaram Parotha house"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6088126794,
+      "lat": 23.1333506,
+      "lon": 72.6334745,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "diet:vegetarian": "yes",
+        "name": "Vrindavan"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6113416289,
+      "lat": 23.1931868,
+      "lon": 72.6148754,
+      "tags": {
+        "addr:city": "Gandhinagar",
+        "addr:postcode": "382421",
+        "addr:street": "Sargasan Crossroad",
+        "amenity": "cafe",
+        "cuisine": "coffee_shop;sandwich;teahouse",
+        "name": "Khetlaapa Tea Shop",
+        "opening_hours": "24/7"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6113416290,
+      "lat": 23.1950881,
+      "lon": 72.6146833,
+      "tags": {
+        "addr:city": "Gandhinagar",
+        "addr:postcode": "382421",
+        "addr:street": "Sarthak Mall, Kh-Road",
+        "amenity": "cafe",
+        "name": "7 Colours Pan Parlor"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6183928288,
+      "lat": 23.0169709,
+      "lon": 72.5835893,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Chicken biryani",
+        "name:ja": "チキンビリヤニ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6183937086,
+      "lat": 23.0197975,
+      "lon": 72.5838568,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "K.G.N. Chinese Fry Centre"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6649963089,
+      "lat": 23.0355672,
+      "lon": 72.5061396,
+      "tags": {
+        "addr:city": "ahmedabad",
+        "addr:housenumber": "0",
+        "addr:postcode": "380054",
+        "addr:street": "behind bogarosa, rajpath club, bodakdev.",
+        "air_conditioning": "yes",
+        "amenity": "cafe",
+        "cuisine": "pizza;italian;coffee_shop;indian",
+        "delivery": "yes",
+        "name": "cabana lounge",
+        "outdoor_seating": "yes",
+        "phone": "+919998822297"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6831009179,
+      "lat": 22.9798046,
+      "lon": 72.5737246,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Himalaya Bakery"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7137331982,
+      "lat": 23.034043,
+      "lon": 72.5018226,
+      "tags": {
+        "amenity": "cafe",
+        "name": "The Cafe Date"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8039346176,
+      "lat": 23.0360509,
+      "lon": 72.5611735,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:country": "IN",
+        "addr:housenumber": "1",
+        "addr:postcode": "380009",
+        "addr:street": "Swastik Cross Road /Swastik Society Road / Swastik X Road",
+        "air_conditioning": "yes",
+        "amenity": "cafe",
+        "capacity": "50",
+        "cuisine": "pizza;coffee_shop;sandwich;italian;ice_cream;regional;mexican",
+        "delivery": "yes",
+        "description": "Freshly Brewed Coffee and delicious food",
+        "email": "coffeestandbbc@gmail.com",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "level": "2",
+        "name": "Coffee Stand-CG Road",
+        "opening_hours": "24/7",
+        "outdoor_seating": "yes",
+        "payment:american_express": "yes",
+        "payment:cards": "yes",
+        "payment:cash": "yes",
+        "payment:coins": "yes",
+        "payment:contactless": "yes",
+        "payment:debit_cards": "yes",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "phone": "+919726323358",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8152270626,
+      "lat": 23.1875373,
+      "lon": 72.5739984,
+      "tags": {
+        "addr:city": "Adalaj",
+        "addr:housenumber": "Shivam 2",
+        "addr:postcode": "382421",
+        "addr:street": "Trimandir - Dadanagar Rd",
+        "air_conditioning": "yes",
+        "amenity": "restaurant",
+        "cuisine": "regional;indian;buffet",
+        "delivery": "yes",
+        "diet:vegetarian": "yes",
+        "name": "fiftyeight sixtyeight - 5868",
+        "outdoor_seating": "no",
+        "phone": "+91 95747 45868",
+        "smoking": "no",
+        "website": "https://www.vinncahotels.com/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8455774613,
+      "lat": 23.0221413,
+      "lon": 72.5567513,
+      "tags": {
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:ur": "مکڈونلڈز",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "brand:wikipedia:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:wikipedia:ur": "مکڈونلڈز",
+        "cuisine": "burger",
+        "name": "McDonald's",
+        "name:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "name:ur": "مکڈونلڈز",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8460962736,
+      "lat": 23.2642324,
+      "lon": 72.6661194,
+      "tags": {
+        "addr:city": "gandhinagar",
+        "addr:housenumber": "G-4",
+        "addr:postcode": "382610",
+        "addr:street": "pethapur",
+        "amenity": "fast_food",
+        "cuisine": "pizza",
+        "drive_through": "yes",
+        "name": "quickshef",
+        "opening_hours": "Mo-Su 09:00-21:00",
+        "phone": "6356166209",
+        "website": "quickshef@gmail.com"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8490717173,
+      "lat": 23.0175789,
+      "lon": 72.4750517,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "SoBo Centre",
+        "addr:street": "200ft. Gala Gymkhana Road",
+        "air_conditioning": "yes",
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "diet:vegetarian": "yes",
+        "name": "Hocco Eatery"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8548483880,
+      "lat": 23.0244466,
+      "lon": 72.5589826,
+      "tags": {
+        "air_conditioning": "yes",
+        "amenity": "restaurant",
+        "check_date": "2026-08-01",
+        "cuisine": "gujarati;regional",
+        "diet:jain": "yes",
+        "diet:vegetarian": "only",
+        "name": "Swati Snacks",
+        "opening_hours": "12:00-10:30",
+        "phone": "+91 79 2640 5900",
+        "website": "https://www.swatisnacks.com/",
+        "website:menu": "https://menus.swatisnacks.com/ahmedabad/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8847682611,
+      "lat": 23.0158336,
+      "lon": 72.5508007,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Deshi Chulha Non-veg"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8847682612,
+      "lat": 23.0451215,
+      "lon": 72.4854863,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Bean Box Cafe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8972208043,
+      "lat": 23.0875162,
+      "lon": 72.683768,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "4,5,6, Nadroda Business Hub",
+        "addr:postcode": "382330",
+        "addr:street": "opp. Satva Green Party Plot, Nr. Ring Road Circle Hanspura, Naroda - Dahegam Road",
+        "air_conditioning": "yes",
+        "amenity": "restaurant",
+        "capacity": "100",
+        "cuisine": "indian;regional;asian",
+        "diet:meat": "yes",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "yes",
+        "name": "Babadeepsingh Restaurant",
+        "opening_hours": "Mo-Su 11:00-23:00",
+        "source": "Flood DMBD;Flood;Flood DMBD Clientele;Reu",
+        "website": "https://www.google.com/maps/place/Babadeepsingh+Restaurant/@23.0874355,72.6838467,44m/data=!3m1!1e3!4m5!3m4!1s0x0:0xb4ba50b58fd62be4!8m2!3d23.0874765!4d72.6838011"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8998662168,
+      "lat": 23.0163696,
+      "lon": 72.5248026,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:postcode": "380015",
+        "addr:street": "Shivalay Apartment 2",
+        "air_conditioning": "yes",
+        "amenity": "fast_food",
+        "cuisine": "regional;indian",
+        "name": "Diwan Bhel Pakodi Center",
+        "opening_hours": "Mo-Su 11:00-22:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8998662169,
+      "lat": 23.0163966,
+      "lon": 72.5243683,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "GF-5",
+        "addr:postcode": "380015",
+        "addr:street": "Nandanvan 3",
+        "amenity": "fast_food",
+        "cuisine": "regional;indian",
+        "name": "Jagdish Chaat Pakodi Center",
+        "opening_hours": "Mo-Su 14:00-22:30"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9002228814,
+      "lat": 23.0333924,
+      "lon": 72.4354163,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian;southindian",
+        "diet:vegetarian": "yes",
+        "name": "Sambar Cafe",
+        "opening_hours": "Mo-Su 07:00-22:00",
+        "opening_hours:covid19": "Mo-Su 07:00-20:00",
+        "phone": "+917874444757"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9005464434,
+      "lat": 23.0172744,
+      "lon": 72.5299212,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housename": "Sigma Icon",
+        "addr:postcode": "380015",
+        "addr:street": "132 Ft. Ring Road",
+        "addr:suburb": "Shyamal",
+        "amenity": "fast_food",
+        "brand": "Domino's",
+        "brand:ks": "ڈومینوز",
+        "brand:pa": "ਡੋਮੀਨੋਜ਼",
+        "brand:ur": "ڈومینوز",
+        "brand:wikidata": "Q839466",
+        "brand:wikipedia": "en:Domino's Pizza",
+        "cuisine": "pizza",
+        "delivery": "yes",
+        "name": "Domino's",
+        "name:ks": "ڈومینوز",
+        "name:pa": "ਡੋਮੀਨੋਜ਼",
+        "name:ur": "ڈومینوز",
+        "opening_hours": "Mo-Su 10:00-23:00",
+        "phone": "18002081234",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9006994317,
+      "lat": 23.0116205,
+      "lon": 72.5052184,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "GF7-8",
+        "addr:postcode": "380015",
+        "addr:street": "Opp Prahladnagar Garden",
+        "air_conditioning": "yes",
+        "amenity": "restaurant",
+        "cuisine": "pizza",
+        "delivery": "yes",
+        "name": "La Milano Pizzeria Prahladnagar",
+        "opening_hours": "Mo-Su 10:00-22:00",
+        "phone": "+916359149090"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9009705206,
+      "lat": 23.0258612,
+      "lon": 72.4762382,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "SN 1",
+        "addr:postcode": "380058",
+        "addr:street": "Sardar Patel Ring Road",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:ur": "مکڈونلڈز",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "brand:wikipedia:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:wikipedia:ur": "مکڈونلڈز",
+        "cuisine": "burger",
+        "name": "McDonald's",
+        "name:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "name:ur": "مکڈونلڈز",
+        "phone": "+919372722317",
+        "takeaway": "yes",
+        "website": "https://www.mcdelivery.co.in/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9009771427,
+      "lat": 23.0123743,
+      "lon": 72.511119,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "A-04 A-05",
+        "addr:postcode": "380015",
+        "addr:street": "100 Ft. Road",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:ur": "مکڈونلڈز",
+        "brand:wikidata": "Q38076",
+        "brand:wikipedia": "en:McDonald's",
+        "brand:wikipedia:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "brand:wikipedia:ur": "مکڈونلڈز",
+        "cuisine": "burger",
+        "name": "McDonald's",
+        "name:pa": "ਮੈਕਡੋਨਲਡ’ਜ਼",
+        "name:ur": "مکڈونلڈز",
+        "opening_hours": "Mo-Su 10:00-22:45",
+        "phone": "+918928304108",
+        "takeaway": "yes",
+        "website": "https://www.mcdelivery.co.in/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9078990286,
+      "lat": 23.0875987,
+      "lon": 72.6839578,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "106, Naroda business hub, NR. New D-Mart, Naroda-dehgam road",
+        "addr:postcode": "382330",
+        "addr:street": "Hanspura",
+        "air_conditioning": "yes",
+        "amenity": "cafe",
+        "bar": "no",
+        "cuisine": "coffee_shop;pizza;burger;sandwich",
+        "description": "Crush culture is a dine-in cafe bar with love and peaceful moments to be enjoyed. You can make parties over here like birthday, anniversary, reunion and bachelor party. Our specialty:- 1. Photo wall 2. Couple box 3. Nitrogen coffee 4. Fish massage 5. Birt",
+        "image": "https://www.google.com/local/place/fid/0x395e81e7a7ee76af:0x348c69d3c446bfa4/photosphere?iu=https://lh5.googleusercontent.com/p/AF1QipNJ0e2M7nBwKtsz5pXD05YE1kgbJdg_zrJRvYPA%3Dw160-h106-k-no-pi-0-ya60.000004-ro-0-fo100&ik=CAoSLEFGMVFpcE5KMGUyTTduQndLdHN6NX",
+        "internet_access": "no",
+        "name": "Crush Culture Cafe Bar",
+        "opening_hours": "Mo-Su 10:00-22:00",
+        "phone": "+91 9974 973181",
+        "source": "Flood DMBD;Flood;Flood DMBD Clientele;Reu",
+        "website": "https://instagram.com/crush_culture_cafebar?utm_medium=copy_link"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9116794693,
+      "lat": 23.0496098,
+      "lon": 72.6705415,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:postcode": "382350",
+        "air_conditioning": "yes",
+        "amenity": "cafe",
+        "capacity": "30",
+        "cuisine": "pizza;regional;burger;coffee_shop;italian;chinese;sandwich;asian;indian",
+        "internet_access": "no",
+        "name": "Dadu Cafe",
+        "opening_hours": "Mo-Su 11:00-23:00",
+        "phone": "+91 97254 00091",
+        "source": "Flood DMBD",
+        "website": "https://www.instagram.com/dadu_cafe_nikol/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9123477265,
+      "lat": 23.0359596,
+      "lon": 72.5111196,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:postcode": "380054",
+        "addr:street": "Shapath Tower Ground Floor Sarkhej Gandhi Nagar Highway, Near State Bank Of India, Thaltej",
+        "air_conditioning": "yes",
+        "amenity": "restaurant",
+        "cuisine": "gujarati;regional;indian",
+        "diet:vegetarian": "yes",
+        "name": "Gordhan Thal",
+        "name:gu": "ગોરધન થાલ",
+        "opening_hours": "Mo-Su 11:00-15:00,03:45-21:45",
+        "outdoor_seating": "no",
+        "reservation": "recommended",
+        "website": "http://thegordhangroup.com/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9123574763,
+      "lat": 23.0361967,
+      "lon": 72.5110489,
+      "tags": {
+        "amenity": "fast_food",
+        "cuisine": "pizza;burger;sandwich;fast_food;tea_shop;juice",
+        "drive_through": "no",
+        "name": "Deva's Coffee Bar"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9287451026,
+      "lat": 23.0371443,
+      "lon": 72.5290405,
+      "tags": {
+        "addr:housenumber": "Himalaya Arcade B",
+        "addr:street": "Sargam Marg, Nehru Park Cir, Mahavir Nagar society, Vastrapur, Ahmedabad, Gujarat 380015",
+        "amenity": "fast_food",
+        "name": "Shreeji Krupa Bombay Vadapav"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9292073779,
+      "lat": 23.0319557,
+      "lon": 72.5107614,
+      "tags": {
+        "addr:postcode": "380054",
+        "amenity": "cafe",
+        "branch": "Bodakdev",
+        "brand": "Starbucks",
+        "brand:wikidata": "Q37158",
+        "cuisine": "coffee_shop",
+        "name": "Starbucks",
+        "official_name": "Starbucks Coffee",
+        "opening_hours": "Mo-Su 7:00-24:00",
+        "takeaway": "yes",
+        "website": "https://www.starbucks.in/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9292073782,
+      "lat": 23.0318311,
+      "lon": 72.511298,
+      "tags": {
+        "addr:housenumber": "Ground Floor 6-9",
+        "addr:postcode": "380054",
+        "amenity": "cafe",
+        "name": "mocha",
+        "opening_hours": "Mo-Su 11:00-23:00",
+        "website": "https://www.mocha.co.in/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9296316189,
+      "lat": 23.0371776,
+      "lon": 72.5291086,
+      "tags": {
+        "addr:housenumber": "Himalaya Arcade B",
+        "addr:street": "Sargam Marg, Nehru Park Cir, Mahavir Nagar society, Vastrapur, Ahmedabad, Gujarat 380015",
+        "amenity": "fast_food",
+        "name": "Gajanand Pauva House",
+        "opening_hours": "Mo-Su 04:30-23:30"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9296318313,
+      "lat": 23.0371316,
+      "lon": 72.5290981,
+      "tags": {
+        "addr:housenumber": "Himalaya Arcade B",
+        "addr:street": "Sargam Marg, Nehru Park Cir, Mahavir Nagar society, Vastrapur, Ahmedabad, Gujarat 380015",
+        "amenity": "fast_food",
+        "description": "Chole Puri, Parathas, Thepla, Pulav",
+        "name": "Jay Mataji Fast Food",
+        "opening_hours": "Mo-Su 08:00-21:00",
+        "phone": "+919377080380"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9310325493,
+      "lat": 23.0182853,
+      "lon": 72.4716006,
+      "tags": {
+        "address": "Near Auda Garden, Opp. Samanavya Residency, South Bopal, Ahmedabad",
+        "amenity": "fast_food",
+        "name": "Purohit Chavana and Sweet Mart",
+        "phone": "+919824013574"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9318813907,
+      "lat": 23.0276271,
+      "lon": 72.5588748,
+      "tags": {
+        "address": "Ground Floor 1, P 2 HUB Opposite National Handloom, Law Garden Road, Off, Chimanlal Girdharlal Rd, Ahmedabad, Gujarat 380006",
+        "amenity": "fast_food",
+        "cuisine": "pizza",
+        "name": "Puffiza",
+        "opening_hours": "Mo-Su 11:00-22:00",
+        "phone": "079 4039 5555",
+        "website": "https://puffiza.com"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9345872082,
+      "lat": 23.0116726,
+      "lon": 72.5081733,
+      "tags": {
+        "addr:housenumber": "3rd floor",
+        "addr:street": "100 ft. Road, Prahaladnagar",
+        "amenity": "restaurant",
+        "name": "Skyz Restaurant and Banquet",
+        "phone": "07926931600"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9348528050,
+      "lat": 23.0322805,
+      "lon": 72.5551823,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "Ground Floor, Vaibhav Flats,",
+        "addr:postcode": "380009",
+        "addr:street": "H.L Commerce College Rd, Navrangpara",
+        "amenity": "restaurant",
+        "brand": "The Waffling Station",
+        "cuisine": "dessert;waffles;shakes;cold_coffee",
+        "diet:vegetarian": "yes",
+        "name": "The Waffling Station",
+        "opening_hours": "Mo-Su 12:00-00:00",
+        "phone": "+919725035686",
+        "website": "https://thewafflingstation.com/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9660433812,
+      "lat": 22.961352,
+      "lon": 72.4239095,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Plumeria Cafe",
+        "opening_hours": "Mo-Su 10:00-22:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9806747712,
+      "lat": 23.1925108,
+      "lon": 72.6164238,
+      "tags": {
+        "addr:city": "Gandhinagar",
+        "addr:postcode": "382421",
+        "addr:street": "Gandhinagar Bypass Road",
+        "air_conditioning": "yes",
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "brand:wikidata": "Q38076",
+        "cuisine": "burger",
+        "delivery": "yes",
+        "diet:non-vegetarian": "yes",
+        "diet:vegetarian": "yes",
+        "drive_through": "no",
+        "name": "McDonald's",
+        "outdoor_seating": "no",
+        "payment:american_express": "yes",
+        "payment:app": "yes",
+        "payment:cards": "yes",
+        "payment:cash": "yes",
+        "payment:coins": "yes",
+        "payment:contactless": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:notes": "yes",
+        "payment:visa": "yes",
+        "smoking": "no",
+        "source": "local knowledge",
+        "takeaway": "yes",
+        "website": "https://www.mcdonaldsindia.com"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9806747713,
+      "lat": 23.1923234,
+      "lon": 72.6165249,
+      "tags": {
+        "addr:city": "Gandhinagar",
+        "addr:housenumber": "Shop no.5 , Ground Floor",
+        "addr:postcode": "382421",
+        "addr:street": "Gandhinagar Bypass Road",
+        "air_conditioning": "yes",
+        "amenity": "cafe",
+        "branch": "Shital Enterprise",
+        "brand": "Shiva's",
+        "cuisine": "coffee_shop;pizza;burger;italian;sandwich",
+        "delivery": "yes",
+        "diet:vegetarian": "yes",
+        "internet_access": "no",
+        "level": "0",
+        "name": "Shiva's Cafe",
+        "opening_hours": "Mo-Su 08:00-24:00",
+        "outdoor_seating": "no",
+        "payment:cards": "yes",
+        "payment:cash": "yes",
+        "payment:contactless": "yes",
+        "phone": "+918128886999",
+        "reservation": "yes",
+        "smoking": "no",
+        "source": "local knowledge",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9806747714,
+      "lat": 23.1918606,
+      "lon": 72.616653,
+      "tags": {
+        "addr:city": "Gandhinagar",
+        "addr:postcode": "382421",
+        "addr:street": "Gandhinagar Bypass Road",
+        "air_conditioning": "no",
+        "amenity": "restaurant",
+        "cuisine": "pizza;regional;italian;chinese;mexican;indian;asian",
+        "delivery": "yes",
+        "diet:vegetarian": "yes",
+        "level": "6",
+        "name": "Upper Deck",
+        "outdoor_seating": "yes",
+        "payment:cards": "yes",
+        "payment:cash": "yes",
+        "payment:contactless": "yes",
+        "reservation": "yes",
+        "smoking": "no",
+        "source": "local knowledge",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9809086195,
+      "lat": 23.0267886,
+      "lon": 72.5079662,
+      "tags": {
+        "addr:city": "Ahemedabad",
+        "addr:postcode": "380015",
+        "addr:street": "Dev Arc Commercial Complex, 106, Iskcon Cross Rd, Near iscon cross road, Ramdev Nagar,",
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "diet:vegetarian": "yes",
+        "name": "The Grill Street"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9878358235,
+      "lat": 23.0396084,
+      "lon": 72.5644073,
+      "tags": {
+        "addr:street": "Navrangpura",
+        "amenity": "restaurant",
+        "description": "daskhamanhouse@yahoo.com",
+        "name": "The House of Khaman",
+        "opening_hours": "Mo-Su 08:30-21:30",
+        "phone": "+91 88660 79988",
+        "website": "http://daskhaman.com"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9951265800,
+      "lat": 23.0218092,
+      "lon": 72.5062361,
+      "tags": {
+        "address": "Service Road, Besides Novotel, Opposite Karnavati Club, S.G. Highway, Ahmedabad",
+        "amenity": "fast_food",
+        "name": "Bhookh Lagi Hai?",
+        "phone": "+919001293435"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9996701486,
+      "lat": 23.1170709,
+      "lon": 72.6283409,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "304, 3rd Floor Xperia",
+        "addr:postcode": "382424",
+        "addr:street": "Sardar Patel Ring Road",
+        "amenity": "restaurant",
+        "cuisine": "indian;pizza;chinese",
+        "name": "The House of Makeba (Bhat)",
+        "opening_hours": "Mo-Su 11:00-23:00",
+        "outdoor_seating": "yes",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10128943740,
+      "lat": 23.0630354,
+      "lon": 72.6588726,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:housenumber": "Shop No-21",
+        "addr:postcode": "382345",
+        "addr:street": "Siddhi Vinayak Residency, Near St. Mary's School, Nava Naroda",
+        "amenity": "food_court",
+        "contact:phone": "+91 8448463778",
+        "contact:website": "https://www.inhungr.in",
+        "email": "info@inhungr.in",
+        "internet_access": "yes",
+        "internet_access:fee": "customers",
+        "internet_access:ssid": "inHungr WiFi",
+        "name": "inHungr",
+        "opening_hours": "Mo-Su 09:00-23:00",
+        "phone": "+91 8448463778",
+        "website": "https://www.inhungr.in"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10177917536,
+      "lat": 23.017434,
+      "lon": 72.4756286,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Gwalia Sweets"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10225625719,
+      "lat": 23.0319107,
+      "lon": 72.5883477,
+      "tags": {
+        "amenity": "cafe",
+        "cuisine": "indian",
+        "name": "Authentic cafe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10550714022,
+      "lat": 23.0123617,
+      "lon": 72.5110318,
+      "tags": {
+        "addr:housenumber": "107, Safal Pegasus",
+        "addr:street": "100 Feet, Anandnagar Road,",
+        "amenity": "restaurant",
+        "name": "Jassi De Parathe",
+        "opening_hours": "Mo-Su 11:00-23:00",
+        "phone": "+91 95102 22000",
+        "website": "https://jassideparathe.com"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10750415881,
+      "lat": 23.0410761,
+      "lon": 72.5269272,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Choco drama"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10750415885,
+      "lat": 23.0407863,
+      "lon": 72.5275081,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "leela sandwich"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10959605481,
+      "lat": 23.1084228,
+      "lon": 72.5824778,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Ramdev Farsan"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10959628584,
+      "lat": 23.1089422,
+      "lon": 72.5912774,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Monginis Cake shop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10959640143,
+      "lat": 23.1035224,
+      "lon": 72.5960745,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Subway."
+      }
+    },
+    {
+      "type": "node",
+      "id": 10959661519,
+      "lat": 23.1096267,
+      "lon": 72.5938416,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "The Belgian Waffle"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10959671658,
+      "lat": 23.1096095,
+      "lon": 72.5942231,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Tandoor & Tadka"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10959699945,
+      "lat": 23.1034803,
+      "lon": 72.5961933,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "La Pino's Pizza."
+      }
+    },
+    {
+      "type": "node",
+      "id": 10959715013,
+      "lat": 23.1056688,
+      "lon": 72.5957957,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Dangee Dums"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10959718509,
+      "lat": 23.103377,
+      "lon": 72.5958266,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "La Milano Pizzeria."
+      }
+    },
+    {
+      "type": "node",
+      "id": 10959725324,
+      "lat": 23.102916,
+      "lon": 72.5952916,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Gwalia Sweets Private Limited"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11259129233,
+      "lat": 23.0416984,
+      "lon": 72.6784893,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:district": "Gujarat",
+        "addr:housenumber": "1",
+        "addr:postcode": "382350",
+        "addr:street": "Aarth Business Center, Ring Road, opp. Torrent Sub-Station, Nikol",
+        "amenity": "restaurant",
+        "cuisine": "chinese;pizza;coffee_shop",
+        "diet:local": "yes",
+        "name": "BLUEBERRY RESTAURANT & BANQUET",
+        "phone": "+91 97126 00530",
+        "website": "https://www.google.com/search?q=BLUEBERRY+RESTAURANT+%26+BANQUET&sca_esv=573098824&sxsrf=AM9HkKlvC1EB4IVqvjupYP5K1tNLlW-sjg%3A1697177510335&ei=pt8oZZDoE_z7seMPo-CS-A8&ved=0ahUKEwiQ0_70rvKBAxX8fWwGHSOwBP8Q4dUDCBA&uact=5&oq=BLUEBERRY+RESTAURANT+%26+BANQUET&"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11419836108,
+      "lat": 23.1361303,
+      "lon": 72.5502307,
+      "tags": {
+        "addr:city": "Gandhinagar",
+        "addr:housenumber": "B116, Shaligram Lakeview",
+        "addr:postcode": "382470",
+        "addr:street": "S P Ring Road",
+        "amenity": "cafe",
+        "cuisine": "ice_cream;waffle;shakes",
+        "internet_access": "wlan",
+        "internet_access:fee": "yes",
+        "name": "Scoop N Munch",
+        "phone": "7203025213"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11539673209,
+      "lat": 22.9782788,
+      "lon": 72.6106967,
+      "tags": {
+        "amenity": "fast_food",
+        "cuisine": "indian",
+        "diet:healthy": "yes",
+        "diet:vegetarian": "yes",
+        "drive_through": "yes",
+        "name": "Sakha Surti Locho & Rasawala Khaman",
+        "opening_hours": "Mo-Fr 09:00-17:00",
+        "operator": "Vaishali Khatri",
+        "phone": "+91 8780680039"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11563630520,
+      "lat": 23.0681879,
+      "lon": 72.576195,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "diet:vegetarian": "yes",
+        "name": "Dosawala",
+        "opening_hours": "Mo-Su 09:00-21:00",
+        "phone": "8238011325"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11575789971,
+      "lat": 23.0843166,
+      "lon": 72.4878637,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:postcode": "380060",
+        "addr:street": "Science City Bhadaj Road",
+        "amenity": "cafe",
+        "cuisine": "coffee_shop;fast_food",
+        "name": "Stallions Cafe",
+        "outdoor_seating": "yes",
+        "phone": "+919909909560"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11724303079,
+      "lat": 23.0381383,
+      "lon": 72.6772579,
+      "tags": {
+        "air_conditioning": "yes",
+        "amenity": "restaurant",
+        "branch": "Nikol",
+        "capacity": "100",
+        "cuisine": "pizza;regional;italian;burger;chinese;sandwich;mexican;kebab;indian;ice_cream;international",
+        "diet:vegetarian": "yes",
+        "name": "1944 The Hocco Kitchen",
+        "opening_hours": "Mo-Su 09:00-23:00",
+        "phone": "9904623689",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11773753701,
+      "lat": 23.1048411,
+      "lon": 72.5379754,
+      "tags": {
+        "address": "Cross Road, Devnagar, Ahmedabad, Gujarat 382481",
+        "amenity": "cafe",
+        "name": "The Gyan Café",
+        "website": "https://thegyancafe.com"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11792825426,
+      "lat": 23.0721192,
+      "lon": 72.6421901,
+      "tags": {
+        "addr:district": "Gujarat",
+        "addr:housenumber": "117",
+        "addr:street": "B-Ward, Kubernagar",
+        "amenity": "restaurant",
+        "name": "Dinchuiliu Vidhani Kitchen"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11986210790,
+      "lat": 23.0162491,
+      "lon": 72.4646557,
+      "tags": {
+        "addr:street": "Safal Parisar Road",
+        "address": "Shop no 17, Ground Floor, Saanvi Nirman Stella, Safal Parisar Rd, nr. Marigold Complex, South Bopal, Bopal, Ahmedabad, Gujarat 380058",
+        "amenity": "fast_food",
+        "name": "HL Frankie",
+        "opening_hours": "Mo-Su 10:00-02:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12065744903,
+      "lat": 22.9853909,
+      "lon": 72.4188332,
+      "tags": {
+        "addr:city": "sanand",
+        "addr:district": "AAhmedabad",
+        "addr:postcode": "382110",
+        "addr:street": "Sanand Sarkhej Road, Gibpura",
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "diet:vegetarian": "yes",
+        "name": "Hotel Sarvottam"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12590599051,
+      "lat": 23.0124903,
+      "lon": 72.5033515,
+      "tags": {
+        "addr:city": "Ahmedabad, Prahladnagar",
+        "addr:postcode": "380015",
+        "addr:street": "Service road - Sarkhej Gandhinagar Highway",
+        "amenity": "cafe",
+        "check_date": "2025-02-15",
+        "currency:XBT": "yes",
+        "name": "The dark roast",
+        "payment:lightning": "no",
+        "payment:lightning_contactless": "no",
+        "payment:onchain": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12726457252,
+      "lat": 23.1849638,
+      "lon": 72.6304054,
+      "tags": {
+        "amenity": "cafe",
+        "brand": "Starbucks",
+        "cuisine": "coffee_shop",
+        "internet_access": "yes",
+        "internet_access:fee": "no",
+        "name": "Starbucks",
+        "official_name": "Starbucks Coffee",
+        "opening_hours": "Mo-Su 08:00-24:00",
+        "smoking": "no",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12726457258,
+      "lat": 23.1846554,
+      "lon": 72.6293004,
+      "tags": {
+        "addr:city": "Gandhinagar",
+        "addr:postcode": "382421",
+        "amenity": "restaurant",
+        "cuisine": "South Indian",
+        "name": "Urban Dosa House",
+        "panoramax": "b5822e8c-b7b2-4519-830a-4f934cbd0998",
+        "panoramax:0": "0f4fc427-419c-450c-90cc-8593f7d6af2d"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12731411380,
+      "lat": 23.1849769,
+      "lon": 72.6312398,
+      "tags": {
+        "amenity": "restaurant",
+        "level": "2",
+        "name": "Rasam Thal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12732749099,
+      "lat": 23.1885733,
+      "lon": 72.6302431,
+      "tags": {
+        "addr:city": "Gandhinagar",
+        "addr:postcode": "382421",
+        "amenity": "cafe",
+        "cuisine": "tea;noodle",
+        "name": "Banna's Tea Stall"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12770326645,
+      "lat": 23.0309116,
+      "lon": 72.4650527,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "name": "Honest Restaurant",
+        "survey:date": "2025-04-20"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12778806546,
+      "lat": 23.0267125,
+      "lon": 72.4769539,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "pizza",
+        "name": "Pizza Hut",
+        "survey:date": "2025-04-23"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12809739186,
+      "lat": 23.0362706,
+      "lon": 72.5034854,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "asian",
+        "name": "Timtim",
+        "survey:date": "2025-05-04"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12809748225,
+      "lat": 23.0334428,
+      "lon": 72.4370691,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Sambhar Cafe",
+        "survey:date": "2025-04-26",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12827631579,
+      "lat": 23.078011,
+      "lon": 72.5901382,
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Prakash Bhojnalaya"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12827753536,
+      "lat": 23.0499932,
+      "lon": 72.4992539,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Sri Udupi",
+        "panoramax": "1a720916-e27c-4136-b29b-5d7c926e9bee"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12848354132,
+      "lat": 23.0298827,
+      "lon": 72.4746282,
+      "tags": {
+        "air_conditioning": "no",
+        "amenity": "fast_food",
+        "cuisine": "indian",
+        "name": "Shriji Bombay Vada Pav",
+        "outdoor_seating": "no",
+        "survey:date": "2025-05-19",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13041581330,
+      "lat": 23.0218259,
+      "lon": 72.55691,
+      "tags": {
+        "amenity": "fast_food",
+        "brand": "McDonald's",
+        "cuisine": "burger",
+        "indoor_seating": "yes",
+        "level": "0",
+        "name": "McDonald's",
+        "opening_hours": "10:00-04:00",
+        "takeaway": "yes",
+        "toilets": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13041668531,
+      "lat": 23.0217347,
+      "lon": 72.5569853,
+      "tags": {
+        "amenity": "fast_food",
+        "brand": "Burger King",
+        "check_date": "2026-08-18",
+        "check_date:opening_hours": "2026-08-18",
+        "cuisine": "burger",
+        "name": "Burger King",
+        "opening_hours": "Mo-Su 09:00-05:00",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13041668532,
+      "lat": 23.0217891,
+      "lon": 72.5569528,
+      "tags": {
+        "amenity": "fast_food",
+        "brand": "Taco Bell",
+        "cuisine": "tex-mex",
+        "name": "Taco Bell",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13041668533,
+      "lat": 23.0216444,
+      "lon": 72.5570471,
+      "tags": {
+        "alt_name": "Kentucky Fried Chicken",
+        "alt_name:en": "Kentucky Fried Chicken",
+        "alt_name:hi": "केंटुकी फ्राइड चिकन",
+        "alt_name:pa": "ਕੈਂਟੁਕੀ ਫ੍ਰਾਈਡ ਚਿਕਨ",
+        "alt_name:pnb": "کینٹکی فرائیڈ چکن",
+        "alt_name:ur": "کینٹکی فرائیڈ چکن",
+        "amenity": "fast_food",
+        "brand": "KFC",
+        "brand:en": "KFC",
+        "brand:hi": "केएफसी",
+        "brand:pa": "ਕੇਐਫਸੀ",
+        "brand:pnb": "کے ایف سی",
+        "brand:ur": "کے ایف سی",
+        "cuisine": "chicken",
+        "name": "KFC",
+        "name:en": "KFC",
+        "name:hi": "केएफसी",
+        "name:pa": "ਕੇਐਫਸੀ",
+        "name:pnb": "کے ایف سی",
+        "name:ur": "کے ایف سی",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13041668534,
+      "lat": 23.0216852,
+      "lon": 72.5570151,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Shri Maruti Nandan"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13434133836,
+      "lat": 22.9876163,
+      "lon": 72.4476696,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:district": "Ahmedabad",
+        "addr:housenumber": "Survery No. 478",
+        "addr:postcode": "382210",
+        "addr:street": "Inside Nayara Energy Fuel Pump, Sarkhej-Sanand Rd, Near Telav",
+        "air_conditioning": "yes",
+        "amenity": "cafe",
+        "cuisine": "coffee_shop;burger;sandwich;waffle;tea",
+        "internet_access": "yes",
+        "name": "Kettl Cafe Sarkhej-Sanand Rd.",
+        "opening_hours": "Mo-Su 10:00-23:55",
+        "outdoor_seating": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13446377303,
+      "lat": 23.0233074,
+      "lon": 72.588879,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Open air food market"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13465290621,
+      "lat": 22.9912301,
+      "lon": 72.6323612,
+      "tags": {
+        "amenity": "fast_food",
+        "brand": "Domino's",
+        "brand:wikidata": "Q839466",
+        "cuisine": "pizza",
+        "name": "Domino's",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13911496601,
+      "lat": 23.1306578,
+      "lon": 72.5678755,
+      "tags": {
+        "addr:postcode": "382470",
+        "addr:street": "Mansarowar road",
+        "amenity": "restaurant",
+        "name": "The fountain hotel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14022544458,
+      "lat": 23.0760412,
+      "lon": 72.5265342,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:district": "Ahmedabad",
+        "addr:housenumber": "10",
+        "addr:postcode": "380060",
+        "addr:street": "Ganesh Meredian",
+        "amenity": "restaurant",
+        "cuisine": "coffee_shop;sandwich",
+        "internet_access": "yes",
+        "internet_access:fee": "yes",
+        "name": "ChaiG Cafe",
+        "outdoor_seating": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14051232491,
+      "lat": 23.1622431,
+      "lon": 72.6555373,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Brahmani tea & Parlour"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14065592760,
+      "lat": 23.0199395,
+      "lon": 72.5603757,
+      "tags": {
+        "air_conditioning": "yes",
+        "amenity": "cafe",
+        "check_date": "2026-08-01",
+        "name": "Wagh Bakri Tea Lounge",
+        "name:en": "Wagh Bakri Tea Lounge",
+        "name:gu": "વાઘ બકરી ટી લોન્જ",
+        "name:hi": "वाघ बकरी चाय लाउंज",
+        "operator": "Gujarat Tea Processors & Packers Ltd.",
+        "website": "https://www.wbtealounge.com/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14067660558,
+      "lat": 23.024425,
+      "lon": 72.5893682,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2026-08-02",
+        "diet:vegetarian": "only",
+        "name": "Chandravilas Restaurant",
+        "name:en": "Chandravilas Restaurant",
+        "name:gu": "ચંદ્રવિલાસ રેસ્ટોરન્ટ",
+        "panoramax": "429ccf7b-34c5-4f07-9fc9-b0b9fb482cca",
+        "start_date": "1900",
+        "toilets": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14067832703,
+      "lat": 23.0231796,
+      "lon": 72.5893383,
+      "tags": {
+        "amenity": "fast_food",
+        "check_date": "2026-08-02",
+        "cuisine": "juice",
+        "name": "Girish"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14068010751,
+      "lat": 23.0213106,
+      "lon": 72.5529727,
+      "tags": {
+        "air_conditioning": "yes",
+        "amenity": "cafe",
+        "brand": "Tea Post",
+        "check_date": "2026-08-02",
+        "diet:vegetarian": "only",
+        "indoor_seating": "yes",
+        "level": "0",
+        "name": "Tea Post",
+        "name:en": "Tea Post",
+        "name:gu": "ટી પોસ્ટ",
+        "outdoor_seating": "yes",
+        "toilets": "no",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14068572207,
+      "lat": 23.0727031,
+      "lon": 72.6200504,
+      "tags": {
+        "amenity": "cafe",
+        "brand": "Tim Hortons",
+        "brand:wikidata": "Q175106",
+        "cuisine": "coffee_shop",
+        "name": "Tim Hortons",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14068572211,
+      "lat": 23.072229,
+      "lon": 72.6196753,
+      "tags": {
+        "airside": "yes",
+        "amenity": "fast_food",
+        "brand": "Domino's",
+        "brand:wikidata": "Q839466",
+        "check_date": "2026-08-02",
+        "cuisine": "pizza",
+        "level": "1",
+        "name": "Domino's",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14068572213,
+      "lat": 23.0720765,
+      "lon": 72.6196443,
+      "tags": {
+        "airside": "yes",
+        "amenity": "fast_food",
+        "check_date": "2026-08-02",
+        "cuisine": "burger;fries",
+        "level": "1",
+        "name": "The Poutinerie"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14068572219,
+      "lat": 23.0721735,
+      "lon": 72.619648,
+      "tags": {
+        "airside": "yes",
+        "amenity": "cafe",
+        "check_date": "2026-08-02",
+        "level": "1",
+        "name": "Wagh Bakri Tea World"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14068572222,
+      "lat": 23.072164,
+      "lon": 72.6197384,
+      "tags": {
+        "airside": "yes",
+        "alt_name": "Kentucky Fried Chicken",
+        "alt_name:en": "Kentucky Fried Chicken",
+        "alt_name:hi": "केंटुकी फ्राइड चिकन",
+        "alt_name:pa": "ਕੈਂਟੁਕੀ ਫ੍ਰਾਈਡ ਚਿਕਨ",
+        "alt_name:pnb": "کینٹکی فرائیڈ چکن",
+        "alt_name:ur": "کینٹکی فرائیڈ چکن",
+        "amenity": "fast_food",
+        "brand": "KFC",
+        "brand:en": "KFC",
+        "brand:hi": "केएफसी",
+        "brand:pa": "ਕੇਐਫਸੀ",
+        "brand:pnb": "کے ایف سی",
+        "brand:ur": "کے ایف سی",
+        "brand:wikidata": "Q524757",
+        "check_date": "2026-08-02",
+        "cuisine": "chicken",
+        "level": "1",
+        "name": "KFC",
+        "name:en": "KFC",
+        "name:hi": "केएफसी",
+        "name:pa": "ਕੇਐਫਸੀ",
+        "name:pnb": "کے ایف سی",
+        "name:ur": "کے ایف سی",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14090328557,
+      "lat": 23.1751911,
+      "lon": 72.6283905,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Kansar Garden Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14090334447,
+      "lat": 23.1826079,
+      "lon": 72.6829507,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Gujarat Hotel (Gujarat Dhaba) ગુજરાત હોટલ\nગુજરાત ઢાબા"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14096330672,
+      "lat": 23.2098927,
+      "lon": 72.6844176,
+      "tags": {
+        "amenity": "cafe",
+        "cuisine": "coffee_shop",
+        "name": "Nescafe",
+        "outdoor_seating": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14144313016,
+      "lat": 23.0415536,
+      "lon": 72.5509087,
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:street": "Drive-in Road",
+        "amenity": "cafe",
+        "name": "Gulabo and Co."
+      }
+    },
+    {
+      "type": "way",
+      "id": 49406390,
+      "center": {
+        "lat": 23.0112367,
+        "lon": 72.5690552
+      },
+      "tags": {
+        "alt_name": "BMW",
+        "amenity": "fast_food",
+        "name": "Canteen"
+      }
+    },
+    {
+      "type": "way",
+      "id": 80831910,
+      "center": {
+        "lat": 23.0089219,
+        "lon": 72.5704264
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Students Mess"
+      }
+    },
+    {
+      "type": "way",
+      "id": 85209894,
+      "center": {
+        "lat": 23.026352,
+        "lon": 72.5721737
+      },
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:postcode": "380009",
+        "addr:street": "Nehru Bridge",
+        "amenity": "restaurant",
+        "building:levels": "26",
+        "building:min_level": "24",
+        "building:part": "yes",
+        "capacity": "150",
+        "cuisine": "multicuisine",
+        "height": "65",
+        "min_height": "55",
+        "name": "Patang - The Revolving Restaurant",
+        "opening_hours": "Mo-Su 12:00-15:00,19:00-23:30",
+        "source": "http://www.neelkanthpatang.com/",
+        "website": "http://www.neelkanthpatang.com/",
+        "wikidata": "Q107210904",
+        "wikimedia_commons": "Category:Patang Hotel",
+        "wikipedia": "en:Patang Hotel"
+      }
+    },
+    {
+      "type": "way",
+      "id": 366459078,
+      "center": {
+        "lat": 23.0400297,
+        "lon": 72.5020608
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "@Mango",
+        "opening_hours": "Mo-Su 12:00-15:00,18:00-22:00",
+        "phone": "+919925238230",
+        "website": "https://www.atmango.com/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 366466142,
+      "center": {
+        "lat": 23.033026,
+        "lon": 72.5249975
+      },
+      "tags": {
+        "amenity": "food_court",
+        "building": "yes",
+        "name": "Premvati",
+        "opening_hours": "Mo-Su 10:30-23:00"
+      }
+    },
+    {
+      "type": "way",
+      "id": 367198356,
+      "center": {
+        "lat": 23.0410843,
+        "lon": 72.5269296
+      },
+      "tags": {
+        "amenity": "cafe",
+        "building": "yes",
+        "internet_access": "no",
+        "internet_access:fee": "no",
+        "name": "Upper crust cafe",
+        "outdoor_seating": "no",
+        "smoking": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 374253742,
+      "center": {
+        "lat": 23.0344702,
+        "lon": 72.5611866
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "chocolate room"
+      }
+    },
+    {
+      "type": "way",
+      "id": 374253743,
+      "center": {
+        "lat": 23.0342326,
+        "lon": 72.5610089
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "waah"
+      }
+    },
+    {
+      "type": "way",
+      "id": 374253744,
+      "center": {
+        "lat": 23.0342154,
+        "lon": 72.5610967
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "purohit"
+      }
+    },
+    {
+      "type": "way",
+      "id": 374253745,
+      "center": {
+        "lat": 23.0342648,
+        "lon": 72.5608419
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "havmore"
+      }
+    },
+    {
+      "type": "way",
+      "id": 404227760,
+      "center": {
+        "lat": 23.0347461,
+        "lon": 72.5514151
+      },
+      "tags": {
+        "amenity": "cafe",
+        "building": "retail",
+        "building:levels": "1",
+        "name": "MG Science Canteen",
+        "roof:material": "concrete",
+        "roof:shape": "flat"
+      }
+    },
+    {
+      "type": "way",
+      "id": 451500298,
+      "center": {
+        "lat": 23.1110174,
+        "lon": 72.6719342
+      },
+      "tags": {
+        "amenity": "fast_food",
+        "building": "yes",
+        "name": "kAKA Ni Bhaji pav"
+      }
+    },
+    {
+      "type": "way",
+      "id": 451514771,
+      "center": {
+        "lat": 23.0581169,
+        "lon": 72.6719773
+      },
+      "tags": {
+        "addr:city": "ahmedabad",
+        "addr:street": "Nikol-Nava Naroda road",
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Kathiyawadi"
+      }
+    },
+    {
+      "type": "way",
+      "id": 538938317,
+      "center": {
+        "lat": 23.1282802,
+        "lon": 72.5473164
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Pharma Canteen(F1)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 538946980,
+      "center": {
+        "lat": 23.1271067,
+        "lon": 72.5450506
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Law Canteen(F2)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 560617360,
+      "center": {
+        "lat": 23.0741383,
+        "lon": 72.650781
+      },
+      "tags": {
+        "addr:city": "Ahemedabad",
+        "addr:street": "Rakhiyal Road SH-68",
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Hotel Emerland"
+      }
+    },
+    {
+      "type": "way",
+      "id": 573008944,
+      "center": {
+        "lat": 23.0483244,
+        "lon": 72.5713265
+      },
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:postcode": "380013",
+        "addr:street": "Ashram Road",
+        "amenity": "restaurant",
+        "building": "yes",
+        "delivery": "yes",
+        "name": "Parth Flavour"
+      }
+    },
+    {
+      "type": "way",
+      "id": 693611738,
+      "center": {
+        "lat": 23.2107757,
+        "lon": 72.6856605
+      },
+      "tags": {
+        "amenity": "food_court",
+        "building": "service",
+        "description": "It is IIT Gandhinagar Hostel mess maintained by IIT Gandhinagar.",
+        "height": "7",
+        "name": "Old Mess IIT Gandhinagar",
+        "opening_hours": "24/7",
+        "operator": "IIT Gandhinagar"
+      }
+    },
+    {
+      "type": "way",
+      "id": 754019040,
+      "center": {
+        "lat": 22.9949985,
+        "lon": 72.6050299
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "cuisine": "indian",
+        "name": "Prince Bhaji Pav"
+      }
+    },
+    {
+      "type": "way",
+      "id": 973444844,
+      "center": {
+        "lat": 23.0305837,
+        "lon": 72.2964209
+      },
+      "tags": {
+        "addr:city": "Khoda",
+        "addr:postcode": "382110",
+        "addr:street": "Sanand-Viramgam Highway",
+        "amenity": "restaurant",
+        "building": "yes",
+        "cuisine": "indian;pizza",
+        "diet:vegetarian": "yes",
+        "name": "Honest Khoda",
+        "opening_hours": "24/7",
+        "phone": "+919727736888"
+      }
+    },
+    {
+      "type": "way",
+      "id": 993060289,
+      "center": {
+        "lat": 23.0677778,
+        "lon": 72.4870557
+      },
+      "tags": {
+        "addr:city": "Ahmedabad",
+        "addr:postcode": "380059",
+        "addr:street": "Sardar Patel Ring Road",
+        "amenity": "cafe",
+        "name": "Vibes9 V9 Cafe",
+        "outdoor_seating": "yes",
+        "smoking": "isolated"
+      }
+    },
+    {
+      "type": "way",
+      "id": 997945841,
+      "center": {
+        "lat": 23.2024101,
+        "lon": 72.5831926
+      },
+      "tags": {
+        "amenity": "cafe",
+        "building": "yes",
+        "name": "Anticlock Canteen"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1009015696,
+      "center": {
+        "lat": 23.0201714,
+        "lon": 72.5507544
+      },
+      "tags": {
+        "amenity": "food_court",
+        "building": "yes",
+        "name": "Smt. Manekba Swadhyay Khand",
+        "name:en": "Mrs. Manekba Study Hall"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1087307157,
+      "center": {
+        "lat": 23.0442392,
+        "lon": 72.5175621
+      },
+      "tags": {
+        "alt_name": "Kamala Cafe",
+        "amenity": "restaurant",
+        "cuisine": "indian",
+        "description": "The place offers non-profitable authentic and organic food which they claim to be sourced directly from farms and served in lap of nature. Purpose is to help unpriviledged women by SEWA foundation",
+        "name": "Kamla Cafe",
+        "opening_hours": "Mo-Su 08:00-23:00",
+        "phone": "07925506441",
+        "website": "https://www.sewa.org/",
+        "wheelchair": "yes",
+        "wikimedia_commons": "Category:Kamla_Cafe"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1135183115,
+      "center": {
+        "lat": 23.2107357,
+        "lon": 72.6835749
+      },
+      "tags": {
+        "amenity": "food_court",
+        "building": "yes",
+        "internet_access": "yes",
+        "name": "Student Mess (Jaiswal + Mohani)",
+        "opening_hours": "PH,Mo-Su 07:30-21:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1135220070,
+      "center": {
+        "lat": 23.2106762,
+        "lon": 72.6845373
+      },
+      "tags": {
+        "amenity": "fast_food",
+        "building": "yes",
+        "fast_food": "cafeteria",
+        "name": "Just Chill Cafe"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1135236974,
+      "center": {
+        "lat": 23.213354,
+        "lon": 72.6838841
+      },
+      "tags": {
+        "amenity": "fast_food",
+        "building": "yes",
+        "cuisine": "coffee_shop;chicken;indian",
+        "fast_food": "cafeteria",
+        "name": "Aadhya Cafe"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1180002417,
+      "center": {
+        "lat": 23.1065269,
+        "lon": 72.5760501
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Praful Dairy Parlour"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1202571602,
+      "center": {
+        "lat": 23.1252226,
+        "lon": 72.6132888
+      },
+      "tags": {
+        "amenity": "food_court",
+        "building": "yes",
+        "level": "2",
+        "name": "Bhojanshala"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1211760600,
+      "center": {
+        "lat": 23.0454565,
+        "lon": 72.4917071
+      },
+      "tags": {
+        "amenity": "cafe",
+        "building": "yes",
+        "name": "Camilo Coffee"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1260747555,
+      "center": {
+        "lat": 23.0757115,
+        "lon": 72.6237907
+      },
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Curry Tree"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1274878131,
+      "center": {
+        "lat": 23.210546,
+        "lon": 72.6850034
+      },
+      "tags": {
+        "amenity": "fast_food",
+        "building": "yes",
+        "cuisine": "juice;fruit_juice;ice_cream",
+        "name": "Mahavir"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1369893075,
+      "center": {
+        "lat": 23.0322626,
+        "lon": 72.5049551
+      },
+      "tags": {
+        "air_conditioning": "yes",
+        "amenity": "restaurant",
+        "bar": "no",
+        "building": "yes",
+        "diet:vegetarian": "yes",
+        "name": "Under the Neem Trees",
+        "toilets": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1370788552,
+      "center": {
+        "lat": 23.1569085,
+        "lon": 72.6689096
+      },
+      "tags": {
+        "access": "restricted",
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Highrise mess"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1375690863,
+      "center": {
+        "lat": 23.0362244,
+        "lon": 72.4940097
+      },
+      "tags": {
+        "amenity": "cafe",
+        "building": "yes",
+        "name": "site"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1432594581,
+      "center": {
+        "lat": 23.1885664,
+        "lon": 72.6272818
+      },
+      "tags": {
+        "amenity": "cafe",
+        "building": "yes",
+        "name": "NesCafe"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1432594583,
+      "center": {
+        "lat": 23.1886074,
+        "lon": 72.6269134
+      },
+      "tags": {
+        "amenity": "cafe",
+        "cuisine": "coffee_shop",
+        "name": "K ++"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1432594587,
+      "center": {
+        "lat": 23.188488,
+        "lon": 72.6270739
+      },
+      "tags": {
+        "amenity": "fast_food",
+        "cuisine": "juice",
+        "name": "Juice Centre"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1486398672,
+      "center": {
+        "lat": 23.2096588,
+        "lon": 72.6627817
+      },
+      "tags": {
+        "access": "yes",
+        "air_conditioning": "no",
+        "amenity": "fast_food",
+        "building": "yes",
+        "cuisine": "indian;burger;pizza;sandwich;pasta;fries;noodle;regional",
+        "diet:vegetarian": "yes",
+        "drive_through": "no",
+        "fast_food": "cafeteria",
+        "name": "NFSU Cafeteria",
+        "opening_hours": "Mo-Sa 09:00-20:00",
+        "operator": "Like Home Food Services"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1540063342,
+      "center": {
+        "lat": 23.0760361,
+        "lon": 72.5265743
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "cuisine": "burger",
+        "diet:vegetarian": "yes",
+        "name": "ChaiG Cafe and restaurant"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1552022342,
+      "center": {
+        "lat": 23.164822,
+        "lon": 72.5383734
+      },
+      "tags": {
+        "amenity": "restaurant",
+        "building": "commercial",
+        "cuisine": "asian;sandwich",
+        "name": "Lollo Rosso, Shantigram",
+        "opening_hours": "Mo-Su 09:30-23:00",
+        "phone": "+918855978128",
+        "website": "http://www.lollorosso.in/"
+      }
+    }
+  ]
+}

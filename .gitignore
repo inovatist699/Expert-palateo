@@ -1,0 +1,9 @@
+.env*
+**/.env*
+.vercel/
+**/.vercel/
+node_modules/
+**/node_modules/
+outputs/
+*.zip
+**/.well-known/strix-verify.txt

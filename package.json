@@ -1,0 +1,1 @@
+{"name":"palateo-workspace","private":true,"scripts":{"check":"node work/check-taste-onboarding.cjs && node work/check-waitlist.cjs && node work/check-sentry.cjs","update:csp":"node work/check-taste-onboarding.cjs --update-csp","check:live":"node work/check-palateo-live.cjs","preview:mobile":"node work/preview-mobile-taste.cjs"}}

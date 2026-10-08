@@ -33,7 +33,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://ntuaqcnbhqtbhbnnobmm.supabase.co; script-src 'self' 'sha256-Kg8ZdORRizCJZyTEUEC99sT6jTuiqcRANqzD4sB0hEY=' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://*.googleapis.com https://*.googleusercontent.com https://*.gstatic.com https://images.unsplash.com https://*.unsplash.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://o4512210066210816.ingest.de.sentry.io https://ntuaqcnbhqtbhbnnobmm.supabase.co; upgrade-insecure-requests; script-src-attr 'none'"
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://ntuaqcnbhqtbhbnnobmm.supabase.co; script-src 'self' 'sha256-bw/QO8dQq+YbQUeL+cqmhs50mrggiEQq26NSNEpUveI=' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://*.googleapis.com https://*.googleusercontent.com https://*.gstatic.com https://images.unsplash.com https://*.unsplash.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://o4512210066210816.ingest.de.sentry.io https://ntuaqcnbhqtbhbnnobmm.supabase.co; upgrade-insecure-requests; script-src-attr 'none'"
         }
       ]
     }

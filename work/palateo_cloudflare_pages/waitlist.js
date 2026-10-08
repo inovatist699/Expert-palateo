@@ -40,3 +40,60 @@ motionToggle.addEventListener('click', () => {
  const paused = document.body.classList.toggle('motion-paused');
  motionToggle.setAttribute('aria-pressed', String(paused)); motionToggle.textContent = paused ? 'Resume motion' : 'Pause motion';
 });
+
+
+(function initLandingLogoReveal() {
+  const el = document.getElementById('palateoLogoReveal');
+  if (!el) return;
+  let dismissTimer = null;
+  function dismiss(quick) {
+    if (quick && el.classList && el.classList.add) {
+      el.classList.add('is-skipping');
+      setTimeout(() => {
+        if (el.classList && el.classList.add) el.classList.add('dismissed');
+        if (el.classList && el.classList.remove) el.classList.remove('is-active', 'is-skipping', 'replaying');
+      }, 260);
+    } else {
+      if (el.classList && el.classList.add) el.classList.add('dismissed');
+      if (el.classList && el.classList.remove) el.classList.remove('is-active', 'is-skipping', 'replaying');
+    }
+    try { sessionStorage.setItem('palateo_revealed_v2', 'true'); } catch(e) {}
+  }
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (el.classList && el.classList.add) el.classList.add('dismissed');
+    return;
+  }
+  try {
+    if (sessionStorage.getItem('palateo_revealed_v2') === 'true') {
+      if (el.classList && el.classList.add) el.classList.add('dismissed');
+      return;
+    }
+  } catch(e) {}
+  if (el.classList && el.classList.add) el.classList.add('is-active');
+  const skipBtn = document.getElementById('revealSkipBtn');
+  if (skipBtn) skipBtn.addEventListener('click', (e) => { e.stopPropagation(); dismiss(true); });
+  el.addEventListener('click', () => dismiss(true));
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' || e.key === ' ' || e.key === 'Enter') dismiss(true);
+  }, { once: true });
+  dismissTimer = setTimeout(() => dismiss(false), 3050);
+  window.replayLogoReveal = function() {
+    if (!el) return;
+    clearTimeout(dismissTimer);
+    if (el.classList && el.classList.remove) el.classList.remove('dismissed', 'is-skipping', 'is-active', 'replaying');
+    void el.offsetWidth;
+    if (el.classList && el.classList.add) el.classList.add('is-active');
+    dismissTimer = setTimeout(() => dismiss(false), 3050);
+  };
+  const brand = document.querySelector('.brand');
+  if (brand) {
+    brand.style.cursor = 'pointer';
+    brand.title = 'Palateo - Replay intro';
+    brand.addEventListener('click', (e) => {
+      if (location.pathname === '/' || location.pathname === '/index.html') {
+        e.preventDefault();
+        window.replayLogoReveal();
+      }
+    });
+  }
+})();

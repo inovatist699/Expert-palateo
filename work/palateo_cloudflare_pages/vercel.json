@@ -33,7 +33,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://ntuaqcnbhqtbhbnnobmm.supabase.co; script-src 'self' 'sha256-mcj4qTPstRZzkcub5u9iKqUz4qRxUDrlTsl/4FUzPzc=' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://*.googleapis.com https://*.googleusercontent.com https://*.gstatic.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://o4512210066210816.ingest.de.sentry.io https://ntuaqcnbhqtbhbnnobmm.supabase.co; upgrade-insecure-requests; script-src-attr 'none'"
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://ntuaqcnbhqtbhbnnobmm.supabase.co; script-src 'self' 'sha256-QSbWE4YTn88Fw3X7fFLnKrufjf9SVXNpe7U+TyaMF/M=' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://*.googleapis.com https://*.googleusercontent.com https://*.gstatic.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://o4512210066210816.ingest.de.sentry.io https://ntuaqcnbhqtbhbnnobmm.supabase.co; upgrade-insecure-requests; script-src-attr 'none'"
         }
       ]
     }

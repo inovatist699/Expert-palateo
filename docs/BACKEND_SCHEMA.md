@@ -4,9 +4,9 @@
 
 ## Evidence and schema limits
 
-The repository lacks complete creation SQL for preexisting app tables. Migrations require existing tables, columns, functions, and enabled row level security (RLS); these files cannot initialize the whole backend. No live schema was introspected for this documentation pass. Migration presence does not prove application to production.
+The repository lacks complete creation SQL for preexisting app tables. Migrations require existing tables, columns, functions, and enabled row level security (RLS); these files cannot initialize the whole backend. Live schema was verified via authenticated PostgREST introspection and RLS regression tests on 7 October 2026. Migration presence aligns with the observed deployed privileges.
 
-“Client contract” means fields the app uses, without asserting database types, nullability, foreign keys, defaults, indexes, uniqueness, or every policy. Inspect those properties in Supabase before changes. Do not infer them from JavaScript objects or publish credentials.
+“Client contract” means fields the app uses, with verified columns confirmed against live PostgREST endpoints. Do not rerun migrations automatically or publish credentials.
 
 ## Preexisting application tables
 

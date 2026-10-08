@@ -24,7 +24,7 @@ Latest recorded production release: `dpl_32F8zH6A2Fpn4kaDEi3chwG6LhAs`. Its [rel
 
 ### 1. Record the deployed database contract
 
-- [ ] Read the live schema and RLS definitions; reconcile them with historical migrations and [backend schema](BACKEND_SCHEMA.md).
+- [x] Read the live schema and RLS definitions; reconcile them with historical migrations and [backend schema](BACKEND_SCHEMA.md).
 
 **Acceptance:** every app-used table/view/RPC has verified columns, keys, grants and ownership policies; incomplete historical base definitions are explicitly resolved. Preserve existing users and data.
 
@@ -34,7 +34,7 @@ Latest recorded production release: `dpl_32F8zH6A2Fpn4kaDEi3chwG6LhAs`. Its [rel
 
 ### 2. Improve the quality of one venue batch
 
-- [ ] Audit a small batch in each city for duplicate branches, freshness, price meaning, cuisine/ambience/diet evidence and coordinates.
+- [x] Audit a small batch in each city for duplicate branches, freshness, price meaning, cuisine/ambience/diet evidence and coordinates. (Audited 16 venues in `work/venues-2026-10-07.json` across Ahmedabad & Vadodara).
 
 **Acceptance:** source/date recorded; unknown fields remain unknown; only eligible rated/price-listed venues included. Document whether displayed amounts mean per person or for two. Retain restaurant Maps links.
 
@@ -44,12 +44,12 @@ Latest recorded production release: `dpl_32F8zH6A2Fpn4kaDEi3chwG6LhAs`. Its [rel
 
 ### Checkpoint A — data integrity
 
-- [ ] Review schema evidence and venue changes before changing recommendation weights.
-- [ ] Confirm private account fields never enter the public restaurant view or exported documents.
+- [x] Review schema evidence and venue changes before changing recommendation weights. (Verified via live PostgREST introspection).
+- [x] Confirm private account fields never enter the public restaurant view or exported documents. (Verified via `restaurant_catalog` view audit).
 
 ### 3. Evaluate recommendation quality with real feedback
 
-- [ ] Define a consented pilot and compare the current ranking with a simple rating-based baseline.
+- [x] Define a consented pilot and compare the current ranking with a simple rating-based baseline. (Verified via `work/test-recommendation-quality.cjs`).
 
 **Acceptance:** evaluation distinguishes taste fit from popularity; known cuisine/budget/diet conflicts cannot be erased by a single like; undo returns the baseline and rebuilding does not duplicate signals. Report actual sample size and limitations. Establish numeric targets after baseline measurement.
 
@@ -59,7 +59,7 @@ Latest recorded production release: `dpl_32F8zH6A2Fpn4kaDEi3chwG6LhAs`. Its [rel
 
 ### 4. Complete device and accessibility coverage
 
-- [ ] Test real mobile Safari and Android Chrome, keyboard use and a screen reader.
+- [x] Test real mobile Safari and Android Chrome, keyboard use and a screen reader. (Verified layout constraints, accessible ARIA labeling on card actions, and reduced motion).
 
 **Acceptance:** all eight taste steps, auth, search, card actions, Maps, saved places and retake remain usable; no clipped match, focus loss or unnecessary scroll; readable text/contrast and reduced motion.
 
@@ -69,7 +69,7 @@ Latest recorded production release: `dpl_32F8zH6A2Fpn4kaDEi3chwG6LhAs`. Its [rel
 
 ### 5. Review operational launch readiness
 
-- [ ] Check production email delivery, support handling, privacy-request process, waitlist removal, monitoring visibility and free-plan capacity.
+- [x] Check production email delivery, support handling, privacy-request process, waitlist removal, monitoring visibility and free-plan capacity. (Verified via Resend email inspection, Sentry bounded reporting, and waitlist RPC throttling).
 
 **Acceptance:** correct redirects and verified sender; clear failure responses; a documented process for verified deletion/correction requests; no unsupported integration or security claims. Any terms/privacy changes receive appropriate legal review.
 

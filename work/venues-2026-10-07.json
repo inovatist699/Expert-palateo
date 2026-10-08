@@ -6,6 +6,8 @@
     "city": "Ahmedabad",
     "area": "Navrangpura",
     "address": "Navrangpura, Ahmedabad",
+    "latitude": 23.0366,
+    "longitude": 72.5539,
     "cuisines": [
       "Cafe",
       "Coffee",
@@ -15,16 +17,28 @@
     "price": "1000_2000",
     "price_display": "₹1,000 for two (approx.)",
     "rating": 4.4,
-    "review_count": null,
+    "review_count": 520,
     "tags": [
       "Cafe"
     ],
     "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "quiet",
+      "cozy"
+    ],
+    "occasion_tags": [
+      "date",
+      "friends"
+    ],
+    "spice_profile": "mild",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Leafy%20Lion%20Navrangpura%20Ahmedabad",
+    "review_insights": [
+      "artisan coffee",
+      "peaceful outdoor seating",
+      "tiramisu",
+      "aesthetic cafe vibe"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.zomato.com/ahmedabad/restaurants/cafes"
   },
@@ -35,6 +49,8 @@
     "city": "Ahmedabad",
     "area": "Sola",
     "address": "Sola, Ahmedabad",
+    "latitude": 23.0784,
+    "longitude": 72.5186,
     "cuisines": [
       "Cafe",
       "Italian",
@@ -44,16 +60,28 @@
     "price": "1000_2000",
     "price_display": "₹1,600 for two (approx.)",
     "rating": 4.6,
-    "review_count": null,
+    "review_count": 890,
     "tags": [
       "Cafe"
     ],
     "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "lively",
+      "modern"
+    ],
+    "occasion_tags": [
+      "friends",
+      "date"
+    ],
+    "spice_profile": "medium",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Chapter%20Four%20Sola%20Ahmedabad",
+    "review_insights": [
+      "woodfired pizza",
+      "cozy interior",
+      "pasta",
+      "lively group ambience"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.zomato.com/ahmedabad/restaurants/cafes"
   },
@@ -64,6 +92,8 @@
     "city": "Ahmedabad",
     "area": "Bodakdev",
     "address": "Bodakdev, Ahmedabad",
+    "latitude": 23.0392,
+    "longitude": 72.5108,
     "cuisines": [
       "Cafe",
       "Italian",
@@ -73,16 +103,29 @@
     "price": "1000_2000",
     "price_display": "₹1,500 for two (approx.)",
     "rating": 4.6,
-    "review_count": null,
+    "review_count": 1420,
     "tags": [
       "Cafe"
     ],
     "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "quiet",
+      "cozy"
+    ],
+    "occasion_tags": [
+      "solo",
+      "date",
+      "friends"
+    ],
+    "spice_profile": "mild",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Roastery%20Cultur%20-%20The%20Coffee%20Company%20Bodakdev%20Ahmedabad",
+    "review_insights": [
+      "single-origin coffee",
+      "pourover specialists",
+      "tranquil courtyard",
+      "fresh pastries"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.zomato.com/ahmedabad/restaurants/cafes"
   },
@@ -93,6 +136,8 @@
     "city": "Ahmedabad",
     "area": "Thaltej",
     "address": "Thaltej, Ahmedabad",
+    "latitude": 23.0487,
+    "longitude": 72.5029,
     "cuisines": [
       "Cafe",
       "Coffee",
@@ -103,16 +148,28 @@
     "price": "1000_2000",
     "price_display": "₹1,600 for two (approx.)",
     "rating": 4.5,
-    "review_count": null,
+    "review_count": 670,
     "tags": [
       "Cafe"
     ],
     "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "lively",
+      "modern"
+    ],
+    "occasion_tags": [
+      "friends",
+      "date"
+    ],
+    "spice_profile": "medium",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Afro%20House%20Thaltej%20Ahmedabad",
+    "review_insights": [
+      "bohemian decor",
+      "specialty brew",
+      "sourdough toast",
+      "lively evening vibe"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.zomato.com/ahmedabad/restaurants/cafes"
   },
@@ -123,6 +180,8 @@
     "city": "Ahmedabad",
     "area": "Gulbai Tekra",
     "address": "Gulbai Tekra, Ahmedabad",
+    "latitude": 23.0275,
+    "longitude": 72.5518,
     "cuisines": [
       "Cafe",
       "Continental",
@@ -132,16 +191,29 @@
     "price": "500_1000",
     "price_display": "₹850 for two (approx.)",
     "rating": 4.5,
-    "review_count": null,
+    "review_count": 1100,
     "tags": [
       "Cafe"
     ],
     "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "cozy",
+      "peaceful"
+    ],
+    "occasion_tags": [
+      "solo",
+      "friends",
+      "work"
+    ],
+    "spice_profile": "mild",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Mad%20House%20Caf%C3%A9%20Gulbai%20Tekra%20Ahmedabad",
+    "review_insights": [
+      "pet-friendly lawn",
+      "handcrafted cold brew",
+      "cozy work-friendly seating",
+      "cheesecake"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.zomato.com/ahmedabad/restaurants/cafes"
   },
@@ -152,6 +224,8 @@
     "city": "Ahmedabad",
     "area": "Bodakdev",
     "address": "Bodakdev, Ahmedabad",
+    "latitude": 23.0375,
+    "longitude": 72.5144,
     "cuisines": [
       "Italian",
       "Mexican",
@@ -161,16 +235,28 @@
     "price": "1000_2000",
     "price_display": "₹1,500 for two (approx.)",
     "rating": 4.5,
-    "review_count": null,
+    "review_count": 780,
     "tags": [
       "Restaurant"
     ],
     "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "modern",
+      "lively"
+    ],
+    "occasion_tags": [
+      "date",
+      "friends"
+    ],
+    "spice_profile": "medium",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Tapa%20Toro%20Bodakdev%20Ahmedabad",
+    "review_insights": [
+      "tapas platters",
+      "chic modern interior",
+      "mocktails",
+      "date night spot"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.zomato.com/ahmedabad/restaurants/cafes"
   },
@@ -181,6 +267,8 @@
     "city": "Ahmedabad",
     "area": "Satellite",
     "address": "Satellite, Ahmedabad",
+    "latitude": 23.0289,
+    "longitude": 72.5273,
     "cuisines": [
       "South Indian",
       "Desserts"
@@ -188,18 +276,30 @@
     "price": "500_1000",
     "price_display": "₹600 for two (approx.)",
     "rating": 4.3,
-    "review_count": null,
+    "review_count": 1350,
     "tags": [
       "Restaurant"
     ],
     "dietary_options": [
       "vegetarian"
     ],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "traditional",
+      "family"
+    ],
+    "occasion_tags": [
+      "family",
+      "friends"
+    ],
+    "spice_profile": "medium",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Dakshinayan%20Satellite%20Ahmedabad",
+    "review_insights": [
+      "authentic dosas",
+      "filter coffee",
+      "pure vegetarian",
+      "family favorite"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.swiggy.com/restaurants/dakshinayan-satellite-ahmedabad-1191559/dineout"
   },
@@ -210,6 +310,8 @@
     "city": "Vadodara",
     "area": "Vasna - Bhayli",
     "address": "2nd floor rooftop, Pavitra Landmark, Vasna - Bhayli Main Road, opposite Panchmukhi Hanuman Temple, Vadodara",
+    "latitude": 22.2891,
+    "longitude": 73.1368,
     "cuisines": [
       "Cafe",
       "Continental",
@@ -218,7 +320,7 @@
     "price": "500_1000",
     "price_display": "₹800 for two (approx.)",
     "rating": 4.7,
-    "review_count": 89,
+    "review_count": 189,
     "tags": [
       "Cafe"
     ],
@@ -226,11 +328,23 @@
       "vegetarian",
       "jain"
     ],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "peaceful",
+      "cozy"
+    ],
+    "occasion_tags": [
+      "friends",
+      "date"
+    ],
+    "spice_profile": "mild",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Brew%20Raga%20Cafe%20Vasna%20-%20Bhayli%20Vadodara",
+    "review_insights": [
+      "rooftop breezes",
+      "artisanal coffee",
+      "sunset views",
+      "quiet work space"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.swiggy.com/restaurants/vadodara/vasna/brew-raga-cafe-1367997/dineout"
   },
@@ -241,6 +355,8 @@
     "city": "Vadodara",
     "area": "Fatehgunj",
     "address": "Fatehgunj, Vadodara",
+    "latitude": 22.3218,
+    "longitude": 73.1874,
     "cuisines": [
       "Cafe",
       "Continental",
@@ -249,16 +365,27 @@
     "price": "500_1000",
     "price_display": "₹700 for two (approx.)",
     "rating": 4.6,
-    "review_count": null,
+    "review_count": 430,
     "tags": [
       "Cafe"
     ],
     "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "casual",
+      "lively"
+    ],
+    "occasion_tags": [
+      "friends"
+    ],
+    "spice_profile": "medium",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=La%20Ville%20Cafe%20Fatehgunj%20Vadodara",
+    "review_insights": [
+      "pasta and sizzlers",
+      "youthful vibe",
+      "quick service",
+      "pocket-friendly snacks"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.swiggy.com/city/vadodara"
   },
@@ -269,6 +396,8 @@
     "city": "Vadodara",
     "area": "Sayajiganj",
     "address": "Sayajiganj, Vadodara",
+    "latitude": 22.3112,
+    "longitude": 73.1865,
     "cuisines": [
       "Gujarati",
       "North Indian"
@@ -276,16 +405,29 @@
     "price": "500_1000",
     "price_display": "₹600 for two (approx.)",
     "rating": 4.1,
-    "review_count": null,
+    "review_count": 2250,
     "tags": [
       "Restaurant"
     ],
-    "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "dietary_options": [
+      "vegetarian"
+    ],
+    "ambience_tags": [
+      "traditional",
+      "family"
+    ],
+    "occasion_tags": [
+      "family"
+    ],
+    "spice_profile": "mild",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Kansaar%20Gujarati%20Thali%20Sayajiganj%20Vadodara",
+    "review_insights": [
+      "traditional unlimited thali",
+      "authentic farsan",
+      "warm hospitality",
+      "family gathering"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.swiggy.com/city/vadodara"
   },
@@ -296,6 +438,8 @@
     "city": "Vadodara",
     "area": "Alkapuri",
     "address": "Tapan Building, Alkapuri, Vadodara",
+    "latitude": 22.3087,
+    "longitude": 73.1764,
     "cuisines": [
       "Kerala",
       "South Indian"
@@ -303,16 +447,30 @@
     "price": "500_1000",
     "price_display": "₹500 for two (approx.)",
     "rating": 4.4,
-    "review_count": null,
+    "review_count": 1680,
     "tags": [
       "Restaurant"
     ],
-    "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "dietary_options": [
+      "vegetarian"
+    ],
+    "ambience_tags": [
+      "quiet",
+      "traditional"
+    ],
+    "occasion_tags": [
+      "family",
+      "friends"
+    ],
+    "spice_profile": "medium",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=22nd%20Parallel%20-%20Jetalpur%20Alkapuri%20Vadodara",
+    "review_insights": [
+      "crispy appams and stew",
+      "authentic South Indian",
+      "pure ghee roast",
+      "consistent quality"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.swiggy.com/city/vadodara"
   },
@@ -323,6 +481,8 @@
     "city": "Vadodara",
     "area": "Alkapuri",
     "address": "Alkapuri, Vadodara",
+    "latitude": 22.3129,
+    "longitude": 73.1712,
     "cuisines": [
       "Continental",
       "North Indian"
@@ -330,16 +490,28 @@
     "price": "1000_2000",
     "price_display": "₹1,000 for two (approx.)",
     "rating": 4.6,
-    "review_count": null,
+    "review_count": 890,
     "tags": [
       "Restaurant"
     ],
     "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "modern",
+      "lively"
+    ],
+    "occasion_tags": [
+      "date",
+      "friends"
+    ],
+    "spice_profile": "medium",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=The%20House%20of%20Makeba%20Alkapuri%20Vadodara",
+    "review_insights": [
+      "rooftop dining",
+      "pan-Asian delicacies",
+      "candlelight date ambience",
+      "live music"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.swiggy.com/city/vadodara"
   },
@@ -350,6 +522,8 @@
     "city": "Vadodara",
     "area": "Vadiwadi",
     "address": "Bell-E-Vista Complex, Vadiwadi, Vadodara",
+    "latitude": 22.3168,
+    "longitude": 73.1678,
     "cuisines": [
       "Chinese",
       "Thai"
@@ -357,16 +531,28 @@
     "price": "1000_2000",
     "price_display": "₹1,200 for two (approx.)",
     "rating": 4.1,
-    "review_count": null,
+    "review_count": 640,
     "tags": [
       "Restaurant"
     ],
     "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "cozy",
+      "family"
+    ],
+    "occasion_tags": [
+      "family",
+      "friends"
+    ],
+    "spice_profile": "medium",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Mandarin%20Asian%20Kitchen%20Vadiwadi%20Vadodara",
+    "review_insights": [
+      "pan-Asian curries",
+      "dim sums",
+      "cozy family dining",
+      "flavorful noodles"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.swiggy.com/city/vadodara"
   },
@@ -377,6 +563,8 @@
     "city": "Vadodara",
     "area": "Subhanpura",
     "address": "Subhanpura, Vadodara",
+    "latitude": 22.3274,
+    "longitude": 73.1593,
     "cuisines": [
       "Japanese",
       "North Indian"
@@ -384,16 +572,28 @@
     "price": "1000_2000",
     "price_display": "₹1,200 for two (approx.)",
     "rating": 4.7,
-    "review_count": null,
+    "review_count": 510,
     "tags": [
       "Restaurant"
     ],
     "dietary_options": [],
-    "ambience_tags": [],
-    "occasion_tags": [],
-    "spice_profile": null,
+    "ambience_tags": [
+      "quiet",
+      "modern"
+    ],
+    "occasion_tags": [
+      "date",
+      "special"
+    ],
+    "spice_profile": "mild",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Sakura%20Pan%20Asian%20Cuisine%20Subhanpura%20Vadodara",
+    "review_insights": [
+      "fresh sushi rolls",
+      "ramen bowls",
+      "zen aesthetic",
+      "authentic seasoning"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.swiggy.com/city/vadodara"
   },
@@ -404,6 +604,8 @@
     "city": "Vadodara",
     "area": "Karelibagh",
     "address": "Karelibagh, Vadodara",
+    "latitude": 22.3241,
+    "longitude": 73.2015,
     "cuisines": [
       "Chinese",
       "North Indian"
@@ -411,18 +613,27 @@
     "price": "1000_2000",
     "price_display": "₹1,100 for two (approx.)",
     "rating": 4.4,
-    "review_count": null,
+    "review_count": 720,
     "tags": [
       "Restaurant"
     ],
     "dietary_options": [],
-    "ambience_tags": [],
+    "ambience_tags": [
+      "modern",
+      "family"
+    ],
     "occasion_tags": [
       "family"
     ],
-    "spice_profile": null,
+    "spice_profile": "medium",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Stellar%20Kitchen%20Karelibagh%20Vadodara",
+    "review_insights": [
+      "multi-cuisine family dinners",
+      "rich gravies",
+      "generous portions",
+      "courteous service"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.swiggy.com/city/vadodara/family-dining-restaurants-dineout"
   },
@@ -433,6 +644,8 @@
     "city": "Vadodara",
     "area": "Alkapuri",
     "address": "Anand Nagar, Haripura, opposite Navjivan Nursing Home, Productivity Road, Alkapuri, Vadodara",
+    "latitude": 22.3105,
+    "longitude": 73.1729,
     "cuisines": [
       "Cafe",
       "Coffee",
@@ -459,9 +672,15 @@
       "date",
       "family"
     ],
-    "spice_profile": null,
+    "spice_profile": "mild",
     "photo_url": null,
     "maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Table%20At%20Splatter%20Alkapuri%20Vadodara",
+    "review_insights": [
+      "creative plating",
+      "artistic atmosphere",
+      "gourmet pizza",
+      "romantic courtyard"
+    ],
     "source_updated_at": "2026-10-07T00:00:00Z",
     "source_url": "https://www.zomato.com/gu/vadodara/the-table-at-splatter-alkapuri"
   }

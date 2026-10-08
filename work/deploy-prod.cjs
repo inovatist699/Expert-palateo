@@ -11,6 +11,7 @@ console.log('Deploying from:', projectDir);
 
 const env = {
   ...process.env,
+  APPDATA: 'C:\\Users\\Aayush\\Documents\\Codex\\2026-09-30\\referenced-chatgpt-conversation-this-is-an\\work\\.vercel-cli-profile\\AppData\\Roaming',
   VERCEL_TOKEN: authData.token,
   VERCEL_ORG_ID: 'team_IDls8zTG4aRll5HgBB3VaPHH',
   VERCEL_PROJECT_ID: 'prj_FDDeOkC7enBhavqpKgKdUIy1Bg69'

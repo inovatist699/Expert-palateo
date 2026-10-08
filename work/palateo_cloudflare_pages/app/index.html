@@ -82,27 +82,27 @@ body{min-width:0}#tasteQuestion:focus{outline:none}
 @media(max-width:839px){.homeTop{gap:12px}.homeTop .hero{padding:22px}.homeTop .hero p{font-size:13px}.homeTop .profileHero{padding:20px}.homeTop .profileHero .confidence{font-size:36px}.homeTop .profileHero p{margin:8px 0}.restaurantGrid .resthead{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"media media" "info match";gap:12px 10px;align-items:start}.restaurantGrid .resthead .photo{width:100%;height:152px;font-size:38px;border-radius:16px}.restaurantGrid .match{min-width:68px;padding:8px 6px}.restaurantGrid .restname{font-size:17px;margin-bottom:6px}.restaurantGrid .meta{font-size:11px;line-height:1.4}.match b{font-size:23px}.match span{font-size:7px;letter-spacing:0}.actions button{padding:10px 4px}.discover-screen .hero{padding:20px}.screen{padding-bottom:92px}.onboarding-screen{padding-bottom:max(16px,env(safe-area-inset-bottom))}}
 </style>
 <style id="palateo-zest-styles">
-/* Zest Maps Experience & Recs with Receipts */
-.viewSwitcher{display:flex;background:#edf1ec;border-radius:99px;padding:4px;gap:4px;margin:14px 0 16px;border:1px solid #dfe5dc}
-.viewTab{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;min-height:44px;border:0;border-radius:99px;background:transparent;color:var(--muted);font-size:12.5px;font-weight:800;transition:all .18s ease}
-.viewTab.active{background:#fff;color:var(--green);box-shadow:0 2px 8px rgba(15,73,55,.07)}
-.viewTab:hover:not(.active){color:var(--ink);background:rgba(255,255,255,.5)}
-.zestTeaser{border:1px solid rgba(220,230,220,.95);border-radius:22px;padding:18px 22px;margin:14px 0 20px;background:linear-gradient(135deg,#ffffff 0%,#f4f8f4 100%);display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;box-shadow:0 4px 16px rgba(15,73,55,.03);transition:all .2s ease}
-.zestTeaser:hover{transform:translateY(-2px);border-color:#b0cfbc;box-shadow:0 8px 24px rgba(15,73,55,.07)}
-.zestTeaserEyebrow{font-size:10px;font-weight:850;letter-spacing:.08em;color:var(--green);margin-bottom:4px}
-.zestTeaser h3{margin:0 0 4px;font-size:18px;letter-spacing:-.5px}
-.zestTeaser p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.45}
-.zestTeaserBtn{flex:none;min-height:44px;padding:10px 18px}
-.zestMapContainer{position:relative;border:1px solid #dfe5dc;border-radius:24px;background:#fafbf9;overflow:hidden;box-shadow:0 8px 24px rgba(15,73,55,.04);margin:14px 0 22px}
-.zestMapHeader{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #e5ebe3;background:rgba(255,255,255,.9);backdrop-filter:blur(8px)}
-.zestMapTitle{font-size:13px;font-weight:850;color:var(--green);display:flex;align-items:center;gap:6px}
-.zestMapBadge{background:var(--soft);color:var(--green);font-size:10px;font-weight:800;padding:3px 7px;border-radius:99px}
-.zestMapStats{font-size:11.5px;color:var(--muted);font-weight:600}
-.zestMapStage{position:relative;width:100%;aspect-ratio:16/10;min-height:300px;max-height:440px;background:radial-gradient(circle at 50% 50%,#ffffff 0%,#ecf3ed 100%);user-select:none;overflow:hidden}
+/* Palate Map Experience & Recs with Receipts */
+.viewSwitcher{display:flex;background:#e9f0ea;border-radius:99px;padding:5px;gap:5px;margin:16px 0 20px;border:1px solid #d3ded2;box-shadow:inset 0 1px 3px rgba(11,89,63,.05)}
+.viewTab{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:0;border-radius:99px;background:transparent;color:var(--muted);font-size:12.5px;font-weight:800;transition:all .2s cubic-bezier(.2,.8,.4,1);cursor:pointer}
+.viewTab.active{background:#ffffff;color:var(--green);box-shadow:0 3px 12px rgba(11,89,63,.12);border:1px solid rgba(11,89,63,.1)}
+.viewTab:hover:not(.active){color:var(--ink);background:rgba(255,255,255,.6)}
+.zestTeaser{border:1px solid rgba(186,215,198,.8);border-radius:24px;padding:20px 24px;margin:16px 0 22px;background:linear-gradient(135deg,#ffffff 0%,#f5f9f6 55%,#edf6f0 100%);display:flex;justify-content:space-between;align-items:center;gap:18px;cursor:pointer;box-shadow:0 6px 22px rgba(11,89,63,.045);transition:all .22s cubic-bezier(.2,.8,.4,1)}
+.zestTeaser:hover{transform:translateY(-2px);border-color:#8ec0a3;box-shadow:0 12px 28px rgba(11,89,63,.09)}
+.zestTeaserEyebrow{font-size:10px;font-weight:900;letter-spacing:.09em;color:var(--green);margin-bottom:5px;display:flex;align-items:center;gap:5px}
+.zestTeaser h3{margin:0 0 5px;font-size:19px;letter-spacing:-.6px;color:var(--ink)}
+.zestTeaser p{margin:0;font-size:13px;color:var(--muted);line-height:1.5}
+.zestTeaserBtn{flex:none;min-height:44px;padding:11px 20px;border-radius:14px;box-shadow:0 4px 14px rgba(11,89,63,.2)}
+.zestMapContainer{position:relative;border:1px solid #d5ded4;border-radius:26px;background:#fafbf9;overflow:hidden;box-shadow:0 10px 30px rgba(11,89,63,.06);margin:16px 0 24px}
+.zestMapHeader{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;border-bottom:1px solid #e2eae1;background:rgba(255,255,255,.94);backdrop-filter:blur(12px)}
+.zestMapTitle{font-size:14px;font-weight:900;color:var(--green);display:flex;align-items:center;gap:8px}
+.zestMapBadge{background:var(--soft);color:var(--green);font-size:10px;font-weight:850;padding:3px 9px;border-radius:99px;border:1px solid rgba(11,89,63,.15)}
+.zestMapStats{font-size:12px;color:var(--muted);font-weight:600}
+.zestMapStage{position:relative;width:100%;aspect-ratio:16/10;min-height:310px;max-height:460px;background:radial-gradient(circle at 50% 48%,#ffffff 0%,#eff6f1 100%);user-select:none;overflow:hidden}
 .zestMapSvg{width:100%;height:100%;display:block;transition:transform .2s ease}
-.zestMapControls{position:absolute;right:14px;bottom:14px;display:flex;flex-direction:column;gap:6px;z-index:10}
-.zestMapBtn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.95);box-shadow:0 4px 12px rgba(0,0,0,.08);display:grid;place-items:center;font-size:16px;font-weight:850;color:var(--ink);cursor:pointer;transition:all .15s ease}
-.zestMapBtn:hover{background:#fff;border-color:var(--green);color:var(--green);transform:scale(1.05)}
+.zestMapControls{position:absolute;right:16px;bottom:16px;display:flex;flex-direction:column;gap:7px;z-index:10}
+.zestMapBtn{width:40px;height:40px;border-radius:50%;border:1px solid rgba(220,230,222,.9);background:rgba(255,255,255,.95);backdrop-filter:blur(8px);box-shadow:0 4px 14px rgba(11,89,63,.12);display:grid;place-items:center;font-size:16px;font-weight:850;color:var(--ink);cursor:pointer;transition:all .18s cubic-bezier(.2,.8,.4,1)}
+.zestMapBtn:hover{background:#fff;border-color:var(--green);color:var(--green);transform:scale(1.08);box-shadow:0 6px 18px rgba(11,89,63,.18)}
 .zestPin{cursor:pointer;transition:transform .18s cubic-bezier(.34,1.56,.64,1)}
 .zestPin:hover,.zestPin:focus-visible{transform:scale(1.22);outline:none}
 .zestPin.active{transform:scale(1.3)}
@@ -112,30 +112,31 @@ body{min-width:0}#tasteQuestion:focus{outline:none}
 .zestPin.active .zestPinCircle{fill:#06261b;stroke:#38c88c;stroke-width:3.5;filter:drop-shadow(0 0 10px rgba(19,125,87,.55))}
 .zestPinPulse{animation:pulsePin 1.8s infinite ease-out;transform-origin:center}
 @keyframes pulsePin{0%{r:16;opacity:.8;stroke-width:2}100%{r:28;opacity:0;stroke-width:0}}
-.zestMapSheet{margin:12px 14px 14px;padding:16px;background:#fff;border:1px solid #dfe5dc;border-radius:18px;box-shadow:0 8px 24px rgba(11,89,63,.07);animation:slideUp .2s ease-out}
+.zestMapSheet{margin:12px 14px 14px;padding:18px;background:#fff;border:1px solid #dfe5dc;border-radius:20px;box-shadow:0 10px 28px rgba(11,89,63,.08);animation:slideUp .2s ease-out}
 @keyframes slideUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.zestSheetHead{display:flex;gap:12px;align-items:center;position:relative}
-.zestSheetPhoto{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,#f5eee6,#e3eee6);display:grid;place-items:center;font-size:28px;flex:none;overflow:hidden}
+.zestSheetHead{display:flex;gap:14px;align-items:center;position:relative}
+.zestSheetPhoto{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#f5eee6,#e3eee6);display:grid;place-items:center;font-size:28px;flex:none;overflow:hidden}
 .zestSheetPhoto img{width:100%;height:100%;object-fit:cover;border-radius:16px}
 .zestSheetInfo{flex:1;min-width:0}
-.zestSheetBadge{display:inline-block;font-size:10px;font-weight:850;color:var(--green);background:var(--soft);padding:3px 7px;border-radius:99px;margin-bottom:3px}
-.zestSheetTitle{margin:0;font-size:17px;font-weight:850;line-height:1.25;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.zestSheetMeta{font-size:11px;color:var(--muted);margin-top:3px}
-.zestSheetClose{position:absolute;top:-4px;right:-4px;width:28px;height:28px;border-radius:50%;border:0;background:#eef2ee;color:var(--muted);font-size:18px;display:grid;place-items:center}
-.zestSheetReceipt{margin:11px 0 13px;padding:9px 12px;background:#f5f9f6;border-radius:12px;border-left:3px solid var(--green)}
-.zestSheetWhy{margin:4px 0 0;font-size:11.5px;color:#35493e;line-height:1.45}
-.zestSheetActions{display:flex;gap:7px;flex-wrap:wrap}
-.zestSheetBtn{flex:1;min-height:38px;padding:8px 10px;font-size:11px}
-.zestReceipt{margin:12px 0 14px;border:1px solid #e3e8e1;border-radius:14px;background:#fff;overflow:hidden;box-shadow:0 2px 8px rgba(15,73,55,.02)}
-.zestReceiptHead{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(15,73,55,.05);border-bottom:1px solid #e7ede5}
-.zestReceiptTag{font-size:10.5px;font-weight:850;letter-spacing:.02em;color:var(--green);text-transform:uppercase}
-.zestReceiptScore{font-size:11px;font-weight:850;color:var(--green2)}
-.zestReceiptGrid{padding:9px 12px;display:grid;gap:7px}
-.zestReceiptRow{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;font-size:11.5px;line-height:1.4}
-.zestLabel{color:var(--muted);font-weight:650;flex:none}
+.zestSheetBadge{display:inline-block;font-size:10px;font-weight:850;color:var(--green);background:var(--soft);padding:3px 8px;border-radius:99px;margin-bottom:4px;border:1px solid rgba(11,89,63,.12)}
+.zestSheetTitle{margin:0;font-size:17.5px;font-weight:900;line-height:1.25;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.zestSheetMeta{font-size:11.5px;color:var(--muted);margin-top:3px}
+.zestSheetClose{position:absolute;top:-4px;right:-4px;width:30px;height:30px;border-radius:50%;border:0;background:#edf2ee;color:var(--muted);font-size:18px;display:grid;place-items:center;cursor:pointer;transition:all .15s ease}
+.zestSheetClose:hover{background:#dfe8e1;color:var(--ink)}
+.zestSheetReceipt{margin:12px 0 14px;padding:10px 14px;background:#f4f9f5;border-radius:14px;border-left:3.5px solid var(--green)}
+.zestSheetWhy{margin:4px 0 0;font-size:12px;color:#2f4639;line-height:1.48}
+.zestSheetActions{display:flex;gap:8px;flex-wrap:wrap}
+.zestSheetBtn{flex:1;min-height:40px;padding:9px 12px;font-size:11.5px;border-radius:12px}
+.zestReceipt{margin:12px 0 14px;border:1px solid #dfe6dc;border-radius:16px;background:#ffffff;overflow:hidden;box-shadow:0 2px 10px rgba(11,89,63,.03)}
+.zestReceiptHead{display:flex;justify-content:space-between;align-items:center;padding:9px 13px;background:linear-gradient(135deg,rgba(11,89,63,.06),rgba(19,125,87,.03));border-bottom:1px dashed #dbe3da}
+.zestReceiptTag{font-size:10.5px;font-weight:900;letter-spacing:.03em;color:var(--green);text-transform:uppercase}
+.zestReceiptScore{font-size:11.5px;font-weight:900;color:var(--green2);background:#fff;padding:2px 8px;border-radius:99px;border:1px solid rgba(19,125,87,.2)}
+.zestReceiptGrid{padding:10px 13px;display:grid;gap:8px}
+.zestReceiptRow{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;font-size:11.5px;line-height:1.45}
+.zestLabel{color:var(--muted);font-weight:700;flex:none}
 .zestVal{color:var(--ink);font-weight:600;text-align:right}
-.zestReceiptTrust{margin-top:3px;padding-top:6px;border-top:1px dashed #e2e8e0;font-size:10.5px}
-.zestReceiptTrust .zestVal{color:var(--green);font-weight:750}
+.zestReceiptTrust{margin-top:4px;padding-top:7px;border-top:1px dashed #dbe3da;font-size:11px}
+.zestReceiptTrust .zestVal{color:var(--green);font-weight:800}
 .flashCard{animation:flashHighlight 1.5s ease}
 @keyframes flashHighlight{0%{box-shadow:0 0 0 4px var(--green);transform:scale(1.02)}50%{box-shadow:0 0 0 4px var(--green2);transform:scale(1.02)}100%{box-shadow:var(--shadow);transform:scale(1)}}
 @media(max-width:600px){.zestTeaser{flex-direction:column;align-items:flex-start}.zestTeaserBtn{width:100%}}
@@ -474,7 +475,7 @@ const saved=state.saves.includes(r.id),f=state.feedback[r.id],id=esc(r.id),ratin
 const insights=Array.isArray(r.review_insights)&&r.review_insights.length?`<div class="reviewHighlights"><b>Diner consensus:</b> <span>${esc(r.review_insights.slice(0,3).join(' · '))}</span></div>`:'';
 const reviewSection=Array.isArray(r.review_insights)&&r.review_insights.length?`<div class="reviewConsensusBlock"><b>Verified diner sentiment:</b> ${esc(r.review_insights.join(', '))}.</div>`:'';
 const receiptBlock=`<div class="zestReceipt" role="region" aria-label="Recommendation receipt for ${esc(r.name)}"><div class="zestReceiptHead"><span class="zestReceiptTag">🧾 Rec with receipt</span><span class="zestReceiptScore">${r.score}% Palate Fit</span></div><div class="zestReceiptGrid"><div class="zestReceiptRow"><span class="zestLabel">🎯 Taste DNA</span><span class="zestVal">${esc(r.why[0])}</span></div><div class="zestReceiptRow"><span class="zestLabel">📍 Neighborhood</span><span class="zestVal">${esc(r.area||r.city||cityName())} · Verified Coordinates</span></div><div class="zestReceiptRow"><span class="zestLabel">⭐ Consensus</span><span class="zestVal">${Number(r.rating).toFixed(1)}★ · ${(r.review_count||0).toLocaleString()} reviews (Google Maps)</span></div>${r.review_insights?.length?`<div class="zestReceiptRow"><span class="zestLabel">💬 Verified Sentiment</span><span class="zestVal">${esc(r.review_insights.slice(0,2).join(' · '))}</span></div>`:''}<div class="zestReceiptRow zestReceiptTrust"><span class="zestLabel">🛡️ Trust Guarantee</span><span class="zestVal">Direct Google Maps verification · Zero sponsored placement</span></div></div></div>`;
-return `<article class="card restaurant-card" id="card-${id}"><div class="resthead"><div class="photo" aria-hidden="true">${photo(r)}</div><div style="flex:1"><h3 class="restname">${esc(r.name)}</h3><div class="meta">${esc(place)} · ${esc(displayPrice(r))} · ${rating}</div></div><div class="match ${r.score>=75?'strong':r.score>=50?'mixed':'low'}" style="--match:${r.score}%" title="Estimated taste fit, based on your answers and feedback"><b>${r.score}%</b><span>PALATE MATCH</span></div></div><div class="tags">${[...new Set([...(r.t||[]),...(r.c||[])])].slice(0,4).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>${insights}${receiptBlock}<p class="fitReason"><b>Why it fits</b> · ${esc(r.why[0])}</p><details class="why"><summary>Your match explained</summary><p>${esc(r.why.join(' · '))}${reviewSection}<br><br>${esc(r.why[0]==='You rejected this before'?'We lowered this because of your feedback.':'An estimate based on your preferences and feedback; undo a rating to restore it.')}</p></details><div class="actions"><button type="button" data-rest-action="like" data-rest-id="${id}" aria-pressed="${f==='like'}" aria-label="${f==='like'?'Unlike':'Like'} ${esc(r.name)}">${f==='like'?'♥ Undo like':'♡ Like'}</button><button type="button" data-rest-action="dislike" data-rest-id="${id}" aria-pressed="${f==='dislike'}" aria-label="${f==='dislike'?'Undo not for me':'Not for me'}: ${esc(r.name)}">${f==='dislike'?'Undo pass':'Not for me'}</button><button type="button" class="dark" data-rest-action="save" data-rest-id="${id}" aria-label="${saved?'Remove':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button></div><div class="actions"><button type="button" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}" aria-label="${f==='visited'?'Undo visited':'I visited'}: ${esc(r.name)}">${f==='visited'?'Visited ✓':'I visited'}</button><button type="button" data-action="view-pin" data-rest-id="${id}" aria-label="Locate ${esc(r.name)} on Taste Map">🗺️ View on Map</button><button type="button" data-rest-action="maps" data-rest-id="${id}" aria-label="Check Google Maps for ${esc(r.name)}">📍 Google Maps &amp; Reviews ↗</button></div></article>`
+return `<article class="card restaurant-card" id="card-${id}"><div class="resthead"><div class="photo" aria-hidden="true">${photo(r)}</div><div style="flex:1"><h3 class="restname">${esc(r.name)}</h3><div class="meta">${esc(place)} · ${esc(displayPrice(r))} · ${rating}</div></div><div class="match ${r.score>=75?'strong':r.score>=50?'mixed':'low'}" style="--match:${r.score}%" title="Estimated taste fit, based on your answers and feedback"><b>${r.score}%</b><span>PALATE MATCH</span></div></div><div class="tags">${[...new Set([...(r.t||[]),...(r.c||[])])].slice(0,4).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>${insights}${receiptBlock}<p class="fitReason"><b>Why it fits</b> · ${esc(r.why[0])}</p><details class="why"><summary>Your match explained</summary><p>${esc(r.why.join(' · '))}${reviewSection}<br><br>${esc(r.why[0]==='You rejected this before'?'We lowered this because of your feedback.':'An estimate based on your preferences and feedback; undo a rating to restore it.')}</p></details><div class="actions"><button type="button" data-rest-action="like" data-rest-id="${id}" aria-pressed="${f==='like'}" aria-label="${f==='like'?'Unlike':'Like'} ${esc(r.name)}">${f==='like'?'♥ Undo like':'♡ Like'}</button><button type="button" data-rest-action="dislike" data-rest-id="${id}" aria-pressed="${f==='dislike'}" aria-label="${f==='dislike'?'Undo not for me':'Not for me'}: ${esc(r.name)}">${f==='dislike'?'Undo pass':'Not for me'}</button><button type="button" class="dark" data-rest-action="save" data-rest-id="${id}" aria-label="${saved?'Remove':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button></div><div class="actions"><button type="button" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}" aria-label="${f==='visited'?'Undo visited':'I visited'}: ${esc(r.name)}">${f==='visited'?'Visited ✓':'I visited'}</button><button type="button" data-action="view-pin" data-rest-id="${id}" aria-label="Locate ${esc(r.name)} on Palate Map">🗺️ View on Palate Map</button><button type="button" data-rest-action="maps" data-rest-id="${id}" aria-label="Check Google Maps for ${esc(r.name)}">📍 Google Maps &amp; Reviews ↗</button></div></article>`
 }
 function go(p,{keepScroll=false}={}){
 if(!currentUser){requireAuthGate();return}
@@ -539,12 +540,12 @@ function renderZestMapSvg(places,city,selectedId){
    const fill=isVisited?'#b27926':isSaved?'#b83846':r.score>=80?'#0f4937':'#1a6b50';
    return `<g class="${pinClass}" data-action="select-pin" data-rest-id="${esc(r.id)}" role="button" tabindex="0" aria-label="${esc(r.name)} · ${r.score}% match">${pulse}<circle cx="${pt.x}" cy="${pt.y}" r="${isSelected?16:13}" class="zestPinCircle" style="fill:${fill};"/><text x="${pt.x}" y="${pt.y-1}" font-size="${isSelected?12:10}" text-anchor="middle" dominant-baseline="central" fill="#ffffff">${esc(r.emoji||'🍽️')}</text><rect x="${pt.x-14}" y="${pt.y+11}" width="28" height="12" rx="6" fill="#111a15" opacity="0.88"/><text x="${pt.x}" y="${pt.y+19}" font-family="Plus Jakarta Sans, sans-serif" font-size="7.5" font-weight="800" text-anchor="middle" fill="#ffffff">${badge}</text></g>`;
  }).join('');
- return `<svg class="zestMapSvg" style="transform:scale(${mapZoom})" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Interactive taste map of ${esc(city)}"><rect width="${width}" height="${height}" fill="transparent"/>${gridLines}${riverPath}${labelsSvg}${pinsSvg}</svg>`;
+ return `<svg class="zestMapSvg" style="transform:scale(${mapZoom})" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Interactive Palate Map of ${esc(city)}"><rect width="${width}" height="${height}" fill="transparent"/>${gridLines}${riverPath}${labelsSvg}${pinsSvg}</svg>`;
 }
 function renderZestSheet(r){
  if(!r)return '';
  const saved=state.saves.includes(r.id),isVisited=state.feedback[r.id]==='visited';
- return `<div class="zestMapSheet" id="zestMapSheet" role="region" aria-label="Selected place details"><div class="zestSheetHead"><div class="zestSheetPhoto" aria-hidden="true">${photo(r)}</div><div class="zestSheetInfo"><div class="zestSheetBadge">${r.score}% PALATE MATCH</div><h3 class="zestSheetTitle">${esc(r.name)}</h3><div class="zestSheetMeta">${esc(r.area||r.city)} · ${esc(displayPrice(r))} · ★ ${Number(r.rating).toFixed(1)} (${(r.review_count||0).toLocaleString()} reviews)</div></div><button type="button" class="zestSheetClose" data-action="close-pin" aria-label="Close preview">×</button></div><div class="zestSheetReceipt"><span class="zestReceiptTag">🧾 Rec with receipt</span><p class="zestSheetWhy"><b>Why it’s on your map:</b> ${esc(r.why[0])} · ${esc(r.review_insights?.[0]||'Verified diner favourite')}</p></div><div class="zestSheetActions"><button type="button" data-rest-action="maps" data-rest-id="${esc(r.id)}" class="btn green zestSheetBtn">📍 Open in Google Maps ↗</button><button type="button" data-rest-action="save" data-rest-id="${esc(r.id)}" class="btn secondary zestSheetBtn">${saved?'Saved ✓':'♡ Save'}</button><button type="button" data-rest-action="visited" data-rest-id="${esc(r.id)}" class="btn secondary zestSheetBtn">${isVisited?'Visited ✓':'I visited'}</button><button type="button" data-action="scroll-to-card" data-rest-id="${esc(r.id)}" class="btn secondary zestSheetBtn">↓ View in Feed</button></div></div>`;
+ return `<div class="zestMapSheet" id="zestMapSheet" role="region" aria-label="Selected Palate Map place details"><div class="zestSheetHead"><div class="zestSheetPhoto" aria-hidden="true">${photo(r)}</div><div class="zestSheetInfo"><div class="zestSheetBadge">${r.score}% PALATE MATCH</div><h3 class="zestSheetTitle">${esc(r.name)}</h3><div class="zestSheetMeta">${esc(r.area||r.city)} · ${esc(displayPrice(r))} · ★ ${Number(r.rating).toFixed(1)} (${(r.review_count||0).toLocaleString()} reviews)</div></div><button type="button" class="zestSheetClose" data-action="close-pin" aria-label="Close preview">×</button></div><div class="zestSheetReceipt"><span class="zestReceiptTag">🧾 Rec with receipt</span><p class="zestSheetWhy"><b>Why it’s on your map:</b> ${esc(r.why[0])} · ${esc(r.review_insights?.[0]||'Verified diner favourite')}</p></div><div class="zestSheetActions"><button type="button" data-rest-action="maps" data-rest-id="${esc(r.id)}" class="btn green zestSheetBtn">📍 Open in Google Maps ↗</button><button type="button" data-rest-action="save" data-rest-id="${esc(r.id)}" class="btn secondary zestSheetBtn">${saved?'Saved ✓':'♡ Save'}</button><button type="button" data-rest-action="visited" data-rest-id="${esc(r.id)}" class="btn secondary zestSheetBtn">${isVisited?'Visited ✓':'I visited'}</button><button type="button" data-action="scroll-to-card" data-rest-id="${esc(r.id)}" class="btn secondary zestSheetBtn">↓ View in Feed</button></div></div>`;
 }
 function zoomMap(delta){
  mapZoom=Math.max(0.85,Math.min(1.8,Number((mapZoom+delta).toFixed(2))));
@@ -579,7 +580,7 @@ const showMoreButton=filtered.length>rs.length?`<div class="homeMoreAction"><but
 
 const viewTabs=`<div class="viewSwitcher" role="tablist" aria-label="Choose recommendation view">
 <button type="button" class="viewTab ${homeView==='feed'?'active':''}" data-action="home-view" data-view="feed"><span>☰</span> Recommendations Feed (${filtered.length})</button>
-<button type="button" class="viewTab ${homeView==='map'?'active':''}" data-action="home-view" data-view="map"><span>🗺️</span> Interactive Taste Map (${filtered.length})</button>
+<button type="button" class="viewTab ${homeView==='map'?'active':''}" data-action="home-view" data-view="map"><span>🗺️</span> Interactive Palate Map (${filtered.length})</button>
 </div>`;
 
 const filterPills=`<div class="filterChips homeFilterChips" role="group" aria-label="Filter recommendations by category">
@@ -595,19 +596,19 @@ const filterPills=`<div class="filterChips homeFilterChips" role="group" aria-la
 
 const selectedVenue=selectedPinId?allRanked.find(r=>r.id===selectedPinId):null;
 
-const mapComponent=`<div class="zestMapContainer" id="zestMapContainer"><div class="zestMapHeader"><div class="zestMapTitle"><span>🗺️</span><span>${esc(cityName())} Taste Map</span><span class="zestMapBadge">Interactive</span></div><div class="zestMapStats"><b>${filtered.length}</b> places mapped · <b>${visitedCount}</b> visited</div></div><div class="zestMapStage" id="zestMapStage">${renderZestMapSvg(filtered,cityName(),selectedPinId)}<div class="zestMapControls"><button type="button" class="zestMapBtn" data-action="zoom-in" aria-label="Zoom in">+</button><button type="button" class="zestMapBtn" data-action="zoom-out" aria-label="Zoom out">−</button><button type="button" class="zestMapBtn" data-action="zoom-reset" aria-label="Reset zoom">⌖</button></div></div>${selectedVenue?renderZestSheet(selectedVenue):''}</div>`;
+const mapComponent=`<div class="zestMapContainer" id="zestMapContainer"><div class="zestMapHeader"><div class="zestMapTitle"><span>🗺️</span><span>${esc(cityName())} Palate Map</span><span class="zestMapBadge">Interactive</span></div><div class="zestMapStats"><b>${filtered.length}</b> places mapped · <b>${visitedCount}</b> visited</div></div><div class="zestMapStage" id="zestMapStage">${renderZestMapSvg(filtered,cityName(),selectedPinId)}<div class="zestMapControls"><button type="button" class="zestMapBtn" data-action="zoom-in" aria-label="Zoom in">+</button><button type="button" class="zestMapBtn" data-action="zoom-out" aria-label="Zoom out">−</button><button type="button" class="zestMapBtn" data-action="zoom-reset" aria-label="Reset zoom">⌖</button></div></div>${selectedVenue?renderZestSheet(selectedVenue):''}</div>`;
 
-const feedTeaser=`<div class="zestTeaser" data-action="home-view" data-view="map"><div class="zestTeaserContent"><div class="zestTeaserEyebrow">✦ THE RESTAURANT MAP THAT BUILDS ITSELF</div><h3>Explore your ${esc(cityName())} Taste Map</h3><p>${filtered.length} places mapped with real-time palate overlap, Google Maps coordinates, and visit receipts.</p></div><button type="button" class="btn green zestTeaserBtn" data-action="home-view" data-view="map">Open Taste Map 🗺️</button></div>`;
+const feedTeaser=`<div class="zestTeaser" data-action="home-view" data-view="map"><div class="zestTeaserContent"><div class="zestTeaserEyebrow">✦ THE RESTAURANT MAP THAT BUILDS ITSELF</div><h3>Explore your ${esc(cityName())} Palate Map</h3><p>${filtered.length} places mapped with real-time palate overlap, Google Maps coordinates, and visit receipts.</p></div><button type="button" class="btn green zestTeaserBtn" data-action="home-view" data-view="map">Open Palate Map 🗺️</button></div>`;
 
 const emptyMessage=homeCuisine==='Visited'
   ?'<div class="empty"><h2>Your Dining Map is waiting</h2><p>Tap “I visited” on places you’ve tried in '+esc(cityName())+' to automatically build your personal dining map.</p></div>'
   :homeCuisine==='Saved'
-  ?'<div class="empty"><h2>No saved spots yet</h2><p>Tap “Save” on any restaurant to pin your shortlist to your Taste Map.</p></div>'
+  ?'<div class="empty"><h2>No saved spots yet</h2><p>Tap “Save” on any restaurant to pin your shortlist to your Palate Map.</p></div>'
   :'<div class="empty"><h2>No matches in this category</h2><p>Try switching to "All Top Picks" or adjusting your taste preferences in your Palate tab.</p></div>';
 
 const cardsContent=rs.length?rs.map(card).join(''):emptyMessage;
 
-document.getElementById('root').innerHTML=`<section class="screen home-screen"><div class="homeTop"><div class="hero"><div class="eyebrow">Your ${cityName()} food compass · Zest Taste Map</div><h1>Good food.<br>More you.</h1><p>Thoughtful restaurant picks shaped by your cravings, your mood, and the places you love. The restaurant map that builds itself.</p><button class="heroCta" type="button" data-action="navigate" data-page="discover">Explore all restaurants&nbsp; ↗</button></div><div class="profileHero"><span class="aiBadge">✦ YOUR PALATE</span>${topPick?`<div class="confidence">${topPick.score}%<small> top taste match</small></div><div class="topMatchName">${esc(topPick.name)}</div><div class="bar" aria-hidden="true"><i style="width:${topPick.score}%"></i></div>`:'<div class="topMatchName">No matching places yet</div>'}<p>${c} active feedback signals · Matches are estimates from your preferences and feedback.</p><div class="chips">${summaryChips()}</div></div></div>${travelRangeNote()}${viewTabs}${filterPills}${homeView==='map'?mapComponent:feedTeaser}<div class="section"><h2>${homeView==='map'?'Explore recommendations on your map':'Picked for you'}</h2><span>${filtered.length} places</span></div><div class="restaurantGrid">${cardsContent}</div>${showMoreButton}<div class="section"><h2>Sample community profiles</h2><span>Illustrative profiles</span></div><div class="peopleGrid">${people.filter(x=>x.match>=87).slice(0,2).map(personCard).join('')}</div></section>`
+document.getElementById('root').innerHTML=`<section class="screen home-screen"><div class="homeTop"><div class="hero"><div class="eyebrow">Your ${cityName()} food compass · Palate Map</div><h1>Good food.<br>More you.</h1><p>Thoughtful restaurant picks shaped by your cravings, your mood, and the places you love. The restaurant map that builds itself.</p><button class="heroCta" type="button" data-action="navigate" data-page="discover">Explore all restaurants&nbsp; ↗</button></div><div class="profileHero"><span class="aiBadge">✦ YOUR PALATE</span>${topPick?`<div class="confidence">${topPick.score}%<small> top taste match</small></div><div class="topMatchName">${esc(topPick.name)}</div><div class="bar" aria-hidden="true"><i style="width:${topPick.score}%"></i></div>`:'<div class="topMatchName">No matching places yet</div>'}<p>${c} active feedback signals · Matches are estimates from your preferences and feedback.</p><div class="chips">${summaryChips()}</div></div></div>${travelRangeNote()}${viewTabs}${filterPills}${homeView==='map'?mapComponent:feedTeaser}<div class="section"><h2>${homeView==='map'?'Explore recommendations on your Palate Map':'Picked for you'}</h2><span>${filtered.length} places</span></div><div class="restaurantGrid">${cardsContent}</div>${showMoreButton}<div class="section"><h2>Sample community profiles</h2><span>Illustrative profiles</span></div><div class="peopleGrid">${people.filter(x=>x.match>=87).slice(0,2).map(personCard).join('')}</div></section>`
 }
 function summaryChips(){let a=state.answers||{};return [a.cuisine,a.diet&&a.diet!=='any'?dietLabel(a.diet):null,a.budget?price(a.budget):null,a.mood,a.spice].filter(Boolean).map(x=>`<span class="chip">${esc(x)}</span>`).join('')}
 function discover(){
@@ -745,7 +746,7 @@ const types=[...new Set([...(r.tags||[]),...(r.cuisines||[])].filter(x=>known.in
 if(!types.length)types.push(/\b(cafe|coffee|tea\s+(?:lounge|house|room))\b/i.test(r.name||"")?"Cafe":"Restaurant");
 const cuisines=[...new Set([...types,...(r.cuisines||[])])],placeTags=[...new Set([...(r.tags||[]),...types])];
 const emoji=types.includes("Cafe")?"☕":types.includes("Fast food")?"🥪":types.includes("Food court")?"🍜":"🍽️";
-const stableId=r.external_provider==='palateo-curated'&&r.external_place_id?r.external_place_id:r.id;
+const stableId=(r.external_provider==='palateo-curated'||r.external_provider==='palateo_demo'||(r.external_place_id&&!r.external_place_id.startsWith('node/')))?r.external_place_id:r.id;
   return {id:stableId,dbId:r.id,name:r.name,area:r.area||r.city||"Ahmedabad",address:r.address||"",city:r.city||"Ahmedabad",latitude:r.latitude,longitude:r.longitude,c:cuisines,p:r.price??null,displayPrice:r.price_display||undefined,rating:r.rating==null?null:Number(r.rating),review_count:r.review_count,ratingSource:r.external_place_id?.startsWith('dno-')?'Swiggy Dineout':r.external_place_id?.startsWith('zom-')?'Zomato':null,t:placeTags,a:r.ambience_tags||[],o:r.occasion_tags||[],s:r.spice_profile||null,dietaryOptions:Array.isArray(r.dietary_options)?r.dietary_options:[],business_status:r.business_status||r.businessStatus||r.operational_status||r.status||null,permanently_closed:r.permanently_closed??r.is_permanently_closed??false,emoji,photo:r.photo_url||r.photo||"",maps:r.maps||r.maps_url||("https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((r.name||"")+" "+(r.area||"")+" "+(r.city||selectedCity))),review_insights:Array.isArray(r.review_insights)?r.review_insights:[],why:["Place matched to your palate"]};
 }
 function updateMode(){
@@ -768,7 +769,15 @@ if(re)window.reportPalateoError?.('catalog_load_failed');
 updateMode();
 return currentUser;
 }
-function activeRestaurant(id){return dbCatalog.find(x=>x.id===id)||catalog.find(x=>x.id===id)||vadodaraCatalog.find(x=>x.id===id)||null;}
+function activeRestaurant(id){
+ const found=dbCatalog.find(x=>x.id===id)||catalog.find(x=>x.id===id)||vadodaraCatalog.find(x=>x.id===id)||null;
+ if(!found)return null;
+ if(!found.dbId&&dbCatalog.length){
+  const match=dbCatalog.find(x=>x.id===id||(x.name&&found.name&&x.name.trim().toLowerCase()===found.name.trim().toLowerCase()&&(x.city||'').toLowerCase()===(found.city||selectedCity).toLowerCase()));
+  if(match?.dbId)found.dbId=match.dbId;
+ }
+ return found;
+}
 async function logEvent(eventName,metadata={}){
  if(!currentUser||!backendReady)return false;
  try{
@@ -786,7 +795,10 @@ async function syncTaste(){
  if(error)throw error;
  const {data:profile,error:profileError}=await supabaseClient.from('profiles').update({onboarding_completed:true}).eq('id',currentUser.id).select('id').maybeSingle();
  if(profileError)throw profileError;
- if(!profile)throw new Error('Your profile could not be updated. Please sign in again and retry.');
+ if(!profile){
+  const {error:upsertErr}=await supabaseClient.from('profiles').upsert({id:currentUser.id,email:currentUser.email,display_name:currentUser.user_metadata?.full_name||currentUser.email?.split('@')[0]||'Palateo User',onboarding_completed:true},{onConflict:'id'});
+  if(upsertErr)throw upsertErr;
+ }
  await logEvent('onboarding_complete',{answer_count:Object.keys(a).length});
  return true;
 }
@@ -1055,7 +1067,7 @@ async function rateV5(id,t){
  feedbackSyncQueue=feedbackSyncQueue.catch(()=>{}).then(async()=>{
   if(currentUser?.id!==ownerId)return;
   let cloudOk=true;
-  if(currentUser){try{cloudOk=await syncInteraction(r,t,{removed});if(currentUser?.id!==ownerId)return;if(cloudOk)await syncTaste()}catch(error){cloudOk=false;console.warn('feedback sync',error);window.reportPalateoError?.('feedback_sync_failed')}}
+  if(currentUser){try{cloudOk=r.dbId?(await syncInteraction(r,t,{removed})):true;if(currentUser?.id!==ownerId)return;if(cloudOk)await syncTaste()}catch(error){cloudOk=false;console.warn('feedback sync',error);window.reportPalateoError?.('feedback_sync_failed')}}
   if(currentUser?.id!==ownerId)return;
   if((state.feedback[id]||null)!==(removed?null:t))return;
   if(cloudOk)delete state.unsyncedFeedback[id];

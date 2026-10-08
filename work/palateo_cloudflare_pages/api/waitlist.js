@@ -25,7 +25,8 @@ module.exports = async function handler(req, res) {
   if (Buffer.byteLength(JSON.stringify(body),'utf8') > 2048) return res.status(413).json({error:'Request too large'});
   if (body.website) return res.status(200).json({ok:true});
   const email = typeof body.email === 'string' ? body.email.trim().toLowerCase() : '';
-  if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !['Ahmedabad','Vadodara','Other'].includes(body.city) || body.consent !== true) return res.status(400).json({error:'Valid email, city and consent required'});
+  const ALLOWED_CITIES = ['Ahmedabad','Vadodara','Mumbai','Delhi NCR','Bengaluru','Hyderabad','Chennai','Kolkata','Pune','Jaipur','Kochi','Goa','Chandigarh','Other'];
+  if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !ALLOWED_CITIES.includes(body.city) || body.consent !== true) return res.status(400).json({error:'Valid email, city and consent required'});
   try {
     const url = "https://ntuaqcnbhqtbhbnnobmm.supabase.co"; const key = "sb_publishable__YWaFqDXVc-R_UlEl5DVcQ_ust-d4vp";
     const result = await fetch(url + '/rest/v1/rpc/join_launch_waitlist', {method:'POST',headers:{apikey:key,Authorization:'Bearer '+key,'Content-Type':'application/json'},body:JSON.stringify({p_email:email,p_city:body.city,p_consent:true}),signal:AbortSignal.timeout(10000)});

@@ -5,13 +5,25 @@ This repository is configured with an integrated modular agent stack combining *
 ---
 
 ## 1. Agency Agents (`.agents/agency-agents`)
-The specialized agent roster from [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) is integrated into this workspace under `.agents/agency-agents/`.
+The specialized agent roster from [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) is integrated into this workspace.
 
-Adopt the perspective and workflows of the corresponding persona when tackling domain-specific tasks:
-- **Engineering / Tech Lead**: Architecture, correctness, security, and scalability.
-- **Frontend / UI Specialist**: User experience, responsive layout, component reusability, and interaction design.
-- **QA / Test Engineer**: Edge-case tests, automated assertions, and regression prevention.
-- **Product / Strategy**: User journeys, requirements completeness, and acceptance criteria.
+- **Repository Location**: Full source library at [`.agents/agency-agents/`](file:///c:/Users/Aayush/Documents/ChatGPT/Palateo/.agents/agency-agents).
+- **Active Mounted Skills** (in [`.agents/skills/`](file:///c:/Users/Aayush/Documents/ChatGPT/Palateo/.agents/skills)):
+  - `agency-frontend-developer`: Modern web technologies, responsive UI implementation, pixel-perfect layouts, Core Web Vitals.
+  - `agency-backend-architect`: Database architecture, API contracts, scalability, Supabase integrations.
+  - `agency-ui-designer` & `agency-ux-designer`: Visual hierarchy, design systems, ergonomic mobile interaction.
+  - `agency-qa-engineer` & `agency-code-reviewer`: Edge-case testing, regression prevention, code quality audits.
+  - `agency-database-optimizer`: PostgreSQL indexing, slow query analysis, migration planning.
+  - `agency-devops-automator` & `agency-software-architect`: CI/CD, system modeling, architecture decisions.
+  - `agency-product-manager` & `agency-growth-hacker`: Requirements scoping, onboarding flows, user retention.
+  - `agency-reality-checker` & `agency-rapid-prototyper`: Critical pragmatic challenge, rapid proof-of-concept iteration.
+- **On-Demand Roster**: 267 additional specialized skills are compiled in [`.agents/agency-agents/integrations/antigravity/`](file:///c:/Users/Aayush/Documents/ChatGPT/Palateo/.agents/agency-agents/integrations/antigravity) and can be activated or copied on demand.
+
+### Activating an Agency Agent
+Instruct the agent directly in your prompt:
+> *"Use the `agency-frontend-developer` persona to polish this view."*  
+> *"Activate `agency-backend-architect` to inspect our Supabase schemas."*  
+> *"Have `agency-reality-checker` critique this implementation plan."*
 
 ---
 
@@ -93,10 +105,14 @@ Adopt the perspective and workflows of the corresponding persona when tackling d
 
 ---
 
-## 6. Autonomous Cloud & Skill Orchestration
+## 6. Autonomous Cloud, Gateway & Skill Orchestration
+
+### 🌐 OmniRoute Gateway (`skills/omniroute-gateway`)
+- **Model Routing & Quota Failover**: Unifies multi-provider LLM access via local OmniRoute endpoint (`http://localhost:20128/v1`). Automatically cascades to the next best available model/provider when usage limits or HTTP 429s occur without halting workflows.
 
 ### 🤖 Manus Bridge (`skills/manus`)
 - **Cloud Delegation**: Delegate long-running background tasks (dataset crawls, competitor audits, cloud testing) to [manus.im](https://manus.im). Two-way GitHub sync with `inovatist699/Expert-palateo`.
 
 ### 🧭 SkillX (`skills/skill-x`) & Awesome Skills (`skills/awesome-skills`)
 - **Dynamic Resolution**: Dynamically locate, compose, and mount community skills into unified execution pipelines on demand.
+

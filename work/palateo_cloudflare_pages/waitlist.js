@@ -36,11 +36,70 @@ form.addEventListener('submit', async event => {
 });
 
 const motionToggle = document.getElementById('motion-toggle');
-motionToggle.addEventListener('click', () => {
- const paused = document.body.classList.toggle('motion-paused');
- motionToggle.setAttribute('aria-pressed', String(paused)); motionToggle.textContent = paused ? 'Resume motion' : 'Pause motion';
-});
+if (motionToggle) {
+  motionToggle.addEventListener('click', () => {
+   const paused = document.body.classList.toggle('motion-paused');
+   motionToggle.setAttribute('aria-pressed', String(paused)); motionToggle.textContent = paused ? 'Resume motion' : 'Pause motion';
+  });
+}
 
+// Interactive Quiz Demo Widget Controller (Replacing Plaid UI with Taste Quiz)
+(function initQuizDemo() {
+  const widget = document.getElementById('interactiveQuizWidget');
+  if (!widget) return;
+  const demoState = { spice: 'balanced', vibe: 'speakeasy', city: 'Mumbai' };
+
+  const cityMatches = {
+    'Mumbai': { name: 'The Bombay Canteen', area: 'Lower Parel, Mumbai · Progressive Indian', score: '98%' },
+    'Delhi NCR': { name: 'Indian Accent', area: 'The Lodhi, Delhi · Modern Gastronomy', score: '99%' },
+    'Bengaluru': { name: 'Toit Brewpub', area: 'Indiranagar, Bengaluru · Craft Beer & Woodfired Pizza', score: '97%' },
+    'Hyderabad': { name: 'Roastery Coffee House', area: 'Banjara Hills, Hyderabad · Specialty Roastery', score: '98%' },
+    'Chennai': { name: 'Dakshin', area: 'Alwarpet, Chennai · Iconic Coastal & South Indian', score: '98%' },
+    'Kolkata': { name: 'Peter Cat', area: 'Park Street, Kolkata · Iconic Chelo Kebab & Sizzlers', score: '97%' },
+    'Pune': { name: 'Malaka Spice', area: 'Koregaon Park, Pune · Southeast Asian Eclectic', score: '96%' },
+    'Ahmedabad': { name: 'Under The Neem Trees', area: 'Bodakdev, Ahmedabad · Alfresco Dining', score: '98%' },
+    'Vadodara': { name: 'The Brewery at Alembic', area: 'Alembic City, Vadodara · Heritage Industrial Bistro', score: '97%' },
+    'Jaipur': { name: 'Bar Palladio', area: 'Narain Niwas, Jaipur · Regal Italian & Cocktails', score: '99%' },
+    'Kochi': { name: 'Kashi Art Cafe', area: 'Fort Kochi · Bohemian Art & Single-Origin Coffee', score: '96%' },
+    'Goa': { name: 'Gunpowder', area: 'Assagao, Goa · Peninsular Coastal & Garden Cocktails', score: '98%' },
+    'Chandigarh': { name: 'Virgin Courtyard', area: 'Sector 7, Chandigarh · Mediterranean Courtyard', score: '97%' }
+  };
+
+  const archetypes = {
+    'speakeasy': { name: 'The Progressive Cocktail Explorer', desc: 'You prioritize culinary technique, ambient speakeasy energy, and craft beverage pairings.' },
+    'cozy': { name: 'The Hidden Gem Connoisseur', desc: 'You love intimate courtyards, artisanal pour-overs, and low-key dining away from the crowds.' },
+    'heritage': { name: 'The Heritage Culinary Devotee', desc: 'You celebrate timeless regional recipes, royal thalis, and legendary institutions with deep roots.' },
+    'rooftop': { name: 'The Skyline Gastronomy Chaser', desc: 'You thrive in high-energy alfresco spaces with panoramic city views and inventive global bites.' }
+  };
+
+  function update() {
+    const arch = archetypes[demoState.vibe] || archetypes.speakeasy;
+    const match = cityMatches[demoState.city] || cityMatches['Mumbai'];
+    const nameEl = document.getElementById('archetypeName');
+    const descEl = document.getElementById('archetypeDesc');
+    const venueEl = document.getElementById('matchedVenueName');
+    const areaEl = document.getElementById('matchedVenueArea');
+    const scoreBadge = document.querySelector('.match-score-badge');
+    if (nameEl) nameEl.textContent = arch.name;
+    if (descEl) descEl.textContent = arch.desc;
+    if (venueEl) venueEl.textContent = match.name;
+    if (areaEl) areaEl.textContent = match.area;
+    if (scoreBadge) scoreBadge.textContent = match.score + ' Match';
+  }
+
+  widget.querySelectorAll('.quiz-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const parent = btn.parentElement;
+      const group = parent.dataset.group;
+      parent.querySelectorAll('.quiz-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (group === 'spice') demoState.spice = btn.dataset.spice;
+      if (group === 'vibe') demoState.vibe = btn.dataset.vibe;
+      if (group === 'city') demoState.city = btn.dataset.city;
+      update();
+    });
+  });
+})();
 
 (function initLandingLogoReveal() {
   const el = document.getElementById('palateoLogoReveal');

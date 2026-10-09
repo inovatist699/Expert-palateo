@@ -17,6 +17,10 @@ const context = vm.createContext({console, URL, setTimeout:()=>0, clearTimeout()
   localStorage:{getItem:()=>null,setItem(){}},
   document:{getElementById:node,querySelectorAll:()=>[],addEventListener(){},body:{insertAdjacentHTML(){}}},assert});
 vm.runInContext(script.replace(/initV5\(\);\s*$/, ''), context);
+// A persisted city used to evaluate cityCenters before its const declaration.
+const returningContext=vm.createContext({console,URL,setTimeout:()=>0,clearTimeout(){},window:{scrollTo(){}},navigator:{},location:{href:'https://palateo.in/app/'},localStorage:{getItem:()=>JSON.stringify({selectedCity:'Vadodara'}),setItem(){}},document:context.document});
+vm.runInContext(script.replace(/initV5\(\);\s*$/, ''),returningContext);
+assert.equal(vm.runInContext('selectedCity',returningContext),'Vadodara','A returning user restores their city without crashing startup');
 vm.runInContext(`
 globalThis.runChecks=async()=>{
  const user=id=>({id,user_metadata:{palateo_legal_version:LEGAL_VERSION,palateo_privacy_consent:true}});
@@ -31,6 +35,8 @@ globalThis.runChecks=async()=>{
  assert.equal(ranked().length,0);
  go('home');assert.match(document.getElementById('root').innerHTML,/Taste profile setup/);
  assert.match(document.getElementById('root').innerHTML,/class="tasteActions"/);
+ assert.match(document.getElementById('root').innerHTML,/Your taste quiz/);
+ assert.doesNotMatch(document.getElementById('root').innerHTML,/tasteQuizBanner/,'Quiz must fit mobile without a repeated promotional banner');
  assert.doesNotMatch(document.getElementById('root').innerHTML,/Find food that feels like you/);
  const originalSetup=document.getElementById('root').innerHTML;
  let scrollCalls=0;window.scrollTo=()=>scrollCalls++;
@@ -44,6 +50,11 @@ globalThis.runChecks=async()=>{
  state.answers=answers();state.onboarded=false;await finishV5();
  assert.equal(hasTasteProfile(),true);assert.ok(ranked().length>0);assert.equal(writes,2);
  home();assert.ok(document.getElementById('root').innerHTML.includes(ranked()[0].score+'%<small> top taste match</small>'),'Home percentage must be the real top restaurant score');
+ assert.equal(hasCoordinates({latitude:null,longitude:null}),false,'Missing coordinates must not create a map pin at zero');
+ assert.equal(hasCoordinates({latitude:22.3,longitude:73.2}),true);
+ assert.equal(hasCoordinates({latitude:95,longitude:73.2}),false,'Invalid coordinates must not be mapped');
+ assert.match(document.getElementById('root').innerHTML,/data-action="home-view"/,'Both recommendation views stay available');
+ assert.doesNotMatch(card(ranked()[0]),/Verified Coordinates|Trust Guarantee|Direct Google Maps verification/,'Do not invent verification in restaurant recommendations');
  const a=answers();taste={cuisines:{primary:a.cuisine},spice_level:a.spice,budget:a.budget,ambience:{primary:a.mood},occasions:{primary:a.occasion},priorities:{primary:a.priority,dietary_preference:a.diet},max_distance_km:Number(a.distance)};
  useAccount(null);assert.equal(ranked().length,0);
  useAccount(user('new-user'));await loadCloudState();assert.equal(hasTasteProfile(),true,'complete cloud profile restores on return');

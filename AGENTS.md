@@ -116,3 +116,25 @@ Instruct the agent directly in your prompt:
 ### 🧭 SkillX (`skills/skill-x`) & Awesome Skills (`skills/awesome-skills`)
 - **Dynamic Resolution**: Dynamically locate, compose, and mount community skills into unified execution pipelines on demand.
 
+---
+
+## 7. OpenClaw Autonomous Gateway & CLI (`openclaw`)
+
+OpenClaw is integrated with this repository as an autonomous agent workspace.
+
+- **Workspace Files**:
+  - `openclaw.json` / `.openclaw/openclaw.json`: Project and workspace definitions.
+  - `SOUL.md`: OpenClaw agent persona, anti-slop principles, and engineering voice.
+  - `IDENTITY.md`: Palateo Lead Engineer identity specifications.
+  - `TOOLS.md`: Verification commands, local test runners, and deployment routines.
+  - `MEMORY.md`: Curated long-term project memory, baseline release state, and security rules.
+  - `USER.md`: User preferences and execution standards.
+- **CLI Commands**:
+  - `openclaw config set agents.defaults.workspace "c:\Users\Aayush\Documents\ChatGPT\Palateo"`: Set default workspace.
+  - `openclaw agents add palateo --workspace "c:\Users\Aayush\Documents\ChatGPT\Palateo"`: Register Palateo agent.
+  - `openclaw gateway restart`: Reload gateway and activate workspace.
+  - `openclaw status` / `openclaw doctor`: Inspect health and connections.
+  - `openclaw chat --agent palateo`: Start interactive session in terminal.
+- **One-Click Connector Script**:
+  - `powershell -ExecutionPolicy Bypass -File work/connect-openclaw.ps1` (or `npm run connect:openclaw`).
+

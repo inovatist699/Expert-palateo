@@ -1,0 +1,35 @@
+{
+  "$schema": "https://openclaw.ai/schema/openclaw.json",
+  "name": "palateo",
+  "description": "Palateo - AI-Powered Taste Quiz and Curated Dining App",
+  "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+  "agents": {
+    "defaults": {
+      "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+      "heartbeat": {
+        "interval": "30m"
+      }
+    },
+    "entries": {
+      "palateo": {
+        "name": "Palateo Lead Engineer & Taste Architect",
+        "description": "Autonomous full-stack engineering, verification, and UI/UX design agent for Palateo.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "rules": [
+          "AGENTS.md",
+          "SOUL.md",
+          "IDENTITY.md",
+          "TOOLS.md",
+          "MEMORY.md",
+          "USER.md"
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "check": "npm run check",
+    "update-csp": "npm run update:csp",
+    "check-live": "npm run check:live",
+    "preview-mobile": "npm run preview:mobile"
+  }
+}

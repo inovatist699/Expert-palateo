@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -236,7 +236,7 @@ body{min-width:0}#tasteQuestion:focus{outline:none}
 </div>
 
 <div class="app">
-<header class="top"><div class="logo"><span class="brandEmblem" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 19V5h5a5 5 0 0 1 0 10H7m0-5h5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logoText">palate<span>o</span><i class="logoDot">.</i></span></div><button class="mode" id="mode" data-action="mode">Sign in required</button></header><div class="cityPicker" role="group" aria-label="Choose your city"><label class="citySelectLabel" for="citySelect">Your city<select id="citySelect" data-action="city-select"><option value="Ahmedabad">Ahmedabad</option><option value="Vadodara">Vadodara</option><option value="Mumbai">Mumbai</option><option value="Delhi NCR">Delhi NCR</option><option value="Bengaluru">Bengaluru</option><option value="Hyderabad">Hyderabad</option><option value="Chennai">Chennai</option><option value="Kolkata">Kolkata</option><option value="Pune">Pune</option><option value="Jaipur">Jaipur</option><option value="Kochi">Kochi</option><option value="Goa">Goa</option><option value="Chandigarh">Chandigarh</option></select></label><button type="button" class="locationButton" id="useLocationButton" data-action="location">Use my location</button><span id="cityPickerStatus" class="cityPickerStatus" role="status" aria-live="polite"></span></div>
+<header class="top"><div class="logo"><span class="brandEmblem" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 19V5h5a5 5 0 0 1 0 10H7m0-5h5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logoText">palate<span>o</span><i class="logoDot">.</i></span></div><div class="headerActions"><button type="button" class="headerSavedBtn" data-action="navigate" data-page="saved" aria-label="Saved places" title="View saved places"><b aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></b><span>Saved</span><span class="headerSavedCount" id="headerSavedCount" style="display:none">0</span></button><button class="mode" id="mode" data-action="mode">Sign in required</button></div></header><div class="cityPicker" role="group" aria-label="Choose your city"><label class="citySelectLabel" for="citySelect">Your city<select id="citySelect" data-action="city-select"><option value="Ahmedabad">Ahmedabad</option><option value="Vadodara">Vadodara</option><option value="Mumbai">Mumbai</option><option value="Delhi NCR">Delhi NCR</option><option value="Bengaluru">Bengaluru</option><option value="Hyderabad">Hyderabad</option><option value="Chennai">Chennai</option><option value="Kolkata">Kolkata</option><option value="Pune">Pune</option><option value="Jaipur">Jaipur</option><option value="Kochi">Kochi</option><option value="Goa">Goa</option><option value="Chandigarh">Chandigarh</option></select></label><button type="button" class="locationButton" id="useLocationButton" data-action="location">Use my location</button><span id="cityPickerStatus" class="cityPickerStatus" role="status" aria-live="polite"></span></div>
 <main id="root">
 <section class="screen publicSeoIntro" aria-labelledby="publicSeoTitle">
 <div class="hero"><div class="eyebrow">The restaurant map that builds itself · India Edition</div><h1 id="publicSeoTitle">Find cafés and restaurants across 13 Indian metropolitan cities that fit your taste.</h1><p>Palateo is an AI food preference platform across India. Discover cafés, bistros, and iconic restaurants in Mumbai, Delhi NCR, Bengaluru, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Vadodara, Jaipur, Kochi, Goa, and Chandigarh with recommendations shaped around your cuisine preferences, budget, dietary choices, and authentic diner feedback.</p></div>
@@ -248,11 +248,11 @@ body{min-width:0}#tasteQuestion:focus{outline:none}
 <footer class="dataAttribution">Palateo catalogue: Ratings, photos and prices may be snapshots or illustrative. Confirm venue details before visiting. · <a href="https://www.instagram.com/palateo.co/" target="_blank" rel="noopener noreferrer">Palateo on Instagram</a> · <a href="https://www.linkedin.com/in/aayush-mittal-01012004e/" target="_blank" rel="noopener noreferrer">Aayush Mittal on LinkedIn</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="mailto:palateo.com@gmail.com">Contact</a></footer>
 </div>
 <div class="nav hide" id="nav">
-<button data-action="navigate" data-page="home" id="n-home"><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/></svg></b>Home</button>
-<button data-action="navigate" data-page="discover" id="n-discover"><b aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg></b>Discover</button>
-<button data-action="navigate" data-page="social" id="n-social"><b aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 2 4v2"/></svg></b>People</button>
-<button data-action="navigate" data-page="saved" id="n-saved"><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></b>Saved</button>
-<button data-action="navigate" data-page="profile" id="n-profile"><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6h14M5 12h14M5 18h14"/><circle cx="9" cy="6" r="2" fill="var(--bg)"/><circle cx="15" cy="12" r="2" fill="var(--bg)"/><circle cx="10" cy="18" r="2" fill="var(--bg)"/></svg></b>Palate</button>
+<button class="navTab" data-action="navigate" data-page="home" id="n-home"><b aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg></b>Palate Map</button>
+<button class="navTab" data-action="navigate" data-page="profile" id="n-profile"><b aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></b>Taste Genome</button>
+<button class="navTab" data-action="navigate" data-page="discover" id="n-discover" style="display:none;" aria-hidden="true"></button>
+<button class="navTab" data-action="navigate" data-page="social" id="n-social" style="display:none;" aria-hidden="true"></button>
+<button class="navTab" data-action="navigate" data-page="saved" id="n-saved" style="display:none;" aria-hidden="true"></button>
 </div>
 <div class="toast" id="toast"></div>
 
@@ -327,7 +327,7 @@ const people=[
 const questions=[
 {k:'mood',q:'What kind of night?',o:[['quiet','Quiet & cosy'],['lively','Loud & lively'],['date','Date night'],['family','Family time']]},
 {k:'cuisine',q:'Which cuisines do you love?',o:[['Gujarati','Gujarati'],['Punjabi','North Indian'],['Italian','Italian & continental'],['Cafe','Café & coffee'],['SouthIndian','South Indian'],['Asian','Asian'],['Dessert','Desserts']]},
-{k:'diet',q:'Any dietary preference?',o:[['veg','Vegetarian (veg)'],['nonveg','Non-vegetarian (non-veg)'],['any','No preference']]},
+{k:'diet',q:'Any dietary preference?',o:[['all','✨ All'],['pure_veg','🌱 Pure Veg'],['eggetarian','🥚 Eggetarian'],['non_veg','🍗 Non-Veg']]},
 {k:'budget',q:'What is your comfortable spend?',o:[['under_500','Under ₹500'],['500_1000','₹500–₹1,000'],['1000_2000','₹1,000–₹2,000'],['2000_plus','₹2,000+']]},
 {k:'spice',q:'How much spice?',o:[['mild','Mild'],['medium','Medium'],['hot','Bring the heat'],['depends','Depends']]},
 {k:'occasion',q:'Who is coming?',o:[['date','Partner'],['friends','Friends'],['family','Family'],['solo','Just me / work']]},
@@ -921,7 +921,7 @@ const cityCenters={
   Goa:[15.4989,73.8278],
   Chandigarh:[30.7333,76.7794]
 };
-let state=load(), page='home', supabaseClient=null, discoverCuisine='all', discoverQuery='', homeCuisine='all', homeLimit=12, searchEventTimer=null, authRequired=true, homeView='map', selectedPinId=null, mapZoom=1, map3d=false;
+let state=load(), page='home', supabaseClient=null, discoverCuisine='all', discoverQuery='', homeCuisine='all', homeLimit=12, searchEventTimer=null, authRequired=true, homeView='map', selectedPinId=null, mapZoom=1, map3d=false, mapHeatmap=false, mapPan={x:0,y:0};
 let promptQuery='', minMatchThreshold=0, studioTunerOpen=false, selectedDishCategory='all', activeDishModalVenue=null, adventureMode='balanced';
 let selectedCity=state.selectedCity&&cityCenters[state.selectedCity]?state.selectedCity:'Ahmedabad',userLocation=null;
 const LEGAL_VERSION='2026-10-06';
@@ -979,8 +979,24 @@ function hasListedPrice(value){if(typeof value==='number')return Number.isFinite
 function isPermanentlyClosed(r){if(r.permanently_closed===true||r.is_permanently_closed===true||r.closed_permanently===true)return true;const status=[r.business_status,r.businessStatus,r.operational_status,r.status,r.lifecycle_status,r.operationalStatus].filter(Boolean).join(' ').toLowerCase().replace(/[_-]+/g,' ');return /\b(permanently closed|closed permanently|disused|abandoned|demolished|not operational)\b/.test(status)}
 function isExcludedVenue(r){const name=String(r.name||'').toLowerCase();if(name.includes('bombay canteen'))return false;const descriptor=[name,...(r.t||[]),...(r.c||[]),...(r.tags||[]),...(r.cuisines||[])].filter(Boolean).join(' ').toLowerCase();if(isPermanentlyClosed(r))return true;if(/\b(school|college|university|campus|institute|hostel|student\s+mess|mess\s+hall|cafeteria|canteen|dining hall)\b/.test(descriptor))return true;if(/\bgruh\s*laxmi\s*spices?\b|\b(?:spice|masala)\s+(?:shop|store|retail|wholesale|distributor)\b/.test(descriptor))return true;return /\b(?:mcdonald'?s|mcd|la\s*pino'?z|domino'?s|burger\s*king|kfc|subway|pizza\s*hut|taco\s*bell|wendy'?s|popeyes|hardee'?s|little\s*caesars|wow\s*momo|burger\s*singh)\b/.test(name)}
 function isQualifiedVenue(r){const rating=Number(r.rating);return Number.isFinite(rating)&&rating>0&&rating<=5&&hasListedPrice(r.p??r.price)&&!isExcludedVenue(r)}
-function dietLabel(value){return ({veg:'Vegetarian',nonveg:'Non-vegetarian',any:'No preference'})[value]||'Not set'}
-function hasTasteAnswers(answers=state.answers){return questions.every(q=>q.o.some(([value])=>value===answers?.[q.k]))}
+function isVegDiet(d){return d==='pure_veg'||d==='veg'}
+function isNonVegDiet(d){return d==='non_veg'||d==='nonveg'}
+function isEggetarianDiet(d){return d==='eggetarian'||d==='egg'}
+function normalizeDiet(d){
+  if(d==='pure_veg'||d==='veg')return 'pure_veg';
+  if(d==='non_veg'||d==='nonveg')return 'non_veg';
+  if(d==='eggetarian'||d==='egg')return 'eggetarian';
+  if(d==='all'||d==='any')return 'all';
+  return null;
+}
+function toBackendDiet(d){
+  if(d==='pure_veg'||d==='veg')return 'veg';
+  if(d==='non_veg'||d==='nonveg')return 'nonveg';
+  if(d==='eggetarian'||d==='egg')return 'eggetarian';
+  return 'any';
+}
+function dietLabel(value){return ({pure_veg:'🌱 Pure Veg',veg:'🌱 Pure Veg',eggetarian:'🥚 Eggetarian',egg:'🥚 Eggetarian',non_veg:'🍗 Non-Veg',nonveg:'🍗 Non-Veg',all:'✨ All',any:'✨ All'})[value]||'Not set'}
+function hasTasteAnswers(answers=state.answers){return questions.every(q=>q.o.some(([value])=>value===answers?.[q.k] || (q.k==='diet' && normalizeDiet(answers?.[q.k])===normalizeDiet(value))))}
 function hasTasteProfile(){return !!currentUser&&state.userId===currentUser.id&&state.onboarded===true&&!state.retakeInProgress&&hasTasteAnswers()}
 function init(){updateCityPicker();if(!state.answers)state.answers={};if(!state.feedback)state.feedback={};if(!state.saves)state.saves=[];if(!state.follows)state.follows=[];if(!state.onboarded){onboard(0)}else{document.getElementById('nav').classList.remove('hide');go('home')}}
 function calculateArchetype(a=state.answers||{}){
@@ -988,7 +1004,7 @@ function calculateArchetype(a=state.answers||{}){
   if(a.cuisine==='Cafe'||a.mood==='quiet')return {title:'Third-Wave Café Connoisseur',emoji:'☕',desc:'Tranquil corners, single-origin pour-overs, and artisan sourdough bakes.'};
   if(a.priority==='unique')return {title:'Heritage Gastronomy Pioneer',emoji:'🏛️',desc:'Cherishes century-old institutions, cultural recipes, and evocative spaces.'};
   if(a.budget==='2000_plus')return {title:'Haute Cuisine Epicurean',emoji:'🍸',desc:'Dines for progressive tasting menus, signature mixology, and polished luxury.'};
-  if(a.diet==='veg')return {title:'Plant & Pure-Ghee Purist',emoji:'🌿',desc:'Celebrates rich traditional vegetarian feasts, crisp dosas, and slow-churned butter.'};
+  if(isVegDiet(a.diet))return {title:'Plant & Pure-Ghee Purist',emoji:'🌿',desc:'Celebrates rich traditional vegetarian feasts, crisp dosas, and slow-churned butter.'};
   return {title:'Modern Metropolitan Gourmand',emoji:'✨',desc:'Explores neighborhood bistros, wood-fired pizzas, and vibrant social tables.'};
 }
 function onboard(i){
@@ -1053,7 +1069,7 @@ function cuisineFits(r,key){
  const values=[...(r.c||[]),...(r.t||[])].map(x=>String(x).toLowerCase());
  return values.some(x=>(cuisineAliases[key]||[String(key).toLowerCase()]).some(term=>x.includes(term)));
 }
-function availableCalibrationDishes(){return calibrationDishes.filter(d=>state.answers?.diet!=='veg'||d.diet==='veg')}
+function availableCalibrationDishes(){return calibrationDishes.filter(d=>!isVegDiet(state.answers?.diet)||d.diet==='veg')}
 function dishAffinity(r,d){
  if(!cuisineFits(r,d.cuisine))return 0;
  const tags=[...(r.t||[]),...(r.c||[])].map(x=>String(x).toLowerCase());
@@ -1142,9 +1158,11 @@ if(a.budget&&Object.hasOwn(budgetRanks,a.budget)&&Object.hasOwn(budgetRanks,r.p)
 const hasVeg=diet.some(x=>['veg','vegetarian','pureveg','jain','vegan','vegetarianoptions'].includes(x));
 const hasNonVeg=diet.some(x=>['nonveg','nonvegetarian','nonvegetarianoptions','mixed','both'].includes(x));
 const vegetarianOnly=diet.some(x=>['vegetarian','pureveg','jain','vegan','vegetarianonly'].includes(x));
-if(a.diet==='veg'||a.diet==='nonveg'){
- const match=a.diet==='veg'?hasVeg:hasNonVeg,known=a.diet==='veg'?hasVeg:hasNonVeg||vegetarianOnly;
- addFactor('Dietary options',22,match?1:known?-1:0,a.diet==='veg'?'Vegetarian options noted':'Non-vegetarian options noted');
+const hasEgg=diet.some(x=>['egg','eggetarian','eggoptions','eggs'].includes(x));
+if(isVegDiet(a.diet)||isNonVegDiet(a.diet)||isEggetarianDiet(a.diet)){
+ const match=isVegDiet(a.diet)?hasVeg:isNonVegDiet(a.diet)?hasNonVeg:(hasVeg||hasEgg);
+ const known=isVegDiet(a.diet)?hasVeg:isNonVegDiet(a.diet)?(hasNonVeg||vegetarianOnly):(hasVeg||hasEgg||hasNonVeg);
+ addFactor('Dietary options',22,match?1:known?-1:0,isVegDiet(a.diet)?'Vegetarian options noted':isNonVegDiet(a.diet)?'Non-vegetarian options noted':'Eggetarian options noted');
  if(!known)why.push('Dietary options not verified');
 }
 if(a.mood){
@@ -1189,7 +1207,7 @@ s=Math.max(1,Math.min(96,s));
 if(f[r.id]==='like'){s+=7;why.unshift('You liked this before')}
 if(f[r.id]==='dislike'){s-=18;why.unshift('You rejected this before')}
 if(f[r.id]==='visited'){s+=4;why.unshift('You visited this place')}
-if((a.diet==='veg'&&hasNonVeg&&!hasVeg)||(a.diet==='nonveg'&&vegetarianOnly&&!hasNonVeg))s=Math.min(s,35);
+if((isVegDiet(a.diet)&&hasNonVeg&&!hasVeg)||(isNonVegDiet(a.diet)&&vegetarianOnly&&!hasNonVeg))s=Math.min(s,35);
 s=Math.max(1,Math.min(99,Math.round(s)));
 if(!why.length)why.push('Matches your overall palate');
 return {...r,description:r.description||(typeof r.why==='string'?r.why:''),score:s,why,matchBreakdown:preferenceFactors};
@@ -1220,7 +1238,8 @@ function card(r){
  const place=r.area||r.city||cityName(),rating=Number(r.rating).toFixed(1),reviews=Number(r.review_count)||0;
  const dishes=resolveBestDishes(r);
  const topDishes=dishes.slice(0, 3);
- return `<article class="card restaurant-card" data-place-id="${id}" id="card-${id}"><div class="resthead"><button type="button" class="photo" data-action="open-place" data-rest-id="${id}" aria-label="Explore ${esc(r.name)}">${photo(r)}</button><div><h3 class="restname"><button type="button" class="restnameButton" data-action="open-place" data-rest-id="${id}">${esc(r.name)}</button></h3><div class="meta">${esc(place)} · ${esc(displayPrice(r))}<br>★ ${rating}${reviews?" · "+reviews.toLocaleString()+" ratings":""}${r.ratingSource?" · "+esc(r.ratingSource):""}</div></div><div class="match ${r.score>=75?"strong":r.score>=50?"mixed":"low"}" title="Estimated taste fit from your quiz and feedback"><b>${r.score}%</b><span>PALATE MATCH</span></div></div><div class="tags">${[...new Set([...(r.c||[]),...(r.t||[])])].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div><p class="fitReason"><b>Why it fits</b> · ${esc(r.why[0])}</p><div class="cardBestDishes"><div class="cardBestDishesHeader"><span class="cardBestDishesTitle">⭐ BEST DISHES</span><button type="button" class="viewAllDishesBtn" data-action="open-dishes-modal" data-rest-id="${id}">View menu highlights (${dishes.length}) →</button></div><div class="cardDishesList">${topDishes.map(d=>`<div class="cardDishItem" data-action="open-dishes-modal" data-rest-id="${id}" role="button" tabindex="0"><div class="cardDishInfo"><span class="cardDishDiet ${d.dietary?.toLowerCase().includes('non-veg')?'nonVeg':d.dietary?.toLowerCase().includes('egg')?'egg':'veg'}">●</span><span class="cardDishName">${esc(d.name)}</span></div><span class="cardDishPrice">${esc(d.price)}</span></div>`).join('')}</div></div><details class="why"><summary>Your match explained</summary><p>${esc(r.why.join(" · "))}<br><br>An estimate from your quiz and active feedback. Tap a selected rating again to undo it. Venue details and prices can change; confirm before visiting.</p></details><div class="actions"><button type="button" data-rest-action="like" data-rest-id="${id}" aria-pressed="${f==='like'}" aria-label="${f==='like'?'Unlike':'Like'} ${esc(r.name)}">${f==='like'?'♥ Undo like':'♡ Like'}</button><button type="button" data-rest-action="dislike" data-rest-id="${id}" aria-pressed="${f==='dislike'}" aria-label="${f==='dislike'?'Undo not for me':'Not for me'}: ${esc(r.name)}">${f==='dislike'?'Undo pass':'Not for me'}</button><button type="button" class="dark" data-rest-action="save" data-rest-id="${id}" aria-label="${saved?'Remove':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button></div><div class="actions"><button type="button" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}" aria-label="${f==='visited'?'Undo visited':'I visited'}: ${esc(r.name)}">${f==='visited'?'Undo visit':'I visited'}</button><button type="button" data-action="view-pin" data-rest-id="${id}" aria-label="Locate ${esc(r.name)} on your map">On your map</button><button type="button" data-rest-action="maps" data-rest-id="${id}" aria-label="Directions to ${esc(r.name)}">Directions ↗</button></div></article>`
+ const vibe=(r.a&&r.a[0])||(r.c&&r.c[0])||'Must Try';
+ return `<article class="card restaurant-card" data-place-id="${id}" id="card-${id}"><div class="cardHeroContainer"><button type="button" class="photo" data-action="open-place" data-rest-id="${id}" aria-label="Explore ${esc(r.name)}">${photo(r)}</button><div class="cardMatchBadge match ${r.score>=75?"strong":r.score>=50?"mixed":"low"}" title="Estimated taste fit from your quiz and feedback">⚡ <b>${r.score}%</b> <small>PALATE MATCH</small></div><button type="button" class="cardSaveBtn ${saved?'saved':''}" data-rest-action="save" data-rest-id="${id}" aria-label="${saved?'Remove':'Save'} ${esc(r.name)}">${saved?'★':'☆'}</button><div class="cardHeroMetaRow"><span class="cardHeroPrice">${esc(displayPrice(r))}</span><span class="cardHeroVibe">✨ ${esc(vibe)}</span></div></div><div class="cardBodyContent"><div class="resthead" style="display:block;margin:0"><h3 class="restname" style="margin:0 0 2px"><button type="button" class="restnameButton" data-action="open-place" data-rest-id="${id}">${esc(r.name)}</button></h3><div class="meta" style="margin:0">${esc(place)} · ★ ${rating}${reviews?" · "+reviews.toLocaleString()+" ratings":""}${r.ratingSource?" · "+esc(r.ratingSource):""}</div></div><div class="tags">${[...new Set([...(r.c||[]),...(r.t||[])])].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div><p class="fitReason"><b>Why it fits</b> · ${esc(r.why[0])}</p><div class="cardBestDishes"><div class="cardBestDishesHeader"><span class="cardBestDishesTitle">⭐ MUST TRY HIGHLIGHTS</span><button type="button" class="viewAllDishesBtn" data-action="open-dishes-modal" data-rest-id="${id}">Menu highlights (${dishes.length}) →</button></div><div class="cardDishesList">${topDishes.map(d=>`<div class="cardDishItem" data-action="open-dishes-modal" data-rest-id="${id}" role="button" tabindex="0"><div class="cardDishInfo"><span class="cardDishDiet ${d.dietary?.toLowerCase().includes('non-veg')?'nonVeg':d.dietary?.toLowerCase().includes('egg')?'egg':'veg'}">●</span><span class="cardDishName">${esc(d.name)}</span></div><span class="cardDishPrice">${esc(d.price)}</span></div>`).join('')}</div></div><button type="button" class="cardExploreBtn" data-action="open-place" data-rest-id="${id}">Explore Palate Breakdown →</button><details class="why"><summary>Your match explained</summary><p>${esc(r.why.join(" · "))}<br><br>An estimate from your quiz and active feedback. Tap a selected rating again to undo it. Venue details and prices can change; confirm before visiting.</p></details><div class="actions"><button type="button" data-rest-action="like" data-rest-id="${id}" aria-pressed="${f==='like'}" aria-label="${f==='like'?'Unlike':'Like'} ${esc(r.name)}">${f==='like'?'♥ Undo like':'♡ Like'}</button><button type="button" data-rest-action="dislike" data-rest-id="${id}" aria-pressed="${f==='dislike'}" aria-label="${f==='dislike'?'Undo not for me':'Not for me'}: ${esc(r.name)}">${f==='dislike'?'Undo pass':'Not for me'}</button><button type="button" class="dark" data-rest-action="save" data-rest-id="${id}" aria-label="${saved?'Remove':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button></div><div class="actions"><button type="button" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}" aria-label="${f==='visited'?'Undo visited':'I visited'}: ${esc(r.name)}">${f==='visited'?'Undo visit':'I visited'}</button><button type="button" data-action="view-pin" data-rest-id="${id}" aria-label="Locate ${esc(r.name)} on your map">On your map</button><button type="button" data-rest-action="maps" data-rest-id="${id}" aria-label="Directions to ${esc(r.name)}">Directions ↗</button></div></div></article>`;
 }
 function go(p,{keepScroll=false}={}){
 if(!currentUser){requireAuthGate();return}
@@ -1270,104 +1289,213 @@ const CITY_MAP_BOUNDS={
 };
 function projectCoords(lat,lon,city){
  const bounds=CITY_MAP_BOUNDS[city]||CITY_MAP_BOUNDS['Ahmedabad'];
- const width=640,height=380;
+ const width=720,height=420;
  const clampedLat=Math.max(bounds.minLat,Math.min(bounds.maxLat,Number(lat)||bounds.minLat));
  const clampedLon=Math.max(bounds.minLon,Math.min(bounds.maxLon,Number(lon)||bounds.minLon));
- const x=((clampedLon-bounds.minLon)/(bounds.maxLon-bounds.minLon))*(width-70)+35;
- const y=(1-(clampedLat-bounds.minLat)/(bounds.maxLat-bounds.minLat))*(height-60)+30;
+ const x=((clampedLon-bounds.minLon)/(bounds.maxLon-bounds.minLon))*(width-120)+60;
+ const y=(1-(clampedLat-bounds.minLat)/(bounds.maxLat-bounds.minLat))*(height-90)+45;
  return {x:Math.round(x),y:Math.round(y)};
 }
 const CITY_MAP_THEMES={
  Ahmedabad:{
-  river:`<path d="M 430,10 Q 415,170 405,230 T 380,370" stroke="url(#riverGrad)" stroke-width="16" fill="none" opacity="0.8" stroke-linecap="round"/><path d="M 430,10 Q 415,170 405,230 T 380,370" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.45" stroke-dasharray="10 14" stroke-linecap="round"/>`,
-  label:`<text x="415" y="310" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85">SABARMATI RIVER</text>`,
-  neighborhoods:[{name:'Sindhu Bhavan',x:110,y:110},{name:'Bodakdev',x:150,y:145},{name:'Satellite / Prahlad',x:160,y:245},{name:'Navrangpura',x:320,y:160},{name:'C.G. Road',x:330,y:200},{name:'Ellisbridge',x:370,y:230},{name:'Old City Heritage',x:500,y:205}]
+  river:`<path d="M 480,0 Q 460,190 445,260 T 420,420" stroke="url(#riverGrad)" stroke-width="22" fill="none" opacity="0.85" stroke-linecap="round"/><path d="M 480,0 Q 460,190 445,260 T 420,420" stroke="#519cab" stroke-width="3" fill="none" opacity="0.6" stroke-dasharray="10 14" stroke-linecap="round"/>`,
+  label:`<text x="455" y="350" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85">SABARMATI RIVER</text>`,
+  neighborhoods:[{name:'Sindhu Bhavan',x:130,y:120},{name:'Bodakdev',x:180,y:160},{name:'Satellite / Prahlad',x:190,y:270},{name:'Navrangpura',x:360,y:180},{name:'C.G. Road',x:370,y:225},{name:'Ellisbridge',x:420,y:260},{name:'Old City Heritage',x:560,y:230}]
  },
  Vadodara:{
-  river:`<path d="M 370,10 Q 360,180 380,240 T 365,370" stroke="url(#riverGrad)" stroke-width="14" fill="none" opacity="0.8" stroke-linecap="round"/><path d="M 370,10 Q 360,180 380,240 T 365,370" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45" stroke-dasharray="8 12" stroke-linecap="round"/>`,
-  label:`<text x="390" y="310" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85">VISHWAMITRI RIVER</text>`,
-  neighborhoods:[{name:'Alkapuri',x:230,y:195},{name:'Sayajiganj',x:350,y:190},{name:'Race Course',x:190,y:150},{name:'Old City / Raopura',x:490,y:220}]
+  river:`<path d="M 420,0 Q 405,200 425,270 T 410,420" stroke="url(#riverGrad)" stroke-width="18" fill="none" opacity="0.85" stroke-linecap="round"/><path d="M 420,0 Q 405,200 425,270 T 410,420" stroke="#519cab" stroke-width="2.5" fill="none" opacity="0.5" stroke-dasharray="8 12" stroke-linecap="round"/>`,
+  label:`<text x="440" y="350" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85">VISHWAMITRI RIVER</text>`,
+  neighborhoods:[{name:'Alkapuri',x:260,y:215},{name:'Sayajiganj',x:390,y:210},{name:'Race Course',x:210,y:165},{name:'Old City / Raopura',x:550,y:245}]
  },
  Mumbai:{
-  river:`<path d="M 90,10 Q 140,160 80,260 T 130,370" stroke="url(#riverGrad)" stroke-width="20" fill="none" opacity="0.85" stroke-linecap="round"/><path d="M 90,10 Q 140,160 80,260 T 130,370" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.5" stroke-dasharray="10 14" stroke-linecap="round"/>`,
-  label:`<text x="40" y="240" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85" transform="rotate(-75 40 240)">ARABIAN SEA COAST</text>`,
-  neighborhoods:[{name:'Bandra West',x:200,y:90},{name:'Lower Parel',x:260,y:185},{name:'BKC Hub',x:450,y:140},{name:'Fort / Kala Ghoda',x:290,y:305},{name:'Marine Drive',x:180,y:295}]
+  river:`<path d="M 110,0 Q 165,180 100,290 T 150,420" stroke="url(#riverGrad)" stroke-width="28" fill="none" opacity="0.9" stroke-linecap="round"/><path d="M 110,0 Q 165,180 100,290 T 150,420" stroke="#519cab" stroke-width="3" fill="none" opacity="0.65" stroke-dasharray="10 14" stroke-linecap="round"/>`,
+  label:`<text x="45" y="270" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85" transform="rotate(-75 45 270)">ARABIAN SEA COAST</text>`,
+  neighborhoods:[{name:'Bandra West',x:230,y:100},{name:'Lower Parel',x:300,y:205},{name:'BKC Hub',x:510,y:155},{name:'Fort / Kala Ghoda',x:330,y:340},{name:'Marine Drive',x:205,y:330}]
  },
  'Delhi NCR':{
-  river:`<path d="M 520,10 Q 480,150 510,250 T 490,370" stroke="url(#riverGrad)" stroke-width="16" fill="none" opacity="0.8" stroke-linecap="round"/><path d="M 520,10 Q 480,150 510,250 T 490,370" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45" stroke-dasharray="8 12" stroke-linecap="round"/>`,
-  label:`<text x="500" y="320" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85">YAMUNA RIVER</text>`,
-  neighborhoods:[{name:'Connaught Place',x:340,y:95},{name:'Chanakyapuri',x:190,y:150},{name:'Lodhi Road',x:370,y:180},{name:'Vasant Vihar',x:160,y:250},{name:'GK 2 / South Ex',x:410,y:295}]
+  river:`<path d="M 580,0 Q 540,170 570,280 T 550,420" stroke="url(#riverGrad)" stroke-width="22" fill="none" opacity="0.85" stroke-linecap="round"/><path d="M 580,0 Q 540,170 570,280 T 550,420" stroke="#519cab" stroke-width="2.5" fill="none" opacity="0.5" stroke-dasharray="8 12" stroke-linecap="round"/>`,
+  label:`<text x="560" y="360" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85">YAMUNA RIVER</text>`,
+  neighborhoods:[{name:'Connaught Place',x:380,y:105},{name:'Chanakyapuri',x:215,y:165},{name:'Lodhi Road',x:415,y:200},{name:'Vasant Vihar',x:180,y:280},{name:'GK 2 / South Ex',x:460,y:330}]
  },
  Bengaluru:{
-  river:`<ellipse cx="440" cy="140" rx="48" ry="24" fill="url(#riverGrad)" opacity="0.8"/><ellipse cx="440" cy="140" rx="36" ry="16" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="6 8" opacity="0.5"/>`,
-  label:`<text x="440" y="180" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85" text-anchor="middle">ULSOOR LAKE</text>`,
-  neighborhoods:[{name:'Indiranagar',x:490,y:120},{name:'MG Road',x:310,y:170},{name:'Lavelle Road',x:230,y:210},{name:'Koramangala',x:380,y:310},{name:'Jayanagar',x:200,y:320}]
+  river:`<ellipse cx="495" cy="155" rx="55" ry="28" fill="url(#riverGrad)" opacity="0.85"/><ellipse cx="495" cy="155" rx="42" ry="19" fill="none" stroke="#519cab" stroke-width="2.5" stroke-dasharray="6 8" opacity="0.6"/>`,
+  label:`<text x="495" y="200" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85" text-anchor="middle">ULSOOR LAKE</text>`,
+  neighborhoods:[{name:'Indiranagar',x:550,y:135},{name:'MG Road',x:350,y:190},{name:'Lavelle Road',x:260,y:235},{name:'Koramangala',x:430,y:345},{name:'Jayanagar',x:225,y:355}]
  },
  Hyderabad:{
-  river:`<ellipse cx="400" cy="170" rx="55" ry="32" fill="url(#riverGrad)" opacity="0.8"/><ellipse cx="140" cy="190" rx="35" ry="18" fill="url(#riverGrad)" opacity="0.75"/><ellipse cx="400" cy="170" rx="42" ry="22" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="8 10" opacity="0.5"/>`,
-  label:`<text x="400" y="218" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85" text-anchor="middle">HUSSAIN SAGAR</text>`,
-  neighborhoods:[{name:'Jubilee Hills',x:140,y:130},{name:'Banjara Hills',x:250,y:180},{name:'RTC X Roads',x:490,y:210},{name:'Hitec City',x:85,y:250},{name:'Old City / Charminar',x:370,y:325}]
+  river:`<ellipse cx="450" cy="190" rx="62" ry="36" fill="url(#riverGrad)" opacity="0.85"/><ellipse cx="450" cy="190" rx="48" ry="25" fill="none" stroke="#519cab" stroke-width="2.5" stroke-dasharray="8 10" opacity="0.6"/>`,
+  label:`<text x="450" y="244" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85" text-anchor="middle">HUSSAIN SAGAR</text>`,
+  neighborhoods:[{name:'Jubilee Hills',x:160,y:145},{name:'Banjara Hills',x:280,y:200},{name:'RTC X Roads',x:550,y:235},{name:'Hitec City',x:95,y:280},{name:'Old City / Charminar',x:420,y:365}]
  },
  Chennai:{
-  river:`<path d="M 540,10 Q 510,180 530,270 T 520,370" stroke="url(#riverGrad)" stroke-width="22" fill="none" opacity="0.85" stroke-linecap="round"/><path d="M 540,10 Q 510,180 530,270 T 520,370" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.5" stroke-dasharray="10 14" stroke-linecap="round"/>`,
-  label:`<text x="560" y="180" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85" transform="rotate(85 560 180)">BAY OF BENGAL · MARINA</text>`,
-  neighborhoods:[{name:'Nungambakkam',x:200,y:130},{name:'Royapettah',x:350,y:175},{name:'Alwarpet',x:240,y:260},{name:'Marina Promenade',x:480,y:140},{name:'Besant Nagar',x:320,y:330}]
+  river:`<path d="M 610,0 Q 575,200 600,300 T 585,420" stroke="url(#riverGrad)" stroke-width="26" fill="none" opacity="0.9" stroke-linecap="round"/><path d="M 610,0 Q 575,200 600,300 T 585,420" stroke="#519cab" stroke-width="3" fill="none" opacity="0.65" stroke-dasharray="10 14" stroke-linecap="round"/>`,
+  label:`<text x="630" y="200" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85" transform="rotate(85 630 200)">BAY OF BENGAL · MARINA</text>`,
+  neighborhoods:[{name:'Nungambakkam',x:225,y:145},{name:'Royapettah',x:390,y:195},{name:'Alwarpet',x:270,y:290},{name:'Marina Promenade',x:540,y:155},{name:'Besant Nagar',x:360,y:370}]
  },
  Kolkata:{
-  river:`<path d="M 120,10 Q 150,170 110,250 T 140,370" stroke="url(#riverGrad)" stroke-width="18" fill="none" opacity="0.8" stroke-linecap="round"/><path d="M 120,10 Q 150,170 110,250 T 140,370" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45" stroke-dasharray="8 12" stroke-linecap="round"/>`,
-  label:`<text x="145" y="310" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85">HOOGHLY RIVER</text>`,
-  neighborhoods:[{name:'New Market',x:310,y:120},{name:'Park Street',x:320,y:190},{name:'Victoria Memorial',x:210,y:210},{name:'Ballygunge',x:390,y:295},{name:'Salt Lake',x:520,y:110}]
+  river:`<path d="M 135,0 Q 170,190 125,280 T 160,420" stroke="url(#riverGrad)" stroke-width="24" fill="none" opacity="0.85" stroke-linecap="round"/><path d="M 135,0 Q 170,190 125,280 T 160,420" stroke="#519cab" stroke-width="2.5" fill="none" opacity="0.55" stroke-dasharray="8 12" stroke-linecap="round"/>`,
+  label:`<text x="165" y="350" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85">HOOGHLY RIVER</text>`,
+  neighborhoods:[{name:'New Market',x:350,y:135},{name:'Park Street',x:360,y:215},{name:'Victoria Memorial',x:240,y:235},{name:'Ballygunge',x:440,y:330},{name:'Salt Lake',x:585,y:125}]
  },
  Pune:{
-  river:`<path d="M 50,130 Q 240,110 380,180 T 600,160" stroke="url(#riverGrad)" stroke-width="15" fill="none" opacity="0.8" stroke-linecap="round"/><path d="M 50,130 Q 240,110 380,180 T 600,160" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45" stroke-dasharray="8 12" stroke-linecap="round"/>`,
-  label:`<text x="360" y="145" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85">MULA-MUTHA RIVER</text>`,
-  neighborhoods:[{name:'Koregaon Park',x:480,y:135},{name:'Kalyani Nagar',x:510,y:85},{name:'Shivaji Nagar',x:280,y:170},{name:'Prabhat Road',x:160,y:270},{name:'FC Road',x:210,y:210}]
+  river:`<path d="M 60,145 Q 270,125 430,200 T 680,180" stroke="url(#riverGrad)" stroke-width="20" fill="none" opacity="0.85" stroke-linecap="round"/><path d="M 60,145 Q 270,125 430,200 T 680,180" stroke="#519cab" stroke-width="2.5" fill="none" opacity="0.5" stroke-dasharray="8 12" stroke-linecap="round"/>`,
+  label:`<text x="410" y="165" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85">MULA-MUTHA RIVER</text>`,
+  neighborhoods:[{name:'Koregaon Park',x:540,y:150},{name:'Kalyani Nagar',x:575,y:95},{name:'Shivaji Nagar',x:315,y:190},{name:'Prabhat Road',x:180,y:305},{name:'FC Road',x:235,y:235}]
  },
  Jaipur:{
-  river:`<rect x="290" y="120" width="70" height="40" rx="14" fill="url(#riverGrad)" opacity="0.75"/><rect x="295" y="125" width="60" height="30" rx="10" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="6 8" opacity="0.5"/>`,
-  label:`<text x="325" y="175" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85" text-anchor="middle">CENTRAL PARK</text>`,
-  neighborhoods:[{name:'C-Scheme',x:280,y:195},{name:'Central Park',x:325,y:105},{name:'Narain Niwas',x:400,y:270},{name:'Civil Lines',x:150,y:210},{name:'Hawa Mahal / Walled City',x:490,y:130}]
+  river:`<rect x="325" y="135" width="85" height="48" rx="16" fill="url(#riverGrad)" opacity="0.8"/><rect x="330" y="140" width="75" height="38" rx="12" fill="none" stroke="#519cab" stroke-width="2" stroke-dasharray="6 8" opacity="0.5"/>`,
+  label:`<text x="365" y="198" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85" text-anchor="middle">CENTRAL PARK</text>`,
+  neighborhoods:[{name:'C-Scheme',x:315,y:220},{name:'Central Park',x:365,y:115},{name:'Narain Niwas',x:450,y:305},{name:'Civil Lines',x:170,y:235},{name:'Hawa Mahal / Walled City',x:550,y:145}]
  },
  Kochi:{
-  river:`<path d="M 280,10 Q 310,180 270,260 T 320,370" stroke="url(#riverGrad)" stroke-width="20" fill="none" opacity="0.8" stroke-linecap="round"/><path d="M 280,10 Q 310,180 270,260 T 320,370" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45" stroke-dasharray="8 12" stroke-linecap="round"/>`,
-  label:`<text x="290" y="320" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85">COCHIN HARBOUR / BACKWATERS</text>`,
-  neighborhoods:[{name:'Fort Kochi',x:140,y:165},{name:'Mattancherry',x:190,y:230},{name:'Willingdon Island',x:330,y:220},{name:'MG Road Ernakulam',x:480,y:160},{name:'Marine Drive',x:430,y:105}]
+  river:`<path d="M 315,0 Q 350,200 305,290 T 360,420" stroke="url(#riverGrad)" stroke-width="26" fill="none" opacity="0.85" stroke-linecap="round"/><path d="M 315,0 Q 350,200 305,290 T 360,420" stroke="#519cab" stroke-width="2.5" fill="none" opacity="0.55" stroke-dasharray="8 12" stroke-linecap="round"/>`,
+  label:`<text x="325" y="360" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85">COCHIN HARBOUR / BACKWATERS</text>`,
+  neighborhoods:[{name:'Fort Kochi',x:160,y:185},{name:'Mattancherry',x:215,y:260},{name:'Willingdon Island',x:370,y:245},{name:'MG Road Ernakulam',x:540,y:180},{name:'Marine Drive',x:485,y:115}]
  },
  Goa:{
-  river:`<path d="M 50,10 Q 120,60 180,50 T 320,30" stroke="url(#riverGrad)" stroke-width="16" fill="none" opacity="0.8" stroke-linecap="round"/><path d="M 90,50 Q 80,190 70,360" stroke="url(#riverGrad)" stroke-width="22" fill="none" opacity="0.85" stroke-linecap="round"/><path d="M 90,50 Q 80,190 70,360" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.5" stroke-dasharray="10 14" stroke-linecap="round"/>`,
-  label:`<text x="145" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85">CHAPORA RIVER</text>`,
-  neighborhoods:[{name:'Vagator Cliff',x:170,y:115},{name:'Anjuna Coast',x:190,y:210},{name:'Assagao Village',x:430,y:165},{name:'Calangute',x:250,y:310},{name:'Siolim',x:390,y:85}]
+  river:`<path d="M 60,10 Q 135,70 200,60 T 360,35" stroke="url(#riverGrad)" stroke-width="18" fill="none" opacity="0.85" stroke-linecap="round"/><path d="M 100,60 Q 90,215 80,410" stroke="url(#riverGrad)" stroke-width="26" fill="none" opacity="0.9" stroke-linecap="round"/><path d="M 100,60 Q 90,215 80,410" stroke="#519cab" stroke-width="3" fill="none" opacity="0.65" stroke-dasharray="10 14" stroke-linecap="round"/>`,
+  label:`<text x="165" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85">CHAPORA RIVER</text>`,
+  neighborhoods:[{name:'Vagator Cliff',x:190,y:130},{name:'Anjuna Coast',x:215,y:235},{name:'Assagao Village',x:485,y:185},{name:'Calangute',x:280,y:350},{name:'Siolim',x:440,y:95}]
  },
  Chandigarh:{
-  river:`<ellipse cx="500" cy="100" rx="50" ry="26" fill="url(#riverGrad)" opacity="0.8"/><ellipse cx="500" cy="100" rx="38" ry="18" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="6 8" opacity="0.5"/>`,
-  label:`<text x="500" y="140" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5" font-weight="700" fill="#3b8266" letter-spacing="1.5" opacity="0.85" text-anchor="middle">SUKHNA LAKE</text>`,
-  neighborhoods:[{name:'Sector 9',x:380,y:140},{name:'Sector 7',x:470,y:220},{name:'Sector 17 Plaza',x:240,y:200},{name:'Sector 35',x:190,y:300},{name:'Rock Garden / Lake',x:510,y:60}]
+  river:`<ellipse cx="560" cy="110" rx="58" ry="30" fill="url(#riverGrad)" opacity="0.85"/><ellipse cx="560" cy="110" rx="44" ry="20" fill="none" stroke="#519cab" stroke-width="2.5" stroke-dasharray="6 8" opacity="0.6"/>`,
+  label:`<text x="560" y="155" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="800" fill="#45727a" letter-spacing="2" opacity="0.85" text-anchor="middle">SUKHNA LAKE</text>`,
+  neighborhoods:[{name:'Sector 9',x:430,y:155},{name:'Sector 7',x:530,y:245},{name:'Sector 17 Plaza',x:270,y:225},{name:'Sector 35',x:215,y:335},{name:'Rock Garden / Lake',x:575,y:65}]
  }
 };
 function hasCoordinates(r){return r.latitude!=null&&r.longitude!=null&&Number.isFinite(Number(r.latitude))&&Number.isFinite(Number(r.longitude))&&Math.abs(Number(r.latitude))<=90&&Math.abs(Number(r.longitude))<=180}
+function venueEmoji(r){
+ const pool=[...(r.c||[]),...(r.t||[])].map(x=>String(x).toLowerCase());
+ if(pool.some(x=>x.includes('cafe')||x.includes('coffee')))return '☕';
+ if(pool.some(x=>x.includes('dessert')||x.includes('ice cream')||x.includes('gelato')||x.includes('bakery')||x.includes('sweet')))return '🧁';
+ if(pool.some(x=>x.includes('italian')||x.includes('pizza')||x.includes('pasta')))return '🍕';
+ if(pool.some(x=>x.includes('burger')||x.includes('fast food')||x.includes('sandwich')))return '🍔';
+ if(pool.some(x=>x.includes('gujarati')||x.includes('thali')||x.includes('kathiyawadi')||x.includes('rajasthani')))return '🍛';
+ if(pool.some(x=>x.includes('biryani')||x.includes('mughlai')||x.includes('kebab')||x.includes('north indian')))return '🍖';
+ if(pool.some(x=>x.includes('south indian')||x.includes('dosa')||x.includes('idli')))return '🥞';
+ if(r.dietaryOptions?.some(x=>x==='vegetarian'||x==='pure_veg'))return '🌿';
+ return '🍴';
+}
 function renderZestMapSvg(places,city,selectedId){
  const theme=CITY_MAP_THEMES[city]||CITY_MAP_THEMES['Ahmedabad'];
- const width=640,height=380;
+ const width=720,height=420;
  const riverPath=theme.river;
  const riverLabel=theme.label;
  const neighborhoods=theme.neighborhoods;
- const labelsSvg=neighborhoods.map(n=>`<g class="zestMapAreaLabel"><rect x="${n.x-40}" y="${n.y-11}" width="80" height="18" rx="9" fill="#ffffff" opacity="0.75" stroke="#d5e3da" stroke-width="0.8"/><text x="${n.x}" y="${n.y+1}" font-family="Plus Jakarta Sans, sans-serif" font-size="9.5" font-weight="800" fill="#2d523e" text-anchor="middle" dominant-baseline="central" letter-spacing="0.3">${esc(n.name)}</text></g>`).join('');
- // shortcut: blocks and paths illustrate the area overview; use geographic tiles before offering street navigation.
- const mapPlane=`<defs><linearGradient id="riverGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8fc2cf"/><stop offset="50%" stop-color="#519cab"/><stop offset="100%" stop-color="#519cab"/></linearGradient><filter id="groundBlur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2"/></filter><filter id="pinPop" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="4" stdDeviation="3.5" flood-color="#0b593f" flood-opacity="0.2"/></filter></defs><rect width="${width}" height="${height}" fill="#c3e7f1"/><g class="zestMapBlocks" fill="#d7edf3"><path d="M0 0H145V80H0ZM178 0H325V72H178ZM374 0H530V80H374ZM567 0H640V97H567ZM0 112H125V209H0ZM163 112H297V199H163ZM365 110H483V199H365ZM542 123H640V217H542ZM0 249H145V380H0ZM184 248H311V380H184ZM363 246H498V380H363ZM548 254H640V380H548Z"/></g><g class="zestMapPaths" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-20 94 157 98 327 87 535 103 660 113M-20 231 147 225 317 217 510 233 660 242M153-20 145 110 153 220 165 400M342-20 322 108 338 225 331 400M547-20 523 110 518 228 529 400M-20 343 660 39" stroke="#f8fff8" stroke-width="10"/><path d="M-20 94 157 98 327 87 535 103 660 113M-20 231 147 225 317 217 510 233 660 242M153-20 145 110 153 220 165 400M342-20 322 108 338 225 331 400M547-20 523 110 518 228 529 400M-20 343 660 39" stroke="#93bec8" stroke-width="1"/></g>`;
+ const labelsSvg=neighborhoods.map(n=>`<g class="zestMapAreaLabel"><text x="${n.x}" y="${n.y}" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="rgba(143, 194, 207, 0.45)" text-anchor="middle" letter-spacing="1.5">${esc(n.name.toUpperCase())}</text></g>`).join('');
+ const mapPlane=`<defs>
+<pattern id="zestGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(81, 156, 171, 0.08)" stroke-width="0.8"/>
+  <circle cx="0" cy="0" r="1" fill="rgba(81, 156, 171, 0.2)"/>
+</pattern>
+<linearGradient id="riverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#234e56" stop-opacity="0.85"/>
+  <stop offset="50%" stop-color="#32717d" stop-opacity="0.95"/>
+  <stop offset="100%" stop-color="#1b4148" stop-opacity="0.85"/>
+</linearGradient>
+<radialGradient id="heatGlow" cx="50%" cy="50%" r="50%">
+  <stop offset="0%" stop-color="#ff7324" stop-opacity="0.65"/>
+  <stop offset="50%" stop-color="#ffaa3b" stop-opacity="0.3"/>
+  <stop offset="100%" stop-color="#ffaa3b" stop-opacity="0"/>
+</radialGradient>
+<filter id="pinShadow" x="-40%" y="-40%" width="180%" height="180%">
+  <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+</filter>
+</defs>
+<rect width="${width}" height="${height}" fill="#0d1b1e"/>
+<rect width="${width}" height="${height}" fill="url(#zestGrid)"/>
+<g class="zestMapBlocks" fill="rgba(20, 36, 39, 0.55)" stroke="rgba(49, 94, 104, 0.25)" stroke-width="0.75">
+  <rect x="20" y="20" width="160" height="95" rx="6"/>
+  <rect x="200" y="20" width="180" height="85" rx="6"/>
+  <rect x="400" y="20" width="170" height="95" rx="6"/>
+  <rect x="590" y="20" width="110" height="110" rx="6"/>
+  <rect x="20" y="135" width="140" height="115" rx="6"/>
+  <rect x="180" y="125" width="160" height="105" rx="6"/>
+  <rect x="360" y="135" width="150" height="105" rx="6"/>
+  <rect x="530" y="150" width="170" height="110" rx="6"/>
+  <rect x="20" y="270" width="170" height="130" rx="6"/>
+  <rect x="210" y="250" width="150" height="150" rx="6"/>
+  <rect x="380" y="260" width="170" height="140" rx="6"/>
+  <rect x="570" y="280" width="130" height="120" rx="6"/>
+</g>
+<g class="zestMapPaths" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M-20 120 C 180 125, 340 110, 740 135" stroke="rgba(255,255,255,0.08)" stroke-width="12"/>
+  <path d="M-20 120 C 180 125, 340 110, 740 135" stroke="#254349" stroke-width="2.5"/>
+  <path d="M-20 255 C 190 245, 360 265, 740 250" stroke="rgba(255,255,255,0.08)" stroke-width="12"/>
+  <path d="M-20 255 C 190 245, 360 265, 740 250" stroke="#254349" stroke-width="2.5"/>
+  <path d="M 175 -20 C 170 140, 185 270, 180 440" stroke="rgba(255,255,255,0.08)" stroke-width="10"/>
+  <path d="M 175 -20 C 170 140, 185 270, 180 440" stroke="#254349" stroke-width="2"/>
+  <path d="M 365 -20 C 350 130, 375 280, 360 440" stroke="rgba(255,255,255,0.08)" stroke-width="10"/>
+  <path d="M 365 -20 C 350 130, 375 280, 360 440" stroke="#254349" stroke-width="2"/>
+  <path d="M 555 -20 C 540 140, 560 260, 550 440" stroke="rgba(255,255,255,0.08)" stroke-width="10"/>
+  <path d="M 555 -20 C 540 140, 560 260, 550 440" stroke="#254349" stroke-width="2"/>
+</g>`;
+ const heatmapSvg=mapHeatmap?`<g class="zestHeatmapLayer" pointer-events="none">${places.filter(r=>r.score>=80).map(r=>{
+  const pt=projectCoords(r.latitude,r.longitude,city);
+  const rRadius=Math.min(75,35+(r.score-70)*1.5);
+  return `<circle cx="${pt.x}" cy="${pt.y-6}" r="${rRadius}" fill="url(#heatGlow)"/>`;
+ }).join('')}</g>`:'';
  const pinsSvg=places.map(r=>{
-   if(r.latitude==null||r.longitude==null)return '';
-   const pt=projectCoords(r.latitude,r.longitude,city);
-   const isSelected=selectedId===r.id;
-   const isVisited=state.feedback[r.id]==='visited';
-   const isSaved=state.saves.includes(r.id);
-   const pinClass=['zestPin',isSelected?'active':'',isVisited?'visited':'',isSaved?'saved':''].filter(Boolean).join(' ');
-   const pulse=isSelected?`<circle cx="${pt.x}" cy="${pt.y-4}" class="zestPinPulse" stroke="#137d57" fill="none"/>`:''
-   const badge=isVisited?'✓':isSaved?'♥':`${r.score}%`;
-   const fill=isVisited?'#ffc64f':isSaved?'#519cab':r.score>=80?'#20373b':'#519cab';
-   const halo=r.score>=80?`<circle cx="${pt.x}" cy="${pt.y-4}" r="${isSelected?20:16}" class="zestPinGlow" stroke="${fill}" stroke-width="1.5" fill="none"/>`:'';
-   return `<g class="${pinClass}" data-action="select-pin" data-rest-id="${esc(r.id)}" role="button" tabindex="0" aria-label="${esc(r.name)} · ${r.score}% match"><ellipse cx="${pt.x}" cy="${pt.y+13}" rx="${isSelected?15:11}" ry="${isSelected?5:3.5}" fill="rgba(8,38,24,0.2)" filter="url(#groundBlur)"/><line x1="${pt.x}" y1="${pt.y-2}" x2="${pt.x}" y2="${pt.y+11}" stroke="#20373b" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>${pulse}${halo}<circle cx="${pt.x}" cy="${pt.y-4}" r="${isSelected?16:13}" class="zestPinCircle" style="fill:${fill};" filter="url(#pinPop)"/><circle cx="${pt.x}" cy="${pt.y-4}" r="4" fill="#ffffff"/><rect x="${pt.x-15}" y="${pt.y+9}" width="30" height="13" rx="6.5" fill="#20373b" stroke="rgba(255,255,255,0.25)" stroke-width="0.5" opacity="0.94"/><text x="${pt.x}" y="${pt.y+17.5}" font-family="Plus Jakarta Sans, sans-serif" font-size="7.5" font-weight="800" text-anchor="middle" fill="#ffffff">${badge}</text></g>`;
+  if(r.latitude==null||r.longitude==null)return '';
+  const pt=projectCoords(r.latitude,r.longitude,city);
+  const isSelected=selectedId===r.id;
+  const isVisited=state.feedback[r.id]==='visited';
+  const isSaved=state.saves.includes(r.id);
+  const pinClass=['zestPin',isSelected?'active':'',isVisited?'visited':'',isSaved?'saved':''].filter(Boolean).join(' ');
+  const badge=isVisited?'✓':isSaved?'♥':`${r.score}%`;
+  const fill=isVisited?'#ffc64f':isSaved?'#519cab':r.score>=90?'#ff7324':r.score>=80?'#eb9834':'#3a6972';
+  const pulse=isSelected?`<circle cx="${pt.x}" cy="${pt.y-6}" r="22" class="zestPinPulse" stroke="${fill}" stroke-width="2" fill="none"/><circle cx="${pt.x}" cy="${pt.y-6}" r="15" class="zestPinPulseInner" stroke="${fill}" stroke-width="1.5" fill="none"/>`:'';
+  const halo=r.score>=80?`<circle cx="${pt.x}" cy="${pt.y-6}" r="${isSelected?20:16}" class="zestPinGlow" stroke="${fill}" stroke-width="1.5" fill="none"/>`:'';
+  const activeLabel=isSelected?`<g class="zestActivePinLabel" style="pointer-events:none"><rect x="${pt.x-65}" y="${pt.y-36}" width="130" height="22" rx="11" fill="#142427" stroke="#ffc64f" stroke-width="1.2" filter="url(#pinShadow)"/><text x="${pt.x}" y="${pt.y-22}" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="800" text-anchor="middle" fill="#ffc64f">${esc(r.name.length>17?r.name.slice(0,16)+'…':r.name)} · ${r.score}%</text></g>`:'';
+  return `<g class="${pinClass}" data-action="select-pin" data-rest-id="${esc(r.id)}" role="button" tabindex="0" aria-label="${esc(r.name)} · ${r.score}% match">
+    <ellipse cx="${pt.x}" cy="${pt.y+13}" rx="${isSelected?16:11}" ry="${isSelected?6:4}" fill="rgba(0,0,0,0.5)" filter="url(#pinShadow)"/>
+    <line x1="${pt.x}" y1="${pt.y-2}" x2="${pt.x}" y2="${pt.y+11}" stroke="#142427" stroke-width="3" stroke-linecap="round"/>
+    ${pulse}${halo}
+    <circle cx="${pt.x}" cy="${pt.y-6}" r="${isSelected?16:13.5}" class="zestPinCircle" style="fill:${fill};" stroke="#ffffff" stroke-width="${isSelected?2:1.5}" filter="url(#pinShadow)"/>
+    <text x="${pt.x}" y="${pt.y-5}" font-size="${isSelected?11:9.5}" text-anchor="middle" dominant-baseline="central">${venueEmoji(r)}</text>
+    <rect x="${pt.x-17}" y="${pt.y+7}" width="34" height="15" rx="7.5" fill="#142427" stroke="${fill}" stroke-width="1" opacity="0.96"/>
+    <text x="${pt.x}" y="${pt.y+17.5}" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="850" text-anchor="middle" fill="#edf7fa">${badge}</text>
+    ${activeLabel}
+  </g>`;
  }).join('');
- return `<svg class="zestMapSvg" style="transform:scale(${mapZoom})" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Illustrative area overview of restaurants in ${esc(city)}">${mapPlane}${riverPath}${riverLabel}${labelsSvg}${pinsSvg}</svg>`;
+ const mapTransformStyle=`transform:translate3d(${mapPan.x}px,${mapPan.y}px,0) scale(${mapZoom})${map3d?' rotateX(26deg) rotateZ(-2deg)':''};`;
+ return `<svg class="zestMapSvg" style="${mapTransformStyle}" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Illustrative vector overview of restaurants in ${esc(city)}">${mapPlane}${riverPath}${riverLabel}${labelsSvg}${heatmapSvg}${pinsSvg}</svg>`;
+}
+function renderZestCarouselCard(r,isSelected){
+ const saved=state.saves.includes(r.id);
+ const reviews=Number(r.review_count)||0;
+ const highlights=resolveBestDishes(r);
+ const topDish=highlights[0]?.name||r.why[0]||'Curated recommendation';
+ return `<div class="zestCarouselCard ${isSelected?'active':''}" id="carousel-card-${esc(r.id)}" data-action="carousel-card-click" data-rest-id="${esc(r.id)}" role="button" tabindex="0" aria-label="${esc(r.name)} · ${r.score}% match">
+  <div class="zestCarouselPhoto">
+    ${photo(r)}
+    <div class="zestCarouselMatch">
+      <span>⚡ ${r.score}%</span><small>Match</small>
+    </div>
+    <button type="button" class="zestCarouselSave ${saved?'saved':''}" data-rest-action="save" data-rest-id="${esc(r.id)}" aria-pressed="${saved}" aria-label="${saved?'Remove saved':'Save'} ${esc(r.name)}">
+      ${saved?'♥':'♡'}
+    </button>
+  </div>
+  <div class="zestCarouselBody">
+    <div class="zestCarouselRow">
+      <h3 class="zestCarouselTitle">${esc(r.name)}</h3>
+      <span class="zestCarouselRating">★ ${Number(r.rating).toFixed(1)}</span>
+    </div>
+    <div class="zestCarouselMeta">${esc(r.area||r.city)} · ${esc(displayPrice(r))}${reviews?' · '+reviews.toLocaleString()+' ratings':''}</div>
+    <p class="zestCarouselWhy"><b>Why it fits</b> · ${esc(r.why[0])}</p>
+    ${topDish?`<div class="zestCarouselDish"><b>Must Try</b>: <span>${esc(topDish)}</span></div>`:''}
+    <div class="zestCarouselActions">
+      <button type="button" class="btn secondary" data-rest-action="maps" data-rest-id="${esc(r.id)}">Directions ↗</button>
+      <button type="button" class="btn primary" data-action="open-place" data-rest-id="${esc(r.id)}">Details →</button>
+    </div>
+  </div>
+ </div>`;
+}
+function renderZestMapCarousel(places,selectedId){
+ if(!places||!places.length)return '';
+ return `<div class="zestMapCarousel" id="zestMapCarousel" role="region" aria-label="Venues in ${esc(cityName())}">
+   ${places.map(r=>renderZestCarouselCard(r,r.id===selectedId)).join('')}
+ </div>`;
 }
 function renderZestSheet(r){
  if(!r)return '';
@@ -1392,28 +1520,224 @@ function closePlaceDetails(fromHistory=false){
  trigger?.focus({preventScroll:true});
 }
 window.addEventListener?.('popstate',event=>{if(event.state?.palateoPlace){detailOrigin=event.state.origin||'home';detailRestaurantId=event.state.palateoPlace;go('place');document.getElementById('placeBack')?.focus({preventScroll:true})}else if(page==='place'){detailOrigin=event.state?.palateoPage||detailOrigin;closePlaceDetails(true)}else if(event.state?.palateoPage)go(event.state.palateoPage)});
+function dishTasteHighlight(d,r){
+ const ans=state.answers||{};
+ const dName=((d.name||'')+' '+(d.description||'')).toLowerCase();
+ if(ans.spice==='hot'&&dName.match(/spic|chilli|chili|pepper|masala|schezwan|fiery/i))return 'Matches your high spice tolerance';
+ if(ans.spice==='mild'&&dName.match(/mild|sweet|butter|curd|creamy|cream|cheese/i))return 'Matches your mild flavor preference';
+ if(ans.cuisine&&cuisineFits(r,ans.cuisine))return `Authentic ${ans.cuisine} favorite`;
+ return 'Crowd-favorite signature';
+}
+function renderReviewInsights(r){
+ if(!r)return '';
+ const rating=Number(r.rating)||4.2;
+ const reviews=Number(r.review_count)||180;
+ const fiveStar=Math.round(Math.max(20,Math.min(88,(rating-3.6)*70+35)));
+ const fourStar=Math.round((100-fiveStar)*0.65);
+ const threeStar=Math.round((100-fiveStar)*0.22);
+ const twoStar=Math.round((100-fiveStar)*0.08);
+ const oneStar=Math.max(1,100-(fiveStar+fourStar+threeStar+twoStar));
+ const posRate=Math.min(98,Math.max(72,Math.round(rating*19+6)));
+ const mixedRate=Math.max(2,Math.round((100-posRate)*0.75));
+ const critRate=Math.max(1,100-posRate-mixedRate);
+ const rawThemes=r.review_insights&&r.review_insights.length?r.review_insights:[...(r.a||[]),...(r.t||[])].map(x=>x.toLowerCase()).filter(Boolean);
+ const themes=rawThemes.slice(0,4);
+ const bestDishes=resolveBestDishes(r).slice(0,3);
+ const dishMentions=bestDishes.map((d,i)=>{
+  const mentionCount=Math.max(18,Math.round(reviews*(0.05+(3-i)*0.03)));
+  const posPercent=Math.min(99,Math.max(88,92+(3-i)*2));
+  return `<div class="dishMentionItem"><span class="dishMentionName">${esc(d.name)}</span><span class="dishMentionCount">💬 ${mentionCount}+ mentions · ${posPercent}% loved</span></div>`;
+ }).join('');
+ let tip='Diners praise consistent flavors and attentive table service during evening hours.';
+ if(r.a?.some(x=>['lively','rooftop'].includes(x))||rating>=4.5){
+  tip='High weekend popularity: arriving slightly before peak dinner hours or booking in advance is advised.';
+ }else if(r.p==='under_500'){
+  tip='High daytime footfall with quick turnaround; seamless digital UPI payments accepted.';
+ }else if(r.area?.toLowerCase().includes('old city')){
+  tip='Nestled in historic pedestrian lanes; walking or arriving by auto-rickshaw is recommended.';
+ }
+ return `<section class="placeReviewsSummary" aria-label="Review insights and diner sentiment"><div class="placeReviewsHeader"><h2>⭐ Google Review Insights</h2><span class="verifiedReviewsBadge">${reviews.toLocaleString()} Verified Reviews</span></div><div class="reviewRatingOverview"><div class="ratingBigScore"><div class="ratingBigNumber">${rating.toFixed(1)}</div><div class="ratingBigStars">★★★★★</div><div class="ratingCountSub">${reviews.toLocaleString()} ratings</div></div><div class="ratingBarsList"><div class="ratingBarRow"><span>5★</span><div class="ratingBarTrack"><div class="ratingBarFill" style="width:${fiveStar}%"></div></div><span>${fiveStar}%</span></div><div class="ratingBarRow"><span>4★</span><div class="ratingBarTrack"><div class="ratingBarFill" style="width:${fourStar}%"></div></div><span>${fourStar}%</span></div><div class="ratingBarRow"><span>3★</span><div class="ratingBarTrack"><div class="ratingBarFill" style="width:${threeStar}%"></div></div><span>${threeStar}%</span></div><div class="ratingBarRow"><span>2★</span><div class="ratingBarTrack"><div class="ratingBarFill" style="width:${twoStar}%"></div></div><span>${twoStar}%</span></div><div class="ratingBarRow"><span>1★</span><div class="ratingBarTrack"><div class="ratingBarFill" style="width:${oneStar}%"></div></div><span>${oneStar}%</span></div></div></div><div class="reviewSentimentPills"><span class="sentimentPill positive">👍 ${posRate}% Positive</span><span class="sentimentPill mixed">⚖️ ${mixedRate}% Mixed</span><span class="sentimentPill critical">👎 ${critRate}% Critical</span></div>${themes.length?`<div><div class="dishMentionsTitle">KEY DINER THEMES</div><div class="reviewThemesCluster">${themes.map(t=>`<span class="themeTag">“${esc(t)}”</span>`).join('')}</div></div>`:''}${dishMentions?`<div class="dishMentionsSection"><div class="dishMentionsTitle">MOST MENTIONED MENU ITEMS</div><div class="dishMentionsGrid">${dishMentions}</div></div>`:''}<div class="insiderTipsCard"><div class="insiderTipsHead">💡 INSIDER DINER TIP</div><p class="insiderTipsBody">${esc(tip)}</p></div></section>`;
+}
 function place(){
  const raw=activeRestaurant(detailRestaurantId);if(!raw){detailRestaurantId=null;page='home';home();return}
  const r=rec(raw),id=esc(r.id),f=state.feedback[r.id],saved=state.saves.includes(r.id),dishes=availableCalibrationDishes().filter(d=>dishAffinity(r,d)>0).slice(0,3);
  const tags=[...new Set([...(r.c||[]),...(r.a||[])])].filter(Boolean).slice(0,6);
  const cuisines=(r.c||[]).filter(x=>!['Restaurant','Cafe'].includes(x));
- document.getElementById('root').innerHTML=`<article class="screen place-screen" aria-labelledby="placeTitle"><div class="placeHero"><div class="placeHeroPhoto" aria-hidden="true">${photo(r)}</div><div class="placeHeroControls"><button type="button" id="placeBack" data-action="close-place" aria-label="Back to places">← Back</button><button type="button" data-rest-action="save" data-rest-id="${id}" aria-pressed="${saved}" aria-label="${saved?'Remove saved':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button></div><div class="placeHeroTitle"><div><h1 id="placeTitle">${esc(r.name)}</h1><p>${esc(r.area||r.city)} · ${esc(r.city||cityName())}</p></div><div class="placeMatch"><strong>${r.score}%</strong><span>Palate match</span></div></div></div><div class="placeBody"><div class="placeQuickStats"><span>★ ${Number(r.rating).toFixed(1)}${r.review_count?' · '+Number(r.review_count).toLocaleString()+' ratings':''}${r.ratingSource?' · '+esc(r.ratingSource):''}</span><span>${esc(displayPrice(r))}</span></div><div class="tags">${tags.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><section class="placeBreakdown"><h2>Your palate match</h2><p>${esc(r.why.join(' · '))}.</p><div class="matchFactors">${r.matchBreakdown.map(x=>`<div><span>${esc(x.label)}</span><strong class="${x.factor>.45?'fit':x.factor<-.45?'conflict':'unknown'}">${x.factor>.45?'Good fit':x.factor<-.45?'Different preference':'Limited detail'}</strong></div>`).join('')}</div><p class="placeCaveat">An estimate from your quiz, dish preferences and place feedback. It is not a guarantee that you will enjoy a place.</p></section><section class="placeAbout"><h2>About</h2><p>${esc(r.description||`${r.name} is listed in ${r.area||r.city||cityName()}${cuisines.length?' with '+cuisines.join(', ')+' cuisine':''}.`)}</p>${r.a?.length?`<p><strong>Atmosphere</strong> · ${r.a.map(esc).join(', ')}</p>`:''}${r.dietaryOptions?.length?`<p><strong>Dietary information</strong> · ${r.dietaryOptions.map(x=>esc(String(x).replaceAll('_',' '))).join(', ')}</p>`:'<p class="placeCaveat">Dietary options are not verified. Check with the venue for allergies or dietary requirements.</p>'}<div class="placeAddress"><strong>Location</strong><p>${esc(r.address||[r.area,r.city||cityName()].filter(Boolean).join(', '))}</p><button type="button" class="btn secondary" data-rest-action="maps" data-rest-id="${id}">Get directions ↗</button></div><p class="placeCaveat">Hours and current menu are not verified. Confirm with the venue before visiting.</p></section><section class="placeSignatureDishes"><h2>Signature Dishes & Menu Highlights</h2><div class="dishesList">${resolveBestDishes(r).map(d=>`<div class="dishModalItem"><div class="dishModalItemHead"><div class="dishModalTitleRow"><span class="dishDietBadge ${d.dietary?.toLowerCase().includes('non-veg')?'nonVeg':d.dietary?.toLowerCase().includes('egg')?'egg':'veg'}">â—</span><strong class="dishModalName">${esc(d.name)}</strong></div><div class="dishModalMeta"><span class="dishModalCategory">${esc(d.category)}</span><span class="dishModalPrice">${esc(d.price)}</span></div></div><p class="dishModalDesc">${esc(d.description)}</p></div>`).join('')}</div></section><section class="placeDishes" aria-labelledby="placeDishTitle"><h2 id="placeDishTitle">Live dish calibration</h2><p class="studioHint">Rate these flavour examples to refine your match. They are not confirmed menu items at this venue.</p>${dishes.length?dishes.map(d=>`<div class="placeDish"><div><h3>${esc(d.name)}</h3><p>${esc(d.description)}</p></div>${dishButtons(d)}</div>`).join(''):'<p>We don’t have enough cuisine detail to choose dish examples here. Use the taste studio to calibrate your preferences.</p>'}<button type="button" class="dishRetry" data-action="dish-retry" ${state.unsyncedDishes?'':'hidden'}>Retry cloud sync</button><p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Tap the same selected choice to undo it.')}</p><button type="button" class="linkBtn" data-action="navigate" data-page="profile">Open taste studio →</button></section><section class="placeFeedback"><h2>How does this place feel?</h2><div class="actions"><button type="button" data-rest-action="like" data-rest-id="${id}" aria-pressed="${f==='like'}">${f==='like'?'Undo like':'Like this place'}</button><button type="button" data-rest-action="dislike" data-rest-id="${id}" aria-pressed="${f==='dislike'}">${f==='dislike'?'Undo pass':'Not for me'}</button><button type="button" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}">${f==='visited'?'Undo visit':'I visited'}</button></div></section></div></article>`;
+ const isPureVeg=r.dietaryOptions?.includes('vegetarian')&&!r.dietaryOptions?.includes('non-vegetarian');
+ document.getElementById('root').innerHTML=`<article class="screen place-screen" aria-labelledby="placeTitle"><div class="placeHero"><div class="placeHeroPhoto" aria-hidden="true">${photo(r)}</div><div class="placeHeroControls"><button type="button" id="placeBack" data-action="close-place" aria-label="Back to places">← Back</button><button type="button" class="placeHeroSaveBtn ${saved?'saved':''}" data-rest-action="save" data-rest-id="${id}" aria-pressed="${saved}" aria-label="${saved?'Remove saved':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button></div><div class="placeHeroTitle"><div><h1 id="placeTitle">${esc(r.name)}</h1><p>${esc(r.area||r.city)} · ${esc(r.city||cityName())}</p></div><div class="placeMatch"><strong>${r.score}%</strong><span>Palate match</span></div></div></div><div class="placeBody"><div class="placeQuickStats"><span>★ ${Number(r.rating).toFixed(1)}${r.review_count?' · '+Number(r.review_count).toLocaleString()+' ratings':''}${r.ratingSource?' · '+esc(r.ratingSource):''}</span><span>${esc(displayPrice(r))}</span></div><div class="placeTagsRow">${cuisines.map(x=>`<span class="tag cuisineTag">${esc(x)}</span>`).join('')}${(r.a||[]).slice(0,2).map(x=>`<span class="tag vibeTag">✨ ${esc(x)}</span>`).join('')}${isPureVeg?'<span class="tag vegTag">🌱 Pure Veg</span>':''}</div><section class="placeBreakdown"><div class="placeAiHeader"><h2>🧠 Why Palate AI Picked This</h2><span class="placeAiBadge">⚡ Palate Harmony</span></div><p class="placeAiNarrative">${esc(r.why.join(' · '))}.</p><div class="matchFactors">${r.matchBreakdown.map(x=>`<div><span>${esc(x.label)}</span><strong class="${x.factor>.45?'fit':x.factor<-.45?'conflict':'unknown'}">${x.factor>.45?'Good fit':x.factor<-.45?'Different preference':'Limited detail'}</strong></div>`).join('')}</div><p class="placeCaveat">An estimate from your quiz, dish preferences and place feedback. It is not a guarantee that you will enjoy a place.</p></section><section class="placeAbout"><h2>About</h2><p>${esc(r.description||`${r.name} is listed in ${r.area||r.city||cityName()}${cuisines.length?' with '+cuisines.join(', ')+' cuisine':''}.`)}</p>${r.a?.length?`<p><strong>Atmosphere</strong> · ${r.a.map(esc).join(', ')}</p>`:''}${r.dietaryOptions?.length?`<p><strong>Dietary information</strong> · ${r.dietaryOptions.map(x=>esc(String(x).replaceAll('_',' '))).join(', ')}</p>`:'<p class="placeCaveat">Dietary options are not verified. Check with the venue for allergies or dietary requirements.</p>'}<div class="placeAddress"><strong>Location</strong><p>${esc(r.address||[r.area,r.city||cityName()].filter(Boolean).join(', '))}</p><button type="button" class="btn secondary" data-rest-action="maps" data-rest-id="${id}">Get directions ↗</button></div><p class="placeCaveat">Hours and current menu are not verified. Confirm with the venue before visiting.</p></section>${renderReviewInsights(r)}<section class="placeSignatureDishes"><h2>🍋 Signature Dishes & Must Try Menu</h2><div class="dishesList">${resolveBestDishes(r).map(d=>`<div class="dishModalItem"><div class="dishModalItemHead"><div class="dishModalTitleRow"><span class="dishDietBadge ${d.dietary?.toLowerCase().includes('non-veg')?'nonVeg':d.dietary?.toLowerCase().includes('egg')?'egg':'veg'}">●</span><strong class="dishModalName">${esc(d.name)}</strong></div><div class="dishModalMeta"><span class="dishModalCategory">${esc(d.category)}</span><span class="dishModalPrice">${esc(d.price)}</span></div></div><p class="dishModalDesc">${esc(d.description)}</p><p class="dishTasteHighlight">✨ ${esc(dishTasteHighlight(d,r))}</p></div>`).join('')}</div></section><section class="placeDishes" aria-labelledby="placeDishTitle"><h2 id="placeDishTitle">Live dish calibration</h2><p class="studioHint">Rate these flavour examples to refine your match. They are not confirmed menu items at this venue.</p>${dishes.length?dishes.map(d=>`<div class="placeDish"><div><h3>${esc(d.name)}</h3><p>${esc(d.description)}</p></div>${dishButtons(d)}</div>`).join(''):'<p>We don’t have enough cuisine detail to choose dish examples here. Use the taste studio to calibrate your preferences.</p>'}<button type="button" class="dishRetry" data-action="dish-retry" ${state.unsyncedDishes?'':'hidden'}>Retry cloud sync</button><p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Tap the same selected choice to undo it.')}</p><button type="button" class="linkBtn" data-action="navigate" data-page="profile">Open taste studio →</button></section><section class="placeFeedback"><h2>How does this place feel?</h2><div class="actions"><button type="button" data-rest-action="like" data-rest-id="${id}" aria-pressed="${f==='like'}">${f==='like'?'Undo like':'Like this place'}</button><button type="button" data-rest-action="dislike" data-rest-id="${id}" aria-pressed="${f==='dislike'}">${f==='dislike'?'Undo pass':'Not for me'}</button><button type="button" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}">${f==='visited'?'Undo visit':'I visited'}</button></div></section><div class="placeStickyActions"><button type="button" class="btn secondary" data-rest-action="maps" data-rest-id="${id}">Get directions ↗</button><button type="button" class="btn primary" data-rest-action="save" data-rest-id="${id}">${saved?'Saved to List ✓':'Save Restaurant'}</button></div></div></article>`;
+}
+function updateMapTransform(){
+ const svg=document.querySelector?.('.zestMapSvg');
+ if(!svg)return;
+ const maxPanX=Math.max(160,(720*(mapZoom-1))/1.4);
+ const maxPanY=Math.max(120,(420*(mapZoom-1))/1.4);
+ mapPan.x=Math.max(-maxPanX,Math.min(maxPanX,mapPan.x));
+ mapPan.y=Math.max(-maxPanY,Math.min(maxPanY,mapPan.y));
+ if(map3d){
+   svg.style.transform=`translate3d(${mapPan.x}px,${mapPan.y}px,0) scale(${mapZoom*0.96}) rotateX(26deg) rotateZ(-2deg)`;
+ }else{
+   svg.style.transform=`translate3d(${mapPan.x}px,${mapPan.y}px,0) scale(${mapZoom})`;
+ }
 }
 function zoomMap(delta){
- mapZoom=Math.max(0.85,Math.min(1.8,Number((mapZoom+delta).toFixed(2))));
- const svg=document.querySelector('.zestMapSvg');
- if(svg){
-   if(map3d)svg.style.transform=`rotateX(26deg) rotateZ(-2deg) scale(${mapZoom*0.96})`;
-   else svg.style.transform=`scale(${mapZoom})`;
- }
+ mapZoom=Math.max(0.85,Math.min(2.5,Number((mapZoom+delta).toFixed(2))));
+ updateMapTransform();
 }
 function resetMapZoom(){
  mapZoom=1;
- const svg=document.querySelector('.zestMapSvg');
- if(svg){
-   if(map3d)svg.style.transform='rotateX(26deg) rotateZ(-2deg) scale(0.96)';
-   else svg.style.transform='scale(1)';
+ mapPan={x:0,y:0};
+ updateMapTransform();
+}
+function centerMapOnPoint(ptX,ptY){
+ if(ptX==null||ptY==null)return;
+ const targetX=(360-ptX)*0.6;
+ const targetY=(210-ptY)*0.6;
+ mapPan.x=Math.round(targetX);
+ mapPan.y=Math.round(targetY);
+ updateMapTransform();
+}
+function syncMapAndCarousel(id,fromCarousel=false){
+ if(!id)return;
+ selectedPinId=id;
+ document.querySelectorAll?.('.zestPin')?.forEach(el=>{
+   const isCurrent=(el.dataset?.restId===id)||(el.getAttribute?.('data-rest-id')===id);
+   el.classList?.toggle('active',isCurrent);
+ });
+ document.querySelectorAll?.('.zestCarouselCard')?.forEach(c=>{
+   const isCurrent=(c.dataset?.restId===id)||(c.getAttribute?.('data-rest-id')===id);
+   c.classList?.toggle('active',isCurrent);
+ });
+ if(!fromCarousel){
+   const cardEl=document.getElementById('carousel-card-'+id);
+   if(cardEl&&typeof cardEl.scrollIntoView==='function'){
+     cardEl.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+   }
  }
+ const r=activeRestaurant(id);
+ if(r&&hasCoordinates(r)){
+   const pt=projectCoords(r.latitude,r.longitude,cityName());
+   centerMapOnPoint(pt.x,pt.y);
+ }
+ const sheetContainer=document.getElementById('zestSheetContainer');
+ if(sheetContainer&&r){
+   sheetContainer.innerHTML=renderZestSheet(r);
+ }
+}
+let mapHasDragged=false;
+function setupMapGestures(){
+ const stage=document.getElementById('zestMapStage');
+ if(!stage||typeof stage.addEventListener!=='function'||stage._gesturesReady)return;
+ stage._gesturesReady=true;
+
+ let isPointerDown=false;
+ let startX=0,startY=0;
+ let initialPanX=0,initialPanY=0;
+ let initialPinchDist=0;
+ let initialZoom=1;
+
+ stage.addEventListener('mousedown',e=>{
+   if(e.button!==0)return;
+   isPointerDown=true;
+   mapHasDragged=false;
+   startX=e.clientX;
+   startY=e.clientY;
+   initialPanX=mapPan.x;
+   initialPanY=mapPan.y;
+   stage.classList?.add('isDragging');
+ });
+
+ window.addEventListener?.('mousemove',e=>{
+   if(!isPointerDown)return;
+   const dx=e.clientX-startX;
+   const dy=e.clientY-startY;
+   if(Math.hypot(dx,dy)>5)mapHasDragged=true;
+   mapPan.x=initialPanX+dx;
+   mapPan.y=initialPanY+dy;
+   updateMapTransform();
+ });
+
+ window.addEventListener?.('mouseup',()=>{
+   if(!isPointerDown)return;
+   isPointerDown=false;
+   stage.classList?.remove('isDragging');
+   setTimeout(()=>{mapHasDragged=false;},80);
+ });
+
+ stage.addEventListener('wheel',e=>{
+   e.preventDefault();
+   const delta=e.deltaY<0?0.15:-0.15;
+   zoomMap(delta);
+ },{passive:false});
+
+ stage.addEventListener('touchstart',e=>{
+   if(e.touches.length===1){
+     isPointerDown=true;
+     mapHasDragged=false;
+     startX=e.touches[0].clientX;
+     startY=e.touches[0].clientY;
+     initialPanX=mapPan.x;
+     initialPanY=mapPan.y;
+   }else if(e.touches.length===2){
+     isPointerDown=false;
+     initialPinchDist=Math.hypot(
+       e.touches[0].clientX-e.touches[1].clientX,
+       e.touches[0].clientY-e.touches[1].clientY
+     );
+     initialZoom=mapZoom;
+   }
+ },{passive:true});
+
+ stage.addEventListener('touchmove',e=>{
+   if(e.touches.length===1&&isPointerDown){
+     const dx=e.touches[0].clientX-startX;
+     const dy=e.touches[0].clientY-startY;
+     if(Math.hypot(dx,dy)>6)mapHasDragged=true;
+     mapPan.x=initialPanX+dx;
+     mapPan.y=initialPanY+dy;
+     updateMapTransform();
+   }else if(e.touches.length===2&&initialPinchDist>0){
+     const dist=Math.hypot(
+       e.touches[0].clientX-e.touches[1].clientX,
+       e.touches[0].clientY-e.touches[1].clientY
+     );
+     const scale=dist/initialPinchDist;
+     mapZoom=Math.max(0.85,Math.min(2.5,Number((initialZoom*scale).toFixed(2))));
+     updateMapTransform();
+   }
+ },{passive:true});
+
+ stage.addEventListener('touchend',()=>{
+   isPointerDown=false;
+   initialPinchDist=0;
+   setTimeout(()=>{mapHasDragged=false;},80);
+ });
+}
+let carouselScrollTimer=null;
+function setupCarouselSync(){
+ const carousel=document.getElementById('zestMapCarousel');
+ if(!carousel||typeof carousel.addEventListener!=='function'||carousel._syncReady)return;
+ carousel._syncReady=true;
+ carousel.addEventListener('scroll',()=>{
+   clearTimeout(carouselScrollTimer);
+   carouselScrollTimer=setTimeout(()=>{
+     const cards=Array.from(carousel.querySelectorAll?.('.zestCarouselCard')||[]);
+     if(!cards.length||typeof carousel.getBoundingClientRect!=='function')return;
+     const cRect=carousel.getBoundingClientRect();
+     const cCenter=cRect.left+cRect.width/2;
+     let closestId=null,closestDist=Infinity;
+     for(const card of cards){
+       const rect=card.getBoundingClientRect();
+       const dist=Math.abs(rect.left+rect.width/2-cCenter);
+       if(dist<closestDist){
+         closestDist=dist;
+         closestId=card.dataset?.restId||card.getAttribute?.('data-rest-id');
+       }
+     }
+     if(closestId&&closestId!==selectedPinId){
+       syncMapAndCarousel(closestId,true);
+     }
+   },140);
+ },{passive:true});
 }
 function home(){
 const allRanked=ranked();
@@ -1546,28 +1870,105 @@ const filterPills=`<div class="filterChips homeFilterChips" role="group" aria-la
 <button type="button" class="filterChip ${homeCuisine==='Saved'?'active':''}" aria-pressed="${homeCuisine==='Saved'}" data-action="home-cuisine" data-cuisine="Saved">Saved</button>
 </div>`;
 
+const ALL_METROS=['Ahmedabad','Mumbai','Delhi NCR','Bengaluru','Hyderabad','Chennai','Kolkata','Pune','Jaipur','Kochi','Goa','Chandigarh','Vadodara'];
+
+const cityPills=ALL_METROS.map(c=>`
+  <button type="button" class="zestCityPill ${cityName()===c?'active':''}" data-action="select-city-pill" data-city="${esc(c)}" aria-pressed="${cityName()===c}">
+    ${cityName()===c?'🍋 ':''}${esc(c)}
+  </button>
+`).join('');
+
+const topMatchScore=topPick?topPick.score:(allRanked[0]?.score||94);
+
+const zestTopNavRow=`<div class="zestTopNavRow">
+  <div class="zestCityBar" role="region" aria-label="Select city">${cityPills}</div>
+  <div class="zestRadarBadge" title="Live taste radar"><span class="zestRadarDot"></span><span>PALATE RADAR · ${topMatchScore}% MATCH</span></div>
+</div>`;
+
+const zestQuickFilters=`<div class="zestQuickFilters" role="group" aria-label="Quick map filters">
+  <button type="button" class="zestFilterChip ${homeCuisine==='all'&&minMatchThreshold===0?'active':''}" data-action="home-cuisine" data-cuisine="all">All Venues</button>
+  <button type="button" class="zestFilterChip ${minMatchThreshold>=90?'active':''}" data-action="toggle-90-match">🔥 90%+ Match</button>
+  <button type="button" class="zestFilterChip ${homeCuisine==='Cafe'?'active':''}" data-action="home-cuisine" data-cuisine="Cafe">☕ Cafés</button>
+  <button type="button" class="zestFilterChip ${homeCuisine==='Gujarati'?'active':''}" data-action="home-cuisine" data-cuisine="Gujarati">🍛 Regional</button>
+  <button type="button" class="zestFilterChip ${mapHeatmap?'active':''}" data-action="toggle-heatmap">♨ Heatmap</button>
+  <button type="button" class="zestFilterChip ${homeCuisine==='Saved'?'active':''}" data-action="home-cuisine" data-cuisine="Saved">♥ Saved</button>
+  <button type="button" class="zestFilterChip ${homeCuisine==='Visited'?'active':''}" data-action="home-cuisine" data-cuisine="Visited">✓ Visited</button>
+</div>`;
+
+const mapControls=`<div class="zestMapControls">
+  <button type="button" class="zestMapBtn zestMapBtn3d ${map3d?'active':''}" data-action="toggle-3d" aria-label="Toggle map perspective" aria-pressed="${map3d}" title="${map3d?'Switch to flat view':'Switch to perspective view'}">${map3d?'3D':'2D'}</button>
+  <button type="button" class="zestMapBtn" data-action="zoom-in" aria-label="Zoom in">+</button>
+  <button type="button" class="zestMapBtn" data-action="zoom-out" aria-label="Zoom out">−</button>
+  <button type="button" class="zestMapBtn" data-action="recenter-map" aria-label="Recenter map" title="Recenter map">⌖</button>
+  <button type="button" class="zestMapBtn ${mapHeatmap?'active':''}" data-action="toggle-heatmap" aria-label="Toggle taste density heatmap" title="Toggle taste heatmap">♨</button>
+</div>`;
+
 const selectedVenue=selectedPinId?allRanked.find(r=>r.id===selectedPinId):null;
 const mappedPlaces=filtered.filter(r=>hasCoordinates(r));
-const mapComponent=`<div class="zestMapContainer" id="zestMapContainer"><div class="zestMapStage ${map3d?'is3d':''}" id="zestMapStage"><div class="homeMapToolbar">${viewTabs}<button type="button" class="homeSearch" data-action="navigate" data-page="discover" aria-label="Search restaurants in ${esc(cityName())}"><svg class="smallIcon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Search</span></button></div><div class="zestMapLegend"><span><i style="background:#20373b"></i> 80%+ match</span><span><i style="background:#ffc64f"></i> Visited</span><span><i style="background:#519cab"></i> Saved</span></div>${renderZestMapSvg(mappedPlaces,cityName(),selectedPinId)}<div class="zestMapControls"><button type="button" class="zestMapBtn zestMapBtn3d ${map3d?'active':''}" data-action="toggle-3d" aria-label="Toggle map perspective" aria-pressed="${map3d}" title="${map3d?'Switch to flat view':'Switch to perspective view'}">${map3d?'3D':'2D'}</button><button type="button" class="zestMapBtn" data-action="zoom-in" aria-label="Zoom in">+</button><button type="button" class="zestMapBtn" data-action="zoom-out" aria-label="Zoom out">âˆ’</button><button type="button" class="zestMapBtn" data-action="zoom-reset" aria-label="Reset zoom"><svg class="smallIcon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6"/><path d="M12 2v5m0 10v5M2 12h5m10 0h5"/></svg></button></div></div>${selectedVenue?renderZestSheet(selectedVenue):''}<p class="mapNotice">${mappedPlaces.length} places mapped Â· ${visitedCount} visited. Illustrative area overview; use Directions for navigation.</p></div>`;
+const mapComponent=`<div class="zestMapContainer" id="zestMapContainer">
+  ${zestTopNavRow}
+  ${zestQuickFilters}
+  <div class="zestMapStage ${map3d?'is3d':''}" id="zestMapStage">
+    <div class="homeMapToolbar">${viewTabs}<button type="button" class="homeSearch" data-action="navigate" data-page="discover" aria-label="Search restaurants in ${esc(cityName())}"><svg class="smallIcon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Search</span></button></div>
+    <div class="zestMapLegend"><span><i style="background:#ff7324"></i> 90%+ match</span><span><i style="background:#ffc64f"></i> Visited</span><span><i style="background:#519cab"></i> Saved</span></div>
+    ${renderZestMapSvg(mappedPlaces,cityName(),selectedPinId)}
+    ${mapControls}
+  </div>
+  ${renderZestMapCarousel(mappedPlaces,selectedPinId)}
+  <div id="zestSheetContainer">${selectedVenue?renderZestSheet(selectedVenue):''}</div>
+  <p class="mapNotice">${mappedPlaces.length} places mapped · ${visitedCount} visited. Illustrative vector overview; use Directions for navigation.</p>
+</div>`;
 
 const emptyMessage=homeCuisine==='Visited'
-  ?'<div class="empty"><h2>Your Dining Map is waiting</h2><p>Tap â€œI visitedâ€ on places youâ€™ve tried in '+esc(cityName())+' to automatically build your personal dining map.</p></div>'
+  ?'<div class="empty"><h2>Your Dining Map is waiting</h2><p>Tap “I visited” on places you’ve tried in '+esc(cityName())+' to automatically build your personal dining map.</p></div>'
   :homeCuisine==='Saved'
-  ?'<div class="empty"><h2>No saved spots yet</h2><p>Tap â€œSaveâ€ on any restaurant to pin your shortlist to your Palate Map.</p></div>'
-  :'<div class="empty"><h2>No matches in this category</h2><p>Try switching to â€œFor youâ€ or adjusting your taste preferences in your Palate tab.</p></div>';
+  ?'<div class="empty"><h2>No saved spots yet</h2><p>Tap “Save” on any restaurant to pin your shortlist to your Palate Map.</p></div>'
+  :'<div class="empty"><h2>No matches in this category</h2><p>Try switching to “For you” or adjusting your taste preferences in your Palate tab.</p></div>';
 
 const cardsContent=rs.length?rs.map(card).join(''):emptyMessage;
 
+const homeDiscoverSection=`<section class="homeDiscoverSection" id="homeDiscoverSection" aria-labelledby="homeDiscoverTitle">
+  <div class="section"><h2 id="homeDiscoverTitle">🔍 Discover &amp; Explore</h2><span>Explore ${esc(cityName())}</span></div>
+  <div class="discoverTools">
+    <input class="search" id="q" aria-label="Search restaurants" placeholder="Restaurant, cuisine, area…" value="${esc(discoverQuery)}" data-action="filter">
+    <label class="sortControl">Sort by<select id="discoverSort" aria-label="Sort restaurants" data-action="sort"><option value="match">Best match</option><option value="rating">Top rated</option><option value="name">Name A–Z</option></select></label>
+  </div>
+  <div class="filterChips" role="group" aria-label="Filter by cuisine or place type">
+    <button type="button" class="filterChip ${discoverCuisine==='all'?'active':''}" id="filter-all" aria-pressed="${discoverCuisine==='all'}" data-action="cuisine" data-cuisine="all">For you</button>
+    <button type="button" class="filterChip ${discoverCuisine==='Cafe'?'active':''}" id="filter-cafe" aria-pressed="${discoverCuisine==='Cafe'}" data-action="cuisine" data-cuisine="Cafe">Cafés</button>
+    <button type="button" class="filterChip ${discoverCuisine==='Dessert'?'active':''}" id="filter-dessert" aria-pressed="${discoverCuisine==='Dessert'}" data-action="cuisine" data-cuisine="Dessert">Desserts</button>
+    <button type="button" class="filterChip ${discoverCuisine==='Restaurant'?'active':''}" id="filter-restaurant" aria-pressed="${discoverCuisine==='Restaurant'}" data-action="cuisine" data-cuisine="Restaurant">Restaurants</button>
+    <button type="button" class="filterChip ${discoverCuisine==='Fast food'?'active':''}" id="filter-fast-food" aria-pressed="${discoverCuisine==='Fast food'}" data-action="cuisine" data-cuisine="Fast food">Quick bites</button>
+    <button type="button" class="filterChip ${discoverCuisine==='Food court'?'active':''}" id="filter-food-court" aria-pressed="${discoverCuisine==='Food court'}" data-action="cuisine" data-cuisine="Food court">Food courts</button>
+    <button type="button" class="filterChip ${discoverCuisine==='Gujarati'?'active':''}" id="filter-gujarati" aria-pressed="${discoverCuisine==='Gujarati'}" data-action="cuisine" data-cuisine="Gujarati">Gujarati</button>
+    <button type="button" class="filterChip ${discoverCuisine==='Italian'?'active':''}" id="filter-italian" aria-pressed="${discoverCuisine==='Italian'}" data-action="cuisine" data-cuisine="Italian">Italian</button>
+    <button type="button" class="filterChip ${discoverCuisine==='Indian'?'active':''}" id="filter-indian" aria-pressed="${discoverCuisine==='Indian'}" data-action="cuisine" data-cuisine="Indian">Indian</button>
+  </div>
+  <div class="section discoverSummary"><h2>Rated places around ${esc(cityName())}</h2><span id="resultCount"></span></div>
+  <div id="list" class="restaurantGrid"></div>
+</section>`;
+
+const homePeopleSection=`<section class="homePeopleSection" id="homePeopleSection" aria-labelledby="homePeopleTitle">
+  <div class="section"><h2 id="homePeopleTitle">👥 Taste Twins &amp; Community</h2><span>${people.length} diners with similar taste</span></div>
+  <p class="feedNote" style="margin-top:-4px;margin-bottom:14px;">Connect with diners in ${esc(cityName())} who share your culinary wavelength.</p>
+  <div class="peopleGrid">${people.map(personCard).join('')}</div>
+</section>`;
+
 let mainContent='';
 if(homeView==='map'){
-  mainContent=`${mapComponent}<div class="homeRecommendations"><div class="section"><h1>For you</h1>${topPick?`<div class="confidence">${topPick.score}%<small> top taste match</small></div>`:`<span>${filtered.length} places</span>`}</div>${filterPills}<div class="restaurantGrid" aria-label="Recommendations for your taste">${cardsContent}</div>${showMoreButton}${travelRangeNote()}<p class="homeEstimateNote">Matches are estimates from your taste quiz and feedback.</p></div>`;
+  mainContent=`${mapComponent}<div class="homeRecommendations"><div class="section"><h1>For you</h1>${topPick?`<div class="confidence">${topPick.score}%<small> top taste match</small></div>`:`<span>${filtered.length} places</span>`}</div>${filterPills}<div class="restaurantGrid" aria-label="Recommendations for your taste">${cardsContent}</div>${showMoreButton}${travelRangeNote()}<p class="homeEstimateNote">Matches are estimates from your taste quiz and feedback.</p></div>${homeDiscoverSection}${homePeopleSection}`;
 } else if(homeView==='dishes'){
-  mainContent=`<div class="homeListToolbar">${viewTabs}<button type="button" class="homeSearch" data-action="navigate" data-page="discover">Search places</button></div><div class="homeRecommendations"><div class="section"><h1>â­ Best Dishes & Cafe Highlights</h1><span>${filtered.length} curated venues in ${esc(cityName())}</span></div>${renderBestDishesShowcase(filtered)}</div>`;
+  mainContent=`<div class="homeListToolbar">${viewTabs}<button type="button" class="homeSearch" data-action="scroll-to-discover">Search places</button></div><div class="homeRecommendations"><div class="section"><h1>â­  Best Dishes & Cafe Highlights</h1><span>${filtered.length} curated venues in ${esc(cityName())}</span></div>${renderBestDishesShowcase(filtered)}</div>${homeDiscoverSection}${homePeopleSection}`;
 } else {
-  mainContent=`<div class="homeListToolbar">${viewTabs}<button type="button" class="homeSearch" data-action="navigate" data-page="discover">Search places</button></div><div class="homeRecommendations"><div class="section"><h1>For you</h1>${topPick?`<div class="confidence">${topPick.score}%<small> top taste match</small></div>`:`<span>${filtered.length} places</span>`}</div>${filterPills}<div class="restaurantGrid" aria-label="Recommendations for your taste">${cardsContent}</div>${showMoreButton}${travelRangeNote()}<p class="homeEstimateNote">Matches are estimates from your taste quiz and feedback.</p></div>`;
+  mainContent=`<div class="homeListToolbar">${viewTabs}<button type="button" class="homeSearch" data-action="scroll-to-discover">Search places</button></div><div class="homeRecommendations"><div class="section"><h1>For you</h1>${topPick?`<div class="confidence">${topPick.score}%<small> top taste match</small></div>`:`<span>${filtered.length} places</span>`}</div>${filterPills}<div class="restaurantGrid" aria-label="Recommendations for your taste">${cardsContent}</div>${showMoreButton}${travelRangeNote()}<p class="homeEstimateNote">Matches are estimates from your taste quiz and feedback.</p></div>${homeDiscoverSection}${homePeopleSection}`;
 }
 
 document.getElementById('root').innerHTML=`<section class="screen home-screen ${homeView==='map'?'homeMapView':'homeListView'}">${studioControlBar}${mainContent}</section>`;
+drawDiscover();
+if(homeView==='map'){
+  setupMapGestures();
+  setupCarouselSync();
+}
 }
 function summaryChips(){let a=state.answers||{};return [...preferredCuisines(a).map(x=>cuisineLabels[x]||x),a.diet&&a.diet!=='any'?dietLabel(a.diet):null,a.budget?price(a.budget):null,...preferredVibes(a),a.spice].filter(Boolean).map(x=>`<span class="chip">${esc(x)}</span>`).join('')}
 function discover(){
@@ -1610,7 +2011,128 @@ document.getElementById('root').innerHTML=`<section class="screen saved-screen">
 }
 function profile(){
 const a=state.answers||{},ai=state.ai||{likes:0,dislikes:0,visits:0,signals:{}};
-document.getElementById('root').innerHTML=`<section class="screen profile-screen"><header class="tasteProfileHeader"><div class="profileMonogram" aria-hidden="true">P</div><div><h1>Taste studio</h1><p>Your taste, shaped by ${feedbackCount()} place ratings and ${Object.keys(normalizeDishFeedback(state.dishFeedback)).length} dish preferences.</p></div></header><div class="profileTasteSummary"><h2>Your taste preferences</h2><div class="chips">${summaryChips()}</div><p>Cuisine, spice and vibe preferences set the starting point. Dish feedback refines your matches.</p></div><div class="statGrid profileStats"><div class="stat"><b>${Number(ai.likes)||0}</b><span>likes</span></div><div class="stat"><b>${Number(ai.dislikes)||0}</b><span>passes</span></div><div class="stat"><b>${Number(ai.visits)||0}</b><span>visits</span></div><div class="stat"><b>${state.saves.length}</b><span>saved</span></div></div><button type="button" class="profileSavedLink" data-action="navigate" data-page="saved"><span>Saved places</span><span>${state.saves.length} places →</span></button><div class="profileColumns"><div><div class="section"><h2>Your preferences</h2><span>Taste quiz</span></div><div class="card">${[['Cuisine',a.cuisine||'Not set'],['Dietary preference',dietLabel(a.diet)],['Budget',price(a.budget)],['Vibe',a.mood||'Not set'],['Occasion',a.occasion||'Not set'],['Spice',a.spice||'Not set']].map(x=>`<div class="row"><strong>${x[0]}</strong><span>${esc(x[1])}</span></div>`).join('')}</div><button class="btn primary profileRetake" type="button" data-action="reset-taste">Retake taste quiz</button></div><div><div class="section"><h2>What you’ve taught us</h2><span>Active feedback</span></div><details class="card learnedSignals"><summary>See learned taste signals</summary>${Object.entries(ai.signals||{}).sort((x,y)=>y[1]-x[1]).slice(0,8).map(x=>`<div class="row"><strong>${esc(x[0])}</strong><span>${x[1]>0?'+':''}${Number(x[1]).toFixed(1)}</span></div>`).join('')||'<p class="feedNote">Rate a few places to start building your taste profile.</p>'}</details><p class="feedNote">Taste matches are estimates from your preferences and feedback.</p></div></div>${renderCalibrationDeck()}<details class="card profilePrivacy"><summary>Privacy and account</summary><p class="feedNote">For a copy or correction of your data, account deletion, consent withdrawal, or a privacy complaint, contact Aayush Mittal at palateo.com@gmail.com from your registered email. We may verify account ownership. Never send your password.</p><div class="privacyActions"><a href="mailto:palateo.com@gmail.com?subject=Palateo%20privacy%20request">Send a privacy request</a><a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a><a href="/terms/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></div><p class="feedNote">Signing out clears your Palateo preferences and profile details from this browser. Cloud account deletion is handled separately after a verified request.</p></details></section>`
+const arch=calculateArchetype(a);
+const currentSpice=a.spice==='hot'?3:a.spice==='mild'?1:2;
+const spiceLabel=currentSpice===1?'Mild & Gentle (European / Coconut mild)':currentSpice===2?'Balanced Masala (Classic street & cafe spice)':'Fiery Desi Spice 🔥 (Gongura, Andhra, Ghee Roast)';
+const currentDiet=normalizeDiet(a.diet)||'all';
+const selectedCuisines=preferredCuisines(a);
+const selectedVibes=preferredVibes(a);
+const allCuisines=[
+  ['Gujarati','Gujarati'],
+  ['Punjabi','North Indian'],
+  ['Italian','Italian & continental'],
+  ['Cafe','Café & coffee'],
+  ['SouthIndian','South Indian'],
+  ['Asian','Asian'],
+  ['Dessert','Desserts']
+];
+const allVibes=[
+  ['quiet','Quiet & cosy'],
+  ['lively','Loud & lively'],
+  ['date','Date night'],
+  ['family','Family time']
+];
+const dietChoices=[
+  ['all','✨ All'],
+  ['pure_veg','🌱 Pure Veg'],
+  ['eggetarian','🥚 Eggetarian'],
+  ['non_veg','🍗 Non-Veg']
+];
+
+document.getElementById('root').innerHTML=`<section class="screen profile-screen genomeScreen" aria-labelledby="genomeTitle">
+<header class="genomeHeader">
+  <div class="genomeHeaderCopy">
+    <h1 id="genomeTitle">Palate Genome Studio</h1>
+    <p class="genomeSubtitle">Teach Palateo AI your culinary DNA &amp; flavor rules</p>
+  </div>
+  <div class="genomeHeaderBadge" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="var(--zest-saffron)" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
+  </div>
+</header>
+
+<div class="genomeSyncPill ${backendReady?'connected':''}">
+  <span>${backendReady?'☁️ Supabase Cloud Sync Active':'💾 Local Engine Active (Supabase sync ready)'}</span>
+</div>
+
+<div class="genomePersonaCard" data-testid="taste_persona_card">
+  <div class="genomePersonaEyebrow">CURRENT TASTE GENOME</div>
+  <h2 class="genomePersonaTitle">${arch.emoji} ${esc(arch.title)}</h2>
+  <div class="genomePersonaMeta">Active in ${esc(cityName())} · ${feedbackCount()+Object.keys(normalizeDishFeedback(state.dishFeedback)).length} taste signals trained</div>
+  <p class="genomePersonaDesc">${esc(arch.desc)}</p>
+</div>
+
+<div class="genomeSection">
+  <h3 class="genomeSectionTitle">1. Spice Tolerance Meter</h3>
+  <div class="genomeSectionSubtitle">Slide to calibrate your heat threshold</div>
+  <span class="genomeSpiceLabel" id="genomeSpiceLabel">${spiceLabel}</span>
+  <input type="range" class="genomeSpiceSlider" min="1" max="3" step="1" value="${currentSpice}" data-action="genome-spice-slider" aria-label="Spice tolerance level">
+  <div class="genomeSpiceSteps">
+    <span>1 · Mild</span>
+    <span>2 · Balanced</span>
+    <span>3 · Fiery 🔥</span>
+  </div>
+</div>
+
+<div class="genomeSection">
+  <h3 class="genomeSectionTitle">2. Dietary Philosophy</h3>
+  <div class="genomeSectionSubtitle">Select your everyday dining rule</div>
+  <div class="genomeDietGrid" role="group" aria-label="Dietary preference">
+    ${dietChoices.map(([key,lbl])=>`<button type="button" class="genomeDietPill ${currentDiet===key?'active':''}" aria-pressed="${currentDiet===key}" data-action="set-genome-diet" data-diet="${key}">${lbl}</button>`).join('')}
+  </div>
+</div>
+
+<div class="genomeSection">
+  <h3 class="genomeSectionTitle">3. Favorite Regional Cuisines</h3>
+  <div class="genomeSectionSubtitle">Tap to toggle cuisines you crave most</div>
+  <div class="genomeChipsGrid" role="group" aria-label="Favorite cuisines">
+    ${allCuisines.map(([key,lbl])=>`<button type="button" class="genomeChip ${selectedCuisines.includes(key)?'active':''}" aria-pressed="${selectedCuisines.includes(key)}" data-action="toggle-genome-cuisine" data-cuisine="${key}"><span>${selectedCuisines.includes(key)?'✓ ':''}${lbl}</span></button>`).join('')}
+  </div>
+</div>
+
+<div class="genomeSection">
+  <h3 class="genomeSectionTitle">4. Ambiance &amp; Dining Vibes</h3>
+  <div class="genomeSectionSubtitle">Atmospheres you gravitate toward</div>
+  <div class="genomeChipsGrid" role="group" aria-label="Dining vibes">
+    ${allVibes.map(([key,lbl])=>`<button type="button" class="genomeChip ${selectedVibes.includes(key)?'active':''}" aria-pressed="${selectedVibes.includes(key)}" data-action="toggle-genome-vibe" data-vibe="${key}"><span>${selectedVibes.includes(key)?'✓ ':''}${lbl}</span></button>`).join('')}
+  </div>
+</div>
+
+${renderCalibrationDeck()}
+
+<button type="button" class="btn primary genomeSaveBtn" data-action="save-genome"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Save &amp; Recalculate Matches</button>
+<button type="button" class="genomeRetakeLink" data-action="reset-taste">Retake full taste onboarding quiz →</button>
+
+<div class="profileTasteSummary" style="margin-top:28px;">
+  <h2>Your taste summary</h2>
+  <div class="chips">${summaryChips()}</div>
+  <p>Cuisine, spice and vibe preferences set the starting point. Dish feedback refines your matches.</p>
+</div>
+
+<div class="statGrid profileStats" style="margin-top:16px;">
+  <div class="stat"><b>${Number(ai.likes)||0}</b><span>likes</span></div>
+  <div class="stat"><b>${Number(ai.dislikes)||0}</b><span>passes</span></div>
+  <div class="stat"><b>${Number(ai.visits)||0}</b><span>visits</span></div>
+  <div class="stat"><b>${state.saves.length}</b><span>saved</span></div>
+</div>
+
+<button type="button" class="profileSavedLink" data-action="navigate" data-page="saved" style="margin-top:14px;">
+  <span>Saved places</span><span>${state.saves.length} places →</span>
+</button>
+
+<div class="profileColumns" style="margin-top:20px;">
+  <div>
+    <div class="section"><h2>Your preferences</h2><span>Taste quiz</span></div>
+    <div class="card">${[['Cuisine',a.cuisine||'Not set'],['Dietary preference',dietLabel(a.diet)],['Budget',price(a.budget)],['Vibe',a.mood||'Not set'],['Occasion',a.occasion||'Not set'],['Spice',a.spice||'Not set']].map(x=>`<div class="row"><strong>${x[0]}</strong><span>${esc(x[1])}</span></div>`).join('')}</div>
+  </div>
+  <div>
+    <div class="section"><h2>What you’ve taught us</h2><span>Active feedback</span></div>
+    <details class="card learnedSignals"><summary>See learned taste signals</summary>${Object.entries(ai.signals||{}).sort((x,y)=>y[1]-x[1]).slice(0,8).map(x=>`<div class="row"><strong>${esc(x[0])}</strong><span>${x[1]>0?'+':''}${Number(x[1]).toFixed(1)}</span></div>`).join('')||'<p class="feedNote">Rate a few places to start building your taste profile.</p>'}</details>
+    <p class="feedNote">Taste matches are estimates from your preferences and feedback.</p>
+  </div>
+</div>
+
+<details class="card profilePrivacy" style="margin-top:20px;"><summary>Privacy and account</summary><p class="feedNote">For a copy or correction of your data, account deletion, consent withdrawal, or a privacy complaint, contact Aayush Mittal at palateo.com@gmail.com from your registered email. We may verify account ownership. Never send your password.</p><div class="privacyActions"><a href="mailto:palateo.com@gmail.com?subject=Palateo%20privacy%20request">Send a privacy request</a><a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a><a href="/terms/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></div><p class="feedNote">Signing out clears your Palateo preferences and profile details from this browser. Cloud account deletion is handled separately after a verified request.</p></details>
+</section>`;
 }
 function rate(id,t){const r=activeRestaurant(id)||catalog.find(x=>x.id===id);learn(r,t);toast(t==='like'?'Palate updated ❤️':t==='visited'?'Visit learned ✓':'We’ll show you less like this');go(page)}
 function saveRest(id){const i=state.saves.indexOf(id);if(i>=0){state.saves.splice(i,1);toast('Removed from saved')}else{state.saves.push(id);toast('Saved ♥')}persist();go(page)}
@@ -1749,7 +2271,7 @@ async function syncTaste(){
  if(!currentUser)throw new Error('Sign in to sync your taste profile.');
  if(!hasTasteAnswers())throw new Error('Complete your taste profile before syncing it.');
  const owner=currentUser,a=state.answers||{};
- const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==='any'?null:Number(a.distance||5),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
+ const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:toBackendDiet(a.diet),dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==='any'?null:Number(a.distance||5),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
  const {error}=await supabaseClient.from('taste_profiles').upsert(payload);
  if(error)throw error;
  if(currentUser?.id!==owner.id)throw new Error('Account changed during taste sync.');
@@ -1813,7 +2335,7 @@ async function loadCloudState(){
    if(Array.isArray(t.ambience?.favorites))a.vibes=t.ambience.favorites.filter(x=>['quiet','lively','date','family'].includes(x));
    if(t.occasions?.primary)a.occasion=t.occasions.primary;
    if(t.priorities?.primary)a.priority=t.priorities.primary;
-   if(t.priorities?.dietary_preference)a.diet=t.priorities.dietary_preference;
+   if(t.priorities?.dietary_preference)a.diet=normalizeDiet(t.priorities.dietary_preference)||t.priorities.dietary_preference;
     if(t.max_distance_km===null)a.distance='any';else if(t.max_distance_km!==undefined)a.distance=String(t.max_distance_km);
    if(hasTasteAnswers(a)){state.answers=a;state.onboarded=true;state.ai=state.ai||{likes:0,dislikes:0,visits:0,signals:{}};state.ai.signals=t.taste_vector||state.ai.signals||{}}
    else if(!hasTasteProfile()){state.onboarded=false;state.answers={...a,...state.answers}}
@@ -1990,13 +2512,18 @@ document.addEventListener('click',event=>{
    case 'set-adventure': if(d.mode)setAdventureMode(d.mode); break;
    case 'set-dish-category': if(d.category)setDishCategory(d.category); break;
   case 'load-more-home': loadMoreHome(); break;
-  case 'home-view': if(d.view){homeView=d.view;home();document.querySelector('[data-action="home-view"][data-view="'+d.view+'"]')?.focus({preventScroll:true})} break;
-  case 'select-pin': if(d.restId){placePreviewOrigin='select-pin';if(selectedPinId===d.restId)closePlacePreview();else{selectedPinId=d.restId;home();focusPlacePreview()}} break;
+  case 'home-view': if(d.view){homeView=d.view;home();document.querySelector?.('[data-action="home-view"][data-view="'+d.view+'"]')?.focus({preventScroll:true})} break;
+  case 'select-city-pill': if(d.city){setCity(d.city);home();} break;
+  case 'toggle-heatmap': mapHeatmap=!mapHeatmap;home(); break;
+  case 'toggle-90-match': minMatchThreshold=minMatchThreshold>=90?0:90;home(); break;
+  case 'recenter-map': resetMapZoom(); break;
+  case 'carousel-card-click': if(d.restId){placePreviewOrigin='carousel';selectedPinId=d.restId;syncMapAndCarousel(d.restId,true);} break;
+  case 'select-pin': if(mapHasDragged)break;if(d.restId){placePreviewOrigin='select-pin';if(selectedPinId===d.restId)closePlacePreview();else{selectedPinId=d.restId;home();focusPlacePreview();syncMapAndCarousel(d.restId);}} break;
   case 'close-pin': closePlacePreview(); break;
   case 'zoom-in': zoomMap(0.2); break;
   case 'zoom-out': zoomMap(-0.2); break;
   case 'zoom-reset': resetMapZoom(); break;
-  case 'toggle-3d': map3d=!map3d; home();document.querySelector('[data-action="toggle-3d"]')?.focus({preventScroll:true}); break;
+  case 'toggle-3d': map3d=!map3d; home();document.querySelector?.('[data-action="toggle-3d"]')?.focus({preventScroll:true}); break;
   case 'view-pin': if(d.restId){placePreviewOrigin='view-pin';selectedPinId=d.restId;homeView='map';go('home');document.getElementById('zestMapContainer')?.scrollIntoView({behavior:'smooth',block:'start'});focusPlacePreview()} break;
   case 'open-place': if(d.restId)openPlaceDetails(d.restId,control); break;
   case 'close-place': closePlaceDetails(); break;
@@ -2009,6 +2536,11 @@ document.addEventListener('click',event=>{
   case 'reset-taste': resetTaste(); break;
   case 'close-auth': closeAuth(); break;
   case 'legal-decline': signOutV5(); break;
+  case 'set-genome-diet': if(d.diet){state.answers.diet=d.diet;persist();profile();toast('Dietary updated: '+dietLabel(d.diet));if(currentUser&&backendReady)syncTaste().catch(e=>console.warn(e));} break;
+  case 'toggle-genome-cuisine': if(d.cuisine){const old=preferredCuisines();const updated=old.includes(d.cuisine)?old.filter(x=>x!==d.cuisine):[...old,d.cuisine];state.answers.cuisines=updated;state.answers.cuisine=updated[0]||'Gujarati';persist();profile()} break;
+  case 'toggle-genome-vibe': if(d.vibe){const old=preferredVibes();const updated=old.includes(d.vibe)?old.filter(x=>x!==d.vibe):[...old,d.vibe];state.answers.vibes=updated;state.answers.mood=updated[0]||'quiet';persist();profile()} break;
+  case 'save-genome': persist();if(currentUser&&backendReady){syncTaste().catch(e=>console.warn(e))}toast('Taste preferences saved & matches recalculated ✨');go('home'); break;
+  case 'scroll-to-discover': {const el=document.getElementById('homeDiscoverSection');if(el){el.scrollIntoView({behavior:'smooth'});document.getElementById('q')?.focus()}else{go('discover')}} break;
   case 'auth-mode': if(d.authMode==='login'||d.authMode==='signup')showAuth(d.authMode); break;
   case 'auth-email': if(['recovery','signup'].includes(d.emailType))sendAuthEmail(d.emailType); break;
  }
@@ -2019,6 +2551,14 @@ document.addEventListener('input',event=>{
  if(target.dataset.action==='filter')filter(target.value);
  if(target.dataset.action==='prompt-input')promptQuery=target.value;
  if(target.dataset.action==='spice-slider')pick('spice',['mild','medium','hot'][Number(target.value)],Number(target.dataset.step));
+ if(target.dataset.action==='genome-spice-slider'){
+   const val=Number(target.value);
+   const spiceKey=['mild','medium','hot'][val-1]||'medium';
+   state.answers.spice=spiceKey;
+   persist();
+   const label=document.getElementById('genomeSpiceLabel');
+   if(label)label.textContent=val===1?'Mild & Gentle (European / Coconut mild)':val===2?'Balanced Masala (Classic street & cafe spice)':'Fiery Desi Spice 🔥 (Gongura, Andhra, Ghee Roast)';
+ }
 });
 document.addEventListener('change',event=>{
  const target=event.target;

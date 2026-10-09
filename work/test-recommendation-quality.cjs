@@ -88,7 +88,7 @@ globalThis.runRecommendationQualityAudit = () => {
   learn(highRatedMismatch, 'like');
   const likedMismatchScore = rec(highRatedMismatch).score;
   assert.ok(likedMismatchScore < 50, 'Single like must not make a dietary conflict place acceptable (got ' + likedMismatchScore + ')');
-  assert.equal(likedMismatchScore, mismatchScore + 7, 'Feedback applies bounded additive reinforcement (+7)');
+  assert.equal(likedMismatchScore, Math.min(35,mismatchScore + 7), 'Dietary conflict remains capped even after a like');
 
   // Scenario 3: Undo restores baseline exactly
   learn(highRatedMismatch, null);

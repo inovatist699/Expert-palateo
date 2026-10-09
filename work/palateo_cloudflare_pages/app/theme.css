@@ -155,3 +155,1443 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,su
   .dishModalItemHead{flex-direction:column;align-items:flex-start;gap:4px}
   .dishModalMeta{width:100%;justify-content:space-between}
 }
+
+/* ==========================================================================
+   PHASE 1: TASTETRAIL DESIGN SYSTEM & NAVIGATION FOUNDATION
+   ========================================================================== */
+:root {
+  /* TasteTrail Palette Tokens (from ui-reference/Color.kt) */
+  --zest-gunmetal-deeper: #0d181a;
+  --zest-gunmetal-dark: #142427;
+  --zest-gunmetal-surface: #1a2f33;
+  --zest-gunmetal-card: #254146;
+  --zest-gunmetal-card-selected: #2d4c52;
+  --zest-gunmetal-muted: #8ba6ac;
+  --zest-moonstone: #519cab;
+  --zest-moonstone-dark: #3b7a87;
+  --zest-moonstone-light: #78b3bf;
+  --zest-moonstone-container: #d4ecf1;
+  --zest-saffron: #ffc64f;
+  --zest-saffron-dark: #e5a82e;
+  --zest-saffron-light: #ffd980;
+  --zest-saffron-container: #fff4d6;
+  --zest-light-blue: #c3e7f1;
+  --zest-light-blue-container: #e4f4f9;
+  --zest-light-blue-soft: #eef8fb;
+  --zest-pure-white: #ffffff;
+  --zest-off-white: #f7fbfc;
+  --zest-cream: #faf7ee;
+  --zest-veg: #229555;
+  --zest-nonveg: #e05243;
+  --zest-spice: #ff7e33;
+
+  /* Preserved design system contracts for check-design-colors.cjs */
+  --bg: #c3e7f1;
+  --card: #edf7fa;
+  --ink: #20373b;
+  --muted: #315e68;
+  --line: #93bec8;
+  --green: #315e68;
+  --green2: #519cab;
+  --soft: #dbeef4;
+  --gold: #ffc64f;
+  --danger: #9b3f38;
+  --control-line: #315e68;
+}
+
+/* Header & Top Bar Enhancements */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(81, 156, 171, 0.25);
+}
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.headerSavedBtn {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  background: var(--zest-gunmetal-surface, #1a2f33);
+  color: var(--zest-light-blue, #c3e7f1);
+  border: 1px solid rgba(81, 156, 171, 0.35);
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.headerSavedBtn:hover {
+  background: var(--zest-gunmetal-card, #254146);
+  border-color: var(--zest-saffron, #ffc64f);
+  color: var(--zest-pure-white, #ffffff);
+}
+.headerSavedBtn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+.headerSavedCount {
+  background: var(--zest-saffron, #ffc64f);
+  color: var(--zest-gunmetal-dark, #142427);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 7px;
+  border-radius: 99px;
+  line-height: 1.4;
+}
+
+/* Phase 1 Streamlined Primary Navigation (Palate Map & Taste Genome) */
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  transform: none;
+  width: 100%;
+  max-width: none;
+  background: rgba(26, 47, 51, 0.94);
+  border: 0;
+  border-top: 1px solid rgba(81, 156, 171, 0.3);
+  border-radius: 0;
+  padding: 8px 16px max(10px, env(safe-area-inset-bottom));
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 -4px 24px rgba(13, 24, 26, 0.45);
+}
+@media (min-width: 840px) {
+  .nav {
+    position: fixed;
+    top: 18px;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    min-width: 380px;
+    border-radius: 99px;
+    border: 1px solid rgba(81, 156, 171, 0.35);
+    padding: 6px 12px;
+    box-shadow: 0 8px 32px rgba(13, 24, 26, 0.5);
+  }
+}
+.nav .navTab {
+  flex: 1;
+  max-width: 240px;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 99px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--zest-light-blue, #c3e7f1);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+.nav .navTab b {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+.nav .navTab svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+.nav .navTab:hover {
+  background: rgba(81, 156, 171, 0.15);
+  color: var(--zest-pure-white, #ffffff);
+}
+.nav .navTab.active {
+  background: var(--zest-saffron, #ffc64f) !important;
+  color: var(--zest-gunmetal-dark, #142427) !important;
+  border-color: var(--zest-saffron-dark, #e5a82e) !important;
+  box-shadow: 0 2px 10px rgba(255, 198, 79, 0.35);
+}
+.nav .navTab.active svg {
+  stroke: var(--zest-gunmetal-dark, #142427);
+}
+.nav .navTab:focus-visible {
+  outline: 2px solid var(--zest-saffron, #ffc64f);
+  outline-offset: 2px;
+}
+
+/* ========================================================
+   Taste Genome Studio (Phase 2 Reconstruction)
+   ======================================================== */
+.genomeScreen {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 16px 16px 90px;
+}
+.genomeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-top: 8px;
+}
+.genomeHeaderCopy h1 {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--zest-pure-white, #ffffff);
+  margin: 0 0 4px;
+}
+.genomeSubtitle {
+  font-size: 13px;
+  color: var(--zest-gunmetal-muted, #8ba6ac);
+  margin: 0;
+  line-height: 1.4;
+}
+.genomeHeaderBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: 99px;
+  background: var(--zest-gunmetal-surface, #1a2f33);
+  border: 1px solid var(--zest-moonstone, #519cab);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.genomeSyncPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: var(--zest-gunmetal-surface, #1a2f33);
+  border: 1px solid rgba(81, 156, 171, 0.35);
+  color: var(--zest-light-blue, #c3e7f1);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.genomeSyncPill.connected {
+  background: rgba(34, 149, 85, 0.15);
+  border-color: var(--zest-veg, #229555);
+  color: var(--zest-saffron, #ffc64f);
+}
+.genomePersonaCard {
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #1f373c 0%, #142427 100%);
+  border: 1.5px solid var(--zest-saffron, #ffc64f);
+  padding: 24px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(13, 24, 26, 0.45);
+  overflow: hidden;
+}
+.genomePersonaCard::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255, 198, 79, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.genomePersonaEyebrow {
+  font-size: 10.5px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--zest-saffron, #ffc64f);
+  margin-bottom: 6px;
+}
+.genomePersonaTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--zest-pure-white, #ffffff);
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+.genomePersonaMeta {
+  font-size: 12.5px;
+  color: var(--zest-light-blue-soft, #eef8fb);
+  margin: 0 0 12px;
+  font-weight: 550;
+}
+.genomePersonaDesc {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--zest-light-blue, #c3e7f1);
+  margin: 0;
+}
+.genomeSection {
+  margin-bottom: 24px;
+  background: var(--zest-gunmetal-surface, #1a2f33);
+  border: 1px solid rgba(81, 156, 171, 0.25);
+  border-radius: 16px;
+  padding: 18px;
+}
+.genomeSectionTitle {
+  font-size: 16px;
+  font-weight: 750;
+  color: var(--zest-pure-white, #ffffff);
+  letter-spacing: -0.01em;
+  margin: 0 0 4px;
+}
+.genomeSectionSubtitle {
+  font-size: 12.5px;
+  color: var(--zest-gunmetal-muted, #8ba6ac);
+  margin: 0 0 14px;
+}
+.genomeSpiceLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--zest-saffron, #ffc64f);
+  margin-bottom: 12px;
+  display: block;
+}
+.genomeSpiceSlider {
+  width: 100%;
+  height: 8px;
+  border-radius: 99px;
+  accent-color: var(--zest-saffron, #ffc64f);
+  background: var(--zest-gunmetal-card, #254146);
+  cursor: pointer;
+  margin: 10px 0 16px;
+}
+.genomeSpiceSteps {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--zest-gunmetal-muted, #8ba6ac);
+}
+.genomeDietGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+@media (min-width: 520px) {
+  .genomeDietGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.genomeDietPill {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--zest-gunmetal-dark, #142427);
+  border: 1px solid rgba(81, 156, 171, 0.3);
+  color: var(--zest-light-blue, #c3e7f1);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+}
+.genomeDietPill:hover {
+  border-color: var(--zest-moonstone, #519cab);
+  color: var(--zest-pure-white, #ffffff);
+}
+.genomeDietPill.active {
+  background: var(--zest-saffron, #ffc64f) !important;
+  color: var(--zest-gunmetal-dark, #142427) !important;
+  border-color: var(--zest-saffron-dark, #e5a82e) !important;
+  box-shadow: 0 4px 12px rgba(255, 198, 79, 0.3);
+}
+.genomeChipsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.genomeChip {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 99px;
+  background: var(--zest-gunmetal-dark, #142427);
+  border: 1px solid rgba(81, 156, 171, 0.3);
+  color: var(--zest-light-blue-soft, #eef8fb);
+  font-size: 12.5px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.genomeChip:hover {
+  background: rgba(81, 156, 171, 0.15);
+  border-color: var(--zest-moonstone, #519cab);
+}
+.genomeChip.active {
+  background: var(--zest-moonstone, #519cab) !important;
+  color: var(--zest-pure-white, #ffffff) !important;
+  border-color: var(--zest-light-blue, #c3e7f1) !important;
+  box-shadow: 0 2px 8px rgba(81, 156, 171, 0.35);
+}
+.genomeSaveBtn {
+  width: 100%;
+  min-height: 52px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--zest-saffron, #ffc64f) !important;
+  color: var(--zest-gunmetal-dark, #142427) !important;
+  border: 1px solid var(--zest-saffron-dark, #e5a82e) !important;
+  box-shadow: 0 6px 20px rgba(255, 198, 79, 0.35);
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.genomeSaveBtn:hover {
+  background: #ffd980 !important;
+  transform: translateY(-1px);
+}
+.genomeRetakeLink {
+  display: block;
+  text-align: center;
+  margin: 14px auto 0;
+  font-size: 12.5px;
+  font-weight: 650;
+  color: var(--zest-light-blue, #c3e7f1);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ===== PHASE 3: PALATE MAP & ZEST CAROUSEL STUDIO (TASTETRAIL SPEC) ===== */
+.homeMapView .zestMapContainer {
+  position: relative;
+  border-radius: 24px;
+  background: #0d181a;
+  border: 1px solid #1c3338;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  margin: 0 0 16px;
+}
+.homeMapView .zestMapStage {
+  position: relative;
+  width: 100%;
+  height: clamp(340px, 46svh, 480px);
+  background: #0d181a;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+.homeMapView .zestMapStage.isDragging {
+  cursor: grabbing;
+}
+.zestMapSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+.homeMapToolbar {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+.homeMapToolbar > * {
+  pointer-events: auto;
+}
+.zestTopNavRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.zestCityBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 2px;
+  max-width: calc(100% - 130px);
+}
+.zestCityBar::-webkit-scrollbar {
+  display: none;
+}
+.zestCityPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 14px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+  background: rgba(20, 36, 39, 0.88);
+  color: #c3e7f1;
+  border: 1px solid rgba(81, 156, 171, 0.35);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.zestCityPill:hover {
+  background: rgba(32, 55, 59, 0.95);
+  color: #ffffff;
+  border-color: #519cab;
+}
+.zestCityPill.active {
+  background: #ffc64f !important;
+  color: #142427 !important;
+  border-color: #e5a82e !important;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(255, 198, 79, 0.35);
+}
+.zestCityLemon {
+  font-size: 11px;
+}
+.zestRadarBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+  background: rgba(13, 24, 26, 0.92);
+  color: #c3e7f1;
+  border: 1px solid rgba(81, 156, 171, 0.45);
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+}
+.zestRadarDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ffc64f;
+  box-shadow: 0 0 8px #ffc64f;
+  animation: zestRadarBlink 1.6s ease-in-out infinite;
+}
+@keyframes zestRadarBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.8); }
+}
+.zestQuickFilters {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 2px 0;
+}
+.zestQuickFilters::-webkit-scrollbar {
+  display: none;
+}
+.zestFilterChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 13px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 650;
+  white-space: nowrap;
+  background: rgba(20, 36, 39, 0.85);
+  color: #dbeef4;
+  border: 1px solid rgba(49, 94, 104, 0.5);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.zestFilterChip:hover {
+  background: rgba(32, 55, 59, 0.9);
+  color: #ffffff;
+  border-color: #519cab;
+}
+.zestFilterChip.active {
+  background: #519cab !important;
+  color: #0d181a !important;
+  border-color: #519cab !important;
+  font-weight: 800;
+  box-shadow: 0 2px 10px rgba(81, 156, 171, 0.3);
+}
+.zestMapControls {
+  position: absolute;
+  right: 14px;
+  bottom: 16px;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.zestMapBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(20, 36, 39, 0.88);
+  color: #c3e7f1;
+  border: 1px solid rgba(81, 156, 171, 0.35);
+  backdrop-filter: blur(10px);
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.zestMapBtn:hover, .zestMapBtn.active {
+  background: #ffc64f !important;
+  color: #142427 !important;
+  border-color: #e5a82e !important;
+  transform: scale(1.06);
+}
+.zestPin {
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.zestPin:hover {
+  transform: scale(1.12);
+}
+.zestPin.active {
+  z-index: 60;
+}
+@keyframes zestPulse {
+  0% { transform: scale(0.85); opacity: 0.95; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+@keyframes zestPulseInner {
+  0% { transform: scale(0.9); opacity: 0.85; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+.zestPinPulse {
+  transform-origin: center;
+  animation: zestPulse 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+.zestPinPulseInner {
+  transform-origin: center;
+  animation: zestPulseInner 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite 0.25s;
+}
+/* Synchronized Map Carousel (LazyRow Style) */
+.zestMapCarousel {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 14px 16px 20px;
+  margin: 0 -16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.zestMapCarousel::-webkit-scrollbar {
+  display: none;
+}
+.zestCarouselCard {
+  flex: 0 0 min(315px, calc(100vw - 52px));
+  scroll-snap-align: center;
+  background: #142427;
+  border: 1px solid rgba(49, 94, 104, 0.45);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+.zestCarouselCard:hover {
+  border-color: #519cab;
+  transform: translateY(-2px);
+}
+.zestCarouselCard.active {
+  border: 2px solid #ffc64f !important;
+  box-shadow: 0 8px 26px rgba(255, 198, 79, 0.25);
+  transform: translateY(-3px);
+}
+.zestCarouselPhoto {
+  position: relative;
+  width: 100%;
+  height: 135px;
+  overflow: hidden;
+  background: #1c3338;
+}
+.zestCarouselPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.zestCarouselMatch {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffc64f;
+  color: #142427;
+  font-size: 11px;
+  font-weight: 850;
+  padding: 4px 9px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.zestCarouselMatch small {
+  font-size: 9.5px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+.zestCarouselSave {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(20, 36, 39, 0.85);
+  border: 1px solid rgba(81, 156, 171, 0.4);
+  color: #c3e7f1;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.zestCarouselSave.saved {
+  color: #ffc64f;
+  border-color: #ffc64f;
+}
+.zestCarouselBody {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.zestCarouselRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.zestCarouselTitle {
+  font-size: 16px;
+  font-weight: 750;
+  color: #edf7fa;
+  margin: 0;
+  line-height: 1.25;
+}
+.zestCarouselRating {
+  font-size: 12.5px;
+  font-weight: 750;
+  color: #ffc64f;
+  white-space: nowrap;
+}
+.zestCarouselMeta {
+  font-size: 11px;
+  color: #8fc2cf;
+  line-height: 1.4;
+}
+.zestCarouselWhy {
+  font-size: 11.5px;
+  color: #dbeef4;
+  margin: 2px 0 0;
+  line-height: 1.45;
+}
+.zestCarouselDish {
+  font-size: 11px;
+  font-weight: 650;
+  color: #ffc64f;
+  margin-top: 2px;
+}
+.zestCarouselDish small {
+  color: #8fc2cf;
+  font-weight: 500;
+}
+.zestCarouselActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+.zestCarouselActions button {
+  flex: 1;
+  min-height: 36px;
+  font-size: 11.5px;
+  padding: 6px 12px;
+  border-radius: 99px;
+}
+
+/* Phase 4: Premium Zest Restaurant Cards & Detail Studio */
+.cardHeroContainer {
+  position: relative;
+  width: 100%;
+  height: 155px;
+  overflow: hidden;
+  background: #142427;
+  border-radius: 18px 18px 0 0;
+}
+.cardHeroContainer .photo {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.cardHeroContainer .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.restaurant-card:hover .cardHeroContainer .photo img {
+  transform: scale(1.04);
+}
+.cardHeroContainer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 36, 39, 0.4) 0%, transparent 40%, rgba(20, 36, 39, 0.92) 100%);
+  pointer-events: none;
+}
+.cardMatchBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background: #ffc64f;
+  color: #142427;
+  font-size: 11px;
+  font-weight: 850;
+  padding: 4px 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.cardMatchBadge small {
+  font-size: 9.5px;
+  font-weight: 650;
+  opacity: 0.9;
+}
+.cardSaveBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(20, 36, 39, 0.85);
+  border: 1px solid rgba(81, 156, 171, 0.4);
+  color: #c3e7f1;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.cardSaveBtn.saved {
+  color: #ffc64f;
+  border-color: #ffc64f;
+}
+.cardHeroMetaRow {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+.cardHeroPrice {
+  color: #ffc64f;
+  font-weight: 700;
+}
+.cardHeroVibe {
+  background: rgba(32, 55, 59, 0.85);
+  border: 1px solid rgba(81, 156, 171, 0.35);
+  padding: 2px 8px;
+  border-radius: 8px;
+  color: #edf7fa;
+  font-size: 10px;
+  font-weight: 600;
+}
+.cardBodyContent {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cardExploreBtn {
+  width: 100%;
+  min-height: 40px;
+  font-size: 12.5px;
+  font-weight: 700;
+  border-radius: 12px;
+  margin-top: 4px;
+  background: #519cab !important;
+  color: #0b1517 !important;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.cardExploreBtn:hover {
+  background: #6bb0be !important;
+  transform: translateY(-1px);
+}
+.cardBestDishes {
+  background: rgba(20, 36, 39, 0.7);
+  border: 1px solid rgba(49, 94, 104, 0.35);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin: 4px 0;
+}
+.cardBestDishesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.cardBestDishesTitle {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #ffc64f;
+}
+.viewAllDishesBtn {
+  background: transparent;
+  border: none;
+  color: #8fc2cf;
+  font-size: 10.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+.viewAllDishesBtn:hover {
+  color: #edf7fa;
+  text-decoration: underline;
+}
+.cardDishItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  font-size: 11.5px;
+  border-top: 1px solid rgba(49, 94, 104, 0.2);
+  cursor: pointer;
+}
+.cardDishInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+}
+.cardDishDiet.veg { color: #229555; }
+.cardDishDiet.nonVeg { color: #e05243; }
+.cardDishDiet.egg { color: #ffc64f; }
+.cardDishName {
+  font-weight: 650;
+  color: #edf7fa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cardDishPrice {
+  color: #8fc2cf;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+/* Phase 4: Place Detail Screen Enhancements */
+.placeHero {
+  position: relative;
+  min-height: 280px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #142427;
+}
+.placeHeroPhoto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 36, 39, 0.6) 0%, transparent 40%, rgba(20, 36, 39, 0.95) 100%);
+  pointer-events: none;
+}
+.placeHeroControls {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+.placeHeroControls button {
+  min-height: 40px;
+  padding: 8px 16px;
+  border-radius: 99px;
+  background: rgba(20, 36, 39, 0.85);
+  border: 1px solid rgba(81, 156, 171, 0.35);
+  color: #edf7fa;
+  font-size: 12.5px;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+}
+.placeHeroSaveBtn.saved {
+  color: #ffc64f !important;
+  border-color: #ffc64f !important;
+}
+.placeHeroTitle {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 60px 20px 20px;
+}
+.placeHeroTitle h1 {
+  font-size: 28px;
+  font-weight: 850;
+  color: #edf7fa;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+.placeHeroTitle p {
+  font-size: 12.5px;
+  color: #8fc2cf;
+  margin: 0;
+}
+.placeMatch {
+  background: #ffc64f;
+  color: #142427;
+  border-radius: 16px;
+  padding: 10px 14px;
+  text-align: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+.placeMatch strong {
+  font-size: 24px;
+  font-weight: 900;
+  display: block;
+  line-height: 1.1;
+}
+.placeMatch span {
+  font-size: 9.5px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.placeTagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+.cuisineTag {
+  background: rgba(20, 36, 39, 0.7);
+  border: 1px solid rgba(81, 156, 171, 0.35);
+  color: #c3e7f1;
+}
+.vibeTag {
+  background: rgba(81, 156, 171, 0.2);
+  border: 1px solid #519cab;
+  color: #edf7fa;
+  font-weight: 650;
+}
+.vegTag {
+  background: rgba(34, 149, 85, 0.2);
+  border: 1px solid #229555;
+  color: #4ade80;
+  font-weight: 750;
+}
+.placeBreakdown {
+  background: rgba(20, 36, 39, 0.85) !important;
+  border: 1px solid rgba(81, 156, 171, 0.35);
+  border-radius: 20px;
+  padding: 18px !important;
+}
+.placeAiHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.placeAiHeader h2 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #edf7fa;
+  margin: 0;
+}
+.placeAiBadge {
+  background: rgba(255, 198, 79, 0.15);
+  border: 1px solid rgba(255, 198, 79, 0.4);
+  color: #ffc64f;
+  font-size: 10px;
+  font-weight: 750;
+  padding: 3px 8px;
+  border-radius: 8px;
+}
+.placeAiNarrative {
+  font-size: 13px;
+  color: #c3e7f1;
+  line-height: 1.6;
+}
+.placeMetaDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 14px 0;
+}
+.placeMetaItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(49, 94, 104, 0.25);
+}
+.placeMetaItem span {
+  color: #8fc2cf;
+}
+.placeMetaItem strong {
+  color: #edf7fa;
+}
+.dishTasteHighlight {
+  font-size: 11px;
+  color: #ffc64f;
+  margin-top: 4px;
+  font-weight: 650;
+}
+.placeStickyActions {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(14, 26, 29, 0.94);
+  backdrop-filter: blur(14px);
+  padding: 12px 16px 20px;
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid rgba(49, 94, 104, 0.4);
+  z-index: 10;
+  margin: 20px -16px 0;
+}
+.placeStickyActions button {
+  flex: 1;
+  min-height: 46px;
+  font-size: 13.5px;
+  font-weight: 750;
+  border-radius: 99px;
+}
+
+/* Phase 5: Google Review Insights & Sentiment Intelligence */
+.placeReviewsSummary {
+  background: rgba(20, 36, 39, 0.85);
+  border: 1px solid rgba(81, 156, 171, 0.35);
+  border-radius: 20px;
+  padding: 18px;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.placeReviewsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.placeReviewsHeader h2 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #edf7fa;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.verifiedReviewsBadge {
+  background: rgba(81, 156, 171, 0.2);
+  border: 1px solid #519cab;
+  color: #8fc2cf;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.reviewRatingOverview {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px;
+  align-items: center;
+  background: rgba(14, 26, 29, 0.6);
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid rgba(49, 94, 104, 0.3);
+}
+.ratingBigScore {
+  text-align: center;
+}
+.ratingBigNumber {
+  font-size: 34px;
+  font-weight: 900;
+  color: #ffc64f;
+  line-height: 1;
+}
+.ratingBigStars {
+  color: #ffc64f;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 4px 0 2px;
+}
+.ratingCountSub {
+  font-size: 10px;
+  color: #8fc2cf;
+  font-weight: 600;
+}
+.ratingBarsList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ratingBarRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: #8fc2cf;
+}
+.ratingBarTrack {
+  flex: 1;
+  height: 6px;
+  background: rgba(49, 94, 104, 0.35);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.ratingBarFill {
+  height: 100%;
+  background: #ffc64f;
+  border-radius: 99px;
+}
+.reviewSentimentPills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sentimentPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+.sentimentPill.positive {
+  background: rgba(34, 149, 85, 0.2);
+  border: 1px solid #229555;
+  color: #4ade80;
+}
+.sentimentPill.mixed {
+  background: rgba(255, 198, 79, 0.15);
+  border: 1px solid rgba(255, 198, 79, 0.5);
+  color: #ffc64f;
+}
+.sentimentPill.critical {
+  background: rgba(224, 82, 67, 0.15);
+  border: 1px solid rgba(224, 82, 67, 0.4);
+  color: #f87171;
+}
+.reviewThemesCluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0;
+}
+.themeTag {
+  background: rgba(32, 55, 59, 0.7);
+  border: 1px solid rgba(81, 156, 171, 0.3);
+  color: #c3e7f1;
+  font-size: 11px;
+  padding: 4px 9px;
+  border-radius: 8px;
+  font-style: italic;
+}
+.dishMentionsSection {
+  margin-top: 6px;
+}
+.dishMentionsTitle {
+  font-size: 11.5px;
+  font-weight: 750;
+  color: #edf7fa;
+  margin-bottom: 6px;
+}
+.dishMentionsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.dishMentionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(14, 26, 29, 0.5);
+  border: 1px solid rgba(49, 94, 104, 0.25);
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-size: 11.5px;
+}
+.dishMentionName {
+  font-weight: 650;
+  color: #edf7fa;
+}
+.dishMentionCount {
+  font-size: 10px;
+  color: #ffc64f;
+  font-weight: 700;
+  background: rgba(255, 198, 79, 0.12);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.insiderTipsCard {
+  background: rgba(81, 156, 171, 0.1);
+  border: 1px solid rgba(81, 156, 171, 0.35);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-top: 4px;
+}
+.insiderTipsHead {
+  font-size: 11px;
+  font-weight: 800;
+  color: #ffc64f;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.insiderTipsBody {
+  font-size: 11.5px;
+  color: #c3e7f1;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Phase 7: Premium Apple-Quality Animation & Visual Polish Pass */
+@keyframes saveBounce {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.24) rotate(8deg); }
+  65% { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+.cardSaveBtn.saved,
+.placeHeroSaveBtn.saved {
+  animation: saveBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes likePulse {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.18); }
+  65% { transform: scale(0.94); }
+  100% { transform: scale(1); }
+}
+button[data-rest-action="like"][aria-pressed="true"] {
+  animation: likePulse 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes screenFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.screen {
+  animation: screenFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+@keyframes badgePop {
+  0% { transform: scale(0.92); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.cardMatchBadge,
+.placeMatch {
+  animation: badgePop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes shimmerWave {
+  0% { opacity: 0.55; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.55; }
+}
+.venuePlaceholder {
+  animation: shimmerWave 2.4s ease-in-out infinite;
+}
+
+/* Apple-style active state tactile feedback */
+button:active:not(:disabled) {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+/* Hardware accelerated smooth scrolling and gestures */
+.zestMapCarousel {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.zestCarouselCard {
+  scroll-snap-align: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+.zestCarouselCard.active {
+  transform: scale(1.02);
+}
+
+/* Refined depth and layered shadows */
+.card,
+.restaurant-card {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22), 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.restaurant-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.32), 0 2px 6px rgba(0, 0, 0, 0.16);
+}

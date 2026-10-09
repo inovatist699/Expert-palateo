@@ -8,7 +8,7 @@ async function main(){
  assert.equal(response.status,200,'public app must load without Vercel login');
  const html=await response.text();
  const local=fs.readFileSync(path.join(__dirname,'palateo_cloudflare_pages/app/index.html'),'utf8');
- assert.equal(html.replace(/\r\n?/g,'\n'),local.replace(/\r\n?/g,'\n'),'public alias must serve current build');
+ assert.equal(html.replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n'),local.replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n'),'public alias must serve current build');
  const script=html.match(/<script>([\s\S]*?)<\/script>/)[1].replace(/\r\n?/g,'\n');
  const hash='sha256-'+crypto.createHash('sha256').update(script).digest('base64');
  assert.ok(response.headers.get('content-security-policy')?.includes(hash),'live CSP hash must match');

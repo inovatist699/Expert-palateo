@@ -48,6 +48,8 @@ Private `.env*` files, `.vercel` account/project files, test credentials, local 
 
 ## Verified release baseline
 
-On 7 October 2026, deployment `dpl_32F8zH6A2Fpn4kaDEi3chwG6LhAs` restored the original Vercel design and additive feedback scoring while retaining authentication, compact mobile setup and reversible feedback. It is available at https://palateo.in/app/.
+On 9 October 2026, deployment `dpl_BbAtKnmAjDR2sPEVhExBmLdMcvCh` published the user-selected Zestmaps-inspired app and waitlist to https://palateo.in/. The eight-question taste quiz, existing Supabase integration and reversible feedback remain connected. The layout reference includes Zest's official App Store screenshots; no verified UI video walkthrough was available in the inspected sources.
 
-Recorded checks passed for onboarding/account isolation, feedback races and undo, recovery/email cooldown, waitlist, Sentry, live CSP/private-file protection and Supabase account-data isolation. Browser layout checks covered 320, 375, 768, 1024 and 1440px. A live test venue changed **95% → 99% → 95%** for like then undo. Physical-device Safari and recommendation accuracy against a labelled satisfaction dataset remain unverified. Screenshots and detailed execution records are local-only in `outputs/`.
+Recorded checks passed for onboarding/account isolation, feedback races and undo, recovery/email cooldown, waitlist, Sentry, live CSP/private-file protection and Supabase account-data isolation. The real browser check on the public domain completed all eight quiz steps, restored the session on reopening and changed a test venue **67% → 74% → 67%** for like then undo. App and waitlist layout checks covered 320, 375 and 1440px without page overflow or JavaScript runtime errors.
+
+Read [PRODUCT.md](PRODUCT.md), [DESIGN.md](DESIGN.md), [the design brief](docs/ZEST_REDESIGN_BRIEF.md) and [UI/UX design](docs/UI_UX_DESIGN.md) before further frontend changes. Physical-device Safari, full screen-reader compliance and recommendation accuracy against a labelled satisfaction dataset remain unverified. Screenshots and detailed execution records are local-only in `outputs/`.

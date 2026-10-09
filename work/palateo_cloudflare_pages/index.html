@@ -1,413 +1,61 @@
-<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Palateo — The Restaurant Map That Builds Itself · India</title><meta name="description" content="The restaurant map that builds itself across India's top metropolitan cities. Take the 60-second Taste Quiz, discover places your circle loves, and explore Mumbai, Delhi, Bengaluru, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad & more."><meta name="theme-color" content="#0d4a36"><link rel="canonical" href="https://palateo.in/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="Palateo — The restaurant map that builds itself"><meta property="og:description" content="Your taste. Your kind of place. The restaurant map that builds itself across India's top metropolitan food cities."><meta property="og:url" content="https://palateo.in/"><meta property="og:type" content="website"><meta property="og:image" content="https://palateo.in/og-image.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/waitlist.css"><script src="/waitlist.js" defer></script><script src="/vendor/sentry-11.4.0.min.js"></script><script src="/monitoring.js"></script></head><body>
-<div id="palateoLogoReveal" class="palateo-logo-reveal" aria-label="Palateo logo reveal" role="dialog" aria-modal="true">
-  <div class="reveal-backdrop"></div>
-  <div class="reveal-ambient-glow" aria-hidden="true"></div>
-  <div class="reveal-sparks" aria-hidden="true">
-    <span class="r-spark s1">✦</span>
-    <span class="r-spark s2">✳</span>
-    <span class="r-spark s3">✧</span>
-    <span class="r-spark s4">✦</span>
-    <span class="r-spark s5">✳</span>
-  </div>
-  <div class="reveal-stage">
-    <div class="reveal-emblem-wrap">
-      <div class="reveal-sheen-sweep" aria-hidden="true"></div>
-      <svg class="reveal-emblem-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <linearGradient id="revealGradRing" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#d4e95c" />
-            <stop offset="50%" stop-color="#10b981" />
-            <stop offset="100%" stop-color="#065f46" />
-          </linearGradient>
-          <linearGradient id="revealGradDome" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#ffffff" />
-            <stop offset="70%" stop-color="#f2f7f4" />
-            <stop offset="100%" stop-color="#d8ebe1" />
-          </linearGradient>
-          <linearGradient id="revealGradGold" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#fef08a" />
-            <stop offset="50%" stop-color="#f59e0b" />
-            <stop offset="100%" stop-color="#d97706" />
-          </linearGradient>
-          <filter id="revealGlow" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="3.5" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <circle class="r-path-halo" cx="60" cy="60" r="54" stroke="url(#revealGradRing)" stroke-width="2.5" stroke-linecap="round" />
-        <circle class="r-path-halo-inner" cx="60" cy="60" r="47" stroke="rgba(215,237,148,0.35)" stroke-width="1.2" stroke-dasharray="4 6" />
-        <line class="r-path-base" x1="30" y1="78" x2="90" y2="78" stroke="#a7f3d0" stroke-width="3" stroke-linecap="round" />
-        <line class="r-path-feet1" x1="42" y1="78" x2="42" y2="84" stroke="#a7f3d0" stroke-width="2.5" stroke-linecap="round" />
-        <line class="r-path-feet2" x1="78" y1="78" x2="78" y2="84" stroke="#a7f3d0" stroke-width="2.5" stroke-linecap="round" />
-        <path class="r-path-dome" d="M 33 76 C 33 46, 50 34, 60 34 C 70 34, 87 46, 87 76 Z" fill="url(#revealGradDome)" stroke="#065f46" stroke-width="1.8" />
-        <circle class="r-path-knob" cx="60" cy="30" r="4.5" fill="#10b981" stroke="#ecfdf5" stroke-width="1.5" />
-        <text class="r-path-monogram" x="58" y="70" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="bold" font-size="34" fill="#064e3b">p</text>
-        <path class="r-path-spark" d="M 74 46 Q 74 52 79 52 Q 74 52 74 58 Q 74 52 69 52 Q 74 52 74 46 Z" fill="url(#revealGradGold)" filter="url(#revealGlow)" />
-      </svg>
-    </div>
-    <div class="reveal-wordmark">
-      <div class="reveal-title-wrap">
-        <span class="reveal-letters">palate</span><span class="reveal-coral-o">o</span><span class="reveal-dot">.</span>
-      </div>
-      <p class="reveal-tagline">YOUR TASTE · YOUR KIND OF PLACE</p>
-      <div class="reveal-city-badge">
-        <span>ALL METROPOLITAN CITIES</span><span class="badge-sep">✦</span><span>INDIA</span>
-      </div>
-    </div>
-  </div>
-  <button type="button" class="reveal-skip-btn" id="revealSkipBtn" aria-label="Skip introduction">
-    Skip intro <span aria-hidden="true">↗</span>
-  </button>
-</div>
-<a class="skip" href="#join">Skip to waitlist</a>
-<header>
-  <a class="brand" href="/" aria-label="Palateo home"><span class="brand-symbol" aria-hidden="true">p</span>palateo<span class="brand-dot">.</span></a>
-  <div class="header-city-pill" aria-label="Covered Metropolitan Cities">
-    <span class="pulse" aria-hidden="true"></span>
-    <span class="header-city-text">13 METRO CITIES LIVE</span>
-  </div>
-  <nav aria-label="Main">
-    <a class="about-link" href="#how">How it works</a>
-    <a class="about-link" href="#quiz-preview">Taste Quiz</a>
-    <a class="about-link" href="#metros">Metros</a>
-    <a class="nav-cta" href="/app/">Explore App <span aria-hidden="true">↗</span></a>
-  </nav>
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Palateo — Good taste. Great places.</title>
+<meta name="description" content="Discover restaurants around your taste. Take the Palateo taste quiz, explore the beta, and join the waitlist for city launch updates.">
+<meta name="theme-color" content="#c3e7f1"><link rel="canonical" href="https://palateo.in/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Palateo — Good taste. Great places."><meta property="og:description" content="A little about your taste. A whole new way to find your kind of place. Explore Palateo and join the waitlist."><meta property="og:url" content="https://palateo.in/"><meta property="og:type" content="website"><meta property="og:image" content="https://palateo.in/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/waitlist.css"><script src="/waitlist.js" defer></script><script src="/vendor/sentry-11.4.0.min.js"></script><script src="/monitoring.js"></script>
+</head>
+<body>
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="bookmark" viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4Z"/></symbol>
+<symbol id="tune" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="2.5"/><circle cx="15" cy="17" r="2.5"/></symbol>
+</defs></svg>
+<a class="skip" href="#main">Skip to content</a>
+<div class="header-shell">
+<header class="site-header wrap">
+<a class="brand" href="/" aria-label="Palateo home"><span class="brand-mark" aria-hidden="true">p</span>palateo<span class="brand-dot">.</span></a>
+<nav aria-label="Main navigation"><a class="nav-story" href="#how">How it works</a><a class="nav-quiz" href="/app/?quiz=1">Taste quiz</a><a class="nav-cta" href="#join">Join the waitlist <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></nav>
 </header>
-<main>
-<section class="hero" aria-labelledby="headline">
-  <div class="hero-copy">
-    <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> THE RESTAURANT MAP THAT BUILDS ITSELF</p>
-    <h1 id="headline">Good taste.<br>Great <em>places.</em></h1>
-    <p class="intro">Palateo maps everywhere you love to eat and reveals where your taste-twins keep going back. Skip the bank link — take our <strong>60-second Taste Quiz</strong> to unlock your personal dining radar across India's top metropolitan cities.<br>Zero sponsored rankings. Zero influencer hype. <strong>100% taste.</strong></p>
-    <div class="hero-actions">
-      <a class="primary" href="#join">Claim your VIP spot <span aria-hidden="true">↗</span></a>
-      <a class="secondary-hero-btn" href="/app/">Try Beta App Now <span aria-hidden="true">✦</span></a>
-    </div>
-    <div class="launch-note">
-      <span aria-hidden="true">✦</span>
-      <p>Now curating Mumbai, Delhi NCR, Bengaluru, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad &amp; more.<br><span>A little curiosity. A lot of good taste.</span></p>
-    </div>
-  </div>
-
-  <div class="scene" role="img" aria-label="Interactive Flavor Radar & Map Preview">
-    <div class="orbit orbit-one"></div>
-    <div class="orbit orbit-two"></div>
-    <div class="orbit orbit-three"></div>
-    <span class="scene-word">your dining DNA</span>
-    <div class="scene-shadow"></div>
-    <div class="plate-motion">
-      <div class="plate">
-        <div class="plate-rim"></div>
-        <div class="plate-center">
-          <span class="plate-monogram">p<span>✦</span></span>
-          <span class="plate-type">CALIBRATED FOR INDIA</span>
-        </div>
-      </div>
-      <div class="leaf leaf-one"></div>
-      <div class="leaf leaf-two"></div>
-      <div class="tomato"><span></span></div>
-      <div class="olive olive-one"></div>
-      <div class="olive olive-two"></div>
-    </div>
-    <div class="float-card card-coffee">
-      <span class="card-icon">⚡</span>
-      <div>
-        <span class="micro">NO BANK LINK NEEDED</span>
-        <strong>60-Sec Taste Quiz<br>Builds your flavor map</strong>
-      </div>
-      <span class="card-star">✦</span>
-    </div>
-    <div class="float-card card-match">
-      <span class="match-icon">98%</span>
-      <div>
-        <span class="micro">TRUE TASTE MATCH</span>
-        <strong>The Bombay Canteen<br>Progressive Indian · BKC</strong>
-      </div>
-      <span class="match-dot"></span>
-    </div>
-    <div class="float-tag tag-one"><span>✦</span> Toit Indiranagar · 96%</div>
-    <div class="float-tag tag-two"><span>↗</span> Indian Accent · 99%</div>
-    <span class="spark spark-one">✳</span>
-    <span class="spark spark-two">✧</span>
-  </div>
-
-  <div class="hero-bottom">
-    <span>LESS SCROLLING. MORE SAVOURING. ZERO FAKE REVIEWS.</span>
-    <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false">Pause motion</button>
-    <a href="#quiz-preview">Scroll to explore <span aria-hidden="true">↓</span></a>
-  </div>
-</section>
-
-<div class="ticker" aria-hidden="true">
-  <div>MUMBAI <span>✦</span> DELHI NCR <span>✦</span> BENGALURU <span>✦</span> HYDERABAD <span>✦</span> CHENNAI <span>✦</span> KOLKATA <span>✦</span> PUNE <span>✦</span> AHMEDABAD <span>✦</span> VADODARA <span>✦</span> JAIPUR <span>✦</span> KOCHI <span>✦</span> GOA <span>✦</span> CHANDIGARH <span>✦</span> YOUR TASTE IS THE COMPASS <span>✦</span> DISCOVER SOMETHING DELICIOUS <span>✦</span> GO WHERE YOU BELONG <span>✦</span></div>
 </div>
-
-<!-- INTERACTIVE QUIZ TEASER (REPLACES PLAID) -->
-<section class="quiz-teaser-section reveal" id="quiz-preview" aria-labelledby="quiz-teaser-title">
-  <div class="quiz-teaser-header">
-    <p class="eyebrow">01 / The Anti-Plaid Discovery</p>
-    <h2 id="quiz-teaser-title">No bank credentials required.<br>Just your <em>culinary instincts.</em></h2>
-    <p class="quiz-teaser-sub">Other apps demand access to your bank transactions. Palateo takes 60 seconds with an intuitive Taste Calibration Quiz to map your true flavor DNA across India's metropolitan cities.</p>
-  </div>
-
-  <div class="quiz-interactive-widget" id="interactiveQuizWidget">
-    <div class="quiz-widget-card">
-      <div class="quiz-widget-steps">
-        <span class="q-badge">TASTE CALIBRATION DEMO</span>
-        <span class="q-step-counter">Tap to calibrate</span>
-      </div>
-      
-      <div class="quiz-demo-question">
-        <label class="quiz-q-label">Step 1: What is your spice dial?</label>
-        <div class="quiz-pill-group" data-group="spice">
-          <button type="button" class="quiz-pill active" data-spice="balanced">Balanced &amp; Aromatic</button>
-          <button type="button" class="quiz-pill" data-spice="mild">Mild &amp; Nuanced</button>
-          <button type="button" class="quiz-pill" data-spice="hot">Fiery Desi Masala 🔥</button>
-        </div>
-
-        <label class="quiz-q-label">Step 2: What is your dining vibe?</label>
-        <div class="quiz-pill-group" data-group="vibe">
-          <button type="button" class="quiz-pill active" data-vibe="speakeasy">Cocktail Bar &amp; Speakeasy 🍸</button>
-          <button type="button" class="quiz-pill" data-vibe="cozy">Cozy Hidden Bistro 🌿</button>
-          <button type="button" class="quiz-pill" data-vibe="heritage">Heritage &amp; Iconic Thali 🏛️</button>
-          <button type="button" class="quiz-pill" data-vibe="rooftop">Chic Rooftop Alfresco 🌇</button>
-        </div>
-
-        <label class="quiz-q-label">Step 3: Select your Metropolitan City</label>
-        <div class="quiz-pill-group" data-group="city">
-          <button type="button" class="quiz-pill active" data-city="Mumbai">Mumbai</button>
-          <button type="button" class="quiz-pill" data-city="Delhi NCR">Delhi NCR</button>
-          <button type="button" class="quiz-pill" data-city="Bengaluru">Bengaluru</button>
-          <button type="button" class="quiz-pill" data-city="Hyderabad">Hyderabad</button>
-          <button type="button" class="quiz-pill" data-city="Chennai">Chennai</button>
-          <button type="button" class="quiz-pill" data-city="Kolkata">Kolkata</button>
-          <button type="button" class="quiz-pill" data-city="Pune">Pune</button>
-          <button type="button" class="quiz-pill" data-city="Ahmedabad">Ahmedabad</button>
-          <button type="button" class="quiz-pill" data-city="Vadodara">Vadodara</button>
-          <button type="button" class="quiz-pill" data-city="Jaipur">Jaipur</button>
-          <button type="button" class="quiz-pill" data-city="Kochi">Kochi</button>
-          <button type="button" class="quiz-pill" data-city="Goa">Goa</button>
-          <button type="button" class="quiz-pill" data-city="Chandigarh">Chandigarh</button>
-        </div>
-      </div>
-
-      <div class="quiz-result-box" id="quizDemoResult">
-        <div class="result-archetype">
-          <span class="archetype-label">YOUR FLAVOR ARCHETYPE</span>
-          <strong id="archetypeName">The Progressive Umami Explorer</strong>
-          <p id="archetypeDesc">You prioritize culinary technique, ambient speakeasy energy, and balanced aromatic profiles.</p>
-        </div>
-        <div class="result-match-card">
-          <div class="match-score-badge">98% Match</div>
-          <div class="match-meta">
-            <strong id="matchedVenueName">The Bombay Canteen</strong>
-            <span id="matchedVenueArea">Lower Parel, Mumbai · Progressive Indian</span>
-          </div>
-          <a href="/app/" class="quiz-result-cta">Explore Full Map in App ↗</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS: 4 PILLARS -->
-<section class="idea reveal" id="how" aria-labelledby="idea-title">
-  <div>
-    <p class="eyebrow">02 / Built around taste, not hype</p>
-    <h2 id="idea-title">The restaurant map<br>that <em>builds itself.</em></h2>
-  </div>
-  <p class="idea-copy">Ratings on typical apps are polluted by paid promotions and anonymous tourist reviews. Palateo pairs you with dishes and spots that reflect who you actually are when you dine.</p>
-</section>
-
-<section class="steps" aria-label="What to expect">
-  <article class="step reveal">
-    <span class="step-number">01</span>
-    <div class="mini-art taste-art" aria-hidden="true"><span>✦</span><span>✳</span><span>✦</span></div>
-    <h3>The 60-Second Taste Quiz</h3>
-    <p>Zero bank logins or invasive financial access. Answer 6 intuitive questions to build your personal culinary DNA.</p>
-  </article>
-  <article class="step reveal">
-    <span class="step-number">02</span>
-    <div class="mini-art discover-art" aria-hidden="true"><span>🗺️</span><span>↗</span></div>
-    <h3>The Living Metro Map</h3>
-    <p>Dynamic 3D vector map of India's top metropolitan food hubs. Pulsing pins, flavor clusters, and neighborhood radars.</p>
-  </article>
-  <article class="step reveal">
-    <span class="step-number">03</span>
-    <div class="mini-art save-art" aria-hidden="true">🧾</div>
-    <h3>Recommendations with Receipts</h3>
-    <p>Every suggestion shows exactly WHY it fits: spice level, crowd energy, signature dishes, and atmosphere notes.</p>
-  </article>
-</section>
-
-<!-- METROPOLITAN CITIES SHOWCASE -->
-<section class="metros-section reveal" id="metros" aria-labelledby="metros-title">
-  <div class="metros-header">
-    <p class="eyebrow">03 / India's Dining Capitals</p>
-    <h2 id="metros-title">Curated across all<br><em>Metropolitan Cities.</em></h2>
-    <p class="metros-sub">From Bandra cocktail dens to Bangalore microbreweries, Park Street legends to Mehrauli alfresco dinners.</p>
-  </div>
-  <div class="metro-card-grid">
-    <div class="metro-card">
-      <div class="metro-badge">MUMBAI</div>
-      <h3>The Flavor Capital</h3>
-      <p>Lower Parel, Bandra, Colaba, BKC, Juhu</p>
-      <div class="metro-tag">The Bombay Canteen · Subko · Veronica's · Trishna</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">DELHI NCR</div>
-      <h3>Grand Culinary Heritage</h3>
-      <p>Connaught Place, Cyber Hub, Mehrauli, GK</p>
-      <div class="metro-tag">Indian Accent · Bukhara · Fig &amp; Maple · Leo's</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">BENGALURU</div>
-      <h3>Pub Culture &amp; Specialty Brews</h3>
-      <p>Indiranagar, Koramangala, Lavelle Road</p>
-      <div class="metro-tag">Toit · The Permit Room · Maverick &amp; Farmer</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">HYDERABAD</div>
-      <h3>Royal Spice &amp; Modern Lounges</h3>
-      <p>Jubilee Hills, Banjara Hills, Hitec City</p>
-      <div class="metro-tag">Roastery Coffee House · Olive Bistro · Bawarchi</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">CHENNAI</div>
-      <h3>Coastal Gastronomy &amp; Filter Kaapi</h3>
-      <p>Alwarpet, Besant Nagar, ECR, Nungambakkam</p>
-      <div class="metro-tag">Dakshin · Amethyst · Ciclo Cafe · Murugan</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">KOLKATA</div>
-      <h3>Heritage Bistros &amp; Old World Charm</h3>
-      <p>Park Street, Ballygunge, Southern Avenue</p>
-      <div class="metro-tag">Peter Cat · 6 Ballygunge Place · Flurys · Mocambo</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">PUNE</div>
-      <h3>Bohemian Cafes &amp; Craft Breweries</h3>
-      <p>Koregaon Park, Kalyani Nagar, FC Road</p>
-      <div class="metro-tag">Malaka Spice · German Bakery · Paashh · Le Plaisir</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">AHMEDABAD</div>
-      <h3>Architectural Haveli &amp; Thali Dining</h3>
-      <p>Bodakdev, Sindhu Bhavan Road, Old City</p>
-      <div class="metro-tag">Agashiye · Under The Neem Trees · Melt In · Makeba</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">VADODARA</div>
-      <h3>Art Deco Cafes &amp; Royal Heritage</h3>
-      <p>Alembic City, Alkapuri, Sayajiganj, Gotri</p>
-      <div class="metro-tag">The Brewery · 22nd Parallel · Mandap · Canara</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">JAIPUR</div>
-      <h3>Regal Palaces &amp; Artisanal Roasters</h3>
-      <p>C-Scheme, Narain Niwas Palace, Civil Lines</p>
-      <div class="metro-tag">Bar Palladio · Tapri Central · Caffix · Handi</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">KOCHI</div>
-      <h3>Spice Coast &amp; Bohemian Courtyards</h3>
-      <p>Fort Kochi, Mattancherry, Panampilly Nagar</p>
-      <div class="metro-tag">Kashi Art Cafe · Grand Pavilion · Seagull · French Toast</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">GOA</div>
-      <h3>Tropical Susegad &amp; World Gastronomy</h3>
-      <p>Assagao, Anjuna, Vagator, Fontainhas, Saligao</p>
-      <div class="metro-tag">Gunpowder · Burger Factory · Olive · Bomras</div>
-    </div>
-    <div class="metro-card">
-      <div class="metro-badge">CHANDIGARH</div>
-      <h3>Modernist Courtyards &amp; Sector Bistros</h3>
-      <p>Sector 7, Sector 9, Sector 26, Sector 35</p>
-      <div class="metro-tag">Virgin Courtyard · Backpackers Cafe · Willow Cafe · Whistling Duck</div>
-    </div>
-  </div>
-</section>
-
-<!-- JOIN WAITLIST SECTION -->
-<section class="join-section reveal" id="join" aria-labelledby="join-title">
-  <div class="join-copy">
-    <p class="eyebrow">Your seat at the table</p>
-    <h2 id="join-title">Something delicious<br>is <em>on its way.</em></h2>
-    <p>Be the first to unlock your Living Flavor Map when Palateo launches in your city. Leave your email. Bring your appetite.</p>
-    <div class="waitlist-counter-badge">
-      <span class="counter-dot"></span>
-      <span>14,800+ food lovers registered across India</span>
-    </div>
-    <div class="cities">
-      <span>MUMBAI</span><span>DELHI NCR</span><span>BENGALURU</span><span>HYDERABAD</span><span>CHENNAI</span><span>KOLKATA</span><span>PUNE</span><span>AHMEDABAD</span><span>VADODARA</span><span>JAIPUR</span><span>GOA</span><span>KOCHI</span><span>CHANDIGARH</span>
-    </div>
-  </div>
-
-  <div class="join-card">
-    <span class="small-label">THE PALATEO METROPOLITAN WAITLIST</span>
-    <h3>Let’s save you a seat.</h3>
-    <form id="waitlist-form">
-      <label for="email">Your email</label>
-      <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" maxlength="254" required>
-      
-      <label for="city">Your metropolitan city</label>
-      <select id="city" name="city" required>
-        <option value="" disabled selected>Where do you explore?</option>
-        <option value="Mumbai">Mumbai</option>
-        <option value="Delhi NCR">Delhi NCR</option>
-        <option value="Bengaluru">Bengaluru</option>
-        <option value="Hyderabad">Hyderabad</option>
-        <option value="Chennai">Chennai</option>
-        <option value="Kolkata">Kolkata</option>
-        <option value="Pune">Pune</option>
-        <option value="Ahmedabad">Ahmedabad</option>
-        <option value="Vadodara">Vadodara</option>
-        <option value="Jaipur">Jaipur</option>
-        <option value="Kochi">Kochi</option>
-        <option value="Goa">Goa</option>
-        <option value="Chandigarh">Chandigarh</option>
-        <option value="Other">Somewhere else</option>
-      </select>
-
-      <div class="honey" aria-hidden="true">
-        <label for="website">Leave this empty</label>
-        <input id="website" name="website" tabindex="-1" autocomplete="off">
-      </div>
-
-      <label class="consent">
-        <input type="checkbox" name="consent" required>
-        <span>I’d like Palateo launch emails. I’ve read the <a href="/privacy/">privacy notice</a> and can opt out anytime.</span>
-      </label>
-
-      <button class="primary" type="submit">Join the waitlist <span aria-hidden="true">↗</span></button>
-      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-    </form>
-    <div class="waitlist-vip-note">
-      <span class="vip-icon">✦</span>
-      <p>Zero account or password needed. Instant spot reservation.</p>
-    </div>
-    <noscript><p>Enable JavaScript to join, or contact <a href="mailto:palateo.com@gmail.com">palateo.com@gmail.com</a>.</p></noscript>
-  </div>
-</section>
+<main id="main">
+<div class="opening">
+<section class="hero wrap" aria-labelledby="headline">
+<div class="hero-copy"><h1 id="headline">Good taste.<br>Great places.</h1><p class="hero-intro">Your next favourite place is out there.<br>Let your taste lead the way.</p><p class="hero-description">A quick quiz gets to know what you love, from the spice on your plate to the vibe around your table. Find a little more <em>you</em> in every meal.</p><div class="hero-actions"><a class="button button-primary" href="/app/?quiz=1">Find my taste <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><a class="text-link" href="/app/">Explore the beta <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div><p class="hero-note">A few questions. No bank connection.</p></div>
+<figure class="scene" aria-label="Illustrative preview of Palateo’s restaurant map">
+<div class="phone"><div class="phone-camera" aria-hidden="true"></div><div class="phone-content">
+<div class="preview-header"><span class="preview-brand">palateo.</span><span class="preview-avatar" aria-hidden="true">p</span></div>
+<div class="preview-title"><span>Your kind of place.</span><small><svg class="icon" aria-hidden="true"><use href="#pin"/></svg> Ahmedabad</small></div>
+<div class="preview-filters" aria-hidden="true"><span class="selected">For you</span><span>Cafés</span><span>Dinner</span></div>
+<div class="preview-map"><svg class="map-art" viewBox="0 0 290 305" aria-hidden="true">
+<rect width="290" height="305" fill="#c3e7f1"/><g fill="#d7edf3"><path d="M0 0h94v66H0zM123 0h72v52h-72zM16 110h60v66H16zM103 106h73v80h-73zM13 222h81v59H13zM124 228h72v77h-72zM238 31h52v66h-52zM239 207h51v98h-51z"/></g><path d="M231-20c-36 72 0 102-14 157s-42 104-23 188" fill="none" stroke="#519cab" stroke-width="21"/>
+<g fill="none" stroke="#f8fff8" stroke-width="8"><path d="M-10 88 301 63M-10 202l301-8M105-5 90 314M-5 296 290 132M23-5 293 302"/></g><g fill="none" stroke="#93bec8" stroke-width="1"><path d="M-10 88 301 63M-10 202l301-8M105-5 90 314M-5 296 290 132M23-5 293 302"/></g>
+<g fill="#20373b" font-family="sans-serif" font-size="8" letter-spacing="1"><text x="16" y="56">BODAKDEV</text><text x="103" y="158">NAVRANGPURA</text><text x="12" y="258">SATELLITE</text><text x="235" y="117" transform="rotate(90 235 117)">SABARMATI</text></g>
+<g fill="#519cab" stroke="#f4ffff" stroke-width="3"><circle cx="51" cy="118" r="12"/><circle cx="155" cy="84" r="12"/><circle cx="161" cy="238" r="12"/></g><g fill="#f4ffff"><circle cx="51" cy="118" r="3"/><circle cx="155" cy="84" r="3"/><circle cx="161" cy="238" r="3"/></g><circle cx="111" cy="206" r="21" fill="#ffc64f" opacity=".28"/><circle cx="111" cy="206" r="12" fill="#20373b" stroke="#f4ffff" stroke-width="3"/><path d="m107 206 3 3 5-6" fill="none" stroke="#ffc64f" stroke-width="2"/></svg><div class="map-caption"><span class="map-caption-dot"></span>Explore around you</div></div>
+<div class="preview-place"><div class="place-symbol" aria-hidden="true"><svg class="icon"><use href="#pin"/></svg></div><div><strong>Your next favourite</strong><span>Good food. Your kind of atmosphere.</span></div><svg class="icon save-symbol" aria-hidden="true"><use href="#bookmark"/></svg></div>
+<div class="preview-bottom" aria-hidden="true"><span class="active"><svg class="icon"><use href="#pin"/></svg> Discover</span><span><svg class="icon"><use href="#bookmark"/></svg> Saved</span><span><svg class="icon"><use href="#tune"/></svg> My taste</span></div>
+</div></div><figcaption>Map concept preview · illustrative layout</figcaption></figure>
+</section><div class="opening-bottom wrap"><span>Made for the way you like to eat.</span><button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false">Pause motion</button><a href="#how">A little taste of Palateo <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
+</div>
+<section class="how-section" id="how" aria-labelledby="how-title"><div class="wrap how-layout">
+<div class="section-intro"><h2 id="how-title">Less “where should<br>we eat?”<br>More “let’s go.”</h2><p>The best recommendation starts with knowing what matters to you.</p><a class="text-link" href="/app/?quiz=1">Get to know your taste <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
+<ol class="how-steps"><li><span class="step-number">1</span><div><h3>Start with your taste.</h3><p>Tell us about your go-to flavours, budget and dining mood. Build a profile that feels like you.</p></div></li><li><span class="step-number">2</span><div><h3>Find your kind of place.</h3><p>Explore suggestions in the beta and see why a place fits your preferences.</p></div></li><li><span class="step-number">3</span><div><h3>Keep the good ones close.</h3><p>Save places you want to try. Give your next dinner plan a head start.</p></div></li></ol>
+</div></section>
+<section class="quiz-section" id="quiz-preview" aria-labelledby="quiz-title"><div class="wrap quiz-layout">
+<div class="quiz-sample" aria-label="Illustrative taste quiz question"><h3>How much heat<br>is your kind of heat?</h3><div class="sample-options" aria-hidden="true"><div><span class="sample-radio"></span>Mild &amp; mellow</div><div class="sample-selected"><span class="sample-radio"></span>A little kick <svg class="icon"><path d="m5 12 4 4L19 6"/></svg></div><div><span class="sample-radio"></span>Bring the heat</div></div><p class="sample-note">Illustrative question. Take the quiz to build your profile.</p></div>
+<div class="quiz-copy"><h2 id="quiz-title">A little about you.<br>A lot to discover.</h2><p>Big on spice? Here for a quiet café? Always in the mood to try something new? Your taste has a story. Let’s start there.</p><a class="button button-dark" href="/app/?quiz=1">Take the taste quiz <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><p class="quiz-note">Your preferences. Your profile. Ready for the next good meal.</p></div>
+</div></section>
+<section class="join-section" id="join" aria-labelledby="join-title"><div class="wrap join-layout">
+<div class="join-copy"><h2 id="join-title">Your city.<br>Your table.<br>Your invitation.</h2><p>We’re building Palateo one good discovery at a time. Join the waitlist for updates as we prepare to launch.</p><div class="launch-cities"><svg class="icon" aria-hidden="true"><use href="#pin"/></svg><span>Starting with Ahmedabad &amp; Vadodara.<br>Somewhere else? We’d love to know.</span></div><a class="text-link" href="/app/">Explore what’s in the beta <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
+<div class="join-card"><h3>Save me a seat.</h3><p class="form-intro">Get Palateo launch updates in your inbox.</p>
+<form id="waitlist-form"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" maxlength="254" required><label for="city">Your city</label><select id="city" name="city" required><option value="" disabled selected>Choose your city</option><option value="Ahmedabad">Ahmedabad</option><option value="Vadodara">Vadodara</option><option value="Other">Somewhere else</option></select><div class="honey" aria-hidden="true"><label for="website">Leave this empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div><label class="consent"><input type="checkbox" name="consent" required><span>I’d like Palateo launch emails. I’ve read the <a href="/privacy/">privacy notice</a> and can opt out anytime.</span></label><button class="button button-primary" type="submit"><span class="submit-label">Join the waitlist</span><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button><p class="form-status" id="form-status" role="status" aria-live="polite" aria-atomic="true"></p></form><p class="form-note">No password needed. Just a little appetite.</p><noscript><p>Enable JavaScript to join, or email <a href="mailto:palateo.com@gmail.com">palateo.com@gmail.com</a>.</p></noscript></div>
+</div></section>
+<section class="faq-section wrap" aria-labelledby="faq-title"><h2 id="faq-title">A few things<br>you might wonder.</h2><div class="faq-list"><details><summary>Can I try Palateo today?<span aria-hidden="true">+</span></summary><p>Yes. <a href="/app/">Explore the beta</a> to try the taste profile and restaurant discovery. The product is still developing; joining the waitlist gets you launch updates.</p></details><details><summary>Do I need to connect my bank?<span aria-hidden="true">+</span></summary><p>No. Palateo gets to know your preferences through the taste quiz. No bank connection is needed.</p></details><details><summary>What if my city isn’t listed?<span aria-hidden="true">+</span></summary><p>Choose “Somewhere else” when you join the waitlist. We’re starting with Ahmedabad and Vadodara, and will share expansion news by email.</p></details></div></section>
 </main>
-
-<footer>
-  <div class="footer-top">
-    <div>
-      <a class="brand" href="/">palateo<span class="brand-dot">.</span></a>
-      <p>The restaurant map that builds itself across India.</p>
-    </div>
-    <a href="https://www.instagram.com/palateo.co/" target="_blank" rel="noopener noreferrer">Follow the flavour on Instagram ↗</a>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Palateo · Made with appetite in India for all food lovers.</span>
-    <nav aria-label="Footer">
-      <a href="/privacy/">Privacy</a>
-      <a href="/terms/">Terms</a>
-      <a href="mailto:palateo.com@gmail.com">Say hello</a>
-      <a href="/app/">Explore the beta app ↗</a>
-    </nav>
-  </div>
-</footer>
-</body></html>
+<footer class="site-footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="/">palateo<span class="brand-dot">.</span></a><p>Good taste. Great places.</p></div><a class="text-link" href="https://www.instagram.com/palateo.co/" target="_blank" rel="noopener noreferrer">Follow our next chapter <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div><div class="footer-bottom"><span>© 2026 Palateo. Made with appetite in India.</span><nav aria-label="Footer navigation"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:palateo.com@gmail.com">Say hello</a></nav></div></div></footer>
+</body>
+</html>

@@ -7,7 +7,8 @@ const scripts = [
   'check-sentry.cjs',
   'test-recommendation-quality.cjs',
   'check-dish-calibration.cjs',
-  'check-design-colors.cjs'
+  'check-design-colors.cjs',
+  'check-palo-pet.cjs'
 ];
 
 let failed = false;

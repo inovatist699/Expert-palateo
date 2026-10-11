@@ -8,6 +8,14 @@ const html = fs.readFileSync(path.join(dir, 'app', 'index.html'), 'utf8');
 const css = fs.readFileSync(path.join(dir, 'app', 'theme.css'), 'utf8');
 const script = html.match(/<script>([\s\S]*?)<\/script>/)[1].replace(/\r\n?/g, '\n');
 
+const config = JSON.parse(fs.readFileSync(path.join(dir, 'vercel.json'), 'utf8'));
+const appRedirect = config.redirects?.find(route => route.source === '/app');
+assert.ok(appRedirect, '/app must redirect before relative assets load');
+assert.equal(appRedirect.destination, '/app/', '/app/ is the canonical app URL');
+assert.equal(appRedirect.permanent, true, 'Canonical app redirect must be permanent');
+const themeHref = html.match(/<link rel="stylesheet" href="([^"]+)"/)[1];
+assert.equal(new URL(themeHref, 'https://palateo.in' + appRedirect.destination).pathname, '/app/theme.css', 'Redirected app must load its actual theme');
+
 // 1. Production Security & Hygiene Audit
 assert.doesNotMatch(html, /service_role/i, 'Client HTML must never expose Supabase service_role keys');
 assert.doesNotMatch(html, /supabase_secret/i, 'Client HTML must not expose secret API credentials');

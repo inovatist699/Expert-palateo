@@ -13,7 +13,7 @@ async function call(body, method='POST', headers={}) {
  assert.equal((await call({},'GET')).code,405);
  assert.equal((await call({email:'invalid',city:'Ahmedabad',consent:true})).code,400);
  assert.equal((await call({email:'test@example.invalid',city:'Other',consent:false})).code,400);
- assert.equal((await call({email:'test@example.invalid',city:'Unknown',consent:true})).code,400);
+ assert.equal((await call({email:'test@example.invalid',city:'Mumbai',consent:true})).code,400);
  assert.equal((await call({},'POST',{origin:'https://evil.example'})).code,403);
  assert.equal((await call({},'POST',{'content-length':'3000'})).code,413);
  assert.equal((await call({extra:'x'.repeat(3000)})).code,413,'Actual body size is checked without a Content-Length header');

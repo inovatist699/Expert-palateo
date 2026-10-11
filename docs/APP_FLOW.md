@@ -46,4 +46,4 @@ Manual city selection clears temporary coordinates and browses the chosen city. 
 
 Profile → privacy request email to palateo.com@gmail.com → manual ownership verification → access/correction/export/deletion handling. Sign-out clears browser account preferences; it does not delete the cloud account. A future deletion workflow should confirm account-versus-waitlist scope, eligible data removal and retention/backups before confirming completion. Operator: Aayush Mittal, 937, GIDC Makarpura, Vadodara.
 
-References: [PRD](PRD.md), [app](../work/palateo_cloudflare_pages/app/index.html), [waitlist](../work/palateo_cloudflare_pages/waitlist.js), [privacy](../work/palateo_cloudflare_pages/privacy/index.html), [terms](../work/palateo_cloudflare_pages/terms/index.html).
+References: [PRD](PRD.md), [app architecture](ARCHITECTURE.md), [waitlist](../src/waitlist/controller.js), [privacy](../src/legal/privacy/index.html), [terms](../src/legal/terms/index.html).

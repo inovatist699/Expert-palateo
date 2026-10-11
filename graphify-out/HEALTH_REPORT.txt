@@ -1,0 +1,41 @@
+[graphify] MultiDiGraph edge-collapse diagnostic
+input: <in-memory>
+input_stage: provided JSON (normal graph.json is post-build)
+effective_directed: <direct-call>
+nodes: 219
+unverified_code_nodes: 0
+raw_edges: 505
+valid_candidate_edges: 473
+missing_endpoint_edges: 0
+dangling_endpoint_edges: 0
+external_reference_edges: 32
+self_loop_edges: 0
+exact_duplicate_edges: 0
+directed_unique_endpoint_pairs: 433
+directed_same_endpoint_collapsed_edges: 40
+undirected_unique_endpoint_pairs: 433
+undirected_same_endpoint_collapsed_edges: 40
+same_endpoint_group_count: 40
+relation_variant_groups: 40
+source_file_variant_groups: 0
+source_location_variant_groups: 0
+context_variant_groups: 0
+post_build_graph_type: DiGraph
+post_build_edges: 465
+producer_suppression_sites: 12
+producer_suppression_examples:
+  - L1749 seen_ids arity=unknown
+  - L2282 seen_ids arity=unknown
+  - L2284 seen_doc_refs arity=unknown
+  - L2762 seen_ids arity=unknown
+  - L2909 seen_ids arity=unknown
+  - L3708 seen_keys arity=unknown
+  - L3881 seen_keys arity=unknown
+  - L6088 seen_ids arity=unknown
+examples:
+  - work_check_taste_onboarding -> work_check_taste_onboarding_node edges=2 relations=['contains', 'indirect_call'] locations=['L11', 'L18'] contexts=['', 'collection']
+  - work_check_waitlist -> work_check_waitlist_call edges=2 relations=['calls', 'contains'] locations=['L13', 'L6'] contexts=['', 'call']
+  - work_test_recommendation_quality -> work_test_recommendation_quality_node edges=2 relations=['contains', 'indirect_call'] locations=['L11', 'L20'] contexts=['', 'collection']
+  - work_palateo_cloudflare_pages_waitlist -> work_palateo_cloudflare_pages_waitlist_update edges=2 relations=['calls', 'contains'] locations=['L75', 'L99'] contexts=['', 'call']
+  - work_palateo_cloudflare_pages_waitlist -> work_palateo_cloudflare_pages_waitlist_dismiss edges=2 relations=['calls', 'contains'] locations=['L108', 'L138'] contexts=['', 'call']
+note: normal graph.json is post-build; raw producer loss must be measured earlier.

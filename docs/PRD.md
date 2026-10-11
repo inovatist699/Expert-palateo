@@ -40,4 +40,4 @@ Keep the service free and work within the existing budget; add no paid model, ma
 
 Privacy requests currently use manual email handling. A future deletion workflow should verify ownership, identify account and waitlist scope separately, remove eligible cloud data, explain retention/backups and confirm completion; self-service deletion is not shipped. Operator/contact: Aayush Mittal, 937, GIDC Makarpura, Vadodara; palateo.com@gmail.com. The documents do not establish legal compliance.
 
-Sources: [README](../README.md), [app source](../work/palateo_cloudflare_pages/app/index.html), [privacy](../work/palateo_cloudflare_pages/privacy/index.html), [terms](../work/palateo_cloudflare_pages/terms/index.html), [restoration record](../README.md#verified-release-baseline). Next: [App flow](APP_FLOW.md).
+Sources: [README](../README.md), [app source architecture](ARCHITECTURE.md), [privacy](../src/legal/privacy/index.html), [terms](../src/legal/terms/index.html), [restoration record](../README.md#verified-release-baseline). Next: [App flow](APP_FLOW.md).

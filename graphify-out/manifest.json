@@ -1,0 +1,104 @@
+{
+  "work/check-all.cjs": {
+    "mtime": 1791368608.5649185,
+    "seen": 1791491317.9204237,
+    "ast_hash": "51c7a945df5860e1cf1b663fd3649423",
+    "semantic_hash": "51c7a945df5860e1cf1b663fd3649423"
+  },
+  "work/check-auth-email-live.cjs": {
+    "mtime": 1791298952.7101014,
+    "seen": 1791491317.9204237,
+    "ast_hash": "d2839678de8a5ba114f848888cedcca5",
+    "semantic_hash": "d2839678de8a5ba114f848888cedcca5"
+  },
+  "work/check-auth-settings.cjs": {
+    "mtime": 1791297563.508737,
+    "seen": 1791491317.9204237,
+    "ast_hash": "4bf66dbb9ebcbc5656aa0c2e464df1cc",
+    "semantic_hash": "4bf66dbb9ebcbc5656aa0c2e464df1cc"
+  },
+  "work/check-launch-account.cjs": {
+    "mtime": 1791298953.3457894,
+    "seen": 1791491317.9204237,
+    "ast_hash": "1199e347687de91adf592e52dd52f57e",
+    "semantic_hash": "1199e347687de91adf592e52dd52f57e"
+  },
+  "work/check-palateo-live.cjs": {
+    "mtime": 1791301302.0046704,
+    "seen": 1791491317.9204237,
+    "ast_hash": "5642dfe388e320bf0663ff752199152d",
+    "semantic_hash": "5642dfe388e320bf0663ff752199152d"
+  },
+  "work/check-sentry.cjs": {
+    "mtime": 1791302900.3888674,
+    "seen": 1791491317.9204237,
+    "ast_hash": "ac8d2a7e57099efc54be64e46333fca5",
+    "semantic_hash": "ac8d2a7e57099efc54be64e46333fca5"
+  },
+  "work/check-taste-onboarding.cjs": {
+    "mtime": 1791364947.6724758,
+    "seen": 1791491317.9204237,
+    "ast_hash": "0eaf8f630a201a23fae746e5a0ae0e6e",
+    "semantic_hash": "0eaf8f630a201a23fae746e5a0ae0e6e"
+  },
+  "work/check-waitlist.cjs": {
+    "mtime": 1791297809.252287,
+    "seen": 1791491317.9204237,
+    "ast_hash": "ac1f68dcdc3dd330afa25cc5a5f006d5",
+    "semantic_hash": "ac1f68dcdc3dd330afa25cc5a5f006d5"
+  },
+  "work/test-recommendation-quality.cjs": {
+    "mtime": 1791368426.751057,
+    "seen": 1791491317.9204237,
+    "ast_hash": "c1dd1864e21a70adaaf8d8bc257471f1",
+    "semantic_hash": "c1dd1864e21a70adaaf8d8bc257471f1"
+  },
+  "work/palateo_cloudflare_pages/api/waitlist.js": {
+    "mtime": 1791488595.9567933,
+    "seen": 1791491317.9204237,
+    "ast_hash": "5cf393d9f93586cb86940874ebc3a222",
+    "semantic_hash": "5cf393d9f93586cb86940874ebc3a222"
+  },
+  "work/palateo_cloudflare_pages/waitlist.js": {
+    "mtime": 1791489087.2515059,
+    "seen": 1791491317.9204237,
+    "ast_hash": "ee0343cf474c5ada42bf8965118194d5",
+    "semantic_hash": "ee0343cf474c5ada42bf8965118194d5"
+  },
+  "work/palateo_cloudflare_pages/monitoring.js": {
+    "mtime": 1791302304.498186,
+    "seen": 1791491317.9204237,
+    "ast_hash": "c650b01c7dfca62903ae492dbe901005",
+    "semantic_hash": "c650b01c7dfca62903ae492dbe901005"
+  },
+  "work/palateo_cloudflare_pages/app/index.html": {
+    "mtime": 1791488812.1779993,
+    "seen": 1791491317.9204237,
+    "ast_hash": "4fe9c3779046ff9e5561430e37fc75cb",
+    "semantic_hash": "4fe9c3779046ff9e5561430e37fc75cb"
+  },
+  "work/palateo_cloudflare_pages/index.html": {
+    "mtime": 1791489136.0387113,
+    "seen": 1791491317.9204237,
+    "ast_hash": "c77c054717deeca73d45876678d4899d",
+    "semantic_hash": "c77c054717deeca73d45876678d4899d"
+  },
+  "work/palateo_cloudflare_pages/waitlist.css": {
+    "mtime": 1791486208.4074748,
+    "seen": 1791491317.9204237,
+    "ast_hash": "6bd47f1c6916763a333d8b621a264269",
+    "semantic_hash": "6bd47f1c6916763a333d8b621a264269"
+  },
+  "work/palateo_cloudflare_pages/vercel.json": {
+    "mtime": 1791488817.5537775,
+    "seen": 1791491317.9204237,
+    "ast_hash": "0ed76bbc689ed2f6080cda371fcd9b69",
+    "semantic_hash": "0ed76bbc689ed2f6080cda371fcd9b69"
+  },
+  "package.json": {
+    "mtime": 1791368646.95846,
+    "seen": 1791491317.9204237,
+    "ast_hash": "fdc4b855d3da811b07c9c27d06d11ead",
+    "semantic_hash": "fdc4b855d3da811b07c9c27d06d11ead"
+  }
+}

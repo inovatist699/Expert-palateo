@@ -1,5 +1,9 @@
 # Agent Guidelines & Intelligence Stack: Palateo
 
+## Editable source and build
+
+Edit `src/`, not the generated `work/palateo_cloudflare_pages/` files. Read `docs/ARCHITECTURE.md` and the ordered `src/app/manifest.json` before changing dependencies. `npm run build` assembles the source fragments and updates CSP; `npm run check`, `npm run update:csp` and `npm run preview:mobile` build first. The current source graph is `graphify-out/modular-source/graph.json`; the root graph retains historical monolithic locations. App JavaScript remains shared-scope fragments, not isolated ES modules.
+
 This repository is configured with an integrated modular agent stack combining **Agency Agents**, **Ponytail**, **GetShitDone (GSD)**, **Taste**, **Graphify**, **Componentry**, **Manus**, **Impeccable**, **21st.dev**, **Claude Code**, **Ralph Loop**, **CodeRabbit**, **Playwright**, **UI/UX Pro Max**, **HuaShu Design**, **Claude SEO**, **SkillX**, **Stitch**, **Unified Design**, **Systematic Debug**, and **Roo Code**.
 
 ---

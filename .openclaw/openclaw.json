@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openclaw.ai/schema/openclaw.json",
+  "name": "palateo",
+  "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+  "agents": {
+    "defaults": {
+      "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo"
+    },
+    "entries": {
+      "palateo": {
+        "name": "Palateo Lead Engineer & Taste Architect",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo"
+      }
+    }
+  }
+}

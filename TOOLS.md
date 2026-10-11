@@ -11,14 +11,16 @@ Runs JavaScript linting, CSP checks, schema checks, and repository verification:
 ```bash
 npm run check
 # or directly:
+node scripts/build.cjs
 node work/check-all.cjs
 ```
 
 ### Update Content Security Policy (CSP)
-Mandatory after modifying inline scripts in `work/palateo_cloudflare_pages/app/index.html` or waitlist:
+Mandatory after modifying app JavaScript source under `src/`:
 ```bash
 npm run update:csp
 # or directly:
+node scripts/build.cjs
 node work/check-taste-onboarding.cjs --update-csp
 ```
 
@@ -31,10 +33,11 @@ node work/check-palateo-live.cjs
 ```
 
 ### Mobile Responsive Preview Server
-Spins up local preview on port `8080` (or next available port) to inspect viewport rendering (320px, 375px, 390px, 1440px):
+Builds source, then serves local preview on port `8771` to inspect responsive layouts:
 ```bash
 npm run preview:mobile
 # or directly:
+node scripts/build.cjs
 node work/preview-mobile-taste.cjs
 ```
 
@@ -42,10 +45,11 @@ node work/preview-mobile-taste.cjs
 
 ## 2. Directory Layout & Architecture
 
-- **Frontend & Public API**: `work/palateo_cloudflare_pages/`
-  - App main entry: `work/palateo_cloudflare_pages/app/index.html`
-  - Public waitlist & marketing: `work/palateo_cloudflare_pages/index.html`
-  - API functions: `work/palateo_cloudflare_pages/api/`
+- **Editable frontend**: `src/app/`, `src/features/`, `src/models/`, `src/services/`, `src/shared/ui/`, `src/styles/`
+- **Waitlist & marketing**: `src/waitlist/`
+- **API functions**: `src/server/api/`
+- **Generated deployment**: `work/palateo_cloudflare_pages/`
+- **Architecture and Graphify source map**: `docs/ARCHITECTURE.md`, `graphify-out/modular-source/`
 - **Database Migrations**: `supabase/migrations/`
 - **Venue & Taste Data**: `data/` and `work/venues-2026-10-07.json`
 - **Verification Suites**: `work/check-*.cjs`

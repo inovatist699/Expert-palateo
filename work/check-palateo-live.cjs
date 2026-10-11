@@ -4,9 +4,21 @@ const path=require('node:path');
 const crypto=require('node:crypto');
 const base='https://palateo.in';
 async function main(){
+ for(const route of ['/app','/app?quiz=1']){
+  const r=await fetch(base+route,{redirect:'manual',signal:AbortSignal.timeout(15000)});
+  assert.equal(r.status,308,'app URL must redirect permanently: '+route);
+  const target=new URL(r.headers.get('location'),base);
+  assert.equal(target.origin,base,'app redirect must stay on Palateo');
+  assert.equal(target.pathname,'/app/','app redirect must add the trailing slash');
+  assert.equal(target.search,new URL(base+route).search,'app redirect must preserve query parameters');
+ }
  const response=await fetch(base+'/app/',{signal:AbortSignal.timeout(20000)});
  assert.equal(response.status,200,'public app must load without Vercel login');
  const html=await response.text();
+ const themeHref=html.match(/<link rel="stylesheet" href="([^"]+)"/)[1];
+ const theme=await fetch(new URL(themeHref,response.url),{signal:AbortSignal.timeout(15000)});
+ assert.equal(theme.status,200,'app theme must load');
+ assert.match(theme.headers.get('content-type')||'',/^text\/css\b/,'app theme must be CSS');
  const local=fs.readFileSync(path.join(__dirname,'palateo_cloudflare_pages/app/index.html'),'utf8');
  assert.equal(html.replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n'),local.replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n'),'public alias must serve current build');
  const script=html.match(/<script>([\s\S]*?)<\/script>/)[1].replace(/\r\n?/g,'\n');

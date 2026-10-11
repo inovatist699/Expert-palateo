@@ -1,0 +1,169 @@
+<#
+.SYNOPSIS
+  OmniRoute Gateway PowerShell Client for Windows.
+.DESCRIPTION
+  Interacts with the local OmniRoute AI gateway (http://localhost:20128/v1)
+  to execute completions with automatic next-best model failover when usage limits hit.
+#>
+
+param (
+    [Parameter(Position=0, Mandatory=$true)]
+    [ValidateSet("status", "start", "complete")]
+    [string]$Command,
+
+    [Parameter(Mandatory=$false)]
+    [string]$Prompt,
+
+    [Parameter(Mandatory=$false)]
+    [string]$PromptFile,
+
+    [Parameter(Mandatory=$false)]
+    [string]$Model = "auto",
+
+    [Parameter(Mandatory=$false)]
+    [string]$SystemPrompt,
+
+    [Parameter(Mandatory=$false)]
+    [double]$Temperature = 0.7,
+
+    [Parameter(Mandatory=$false)]
+    [string]$BaseUrl = "http://localhost:20128/v1",
+
+    [Parameter(Mandatory=$true)]
+    [string]$Output
+)
+
+function Write-OutputFile {
+    param (
+        [Parameter(Mandatory=$true)]$Data,
+        [Parameter(Mandatory=$true)][string]$Path
+    )
+    $dir = [System.IO.Path]::GetDirectoryName([System.IO.Path]::GetFullPath($Path))
+    if (-not [string]::IsNullOrEmpty($dir) -and -not (Test-Path $dir)) {
+        New-Item -ItemType Directory -Path $dir -Force | Out-Null
+    }
+    $json = $Data | ConvertTo-Json -Depth 10
+    [System.IO.File]::WriteAllText([System.IO.Path]::GetFullPath($Path), $json, [System.Text.Encoding]::UTF8)
+    Write-Host "Success! Data written to: $Path"
+}
+
+$BaseUrl = $BaseUrl.TrimEnd('/')
+
+switch ($Command) {
+    "status" {
+        $endpoint = "$BaseUrl/models"
+        try {
+            $resp = Invoke-RestMethod -Uri $endpoint -Method Get -TimeoutSec 10 -ErrorAction Stop
+            $modelList = @()
+            if ($resp.data) {
+                $modelList = $resp.data | ForEach-Object { $_.id }
+            }
+            $result = [PSCustomObject]@{
+                online = $true
+                base_url = $BaseUrl
+                model_count = $modelList.Count
+                models = $modelList
+            }
+        } catch {
+            $result = [PSCustomObject]@{
+                online = $false
+                base_url = $BaseUrl
+                error = $_.Exception.Message
+                suggestion = "Start OmniRoute with 'npx omniroute' or Docker on port 20128."
+            }
+        }
+        Write-OutputFile -Data $result -Path $Output
+    }
+
+    "start" {
+        # Check if already running
+        try {
+            $check = Invoke-RestMethod -Uri "$BaseUrl/models" -Method Get -TimeoutSec 2 -ErrorAction Stop
+            $result = [PSCustomObject]@{
+                status = "already_running"
+                base_url = $BaseUrl
+                message = "OmniRoute gateway is already active."
+            }
+            Write-OutputFile -Data $result -Path $Output
+            return
+        } catch {
+            # Not running
+        }
+
+        $npxCmd = Get-Command npx -ErrorAction SilentlyContinue
+        $omniCmd = Get-Command omniroute -ErrorAction SilentlyContinue
+
+        if ($omniCmd) {
+            Start-Process omniroute -WindowStyle Hidden
+            Start-Sleep -Seconds 3
+            $status = "started"
+        } elseif ($npxCmd) {
+            Start-Process npx -ArgumentList "omniroute" -WindowStyle Hidden
+            Start-Sleep -Seconds 3
+            $status = "started_via_npx"
+        } else {
+            $status = "binary_not_found"
+        }
+
+        $result = [PSCustomObject]@{
+            status = $status
+            port = 20128
+            instruction = "Run 'npm install -g omniroute' or 'npx omniroute' to launch gateway."
+        }
+        Write-OutputFile -Data $result -Path $Output
+    }
+
+    "complete" {
+        $userText = ""
+        if ($PromptFile -and (Test-Path $PromptFile)) {
+            $userText = [System.IO.File]::ReadAllText($PromptFile, [System.Text.Encoding]::UTF8)
+        } elseif ($Prompt) {
+            $userText = $Prompt
+        } else {
+            Write-Error "Either -Prompt or -PromptFile must be provided."
+            exit 1
+        }
+
+        $messages = @()
+        if ($SystemPrompt) {
+            $messages += @{ role = "system"; content = $SystemPrompt }
+        }
+        $messages += @{ role = "user"; content = $userText }
+
+        $bodyObj = @{
+            model = $Model
+            messages = $messages
+            temperature = $Temperature
+        }
+        $bodyJson = $bodyObj | ConvertTo-Json -Depth 5
+
+        $endpoint = "$BaseUrl/chat/completions"
+        try {
+            $resp = Invoke-RestMethod -Uri $endpoint -Method Post -Body $bodyJson -ContentType "application/json" -TimeoutSec 120 -ErrorAction Stop
+            $content = ""
+            if ($resp.choices -and $resp.choices[0].message) {
+                $content = $resp.choices[0].message.content
+            }
+            $servedModel = if ($resp.model) { $resp.model } else { $Model }
+            [Console]::Error.WriteLine("[OmniRoute] Response served by model: $servedModel")
+
+            $result = [PSCustomObject]@{
+                content = $content
+                served_model = $servedModel
+                requested_model = $Model
+                usage = $resp.usage
+            }
+            Write-OutputFile -Data $result -Path $Output
+        } catch {
+            $err = $_.Exception.Message
+            [Console]::Error.WriteLine("[OmniRoute] Error invoking gateway: $err")
+            $result = [PSCustomObject]@{
+                error = $err
+                base_url = $BaseUrl
+                help = "Ensure OmniRoute is active with configured API keys."
+            }
+            Write-OutputFile -Data $result -Path $Output
+            exit 1
+        }
+    }
+}

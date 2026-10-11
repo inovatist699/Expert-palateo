@@ -7,3 +7,4 @@ node_modules/
 outputs/
 *.zip
 **/.well-known/strix-verify.txt
+.playwright-cli/

@@ -102,7 +102,7 @@ This documentation pass read current source and reference notes. It did not run 
 
 The user requested a local preview before deployment. This adaptation has not been deployed. Browser evidence does not establish full screen-reader compliance, physical Android/iOS behavior, verified menus/hours or calibrated recommendation accuracy.
 
-See [app flow](APP_FLOW.md), [product requirements](PRD.md), [implementation plan](IMPLEMENTATION_PLAN.md) and [PRODUCT.md](../PRODUCT.md). Current runtime source: `work/palateo_cloudflare_pages/app/index.html`, `app/theme.css`, public `index.html`, `waitlist.css` and `waitlist.js`.
+See [app flow](APP_FLOW.md), [product requirements](PRD.md), [implementation plan](IMPLEMENTATION_PLAN.md) and [PRODUCT.md](../PRODUCT.md). Edit `src/features/`, `src/shared/ui/`, `src/styles/`, `src/app/shell.html` and `src/waitlist/`; [source architecture](ARCHITECTURE.md) explains the build. Runtime files in `work/palateo_cloudflare_pages/` are generated.
 
 
 

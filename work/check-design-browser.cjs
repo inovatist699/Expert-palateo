@@ -37,8 +37,9 @@ async function checkContrast(locator,label){
  await checkContrast(page.locator('.mode'),'App account status');
  await checkContrast(page.locator('.nav button.active'),'App active navigation');
  assert.equal(await page.locator('.homeMapView').count(),1,'Home must start with the map');
- assert.equal(await page.locator('.zestMapSvg>rect').evaluate(el=>getComputedStyle(el).fill),'rgb(195, 231, 241)','Map must match the waitlist LightBlue plane');
+ assert.equal(await page.locator('.zestMapSvg>rect').evaluate(el=>getComputedStyle(el).fill),'rgb(9, 29, 32)','Map must match the reference deep teal plane');
  assert.equal(await page.locator('.zestMapPaths').count(),1,'Map must include the illustrative white paths');
+ for(const selector of ['.restaurant-card .restnameButton','.restaurant-card .meta','.restaurant-card .fitReason','.zestMapBtn','.mapNotice'])await checkContrast(page.locator(selector).first(),selector);
  const candidate=page.locator('.restaurant-card').last();
  const id=await candidate.getAttribute('id');
  const before=Number((await candidate.locator('.match b').innerText()).replace('%',''));

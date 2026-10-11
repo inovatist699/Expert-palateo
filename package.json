@@ -1,1 +1,12 @@
-{"name":"palateo-workspace","private":true,"scripts":{"check":"node work/check-all.cjs","update:csp":"node work/check-taste-onboarding.cjs --update-csp","check:live":"node work/check-palateo-live.cjs","preview:mobile":"node work/preview-mobile-taste.cjs","connect:openclaw":"powershell -ExecutionPolicy Bypass -File work/connect-openclaw.ps1"}}
+{
+  "name": "palateo-workspace",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "check": "node scripts/build.cjs && node work/check-all.cjs",
+    "update:csp": "node scripts/build.cjs && node work/check-taste-onboarding.cjs --update-csp",
+    "check:live": "node scripts/build.cjs && node work/check-palateo-live.cjs",
+    "preview:mobile": "node scripts/build.cjs && node work/preview-mobile-taste.cjs",
+    "connect:openclaw": "powershell -ExecutionPolicy Bypass -File work/connect-openclaw.ps1"
+  }
+}

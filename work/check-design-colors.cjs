@@ -8,6 +8,7 @@ for(const [name,value] of Object.entries({navy:'#20373b',teal:'#315159',aqua:'#f
 const luminance=hex=>{const c=hex.replace('#','').match(/../g).map(x=>parseInt(x,16)/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4);return c[0]*.2126+c[1]*.7152+c[2]*.0722};
 const contrast=(a,b)=>{const values=[luminance(a),luminance(b)].sort((x,y)=>y-x);return (values[0]+.05)/(values[1]+.05)};
 const pairs=[
+ ['venue text','#edf7fa','#102b30',4.5],['venue muted','#b5d5dc','#102b30',4.5],['venue control border','#638e97','#102b30',3],['map text','#b5d5dc','#091d20',4.5],
  ['app text','#20373b','#c3e7f1',4.5],['app muted','#315e68','#dbeef4',4.5],
  ['saffron action','#20373b','#ffc64f',4.5],['dark navigation','#c3e7f1','#20373b',4.5],
  ['control boundary','#315e68','#edf7fa',3],['light focus','#20373b','#c3e7f1',3],

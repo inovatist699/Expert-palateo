@@ -1,6 +1,6 @@
 # Palateo backend schema and contracts
 
-**Baseline: 7 October 2026.** You use this reference with [TRD](TRD.md), the [migration history](../supabase/migrations/), and [browser callers](../work/palateo_cloudflare_pages/app/index.html).
+**Baseline: 7 October 2026.** You use this reference with [TRD](TRD.md), the [migration history](../supabase/migrations/), and [browser data callers](../src/services/user-repository.js). Current source organization is described in [architecture](ARCHITECTURE.md).
 
 ## Evidence and schema limits
 

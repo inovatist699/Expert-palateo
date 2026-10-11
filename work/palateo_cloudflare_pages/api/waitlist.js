@@ -25,7 +25,7 @@ module.exports = async function handler(req, res) {
   if (Buffer.byteLength(JSON.stringify(body),'utf8') > 2048) return res.status(413).json({error:'Request too large'});
   if (body.website) return res.status(200).json({ok:true});
   const email = typeof body.email === 'string' ? body.email.trim().toLowerCase() : '';
-  const ALLOWED_CITIES = ['Ahmedabad','Vadodara','Mumbai','Delhi NCR','Bengaluru','Hyderabad','Chennai','Kolkata','Pune','Jaipur','Kochi','Goa','Chandigarh','Other'];
+  const ALLOWED_CITIES = ['Ahmedabad','Vadodara','Other'];
   if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !ALLOWED_CITIES.includes(body.city) || body.consent !== true) return res.status(400).json({error:'Valid email, city and consent required'});
   try {
     const url = "https://ntuaqcnbhqtbhbnnobmm.supabase.co"; const key = "sb_publishable__YWaFqDXVc-R_UlEl5DVcQ_ust-d4vp";

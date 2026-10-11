@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0c393b">
+<title>Palateo | Restaurants that fit your taste</title>
+<meta name="description" content="Discover restaurants, cafés, and hidden culinary gems across 13 Indian metropolitan cities with colourful restaurant maps and recommendations shaped around your taste.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://palateo.in/app/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palateo">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="Palateo | Restaurants that fit your taste">
+<meta property="og:description" content="Discover restaurants, cafés, and hidden culinary gems across Mumbai, Delhi NCR, Bengaluru, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Vadodara, Jaipur, Kochi, Goa, and Chandigarh.">
+<meta property="og:url" content="https://palateo.in/app/">
+<meta property="og:image" content="https://palateo.in/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Palateo helps you discover restaurants and cafés that fit your taste across India's metropolitan cities.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Palateo | Restaurants that fit your taste">
+<meta name="twitter:description" content="Discover restaurants, cafés, and hidden culinary gems across Mumbai, Delhi NCR, Bengaluru, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Vadodara, Jaipur, Kochi, Goa, and Chandigarh.">
+<meta name="twitter:image" content="https://palateo.in/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Palateo","url":"https://palateo.in/app/","description":"Restaurant discovery shaped by your taste quiz, likes and visits.","publisher":{"@type":"Organization","name":"Palateo","sameAs":["https://www.instagram.com/palateo.co/"]}},{"@type":"WebApplication","name":"Palateo","url":"https://palateo.in/app/","description":"An AI food discovery platform that helps people find restaurants and cafés across India's top metropolitan cities based on culinary taste.","applicationCategory":"FoodAndDrinkApplication","operatingSystem":"Web","creator":{"@type":"Person","name":"Aayush Mittal","url":"https://www.linkedin.com/in/aayush-mittal-01012004e/","sameAs":["https://www.linkedin.com/in/aayush-mittal-01012004e/"]}}]}
+</script>
+<style>{{style:styles/base.css}}</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2" integrity="sha384-WgXwGL6fUsYJWNaKJgVbrJKGRQwc1vieh2oy4kw9nXqpNDz3tdSsqEYUgeHD/NuF" crossorigin="anonymous"></script>
+<style>{{style:styles/auth-modal.css}}</style>
+<style id="palateo-polish">{{style:styles/legacy-layout.css}}</style>
+<style id="palateo-city-picker">{{style:styles/city-picker.css}}</style><style id="palateo-layouts">{{style:styles/profile.css}}</style>
+<style>{{style:styles/attribution.css}}</style>
+<style id="required-auth-style">{{style:styles/auth-gate.css}}</style>
+<style id="legal-controls">{{style:styles/legal.css}}</style>
+
+
+<script src="/vendor/sentry-11.4.0.min.js"></script><script src="/monitoring.js"></script><style id="palateo-mobile-taste">{{style:styles/taste-and-place.css}}</style>
+<style id="palateo-zest-styles">{{style:styles/map.css}}</style>
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="maplibre-gl.css">
+<link rel="stylesheet" href="interactive.css">
+</head>
+<body>
+<!-- PALATEO LOGO REVEAL COMPONENT -->
+<div id="palateoLogoReveal" class="palateo-logo-reveal" aria-label="Palateo logo reveal" role="dialog" aria-modal="true">
+  <div class="reveal-backdrop"></div>
+  <div class="reveal-ambient-glow" aria-hidden="true"></div>
+  
+  <div class="reveal-sparks" aria-hidden="true">
+    <span class="r-spark s1">✦</span>
+    <span class="r-spark s2">✳</span>
+    <span class="r-spark s3">✧</span>
+    <span class="r-spark s4">✦</span>
+    <span class="r-spark s5">✳</span>
+  </div>
+
+  <div class="reveal-stage">
+    <div class="reveal-emblem-wrap">
+      <div class="reveal-sheen-sweep" aria-hidden="true"></div>
+      <svg class="reveal-emblem-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="revealGradRing" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="50%" stop-color="#10b981" />
+            <stop offset="100%" stop-color="#065f46" />
+          </linearGradient>
+          <linearGradient id="revealGradDome" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="70%" stop-color="#f2f7f4" />
+            <stop offset="100%" stop-color="#d8ebe1" />
+          </linearGradient>
+          <linearGradient id="revealGradGold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fef08a" />
+            <stop offset="50%" stop-color="#f59e0b" />
+            <stop offset="100%" stop-color="#d97706" />
+          </linearGradient>
+          <filter id="revealGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="3.5" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
+        </defs>
+
+        <circle class="r-path-halo" cx="60" cy="60" r="54" stroke="url(#revealGradRing)" stroke-width="2.5" stroke-linecap="round" />
+        <circle class="r-path-halo-inner" cx="60" cy="60" r="47" stroke="rgba(215,237,148,0.35)" stroke-width="1.2" stroke-dasharray="4 6" />
+
+        <line class="r-path-base" x1="30" y1="78" x2="90" y2="78" stroke="#a7f3d0" stroke-width="3" stroke-linecap="round" />
+        <line class="r-path-feet1" x1="42" y1="78" x2="42" y2="84" stroke="#a7f3d0" stroke-width="2.5" stroke-linecap="round" />
+        <line class="r-path-feet2" x1="78" y1="78" x2="78" y2="84" stroke="#a7f3d0" stroke-width="2.5" stroke-linecap="round" />
+
+        <path class="r-path-dome" d="M 33 76 C 33 46, 50 34, 60 34 C 70 34, 87 46, 87 76 Z" fill="url(#revealGradDome)" stroke="#065f46" stroke-width="1.8" />
+        <circle class="r-path-knob" cx="60" cy="30" r="4.5" fill="#10b981" stroke="#ecfdf5" stroke-width="1.5" />
+        <text class="r-path-monogram" x="58" y="70" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="bold" font-size="34" fill="#064e3b">p</text>
+        <path class="r-path-spark" d="M 74 46 Q 74 52 79 52 Q 74 52 74 58 Q 74 52 69 52 Q 74 52 74 46 Z" fill="url(#revealGradGold)" filter="url(#revealGlow)" />
+      </svg>
+    </div>
+
+    <div class="reveal-wordmark">
+      <div class="reveal-title-wrap">
+        <span class="reveal-letters">palate</span><span class="reveal-coral-o">o</span><span class="reveal-dot">.</span>
+      </div>
+      <p class="reveal-tagline">YOUR TASTE · YOUR KIND OF PLACE</p>
+      <div class="reveal-city-badge">
+        <span>AHMEDABAD</span><span class="badge-sep">✦</span><span>VADODARA</span><span class="badge-sep">✦</span><span>13 METROS · INDIA</span>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="reveal-skip-btn" id="revealSkipBtn" aria-label="Skip introduction">
+    Skip intro <span aria-hidden="true">↗</span>
+  </button>
+</div>
+
+<div class="app">
+<header class="top"><div class="logo"><span class="brandEmblem" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M9 27V13a9 9 0 1 1 9 9H9" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="13" r="3.5" fill="currentColor"/></svg></span><span class="logoText">palate<span>o</span><i class="logoDot">.</i></span></div><button class="mode" id="mode" data-action="mode">Sign in required</button></header><div class="cityPicker" role="group" aria-label="Choose your city"><label class="citySelectLabel" for="citySelect">Your city<select id="citySelect" data-action="city-select"><option value="Ahmedabad">Ahmedabad</option><option value="Vadodara">Vadodara</option><option value="Mumbai">Mumbai</option><option value="Delhi NCR">Delhi NCR</option><option value="Bengaluru">Bengaluru</option><option value="Hyderabad">Hyderabad</option><option value="Chennai">Chennai</option><option value="Kolkata">Kolkata</option><option value="Pune">Pune</option><option value="Jaipur">Jaipur</option><option value="Kochi">Kochi</option><option value="Goa">Goa</option><option value="Chandigarh">Chandigarh</option></select></label><button type="button" class="locationButton" id="useLocationButton" data-action="location">Use my location</button><span id="cityPickerStatus" class="cityPickerStatus" role="status" aria-live="polite"></span></div>
+<main id="root">
+<section class="screen publicSeoIntro" aria-labelledby="publicSeoTitle">
+<div class="hero"><div class="eyebrow">The restaurant map that builds itself · India Edition</div><h1 id="publicSeoTitle">Find cafés and restaurants across 13 Indian metropolitan cities that fit your taste.</h1><p>Palateo is an AI food preference platform across India. Discover cafés, bistros, and iconic restaurants in Mumbai, Delhi NCR, Bengaluru, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Vadodara, Jaipur, Kochi, Goa, and Chandigarh with recommendations shaped around your cuisine preferences, budget, dietary choices, and authentic diner feedback.</p></div>
+<section aria-labelledby="metroFoodTitle"><h2 id="metroFoodTitle">Explore living 3D Palate Maps across India</h2><p>Browse local food spots, calibrate your 60-second culinary DNA, and inspect recommendations with receipts.</p></section>
+<p>Choose your city, take the Taste Calibration Quiz and discover places that feel right for you. Match estimates learn from your quiz and feedback. Check current details with the venue before visiting.</p>
+<p><a href="/aayush-mittal/">About Aayush Mittal, creator of Palateo</a> · <a href="https://www.instagram.com/palateo.co/">Follow Palateo on Instagram</a> · <a href="https://www.linkedin.com/in/aayush-mittal-01012004e/">Connect with Aayush Mittal on LinkedIn</a></p>
+</section>
+</main>
+<footer class="dataAttribution">Palateo catalogue: Ratings, photos and prices may be snapshots or illustrative. Confirm venue details before visiting. · <a href="https://www.instagram.com/palateo.co/" target="_blank" rel="noopener noreferrer">Palateo on Instagram</a> · <a href="https://www.linkedin.com/in/aayush-mittal-01012004e/" target="_blank" rel="noopener noreferrer">Aayush Mittal on LinkedIn</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="mailto:palateo.com@gmail.com">Contact</a></footer>
+</div>
+<div class="nav hide" id="nav">
+<button data-action="navigate" data-page="home" id="n-home"><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/></svg></b>Home</button>
+<button data-action="navigate" data-page="discover" id="n-discover"><b aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg></b>Discover</button>
+<button data-action="navigate" data-page="social" id="n-social"><b aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 2 4v2"/></svg></b>People</button>
+<button data-action="navigate" data-page="saved" id="n-saved"><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></b>Saved</button>
+<button data-action="navigate" data-page="profile" id="n-profile"><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6h14M5 12h14M5 18h14"/><circle cx="9" cy="6" r="2" fill="var(--bg)"/><circle cx="15" cy="12" r="2" fill="var(--bg)"/><circle cx="10" cy="18" r="2" fill="var(--bg)"/></svg></b>Palate</button>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>{{app-script}}</script>
+<script src="discovery-experience.js"></script>
+<script src="companion.js"></script>
+</body>
+</html>

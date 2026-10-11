@@ -115,6 +115,30 @@ globalThis.runRecommendationQualityAudit = () => {
     assert.ok(score >= 1 && score <= 99, 'Score must be within 1..99 bounds for ' + v.name);
   }
 
+  state.feedback={};rebuildLearning();
+  state.answers.diet='eggetarian';
+  assert.ok(hasTasteAnswers(),'Eggetarian is a valid complete quiz answer');
+  assert.ok(availableCalibrationDishes().some(d=>d.diet==='egg'));
+  assert.ok(availableCalibrationDishes().every(d=>d.diet!=='nonveg'));
+  const eggVenue={...humbleTasteFit,id:'egg-only',dietaryOptions:['eggs']};
+  const meatVenue={...humbleTasteFit,id:'meat-only',dietaryOptions:['non-vegetarian']};
+  const unknownVenue={...humbleTasteFit,id:'unknown-diet',dietaryOptions:[]};
+  assert.ok(rec(eggVenue).score>rec(unknownVenue).score,'Known egg options beat unknown dietary evidence');
+  assert.ok(rec(meatVenue).score<=35,'Meat-only venue cannot become an Eggetarian fit');
+  assert.ok(rec(unknownVenue).why.includes('Dietary options not verified'));
+  learn(meatVenue,'like');assert.ok(rec(meatVenue).score<=35);learn(meatVenue,null);
+  state.answers.diet='veg';
+  assert.ok(availableCalibrationDishes().every(d=>d.diet==='veg'));
+  assert.ok(rec(eggVenue).score<=35,'Egg-only is not vegetarian');
+  state.answers.diet='any';
+  assert.ok(hasTasteAnswers(),'Existing any preference remains compatible');
+  assert.ok(availableCalibrationDishes().some(d=>d.diet==='nonveg'));
+  assert.ok(rec(meatVenue).score>35,'All foods removes dietary restriction');
+  state.answers.diet='eggetarian';
+  state.dishFeedback={'butter-chicken':'love'};
+  assert.equal(dishAdjustment({...meatVenue,c:['Punjabi']}),0,'Old meat feedback cannot leak into Eggetarian estimates');
+  state.dishFeedback={};
+  console.log('PASS: Eggetarian/all-foods options, dietary conflicts, unknown evidence and calibration isolation');
   console.log('PASS: Recommendation quality evaluation (taste fit vs popularity, conflict resilience, feedback symmetry, signal idempotency)');
 };
 `, context);

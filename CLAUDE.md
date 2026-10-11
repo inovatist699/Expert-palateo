@@ -2,8 +2,9 @@
 
 ## Project Overview
 Palateo is a taste-first restaurant curation and recommendation platform (production: https://palateo.in/).
-- **App Source**: `work/palateo_cloudflare_pages/app/index.html` (Vanilla HTML/CSS/JavaScript)
-- **Waitlist & API**: `work/palateo_cloudflare_pages/`
+- **App Source**: `src/app/`, `src/features/`, `src/services/`, `src/models/`, `src/shared/ui/`, `src/styles/` (Vanilla HTML/CSS/JavaScript; see `docs/ARCHITECTURE.md`)
+- **Waitlist & API**: `src/waitlist/`, `src/server/api/`
+- **Generated deployment**: `work/palateo_cloudflare_pages/`; do not edit generated files directly
 - **Database & Auth**: Supabase (`supabase/migrations/`, `docs/BACKEND_SCHEMA.md`)
 - **Hosting**: Vercel (project `palateo-app`, team `palateo`)
 
@@ -15,7 +16,7 @@ Palateo is a taste-first restaurant curation and recommendation platform (produc
 # Run local verification test suite (Node.js required, zero extra npm installs)
 npm run check
 
-# Update Content Security Policy (MANDATORY after modifying inline JS in app/index.html)
+# Build source and update Content Security Policy (MANDATORY after changing app JS)
 npm run update:csp
 
 # Launch local mobile taste preview
@@ -33,7 +34,7 @@ npm run check:live
    - The app frontend is vanilla HTML/CSS/JS. Do not introduce bloated npm build pipelines, Webpack, or Vite unless explicitly instructed.
    - Keep JavaScript clean, performant, and scoped.
 2. **CSP Integrity**:
-   - If inline `<script>` tags in `work/palateo_cloudflare_pages/app/index.html` are modified, you MUST immediately run `npm run update:csp` so the Vercel/Cloudflare headers reflect the correct SHA-256 script hashes.
+   - Edit source under `src/`, then run `npm run update:csp`. The dependency-free build assembles the original shared-scope script order and updates the Vercel SHA-256 script hash. Keep the ordered `src/app/manifest.json` intact unless dependency changes require an update.
 3. **Supabase & Security**:
    - Maintain Row Level Security (RLS) and ownership checks.
    - Never expose service role keys in client code.

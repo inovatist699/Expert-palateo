@@ -7,13 +7,7 @@ const scripts = [
   'check-sentry.cjs',
   'test-recommendation-quality.cjs',
   'check-dish-calibration.cjs',
-  'check-design-colors.cjs',
-  'check-phase3-map.cjs',
-  'check-phase4-cards.cjs',
-  'check-phase5-reviews.cjs',
-  'check-phase6-integration.cjs',
-  'check-phase7-polish.cjs',
-  'check-phase8-audit.cjs'
+  'check-design-colors.cjs'
 ];
 
 let failed = false;

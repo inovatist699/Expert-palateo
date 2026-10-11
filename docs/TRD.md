@@ -4,7 +4,7 @@
 
 ## System boundary and stack
 
-You deploy `work/palateo_cloudflare_pages/` to the existing Vercel project. Despite the folder name, the current host is Vercel. The public landing page and `/app/` use vanilla HTML, CSS, and JavaScript; the app keeps its main logic inline in [app/index.html](../work/palateo_cloudflare_pages/app/index.html). There is no frontend compilation step in the workspace package scripts.
+You deploy generated `work/palateo_cloudflare_pages/` to the existing Vercel project. Despite the folder name, the current host is Vercel. The public landing page and `/app/` use vanilla HTML, CSS, and JavaScript. Since 11 October 2026, editable code lives in `src/`; `npm run build` assembles the ordered app fragments, styles and public files, and regenerates CSP. See [source architecture](ARCHITECTURE.md). The generated app remains bundled inline to preserve its current shared scope and execution order.
 
 | Responsibility | Current implementation |
 | --- | --- |
@@ -51,10 +51,10 @@ The baseline is bounded to 1–96. Direct feedback then adds **like +7, pass −
 
 Feedback updates immediately, then enters a serial cloud queue. Owner checks reject stale account results; answer-reference and feedback-revision checks protect newer local changes from cloud loads. Interaction replay follows timestamp/ID order and recognizes undo metadata. Unsynced feedback remains local. Save failures restore the previous shortlist; embedded venues without database IDs remain device-only.
 
-The [waitlist endpoint](../work/palateo_cloudflare_pages/api/waitlist.js) validates POST JSON, origin when supplied, a 2 KB body limit, email, allowed city, consent, and honeypot. It calls a narrow database RPC, then conditionally claims and sends a welcome email. Storage success survives email failure. See the backend document for status codes and database budgets.
+The [waitlist endpoint](../src/server/api/waitlist.js) validates POST JSON, origin when supplied, a 2 KB body limit, email, allowed city, consent, and honeypot. It calls a narrow database RPC, then conditionally claims and sends a welcome email. Storage success survives email failure. See the backend document for status codes and database budgets.
 
 ## Operations and limitations
 
-You update the inline-script CSP hash when changing app JavaScript; [vercel.json](../work/palateo_cloudflare_pages/vercel.json) sets CSP and other response headers. [monitoring.js](../work/palateo_cloudflare_pages/monitoring.js) disables tracing, replay, automatic sessions, and breadcrumbs, and sanitizes error events with a five-event page cap.
+The build updates the inline-script CSP hash when changing app JavaScript; [Vercel configuration](../config/vercel.json) supplies the other response headers. [Monitoring](../src/services/monitoring.js) disables tracing, replay, automatic sessions, and breadcrumbs, and sanitizes error events with a five-event page cap.
 
 Retain historical SQL and inspect the live schema before database work. Base app table definitions are incomplete locally, and this documentation pass did not introspect production or apply migrations. The restoration record reports prior verification; no runtime checks were performed for these documents. Recommendation accuracy, complete venue freshness, physical-device Safari behavior, cross-device conflict resolution, and security are not guaranteed. Community profiles remain samples; deletion and privacy requests use the existing contact process.

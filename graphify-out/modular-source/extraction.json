@@ -1,0 +1,4369 @@
+{
+  "nodes": [
+    {
+      "id": "src_app_compatibility",
+      "label": "compatibility.js",
+      "file_type": "code",
+      "source_file": "src/app/compatibility.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_ahmedabad",
+      "label": "ahmedabad.js",
+      "file_type": "code",
+      "source_file": "src/models/venues/ahmedabad.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_ahmedabad_catalog",
+      "label": "catalog",
+      "file_type": "code",
+      "source_file": "src/models/venues/ahmedabad.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_people",
+      "label": "people.js",
+      "file_type": "code",
+      "source_file": "src/models/people.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_people_people",
+      "label": "people",
+      "file_type": "code",
+      "source_file": "src/models/people.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_questions",
+      "label": "questions.js",
+      "file_type": "code",
+      "source_file": "src/features/quiz/questions.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_questions_questions",
+      "label": "questions",
+      "file_type": "code",
+      "source_file": "src/features/quiz/questions.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_vadodara",
+      "label": "vadodara.js",
+      "file_type": "code",
+      "source_file": "src/models/venues/vadodara.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_vadodara_vadodaracatalog",
+      "label": "vadodaraCatalog",
+      "file_type": "code",
+      "source_file": "src/models/venues/vadodara.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_venue_photos",
+      "label": "venue-photos.js",
+      "file_type": "code",
+      "source_file": "src/services/venue-photos.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_venue_photos_fallback_interiors",
+      "label": "FALLBACK_INTERIORS",
+      "file_type": "code",
+      "source_file": "src/services/venue-photos.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_venue_photos_resolvevenuephoto",
+      "label": "resolveVenuePhoto()",
+      "file_type": "code",
+      "source_file": "src/services/venue-photos.js",
+      "source_location": "L8",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_curated",
+      "label": "curated.js",
+      "file_type": "code",
+      "source_file": "src/models/venues/curated.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_curated_curatedadditions",
+      "label": "curatedAdditions",
+      "file_type": "code",
+      "source_file": "src/models/venues/curated.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_metros",
+      "label": "metros.js",
+      "file_type": "code",
+      "source_file": "src/models/venues/metros.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_metros_allmetrovenues",
+      "label": "allMetroVenues",
+      "file_type": "code",
+      "source_file": "src/models/venues/metros.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_cities",
+      "label": "cities.js",
+      "file_type": "code",
+      "source_file": "src/models/cities.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_cities_citycenters",
+      "label": "cityCenters",
+      "file_type": "code",
+      "source_file": "src/models/cities.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_core_store",
+      "label": "store.js",
+      "file_type": "code",
+      "source_file": "src/core/store.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_core_store_state",
+      "label": "state",
+      "file_type": "code",
+      "source_file": "src/core/store.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_consent",
+      "label": "consent.js",
+      "file_type": "code",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_consent_consentcontrols",
+      "label": "consentControls()",
+      "file_type": "code",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_consent_readlegalconsent",
+      "label": "readLegalConsent()",
+      "file_type": "code",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_consent_legalmetadata",
+      "label": "legalMetadata()",
+      "file_type": "code",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_consent_haslegalconsent",
+      "label": "hasLegalConsent()",
+      "file_type": "code",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L10",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_consent_useaccount",
+      "label": "useAccount()",
+      "file_type": "code",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_consent_requirelegalconsent",
+      "label": "requireLegalConsent()",
+      "file_type": "code",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_consent_acceptlegalconsent",
+      "label": "acceptLegalConsent()",
+      "file_type": "code",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L25",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_local_storage",
+      "label": "local-storage.js",
+      "file_type": "code",
+      "source_file": "src/services/local-storage.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_local_storage_load",
+      "label": "load()",
+      "file_type": "code",
+      "source_file": "src/services/local-storage.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_location_controller",
+      "label": "controller.js",
+      "file_type": "code",
+      "source_file": "src/features/location/controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_location_controller_cityname",
+      "label": "cityName()",
+      "file_type": "code",
+      "source_file": "src/features/location/controller.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_location_controller_updatecitypicker",
+      "label": "updateCityPicker()",
+      "file_type": "code",
+      "source_file": "src/features/location/controller.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_location_controller_setcity",
+      "label": "setCity()",
+      "file_type": "code",
+      "source_file": "src/features/location/controller.js",
+      "source_location": "L7",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_location_controller_usemylocation",
+      "label": "useMyLocation()",
+      "file_type": "code",
+      "source_file": "src/features/location/controller.js",
+      "source_location": "L8",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_preferences_storage",
+      "label": "preferences-storage.js",
+      "file_type": "code",
+      "source_file": "src/services/preferences-storage.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_preferences_storage_persist",
+      "label": "persist()",
+      "file_type": "code",
+      "source_file": "src/services/preferences-storage.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_shared_ui_formatting",
+      "label": "formatting.js",
+      "file_type": "code",
+      "source_file": "src/shared/ui/formatting.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_shared_ui_formatting_esc",
+      "label": "esc()",
+      "file_type": "code",
+      "source_file": "src/shared/ui/formatting.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_shared_ui_formatting_toast",
+      "label": "toast()",
+      "file_type": "code",
+      "source_file": "src/shared/ui/formatting.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_shared_ui_formatting_price",
+      "label": "price()",
+      "file_type": "code",
+      "source_file": "src/shared/ui/formatting.js",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_shared_ui_formatting_displayprice",
+      "label": "displayPrice()",
+      "file_type": "code",
+      "source_file": "src/shared/ui/formatting.js",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_qualification",
+      "label": "qualification.js",
+      "file_type": "code",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_qualification_haslistedprice",
+      "label": "hasListedPrice()",
+      "file_type": "code",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_qualification_ispermanentlyclosed",
+      "label": "isPermanentlyClosed()",
+      "file_type": "code",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_qualification_isexcludedvenue",
+      "label": "isExcludedVenue()",
+      "file_type": "code",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_models_venues_qualification_isqualifiedvenue",
+      "label": "isQualifiedVenue()",
+      "file_type": "code",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_controller",
+      "label": "controller.js",
+      "file_type": "code",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_controller_dietlabel",
+      "label": "dietLabel()",
+      "file_type": "code",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_controller_hastasteanswers",
+      "label": "hasTasteAnswers()",
+      "file_type": "code",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_controller_hastasteprofile",
+      "label": "hasTasteProfile()",
+      "file_type": "code",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_controller_init",
+      "label": "init()",
+      "file_type": "code",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_controller_calculatearchetype",
+      "label": "calculateArchetype()",
+      "file_type": "code",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_controller_onboard",
+      "label": "onboard()",
+      "file_type": "code",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_controller_pick",
+      "label": "pick()",
+      "file_type": "code",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L24",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_controller_nextq",
+      "label": "nextQ()",
+      "file_type": "code",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L37",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_controller_finish",
+      "label": "finish()",
+      "file_type": "code",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L38",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_model",
+      "label": "model.js",
+      "file_type": "code",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_model_cuisinealiases",
+      "label": "cuisineAliases",
+      "file_type": "code",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_model_cuisinelabels",
+      "label": "cuisineLabels",
+      "file_type": "code",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_model_calibrationdishes",
+      "label": "calibrationDishes",
+      "file_type": "code",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_model_normalizedishfeedback",
+      "label": "normalizeDishFeedback()",
+      "file_type": "code",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L21",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_model_preferredcuisines",
+      "label": "preferredCuisines()",
+      "file_type": "code",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L25",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_model_preferredvibes",
+      "label": "preferredVibes()",
+      "file_type": "code",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L29",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_model_cuisinefits",
+      "label": "cuisineFits()",
+      "file_type": "code",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L33",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_model_availablecalibrationdishes",
+      "label": "availableCalibrationDishes()",
+      "file_type": "code",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L37",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_model_dishaffinity",
+      "label": "dishAffinity()",
+      "file_type": "code",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L38",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_model_dishadjustment",
+      "label": "dishAdjustment()",
+      "file_type": "code",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L44",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_controller",
+      "label": "controller.js",
+      "file_type": "code",
+      "source_file": "src/features/calibration/controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_controller_dishbuttons",
+      "label": "dishButtons()",
+      "file_type": "code",
+      "source_file": "src/features/calibration/controller.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_controller_rendercalibrationdeck",
+      "label": "renderCalibrationDeck()",
+      "file_type": "code",
+      "source_file": "src/features/calibration/controller.js",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_controller_ratedish",
+      "label": "rateDish()",
+      "file_type": "code",
+      "source_file": "src/features/calibration/controller.js",
+      "source_location": "L10",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_calibration_controller_retrydishsync",
+      "label": "retryDishSync()",
+      "file_type": "code",
+      "source_file": "src/features/calibration/controller.js",
+      "source_location": "L33",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_recommendations_engine",
+      "label": "engine.js",
+      "file_type": "code",
+      "source_file": "src/features/recommendations/engine.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_recommendations_engine_rec",
+      "label": "rec()",
+      "file_type": "code",
+      "source_file": "src/features/recommendations/engine.js",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_recommendations_engine_ranked",
+      "label": "ranked()",
+      "file_type": "code",
+      "source_file": "src/features/recommendations/engine.js",
+      "source_location": "L81",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_recommendations_feedback",
+      "label": "feedback.js",
+      "file_type": "code",
+      "source_file": "src/features/recommendations/feedback.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_recommendations_feedback_restaurantfeatures",
+      "label": "restaurantFeatures()",
+      "file_type": "code",
+      "source_file": "src/features/recommendations/feedback.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_recommendations_feedback_feedbackcount",
+      "label": "feedbackCount()",
+      "file_type": "code",
+      "source_file": "src/features/recommendations/feedback.js",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_recommendations_feedback_rebuildlearning",
+      "label": "rebuildLearning()",
+      "file_type": "code",
+      "source_file": "src/features/recommendations/feedback.js",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_recommendations_feedback_learn",
+      "label": "learn()",
+      "file_type": "code",
+      "source_file": "src/features/recommendations/feedback.js",
+      "source_location": "L15",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_shared_ui_restaurant_card",
+      "label": "restaurant-card.js",
+      "file_type": "code",
+      "source_file": "src/shared/ui/restaurant-card.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_shared_ui_restaurant_card_photo",
+      "label": "photo()",
+      "file_type": "code",
+      "source_file": "src/shared/ui/restaurant-card.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_shared_ui_restaurant_card_card",
+      "label": "card()",
+      "file_type": "code",
+      "source_file": "src/shared/ui/restaurant-card.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_navigation",
+      "label": "navigation.js",
+      "file_type": "code",
+      "source_file": "src/app/navigation.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_navigation_go",
+      "label": "go()",
+      "file_type": "code",
+      "source_file": "src/app/navigation.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_navigation_sethomecuisine",
+      "label": "setHomeCuisine()",
+      "file_type": "code",
+      "source_file": "src/app/navigation.js",
+      "source_location": "L23",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_navigation_loadmorehome",
+      "label": "loadMoreHome()",
+      "file_type": "code",
+      "source_file": "src/app/navigation.js",
+      "source_location": "L28",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_navigation_city_map_bounds",
+      "label": "CITY_MAP_BOUNDS",
+      "file_type": "code",
+      "source_file": "src/app/navigation.js",
+      "source_location": "L32",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_map_views",
+      "label": "views.js",
+      "file_type": "code",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_map_views_projectcoords",
+      "label": "projectCoords()",
+      "file_type": "code",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_map_views_city_map_themes",
+      "label": "CITY_MAP_THEMES",
+      "file_type": "code",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_map_views_hascoordinates",
+      "label": "hasCoordinates()",
+      "file_type": "code",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L77",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_map_views_renderzestmapsvg",
+      "label": "renderZestMapSvg()",
+      "file_type": "code",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L78",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_map_views_renderzestsheet",
+      "label": "renderZestSheet()",
+      "file_type": "code",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L102",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_place_controller",
+      "label": "controller.js",
+      "file_type": "code",
+      "source_file": "src/features/place/controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_place_controller_openplacedetails",
+      "label": "openPlaceDetails()",
+      "file_type": "code",
+      "source_file": "src/features/place/controller.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_place_controller_closeplacedetails",
+      "label": "closePlaceDetails()",
+      "file_type": "code",
+      "source_file": "src/features/place/controller.js",
+      "source_location": "L10",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_place_views",
+      "label": "views.js",
+      "file_type": "code",
+      "source_file": "src/features/place/views.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_place_views_place",
+      "label": "place()",
+      "file_type": "code",
+      "source_file": "src/features/place/views.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_map_controller",
+      "label": "controller.js",
+      "file_type": "code",
+      "source_file": "src/features/map/controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_map_controller_zoommap",
+      "label": "zoomMap()",
+      "file_type": "code",
+      "source_file": "src/features/map/controller.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_map_controller_resetmapzoom",
+      "label": "resetMapZoom()",
+      "file_type": "code",
+      "source_file": "src/features/map/controller.js",
+      "source_location": "L9",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_home_views",
+      "label": "views.js",
+      "file_type": "code",
+      "source_file": "src/features/home/views.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_home_views_home",
+      "label": "home()",
+      "file_type": "code",
+      "source_file": "src/features/home/views.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_home_views_summarychips",
+      "label": "summaryChips()",
+      "file_type": "code",
+      "source_file": "src/features/home/views.js",
+      "source_location": "L55",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_discover_views",
+      "label": "views.js",
+      "file_type": "code",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_discover_views_discover",
+      "label": "discover()",
+      "file_type": "code",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_discover_views_setdiscovercuisine",
+      "label": "setDiscoverCuisine()",
+      "file_type": "code",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_discover_views_drawdiscover",
+      "label": "drawDiscover()",
+      "file_type": "code",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L10",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_discover_views_filter",
+      "label": "filter()",
+      "file_type": "code",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L29",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_people_views",
+      "label": "views.js",
+      "file_type": "code",
+      "source_file": "src/features/people/views.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_people_views_personcard",
+      "label": "personCard()",
+      "file_type": "code",
+      "source_file": "src/features/people/views.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_people_views_social",
+      "label": "social()",
+      "file_type": "code",
+      "source_file": "src/features/people/views.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_saved_views",
+      "label": "views.js",
+      "file_type": "code",
+      "source_file": "src/features/saved/views.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_saved_views_saved",
+      "label": "saved()",
+      "file_type": "code",
+      "source_file": "src/features/saved/views.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_profile_views",
+      "label": "views.js",
+      "file_type": "code",
+      "source_file": "src/features/profile/views.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_profile_views_profile",
+      "label": "profile()",
+      "file_type": "code",
+      "source_file": "src/features/profile/views.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_legacy_actions",
+      "label": "legacy-actions.js",
+      "file_type": "code",
+      "source_file": "src/app/legacy-actions.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_legacy_actions_rate",
+      "label": "rate()",
+      "file_type": "code",
+      "source_file": "src/app/legacy-actions.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_legacy_actions_saverest",
+      "label": "saveRest()",
+      "file_type": "code",
+      "source_file": "src/app/legacy-actions.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_legacy_actions_follow",
+      "label": "follow()",
+      "file_type": "code",
+      "source_file": "src/app/legacy-actions.js",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_legacy_actions_maps",
+      "label": "maps()",
+      "file_type": "code",
+      "source_file": "src/app/legacy-actions.js",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_legacy_actions_resettaste",
+      "label": "resetTaste()",
+      "file_type": "code",
+      "source_file": "src/app/legacy-actions.js",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_auth_storage",
+      "label": "auth-storage.js",
+      "file_type": "code",
+      "source_file": "src/services/auth-storage.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_auth_storage_openpalateoauthdb",
+      "label": "openPalateoAuthDb()",
+      "file_type": "code",
+      "source_file": "src/services/auth-storage.js",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_auth_storage_authstoragerequest",
+      "label": "authStorageRequest()",
+      "file_type": "code",
+      "source_file": "src/services/auth-storage.js",
+      "source_location": "L24",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_auth_storage_palateoauthstorage",
+      "label": "palateoAuthStorage",
+      "file_type": "code",
+      "source_file": "src/services/auth-storage.js",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_supabase_client",
+      "label": "supabase-client.js",
+      "file_type": "code",
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_supabase_client_makesupabaseclient",
+      "label": "makeSupabaseClient()",
+      "file_type": "code",
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_supabase_client_getsupabaseclient",
+      "label": "getSupabaseClient()",
+      "file_type": "code",
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_supabase_client_connectbackend",
+      "label": "connectBackend()",
+      "file_type": "code",
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_catalog_repository",
+      "label": "catalog-repository.js",
+      "file_type": "code",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_catalog_repository_dbcatalog",
+      "label": "dbCatalog",
+      "file_type": "code",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_catalog_repository_normalizedbrestaurant",
+      "label": "normalizeDbRestaurant()",
+      "file_type": "code",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_catalog_repository_updatemode",
+      "label": "updateMode()",
+      "file_type": "code",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L14",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_catalog_repository_ensurebackend",
+      "label": "ensureBackend()",
+      "file_type": "code",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L21",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_catalog_repository_activerestaurant",
+      "label": "activeRestaurant()",
+      "file_type": "code",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L34",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_user_repository",
+      "label": "user-repository.js",
+      "file_type": "code",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_user_repository_logevent",
+      "label": "logEvent()",
+      "file_type": "code",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_user_repository_synctaste",
+      "label": "syncTaste()",
+      "file_type": "code",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L9",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_user_repository_syncinteraction",
+      "label": "syncInteraction()",
+      "file_type": "code",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L28",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_user_repository_syncsave",
+      "label": "syncSave()",
+      "file_type": "code",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L34",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_user_repository_loadallrows",
+      "label": "loadAllRows()",
+      "file_type": "code",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L41",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_user_repository_loadcloudstate",
+      "label": "loadCloudState()",
+      "file_type": "code",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L49",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_service",
+      "label": "service.js",
+      "file_type": "code",
+      "source_file": "src/features/auth/service.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_service_signinv5",
+      "label": "signInV5()",
+      "file_type": "code",
+      "source_file": "src/features/auth/service.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_service_signupv5",
+      "label": "signUpV5()",
+      "file_type": "code",
+      "source_file": "src/features/auth/service.js",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_service_signoutv5",
+      "label": "signOutV5()",
+      "file_type": "code",
+      "source_file": "src/features/auth/service.js",
+      "source_location": "L42",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_views",
+      "label": "views.js",
+      "file_type": "code",
+      "source_file": "src/features/auth/views.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_views_requireauthgate",
+      "label": "requireAuthGate()",
+      "file_type": "code",
+      "source_file": "src/features/auth/views.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_views_showauth",
+      "label": "showAuth()",
+      "file_type": "code",
+      "source_file": "src/features/auth/views.js",
+      "source_location": "L9",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_recovery",
+      "label": "recovery.js",
+      "file_type": "code",
+      "source_file": "src/features/auth/recovery.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_recovery_sendauthemail",
+      "label": "sendAuthEmail()",
+      "file_type": "code",
+      "source_file": "src/features/auth/recovery.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_recovery_showpasswordrecovery",
+      "label": "showPasswordRecovery()",
+      "file_type": "code",
+      "source_file": "src/features/auth/recovery.js",
+      "source_location": "L15",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_recovery_resetaccountpassword",
+      "label": "resetAccountPassword()",
+      "file_type": "code",
+      "source_file": "src/features/auth/recovery.js",
+      "source_location": "L20",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_recovery_closeauth",
+      "label": "closeAuth()",
+      "file_type": "code",
+      "source_file": "src/features/auth/recovery.js",
+      "source_location": "L27",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_controller",
+      "label": "controller.js",
+      "file_type": "code",
+      "source_file": "src/features/auth/controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_controller_autherrormessage",
+      "label": "authErrorMessage()",
+      "file_type": "code",
+      "source_file": "src/features/auth/controller.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_controller_submitauth",
+      "label": "submitAuth()",
+      "file_type": "code",
+      "source_file": "src/features/auth/controller.js",
+      "source_location": "L10",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_events",
+      "label": "events.js",
+      "file_type": "code",
+      "source_file": "src/app/events.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_events_focusplacepreview",
+      "label": "focusPlacePreview()",
+      "file_type": "code",
+      "source_file": "src/app/events.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_events_closeplacepreview",
+      "label": "closePlacePreview()",
+      "file_type": "code",
+      "source_file": "src/app/events.js",
+      "source_location": "L10",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_sync",
+      "label": "sync.js",
+      "file_type": "code",
+      "source_file": "src/features/quiz/sync.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_quiz_sync_finishv5",
+      "label": "finishV5()",
+      "file_type": "code",
+      "source_file": "src/features/quiz/sync.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_recommendations_sync",
+      "label": "sync.js",
+      "file_type": "code",
+      "source_file": "src/features/recommendations/sync.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_recommendations_sync_feedbacksyncqueue",
+      "label": "feedbackSyncQueue",
+      "file_type": "code",
+      "source_file": "src/features/recommendations/sync.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_recommendations_sync_ratev5",
+      "label": "rateV5()",
+      "file_type": "code",
+      "source_file": "src/features/recommendations/sync.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_interactions",
+      "label": "interactions.js",
+      "file_type": "code",
+      "source_file": "src/services/interactions.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_interactions_savev5",
+      "label": "saveV5()",
+      "file_type": "code",
+      "source_file": "src/services/interactions.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_interactions_followv5",
+      "label": "followV5()",
+      "file_type": "code",
+      "source_file": "src/services/interactions.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_interactions_mapsv5",
+      "label": "mapsV5()",
+      "file_type": "code",
+      "source_file": "src/services/interactions.js",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_catalog_query",
+      "label": "catalog-query.js",
+      "file_type": "code",
+      "source_file": "src/services/catalog-query.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_catalog_query_getactivecatalog",
+      "label": "getActiveCatalog()",
+      "file_type": "code",
+      "source_file": "src/services/catalog-query.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_catalog_query_travelrangenote",
+      "label": "travelRangeNote()",
+      "file_type": "code",
+      "source_file": "src/services/catalog-query.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_catalog_query_withintravelrange",
+      "label": "withinTravelRange()",
+      "file_type": "code",
+      "source_file": "src/services/catalog-query.js",
+      "source_location": "L6",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_wiring",
+      "label": "wiring.js",
+      "file_type": "code",
+      "source_file": "src/app/wiring.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_listener",
+      "label": "listener.js",
+      "file_type": "code",
+      "source_file": "src/features/auth/listener.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_features_auth_listener_startauthlistener",
+      "label": "startAuthListener()",
+      "file_type": "code",
+      "source_file": "src/features/auth/listener.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_shared_ui_brand_animation",
+      "label": "brand-animation.js",
+      "file_type": "code",
+      "source_file": "src/shared/ui/brand-animation.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_shared_ui_brand_animation_initlogoreveal",
+      "label": "initLogoReveal()",
+      "file_type": "code",
+      "source_file": "src/shared/ui/brand-animation.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_shared_ui_brand_animation_initlogoreveal_dismiss",
+      "label": "dismiss()",
+      "file_type": "code",
+      "source_file": "src/shared/ui/brand-animation.js",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_bootstrap",
+      "label": "bootstrap.js",
+      "file_type": "code",
+      "source_file": "src/app/bootstrap.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_bootstrap_initv5",
+      "label": "initV5()",
+      "file_type": "code",
+      "source_file": "src/app/bootstrap.js",
+      "source_location": "L1",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_waitlist_controller",
+      "label": "controller.js",
+      "file_type": "code",
+      "source_file": "src/waitlist/controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_waitlist_controller_form",
+      "label": "form",
+      "file_type": "code",
+      "source_file": "src/waitlist/controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_waitlist_controller_status",
+      "label": "status",
+      "file_type": "code",
+      "source_file": "src/waitlist/controller.js",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_waitlist_controller_scene",
+      "label": "scene",
+      "file_type": "code",
+      "source_file": "src/waitlist/controller.js",
+      "source_location": "L36",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_waitlist_controller_motiontoggle",
+      "label": "motionToggle",
+      "file_type": "code",
+      "source_file": "src/waitlist/controller.js",
+      "source_location": "L37",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_server_api_waitlist",
+      "label": "waitlist.js",
+      "file_type": "code",
+      "source_file": "src/server/api/waitlist.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_server_api_waitlist_randomuuid",
+      "label": "{randomUUID}",
+      "file_type": "code",
+      "source_file": "src/server/api/waitlist.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_server_api_waitlist_reportservererror",
+      "label": "reportServerError()",
+      "file_type": "code",
+      "source_file": "src/server/api/waitlist.js",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_monitoring",
+      "label": "monitoring.js",
+      "file_type": "code",
+      "source_file": "src/services/monitoring.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_services_monitoring_beforesend",
+      "label": "beforeSend()",
+      "file_type": "code",
+      "source_file": "src/services/monitoring.js",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build",
+      "label": "build.cjs",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_fs",
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_path",
+      "label": "path",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_crypto",
+      "label": "crypto",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_vm",
+      "label": "vm",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_assert",
+      "label": "assert",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_root",
+      "label": "root",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_source",
+      "label": "source",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_output",
+      "label": "output",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_manifest",
+      "label": "manifest",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_inside",
+      "label": "inside()",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_read",
+      "label": "read()",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_write",
+      "label": "write()",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_script",
+      "label": "script",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_shell",
+      "label": "shell",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_config",
+      "label": "config",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L43",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_csp",
+      "label": "csp",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L44",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_destinations",
+      "label": "destinations",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L47",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_build_publicfiles",
+      "label": "publicFiles",
+      "file_type": "code",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L48",
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "src_models_venues_ahmedabad",
+      "target": "src_models_venues_ahmedabad_catalog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/venues/ahmedabad.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_people",
+      "target": "src_models_people_people",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/people.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_questions",
+      "target": "src_features_quiz_questions_questions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/questions.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_venues_vadodara",
+      "target": "src_models_venues_vadodara_vadodaracatalog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/venues/vadodara.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_venue_photos",
+      "target": "src_services_venue_photos_fallback_interiors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/venue-photos.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_venue_photos",
+      "target": "src_services_venue_photos_resolvevenuephoto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/venue-photos.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_venues_curated",
+      "target": "src_models_venues_curated_curatedadditions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/venues/curated.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_venues_metros",
+      "target": "src_models_venues_metros_allmetrovenues",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/venues/metros.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_cities",
+      "target": "src_models_cities_citycenters",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/cities.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_core_store",
+      "target": "src_core_store_state",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/core/store.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent",
+      "target": "src_features_auth_consent_consentcontrols",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent",
+      "target": "src_features_auth_consent_readlegalconsent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent",
+      "target": "src_features_auth_consent_legalmetadata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent",
+      "target": "src_features_auth_consent_haslegalconsent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent",
+      "target": "src_features_auth_consent_useaccount",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent",
+      "target": "src_features_auth_consent_requirelegalconsent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent",
+      "target": "src_features_auth_consent_acceptlegalconsent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent_useaccount",
+      "target": "src_features_auth_consent_haslegalconsent",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent_requirelegalconsent",
+      "target": "src_features_auth_consent_consentcontrols",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent_acceptlegalconsent",
+      "target": "src_features_auth_consent_legalmetadata",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent_acceptlegalconsent",
+      "target": "src_features_auth_consent_readlegalconsent",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_consent_acceptlegalconsent",
+      "target": "src_features_auth_consent_useaccount",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/consent.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_local_storage",
+      "target": "src_services_local_storage_load",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/local-storage.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_location_controller",
+      "target": "src_features_location_controller_cityname",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/location/controller.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_location_controller",
+      "target": "src_features_location_controller_updatecitypicker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/location/controller.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_location_controller",
+      "target": "src_features_location_controller_setcity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/location/controller.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_location_controller",
+      "target": "src_features_location_controller_usemylocation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/location/controller.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_location_controller_setcity",
+      "target": "src_features_location_controller_updatecitypicker",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/location/controller.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_location_controller_usemylocation",
+      "target": "src_features_location_controller_updatecitypicker",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/location/controller.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_preferences_storage",
+      "target": "src_services_preferences_storage_persist",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/preferences-storage.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_shared_ui_formatting",
+      "target": "src_shared_ui_formatting_esc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/shared/ui/formatting.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_shared_ui_formatting",
+      "target": "src_shared_ui_formatting_toast",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/shared/ui/formatting.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_shared_ui_formatting",
+      "target": "src_shared_ui_formatting_price",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/shared/ui/formatting.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_shared_ui_formatting",
+      "target": "src_shared_ui_formatting_displayprice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/shared/ui/formatting.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_shared_ui_formatting_displayprice",
+      "target": "src_shared_ui_formatting_price",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/shared/ui/formatting.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_venues_qualification",
+      "target": "src_models_venues_qualification_haslistedprice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_venues_qualification",
+      "target": "src_models_venues_qualification_ispermanentlyclosed",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_venues_qualification",
+      "target": "src_models_venues_qualification_isexcludedvenue",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_venues_qualification",
+      "target": "src_models_venues_qualification_isqualifiedvenue",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_venues_qualification_isexcludedvenue",
+      "target": "src_models_venues_qualification_ispermanentlyclosed",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_venues_qualification_isqualifiedvenue",
+      "target": "src_models_venues_qualification_haslistedprice",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_venues_qualification_isqualifiedvenue",
+      "target": "src_models_venues_qualification_isexcludedvenue",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/models/venues/qualification.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller",
+      "target": "src_features_quiz_controller_dietlabel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller",
+      "target": "src_features_quiz_controller_hastasteanswers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller",
+      "target": "src_features_quiz_controller_hastasteprofile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller",
+      "target": "src_features_quiz_controller_init",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller",
+      "target": "src_features_quiz_controller_calculatearchetype",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller",
+      "target": "src_features_quiz_controller_onboard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller",
+      "target": "src_features_quiz_controller_pick",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller",
+      "target": "src_features_quiz_controller_nextq",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller",
+      "target": "src_features_quiz_controller_finish",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller_hastasteprofile",
+      "target": "src_features_quiz_controller_hastasteanswers",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller_init",
+      "target": "src_features_quiz_controller_onboard",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller_nextq",
+      "target": "src_features_quiz_controller_onboard",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_controller_nextq",
+      "target": "src_features_quiz_controller_finish",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/controller.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model",
+      "target": "src_features_calibration_model_cuisinealiases",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model",
+      "target": "src_features_calibration_model_cuisinelabels",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model",
+      "target": "src_features_calibration_model_calibrationdishes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model",
+      "target": "src_features_calibration_model_normalizedishfeedback",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model",
+      "target": "src_features_calibration_model_preferredcuisines",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model",
+      "target": "src_features_calibration_model_preferredvibes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model",
+      "target": "src_features_calibration_model_cuisinefits",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model",
+      "target": "src_features_calibration_model_availablecalibrationdishes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model",
+      "target": "src_features_calibration_model_dishaffinity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model",
+      "target": "src_features_calibration_model_dishadjustment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model_dishaffinity",
+      "target": "src_features_calibration_model_cuisinefits",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model_dishadjustment",
+      "target": "src_features_calibration_model_normalizedishfeedback",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model_dishadjustment",
+      "target": "src_features_calibration_model_availablecalibrationdishes",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_model_dishadjustment",
+      "target": "src_features_calibration_model_dishaffinity",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/model.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_controller",
+      "target": "src_features_calibration_controller_dishbuttons",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/controller.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_controller",
+      "target": "src_features_calibration_controller_rendercalibrationdeck",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/controller.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_controller",
+      "target": "src_features_calibration_controller_ratedish",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/controller.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_controller",
+      "target": "src_features_calibration_controller_retrydishsync",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/controller.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_calibration_controller_rendercalibrationdeck",
+      "target": "src_features_calibration_controller_dishbuttons",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/calibration/controller.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_recommendations_engine",
+      "target": "src_features_recommendations_engine_rec",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/recommendations/engine.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_recommendations_engine",
+      "target": "src_features_recommendations_engine_ranked",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/recommendations/engine.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_recommendations_engine_ranked",
+      "target": "src_features_recommendations_engine_rec",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/features/recommendations/engine.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_recommendations_feedback",
+      "target": "src_features_recommendations_feedback_restaurantfeatures",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/recommendations/feedback.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_recommendations_feedback",
+      "target": "src_features_recommendations_feedback_feedbackcount",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/recommendations/feedback.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_recommendations_feedback",
+      "target": "src_features_recommendations_feedback_rebuildlearning",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/recommendations/feedback.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_recommendations_feedback",
+      "target": "src_features_recommendations_feedback_learn",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/recommendations/feedback.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_recommendations_feedback_rebuildlearning",
+      "target": "src_features_recommendations_feedback_restaurantfeatures",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/recommendations/feedback.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_recommendations_feedback_learn",
+      "target": "src_features_recommendations_feedback_rebuildlearning",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/recommendations/feedback.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_shared_ui_restaurant_card",
+      "target": "src_shared_ui_restaurant_card_photo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/shared/ui/restaurant-card.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_shared_ui_restaurant_card",
+      "target": "src_shared_ui_restaurant_card_card",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/shared/ui/restaurant-card.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_shared_ui_restaurant_card_card",
+      "target": "src_shared_ui_restaurant_card_photo",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/shared/ui/restaurant-card.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_navigation",
+      "target": "src_app_navigation_go",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/navigation.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_navigation",
+      "target": "src_app_navigation_sethomecuisine",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/navigation.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_navigation",
+      "target": "src_app_navigation_loadmorehome",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/navigation.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_navigation",
+      "target": "src_app_navigation_city_map_bounds",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/navigation.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_map_views",
+      "target": "src_features_map_views_projectcoords",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_map_views",
+      "target": "src_features_map_views_city_map_themes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_map_views",
+      "target": "src_features_map_views_hascoordinates",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_map_views",
+      "target": "src_features_map_views_renderzestmapsvg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_map_views",
+      "target": "src_features_map_views_renderzestsheet",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_map_views_renderzestmapsvg",
+      "target": "src_features_map_views_projectcoords",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/map/views.js",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_place_controller",
+      "target": "src_features_place_controller_openplacedetails",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/place/controller.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_place_controller",
+      "target": "src_features_place_controller_closeplacedetails",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/place/controller.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_place_controller",
+      "target": "src_features_place_controller_closeplacedetails",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/place/controller.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_place_views",
+      "target": "src_features_place_views_place",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/place/views.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_map_controller",
+      "target": "src_features_map_controller_zoommap",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/map/controller.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_map_controller",
+      "target": "src_features_map_controller_resetmapzoom",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/map/controller.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_home_views",
+      "target": "src_features_home_views_home",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/home/views.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_home_views",
+      "target": "src_features_home_views_summarychips",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/home/views.js",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_discover_views",
+      "target": "src_features_discover_views_discover",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_discover_views",
+      "target": "src_features_discover_views_setdiscovercuisine",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_discover_views",
+      "target": "src_features_discover_views_drawdiscover",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_discover_views",
+      "target": "src_features_discover_views_filter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_discover_views_discover",
+      "target": "src_features_discover_views_drawdiscover",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_discover_views_setdiscovercuisine",
+      "target": "src_features_discover_views_drawdiscover",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_discover_views_filter",
+      "target": "src_features_discover_views_drawdiscover",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_people_views",
+      "target": "src_features_people_views_personcard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/people/views.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_people_views",
+      "target": "src_features_people_views_social",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/people/views.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_people_views_social",
+      "target": "src_features_people_views_personcard",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/features/people/views.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_saved_views",
+      "target": "src_features_saved_views_saved",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/saved/views.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_profile_views",
+      "target": "src_features_profile_views_profile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/profile/views.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_legacy_actions",
+      "target": "src_app_legacy_actions_rate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/legacy-actions.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_legacy_actions",
+      "target": "src_app_legacy_actions_saverest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/legacy-actions.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_legacy_actions",
+      "target": "src_app_legacy_actions_follow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/legacy-actions.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_legacy_actions",
+      "target": "src_app_legacy_actions_maps",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/legacy-actions.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_legacy_actions",
+      "target": "src_app_legacy_actions_resettaste",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/legacy-actions.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_auth_storage",
+      "target": "src_services_auth_storage_openpalateoauthdb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/auth-storage.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_auth_storage",
+      "target": "src_services_auth_storage_authstoragerequest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/auth-storage.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_auth_storage",
+      "target": "src_services_auth_storage_palateoauthstorage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/auth-storage.js",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_auth_storage_authstoragerequest",
+      "target": "src_services_auth_storage_openpalateoauthdb",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/auth-storage.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_supabase_client",
+      "target": "src_services_supabase_client_makesupabaseclient",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_supabase_client",
+      "target": "src_services_supabase_client_getsupabaseclient",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_supabase_client",
+      "target": "src_services_supabase_client_connectbackend",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_supabase_client_getsupabaseclient",
+      "target": "src_services_supabase_client_makesupabaseclient",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_supabase_client_connectbackend",
+      "target": "src_services_supabase_client_makesupabaseclient",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_supabase_client",
+      "target": "src_services_supabase_client_connectbackend",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_catalog_repository",
+      "target": "src_services_catalog_repository_dbcatalog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_catalog_repository",
+      "target": "src_services_catalog_repository_normalizedbrestaurant",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_catalog_repository",
+      "target": "src_services_catalog_repository_updatemode",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_catalog_repository",
+      "target": "src_services_catalog_repository_ensurebackend",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_catalog_repository",
+      "target": "src_services_catalog_repository_activerestaurant",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_catalog_repository_ensurebackend",
+      "target": "src_services_catalog_repository_normalizedbrestaurant",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_catalog_repository_ensurebackend",
+      "target": "src_services_catalog_repository_updatemode",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/catalog-repository.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_user_repository",
+      "target": "src_services_user_repository_logevent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_user_repository",
+      "target": "src_services_user_repository_synctaste",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_user_repository",
+      "target": "src_services_user_repository_syncinteraction",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_user_repository",
+      "target": "src_services_user_repository_syncsave",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_user_repository",
+      "target": "src_services_user_repository_loadallrows",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_user_repository",
+      "target": "src_services_user_repository_loadcloudstate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_user_repository_synctaste",
+      "target": "src_services_user_repository_logevent",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_user_repository_loadcloudstate",
+      "target": "src_services_user_repository_loadallrows",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/user-repository.js",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_service",
+      "target": "src_features_auth_service_signinv5",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/service.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_service",
+      "target": "src_features_auth_service_signupv5",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/service.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_service",
+      "target": "src_features_auth_service_signoutv5",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/service.js",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_views",
+      "target": "src_features_auth_views_requireauthgate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/views.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_views",
+      "target": "src_features_auth_views_showauth",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/views.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_views_requireauthgate",
+      "target": "src_features_auth_views_showauth",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/views.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_recovery",
+      "target": "src_features_auth_recovery_sendauthemail",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/recovery.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_recovery",
+      "target": "src_features_auth_recovery_showpasswordrecovery",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/recovery.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_recovery",
+      "target": "src_features_auth_recovery_resetaccountpassword",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/recovery.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_recovery",
+      "target": "src_features_auth_recovery_closeauth",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/recovery.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_controller",
+      "target": "src_features_auth_controller_autherrormessage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/controller.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_controller",
+      "target": "src_features_auth_controller_submitauth",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/controller.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_controller_submitauth",
+      "target": "src_features_auth_controller_autherrormessage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/controller.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_events",
+      "target": "src_app_events_focusplacepreview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/events.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_events",
+      "target": "src_app_events_closeplacepreview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/events.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_events",
+      "target": "src_app_events_closeplacepreview",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/events.js",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_events",
+      "target": "src_app_events_focusplacepreview",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/events.js",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_quiz_sync",
+      "target": "src_features_quiz_sync_finishv5",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/quiz/sync.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_recommendations_sync",
+      "target": "src_features_recommendations_sync_feedbacksyncqueue",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/recommendations/sync.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_recommendations_sync",
+      "target": "src_features_recommendations_sync_ratev5",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/recommendations/sync.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_interactions",
+      "target": "src_services_interactions_savev5",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/interactions.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_interactions",
+      "target": "src_services_interactions_followv5",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/interactions.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_interactions",
+      "target": "src_services_interactions_mapsv5",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/interactions.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_catalog_query",
+      "target": "src_services_catalog_query_getactivecatalog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/catalog-query.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_catalog_query",
+      "target": "src_services_catalog_query_travelrangenote",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/catalog-query.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_catalog_query",
+      "target": "src_services_catalog_query_withintravelrange",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/catalog-query.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_listener",
+      "target": "src_features_auth_listener_startauthlistener",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/auth/listener.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_shared_ui_brand_animation",
+      "target": "src_shared_ui_brand_animation_initlogoreveal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/shared/ui/brand-animation.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_shared_ui_brand_animation_initlogoreveal",
+      "target": "src_shared_ui_brand_animation_initlogoreveal_dismiss",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/shared/ui/brand-animation.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_shared_ui_brand_animation_initlogoreveal",
+      "target": "src_shared_ui_brand_animation_initlogoreveal_dismiss",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/shared/ui/brand-animation.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_bootstrap",
+      "target": "src_app_bootstrap_initv5",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/bootstrap.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_waitlist_controller",
+      "target": "src_waitlist_controller_form",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/waitlist/controller.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_waitlist_controller",
+      "target": "src_waitlist_controller_status",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/waitlist/controller.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_waitlist_controller",
+      "target": "src_waitlist_controller_scene",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/waitlist/controller.js",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_waitlist_controller",
+      "target": "src_waitlist_controller_motiontoggle",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/waitlist/controller.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_server_api_waitlist",
+      "target": "ref_node_crypto",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/api/waitlist.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_server_api_waitlist",
+      "target": "src_server_api_waitlist_randomuuid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/api/waitlist.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_server_api_waitlist",
+      "target": "src_server_api_waitlist_reportservererror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/api/waitlist.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_monitoring",
+      "target": "src_services_monitoring_beforesend",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/monitoring.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "ref_node_fs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_fs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "ref_node_path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "ref_node_crypto",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_crypto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "ref_node_vm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_vm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "ref_node_assert",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_assert",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_root",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_source",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_output",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_manifest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_inside",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_read",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_write",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_script",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_shell",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_config",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_csp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_destinations",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_publicfiles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build_read",
+      "target": "scripts_build_inside",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build_write",
+      "target": "scripts_build_inside",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build_publicfiles",
+      "target": "scripts_build_inside",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build.cjs",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_build",
+      "target": "scripts_build_read",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "scripts/build.cjs",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_models_venues_curated",
+      "target": "src_services_catalog_repository_normalizedbrestaurant",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/models/venues/curated.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_navigation_go",
+      "target": "src_features_home_views_home",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/navigation.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_navigation_go",
+      "target": "src_features_discover_views_discover",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/navigation.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_navigation_go",
+      "target": "src_features_people_views_social",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/navigation.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_navigation_go",
+      "target": "src_features_saved_views_saved",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/navigation.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_navigation_go",
+      "target": "src_features_profile_views_profile",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/navigation.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_navigation_go",
+      "target": "src_features_place_views_place",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/navigation.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_place_views_place",
+      "target": "src_shared_ui_formatting_esc",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/features/place/views.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_home_views_home",
+      "target": "src_shared_ui_restaurant_card_card",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/features/home/views.js",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_discover_views_drawdiscover",
+      "target": "src_shared_ui_restaurant_card_card",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/features/discover/views.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_saved_views_saved",
+      "target": "src_features_recommendations_engine_rec",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/features/saved/views.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_saved_views_saved",
+      "target": "src_services_catalog_repository_activerestaurant",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/features/saved/views.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_saved_views_saved",
+      "target": "src_shared_ui_restaurant_card_card",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/features/saved/views.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_supabase_client",
+      "target": "src_features_recommendations_engine_ranked",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_supabase_client",
+      "target": "src_app_legacy_actions_rate",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_services_supabase_client",
+      "target": "src_app_legacy_actions_saverest",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/services/supabase-client.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_features_auth_listener_startauthlistener",
+      "target": "src_features_auth_recovery_showpasswordrecovery",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/features/auth/listener.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_bootstrap",
+      "target": "src_services_catalog_repository_ensurebackend",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/bootstrap.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_bootstrap",
+      "target": "src_features_auth_service_signinv5",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/bootstrap.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_bootstrap",
+      "target": "src_features_auth_service_signupv5",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/bootstrap.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_bootstrap",
+      "target": "src_features_auth_service_signoutv5",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/bootstrap.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_bootstrap",
+      "target": "src_features_auth_views_showauth",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/bootstrap.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_bootstrap",
+      "target": "src_features_recommendations_engine_ranked",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/bootstrap.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_bootstrap",
+      "target": "src_features_recommendations_sync_ratev5",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/bootstrap.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "src_app_bootstrap",
+      "target": "src_services_interactions_savev5",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/bootstrap.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "failed_sources": [],
+  "extracted_sources": [
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\app\\compatibility.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\models\\venues\\ahmedabad.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\models\\people.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\quiz\\questions.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\models\\venues\\vadodara.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\services\\venue-photos.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\models\\venues\\curated.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\models\\venues\\metros.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\models\\cities.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\core\\store.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\auth\\consent.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\services\\local-storage.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\location\\controller.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\services\\preferences-storage.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\shared\\ui\\formatting.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\models\\venues\\qualification.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\quiz\\controller.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\calibration\\model.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\calibration\\controller.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\recommendations\\engine.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\recommendations\\feedback.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\shared\\ui\\restaurant-card.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\app\\navigation.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\map\\views.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\place\\controller.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\place\\views.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\map\\controller.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\home\\views.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\discover\\views.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\people\\views.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\saved\\views.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\profile\\views.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\app\\legacy-actions.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\services\\auth-storage.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\services\\supabase-client.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\services\\catalog-repository.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\services\\user-repository.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\auth\\service.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\auth\\views.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\auth\\recovery.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\auth\\controller.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\app\\events.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\quiz\\sync.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\recommendations\\sync.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\services\\interactions.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\services\\catalog-query.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\app\\wiring.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\features\\auth\\listener.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\shared\\ui\\brand-animation.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\app\\bootstrap.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\waitlist\\controller.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\server\\api\\waitlist.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\src\\services\\monitoring.js",
+    "C:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo\\scripts\\build.cjs"
+  ]
+}

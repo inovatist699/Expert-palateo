@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-09T07:43:27.7737332Z",
+  "title": "Design System: Palateo",
+  "extensions": {
+    "colorMeta": {
+      "map-path": {
+        "role": "neutral",
+        "displayName": "Map Illustrative Paths",
+        "canonical": "#f8fff8"
+      },
+      "map-control": {
+        "role": "neutral",
+        "displayName": "Map Light Controls",
+        "canonical": "#f6fffc"
+      },
+      "action-ink": {
+        "role": "neutral",
+        "displayName": "App Gunmetal Action Text",
+        "canonical": "#20373b"
+      },
+      "map-ink": {
+        "role": "neutral",
+        "displayName": "Map Gunmetal Labels",
+        "canonical": "#20373b"
+      },
+      "app-success": {
+        "role": "tertiary",
+        "displayName": "Semantic Success",
+        "canonical": "#2f6251"
+      },
+      "app-soft": {
+        "role": "neutral",
+        "displayName": "Soft Blue",
+        "canonical": "#dbeef4"
+      },
+      "quiz-wash": {
+        "role": "secondary",
+        "displayName": "Public LightBlue Quiz",
+        "canonical": "#c3e7f1"
+      },
+      "app-muted": {
+        "role": "neutral",
+        "displayName": "Dark Moonstone Copy",
+        "canonical": "#315e68"
+      },
+      "waitlist-ink": {
+        "role": "neutral",
+        "displayName": "Public Pale Text",
+        "canonical": "#edf7fa"
+      },
+      "waitlist-background": {
+        "role": "neutral",
+        "displayName": "Public Gunmetal Sections",
+        "canonical": "#20373b"
+      },
+      "waitlist-focus": {
+        "role": "neutral",
+        "displayName": "Public LightBlue Focus",
+        "canonical": "#c3e7f1"
+      },
+      "waitlist-action": {
+        "role": "primary",
+        "displayName": "Public Saffron Action",
+        "canonical": "#ffc64f"
+      },
+      "app-saffron": {
+        "role": "tertiary",
+        "displayName": "Saffron Detail",
+        "canonical": "#ffc64f"
+      },
+      "app-danger": {
+        "role": "tertiary",
+        "displayName": "Semantic Error",
+        "canonical": "#9b3f38"
+      },
+      "app-ink": {
+        "role": "neutral",
+        "displayName": "App Gunmetal",
+        "canonical": "#20373b"
+      },
+      "app-focus": {
+        "role": "neutral",
+        "displayName": "Gunmetal Focus",
+        "canonical": "#20373b"
+      },
+      "waitlist-section": {
+        "role": "neutral",
+        "displayName": "Public Gunmetal Sections",
+        "canonical": "#20373b"
+      },
+      "map-river": {
+        "role": "secondary",
+        "displayName": "Map Moonstone River",
+        "canonical": "#519cab"
+      },
+      "map-plane": {
+        "role": "secondary",
+        "displayName": "Map LightBlue Plane",
+        "canonical": "#c3e7f1"
+      },
+      "map-block": {
+        "role": "secondary",
+        "displayName": "Map Pale Blue Blocks",
+        "canonical": "#d7edf3"
+      },
+      "waitlist-action-ink": {
+        "role": "neutral",
+        "displayName": "Public Gunmetal Action Text",
+        "canonical": "#20373b"
+      },
+      "gunmetal": {
+        "role": "neutral",
+        "displayName": "Gunmetal",
+        "canonical": "#20373b"
+      },
+      "app-action-hover": {
+        "role": "primary",
+        "displayName": "App Saffron Hover",
+        "canonical": "#ffe0a1"
+      },
+      "app-line": {
+        "role": "neutral",
+        "displayName": "Blue Divider",
+        "canonical": "#93bec8"
+      },
+      "waitlist-muted": {
+        "role": "neutral",
+        "displayName": "Public LightBlue Copy",
+        "canonical": "#c3e7f1"
+      },
+      "control-line": {
+        "role": "neutral",
+        "displayName": "Visible Control Border",
+        "canonical": "#315e68"
+      },
+      "moonstone": {
+        "role": "secondary",
+        "displayName": "Moonstone",
+        "canonical": "#519cab"
+      },
+      "app-card": {
+        "role": "neutral",
+        "displayName": "Pale App Card",
+        "canonical": "#edf7fa"
+      },
+      "light-blue": {
+        "role": "primary",
+        "displayName": "LightBlue",
+        "canonical": "#c3e7f1"
+      },
+      "app-selection": {
+        "role": "neutral",
+        "displayName": "Gunmetal Selection Ink",
+        "canonical": "#20373b"
+      },
+      "map-line": {
+        "role": "neutral",
+        "displayName": "Map Blue Border",
+        "canonical": "#93bec8"
+      },
+      "waitlist-action-hover": {
+        "role": "primary",
+        "displayName": "Public Saffron Hover",
+        "canonical": "#ffe0a1"
+      },
+      "app-score": {
+        "role": "primary",
+        "displayName": "Saffron Match Badge",
+        "canonical": "#ffc64f"
+      },
+      "app-action": {
+        "role": "primary",
+        "displayName": "App Saffron Action",
+        "canonical": "#ffc64f"
+      },
+      "app-background": {
+        "role": "neutral",
+        "displayName": "App LightBlue",
+        "canonical": "#c3e7f1"
+      },
+      "saffron": {
+        "role": "primary",
+        "displayName": "Saffron",
+        "canonical": "#ffc64f"
+      }
+    },
+    "typographyMeta": {
+      "app-question": {
+        "displayName": "App Question",
+        "purpose": "Plus Jakarta Sans taste question; 32px desktop, 28px mobile."
+      },
+      "app-dialog-title": {
+        "displayName": "App Dialog Title",
+        "purpose": "Plus Jakarta Sans sign-in and consent headings."
+      },
+      "app-copy": {
+        "displayName": "App Copy",
+        "purpose": "App explanatory paragraph text."
+      },
+      "waitlist-body": {
+        "displayName": "Public Body",
+        "purpose": "Public-page prose and readable form text."
+      },
+      "waitlist-mobile-heading": {
+        "displayName": "Public Mobile Heading",
+        "purpose": "Mobile public section heading baseline; individual sections override it."
+      }
+    },
+    "shadows": [
+      {
+        "name": "app-resting",
+        "value": "none",
+        "purpose": "App cards, primary controls, quiz choices and navigation."
+      },
+      {
+        "name": "app-toast",
+        "value": "0 8px 20px #0004",
+        "purpose": "Transient toast."
+      },
+      {
+        "name": "public-phone",
+        "value": "22px 35px 50px #20373b5c",
+        "purpose": "Illustrative public phone on desktop."
+      },
+      {
+        "name": "public-quiz-sample",
+        "value": "12px 20px 35px #20373b15",
+        "purpose": "Illustrative sample on the pale public quiz section."
+      }
+    ],
+    "motion": [
+      {
+        "name": "app-progress",
+        "value": "width .2s ease",
+        "purpose": "Quiz progress; removed for reduced motion."
+      },
+      {
+        "name": "public-button",
+        "value": "background .2s, transform .2s",
+        "purpose": "Public action feedback; movement suppressed for reduced motion."
+      },
+      {
+        "name": "public-phone",
+        "value": "transform .4s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Public preview tilt; existing pause control and reduced motion apply."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "app-desktop-min",
+        "value": "840px"
+      },
+      {
+        "name": "app-mobile-max",
+        "value": "839px"
+      },
+      {
+        "name": "app-narrow-max",
+        "value": "360px"
+      },
+      {
+        "name": "public-wide-min",
+        "value": "1500px"
+      },
+      {
+        "name": "public-tablet-max",
+        "value": "1000px"
+      },
+      {
+        "name": "public-mobile-max",
+        "value": "720px"
+      },
+      {
+        "name": "public-narrow-max",
+        "value": "380px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "App Primary Button",
+      "kind": "button",
+      "refersTo": "app-button-primary",
+      "description": "The app's main action; its label names the actual next step.",
+      "html": "<button class=\"ds-app-primary\" type=\"button\">Continue →</button>",
+      "css": ".ds-app-primary{font-family:\"Plus Jakarta Sans\",system-ui,sans-serif;font-size:14px;font-weight:750;min-height:48px;padding:12px 18px;border:0;border-radius:10px;background:#ffc64f;color:#20373b;cursor:pointer}.ds-app-primary:hover{background:#ffe0a1}.ds-app-primary:focus-visible{outline:3px solid #20373b;outline-offset:3px}.ds-app-primary:active{background:#ffc64f}.ds-app-primary:disabled{opacity:.5;cursor:not-allowed}"
+    },
+    {
+      "name": "App Secondary Button",
+      "kind": "button",
+      "refersTo": "app-button-secondary",
+      "description": "Back and supporting app actions.",
+      "html": "<button class=\"ds-app-secondary\" type=\"button\">Back</button>",
+      "css": ".ds-app-secondary{font-family:\"Plus Jakarta Sans\",system-ui,sans-serif;font-size:14px;font-weight:750;min-height:48px;padding:12px 18px;border:1px solid var(--control-line,#315e68);border-radius:10px;background:#edf7fa;color:var(--ink,#20373b);cursor:pointer}.ds-app-secondary:hover{background:#edf7fa}.ds-app-secondary:focus-visible{outline:3px solid #20373b;outline-offset:3px}.ds-app-secondary:active{background:#edf7fa}.ds-app-secondary:disabled{opacity:.5;cursor:not-allowed}"
+    },
+    {
+      "name": "Public Primary Button",
+      "kind": "button",
+      "refersTo": "waitlist-button-primary",
+      "description": "Public taste-quiz and waitlist actions.",
+      "html": "<button class=\"ds-public-primary\" type=\"button\">Find my taste <span aria-hidden=\"true\">→</span></button>",
+      "css": ".ds-public-primary{display:inline-flex;align-items:center;justify-content:center;gap:25px;font-family:\"DM Sans\",sans-serif;font-size:15px;line-height:1.4;font-weight:700;min-height:54px;padding:15px 23px;border:0;border-radius:8px;background:var(--aqua,#ffc64f);color:#20373b;cursor:pointer;transition:background .2s,transform .2s}.ds-public-primary:hover{background:#ffe0a1;transform:translateY(-2px)}.ds-public-primary:focus-visible{outline:3px solid #20373b;outline-offset:5px}.ds-public-primary:active{transform:translateY(0)}.ds-public-primary:disabled{cursor:wait;background:#315e68;color:#c3e7f1;transform:none}@media(prefers-reduced-motion:reduce){.ds-public-primary{transition:none}.ds-public-primary:hover{transform:none}}"
+    },
+    {
+      "name": "App Labelled Field",
+      "kind": "input",
+      "refersTo": "app-field",
+      "description": "Native text entry with a persistent visible label.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-email\">Email address</label><input class=\"ds-field\" id=\"ds-email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@example.com\">",
+      "css": ".ds-field-label{display:block;font-family:\"Plus Jakarta Sans\",system-ui,sans-serif;font-size:12px;color:var(--muted,#315e68);margin-bottom:7px}.ds-field{width:100%;min-height:48px;padding:12px 14px;font-family:\"Plus Jakarta Sans\",system-ui,sans-serif;font-size:14px;background:#edf7fa;color:var(--ink,#20373b);border:1px solid var(--control-line,#315e68);border-radius:10px;caret-color:var(--green,#315e68)}.ds-field::placeholder{color:#315e68}.ds-field:focus{border-color:var(--green,#315e68)}.ds-field:focus-visible{outline:3px solid #20373b;outline-offset:3px}.ds-field:disabled{opacity:.5;cursor:not-allowed}"
+    },
+    {
+      "name": "Taste Choice",
+      "kind": "button",
+      "refersTo": "app-choice",
+      "description": "Compact wrapping quiz chip; cuisine and vibe allow multiple pressed choices with a visible check.",
+      "html": "<button class=\"ds-choice\" type=\"button\" aria-pressed=\"true\"><span>Quiet &amp; cosy</span><span aria-hidden=\"true\">✓</span></button>",
+      "css": ".ds-choice{display:inline-flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:12px 16px;font-family:\"Plus Jakarta Sans\",system-ui,sans-serif;font-size:13px;font-weight:600;border:1px solid var(--control-line,#315e68);border-radius:12px;background:var(--soft,#dbeef4);color:var(--ink,#20373b);cursor:pointer}.ds-choice:hover{background:#dbeef4;border-color:#315e68}.ds-choice[aria-pressed=true]{background:#ffc64f;border:2px solid #20373b;padding:11px 15px;color:#20373b}.ds-choice:focus-visible{outline:3px solid #20373b;outline-offset:3px}.ds-choice:active{border-color:#20373b}@media(max-width:839px){.ds-choice{font-size:12px;padding:12px}.ds-choice[aria-pressed=true]{padding:11px}}"
+    },
+    {
+      "name": "Venue Metadata Tag",
+      "kind": "chip",
+      "refersTo": "app-tag",
+      "description": "Non-interactive venue metadata; filters use separate native buttons.",
+      "html": "<span class=\"ds-tag\">Café</span>",
+      "css": ".ds-tag{display:inline-block;padding:4px 7px;font-family:\"Plus Jakarta Sans\",system-ui,sans-serif;font-size:10px;background:#dbeef4;color:#315e68;border:0;border-radius:6px}"
+    },
+    {
+      "name": "Venue Card",
+      "kind": "card",
+      "refersTo": "app-card",
+      "description": "Estimated venue match and explanation. The live app opens full place/About from card body, native title or photo controls; nested actions retain their behavior.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-head\"><div><h3 class=\"ds-card-title\">Example café</h3><p class=\"ds-card-meta\">Illustrative venue preview</p></div><div class=\"ds-card-match\"><b>84%</b><span>Example estimate</span></div></div><p class=\"ds-card-reason\"><strong>Why it fits</strong> · Cuisine preference</p><details class=\"ds-card-why\"><summary>Your match explained</summary><p>An estimate based on taste answers and feedback.</p></details></article>",
+      "css": ".ds-card{font-family:\"Plus Jakarta Sans\",system-ui,sans-serif;padding:18px;border:1px solid var(--line,#93bec8);border-radius:14px;background:var(--card,#edf7fa);color:var(--ink,#20373b)}.ds-card:hover{border-color:#ffc64f}.ds-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.ds-card-title{font-size:18px;line-height:1.25;letter-spacing:-.02em;margin:0 0 6px;overflow-wrap:anywhere}.ds-card-meta{font-size:11px;line-height:1.6;color:var(--muted,#315e68);margin:0}.ds-card-match{padding:8px;border-radius:10px;background:#ffc64f;color:#20373b;text-align:center;flex:none}.ds-card-match b{display:block;font-size:24px;line-height:1.1;font-variant-numeric:tabular-nums}.ds-card-match span{font-size:9px}.ds-card-reason{font-size:12px;line-height:1.6;color:var(--muted,#315e68);margin:12px 0 0}.ds-card-reason strong{color:var(--ink,#20373b)}.ds-card-why{border-top:1px solid var(--line,#93bec8);padding-top:10px;margin-top:12px;font-size:12px;color:var(--muted,#315e68)}.ds-card-why summary{color:var(--green,#315e68);min-height:32px;cursor:pointer;font-weight:600}.ds-card-why summary:hover{text-decoration:underline}.ds-card-why summary:focus-visible{outline:3px solid #20373b;outline-offset:3px}.ds-card-why p{line-height:1.7}"
+    },
+    {
+      "name": "App Navigation",
+      "kind": "nav",
+      "refersTo": "app-nav",
+      "description": "Compact labelled navigation; active destination is visually distinct.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main\"><button type=\"button\" class=\"ds-nav-current\" aria-current=\"page\">Home</button><button type=\"button\">Discover</button><button type=\"button\">Saved</button><button type=\"button\">Palate</button></nav>",
+      "css": ".ds-nav{display:flex;gap:3px;padding:4px;border:1px solid var(--line,#93bec8);border-radius:12px;background:#20373b}.ds-nav button{flex:1;min-width:0;min-height:44px;padding:9px 11px;font-family:\"Plus Jakarta Sans\",system-ui,sans-serif;font-size:11px;font-weight:550;border:0;border-radius:9px;background:transparent;color:#c3e7f1;cursor:pointer}.ds-nav .ds-nav-current{background:#ffc64f;color:#20373b;font-weight:900}.ds-nav button:hover{color:#edf7fa}.ds-nav button:focus-visible{outline:3px solid #c3e7f1;outline-offset:3px}.ds-nav button:active{background:#20373b}.ds-nav .ds-nav-current:hover{color:#20373b}.ds-nav .ds-nav-current:active{background:#ffc64f;color:#20373b}"
+    },
+    {
+      "name": "Spice Tolerance",
+      "kind": "input",
+      "refersTo": "app-field",
+      "description": "Labelled native three-stop range; the live quiz keeps it synchronized with spice chips.",
+      "html": "<label class=\"ds-spice\" for=\"ds-spice-range\">Spice tolerance<input id=\"ds-spice-range\" type=\"range\" min=\"0\" max=\"2\" step=\"1\" value=\"1\" aria-valuetext=\"Medium\"><span>Mild & gentle · Fiery spice</span></label>",
+      "css": ".ds-spice{display:block;font-family:\"Plus Jakarta Sans\",system-ui,sans-serif;font-size:13px;font-weight:650;color:var(--ink,#20373b)}.ds-spice input{display:block;width:100%;min-height:44px;accent-color:#315e68;background:transparent;cursor:pointer}.ds-spice input:focus-visible{outline:3px solid #20373b;outline-offset:3px}.ds-spice input:hover{accent-color:#519cab}.ds-spice span{font-size:11px;color:var(--muted,#315e68)}"
+    },
+    {
+      "name": "Dish Calibration",
+      "kind": "custom",
+      "description": "Static general taste example; runtime supplies score recalculation, reversible feedback and cloud retry.",
+      "html": "<section class=\"ds-dish\"><span class=\"ds-dish-step\">1 active preference · 1 of 14</span><h3>Gujarati thali</h3><p>A little sweet, a little savoury, with a variety of textures.</p><div><button type=\"button\" aria-pressed=\"false\">Pass</button><button type=\"button\" aria-pressed=\"true\">Undo love</button></div><p role=\"status\">Dish preferences saved to your account.</p><small>General taste example · not a confirmed venue menu item</small></section>",
+      "css": ".ds-dish{max-width:640px;padding:20px;background:var(--soft,#dbeef4);color:var(--ink,#20373b);border-radius:14px;font-family:\"Plus Jakarta Sans\",system-ui,sans-serif}.ds-dish-step{font-size:11px;color:#315e68}.ds-dish h3{font-size:23px;line-height:1.3;letter-spacing:-.02em;margin:12px 0 8px}.ds-dish p{font-size:13px;line-height:1.7;color:var(--muted,#315e68)}.ds-dish>div{display:flex;gap:10px}.ds-dish button{flex:1;min-height:44px;padding:10px;background:var(--card,#edf7fa);color:var(--ink,#20373b);border:1px solid var(--control-line,#315e68);border-radius:10px;font-size:12px;font-weight:650;cursor:pointer}.ds-dish button[aria-pressed=true]{background:#ffc64f;color:#20373b;border:2px solid #20373b;padding:9px}.ds-dish button:hover{border-color:#20373b}.ds-dish button:focus-visible{outline:3px solid #20373b;outline-offset:3px}.ds-dish button:active{background:#ffc64f}.ds-dish small{font-size:11px;color:var(--muted,#315e68)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Good taste. Great places.",
+    "overview": "The app adapts TasteTrail India from Google AI Studio. The latest user-supplied palette image sets LightBlue #c3e7f1, Moonstone #519cab, Saffron #ffc64f and Gunmetal #20373b across app and waitlist. Light pages and pale cards use Gunmetal copy; primary/selected controls use Saffron with Gunmetal. App navigation, photo overlays and public how/FAQ/footer/signup form use Gunmetal with light text. Both illustrative maps use LightBlue and Moonstone while retaining their geometry and interactions. Palateo identity, Plus Jakarta Sans app typography and Asap Condensed/DM Sans public typography remain. Surface modes and acceptance live in docs/ZEST_REDESIGN_BRIEF.md.",
+    "keyCharacteristics": [
+      "LightBlue pages, pale cards, Gunmetal copy and Saffron actions.",
+      "Moonstone detail and derived darker copy for readable small text.",
+      "TasteTrail app layout with preserved public typography and behavior.",
+      "Coordinated illustrative maps and live reversible feedback with honest persistence status."
+    ],
+    "rules": [
+      {
+        "name": "The Visible State Rule",
+        "body": "Selection and errors use text, pressed state or another visible cue as well as color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tonal Layer Rule",
+        "body": "App hierarchy comes from surface color and borders.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the four user-supplied colors across both surfaces, with derived neutrals for readable controls.",
+      "Do keep real venue estimates, explanations and actions together.",
+      "Do preserve the eight-question flow, authentication, consent, saves and reversible feedback.",
+      "Do retain native labels, pressed states, visible focus and reduced motion.",
+      "Do identify dish examples and map geometry as illustrative and keep cloud status honest."
+    ],
+    "donts": [
+      "Do not restore superseded palettes or use light text on light controls.",
+      "Do not describe flavour examples as verified venue menu items.",
+      "Do not claim measured prediction accuracy, live hours or navigation from schematic paths.",
+      "Do not add bank linking, dependencies, a database migration or deployment to reproduce the reference."
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "runs": [
+    {
+      "date": "2026-10-08T20:28:37.924507+00:00",
+      "input_tokens": 16500,
+      "output_tokens": 3400,
+      "files": 17,
+      "token_count_note": "Semantic subagent estimates; no paid model API"
+    }
+  ],
+  "total_input_tokens": 16500,
+  "total_output_tokens": 3400
+}

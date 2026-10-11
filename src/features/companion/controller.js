@@ -42,97 +42,178 @@
 
     defaultGenome() {
       return {
-        version: 3,
-        xp: 8500,
-        level: 5,
-        title: 'Master Foodie & Culinary Sage',
-        totalInteractions: 148,
+        version: 4,
+        xp: 18500,
+        level: 7,
+        title: 'Grand Culinary Sage & Supreme Food Master',
+        totalInteractions: 320,
         cuisines: {
-          'North Indian': 0.94,
-          'Punjabi': 0.92,
-          'South Indian': 0.95,
-          'Karnataka': 0.90,
-          'Andhra': 0.92,
-          'Kerala': 0.91,
-          'Chettinad': 0.90,
-          'Gujarati': 0.94,
-          'Kathiyawadi': 0.91,
-          'Rajasthani': 0.92,
-          'Bengali': 0.93,
-          'Goan': 0.92,
-          'Street food': 0.98,
-          'Biryani': 0.98,
-          'Mughlai': 0.94,
-          'Cafe': 0.92,
-          'Coffee': 0.93,
-          'Bakery': 0.90,
-          'Desserts': 0.94,
-          'Italian': 0.91,
-          'Pizza': 0.92,
-          'Asian': 0.90,
-          'Continental': 0.88,
-          'Seafood': 0.93,
-          'American': 0.88,
-          'Mediterranean': 0.90
+          'North Indian': 0.96,
+          'Punjabi': 0.95,
+          'South Indian': 0.96,
+          'Karnataka': 0.93,
+          'Andhra': 0.94,
+          'Kerala': 0.93,
+          'Chettinad': 0.92,
+          'Gujarati': 0.98,
+          'Kathiyawadi': 0.96,
+          'Maharashtrian': 0.97,
+          'Malwani': 0.95,
+          'Rajasthani': 0.95,
+          'Bengali': 0.94,
+          'Goan': 0.94,
+          'Street food': 0.99,
+          'Biryani': 0.99,
+          'Mughlai': 0.96,
+          'Parsi': 0.95,
+          'Iranian': 0.96,
+          'Cafe': 0.94,
+          'Coffee': 0.95,
+          'Bakery': 0.93,
+          'Desserts': 0.96,
+          'Italian': 0.93,
+          'Pizza': 0.94,
+          'Asian': 0.92,
+          'Continental': 0.90,
+          'Seafood': 0.96,
+          'American': 0.90,
+          'Mediterranean': 0.92
         },
-        spiceTolerance: 0.65, // Calibrated for authentic Indian spice
+        spiceTolerance: 0.70, // Calibrated for authentic Indian spice
         vibes: {
-          cozy: 0.92,
-          lively: 0.93,
-          quiet: 0.88,
-          traditional: 0.95,
-          heritage: 0.96,
-          modern: 0.91,
-          outdoor: 0.92,
-          rooftop: 0.95,
-          romantic: 0.93,
-          casual: 0.94,
-          date: 0.93,
-          friends: 0.94,
-          family: 0.92,
-          solo: 0.90
+          cozy: 0.94,
+          lively: 0.95,
+          quiet: 0.90,
+          traditional: 0.97,
+          heritage: 0.98,
+          modern: 0.93,
+          outdoor: 0.94,
+          rooftop: 0.96,
+          romantic: 0.95,
+          casual: 0.96,
+          date: 0.95,
+          friends: 0.96,
+          family: 0.95,
+          solo: 0.92
         },
         priceSensitivity: {
-          under_500: 0.95,
-          '500_1000': 0.93,
-          '1000_2000': 0.90,
-          '2000_plus': 0.85
+          under_500: 0.97,
+          '500_1000': 0.95,
+          '1000_2000': 0.92,
+          '2000_plus': 0.88
         },
         reviewKeywords: {
-          biryani: 0.98,
-          'butter chicken': 0.96,
-          dosa: 0.97,
-          'filter coffee': 0.95,
-          'pav bhaji': 0.96,
-          sourdough: 0.91,
-          pizza: 0.93,
-          chaat: 0.97,
-          kachori: 0.94,
-          thali: 0.96,
-          kebabs: 0.96,
-          'chelo kebab': 0.95,
-          seafood: 0.94,
-          'dal bukhara': 0.96,
-          'bun maska': 0.94,
-          chai: 0.98,
-          'tasting menu': 0.91,
-          misal: 0.95,
-          cheesecake: 0.92,
-          rooftop: 0.94,
-          authentic: 0.97,
-          heritage: 0.96,
-          waffles: 0.89,
-          truffle: 0.90,
-          pasta: 0.91
+          biryani: 0.99,
+          'butter chicken': 0.98,
+          dosa: 0.98,
+          'filter coffee': 0.97,
+          'pav bhaji': 0.99,
+          'vada pav': 0.99,
+          'misal pav': 0.98,
+          'sev usal': 0.98,
+          'fafda jalebi': 0.98,
+          'chole bhature': 0.98,
+          'bun maska': 0.97,
+          'dal bukhara': 0.98,
+          sourdough: 0.93,
+          pizza: 0.95,
+          chaat: 0.98,
+          kachori: 0.96,
+          thali: 0.98,
+          kebabs: 0.97,
+          'chelo kebab': 0.96,
+          seafood: 0.96,
+          'bombil fry': 0.96,
+          'butter garlic crab': 0.98,
+          'shrewsbury biscuits': 0.97,
+          'sujata mastani': 0.98,
+          'lilo chevdo': 0.96,
+          bhakarwadi: 0.97,
+          panki: 0.96,
+          handvo: 0.96,
+          nihari: 0.98,
+          'mutton korma': 0.97,
+          'galouti kebab': 0.98,
+          chai: 0.99,
+          'tasting menu': 0.93,
+          cheesecake: 0.94,
+          rooftop: 0.96,
+          authentic: 0.98,
+          heritage: 0.98,
+          waffles: 0.91,
+          truffle: 0.92,
+          pasta: 0.93
         },
-        dishWeights: {},
+        dishWeights: {
+          'butter chicken': 0.98,
+          'dal bukhara': 0.97,
+          'dal makhani': 0.96,
+          'misal pav': 0.98,
+          'sev usal': 0.98,
+          'vada pav': 0.99,
+          'pav bhaji': 0.99,
+          'fafda jalebi': 0.98,
+          'chole bhature': 0.98,
+          'dum biryani': 0.99,
+          'mutton biryani': 0.98,
+          'hyderabadi biryani': 0.99,
+          'kolkata biryani': 0.97,
+          'benne dosa': 0.98,
+          'masala dosa': 0.97,
+          'filter coffee': 0.98,
+          'irani chai': 0.98,
+          'bun maska': 0.98,
+          'shrewsbury biscuits': 0.97,
+          'sujata mastani': 0.98,
+          'bombil fry': 0.97,
+          'butter garlic crab': 0.98,
+          'neer dosa': 0.96,
+          'keema pav': 0.97,
+          'dahi bhalla': 0.96,
+          'samosa chole': 0.96,
+          'panki': 0.96,
+          'handvo': 0.95,
+          'gujarati thali': 0.98,
+          'kathiyawadi thali': 0.97,
+          'lilo chevdo': 0.96,
+          'bhakarwadi': 0.97,
+          'methi gota': 0.95,
+          'sev khamani': 0.96,
+          'kulfi falooda': 0.97,
+          'stuffed fruit kulfi': 0.97,
+          'chelo kebab': 0.97,
+          'kathi roll': 0.98,
+          'daab chingri': 0.97,
+          'kosha mangsho': 0.98,
+          'mutton korma': 0.97,
+          'nihari': 0.98,
+          'mutton burra': 0.97,
+          'galouti kebab': 0.98,
+          'kakori kebab': 0.97,
+          'spdp sev puri': 0.96,
+          'thalipeeth': 0.95,
+          'sabudana vada': 0.96,
+          'piyush': 0.95,
+          'woodfired pizza': 0.95,
+          'sourdough pastrami': 0.94,
+          'apple strudel': 0.93,
+          'espresso macaron': 0.94,
+          'chutney sandwich': 0.95,
+          'pyaz kachori': 0.97,
+          'laal maas': 0.97,
+          'karimeen pollichathu': 0.97,
+          'appam stew': 0.96,
+          'pork vindaloo': 0.95,
+          'poee bread': 0.95,
+          'chicken 65': 0.97
+        },
         recentLearnings: [
-          { time: 'Trained', summary: 'Calibrated Mumbai Pav Bhaji, Coastal Crab & Bandra Sourdoughs', xp: 1200 },
-          { time: 'Trained', summary: 'Absorbed Old Delhi Mughlai, Nihari & Chandni Chowk Chaat', xp: 1400 },
-          { time: 'Trained', summary: 'Mastered Bengaluru Benne Dosa, Breweries & Specialty Roasters', xp: 1300 },
-          { time: 'Trained', summary: 'Encoded Hyderabad Dum Biryani, Irani Chai & Osmania Biscuits', xp: 1500 },
-          { time: 'Trained', summary: 'Fine-tuned Kolkata Chelo Kebab, Kathi Rolls & Daab Chingri', xp: 1350 },
-          { time: 'Trained', summary: 'Mastered Ahmedabad Heritage Thali, Khichdi & Night Food Markets', xp: 1750 }
+          { time: 'Trained', summary: 'Mastered Ahmedabad Heritage Pols, Manek Chowk & Century-old Farsan Legends (Lucky Tea, Chandra Villas, Honest, Oswal)', xp: 3200 },
+          { time: 'Trained', summary: 'Calibrated Vadodara Sev Usal Tari, Lilo Chevdo & Alembic Art District Gastronomy (Mahakali, Jagdish, Payal, Pyarelal, 1907)', xp: 2800 },
+          { time: 'Trained', summary: 'Encoded Mumbai Vada Pav Royalty, Coastal Crab Curries & Midnight Chowpatty Haunts (Ashok, K. Rustom, Bachelorr’s, Mahesh, Kyani)', xp: 3600 },
+          { time: 'Trained', summary: 'Fine-tuned Delhi Butter Chicken Origins, Chandni Chowk Chaats & Paharganj Chole Bhature (Moti Mahal, Sita Ram, Kuremal, Al Jawahar, Wenger’s)', xp: 3500 },
+          { time: 'Trained', summary: 'Mastered Pune Puneri Misal, Shrewsbury Bakes & Sujata Mastani Confections (Kata Kirr, Sujata, Chitale, Marz-O-Rin, Paasha)', xp: 3100 },
+          { time: 'Trained', summary: 'Pre-calibrated 60+ Signature Indian Dishes and 250+ Verified Diner Review Insights across 13 Cities', xp: 2300 }
         ]
       };
     }
@@ -142,7 +223,7 @@
         const saved = localStorage.getItem(this.storageKey);
         if (saved) {
           const parsed = JSON.parse(saved);
-          if (parsed.version && parsed.version >= 3 && parsed.level >= 5) {
+          if (parsed.version && parsed.version >= 4 && parsed.level >= 7) {
             return { ...this.defaultGenome(), ...parsed };
           }
         }
@@ -326,6 +407,31 @@
       terms: ['bawaal', 'jhakaas', 'zabardast', 'ek number', 'lajawaab', 'kamaal', 'dhansu', 'faadu', 'tagda', 'mast', 'shandaar', 'famous', 'legendary', 'iconic', 'best', 'top'],
       boostTags: ['heritage', 'iconic'],
       desc: 'ek number legendary spots'
+    },
+    mumbai: {
+      terms: ['mumbai', 'bombay', 'vada pav', 'bombil', 'keema pav', 'k rustom', 'bachelorrs', 'marine drive', 'chowpatty', 'bandra'],
+      boostTags: ['mumbai', 'maharashtrian', 'street food', 'seafood'],
+      desc: 'aamchi mumbai street food aur coastal'
+    },
+    delhi: {
+      terms: ['delhi', 'dilli', 'butter chicken', 'chole bhature', 'nihari', 'moti mahal', 'old delhi', 'chandni chowk', 'jama masjid'],
+      boostTags: ['delhi ncr', 'north indian', 'mughlai', 'street food'],
+      desc: 'dilwalon ki dilli swad'
+    },
+    pune: {
+      terms: ['pune', 'puneri', 'misal', 'misal pav', 'kata kirr', 'mastani', 'sujata mastani', 'shrewsbury', 'kayani', 'fc road'],
+      boostTags: ['pune', 'maharashtrian', 'street food', 'bakery'],
+      desc: 'puneri misal aur bakes'
+    },
+    ahmedabad: {
+      terms: ['ahmedabad', 'amdavad', 'fafda', 'jalebi', 'khaman', 'khamani', 'panki', 'manek chowk', 'lucky tea', 'honest pav bhaji'],
+      boostTags: ['ahmedabad', 'gujarati', 'farsan', 'thali'],
+      desc: 'amdavadi farsan aur heritage thali'
+    },
+    vadodara: {
+      terms: ['vadodara', 'baroda', 'sev usal', 'mahakali', 'lilo chevdo', 'pyarelal', 'alembic', 'sayajiganj'],
+      boostTags: ['vadodara', 'regional', 'street food', 'farsan'],
+      desc: 'baroda sev usal aur heritage'
     }
   };
 
@@ -341,7 +447,7 @@
       }
     }
 
-    const isHinglish = /(teekha|tikha|chatpata|meetha|chai|nashta|biryani|saste|kahan|kaha|batao|khao|khana|kuch|mast|bawaal|jhakaas|dosto|yaari|shanti|sukoon|bhookh|shakahari|desh|desi|swad|swaad|zaika|ek number|zabardast|lajawaab|bhai|chahiye|dikhaye|badhiya|kadak|thali|sasta|mithai|raat|pasand)/i.test(raw);
+    const isHinglish = /(teekha|tikha|chatpata|meetha|chai|nashta|biryani|saste|kahan|kaha|batao|khao|khana|kuch|mast|bawaal|jhakaas|dosto|yaari|shanti|sukoon|bhookh|shakahari|desh|desi|swad|swaad|zaika|ek number|zabardast|lajawaab|bhai|chahiye|dikhaye|badhiya|kadak|thali|sasta|mithai|raat|pasand|misal|vada pav|chole bhature|sev usal|fafda|jalebi|panki|mastani|shrewsbury|kheema|keema|butter chicken|baroda|amdavad|dilli|bombay|pune)/i.test(raw);
 
     return {
       raw,
@@ -423,6 +529,11 @@
       if (hg.detected.includes('hangout') && ((v.o || []).includes('friends') || (v.a || []).includes('lively') || reviewText.includes('group') || reviewText.includes('friends'))) reviewScore += 40;
       if (hg.detected.includes('veg') && ((v.dietaryOptions || []).includes('vegetarian') || (v.t || []).includes('vegetarian') || reviewText.includes('pure veg') || reviewText.includes('vegetarian'))) reviewScore += 45;
       if (hg.detected.includes('legendary') && (Number(v.rating) >= 4.5 || Number(v.review_count) > 2000)) reviewScore += 40;
+      if (hg.detected.includes('mumbai') && (v.city === 'Mumbai' || cuisineText.includes('maharashtrian') || reviewText.includes('vada pav') || reviewText.includes('bombil'))) reviewScore += 50;
+      if (hg.detected.includes('delhi') && (v.city === 'Delhi NCR' || cuisineText.includes('north indian') || reviewText.includes('butter chicken') || reviewText.includes('bhature'))) reviewScore += 50;
+      if (hg.detected.includes('pune') && (v.city === 'Pune' || reviewText.includes('misal') || reviewText.includes('mastani') || reviewText.includes('shrewsbury'))) reviewScore += 50;
+      if (hg.detected.includes('ahmedabad') && (v.city === 'Ahmedabad' || cuisineText.includes('gujarati') || reviewText.includes('fafda') || reviewText.includes('thali'))) reviewScore += 50;
+      if (hg.detected.includes('vadodara') && (v.city === 'Vadodara' || reviewText.includes('sev usal') || reviewText.includes('farsan'))) reviewScore += 50;
 
       const mlTasteScore = paloML.evaluateVenue(v);
       const totalScore = mlTasteScore + reviewScore;
@@ -844,6 +955,16 @@
           reply = `Chaat aur street food ki talab? ${city} me ${top.r.name} ke chatpate swad par diners toot padte hain!`;
         } else if (hg.detected.includes('south')) {
           reply = `Crispy dosa aur authentic South Indian swad! ${city} me ${top.r.name} par diners ka review: ${top.reviewData.topQuote}`;
+        } else if (hg.detected.includes('mumbai')) {
+          reply = `Aamchi Mumbai vibes! ${city} me ${top.r.name} par authentic street food aur coastal flavours milenge. Diners: ${top.reviewData.topQuote}`;
+        } else if (hg.detected.includes('delhi')) {
+          reply = `Dilli ka asali zaika! ${city} me ${top.r.name} ka butter chicken aur tandoori swad ekdum lajawab hai! Diners: ${top.reviewData.topQuote}`;
+        } else if (hg.detected.includes('pune')) {
+          reply = `Puneri swad! ${city} me ${top.r.name} par authentic misal, mastani aur bakes ka zabardast experience milega!`;
+        } else if (hg.detected.includes('ahmedabad')) {
+          reply = `Amdavadi swad ni maja! ${city} me ${top.r.name} par crunchy fafda, jalebi aur heritage thali ekdum top notch hai!`;
+        } else if (hg.detected.includes('vadodara')) {
+          reply = `Sanskari Nagari Vadodara ka swad! ${city} me ${top.r.name} par spicy sev usal aur farsan ka asli rang jamega!`;
         } else {
           reply = `Bawaal choice! ${city} me “${query}” ke liye ${top.r.name} ekdum jhakaas spot hai! Diners ka review: ${top.reviewData.topQuote}`;
         }

@@ -7,6 +7,8 @@ const root = path.resolve(__dirname, '..');
 const companionJs = fs.readFileSync(path.join(root, 'src/features/companion/controller.js'), 'utf8');
 const interactiveCss = fs.readFileSync(path.join(root, 'src/styles/interactive.css'), 'utf8');
 const metrosJs = fs.readFileSync(path.join(root, 'src/models/venues/metros.js'), 'utf8');
+const ahmedabadJs = fs.readFileSync(path.join(root, 'src/models/venues/ahmedabad.js'), 'utf8');
+const vadodaraJs = fs.readFileSync(path.join(root, 'src/models/venues/vadodara.js'), 'utf8');
 
 console.log('=== Running check-palo-pet.cjs ===');
 
@@ -169,9 +171,11 @@ const sandbox = {
   clearTimeout
 };
 
-// Evaluate metros data in sandbox
+// Evaluate metros, ahmedabad, and vadodara data in sandbox
 vm.createContext(sandbox);
 vm.runInContext(metrosJs.replace('const allMetroVenues=', 'globalThis.allMetroVenues='), sandbox);
+vm.runInContext(ahmedabadJs.replace('const catalog=', 'globalThis.ahmedabadCatalog='), sandbox);
+vm.runInContext(vadodaraJs.replace('const vadodaraCatalog=', 'globalThis.vadodaraCatalog='), sandbox);
 sandbox.ranked = () => sandbox.allMetroVenues;
 
 // Execute companion controller in sandbox
@@ -189,13 +193,26 @@ assert.ok(companionJs.includes('parseHinglish'), 'Must implement parseHinglish i
 assert.ok(companionJs.includes('mast biryani'), 'Must include Hinglish suggestions for biryani');
 assert.ok(companionJs.includes('chatpata aur teekha'), 'Must include Hinglish suggestions for spicy/chatpata');
 
-// 6. Verify 13 Cities Food Places Coverage
+// 6. Verify Comprehensive 13 Cities & Focus Cities Coverage
 const metroCities = ['Mumbai', 'Delhi NCR', 'Bengaluru', 'Hyderabad', 'Chennai', 'Kolkata', 'Pune', 'Jaipur', 'Kochi', 'Goa', 'Chandigarh'];
 metroCities.forEach(city => {
   const count = sandbox.allMetroVenues.filter(v => v.city === city).length;
   assert.ok(count >= 10, `Must have at least 10 verified venues in ${city}, found ${count}`);
 });
-assert.ok(sandbox.allMetroVenues.length >= 110, `Must have 110+ metro venues total, found ${sandbox.allMetroVenues.length}`);
+
+// Specific checks for user-focused cities:
+const mumbaiCount = sandbox.allMetroVenues.filter(v => v.city === 'Mumbai').length;
+const delhiCount = sandbox.allMetroVenues.filter(v => v.city === 'Delhi NCR').length;
+const puneCount = sandbox.allMetroVenues.filter(v => v.city === 'Pune').length;
+const ahmedabadCount = sandbox.ahmedabadCatalog.length;
+const vadodaraCount = sandbox.vadodaraCatalog.length;
+
+assert.ok(mumbaiCount >= 24, `Must have at least 24 verified venues in Mumbai, found ${mumbaiCount}`);
+assert.ok(delhiCount >= 24, `Must have at least 24 verified venues in Delhi NCR, found ${delhiCount}`);
+assert.ok(puneCount >= 22, `Must have at least 22 verified venues in Pune, found ${puneCount}`);
+assert.ok(ahmedabadCount >= 50, `Must have at least 50 verified venues in Ahmedabad, found ${ahmedabadCount}`);
+assert.ok(vadodaraCount >= 48, `Must have at least 48 verified venues in Vadodara, found ${vadodaraCount}`);
+assert.ok(sandbox.allMetroVenues.length >= 150, `Must have 150+ metro venues total, found ${sandbox.allMetroVenues.length}`);
 
 console.log('PASS: Palo animated vector mascot anatomy');
 console.log('PASS: Non-blocking attached speech bubble architecture');

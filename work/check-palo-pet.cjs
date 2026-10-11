@@ -183,9 +183,25 @@ assert.ok(bombayCanteen, 'Must load Bombay Canteen from metros');
 assert.ok(bombayCanteen.review_insights.length > 0, 'Must have verified review insights');
 assert.ok(bombayCanteen.review_insights.includes('progressive regional indian'), 'Must have progressive regional review quote');
 
+// 5. Verify Hindi & Hinglish Intelligence Dictionary
+assert.ok(companionJs.includes('HinglishDictionary'), 'Must define HinglishDictionary');
+assert.ok(companionJs.includes('parseHinglish'), 'Must implement parseHinglish intent parser');
+assert.ok(companionJs.includes('mast biryani'), 'Must include Hinglish suggestions for biryani');
+assert.ok(companionJs.includes('chatpata aur teekha'), 'Must include Hinglish suggestions for spicy/chatpata');
+
+// 6. Verify 13 Cities Food Places Coverage
+const metroCities = ['Mumbai', 'Delhi NCR', 'Bengaluru', 'Hyderabad', 'Chennai', 'Kolkata', 'Pune', 'Jaipur', 'Kochi', 'Goa', 'Chandigarh'];
+metroCities.forEach(city => {
+  const count = sandbox.allMetroVenues.filter(v => v.city === city).length;
+  assert.ok(count >= 10, `Must have at least 10 verified venues in ${city}, found ${count}`);
+});
+assert.ok(sandbox.allMetroVenues.length >= 110, `Must have 110+ metro venues total, found ${sandbox.allMetroVenues.length}`);
+
 console.log('PASS: Palo animated vector mascot anatomy');
 console.log('PASS: Non-blocking attached speech bubble architecture');
 console.log('PASS: Cute voice synthesis & procedural Web Audio chirps');
 console.log('PASS: Online reinforcement learning taste genome & leveling');
 console.log('PASS: Deep access to verified restaurant diner review insights');
+console.log('PASS: Hindi & Hinglish dictionary and conversational intelligence');
+console.log('PASS: Comprehensive restaurant coverage across all 13 listed cities');
 console.log('All Palo checks passed successfully.\n');

@@ -2,15 +2,14 @@ const { spawnSync } = require('node:child_process');
 const path = require('node:path');
 const fs = require('node:fs');
 
-const authPath = 'C:\\Users\\Aayush\\Documents\\Codex\\2026-09-30\\referenced-chatgpt-conversation-this-is-an\\work\\.vercel-cli-profile\\auth\\auth.json';
-let authToken = process.env.VERCEL_TOKEN || '';
-if (!authToken && fs.existsSync(authPath)) {
-  try {
-    const authData = JSON.parse(fs.readFileSync(authPath, 'utf8'));
-    authToken = authData.token || '';
-  } catch (err) {
-    console.warn('Notice: Unable to parse auth profile, relying on environment or CLI session.');
-  }
+const appDataAuth = path.join(process.env.APPDATA || 'C:\\Users\\Aayush\\AppData\\Roaming', 'com.vercel.cli\\Data\\auth.json');
+const codexAuth = 'C:\\Users\\Aayush\\Documents\\Codex\\2026-09-30\\referenced-chatgpt-conversation-this-is-an\\work\\.vercel-cli-profile\\auth\\auth.json';
+
+// Keep auth profiles in sync
+if (fs.existsSync(appDataAuth) && fs.existsSync(path.dirname(codexAuth))) {
+  try { fs.copyFileSync(appDataAuth, codexAuth); } catch (e) {}
+} else if (fs.existsSync(codexAuth) && fs.existsSync(path.dirname(appDataAuth))) {
+  try { fs.copyFileSync(codexAuth, appDataAuth); } catch (e) {}
 }
 
 const defaultVercelBin = 'C:\\Users\\Aayush\\Documents\\Codex\\2026-09-30\\referenced-chatgpt-conversation-this-is-an\\work\\vercel_cli_tmp\\node_modules\\.bin\\vercel.CMD';
@@ -19,11 +18,8 @@ const projectDir = path.join(__dirname, 'palateo_cloudflare_pages');
 
 console.log('Deploying from:', projectDir);
 
-const appDataProfile = 'C:\\Users\\Aayush\\Documents\\Codex\\2026-09-30\\referenced-chatgpt-conversation-this-is-an\\work\\.vercel-cli-profile\\AppData\\Roaming';
 const env = {
   ...process.env,
-  APPDATA: fs.existsSync(appDataProfile) ? appDataProfile : (process.env.APPDATA || ''),
-  VERCEL_TOKEN: authToken,
   VERCEL_ORG_ID: 'team_IDls8zTG4aRll5HgBB3VaPHH',
   VERCEL_PROJECT_ID: 'prj_FDDeOkC7enBhavqpKgKdUIy1Bg69'
 };
@@ -34,8 +30,8 @@ const vercelArgs = [
   '--yes',
   '--scope', 'palateo'
 ];
-if (authToken) {
-  vercelArgs.push('--token', authToken);
+if (process.env.VERCEL_TOKEN) {
+  vercelArgs.push('--token', process.env.VERCEL_TOKEN);
 }
 
 const res = spawnSync(vercelBin, vercelArgs, {

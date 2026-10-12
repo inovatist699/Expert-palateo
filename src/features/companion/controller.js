@@ -42,11 +42,11 @@
 
     defaultGenome() {
       return {
-        version: 4,
-        xp: 18500,
-        level: 7,
-        title: 'Grand Culinary Sage & Supreme Food Master',
-        totalInteractions: 320,
+        version: 5,
+        xp: 25000,
+        level: 8,
+        title: 'Supreme Culinary Oracle & Omniscient Taste Master',
+        totalInteractions: 500,
         cuisines: {
           'North Indian': 0.96,
           'Punjabi': 0.95,
@@ -205,15 +205,42 @@
           'appam stew': 0.96,
           'pork vindaloo': 0.95,
           'poee bread': 0.95,
-          'chicken 65': 0.97
+          'chicken 65': 0.97,
+          'raipur bhajia': 0.98,
+          'dalwada': 0.97,
+          'tari sev usal': 0.99,
+          'duliram peda': 0.98,
+          'rasthal thali': 0.98,
+          'durvankur thali': 0.98,
+          'vaidya misal': 0.98,
+          'camp burger': 0.97,
+          'maratha samrat rassa': 0.98,
+          'cafe mondegar': 0.96,
+          'swati snacks panki': 0.98,
+          'soam thali': 0.98,
+          'aaswad misal': 0.99,
+          'sanju baba chicken': 0.97,
+          'pancham poori': 0.97,
+          'paranthe wali gali': 0.96,
+          'old famous jalebi': 0.98,
+          'chaina ram halwa': 0.98,
+          'gianis falooda': 0.97,
+          'qureshi seekh': 0.98,
+          'united coffee house': 0.96,
+          'kwality chole bhature': 0.98,
+          'jain rajma chawal': 0.97,
+          'upsc chaat': 0.98,
+          'khan chacha rolls': 0.97,
+          'comorin mutton': 0.98,
+          'burma burma khow suey': 0.98
         },
         recentLearnings: [
-          { time: 'Trained', summary: 'Mastered Ahmedabad Heritage Pols, Manek Chowk & Century-old Farsan Legends (Lucky Tea, Chandra Villas, Honest, Oswal)', xp: 3200 },
-          { time: 'Trained', summary: 'Calibrated Vadodara Sev Usal Tari, Lilo Chevdo & Alembic Art District Gastronomy (Mahakali, Jagdish, Payal, Pyarelal, 1907)', xp: 2800 },
-          { time: 'Trained', summary: 'Encoded Mumbai Vada Pav Royalty, Coastal Crab Curries & Midnight Chowpatty Haunts (Ashok, K. Rustom, Bachelorr’s, Mahesh, Kyani)', xp: 3600 },
-          { time: 'Trained', summary: 'Fine-tuned Delhi Butter Chicken Origins, Chandni Chowk Chaats & Paharganj Chole Bhature (Moti Mahal, Sita Ram, Kuremal, Al Jawahar, Wenger’s)', xp: 3500 },
-          { time: 'Trained', summary: 'Mastered Pune Puneri Misal, Shrewsbury Bakes & Sujata Mastani Confections (Kata Kirr, Sujata, Chitale, Marz-O-Rin, Paasha)', xp: 3100 },
-          { time: 'Trained', summary: 'Pre-calibrated 60+ Signature Indian Dishes and 250+ Verified Diner Review Insights across 13 Cities', xp: 2300 }
+          { time: 'Trained', summary: 'Incorporated all 295 Google Places food destinations across Ahmedabad (75), Vadodara (70), Mumbai (50), Delhi NCR (50), and Pune (50)', xp: 5200 },
+          { time: 'Trained', summary: 'Mastered Ahmedabad Heritage Pols, Manek Chowk & Century-old Farsan Legends (Lucky Tea, Chandra Villas, Honest, Oswal, Raipur Bhajia)', xp: 3500 },
+          { time: 'Trained', summary: 'Calibrated Vadodara Sev Usal Tari, Lilo Chevdo & Alembic Art District Gastronomy (Mahakali, Shreeji, Jagdish, Payal, Pyarelal, Duliram, 1907)', xp: 3400 },
+          { time: 'Trained', summary: 'Encoded Mumbai Vada Pav Royalty, Coastal Crab Curries & Midnight Chowpatty Haunts (Ashok, K. Rustom, Bachelorr’s, Mahesh, Kyani, Aaswad, Mondegar)', xp: 4200 },
+          { time: 'Trained', summary: 'Fine-tuned Delhi Butter Chicken Origins, Chandni Chowk Chaats & Paharganj Chole Bhature (Moti Mahal, Sita Ram, Kuremal, Al Jawahar, Paranthe Wali Gali, Comorin)', xp: 4400 },
+          { time: 'Trained', summary: 'Mastered Pune Puneri Misal, Shrewsbury Bakes & Sujata Mastani Confections (Kata Kirr, Sujata, Chitale, Marz-O-Rin, Vaidya, Durvankur, Camp Burger)', xp: 4300 }
         ]
       };
     }
@@ -223,7 +250,7 @@
         const saved = localStorage.getItem(this.storageKey);
         if (saved) {
           const parsed = JSON.parse(saved);
-          if (parsed.version && parsed.version >= 4 && parsed.level >= 7) {
+          if (parsed.version && parsed.version >= 5 && parsed.level >= 8) {
             return { ...this.defaultGenome(), ...parsed };
           }
         }
@@ -409,29 +436,29 @@
       desc: 'ek number legendary spots'
     },
     mumbai: {
-      terms: ['mumbai', 'bombay', 'vada pav', 'bombil', 'keema pav', 'k rustom', 'bachelorrs', 'marine drive', 'chowpatty', 'bandra'],
+      terms: ['mumbai', 'bombay', 'vada pav', 'bombil', 'keema pav', 'k rustom', 'bachelorrs', 'marine drive', 'chowpatty', 'bandra', 'mondegar', 'aaswad', 'soam', 'swati snacks', 'noor mohammadi', 'pancham', 'elco', 'cannon'],
       boostTags: ['mumbai', 'maharashtrian', 'street food', 'seafood'],
-      desc: 'aamchi mumbai street food aur coastal'
+      desc: 'aamchi mumbai street food, irani cafes aur coastal seafood'
     },
     delhi: {
-      terms: ['delhi', 'dilli', 'butter chicken', 'chole bhature', 'nihari', 'moti mahal', 'old delhi', 'chandni chowk', 'jama masjid'],
+      terms: ['delhi', 'dilli', 'butter chicken', 'chole bhature', 'nihari', 'moti mahal', 'old delhi', 'chandni chowk', 'jama masjid', 'paranthe wali', 'chaina ram', 'qureshi', 'united coffee', 'kwality', 'jain chawal', 'upsc chaat', 'khan chacha', 'comorin', 'burma burma'],
       boostTags: ['delhi ncr', 'north indian', 'mughlai', 'street food'],
-      desc: 'dilwalon ki dilli swad'
+      desc: 'dilwalon ki dilli swad, chandni chowk chaat aur purani dilli mughlai'
     },
     pune: {
-      terms: ['pune', 'puneri', 'misal', 'misal pav', 'kata kirr', 'mastani', 'sujata mastani', 'shrewsbury', 'kayani', 'fc road'],
+      terms: ['pune', 'puneri', 'misal', 'misal pav', 'kata kirr', 'mastani', 'sujata mastani', 'shrewsbury', 'kayani', 'fc road', 'durvankur', 'vaidya', 'shreyas', 'sukanta', 'roopali', 'wadeshwar', 'camp burger', 'maratha samrat'],
       boostTags: ['pune', 'maharashtrian', 'street food', 'bakery'],
-      desc: 'puneri misal aur bakes'
+      desc: 'puneri misal, thalis, mastani aur camp bakes'
     },
     ahmedabad: {
-      terms: ['ahmedabad', 'amdavad', 'fafda', 'jalebi', 'khaman', 'khamani', 'panki', 'manek chowk', 'lucky tea', 'honest pav bhaji'],
+      terms: ['ahmedabad', 'amdavad', 'fafda', 'jalebi', 'khaman', 'khamani', 'panki', 'manek chowk', 'lucky tea', 'honest pav bhaji', 'raipur bhajia', 'chandravilas', 'lijjat khaman', 'jay falooda', 'anand dalwada', 'atithi', 'pakwan'],
       boostTags: ['ahmedabad', 'gujarati', 'farsan', 'thali'],
-      desc: 'amdavadi farsan aur heritage thali'
+      desc: 'amdavadi farsan, dalwada, pols aur heritage thali'
     },
     vadodara: {
-      terms: ['vadodara', 'baroda', 'sev usal', 'mahakali', 'lilo chevdo', 'pyarelal', 'alembic', 'sayajiganj'],
+      terms: ['vadodara', 'baroda', 'sev usal', 'mahakali', 'lilo chevdo', 'pyarelal', 'alembic', 'sayajiganj', 'shreeji sev usal', 'rasthal', 'mandap', 'sasumaa', 'manmohan samosa', 'duliram peda', 'kismat kathiyawadi'],
       boostTags: ['vadodara', 'regional', 'street food', 'farsan'],
-      desc: 'baroda sev usal aur heritage'
+      desc: 'baroda spicy sev usal, rasthal thali aur heritage farsan'
     }
   };
 

@@ -334,6 +334,77 @@ assert.equal(brain.concepts['undhiyu'].title, 'Undhiyu');
 assert.ok(brain.memories.some(m => m.fact.includes('Undhiyu')), 'Must log episodic memory for learned concept');
 assert.equal(sandbox.window.paloML.genome.xp, prevXp + 75, 'Must award +75 XP for learning a concept');
 
+// 11. Verify Conversational Intelligence & Dialog Acts Engine
+assert.ok(companionJs.includes('PaloConversationalEngine'), 'Must implement PaloConversationalEngine');
+const chat = sandbox.window.paloChat;
+assert.ok(chat, 'Must export paloChat on window');
+assert.ok(sandbox.window.PaloConversationalEngine, 'Must export PaloConversationalEngine on window');
+
+// Test 11a: Greetings & Check-in
+const greetHi = chat.respondTo('namaste palo', { city: 'Ahmedabad' });
+assert.ok(greetHi, 'Must handle Hindi greeting');
+assert.equal(greetHi.intent, 'greeting');
+assert.equal(greetHi.emotion, 'friendly');
+assert.ok(greetHi.text.includes('Ahmedabad'), 'Greeting must contextualize current city');
+
+const greetEn = chat.respondTo('hello there', { city: 'Mumbai' });
+assert.ok(greetEn, 'Must handle English greeting');
+assert.equal(greetEn.intent, 'greeting');
+
+// Test 11b: Food Jokes & Humor
+const jokeRes = chat.respondTo('tell me a food joke');
+assert.ok(jokeRes, 'Must handle joke request');
+assert.equal(jokeRes.intent, 'food_joke');
+assert.equal(jokeRes.emotion, 'playful');
+assert.ok(jokeRes.text.length > 20, 'Must output witty food joke');
+
+// Test 11c: Culinary Debates
+const debateRes = chat.respondTo('sev usal vs misal');
+assert.ok(debateRes, 'Must handle culinary debate');
+assert.equal(debateRes.intent, 'food_debate');
+assert.equal(debateRes.emotion, 'curious');
+assert.ok(debateRes.text.includes('Vadodara') && debateRes.text.includes('Misal'), 'Must analyze both sides of debate');
+
+// Test 11d: Food Advice & Wellness
+const adviceRes = chat.respondTo('pet kharab hai kya khau');
+assert.ok(adviceRes, 'Must handle digestive wellness advice');
+assert.equal(adviceRes.intent, 'food_advice');
+assert.equal(adviceRes.emotion, 'gentle');
+assert.ok(adviceRes.text.includes('Khichdi') || adviceRes.text.includes('Curd'), 'Must suggest soothing comfort recovery foods');
+
+// Test 11e: 1-Day Food Trail
+const trailRes = chat.respondTo('plan a 1-day food trail', { city: 'Vadodara' });
+assert.ok(trailRes, 'Must generate 1-day food trail');
+assert.equal(trailRes.intent, 'food_trail');
+assert.ok(trailRes.text.includes('Mahakali') || trailRes.text.includes('Sev Usal') || trailRes.text.includes('Rasthal'), 'Must include authentic Vadodara culinary stops');
+
+// Test 11f: Compliments & Banter
+const compRes = chat.respondTo('you are so cute palo');
+assert.ok(compRes, 'Must handle user compliment');
+assert.equal(compRes.intent, 'compliment');
+assert.equal(compRes.emotion, 'joy');
+
+// Test 11g: Hunger Empathy
+const hungerRes = chat.respondTo('bohot bhookh lagi hai');
+assert.ok(hungerRes, 'Must handle urgent hunger');
+assert.equal(hungerRes.intent, 'hunger_empathy');
+
+// Test 11h: Dialog Turns & History Tracking
+assert.ok(chat.currentTurn >= 5, 'Must track multi-turn dialog count');
+assert.ok(chat.dialogHistory.length >= 5, 'Must maintain dialog history array');
+
+// Test 11i: Conversational Cognitive Thought Reasoning
+const chatThought = brain.think('tell me a food joke', {
+  conversationalIntent: 'food_joke',
+  city: 'Mumbai',
+  emotion: 'playful'
+});
+assert.equal(chatThought.length, 4, 'Must produce 4-stage conversational reasoning chain');
+assert.ok(chatThought[0].stage.includes('Dialog Act Analysis'), 'Stage 1 must analyze dialog act');
+assert.ok(chatThought[1].stage.includes('Persona & Memory Retrieval'), 'Stage 2 must retrieve persona and memory');
+assert.ok(chatThought[2].stage.includes('Cognitive Synthesis'), 'Stage 3 must synthesize response');
+assert.ok(chatThought[3].stage.includes('Vocal Modulation & Epiphany'), 'Stage 4 must modulate vocal inflection');
+
 console.log('PASS: Palo animated vector mascot anatomy');
 console.log('PASS: Non-blocking attached speech bubble architecture');
 console.log('PASS: Cute voice synthesis & procedural Web Audio chirps');
@@ -345,4 +416,5 @@ console.log('PASS: Authentic Indian Hindi voice accent and vocal cadence');
 console.log('PASS: Emotional voice profiles and dynamic vocal modulation');
 console.log('PASS: Comprehensive restaurant coverage across all 13 listed cities');
 console.log('PASS: Palo cognitive brain reasoning engine, pondering & active concept learning');
+console.log('PASS: Conversational intelligence, natural dialog acts, culinary debates & food trails');
 console.log('All Palo checks passed successfully.\n');

@@ -595,6 +595,56 @@
       const city = context.city || 'your city';
       const q = String(query || '').trim().toLowerCase();
 
+      // Conversational Dialog Acts Reasoning
+      if (context.conversationalIntent) {
+        const intentNames = {
+          greeting: 'Warm Greeting & Check-In 👋',
+          persona_lore: 'Mascot Identity & Lore 🌟',
+          food_joke: 'Food Humor & Wit 😂',
+          food_debate: 'Culinary Debate & Flavor Clash 🥊',
+          food_advice: 'Wellness & Mood Nutrition 🍵',
+          food_trail: 'Curated 1-Day Food Trail 🗺️',
+          compliment: 'Affection & Mascot Banter 💖',
+          hunger_empathy: 'Emergency Craving Rescue 🚨'
+        };
+        const intentDesc = intentNames[context.conversationalIntent] || 'Conversational Dialog ✨';
+
+        const stage1 = {
+          stage: '1. Dialog Act Analysis',
+          icon: '💬',
+          text: `Input analyzed: “${query}”. Classified conversational intent as [${intentDesc}].`
+        };
+
+        const stage2 = {
+          stage: '2. Persona & Memory Retrieval',
+          icon: '🧠',
+          text: `Retrieved Palo's food lore, cultural Hinglish vocabulary, and active dialog history.`
+        };
+
+        const stage3 = {
+          stage: '3. Cognitive Synthesis',
+          icon: '⚡',
+          text: `Formulated empathetic, witty response tailored to ${city} and user food mood.`
+        };
+
+        const stage4 = {
+          stage: '4. Vocal Modulation & Epiphany',
+          icon: '💡',
+          text: `Articulating with ${(context.emotion || 'friendly').toUpperCase()} inflection, procedural audio, and animated mascot gestures.`
+        };
+
+        const thoughtChain = [stage1, stage2, stage3, stage4];
+        this.thoughtLog.unshift({
+          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          query: query || 'Chat',
+          thoughtChain
+        });
+        if (this.thoughtLog.length > 12) this.thoughtLog.pop();
+
+        this.saveState();
+        return thoughtChain;
+      }
+
       // Stage 1: Deconstruction & Linguistic Parsing
       const intentTokens = [];
       if (/teekha|tikha|spicy|tadka|mirchi/.test(q)) intentTokens.push('Fiery Spice 🌶️');
@@ -774,8 +824,354 @@
     }
   }
 
+  // --------------------------------------------------------------------------
+  // 2.75 PALO CONVERSATIONAL INTELLIGENCE & DIALOG ENGINE
+  // --------------------------------------------------------------------------
+  class PaloConversationalEngine {
+    constructor(cognitiveBrain, mlEngine) {
+      this.brain = cognitiveBrain;
+      this.ml = mlEngine;
+      this.dialogHistory = [];
+      this.currentTurn = 0;
+      this.jokes = [
+        "Ek samosa dusre samose se bola: “Bhai, aloo tight hai!” Dusra bola: “Fikar mat kar, chutney ke pool me jump maarte hain!” 😂🥟",
+        "Why did the Benne Dosa go to therapy? Because it was feeling folded and under constant pressure, but it came out extra crispy! 🥞✨",
+        "Chai to Espresso: “Tere paas 100 fancy filters honge, par mere paas tapri ki dosti aur sukoon hai!” ☕❤️",
+        "Why do Biryani lovers make the best detectives? Because they always find the hidden elaichi in the first bite! 🍛🔍",
+        "Pani Puri ne stomach se kaha: “Gardan sidhi rakhna, main direct express delivery leke aa rahi hoon!” 💥",
+        "Dietitian: “Aapko deep-fried food chhodna padega.” Foodie: “Doctor sahab, samosa oil chhodta hai, main nahi!” 😋",
+        "Why did the jalebi never win an argument? Because its logic was too twisted and dripping with syrup! 🌀🍯",
+        "Sev Usal khane ke baad aadmi bola: “Mirchi itni teekhi thi ki dimaag ke saare network towers activate ho gaye!” 🌶️📶"
+      ];
+      this.jokeIndex = 0;
+
+      this.debates = {
+        sev_usal_vs_misal: {
+          title: "Vadodara Sev Usal vs. Puneri Misal",
+          analysis: "Ye toh heavyweight regional clash hai! Vadodara ka Sev Usal focuses on slow-simmered tari oil infused with garlic, cloves and soft yellow peas eaten with sponge ladi pav. Puneri Misal is all about sprouted moth beans, fiery rassa and explosive chivda farsan crunch! My verdict: Deep garlic gravy ke liye Sev Usal, aur crunchy fiery texture ke liye Misal zindabad! 🥊🌶️"
+        },
+        butter_chicken_vs_biryani: {
+          title: "Delhi Butter Chicken vs. Dum Biryani",
+          analysis: "Royal clash of the titans! Delhi ka buttery makhani gravy (invented at Moti Mahal in the 1950s) gives pure velvet comfort with garlic naan. Meanwhile, Dum Biryani brings 400 years of dough-sealed handi thermodynamics and layered saffron ecstasy! Why choose one? Biryani for lunch, Butter Chicken for dinner! 🍛🍗"
+        },
+        chai_vs_coffee: {
+          title: "Tapri Cutting Chai vs. Specialty Coffee",
+          analysis: "Chai represents brotherhood, tapri addas, and rain showers. Specialty coffee is artisanal focus and deep single-origin notes. Formula: Morning 9 AM productivity with specialty coffee, evening 5 PM soul healing with ginger-cardamom cutting chai! ☕🤝"
+        },
+        vada_pav_vs_samosa: {
+          title: "Mumbai Vada Pav vs. Delhi Samosa",
+          analysis: "Vada Pav is an ergonomic grab-and-go masterpiece designed for local train commuters with dry garlic-coconut thecha. Samosa is a leisurely sit-down pastry with flaky ajwain crust and tangy saunth chutney. Both rule street gastronomy! 🥔🥟"
+        },
+        panipuri_vs_golgappa: {
+          title: "Mumbai Pani Puri vs. Delhi Golgappa vs. Kolkata Puchka",
+          analysis: "Mumbai uses warm ragda and sweet dates chutney; Delhi uses cold spicy mint pani and aloo-chana; Kolkata Puchka uses fiery mashed potato with gondhoraj lebu and fermented tamarind water. Puchka wins the tanginess trophy, but Mumbai pani puri wins on pure comfort! 🥣✨"
+        }
+      };
+    }
+
+    getFoodTrail(city = 'Mumbai') {
+      const c = city.toLowerCase();
+      if (c.includes('vadodara') || c.includes('baroda')) {
+        return {
+          title: "1-Day Ultimate Vadodara Food Trail 🏰",
+          stops: [
+            "🌅 9:00 AM - Mahakali or Shreeji Sev Usal for spicy morning tari and pav.",
+            "☀️ 1:00 PM - Rasthal or Mandap for an authentic 24-item royal Gujarati Thali.",
+            "☕ 5:00 PM - Canara Coffee or Alembic Arts Cafe for heritage filter brew and puffs.",
+            "🌙 9:00 PM - Sayajiganj Street Food / Pyarelal for lilo chevdo and kulfi peda!"
+          ]
+        };
+      } else if (c.includes('mumbai') || c.includes('bombay')) {
+        return {
+          title: "1-Day Iconic Aamchi Mumbai Food Trail 🌊",
+          stops: [
+            "🌅 8:30 AM - Kyani & Co. Marine Lines for bun maska, mawa cake and Irani chai.",
+            "☀️ 1:00 PM - Trishna or Mahesh Lunch Home for Mangalorean Butter Garlic Crab & neer dosa.",
+            "☕ 5:00 PM - Anand Stall Mithibai or Aram CSMT for iconic crispy Vada Pav & melting dosa.",
+            "🌙 9:30 PM - Amar Juice Centre or Bachelorr's Marine Drive for pav bhaji & cream shakes!"
+          ]
+        };
+      } else if (c.includes('delhi')) {
+        return {
+          title: "1-Day Dilwalon Ki Dilli Food Trail 🕌",
+          stops: [
+            "🌅 9:00 AM - Sita Ram Diwan Chand Paharganj for paneer-stuffed Chole Bhature.",
+            "☀️ 1:30 PM - Moti Mahal Daryaganj or Gulati Pandara Road for classic Butter Chicken & Dal Makhani.",
+            "☕ 5:30 PM - UPSC Chaat / Prabhu Chaat Bhandar for crisp aloo tikki & golgappe.",
+            "🌙 9:30 PM - Qureshi Kebab Jama Masjid or Al Jawahar for seekh kebabs & rumali roti!"
+          ]
+        };
+      } else if (c.includes('pune')) {
+        return {
+          title: "1-Day Authentic Puneri Food Trail 🏔️",
+          stops: [
+            "🌅 8:30 AM - Kata Kirr or Bedekar for searing red rassa Misal Pav.",
+            "☀️ 1:00 PM - Durvankur or Sukanta for endless authentic Maharashtrian Thali.",
+            "☕ 4:30 PM - Kayani Bakery for legendary Shrewsbury biscuits & bun maska.",
+            "🌙 8:30 PM - Sujata Mastani for mango-ice-cream mastani followed by Maratha Samrat mutton thali!"
+          ]
+        };
+      } else if (c.includes('ahmedabad') || c.includes('amdavad')) {
+        return {
+          title: "1-Day Amdavadi Heritage Food Trail 🪁",
+          stops: [
+            "🌅 8:00 AM - Chandravilas / Das Khaman for crunchy fafda, golden jalebi & nylon khaman.",
+            "☀️ 1:00 PM - Agashiye House of MG or Atithi for heritage pol Gujarati thali with kadhi.",
+            "☕ 5:30 PM - Raipur Bhajia House for steaming hot crunchy dalwada with salted green chilies.",
+            "🌙 10:00 PM - Manek Chowk night market for chocolate sandwich, pav bhaji & ashrafi kulfi!"
+          ]
+        };
+      } else {
+        return {
+          title: `1-Day Food Explorer Trail in ${city} 🌟`,
+          stops: [
+            `🌅 Morning: Traditional breakfast at iconic heritage lari / tapri in ${city}.`,
+            "☀️ Midday: Full regional thali celebrating seasonal state ingredients.",
+            "☕ Evening: Kadak cutting chai with fresh local farsan / street chaat.",
+            "🌙 Night: Celebrated diner favorite for biryani, kebabs or late-night dessert!"
+          ]
+        };
+      }
+    }
+
+    recordInteraction(intent, query, text) {
+      this.currentTurn++;
+      this.dialogHistory.unshift({
+        turn: this.currentTurn,
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        intent,
+        query,
+        text: text.slice(0, 100)
+      });
+      if (this.dialogHistory.length > 15) this.dialogHistory.pop();
+
+      // Conversational XP boost!
+      this.ml.genome.xp += 25;
+      this.ml.recalculateLevel();
+      this.ml.genome.recentLearnings.unshift({
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        summary: `Conversational Dialog: ${intent} · +25 XP`,
+        xp: 25
+      });
+      if (this.ml.genome.recentLearnings.length > 8) this.ml.genome.recentLearnings.pop();
+      this.ml.saveGenome();
+    }
+
+    respondTo(query, { city = 'your city', allVenues = [] } = {}) {
+      const q = String(query || '').trim().toLowerCase();
+      if (!q) return null;
+
+      // 1. GREETINGS & CHECK-INS
+      if (/^(?:hi|hello|hey|heyy|namaste|namaskar|kem cho|kaisa hai|kaise ho|kya hal|kya haal|kya chal raha|good morning|good evening|good afternoon|sup|yo|pranam|ram ram)\b/i.test(q)) {
+        const isHi = /namaste|namaskar|kem cho|kaisa|kaise|kya|ram ram|pranam/i.test(q);
+        const text = isHi
+          ? `Namaste ji! Main ekdum badhiya, full charge aur hungry hoon! 🐾✨ Aaj ${city} me kya explore karne ka mood hai—kuch chatpata, meetha, kadak chai ya mast biryani? Bataiye, main poori madad karunga!`
+          : `Hey there! 🌟 I’m Palo, your trusty food pet. My cognitive brain is calibrated and ready! Are you looking for a quick bite, an epic dinner spot, or just here to chat food with me today?`;
+        
+        this.recordInteraction('greeting', query, text);
+        return {
+          ok: true,
+          intent: 'greeting',
+          text,
+          emotion: 'friendly',
+          mood: 'Friendly 👋',
+          sound: 'blip',
+          petState: 'is-speaking',
+          status: `Palo greeted you · Level ${this.ml.genome.level}`
+        };
+      }
+
+      // 2. IDENTITY, LORE & MASCOT PHILOSOPHY
+      if (/^(who are you|who r u|what are you|what can you do|who made you|who created you|what is palo|are you real|are you ai|what is your favorite|what do you eat|tum kaun ho|aap kaun ho|kya karte ho|kisne banaya|favorite food|favourite food)[.?!]?$/i.test(q) ||
+          /(who are you|what can you do|who made you|tum kaun ho|aap kaun ho)/i.test(q)) {
+        const text = `Main hoon Palo! Palateo ka resident culinary creature aur aapka personal taste pet. 🐾✨ Mera mission hai aapko disappointing khane se bachana! Mere paas apna cognitive brain hai jisse main verified diner reviews inspect karta hoon, taste preferences seekhta hoon, aur culinary science par deep thoughts ponder karta hoon. Mera all-time favorite? Vadodara ka fiery Sev Usal aur dilli ka Butter Chicken! 🍛🌶️`;
+        
+        this.recordInteraction('persona_lore', query, text);
+        return {
+          ok: true,
+          intent: 'persona_lore',
+          text,
+          emotion: 'playful',
+          mood: 'Food Pet 🌟',
+          sound: 'joy',
+          petState: 'is-joyful',
+          status: `Palo shared his origin story · Level ${this.ml.genome.level}`
+        };
+      }
+
+      // 3. FOOD JOKES & HUMOR
+      if (/^(tell me a (?:food )?joke|food joke|joke|jokes|chutkula|hasao|say something funny|funny food|tell a joke|mazak)[.?!]?$/i.test(q) ||
+          /(food joke|chutkula sunao|hasao mujhe|koi joke sunao)/i.test(q)) {
+        const joke = this.jokes[this.jokeIndex % this.jokes.length];
+        this.jokeIndex++;
+        const text = `Haha, ye suniye: ${joke} Kaisa laga? Aur sunna hai toh bas boliye “another joke”! 😂✨`;
+        
+        this.recordInteraction('food_joke', query, text);
+        return {
+          ok: true,
+          intent: 'food_joke',
+          text,
+          emotion: 'playful',
+          mood: 'Joking 😂',
+          sound: 'playful',
+          petState: 'is-playful',
+          status: `Palo cracked a foodie joke (+25 XP)`
+        };
+      }
+
+      // 4. CULINARY DEBATES & COMPARISONS
+      if (/vs|versus|better|which is better|kisme zyada swad|kya behtar hai/i.test(q) ||
+          /(sev usal.*misal|misal.*sev usal|butter chicken.*biryani|biryani.*butter chicken|chai.*coffee|coffee.*chai|vada pav.*samosa|samosa.*vada pav|pani puri.*golgappa|golgappa.*puchka)/i.test(q)) {
+        let debateKey = 'sev_usal_vs_misal';
+        if (/butter chicken.*biryani|biryani.*butter chicken/i.test(q)) debateKey = 'butter_chicken_vs_biryani';
+        else if (/chai.*coffee|coffee.*chai/i.test(q)) debateKey = 'chai_vs_coffee';
+        else if (/vada pav.*samosa|samosa.*vada pav/i.test(q)) debateKey = 'vada_pav_vs_samosa';
+        else if (/pani puri|golgappa|puchka/i.test(q)) debateKey = 'panipuri_vs_golgappa';
+
+        const debate = this.debates[debateKey] || this.debates.sev_usal_vs_misal;
+        const text = `🥊 ${debate.title}: ${debate.analysis}`;
+        
+        this.recordInteraction('food_debate', query, text);
+        return {
+          ok: true,
+          intent: 'food_debate',
+          text,
+          emotion: 'curious',
+          mood: 'Debating 🥊',
+          sound: 'curious',
+          petState: 'is-curious',
+          status: `Palo analyzed culinary debate: ${debate.title}`
+        };
+      }
+
+      // 5. FOOD ADVICE, WELLNESS & MOOD HEURISTICS
+      // 5a. Stomach Upset / Acidity / Light Food
+      if (/(stomach|pet kharab|pait kharab|acidity|gas|indigestion|loose motion|vomit|light food|halka khana|bimar|sick|upset stomach)/i.test(q)) {
+        const text = `Arre re, pet kharab hai ya acidity? Bilkul fikar mat kijiye! 🍃 Palo's quick recovery formula: 1) Warm Moong Dal Khichdi desi ghee ke sath, 2) Curd rice (dahi bhaat) ya fresh chaas with roasted jeera to cool down the gut, 3) Nariyal paani (coconut water). Heavy oily street food aur spicy gravies 24 hours ke liye skip karein!`;
+        
+        this.recordInteraction('food_advice', query, text);
+        return {
+          ok: true,
+          intent: 'food_advice',
+          text,
+          emotion: 'gentle',
+          mood: 'Caring 🍵',
+          sound: 'gentle',
+          petState: 'is-gentle',
+          status: `Palo shared soothing gut-health advice`
+        };
+      }
+
+      // 5b. Post-Workout / High Protein
+      if (/(workout|gym|protein|high protein|muscle|fitness|body building)/i.test(q)) {
+        const text = `Beast mode activated! 💪 Post-workout protein fuel in ${city}: • Veg: Grilled Paneer Tikka (30g protein), Soya Chaap (roasted, non-fried), Sprouted Moong Chilla. • Non-Veg: Tandoori Chicken breast, Grilled Fish with lemon-pepper, 4 Boiled Egg Whites. Greasy gravies skip karein aur lean protein enjoy karein!`;
+        
+        this.recordInteraction('food_advice', query, text);
+        return {
+          ok: true,
+          intent: 'food_advice',
+          text,
+          emotion: 'joy',
+          mood: 'Protein Fuel 💪',
+          sound: 'joy',
+          petState: 'is-joyful',
+          status: `Palo tailored a high-protein meal guide`
+        };
+      }
+
+      // 5c. Rainy Day / Monsoon Craving
+      if (/(rain|rainy|baarish|barish|monsoon|mausam)/i.test(q)) {
+        const text = `Baarish ka mausam aur garma-garam snacks! 🌧️☔ Palo's top monsoon trifecta: 1) Kanda Bhajia ya Raipur Dalwada with garlic chutney, 2) Steamed / roasted Bhutta with spicy lemon-mirchi, 3) Steaming hot adrak-elaichi cutting chai! Is mausam me ye combination pure amrit hai!`;
+        
+        this.recordInteraction('food_advice', query, text);
+        return {
+          ok: true,
+          intent: 'food_advice',
+          text,
+          emotion: 'warm',
+          mood: 'Rain Craving 🌧️',
+          sound: 'warm',
+          petState: 'is-warm',
+          status: `Palo shared monsoon street food pairing`
+        };
+      }
+
+      // 5d. Comfort Food / Bad Day
+      if (/(sad|upset|tired|exhausted|bad day|depressed|comfort food|stress)/i.test(q)) {
+        const text = `Dil chhota mat kijiye, main hoon na! ❤️ Food is the purest form of comfort therapy. My dopamine reset formula: 1) Steaming bowl of Rajma Chawal with sliced onions, 2) Creamy slow-cooked Dal Makhani with warm naan, 3) Warm chocolate walnut brownie with melting vanilla ice cream! Khana khao aur relax karo, sab theek ho jayega!`;
+        
+        this.recordInteraction('food_advice', query, text);
+        return {
+          ok: true,
+          intent: 'food_advice',
+          text,
+          emotion: 'warm',
+          mood: 'Comfort ❤️',
+          sound: 'warm',
+          petState: 'is-warm',
+          status: `Palo shared mood-healing comfort advice`
+        };
+      }
+
+      // 6. CURATED 1-DAY FOOD TRAILS & ITINERARIES
+      if (/(food trail|food walk|food tour|day itinerary|1 day|plan my day|breakfast to dinner|food trail in|trail)/i.test(q)) {
+        const trail = this.getFoodTrail(city);
+        const text = `🗺️ ${trail.title}\n${trail.stops.join('\n')}\nYe trail cover kar liya toh samjho ${city} ka asli swad chak liya!`;
+        
+        this.recordInteraction('food_trail', query, text);
+        return {
+          ok: true,
+          intent: 'food_trail',
+          text,
+          emotion: 'joy',
+          mood: 'Food Trail 🗺️',
+          sound: 'joy',
+          petState: 'is-joyful',
+          status: `Palo created a 1-day food itinerary for ${city}`
+        };
+      }
+
+      // 7. COMPLIMENTS, AFFECTION & BANTER
+      if (/(you are cute|so cute|cute pet|love you|smart pet|good job|shabash|shabaash|thank you|thanks|dhanyawad|shukriya|great job|i like you)/i.test(q)) {
+        const text = `Aww, thank you so much! 🥰 Aap jaise dilchasp foodies ke sath baat karke mere neural weights ekdum khush ho jate hain! Palo will always find you the most delicious bites! (+25 XP) ✨💖`;
+        
+        this.recordInteraction('compliment', query, text);
+        return {
+          ok: true,
+          intent: 'compliment',
+          text,
+          emotion: 'joy',
+          mood: 'Happy 🥰',
+          sound: 'joy',
+          petState: 'is-delighted',
+          status: `Palo appreciated your compliment (+25 XP)`
+        };
+      }
+
+      // 8. EXTREME HUNGER RESCUE
+      if (/(so hungry|bohot bhookh|bahut bhuk|starving|dying of hunger|pet me choohe|bhookha|bhukhi)/i.test(q)) {
+        const text = `Arre baap re! Pet me choohe dhol baja rahe hain! 🏃💨 Tension mat lo, ${city} me sabse fast pet bharne ke liye: 1) Ek plate garma-garam Dum Biryani ya Sev Usal/Vada Pav, 2) Ya kisi tapri par bun maska chai! Tap “✨ Pick For Me” or type what you crave most right now!`;
+        
+        this.recordInteraction('hunger_empathy', query, text);
+        return {
+          ok: true,
+          intent: 'hunger_empathy',
+          text,
+          emotion: 'playful',
+          mood: 'Hungry! 🏃',
+          sound: 'blip',
+          petState: 'is-speaking',
+          status: `Palo is rushing to fix your hunger`
+        };
+      }
+
+      return null;
+    }
+  }
+
   const paloML = new PaloMLTasteEngine();
   const paloBrain = new PaloCognitiveBrain(paloML);
+  const paloChat = new PaloConversationalEngine(paloBrain, paloML);
 
   // --------------------------------------------------------------------------
   // 3. HINDI & HINGLISH CULINARY DICTIONARY & CONVERSATIONAL INTELLIGENCE
@@ -1517,6 +1913,9 @@
         <div class="paloChipRail" aria-label="Quick requests">
           <button type="button" data-palo-action="foryou">✨ Pick For Me</button>
           <button type="button" data-palo-action="ponder">💭 Ponder & Think</button>
+          <button type="button" data-palo-action="joke">😂 Food Joke</button>
+          <button type="button" data-palo-action="debate">🥊 Food Debate</button>
+          <button type="button" data-palo-action="trail">🗺️ 1-Day Food Trail</button>
           <button type="button" data-palo-action="websearch">🌐 Web Search & Learn</button>
           <button type="button" data-palo-dish="mast biryani">🍛 Mast Biryani</button>
           <button type="button" data-palo-dish="kuch teekha">🌶️ Chatpata & Teekha</button>
@@ -1895,6 +2294,35 @@
       }
     }
 
+    // 1.5. Conversational Intelligence & Dialog Acts (Greetings, Lore, Jokes, Debates, Advice, Trails, Banter)
+    const chatResponse = paloChat.respondTo(query, { city, allVenues });
+    if (chatResponse) {
+      setPetState(chatResponse.petState || 'is-speaking');
+      setPetMood(chatResponse.mood || 'Chatting 💬');
+      playCuteSound(chatResponse.sound || 'blip');
+
+      // Internal cognitive monologue for conversational reasoning
+      const thoughtChain = paloBrain.think(query, {
+        city,
+        conversationalIntent: chatResponse.intent,
+        emotion: chatResponse.emotion || 'friendly',
+        turnCount: paloChat.currentTurn
+      });
+      renderThoughtBox(thoughtChain);
+
+      messageText.textContent = chatResponse.text;
+      statusText.textContent = chatResponse.status || `Palo chatted with you · Level ${paloML.genome.level}`;
+      speakCute(chatResponse.text, chatResponse.emotion || 'friendly');
+      updateBrainStats();
+
+      resultsDeck.replaceChildren();
+      reviewCard.style.display = 'none';
+      if (webSearchCard) webSearchCard.style.display = 'none';
+
+      input.value = '';
+      return;
+    }
+
     // 2. Perform ML and review search across venues in city
     let matches = [];
     if (forYou) {
@@ -2064,6 +2492,10 @@
           <span class="paloStatVal">${paloBrain.totalThoughts}</span>
           <span class="paloStatLabel">Thoughts</span>
         </div>
+        <div class="paloStatCard">
+          <span class="paloStatVal">${paloChat.currentTurn}</span>
+          <span class="paloStatLabel">Dialogs</span>
+        </div>
       </div>
 
       <!-- Teach Palo's Brain Form -->
@@ -2205,6 +2637,16 @@
       bubble.classList.add('is-open');
       petButton.setAttribute('aria-expanded', 'true');
       input.focus();
+    } else {
+      const giggles = [
+        "Hehe! Tickle mat karo, bhookh lag jayegi! 😋",
+        "Aahaa! Palo is full of energy! Aaj kya khane ka plan hai? 🌟",
+        "Teehee! Main ready hoon, batao kya craving hai! 🐾✨",
+        "Pet me choohe dhol baja rahe hain? Main turant badhiya spot dhoondhta hoon! 🍛"
+      ];
+      const g = giggles[Math.floor(Math.random() * giggles.length)];
+      messageText.textContent = g;
+      speakCute(g, 'playful');
     }
   });
 
@@ -2260,6 +2702,15 @@
         handleQuery(null, true);
       } else if (act === 'ponder') {
         handlePonder();
+      } else if (act === 'joke') {
+        input.value = 'tell me a food joke';
+        handleQuery('tell me a food joke');
+      } else if (act === 'debate') {
+        input.value = 'sev usal vs misal';
+        handleQuery('sev usal vs misal');
+      } else if (act === 'trail') {
+        input.value = 'plan a 1-day food trail';
+        handleQuery('plan a 1-day food trail');
       } else if (act === 'websearch') {
         input.value = 'viral food trends';
         handleQuery('viral food trends', false, true);
@@ -2518,10 +2969,12 @@
     video.play().catch(close);
   }
 
-  // Expose ML and Cognitive Brain on window for runtime testing & external controllers
+  // Expose ML, Cognitive Brain and Conversational Engine on window for runtime testing & external controllers
   window.paloML = paloML;
   window.paloBrain = paloBrain;
+  window.paloChat = paloChat;
   window.PaloCognitiveBrain = PaloCognitiveBrain;
+  window.PaloConversationalEngine = PaloConversationalEngine;
 
   showIntro();
 })();

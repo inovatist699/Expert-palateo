@@ -304,8 +304,8 @@ html{scrollbar-color:#519cab #c3e7f1}
 .paloXpTag{font-size:10px;font-weight:750;background:#ffc64f;color:#20373b;padding:3px 8px;border-radius:12px;margin-top:2px;display:inline-block}
 
 /* Cognitive Brain Drawer Stats Grid */
-.paloBrainStatsGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:12px}
-.paloStatCard{background:#ffffff;border:1px solid #c8ded8;border-radius:12px;padding:8px 4px;text-align:center}
+.paloBrainStatsGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-bottom:12px}
+.paloStatCard{background:#ffffff;border:1px solid #c8ded8;border-radius:12px;padding:8px 3px;text-align:center}
 .paloStatVal{display:block;font-size:15px;font-weight:850;color:#183b3e;line-height:1.1}
 .paloStatLabel{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.4px;font-weight:750;color:#5a7b75;margin-top:2px}
 

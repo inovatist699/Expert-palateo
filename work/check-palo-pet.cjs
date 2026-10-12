@@ -6,6 +6,11 @@ const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 const companionJs = fs.readFileSync(path.join(root, 'src/features/companion/controller.js'), 'utf8');
 const interactiveCss = fs.readFileSync(path.join(root, 'src/styles/interactive.css'), 'utf8');
+const metroCityFiles = [
+  'mumbai.js', 'delhi.js', 'bengaluru.js', 'hyderabad.js', 'chennai.js',
+  'kolkata.js', 'pune.js', 'jaipur.js', 'kochi.js', 'goa.js', 'chandigarh.js'
+];
+const metroCityScripts = metroCityFiles.map(f => fs.readFileSync(path.join(root, 'src/models/venues', f), 'utf8'));
 const metrosJs = fs.readFileSync(path.join(root, 'src/models/venues/metros.js'), 'utf8');
 const ahmedabadJs = fs.readFileSync(path.join(root, 'src/models/venues/ahmedabad.js'), 'utf8');
 const vadodaraJs = fs.readFileSync(path.join(root, 'src/models/venues/vadodara.js'), 'utf8');
@@ -171,8 +176,11 @@ const sandbox = {
   clearTimeout
 };
 
-// Evaluate metros, ahmedabad, and vadodara data in sandbox
+// Evaluate city venue databases, metros, ahmedabad, and vadodara data in sandbox
 vm.createContext(sandbox);
+for (const script of metroCityScripts) {
+  vm.runInContext(script, sandbox);
+}
 vm.runInContext(metrosJs.replace('const allMetroVenues=', 'globalThis.allMetroVenues='), sandbox);
 vm.runInContext(ahmedabadJs.replace('const catalog=', 'globalThis.ahmedabadCatalog='), sandbox);
 vm.runInContext(vadodaraJs.replace('const vadodaraCatalog=', 'globalThis.vadodaraCatalog='), sandbox);
@@ -223,11 +231,25 @@ assert.ok(sandbox.allMetroVenues.some(v => v.id === 'pun-flavours-sandwich'), 'M
 assert.ok(sandbox.ahmedabadCatalog.some(v => v.id === 'ahm-cept-khau-gali'), 'Must include CEPT Khau Gali in Ahmedabad');
 assert.ok(sandbox.allMetroVenues.length >= 415, `Must have 415+ metro venues total, found ${sandbox.allMetroVenues.length}`);
 
+// 7. Verify Live Web Search Access & Machine Learning Integration
+assert.ok(companionJs.includes('PaloWebSearchEngine'), 'Must implement PaloWebSearchEngine');
+assert.ok(companionJs.includes('learnFromWebSearch'), 'Must implement learnFromWebSearch reinforcement learning');
+assert.ok(companionJs.includes('paloWebSearchResult'), 'Must include web search result container in speech bubble');
+assert.ok(interactiveCss.includes('paloWebSearchCard'), 'Must style live web search intelligence card');
+
+// 8. Verify Indian Hindi Accent Audio Engine
+assert.ok(companionJs.includes('toIndianHindiAccentSpoken'), 'Must implement Indian Hindi accent speech transformer');
+assert.ok(companionJs.includes('hindiVoice'), 'Must prioritize authentic native Hindi voice');
+assert.ok(companionJs.includes('indianEnVoice') || companionJs.includes('en-IN'), 'Must prioritize Indian English voice for authentic accent');
+assert.ok(companionJs.includes('Hindi Accent'), 'Must indicate Indian Hindi accent in pet persona');
+
 console.log('PASS: Palo animated vector mascot anatomy');
 console.log('PASS: Non-blocking attached speech bubble architecture');
 console.log('PASS: Cute voice synthesis & procedural Web Audio chirps');
 console.log('PASS: Online reinforcement learning taste genome & leveling');
 console.log('PASS: Deep access to verified restaurant diner review insights');
 console.log('PASS: Hindi & Hinglish dictionary and conversational intelligence');
+console.log('PASS: Web search access & online reinforcement learning engine');
+console.log('PASS: Authentic Indian Hindi voice accent and vocal cadence');
 console.log('PASS: Comprehensive restaurant coverage across all 13 listed cities');
 console.log('All Palo checks passed successfully.\n');

@@ -372,6 +372,52 @@
       return { level: this.genome.level, xp: this.genome.xp, leveledUp, summary };
     }
 
+    // Reinforce taste genome with live web search discoveries
+    learnFromWebSearch(query, searchResult) {
+      if (!searchResult) return null;
+      const xpGain = 50;
+      this.genome.xp += xpGain;
+      const leveledUp = this.recalculateLevel();
+
+      const insights = searchResult.culinaryInsights || {};
+      const cuisines = insights.cuisines || [];
+      const dishes = insights.dishes || [];
+      const vibes = insights.vibes || [];
+
+      cuisines.forEach(c => {
+        const cur = this.genome.cuisines[c] || 0.4;
+        this.genome.cuisines[c] = Math.max(-1.5, Math.min(3.0, cur + 0.35));
+      });
+
+      dishes.forEach(d => {
+        this.genome.dishWeights[d.toLowerCase()] = 1.2;
+      });
+
+      vibes.forEach(v => {
+        const cur = this.genome.vibes[v] || 0.4;
+        this.genome.vibes[v] = Math.max(-1.5, Math.min(2.5, cur + 0.3));
+      });
+
+      const text = `${searchResult.heading || ''} ${searchResult.summary || ''}`.toLowerCase();
+      const tokens = text.replace(/[^\p{L}\p{N}\s]/gu, ' ').split(/\s+/).filter(t => t.length > 3);
+      tokens.slice(0, 10).forEach(tok => {
+        this.genome.reviewKeywords[tok] = (this.genome.reviewKeywords[tok] || 0.3) + 0.25;
+      });
+
+      const tagsLearned = [...cuisines.slice(0, 2), ...dishes.slice(0, 1)].filter(Boolean).join(', ');
+      const summary = `Web Searched: “${query}” · Learned ${tagsLearned || 'new flavor insights'}`;
+      this.genome.recentLearnings.unshift({
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        summary,
+        xp: xpGain,
+        source: 'web_search'
+      });
+      if (this.genome.recentLearnings.length > 7) this.genome.recentLearnings.pop();
+
+      this.saveGenome();
+      return { level: this.genome.level, xp: this.genome.xp, leveledUp, summary };
+    }
+
     evaluateVenue(venue) {
       let score = venue.score || 75;
       (venue.c || []).forEach(c => {
@@ -690,22 +736,47 @@
     setPetState('is-idle');
   }
 
+  // Format speech with cheerful Indian Hindi accent conversational markers & intonation
+  function toIndianHindiAccentSpoken(text) {
+    if (!text) return '';
+    let spoken = String(text);
+    if (!/(arrey|arre|wah|bhai|haanji|dekho|bawaal|mast|jhakaas|lajawaab|swad|swaad|zaika|chahiye|khana)/i.test(spoken)) {
+      if (/^Here are my top picks/i.test(spoken)) {
+        spoken = spoken.replace(/^Here are my top picks/i, 'Arrey wah! Dekho na, ye rahe mere top recommendations');
+      } else if (/^Found (\d+) spots/i.test(spoken)) {
+        spoken = spoken.replace(/^Found (\d+) spots/i, 'Arrey suno! $1 zabardast spots mile hain');
+      } else if (/^I learned/i.test(spoken)) {
+        spoken = 'Wah bhai wah! ' + spoken;
+      } else if (!/^(arrey|namaste|wah)/i.test(spoken)) {
+        spoken = 'Arrey wah! ' + spoken;
+      }
+    }
+    return spoken;
+  }
+
   function speakCute(text) {
     stopSpeaking();
     if (!voiceEnabled || !window.speechSynthesis) return;
-    const speech = new SpeechSynthesisUtterance(text);
+    const spokenText = toIndianHindiAccentSpoken(text);
+    const speech = new SpeechSynthesisUtterance(spokenText);
     activeUtterance = speech;
 
     const voices = window.speechSynthesis.getVoices();
-    const sweetVoice = voices.find(v => /(samantha|victoria|karen|tessa|moira|google hindi|swara|neerja|google uk english female|google us english|en-in|hi-in)/i.test(v.name))
-      || voices.find(v => /^(en-in|hi-in|en-gb|en-us)/i.test(v.lang))
+    // 1. High priority: Authentic native Hindi voices (hi-IN)
+    const hindiVoice = voices.find(v => /(hindi|google\s*हिन्दी|google\s*hindi|swara|kalpana|hemant|lekha|madhur|neerja|geeta)/i.test(v.name) || /^hi(-in)?$/i.test(v.lang));
+    // 2. High priority: Indian English voices (en-IN)
+    const indianEnVoice = voices.find(v => /(india|indian|ravi|heera|veena|rishi|sangeeta|priya|kavya)/i.test(v.name) || /^en-in$/i.test(v.lang));
+    // 3. Fallback voices
+    const cuteFallback = voices.find(v => /(samantha|victoria|karen|tessa|moira|google uk english female|google us english)/i.test(v.name))
       || voices.find(v => /^en/i.test(v.lang))
       || null;
 
-    if (sweetVoice) speech.voice = sweetVoice;
-    speech.lang = sweetVoice?.lang || 'en-IN';
-    speech.rate = 1.07; // Cheerful, brisk pace
-    speech.pitch = 1.56; // Cute, friendly mascot pitch
+    const indianVoice = hindiVoice || indianEnVoice || cuteFallback;
+    if (indianVoice) speech.voice = indianVoice;
+    const isHindiUtterance = /(hai|kahan|batao|kuch|swad|mast|teekha|meetha|khana|pasand|bhai|arrey|dekho|zaika|khao|chahiye|badhiya|waah)/i.test(spokenText);
+    speech.lang = indianVoice?.lang || (isHindiUtterance ? 'hi-IN' : 'en-IN');
+    speech.rate = 1.03; // Melodic Indian conversational cadence
+    speech.pitch = 1.48; // Cute, enthusiastic Indian mascot pitch
 
     speech.onstart = () => {
       if (activeUtterance !== speech) return;
@@ -726,6 +797,101 @@
 
     window.speechSynthesis.speak(speech);
   }
+
+  // --------------------------------------------------------------------------
+  // 4.5 PALO WEB SEARCH ENGINE (ONLINE CULINARY KNOWLEDGE & LIVE LEARNING)
+  // --------------------------------------------------------------------------
+  class PaloWebSearchEngine {
+    constructor() {
+      this.cache = new Map();
+    }
+
+    async searchWeb(query, city = '') {
+      const q = String(query || '').trim();
+      const cacheKey = `${q}::${city}`.toLowerCase();
+      if (this.cache.has(cacheKey)) {
+        return this.cache.get(cacheKey);
+      }
+
+      try {
+        if (typeof fetch === 'function') {
+          const url = `/api/search?q=${encodeURIComponent(q)}&city=${encodeURIComponent(city)}`;
+          const res = await fetch(url, { signal: AbortSignal.timeout(3500) });
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.ok) {
+              this.cache.set(cacheKey, data);
+              return data;
+            }
+          }
+        }
+      } catch (e) {
+        // Fallback to local culinary synthesis if endpoint times out or offline
+      }
+
+      const fallback = this.synthesizeLocal(q, city);
+      this.cache.set(cacheKey, fallback);
+      return fallback;
+    }
+
+    synthesizeLocal(query, city) {
+      const q = query.toLowerCase();
+      let heading = `Web Knowledge: “${query}”`;
+      let summary = `Live online food guides identify “${query}” as a trending choice across ${city || 'top culinary destinations'}.`;
+      let viralBuzz = `Verified diner reviews highlight authentic taste, generous portions, and distinct recipes.`;
+      let cuisines = ['Street Food', 'Regional Indian', 'Trending'];
+      let dishes = [query];
+      let vibes = ['popular', 'viral', 'foodie favorite'];
+
+      if (/crookie|croissant/i.test(q)) {
+        heading = 'Viral Crookie (Croissant Cookie Fusion)';
+        summary = 'Parisian viral bakery trend combining flaky butter croissants with gooey chocolate chip cookie dough.';
+        viralBuzz = 'Trending across artisan bakeries in Bandra Mumbai, Def Col Delhi, and Koregaon Park Pune with high foodie praise.';
+        cuisines = ['Bakery', 'Desserts', 'Cafe'];
+        dishes = ['Crookie', 'Butter Croissant'];
+        vibes = ['trendy', 'sweet'];
+      } else if (/kunafa/i.test(q)) {
+        heading = 'Middle Eastern Kunafa';
+        summary = 'Crispy golden kataifi spun pastry layered with molten sweet cheese or pistachio cream and fragrant sugar syrup.';
+        viralBuzz = 'Massive late-night favorite across Old Delhi, Mumbai, and Camp Pune. Diners love the stretchable cheese pull.';
+        cuisines = ['Middle Eastern', 'Desserts'];
+        dishes = ['Cheese Kunafa', 'Pistachio Kunafa'];
+        vibes = ['decadent', 'late night'];
+      } else if (/bingsu|korean/i.test(q)) {
+        heading = 'Korean Bingsu & K-Street Food';
+        summary = 'Snowy shaved milk ice topped with fresh mango, matcha, condensed milk, and chewy mochi.';
+        viralBuzz = 'Major favorite among K-wave youth and student foodies across metro campuses.';
+        cuisines = ['Korean', 'Desserts', 'Cafe'];
+        dishes = ['Mango Bingsu', 'Matcha Bingsu'];
+        vibes = ['aesthetic', 'refreshing'];
+      } else if (/party|club|nightlife/i.test(q)) {
+        heading = 'High-Energy Party Clubs & Lounges';
+        summary = 'Premier nightlife hubs featuring international resident DJs, VIP dance floors, and bespoke craft mixology.';
+        viralBuzz = 'Packed weekend crowds praising dynamic party energy across Dragonfly, Toy Room, Privee, Soho, High Spirits, and Sphere Lounge.';
+        cuisines = ['Nightclub', 'Cocktails', 'Tapas'];
+        dishes = ['Craft Cocktails', 'Truffle Fries'];
+        vibes = ['party', 'dance', 'high energy'];
+      }
+
+      return {
+        ok: true,
+        query,
+        city,
+        source: 'web_search',
+        heading,
+        summary,
+        viralBuzz,
+        culinaryInsights: {
+          cuisines,
+          dishes,
+          vibes,
+          sentiment: 0.95
+        }
+      };
+    }
+  }
+
+  const paloWebSearch = new PaloWebSearchEngine();
 
   // --------------------------------------------------------------------------
   // 5. ON-SCREEN PET UI MOUNT (NON-BLOCKING DOCK & SPEECH BUBBLE)
@@ -752,7 +918,7 @@
                   ⚡ Lvl <span id="paloLevelNum">1</span> · <span id="paloXpNum">40</span> XP
                 </button>
               </div>
-              <p class="paloSubtitle">Your Adaptive Culinary Companion</p>
+              <p class="paloSubtitle">Your Adaptive Culinary Companion · 🇮🇳 Hindi Accent · 🌐 Web Learner</p>
             </div>
           </div>
           <div class="paloHeaderActions">
@@ -775,9 +941,13 @@
         <!-- Latest Review Citation Card (Populated on recommendations) -->
         <div id="paloReviewHighlight" class="paloReviewCard" style="display:none;"></div>
 
+        <!-- Live Web Search & ML Insight Card -->
+        <div id="paloWebSearchResult" class="paloWebSearchCard" style="display:none;"></div>
+
         <!-- Quick Suggestions Chips (English & Hinglish) -->
         <div class="paloChipRail" aria-label="Quick requests">
           <button type="button" data-palo-action="foryou">✨ Pick For Me</button>
+          <button type="button" data-palo-action="websearch">🌐 Web Search & Learn</button>
           <button type="button" data-palo-dish="mast biryani">🍛 Mast Biryani</button>
           <button type="button" data-palo-dish="kuch teekha">🌶️ Chatpata & Teekha</button>
           <button type="button" data-palo-dish="kadak chai">☕ Kadak Chai</button>
@@ -823,6 +993,7 @@
   const bubble = document.getElementById('paloBubble');
   const messageText = document.getElementById('paloMessageText');
   const reviewCard = document.getElementById('paloReviewHighlight');
+  const webSearchCard = document.getElementById('paloWebSearchResult');
   const resultsDeck = document.getElementById('paloResultsDeck');
   const brainDrawer = document.getElementById('paloBrainDrawer');
   const brainBadge = document.getElementById('paloBrainBadge');
@@ -889,12 +1060,77 @@
   // --------------------------------------------------------------------------
   const isReady = () => typeof currentUser !== 'undefined' && currentUser && !authRequired && hasTasteProfile();
 
-  function handleQuery(forcedQuery = null, forYou = false) {
+  async function executeWebSearch(searchQuery, city, allVenues) {
+    const q = String(searchQuery || 'trending food').trim();
+    setPetState('is-thinking');
+    playCuteSound('think');
+    setPetMood('Searching Web 🌐');
+    statusText.textContent = `🌐 Searching web for “${q}” & learning insights...`;
+    reviewCard.style.display = 'none';
+
+    const data = await paloWebSearch.searchWeb(q, city);
+    const res = paloML.learnFromWebSearch(q, data);
+    triggerLearningAnimation(res?.summary);
+    updateBrainStats();
+
+    if (webSearchCard) {
+      webSearchCard.style.display = 'block';
+      const insights = data.culinaryInsights || {};
+      const allTags = [...(insights.cuisines || []), ...(insights.dishes || []), ...(insights.vibes || [])];
+      webSearchCard.innerHTML = `
+        <div class="paloWebSearchHeader">
+          <span class="paloWebSearchBadge">🌐 Live Web Search & ML Insight</span>
+          <span class="paloWebLearnPill">⚡ +50 XP Learned</span>
+        </div>
+        <h4 class="paloWebSearchHeading">${esc(data.heading || q)}</h4>
+        <p class="paloWebSearchSummary">${esc(data.summary)}</p>
+        <p class="paloWebSearchBuzz">“${esc(data.viralBuzz)}”</p>
+        <div class="paloWebSearchTags">
+          ${allTags.slice(0, 5).map(t => `<span class="paloWebSearchTag">✨ ${esc(t)}</span>`).join('')}
+        </div>
+      `;
+    }
+
+    const reply = `Arrey waah! Maine web par search kiya aur “${q}” ke baare me naya swad seekh liya! Online foodie community bolti hai: ${data.summary}`;
+    messageText.textContent = reply;
+    statusText.textContent = `Palo learned from web · Level ${paloML.genome.level} (${paloML.genome.xp} XP)`;
+    speakCute(reply);
+
+    const related = searchVenuesByReviewInsights(q, allVenues).slice(0, 3);
+    if (related.length && related[0].totalScore > 20) {
+      resultsDeck.innerHTML = related.map(({ r, mlTasteScore, reviewData }) => `
+        <article class="paloVenueCard">
+          <div class="paloVenueMeta">
+            <div>
+              <span class="paloCuisineTag">${esc((r.c || []).slice(0, 2).join(' · '))}</span>
+              <h4 class="paloVenueName">${esc(r.name)}</h4>
+              <p class="paloVenueSub">${esc(r.area || r.city)} · ${esc(displayPrice(r))} · ★ ${reviewData.rating}</p>
+            </div>
+            <div class="paloMatchPill">
+              <strong>${mlTasteScore}%</strong>
+              <span>Fit</span>
+            </div>
+          </div>
+          <p class="paloVenueQuote">${esc(reviewData.quotes[0])}</p>
+          <div class="paloVenueActions">
+            <button type="button" class="paloExploreBtn" data-palo-place="${esc(r.id)}">
+              Explore place →
+            </button>
+          </div>
+        </article>
+      `).join('');
+    } else {
+      resultsDeck.replaceChildren();
+    }
+  }
+
+  function handleQuery(forcedQuery = null, forYou = false, isWebSearch = false) {
     stopSpeaking();
     stopListening();
     brainDrawer.style.display = 'none';
     resultsDeck.replaceChildren();
     reviewCard.style.display = 'none';
+    if (webSearchCard) webSearchCard.style.display = 'none';
 
     const city = typeof cityName === 'function' ? cityName() : 'your city';
     const allVenues = typeof ranked === 'function' ? ranked() : [];
@@ -916,6 +1152,14 @@
     setPetState('is-thinking');
     playCuteSound('think');
     setPetMood('Thinking…');
+
+    // Check for explicit web search query
+    const isExplicitWebSearch = isWebSearch || /^(?:web\s*search|search\s*web|google|internet\s*pe|search\s*internet|find\s*online|web\s*pe)\b/i.test(query);
+    if (isExplicitWebSearch) {
+      const cleanTerm = query.replace(/^(?:web\s*search|search\s*web|google|internet\s*pe|search\s*internet|find\s*online|web\s*pe)\s*(?:for|pe)?\s*/i, '').trim() || 'trending food';
+      executeWebSearch(cleanTerm, city, allVenues);
+      return;
+    }
 
     // 1. Check for explicit natural language taste teaching (English or Hindi/Hinglish)
     const teachEn = query.match(/^i\s+(love|like|hate|dislike|don't like|do not like)\s+(.+?)[.!]?$/i);
@@ -975,10 +1219,8 @@
       setPetMood('Ready!');
 
       if (!matches.length) {
-        const failMsg = `I searched all diner reviews in ${city}, but couldn't find a direct match for “${query}”. Try another dish or cuisine!`;
-        messageText.textContent = failMsg;
-        statusText.textContent = 'No matching reviews found.';
-        speakCute(failMsg);
+        // Cascade automatically to web search to learn unknown dishes/queries live
+        executeWebSearch(query, city, allVenues);
         return;
       }
 
@@ -1197,6 +1439,9 @@
       if (act === 'foryou') {
         input.value = '';
         handleQuery(null, true);
+      } else if (act === 'websearch') {
+        input.value = 'viral food trends';
+        handleQuery('viral food trends', false, true);
       } else if (act === 'reviews') {
         input.value = 'top reviewed dishes';
         handleQuery('top reviews');

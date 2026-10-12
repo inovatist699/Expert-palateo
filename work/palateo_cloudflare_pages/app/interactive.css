@@ -244,6 +244,17 @@ html{scrollbar-color:#519cab #c3e7f1}
 .paloReviewQuote{font-size:12.5px;font-style:italic;color:#354d48;line-height:1.55;margin:0 0 6px}
 .paloReviewTip{font-size:11px;font-weight:600;color:#5a6e69;line-height:1.45;margin:0}
 
+/* Live Web Search Intelligence Card */
+.paloWebSearchCard{margin:6px 16px 10px;padding:12px 14px;background:#f0f9f6;border:1px solid #73b8a6;border-left:4px solid #107c68;border-radius:14px;box-shadow:0 3px 12px rgba(16,124,104,0.14);animation:paloSlideDown .2s ease-out}
+.paloWebSearchHeader{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;gap:8px}
+.paloWebSearchBadge{font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;font-weight:800;color:#0e5e4f;display:flex;align-items:center;gap:4px}
+.paloWebLearnPill{font-size:10px;font-weight:750;background:#d2eee6;color:#0a4d41;padding:2px 7px;border-radius:10px}
+.paloWebSearchHeading{font-size:13.5px;font-weight:800;color:#183b3e;margin:0 0 4px;line-height:1.3}
+.paloWebSearchSummary{font-size:12px;color:#2c4b46;line-height:1.55;margin:0 0 6px}
+.paloWebSearchBuzz{font-size:11.5px;font-style:italic;color:#3d615b;line-height:1.5;margin:0 0 6px;padding-left:8px;border-left:2px solid #52a893}
+.paloWebSearchTags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.paloWebSearchTag{font-size:9.5px;font-weight:750;background:#ffffff;border:1px solid #94cbbe;color:#183b3e;border-radius:8px;padding:2px 6px}
+
 /* Quick Chip Rail */
 .paloChipRail{display:flex;gap:6px;padding:0 16px 10px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex:none}
 .paloChipRail::-webkit-scrollbar{display:none}

@@ -42,11 +42,11 @@
 
     defaultGenome() {
       return {
-        version: 5,
-        xp: 25000,
-        level: 8,
-        title: 'Supreme Culinary Oracle & Omniscient Taste Master',
-        totalInteractions: 500,
+        version: 6,
+        xp: 35000,
+        level: 9,
+        title: 'Supreme Galactic Taste Deity & Universal Food Oracle',
+        totalInteractions: 750,
         cuisines: {
           'North Indian': 0.96,
           'Punjabi': 0.95,
@@ -232,15 +232,31 @@
           'upsc chaat': 0.98,
           'khan chacha rolls': 0.97,
           'comorin mutton': 0.98,
-          'burma burma khow suey': 0.98
+          'burma burma khow suey': 0.98,
+          'sardar pav bhaji': 0.99,
+          'bademiya seekh': 0.98,
+          'trishna garlic crab': 0.99,
+          'moti mahal butter chicken': 0.99,
+          'sita ram chole bhature': 0.99,
+          'sujata mastani': 0.99,
+          'chitale bakarwadi': 0.99,
+          'gordhan thal': 0.99,
+          'jagdish bhakarwadi': 0.99,
+          'vidyarthi bhavan dosa': 0.99,
+          'ctr benne dosa': 0.99,
+          'paradise biryani': 0.99,
+          'murugan idli': 0.99,
+          'peter cat chelo kebab': 0.99,
+          'rawat pyaz kachori': 0.99,
+          'paragon malabar biryani': 0.99
         },
         recentLearnings: [
-          { time: 'Trained', summary: 'Incorporated all 295 Google Places food destinations across Ahmedabad (75), Vadodara (70), Mumbai (50), Delhi NCR (50), and Pune (50)', xp: 5200 },
-          { time: 'Trained', summary: 'Mastered Ahmedabad Heritage Pols, Manek Chowk & Century-old Farsan Legends (Lucky Tea, Chandra Villas, Honest, Oswal, Raipur Bhajia)', xp: 3500 },
-          { time: 'Trained', summary: 'Calibrated Vadodara Sev Usal Tari, Lilo Chevdo & Alembic Art District Gastronomy (Mahakali, Shreeji, Jagdish, Payal, Pyarelal, Duliram, 1907)', xp: 3400 },
-          { time: 'Trained', summary: 'Encoded Mumbai Vada Pav Royalty, Coastal Crab Curries & Midnight Chowpatty Haunts (Ashok, K. Rustom, Bachelorr’s, Mahesh, Kyani, Aaswad, Mondegar)', xp: 4200 },
-          { time: 'Trained', summary: 'Fine-tuned Delhi Butter Chicken Origins, Chandni Chowk Chaats & Paharganj Chole Bhature (Moti Mahal, Sita Ram, Kuremal, Al Jawahar, Paranthe Wali Gali, Comorin)', xp: 4400 },
-          { time: 'Trained', summary: 'Mastered Pune Puneri Misal, Shrewsbury Bakes & Sujata Mastani Confections (Kata Kirr, Sujata, Chitale, Marz-O-Rin, Vaidya, Durvankur, Camp Burger)', xp: 4300 }
+          { time: 'Trained', summary: 'Incorporated all 400 Google Places food destinations across Ahmedabad (90), Vadodara (85), Mumbai (75), Delhi NCR (75), and Pune (75); 547 nationwide', xp: 7500 },
+          { time: 'Trained', summary: 'Mastered Ahmedabad Heritage Pols, Manek Chowk & Century-old Farsan Legends (Lucky Tea, Chandra Villas, Honest, Oswal, Raipur Bhajia, Gordhan Thal, Rajwadu)', xp: 4800 },
+          { time: 'Trained', summary: 'Calibrated Vadodara Sev Usal Tari, Lilo Chevdo & Alembic Art District Gastronomy (Mahakali, Shreeji, Jagdish, Payal, Pyarelal, Duliram, 1907, Canara Coffee)', xp: 4600 },
+          { time: 'Trained', summary: 'Encoded Mumbai Vada Pav Royalty, Coastal Crab Curries & Midnight Chowpatty Haunts (Sardar, Bademiya, Trishna, Mahesh, Kyani, Aaswad, Bachelorr’s, Veronica’s)', xp: 5200 },
+          { time: 'Trained', summary: 'Fine-tuned Delhi Butter Chicken Origins, Chandni Chowk Chaats & Paharganj Chole Bhature (Moti Mahal, Gulati, Sita Ram, Kuremal, Al Jawahar, Big Chill, Indian Accent)', xp: 5400 },
+          { time: 'Trained', summary: 'Mastered Pune Puneri Misal, Shrewsbury Bakes & Sujata Mastani Confections (Sujata, Bedekar, Kata Kirr, Chitale, Kayani, Vaishali, Goodluck, Vohuman)', xp: 5300 }
         ]
       };
     }
@@ -250,7 +266,7 @@
         const saved = localStorage.getItem(this.storageKey);
         if (saved) {
           const parsed = JSON.parse(saved);
-          if (parsed.version && parsed.version >= 5 && parsed.level >= 8) {
+          if (parsed.version && parsed.version >= 6 && parsed.level >= 9) {
             return { ...this.defaultGenome(), ...parsed };
           }
         }

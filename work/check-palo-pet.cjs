@@ -207,12 +207,12 @@ const puneCount = sandbox.allMetroVenues.filter(v => v.city === 'Pune').length;
 const ahmedabadCount = sandbox.ahmedabadCatalog.length;
 const vadodaraCount = sandbox.vadodaraCatalog.length;
 
-assert.ok(mumbaiCount >= 50, `Must have at least 50 verified venues in Mumbai, found ${mumbaiCount}`);
-assert.ok(delhiCount >= 50, `Must have at least 50 verified venues in Delhi NCR, found ${delhiCount}`);
-assert.ok(puneCount >= 50, `Must have at least 50 verified venues in Pune, found ${puneCount}`);
-assert.ok(ahmedabadCount >= 75, `Must have at least 75 verified venues in Ahmedabad, found ${ahmedabadCount}`);
-assert.ok(vadodaraCount >= 70, `Must have at least 70 verified venues in Vadodara, found ${vadodaraCount}`);
-assert.ok(sandbox.allMetroVenues.length >= 230, `Must have 230+ metro venues total, found ${sandbox.allMetroVenues.length}`);
+assert.ok(mumbaiCount >= 75, `Must have at least 75 verified venues in Mumbai, found ${mumbaiCount}`);
+assert.ok(delhiCount >= 75, `Must have at least 75 verified venues in Delhi NCR, found ${delhiCount}`);
+assert.ok(puneCount >= 75, `Must have at least 75 verified venues in Pune, found ${puneCount}`);
+assert.ok(ahmedabadCount >= 90, `Must have at least 90 verified venues in Ahmedabad, found ${ahmedabadCount}`);
+assert.ok(vadodaraCount >= 85, `Must have at least 85 verified venues in Vadodara, found ${vadodaraCount}`);
+assert.ok(sandbox.allMetroVenues.length >= 370, `Must have 370+ metro venues total, found ${sandbox.allMetroVenues.length}`);
 
 console.log('PASS: Palo animated vector mascot anatomy');
 console.log('PASS: Non-blocking attached speech bubble architecture');

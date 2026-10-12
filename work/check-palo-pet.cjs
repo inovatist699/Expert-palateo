@@ -29,12 +29,24 @@ assert.ok(companionJs.includes('analyzeVenueReviews'), 'Must implement deep revi
 assert.ok(companionJs.includes('searchVenuesByReviewInsights'), 'Must search verified diner review quotes');
 assert.ok(companionJs.includes('playCuteSound'), 'Must implement procedural Web Audio cute chirps');
 assert.ok(companionJs.includes('pitch = 1.56') || companionJs.includes('pitch = 1.'), 'Must tune cute pitched voice synthesis');
+assert.ok(companionJs.includes('EMOTION_VOICE_PROFILES'), 'Must define EMOTION_VOICE_PROFILES');
+assert.ok(companionJs.includes('detectEmotion'), 'Must implement detectEmotion engine');
+assert.ok(companionJs.includes("type === 'joy'"), 'Must implement procedural joy arpeggio sound');
+assert.ok(companionJs.includes("type === 'curious'"), 'Must implement procedural curious slide chirp');
+assert.ok(companionJs.includes("type === 'warm'"), 'Must implement procedural warm harmonic chime');
+assert.ok(companionJs.includes("type === 'playful'"), 'Must implement procedural playful syncopated chirp');
+assert.ok(companionJs.includes("type === 'gentle'"), 'Must implement procedural gentle descending chime');
 
 // 2. CSS Animation & Mobile Ergonomics Audit
 assert.ok(interactiveCss.includes('paloFloat'), 'Must include floating breathing animation');
 assert.ok(interactiveCss.includes('paloBlink'), 'Must include eye blinking animation');
 assert.ok(interactiveCss.includes('paloTalkBob'), 'Must include speaking animation');
 assert.ok(interactiveCss.includes('paloJoyJump'), 'Must include celebration delight jump');
+assert.ok(interactiveCss.includes('is-joyful'), 'Must include is-joyful animation state');
+assert.ok(interactiveCss.includes('is-curious'), 'Must include is-curious animation state');
+assert.ok(interactiveCss.includes('is-warm'), 'Must include is-warm animation state');
+assert.ok(interactiveCss.includes('is-playful'), 'Must include is-playful animation state');
+assert.ok(interactiveCss.includes('is-gentle'), 'Must include is-gentle animation state');
 assert.ok(interactiveCss.includes('paloReviewCard'), 'Must style verified review citation card');
 assert.ok(interactiveCss.includes('paloBrainDrawer'), 'Must style ML taste genome drawer');
 assert.ok(interactiveCss.includes('@media(prefers-reduced-motion:reduce)'), 'Must respect vestibular accessibility');
@@ -243,6 +255,39 @@ assert.ok(companionJs.includes('hindiVoice'), 'Must prioritize authentic native 
 assert.ok(companionJs.includes('indianEnVoice') || companionJs.includes('en-IN'), 'Must prioritize Indian English voice for authentic accent');
 assert.ok(companionJs.includes('Hindi Accent'), 'Must indicate Indian Hindi accent in pet persona');
 
+// 9. Verify Emotional Voice Profiles & Tone Modulation
+const engine = sandbox.window.paloEmotionEngine;
+assert.ok(engine, 'Must export paloEmotionEngine on window');
+assert.ok(engine.EMOTION_VOICE_PROFILES.joy, 'Must have joy profile');
+assert.ok(engine.EMOTION_VOICE_PROFILES.curious, 'Must have curious profile');
+assert.ok(engine.EMOTION_VOICE_PROFILES.warm, 'Must have warm profile');
+assert.ok(engine.EMOTION_VOICE_PROFILES.playful, 'Must have playful profile');
+assert.ok(engine.EMOTION_VOICE_PROFILES.gentle, 'Must have gentle profile');
+assert.equal(engine.detectEmotion('kuch meetha ho jaye mast dessert'), 'warm');
+assert.equal(engine.detectEmotion('chatpata teekha tadka mirchi'), 'playful');
+assert.equal(engine.detectEmotion('searching web for trending dishes', { isWebSearch: true }), 'curious');
+assert.equal(engine.detectEmotion('waah waah bawaal ek number fit 99%'), 'joy');
+assert.equal(engine.detectEmotion('not for me avoid pass please'), 'gentle');
+
+// Verify speech utterance modulation
+let lastSpokenUtterance = null;
+sandbox.window.speechSynthesis.speak = u => { lastSpokenUtterance = u; };
+engine.speakCute('Wah mazaa aa gaya!', 'joy');
+assert.ok(lastSpokenUtterance, 'Must create speech utterance');
+assert.equal(lastSpokenUtterance.pitch, 1.62, 'Must apply joy pitch 1.62');
+assert.equal(lastSpokenUtterance.rate, 1.08, 'Must apply joy rate 1.08');
+
+engine.speakCute('Koi baat nahi ji!', 'gentle');
+assert.equal(lastSpokenUtterance.pitch, 1.34, 'Must apply gentle pitch 1.34');
+assert.equal(lastSpokenUtterance.rate, 0.92, 'Must apply gentle rate 0.92');
+
+// Verify procedural sound triggers
+engine.playCuteSound('joy');
+engine.playCuteSound('curious');
+engine.playCuteSound('warm');
+engine.playCuteSound('playful');
+engine.playCuteSound('gentle');
+
 console.log('PASS: Palo animated vector mascot anatomy');
 console.log('PASS: Non-blocking attached speech bubble architecture');
 console.log('PASS: Cute voice synthesis & procedural Web Audio chirps');
@@ -251,5 +296,6 @@ console.log('PASS: Deep access to verified restaurant diner review insights');
 console.log('PASS: Hindi & Hinglish dictionary and conversational intelligence');
 console.log('PASS: Web search access & online reinforcement learning engine');
 console.log('PASS: Authentic Indian Hindi voice accent and vocal cadence');
+console.log('PASS: Emotional voice profiles and dynamic vocal modulation');
 console.log('PASS: Comprehensive restaurant coverage across all 13 listed cities');
 console.log('All Palo checks passed successfully.\n');

@@ -724,8 +724,207 @@
         gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
         osc.start(now);
         osc.stop(now + 0.15);
+      } else if (type === 'joy') {
+        // Joyful multi-tone sparkling ascending arpeggio with shimmer (A5, C#6, E6, A6)
+        const notes = [880, 1108.7, 1318.5, 1760];
+        notes.forEach((freq, idx) => {
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          o.type = 'triangle';
+          const t = now + idx * 0.045;
+          o.frequency.setValueAtTime(freq, t);
+          o.frequency.exponentialRampToValueAtTime(freq * 1.05, t + 0.06);
+          g.gain.setValueAtTime(0.08, t);
+          g.gain.exponentialRampToValueAtTime(0.001, t + 0.12);
+          o.connect(g);
+          g.connect(ctx.destination);
+          o.start(t);
+          o.stop(t + 0.12);
+        });
+      } else if (type === 'curious') {
+        // Inquisitive upward pitch slide chirps
+        const o1 = ctx.createOscillator();
+        const g1 = ctx.createGain();
+        o1.type = 'sine';
+        o1.frequency.setValueAtTime(520, now);
+        o1.frequency.exponentialRampToValueAtTime(780, now + 0.07);
+        g1.gain.setValueAtTime(0.07, now);
+        g1.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
+        o1.connect(g1);
+        g1.connect(ctx.destination);
+        o1.start(now);
+        o1.stop(now + 0.09);
+
+        const o2 = ctx.createOscillator();
+        const g2 = ctx.createGain();
+        o2.type = 'sine';
+        o2.frequency.setValueAtTime(760, now + 0.095);
+        o2.frequency.exponentialRampToValueAtTime(1180, now + 0.18);
+        g2.gain.setValueAtTime(0.08, now + 0.095);
+        g2.gain.exponentialRampToValueAtTime(0.001, now + 0.21);
+        o2.connect(g2);
+        g2.connect(ctx.destination);
+        o2.start(now + 0.095);
+        o2.stop(now + 0.21);
+      } else if (type === 'warm') {
+        // Soothing warm harmonic chord (C5 + E5 soft bell)
+        [523.25, 659.25].forEach(freq => {
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          o.type = 'sine';
+          o.frequency.setValueAtTime(freq, now);
+          o.frequency.exponentialRampToValueAtTime(freq * 0.99, now + 0.24);
+          g.gain.setValueAtTime(0.06, now);
+          g.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+          o.connect(g);
+          g.connect(ctx.destination);
+          o.start(now);
+          o.stop(now + 0.25);
+        });
+      } else if (type === 'playful') {
+        // Fun staccato bouncy syncopated chirps
+        const pNotes = [720, 940, 680, 1100];
+        pNotes.forEach((freq, idx) => {
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          o.type = 'triangle';
+          const t = now + idx * 0.04;
+          o.frequency.setValueAtTime(freq, t);
+          g.gain.setValueAtTime(0.07, t);
+          g.gain.exponentialRampToValueAtTime(0.001, t + 0.06);
+          o.connect(g);
+          g.connect(ctx.destination);
+          o.start(t);
+          o.stop(t + 0.06);
+        });
+      } else if (type === 'gentle') {
+        // Soft calming descending bell (G4 -> F4 soft sine)
+        const o = ctx.createOscillator();
+        const g = ctx.createGain();
+        o.type = 'sine';
+        o.frequency.setValueAtTime(440, now);
+        o.frequency.exponentialRampToValueAtTime(392, now + 0.22);
+        g.gain.setValueAtTime(0.06, now);
+        g.gain.exponentialRampToValueAtTime(0.001, now + 0.24);
+        o.connect(g);
+        g.connect(ctx.destination);
+        o.start(now);
+        o.stop(now + 0.24);
       }
     } catch (e) {}
+  }
+
+  // Emotional Voice Profiles & Tone Modulation
+  const EMOTION_VOICE_PROFILES = {
+    joy: {
+      pitch: 1.62,
+      rate: 1.08,
+      sound: 'joy',
+      label: 'Excited! 🌟',
+      petState: 'is-joyful',
+      intros: [
+        'Arrey waah waah! ',
+        'Ohooo kya baat hai! ',
+        'Maza aa gaya! ',
+        'Wah bhai wah! '
+      ]
+    },
+    curious: {
+      pitch: 1.46,
+      rate: 0.98,
+      sound: 'curious',
+      label: 'Curious 🧐',
+      petState: 'is-curious',
+      intros: [
+        'Achaaa? Suno na! ',
+        'Arrey sach me? Dekho na! ',
+        'Kamaal ki baat hai! '
+      ]
+    },
+    warm: {
+      pitch: 1.38,
+      rate: 0.95,
+      sound: 'warm',
+      label: 'Loving 🥰',
+      petState: 'is-warm',
+      intros: [
+        'Aahaa! Dil khush ho gaya! ',
+        'Wah ji wah, ekdum sukoon bhara swad! ',
+        'Kitna pyara swad hai! '
+      ]
+    },
+    playful: {
+      pitch: 1.54,
+      rate: 1.05,
+      sound: 'playful',
+      label: 'Teekha & Fun! 🌶️',
+      petState: 'is-playful',
+      intros: [
+        'Oho boss! Sambhal ke! ',
+        'Scene ekdum set hai! ',
+        'Bawaal tadka lagega boss! '
+      ]
+    },
+    gentle: {
+      pitch: 1.34,
+      rate: 0.92,
+      sound: 'gentle',
+      label: 'Caring 🤗',
+      petState: 'is-gentle',
+      intros: [
+        'Koi baat nahi ji! ',
+        'Bilkul fikar mat karo! ',
+        'Haanji, maine note kar liya. '
+      ]
+    },
+    friendly: {
+      pitch: 1.48,
+      rate: 1.02,
+      sound: 'blip',
+      label: 'Happy 😊',
+      petState: 'is-speaking',
+      intros: [
+        'Arrey wah! ',
+        'Namaste ji! '
+      ]
+    }
+  };
+
+  function detectEmotion(text, context = {}) {
+    if (context.emotion && EMOTION_VOICE_PROFILES[context.emotion]) {
+      return context.emotion;
+    }
+    const str = String(text || '').toLowerCase();
+
+    // Dislike, pass, skip, comfort reassurance
+    if (context.action === 'dislike' ||
+        /^(not for me|pass|avoid|skip|hate|dislike|nahi pasand|bura lagta|koi baat nahi|fikar mat)/i.test(str) ||
+        /(koi baat nahi|fikar mat|theek hai.*noted|avoid karte)/i.test(str)) {
+      return 'gentle';
+    }
+
+    // Web search / learning / discovery
+    if (context.isWebSearch || /(web search|learned from web|seekh liya|naya swad|online foodie|trending food|khoja)/i.test(str)) {
+      return 'curious';
+    }
+
+    // Joy / celebratory / high match fit / love / biryani / iconic celebration
+    if (context.action === 'like' ||
+        /(waah waah|mazaa|lajawaab|ek number|fit 9|fida|mast biryani|dil se tareef|loved|leveled up|level \d+)/i.test(str)) {
+      return 'joy';
+    }
+
+    // Spicy / party / night club / street hangout / teekha
+    if (/(chatpata|teekha|tikha|tadka|mirchi|spicy|party club|nightclub|party|bawaal|jhakaas|scene|adda|gang|dosto ke sath)/i.test(str)) {
+      return 'playful';
+    }
+
+    // Sweet / desserts / chai / tea / thali / sukoon / date / comfort
+    if (/(kuch meetha|meetha|mithai|dessert|cheesecake|pastry|chai|kadak chai|filter coffee|sukoon|date night|romantic|thali|desi thali|ghar jaisa)/i.test(str)) {
+      return 'warm';
+    }
+
+    return 'friendly';
   }
 
   let activeUtterance = null;
@@ -737,27 +936,40 @@
   }
 
   // Format speech with cheerful Indian Hindi accent conversational markers & intonation
-  function toIndianHindiAccentSpoken(text) {
+  function toIndianHindiAccentSpoken(text, emotion = 'friendly') {
     if (!text) return '';
     let spoken = String(text);
-    if (!/(arrey|arre|wah|bhai|haanji|dekho|bawaal|mast|jhakaas|lajawaab|swad|swaad|zaika|chahiye|khana)/i.test(spoken)) {
+    const profile = EMOTION_VOICE_PROFILES[emotion] || EMOTION_VOICE_PROFILES.friendly;
+
+    const hasIntro = /(arrey|arre|wah|bhai|haanji|dekho|bawaal|mast|jhakaas|lajawaab|swad|swaad|zaika|chahiye|khana|aahaa|oho|achaa|acha|koi baat|bilkul)/i.test(spoken);
+
+    if (!hasIntro) {
       if (/^Here are my top picks/i.test(spoken)) {
         spoken = spoken.replace(/^Here are my top picks/i, 'Arrey wah! Dekho na, ye rahe mere top recommendations');
       } else if (/^Found (\d+) spots/i.test(spoken)) {
         spoken = spoken.replace(/^Found (\d+) spots/i, 'Arrey suno! $1 zabardast spots mile hain');
       } else if (/^I learned/i.test(spoken)) {
         spoken = 'Wah bhai wah! ' + spoken;
-      } else if (!/^(arrey|namaste|wah)/i.test(spoken)) {
-        spoken = 'Arrey wah! ' + spoken;
+      } else if (/^Voice replies enabled/i.test(spoken)) {
+        spoken = 'Arrey waah! Voice replies on ho gaye hain. Ab main apni cute awaaz me padh kar sunaunga!';
+      } else {
+        const intro = profile.intros[0] || 'Arrey wah! ';
+        spoken = intro + spoken;
       }
     }
     return spoken;
   }
 
-  function speakCute(text) {
+  function speakCute(text, emotion = 'auto') {
     stopSpeaking();
     if (!voiceEnabled || !window.speechSynthesis) return;
-    const spokenText = toIndianHindiAccentSpoken(text);
+
+    const resolvedEmotion = emotion === 'auto'
+      ? detectEmotion(text)
+      : (EMOTION_VOICE_PROFILES[emotion] ? emotion : 'friendly');
+    const profile = EMOTION_VOICE_PROFILES[resolvedEmotion] || EMOTION_VOICE_PROFILES.friendly;
+
+    const spokenText = toIndianHindiAccentSpoken(text, resolvedEmotion);
     const speech = new SpeechSynthesisUtterance(spokenText);
     activeUtterance = speech;
 
@@ -773,16 +985,18 @@
 
     const indianVoice = hindiVoice || indianEnVoice || cuteFallback;
     if (indianVoice) speech.voice = indianVoice;
-    const isHindiUtterance = /(hai|kahan|batao|kuch|swad|mast|teekha|meetha|khana|pasand|bhai|arrey|dekho|zaika|khao|chahiye|badhiya|waah)/i.test(spokenText);
+    const isHindiUtterance = /(hai|kahan|batao|kuch|swad|mast|teekha|meetha|khana|pasand|bhai|arrey|dekho|zaika|khao|chahiye|badhiya|waah|aahaa|oho|acha)/i.test(spokenText);
     speech.lang = indianVoice?.lang || (isHindiUtterance ? 'hi-IN' : 'en-IN');
-    speech.rate = 1.03; // Melodic Indian conversational cadence
-    speech.pitch = 1.48; // Cute, enthusiastic Indian mascot pitch
+
+    // Emotion-modulated rate and pitch!
+    speech.rate = profile.rate || 1.02; // Emotional cadence
+    speech.pitch = 1.0 * (profile.pitch || 1.48); // Cute mascot pitch = 1.34 to 1.62 tuned to emotion
 
     speech.onstart = () => {
       if (activeUtterance !== speech) return;
-      setPetState('is-speaking');
-      setPetMood('Talking 🎵');
-      playCuteSound('blip');
+      setPetState(profile.petState || 'is-speaking');
+      setPetMood(profile.label || 'Talking 🎵');
+      playCuteSound(profile.sound || 'blip');
     };
     speech.onend = () => {
       if (activeUtterance === speech) {
@@ -797,6 +1011,15 @@
 
     window.speechSynthesis.speak(speech);
   }
+
+  // Expose emotion voice engine for testing and external controllers
+  window.paloEmotionEngine = {
+    EMOTION_VOICE_PROFILES,
+    detectEmotion,
+    speakCute,
+    playCuteSound,
+    toIndianHindiAccentSpoken
+  };
 
   // --------------------------------------------------------------------------
   // 4.5 PALO WEB SEARCH ENGINE (ONLINE CULINARY KNOWLEDGE & LIVE LEARNING)
@@ -1026,13 +1249,19 @@
   function setPetState(stateClass) {
     const creature = document.getElementById('paloCreature');
     if (!creature) return;
-    creature.classList.remove('is-idle', 'is-speaking', 'is-learning', 'is-listening', 'is-thinking', 'is-delighted');
+    creature.classList.remove(
+      'is-idle', 'is-speaking', 'is-learning', 'is-listening', 'is-thinking', 'is-delighted',
+      'is-joyful', 'is-curious', 'is-warm', 'is-playful', 'is-gentle'
+    );
     if (stateClass) creature.classList.add(stateClass);
+    if (stateClass && stateClass !== 'is-idle' && stateClass !== 'is-listening' && stateClass !== 'is-thinking') {
+      creature.classList.add('is-speaking');
+    }
   }
 
   function triggerDelightAnimation() {
-    setPetState('is-delighted');
-    playCuteSound('happy');
+    setPetState('is-joyful');
+    playCuteSound('joy');
     if (sparkles) {
       sparkles.innerHTML = '<span class="sSpark s1">✨</span><span class="sSpark s2">💖</span><span class="sSpark s3">⭐</span><span class="sSpark s4">✨</span>';
       setTimeout(() => { sparkles.innerHTML = ''; }, 1200);
@@ -1094,7 +1323,7 @@
     const reply = `Arrey waah! Maine web par search kiya aur “${q}” ke baare me naya swad seekh liya! Online foodie community bolti hai: ${data.summary}`;
     messageText.textContent = reply;
     statusText.textContent = `Palo learned from web · Level ${paloML.genome.level} (${paloML.genome.xp} XP)`;
-    speakCute(reply);
+    speakCute(reply, 'curious');
 
     const related = searchVenuesByReviewInsights(q, allVenues).slice(0, 3);
     if (related.length && related[0].totalScore > 20) {
@@ -1139,7 +1368,7 @@
       const msg = `Sign in and complete your taste quiz! That way I can connect your preferences with the best reviewed spots in ${city}.`;
       messageText.textContent = msg;
       statusText.textContent = 'Please finish onboarding first.';
-      speakCute(msg);
+      speakCute(msg, 'friendly');
       return;
     }
 
@@ -1188,7 +1417,7 @@
           : (`${sentiment === 'love' ? 'Ooh, yum!' : 'Got it!'} I remembered that you ${sentiment === 'love' ? 'love' : 'prefer to skip'} ${match.name}. My recommendations in ${city} have evolved!`);
         messageText.textContent = reply;
         statusText.textContent = `Palo learned: ${match.name} (${sentiment}) · Level ${paloML.genome.level}`;
-        speakCute(reply);
+        speakCute(reply, sentiment === 'love' ? 'joy' : 'gentle');
         input.value = '';
         renderBrainDrawer();
         brainDrawer.style.display = 'block';
@@ -1487,6 +1716,13 @@
         triggerLearningAnimation(res?.summary);
         feedbackBtn.classList.toggle('active');
         statusText.textContent = `Trained Palo on ${venue.name} · Level ${paloML.genome.level}`;
+        if (type === 'like') {
+          playCuteSound('joy');
+          setPetMood('Loved it! 💖');
+        } else {
+          playCuteSound('gentle');
+          setPetMood('Noted! 🍃');
+        }
       }
     }
   });

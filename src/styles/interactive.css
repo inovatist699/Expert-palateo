@@ -197,6 +197,11 @@ html{scrollbar-color:#519cab #c3e7f1}
 .paloCreature.is-listening .palo{animation:paloListenPerk .6s ease-in-out infinite alternate}
 .paloCreature.is-thinking .palo{animation:paloThinkTilt .9s ease-in-out infinite alternate}
 .paloCreature.is-delighted .palo,.paloCreature.is-learning .palo{animation:paloJoyJump .65s ease-in-out 2}
+.paloCreature.is-joyful .palo{animation:paloJoyBounce .55s ease-in-out infinite alternate}
+.paloCreature.is-curious .palo{animation:paloCuriousTilt .7s ease-in-out infinite alternate}
+.paloCreature.is-warm .palo{animation:paloWarmBob .8s ease-in-out infinite alternate;filter:drop-shadow(0 0 8px rgba(244,63,94,0.35))}
+.paloCreature.is-playful .palo{animation:paloPlayfulWobble .45s ease-in-out infinite alternate}
+.paloCreature.is-gentle .palo{animation:paloGentleSway .9s ease-in-out infinite alternate}
 
 /* Voice Soundwave Halo */
 .paloVoiceHalo{position:absolute;inset:-8px;border-radius:50%;border:2px solid #ffc64f;opacity:0;pointer-events:none;transform:scale(.85)}
@@ -328,6 +333,11 @@ html{scrollbar-color:#519cab #c3e7f1}
 @keyframes paloListenPerk{from{transform:translateY(0) rotate(-4deg)}to{transform:translateY(-4px) rotate(5deg)}}
 @keyframes paloThinkTilt{from{transform:rotate(-6deg)}to{transform:rotate(8deg)}}
 @keyframes paloJoyJump{0%,100%{transform:translateY(0) scale(1)}40%{transform:translateY(-14px) scale(1.06) rotate(-5deg)}70%{transform:translateY(-4px) scale(.97) rotate(4deg)}}
+@keyframes paloJoyBounce{0%,100%{transform:translateY(0) scale(1)}35%{transform:translateY(-10px) scale(1.06) rotate(-4deg)}70%{transform:translateY(-2px) scale(.97) rotate(3deg)}}
+@keyframes paloCuriousTilt{0%,100%{transform:rotate(5deg) scale(1.03)}50%{transform:rotate(10deg) scale(1.05) translateY(-3px)}}
+@keyframes paloWarmBob{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-4px) scale(1.02)}}
+@keyframes paloPlayfulWobble{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg) scale(1.04)}75%{transform:rotate(6deg) scale(1.04)}}
+@keyframes paloGentleSway{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-2px) rotate(2deg)}}
 @keyframes paloHaloPulse{0%{opacity:.75;transform:scale(.85)}100%{opacity:0;transform:scale(1.4)}}
 @keyframes paloHello{0%,100%{transform:rotate(0)}30%{transform:translateY(-8px) rotate(-10deg) scale(1.04)}65%{transform:rotate(8deg) scale(1.02)}}
 @keyframes paloSparkleFly{0%{opacity:0;transform:scale(.4) translateY(4px)}50%{opacity:1;transform:scale(1.2) translateY(-8px)}100%{opacity:0;transform:scale(1) translateY(-18px)}}

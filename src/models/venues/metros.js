@@ -16667,5 +16667,1930 @@ const allMetroVenues=[
       "uncompromising hygiene with glove service that attracts crowds from across the tri-city"
     ],
     "why": "Sector 23's legendary chaat counter famous for five-flavor-water Golgappas and creamy Dahi Bhallas."
+  },
+  {
+    "id": "mum-mithibai-anand-dosa",
+    "name": "Anand Stall (Mithibai Dosa & Fast Food)",
+    "area": "Vile Parle West / Opp. Mithibai",
+    "city": "Mumbai",
+    "latitude": 19.1028,
+    "longitude": 72.8368,
+    "c": [
+      "Street Food",
+      "Fast Food",
+      "South Indian"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 18200,
+    "t": [
+      "opp mithibai college street",
+      "jini dosa in butter",
+      "pasta dosa",
+      "cheese grilled sandwich",
+      "college khau gali"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🥞",
+    "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Anand+Stall+Mithibai+Vile+Parle+Mumbai",
+    "review_insights": [
+      "the legendary street counter opposite mithibai college that created modern mumbai fusion dosas",
+      "their cheese-burst jini dosa drenched in amul butter and spring onions is pure street genius",
+      "always buzzing with college students, celebrities, and street food pilgrims"
+    ],
+    "why": "Mumbai's ultimate college food institution opposite Mithibai celebrated for buttery Jini dosas and loaded grilled sandwiches."
+  },
+  {
+    "id": "mum-ayubs",
+    "name": "Ayub's",
+    "area": "Kala Ghoda / Fort",
+    "city": "Mumbai",
+    "latitude": 18.9288,
+    "longitude": 72.8322,
+    "c": [
+      "Street Food",
+      "Kebabs",
+      "Fast Food"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 11400,
+    "t": [
+      "late night rolls",
+      "roasted chicken tikka roll",
+      "paneer bhurji roll",
+      "kala ghoda midnight car dining"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🌯",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ayubs+Kala+Ghoda+Mumbai",
+    "review_insights": [
+      "the favored late-night roll counter in South Mumbai where cars pull up for charcoal-grilled rolls",
+      "tender chicken seekh roll with spicy green chutney and crispy roomali roti",
+      "unbeatable midnight snack after clubbing in south bombay"
+    ],
+    "why": "Kala Ghoda's midnight street roll fixture famed for charcoal-grilled kebabs and car-side service."
+  },
+  {
+    "id": "mum-khadoos-burger",
+    "name": "Khadoos Burgers & Fast Food",
+    "area": "Bandra West / Hill Road",
+    "city": "Mumbai",
+    "latitude": 19.0568,
+    "longitude": 72.8315,
+    "c": [
+      "Burgers",
+      "Fast Food",
+      "Street Food"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 6800,
+    "t": [
+      "bandra student burgers",
+      "cheese blast chicken burger",
+      "peri peri fries",
+      "youth budget hangout"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🍔",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Khadoos+Burgers+Bandra+Mumbai",
+    "review_insights": [
+      "bandra's favorite street-style burger counter serving enormous patties overflowing with melted cheese",
+      "spicy peri peri fries and milkshakes at unbeatable student rates",
+      "bustling late-night crowd enjoying street food on hill road"
+    ],
+    "why": "Cult Bandra street burger joint known for monster cheese burgers and peri peri fries."
+  },
+  {
+    "id": "mum-churchgate-khau-gali",
+    "name": "Stadium Street Bites & Churchgate Khau Gali",
+    "area": "Churchgate",
+    "city": "Mumbai",
+    "latitude": 18.9325,
+    "longitude": 72.8275,
+    "c": [
+      "Street Food",
+      "Fast Food",
+      "Sandwiches"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 8900,
+    "t": [
+      "churchgate station lane",
+      "bombay masala toast",
+      "cheese pav bhaji",
+      "cutting chai",
+      "kc hr college crowd"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "casual"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Churchgate+Khau+Gali+Mumbai",
+    "review_insights": [
+      "bustling food lane near churchgate station feeding thousands of college students daily",
+      "crispy triangular toasted bombay sandwiches loaded with beetroot, potato, and grated cheese",
+      "lightning-fast service and authentic street energy"
+    ],
+    "why": "Legendary Churchgate street food lane celebrated for classic Bombay toasted sandwiches and fast bites."
+  },
+  {
+    "id": "mum-zayka-rolls",
+    "name": "Zayka Kathi Rolls & Fast Food",
+    "area": "Andheri West / Lokhandwala",
+    "city": "Mumbai",
+    "latitude": 19.1415,
+    "longitude": 72.8285,
+    "c": [
+      "Street Food",
+      "Fast Food",
+      "Kathi Roll"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 7300,
+    "t": [
+      "lokhandwala midnight rolls",
+      "double egg chicken roll",
+      "paneer tikka roll",
+      "andheri film crowd"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🌯",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Zayka+Kathi+Rolls+Lokhandwala+Mumbai",
+    "review_insights": [
+      "lokhandwala's favorite late-night roll counter frequented by aspiring actors and night owls",
+      "flaky layered parathas wrapped with tender spiced chicken tikka and mint sauce",
+      "open till the early morning hours with swift takeaway service"
+    ],
+    "why": "Lokhandwala late-night fast-food counter famous for flaky Kathi rolls and midnight street buzz."
+  },
+  {
+    "id": "mum-dragonfly-club",
+    "name": "Dragonfly Experience",
+    "area": "The Orb / Sahar Airport / Andheri East",
+    "city": "Mumbai",
+    "latitude": 19.1015,
+    "longitude": 72.8715,
+    "c": [
+      "Nightclub",
+      "Pan-Asian",
+      "Cocktails"
+    ],
+    "p": "2000_plus",
+    "rating": 4.8,
+    "review_count": 14200,
+    "t": [
+      "party club",
+      "mega nightclub",
+      "international edm djs",
+      "dragonfly neon decor",
+      "vip tables",
+      "celebrity nightlife"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🪩",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Dragonfly+Experience+Mumbai",
+    "review_insights": [
+      "mumbai's premier high-energy superclub hosting top international djs with stadium-grade sound",
+      "dramatic dragonfly neon art installations, glowing bars, and energetic dance crowds",
+      "exquisite pan-asian dim sum and signature craft cocktails"
+    ],
+    "why": "Mumbai's premier high-energy superclub at The Orb hosting international EDM DJs, celebrity crowds, and massive sound."
+  },
+  {
+    "id": "mum-toy-room",
+    "name": "Toy Room Mumbai",
+    "area": "Grand Hyatt / Santacruz East",
+    "city": "Mumbai",
+    "latitude": 19.0785,
+    "longitude": 72.8525,
+    "c": [
+      "Nightclub",
+      "Party Club",
+      "Cocktails"
+    ],
+    "p": "2000_plus",
+    "rating": 4.8,
+    "review_count": 9800,
+    "t": [
+      "party club",
+      "frank the bear mascot",
+      "hip hop club",
+      "grand hyatt nightlife",
+      "vip bottle service",
+      "celebrity party"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🧸",
+    "photo": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Toy+Room+Grand+Hyatt+Mumbai",
+    "review_insights": [
+      "the famous global clubbing brand with frank the bear dancing among partygoers",
+      "pulsating hip-hop, afrobeat, and commercial dance nights with glamorous crowds",
+      "luxurious grand hyatt setting with elite bottle service"
+    ],
+    "why": "Global celebrity party club at Grand Hyatt famous for mascot Frank the Bear, hip-hop nights, and VIP party culture."
+  },
+  {
+    "id": "mum-tryst-club",
+    "name": "Tryst Nightclub",
+    "area": "High Street Phoenix / Lower Parel",
+    "city": "Mumbai",
+    "latitude": 18.9958,
+    "longitude": 72.8255,
+    "c": [
+      "Nightclub",
+      "Party Club",
+      "Cocktails"
+    ],
+    "p": "2000_plus",
+    "rating": 4.7,
+    "review_count": 11200,
+    "t": [
+      "party club",
+      "futuristic vip dens",
+      "lower parel clubbing",
+      "led laser matrix",
+      "high energy dance floor"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "⚡",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tryst+Nightclub+Lower+Parel+Mumbai",
+    "review_insights": [
+      "futuristic nightclub with sound-responsive led lighting dens and private party pods",
+      "the beating heart of lower parel party culture packed every weekend till 3am",
+      "high-voltage commercial and bollywood dance nights that never stop"
+    ],
+    "why": "Futuristic Lower Parel nightclub icon featuring responsive LED pods, high-voltage dance floors, and elite party energy."
+  },
+  {
+    "id": "mum-matahaari-club",
+    "name": "Matahaari Nightclub",
+    "area": "Atria Mall / Worli",
+    "city": "Mumbai",
+    "latitude": 18.9895,
+    "longitude": 72.8155,
+    "c": [
+      "Nightclub",
+      "Cocktails",
+      "Luxury Lounge"
+    ],
+    "p": "2000_plus",
+    "rating": 4.7,
+    "review_count": 8400,
+    "t": [
+      "party club",
+      "opulent vintage decor",
+      "worli nightlife",
+      "secret bookcase entrance",
+      "vip champagne lounge"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "👑",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Matahaari+Nightclub+Worli+Mumbai",
+    "review_insights": [
+      "hidden through a secret bookcase entrance into a magnificent gilded 1920s spy-themed ballroom",
+      "pulsating dance floor with top celebrity djs spinning until the late hours",
+      "lavish craft cocktails and premier champagne service"
+    ],
+    "why": "Gilded vintage Worli nightclub hidden behind a bookcase entrance celebrated for opulent decor and VIP dance nights."
+  },
+  {
+    "id": "mum-xxo-st-regis",
+    "name": "XXO",
+    "area": "The St. Regis Mumbai / Lower Parel",
+    "city": "Mumbai",
+    "latitude": 18.9942,
+    "longitude": 72.8258,
+    "c": [
+      "Nightclub",
+      "Luxury Lounge",
+      "Cocktails"
+    ],
+    "p": "2000_plus",
+    "rating": 4.8,
+    "review_count": 7600,
+    "t": [
+      "party club",
+      "37th floor penthouse club",
+      "skyline views",
+      "st regis luxury",
+      "glamorous nightlife"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🌃",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=XXO+St+Regis+Mumbai",
+    "review_insights": [
+      "mumbai's highest luxury nightclub perched on the 37th and 38th floors of the st. regis",
+      "breathtaking panoramic views of the city skyline through two-story glass windows",
+      "glamorous party crowds, international mixologists, and world-class resident djs"
+    ],
+    "why": "Two-story penthouse party club on the 37th floor of The St. Regis offering soaring skyline views and elite nightlife."
+  },
+  {
+    "id": "mum-lord-of-the-drinks",
+    "name": "Lord of the Drinks",
+    "area": "Kamala Mills / Lower Parel",
+    "city": "Mumbai",
+    "latitude": 18.9982,
+    "longitude": 72.8272,
+    "c": [
+      "Party Lounge",
+      "Bar",
+      "Continental"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.7,
+    "review_count": 15300,
+    "t": [
+      "party club",
+      "longest bar in asia",
+      "kamala mills party hub",
+      "massive dance floor",
+      "weekend commercial party"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🍹",
+    "photo": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Lord+of+the+Drinks+Kamala+Mills+Mumbai",
+    "review_insights": [
+      "colossal party destination featuring what is famously known as the longest bar counter in asia",
+      "huge central dance floor with thumping sound system that fills up every weekend",
+      "delightful cocktails, wood-fired pizzas, and shared party platters"
+    ],
+    "why": "Kamala Mills nightlife powerhouse featuring Asia's longest bar, a massive dance floor, and non-stop weekend party energy."
+  },
+  {
+    "id": "mum-glocal-junction",
+    "name": "Glocal Junction",
+    "area": "Andheri West / Worli",
+    "city": "Mumbai",
+    "latitude": 19.1355,
+    "longitude": 72.8345,
+    "c": [
+      "Party Bar",
+      "Continental",
+      "Fusion"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.7,
+    "review_count": 12900,
+    "t": [
+      "party club",
+      "gastropub turns into club post 10pm",
+      "andheri party hub",
+      "bollywood and commercial nights"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🍻",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Glocal+Junction+Andheri+Mumbai",
+    "review_insights": [
+      "transforms seamlessly from a relaxed diner into an energetic dance club every night after 10pm",
+      "electrifying bollywood and commercial dance nights with packed crowds singing along",
+      "signature boozy cocktails and scrumptious fusion finger bites"
+    ],
+    "why": "Andheri's versatile party institution that transitions every night into a roaring, high-energy dance club."
+  },
+  {
+    "id": "mum-social-carter",
+    "name": "Carter Road Social",
+    "area": "Bandra West / Carter Road Promenade",
+    "city": "Mumbai",
+    "latitude": 19.0685,
+    "longitude": 72.8225,
+    "c": [
+      "Party Bar",
+      "Cafe",
+      "Fusion"
+    ],
+    "p": "500_to_1000",
+    "rating": 4.7,
+    "review_count": 16800,
+    "t": [
+      "party club",
+      "sea facing party bar",
+      "carter road promenade",
+      "weekend dj gigs",
+      "liit long island iced tea"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🌊",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Carter+Road+Social+Mumbai",
+    "review_insights": [
+      "unbeatable sea-facing view of the arabian sea paired with high-voltage weekend dj parties",
+      "iconic oversized LIITs in glass beakers and loaded butter chicken biryani",
+      "high-energy youthful vibe right on the carter road promenade"
+    ],
+    "why": "Bandra's iconic sea-facing Social outpost famed for high-energy weekend DJ sets and signature long drinks."
+  },
+  {
+    "id": "mum-kitty-su",
+    "name": "Kitty Su Mumbai",
+    "area": "The Lalit / Andheri East",
+    "city": "Mumbai",
+    "latitude": 19.1125,
+    "longitude": 72.8685,
+    "c": [
+      "Nightclub",
+      "Electronic Dance",
+      "Cocktails"
+    ],
+    "p": "2000_plus",
+    "rating": 4.7,
+    "review_count": 8900,
+    "t": [
+      "party club",
+      "void acoustics sound",
+      "electronic dance music",
+      "lgbtq inclusive mega club",
+      "the lalit nightlife"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🪩",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kitty+Su+The+Lalit+Mumbai",
+    "review_insights": [
+      "internationally recognized inclusive nightclub equipped with state-of-the-art Void Acoustics",
+      "hosts world-renowned electronic music producers, drag queens, and underground artists",
+      "boundless inclusive dance floor energy celebrating musical freedom"
+    ],
+    "why": "The Lalit's award-winning mega-club equipped with Void Acoustics sound celebrating world-class EDM and nightlife culture."
+  },
+  {
+    "id": "mum-bastian-at-the-top",
+    "name": "Bastian At The Top (Club & Sky Lounge)",
+    "area": "Dadar West / Kohinoor Square",
+    "city": "Mumbai",
+    "latitude": 19.0192,
+    "longitude": 72.8292,
+    "c": [
+      "Nightclub",
+      "Rooftop Party",
+      "Modern Coastal"
+    ],
+    "p": "2000_plus",
+    "rating": 4.8,
+    "review_count": 11200,
+    "t": [
+      "party club",
+      "48th floor rooftop club",
+      "infinity plunge pool",
+      "celebrity hotspot",
+      "spectacular city views"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🥂",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bastian+At+The+Top+Dadar+Mumbai",
+    "review_insights": [
+      "jaw-dropping 48th-floor rooftop club with a rooftop plunge pool and panoramic 360-degree views",
+      "pumping dj beats with celebrities and high-fashion crowds partying into the early morning",
+      "unrivalled glamour and exquisite sushi and seafood offerings"
+    ],
+    "why": "Glamorous 48th-floor rooftop party club in Kohinoor Square boasting a plunge pool and celebrity dance parties."
+  },
+  {
+    "id": "del-tom-uncles-maggi",
+    "name": "Tom Uncle's Maggi Point",
+    "area": "North Campus / Maurice Nagar",
+    "city": "Delhi NCR",
+    "latitude": 28.6912,
+    "longitude": 77.2115,
+    "c": [
+      "Street Food",
+      "Fast Food",
+      "Campus Legend"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 19400,
+    "t": [
+      "du north campus icon since 1978",
+      "cheese butter maggi",
+      "spicy schezwan maggi",
+      "cold coffee",
+      "student adda"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian"
+    ],
+    "emoji": "🍜",
+    "photo": "https://images.unsplash.com/photo-1612927601601-6638404737ce?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tom+Uncles+Maggi+Point+North+Campus+Delhi",
+    "review_insights": [
+      "operating since 1978 as the undisputed heartbeat of delhi university north campus",
+      "over 50 creative preparations of steaming butter and cheese-loaded maggi",
+      "essential nostalgic stop where thousands of student memories were born"
+    ],
+    "why": "North Campus institution operating since 1978 serving 50+ varieties of spiced butter and cheese Maggi."
+  },
+  {
+    "id": "del-qds-restaurant",
+    "name": "QD's Restaurant",
+    "area": "Hudson Lane / GTB Nagar",
+    "city": "Delhi NCR",
+    "latitude": 28.6945,
+    "longitude": 77.2052,
+    "c": [
+      "Fast Food",
+      "Chinese",
+      "North Indian"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 17800,
+    "t": [
+      "birthplace of tandoori momos",
+      "hudson lane student hub",
+      "crispy honey chilli potato",
+      "loaded platters"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🥟",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=QDs+Restaurant+Hudson+Lane+Delhi",
+    "review_insights": [
+      "credited with creating the legendary tandoori momo: charred in clay tandoors with spiced red marinade",
+      "vibrant bustling student cafe in hudson lane always full of laughter and conversation",
+      "unbeatable pocket-friendly portions of chinese and north indian comfort food"
+    ],
+    "why": "Hudson Lane student powerhouse famed as the original creator of Delhi's charred Tandoori Momos."
+  },
+  {
+    "id": "del-byd-cafe",
+    "name": "Big Yellow Door (BYD)",
+    "area": "Hudson Lane / GTB Nagar",
+    "city": "Delhi NCR",
+    "latitude": 28.6952,
+    "longitude": 77.2048,
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Italian"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 16200,
+    "t": [
+      "yellow door cafe",
+      "byd cheese bomb burger",
+      "baked cheese nachos",
+      "kit kat shake",
+      "student queues"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🚪",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Big+Yellow+Door+Hudson+Lane+Delhi",
+    "review_insights": [
+      "quirky crooked yellow door leading into north campus's most beloved student cafe",
+      "the byd cheese bomb burger oozing with cheese and accompanied by crispy fries is iconic",
+      "fabulous thick shakes and comforting baked pasta at student-friendly prices"
+    ],
+    "why": "Beloved Hudson Lane student cafe known for its crooked yellow doorway, cheese bomb burgers, and baked nachos."
+  },
+  {
+    "id": "del-momos-point",
+    "name": "Momos Point",
+    "area": "Kamla Nagar",
+    "city": "Delhi NCR",
+    "latitude": 28.6812,
+    "longitude": 77.2085,
+    "c": [
+      "Tibetan",
+      "Fast Food",
+      "Street Food"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 11200,
+    "t": [
+      "since 1990s kamla nagar",
+      "crispy fried momos",
+      "steamed pork momos",
+      "fiery red chili dip",
+      "student favorite"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "hot",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🥟",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Momos+Point+Kamla+Nagar+Delhi",
+    "review_insights": [
+      "serving student-favorite momos in kamla nagar long before the street food craze took over delhi",
+      "crispy pan-fried and juicy steamed momos paired with their fiery homemade red chili sauce",
+      "bustling no-frills setting with dependable comfort flavors"
+    ],
+    "why": "Kamla Nagar staple serving authentic juicy steamed and pan-fried Tibetan momos since the 1990s."
+  },
+  {
+    "id": "del-sudama-tea",
+    "name": "Sudama Tea Stall & Student Adda",
+    "area": "North Campus / Delhi School of Economics",
+    "city": "Delhi NCR",
+    "latitude": 28.6875,
+    "longitude": 77.2092,
+    "c": [
+      "Street Food",
+      "Tea",
+      "Campus Legend"
+    ],
+    "p": "under_500",
+    "rating": 4.8,
+    "review_count": 14500,
+    "t": [
+      "d-school culthub",
+      "kulhad elaichi chai",
+      "crispy fan and mathri",
+      "late night campus conversations"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sudama+Tea+Stall+North+Campus+Delhi",
+    "review_insights": [
+      "the intellectual midnight gathering point for students, professors, and scholars of d-school and ramjas",
+      "steaming hot cardamon-infused kulhad chai served with crunchy spiced mathris",
+      "electric intellectual camaraderie under the trees that defines university life"
+    ],
+    "why": "Legendary DU North Campus tea adda outside D-School where students gather for fragrant kulhad chai and discussions."
+  },
+  {
+    "id": "del-privee-club",
+    "name": "Priveé Nightclub",
+    "area": "Shangri-La's Eros Hotel / Connaught Place",
+    "city": "Delhi NCR",
+    "latitude": 28.6212,
+    "longitude": 77.2185,
+    "c": [
+      "Nightclub",
+      "Party Club",
+      "Cocktails"
+    ],
+    "p": "2000_plus",
+    "rating": 4.8,
+    "review_count": 13500,
+    "t": [
+      "party club",
+      "mega vip nightclub",
+      "massive led matrix",
+      "international edm headliners",
+      "shangri la nightlife"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🪩",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Privee+Nightclub+Shangri+La+Delhi",
+    "review_insights": [
+      "delhi's premier high-octane luxury nightclub with an awe-inspiring led ceiling and massive sound",
+      "hosts top global electronic djs and bollywood celebrity parties into the morning",
+      "exclusive vip tables with dedicated bottle service and high-glamour nightlife"
+    ],
+    "why": "Delhi's premier luxury mega-club at Shangri-La Eros featuring massive LED staging, top EDM DJs, and VIP nightlife."
+  },
+  {
+    "id": "del-soho-club",
+    "name": "Soho-Delhi",
+    "area": "The Ashok Hotel / Chanakyapuri",
+    "city": "Delhi NCR",
+    "latitude": 28.5885,
+    "longitude": 77.1972,
+    "c": [
+      "Nightclub",
+      "Party Club",
+      "Luxury Lounge"
+    ],
+    "p": "2000_plus",
+    "rating": 4.8,
+    "review_count": 11800,
+    "t": [
+      "party club",
+      "chanakyapuri mega club",
+      "the ashok hotel",
+      "state of the art sound",
+      "celebrity parties"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🍸",
+    "photo": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Soho+Delhi+The+Ashok+Hotel",
+    "review_insights": [
+      "colossal luxury club at the ashok boasting state-of-the-art concert acoustics and visual lasers",
+      "preferred after-party destination for the capital's elite and international touring artists",
+      "pulse-pounding commercial and electronic dance music until sunrise"
+    ],
+    "why": "Super-luxury Chanakyapuri nightclub inside The Ashok Hotel hosting international touring DJs and elite dance parties."
+  },
+  {
+    "id": "del-playboy-club",
+    "name": "Playboy Club New Delhi",
+    "area": "Samrat Hotel / Chanakyapuri",
+    "city": "Delhi NCR",
+    "latitude": 28.5872,
+    "longitude": 77.1985,
+    "c": [
+      "Nightclub",
+      "Party Club",
+      "Fine Dining"
+    ],
+    "p": "2000_plus",
+    "rating": 4.7,
+    "review_count": 8900,
+    "t": [
+      "party club",
+      "high voltage sound",
+      "samrat hotel clubbing",
+      "champagne lounge",
+      "vip bottle service"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🐰",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Playboy+Club+Samrat+Hotel+Delhi",
+    "review_insights": [
+      "high-energy nightlife powerhouse with dramatic high ceilings and custom-engineered sound systems",
+      "glamorous crowds partying on elevated vip stages with premier bottle presentations",
+      "top resident djs spinning a seamless mix of commercial, edm, and club anthems"
+    ],
+    "why": "High-voltage Chanakyapuri nightclub at Samrat Hotel featuring cavernous sound, VIP lounges, and luxury clubbing."
+  },
+  {
+    "id": "del-toy-room",
+    "name": "Toy Room Delhi",
+    "area": "Aloft Hotel / Aerocity",
+    "city": "Delhi NCR",
+    "latitude": 28.5525,
+    "longitude": 77.1215,
+    "c": [
+      "Nightclub",
+      "Party Club",
+      "Cocktails"
+    ],
+    "p": "2000_plus",
+    "rating": 4.8,
+    "review_count": 9400,
+    "t": [
+      "party club",
+      "aerocity party hub",
+      "frank the bear",
+      "hip hop and r&b",
+      "aerocity nightlife"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🧸",
+    "photo": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Toy+Room+Aloft+Aerocity+Delhi",
+    "review_insights": [
+      "aerocity's most buzzing party club known for signature hip-hop beats and mischievous mascot frank",
+      "glamorous young crowd dancing to r&b and commercial chartbusters",
+      "luxurious venue steps away from the international airport"
+    ],
+    "why": "Aerocity's high-energy hip-hop and commercial dance club featuring mascot Frank the Bear and luxury party tables."
+  },
+  {
+    "id": "del-dear-donna",
+    "name": "Dear Donna",
+    "area": "Qutub Institutional Area",
+    "city": "Delhi NCR",
+    "latitude": 28.5385,
+    "longitude": 77.1852,
+    "c": [
+      "Cocktail Bar",
+      "Party Club",
+      "European"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.8,
+    "review_count": 12400,
+    "t": [
+      "party club",
+      "glasshouse cocktail lounge",
+      "courtyard dance party",
+      "weekend dj nights",
+      "south delhi chic"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🍸",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Dear+Donna+Qutub+Institutional+Area+Delhi",
+    "review_insights": [
+      "stunning European glasshouse that shifts into an electric party club on weekend nights",
+      "sensational craft cocktails, lively outdoor courtyard, and pulsating DJ sets",
+      "the reigning hot spot for south delhi's trendy party crowd"
+    ],
+    "why": "South Delhi's stylish glasshouse lounge turning into a high-octane dance club on weekends with craft cocktails."
+  },
+  {
+    "id": "del-diablo",
+    "name": "Diablo",
+    "area": "Mehrauli",
+    "city": "Delhi NCR",
+    "latitude": 28.5245,
+    "longitude": 77.1835,
+    "c": [
+      "Party Lounge",
+      "Mediterranean",
+      "Cocktails"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.7,
+    "review_count": 10800,
+    "t": [
+      "party club",
+      "gothic sculptures",
+      "mehrauli party strip",
+      "high energy dj nights",
+      "gourmet cocktails"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🔥",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Diablo+Mehrauli+Delhi",
+    "review_insights": [
+      "dramatic gothic gargoyle statues, neon lighting, and high-energy party music beneath qutub minar",
+      "exceptional mediterranean shared platters and theater-style molecular cocktails",
+      "electric weekend crowds dancing to afro-house and commercial tracks"
+    ],
+    "why": "Mehrauli's dramatic gothic party lounge celebrated for theatrical cocktails, striking architecture, and weekend DJ sets."
+  },
+  {
+    "id": "del-bo-tai",
+    "name": "Bo-Tai",
+    "area": "Mehrauli",
+    "city": "Delhi NCR",
+    "latitude": 28.5238,
+    "longitude": 77.1848,
+    "c": [
+      "Pan-Asian",
+      "Party Lounge",
+      "Cocktails"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.7,
+    "review_count": 9800,
+    "t": [
+      "party club",
+      "qutub minar rooftop view",
+      "thai cuisine",
+      "cocktail bar",
+      "weekend party vibe"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🍹",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bo+Tai+Mehrauli+Delhi",
+    "review_insights": [
+      "chic open terrace with direct illuminated views of the ancient qutub minar",
+      "pioneering modern thai dishes paired with an internationally curated cocktail menu",
+      "vibrant weekend nightlife with pulsating resident dj beats"
+    ],
+    "why": "High-energy Mehrauli rooftop destination offering modern Thai gastronomy, craft mixology, and illuminated Qutub views."
+  },
+  {
+    "id": "del-kitty-su",
+    "name": "Kitty Su New Delhi",
+    "area": "The Lalit / Barakhamba Road",
+    "city": "Delhi NCR",
+    "latitude": 28.6315,
+    "longitude": 77.2285,
+    "c": [
+      "Nightclub",
+      "Electronic Dance",
+      "Cocktails"
+    ],
+    "p": "2000_plus",
+    "rating": 4.8,
+    "review_count": 14800,
+    "t": [
+      "party club",
+      "award winning mega club",
+      "void acoustics sound",
+      "electronic music sanctuary",
+      "inclusive nightlife"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🪩",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kitty+Su+The+Lalit+New+Delhi",
+    "review_insights": [
+      "frequently ranked in DJ Mag's Top 100 Clubs in the world for its groundbreaking dance culture",
+      "multiple rooms including the main dance floor, salon, and the iconic champagne lounge",
+      "the gold standard of electronic dance music and inclusive party culture in north india"
+    ],
+    "why": "World-renowned multi-room nightclub at The Lalit featuring Void Acoustics sound and global EDM heavyweights."
+  },
+  {
+    "id": "del-summer-house",
+    "name": "Summer House Cafe",
+    "area": "Aurobindo Market / Hauz Khas",
+    "city": "Delhi NCR",
+    "latitude": 28.5442,
+    "longitude": 77.2015,
+    "c": [
+      "Party Bar",
+      "Rooftop Club",
+      "Continental"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.7,
+    "review_count": 16100,
+    "t": [
+      "party club",
+      "rooftop terrace party",
+      "live gig venue",
+      "coldplay surprise gig venue",
+      "aurobindo market"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🎸",
+    "photo": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Summer+House+Cafe+Aurobindo+Market+Delhi",
+    "review_insights": [
+      "legendary open terrace party venue famed as the place where coldplay played a surprise acoustic set",
+      "dynamic mix of live bands, hip-hop nights, and pulsating weekend party dance crowds",
+      "great wood-fired pizzas, cocktails, and electric outdoor vibes"
+    ],
+    "why": "Iconic Aurobindo Market rooftop party house celebrated for live gigs, electric dance terraces, and cultural history."
+  },
+  {
+    "id": "del-cyber-hub-social",
+    "name": "Cyber Hub Social",
+    "area": "DLF Cyber Hub / Gurugram",
+    "city": "Delhi NCR",
+    "latitude": 28.4952,
+    "longitude": 77.0895,
+    "c": [
+      "Party Bar",
+      "Fusion",
+      "Cocktails"
+    ],
+    "p": "500_to_1000",
+    "rating": 4.7,
+    "review_count": 18400,
+    "t": [
+      "party club",
+      "mumbai chawl themed bar",
+      "cyber hub party epicenter",
+      "weekend dj sets",
+      "long drinks"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🍻",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cyber+Hub+Social+Gurugram",
+    "review_insights": [
+      "the epicenter of gurugram corporate and weekend nightlife inside vibrant dlf cyber hub",
+      "ingenious chawl-themed multi-level space with pulsating weekend dj dance floors",
+      "oversized signature LIITs and inventive fusion street food bites"
+    ],
+    "why": "DLF Cyber Hub's high-octane party bar featuring dramatic multi-tier chawl design and packed weekend DJ dance parties."
+  },
+  {
+    "id": "pun-flavours-sandwich",
+    "name": "Flavours Street Sandwiches",
+    "area": "BMCC Road / Deccan",
+    "city": "Pune",
+    "latitude": 18.5215,
+    "longitude": 73.8375,
+    "c": [
+      "Street Food",
+      "Fast Food",
+      "Sandwiches"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 10400,
+    "t": [
+      "bmcc student adda",
+      "chocolate cheese toast sandwich",
+      "mexican grilled sandwich",
+      "pune youth legend"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Flavours+Sandwich+BMCC+Road+Pune",
+    "review_insights": [
+      "the ultimate student hangout on bmcc road for decadent chocolate cheese grilled toasties",
+      "crispy bread packed with molten cheese, diced veggies, and special spiced green chutney",
+      "essential nostalgic snack for every commerce and engineering student in deccan"
+    ],
+    "why": "BMCC Road cult student fast-food institution famous for decadent chocolate cheese toasties and grilled sandwiches."
+  },
+  {
+    "id": "pun-supreme-sandwich",
+    "name": "Supreme Corner Fast Food",
+    "area": "FC Road",
+    "city": "Pune",
+    "latitude": 18.5235,
+    "longitude": 73.8422,
+    "c": [
+      "Street Food",
+      "Fast Food",
+      "Sandwiches"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 11900,
+    "t": [
+      "fc road street food",
+      "supreme special grilled sandwich",
+      "thick mango lassi",
+      "pune shopping street"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Supreme+Corner+FC+Road+Pune",
+    "review_insights": [
+      "fc road's classic grilled sandwich stop where gigantic three-layer toasties are prepared with lightning speed",
+      "copious amounts of butter and cheese with spicy potato and capsicum stuffing",
+      "accompanied by rich thick sweet lassi that cools down the palate"
+    ],
+    "why": "FC Road's decades-old street sandwich corner celebrated for triple-decker grilled sandwiches and thick lassis."
+  },
+  {
+    "id": "pun-ganesh-bhel",
+    "name": "Ganesh Bhel & Chaat Hub",
+    "area": "Ganeshkhind / Karve Road",
+    "city": "Pune",
+    "latitude": 18.5042,
+    "longitude": 73.8215,
+    "c": [
+      "Street Food",
+      "Chaat",
+      "Fast Food"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 13400,
+    "t": [
+      "famous puneri bhel",
+      "matki bhel",
+      "shev batata puri",
+      "spiced dahi puri",
+      "pune chaat pioneer"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "casual"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🥗",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ganesh+Bhel+Karve+Road+Pune",
+    "review_insights": [
+      "one of pune's pioneer chaat brands with an unmatched crunch and sweet-tangy chutney recipe",
+      "their signature sprouted matki bhel and dahi sev puri are local addictions",
+      "pristine cleanliness and high-speed service that delights patrons"
+    ],
+    "why": "Pune chaat pioneer renowned for sprouted Matki Bhel, crispy Sev Batata Puri, and refreshing Dahi Puris."
+  },
+  {
+    "id": "pun-hite-bar",
+    "name": "Hite Bar & Fast Food",
+    "area": "Camp / East Street",
+    "city": "Pune",
+    "latitude": 18.5148,
+    "longitude": 73.8788,
+    "c": [
+      "Burgers",
+      "Fast Food",
+      "Rolls"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 8200,
+    "t": [
+      "camp youth fast food",
+      "juicy chicken burger",
+      "chicken roll",
+      "camp night bites",
+      "budget icon"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg"
+    ],
+    "emoji": "🍔",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hite+Bar+Camp+Pune",
+    "review_insights": [
+      "beloved camp fast-food institution serving monster chicken burgers and spiced rolls",
+      "crispy patties with mayonnaise and shredded cabbage on soft toasted sesame buns",
+      "unbeatable budget quick-bite spot for students and youth in east street"
+    ],
+    "why": "Camp's beloved fast-food counter famous for monster chicken burgers and hearty rolls."
+  },
+  {
+    "id": "pun-falahaar",
+    "name": "Falahaar & Fast Food",
+    "area": "Karve Road / Kothrud",
+    "city": "Pune",
+    "latitude": 18.5025,
+    "longitude": 73.8195,
+    "c": [
+      "Fast Food",
+      "Snacks",
+      "Juices"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 7900,
+    "t": [
+      "jamun shots legend",
+      "sabudana khichdi",
+      "cheese grilled sandwich",
+      "fresh fruit creams",
+      "kothrud youth hangout"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🍇",
+    "photo": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Falahaar+Karve+Road+Pune",
+    "review_insights": [
+      "viral for their signature fresh black jamun shots with spicy salt on the glass rim",
+      "comforting sabudana khichdi, grilled cheese toasties, and rich seasonal sitaphal cream",
+      "lively evening street crowd outside the colorful counter"
+    ],
+    "why": "Popular Kothrud quick-bite hangout famous for viral Jamun Shots, Sabudana Khichdi, and fresh fruit creams."
+  },
+  {
+    "id": "pun-high-spirits",
+    "name": "High Spirits Cafe",
+    "area": "Koregaon Park / North Main Road",
+    "city": "Pune",
+    "latitude": 18.5358,
+    "longitude": 73.8942,
+    "c": [
+      "Party Club",
+      "Live Music",
+      "Finger Food"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.8,
+    "review_count": 17800,
+    "t": [
+      "party club",
+      "pune's nightlife heartbeat",
+      "live music gigs",
+      "outdoor beer garden",
+      "legendary cookouts"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🎸",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=High+Spirits+Cafe+Koregaon+Park+Pune",
+    "review_insights": [
+      "the undisputed soul of pune's nightlife where generations of students and music lovers have danced",
+      "unrivalled energy with live indie bands, rock nights, and wild Sunday cookouts",
+      "tree-shaded open-air courtyard with cold beers and unbeatable camaraderie"
+    ],
+    "why": "Pune's legendary nightlife institution in Koregaon Park famous for live indie gigs, Sunday cookouts, and electric dance parties."
+  },
+  {
+    "id": "pun-mi-a-mi",
+    "name": "Mi A Mi Nightclub",
+    "area": "JW Marriott / Senapati Bapat Road",
+    "city": "Pune",
+    "latitude": 18.5335,
+    "longitude": 73.8315,
+    "c": [
+      "Nightclub",
+      "Party Club",
+      "Cocktails"
+    ],
+    "p": "2000_plus",
+    "rating": 4.8,
+    "review_count": 12400,
+    "t": [
+      "party club",
+      "jw marriott underground club",
+      "massive dance floor",
+      "vip lounge",
+      "international edm djs"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🪩",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mi+A+Mi+JW+Marriott+Pune",
+    "review_insights": [
+      "pune's premier 5-star underground superclub inside the jw marriott hotel",
+      "pulsating 15,000 sq ft dance floor with international djs, laser matrix, and top acoustics",
+      "glamorous crowd, opulent vip lounges, and luxury bottle service"
+    ],
+    "why": "JW Marriott's underground 5-star superclub featuring massive dance floors, laser light shows, and international EDM nights."
+  },
+  {
+    "id": "pun-waters-club",
+    "name": "Waters Bar & Kitchen",
+    "area": "Koregaon Park / River Road",
+    "city": "Pune",
+    "latitude": 18.5412,
+    "longitude": 73.8948,
+    "c": [
+      "Riverside Club",
+      "Party Lounge",
+      "Cocktails"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.7,
+    "review_count": 11200,
+    "t": [
+      "party club",
+      "riverside open air club",
+      "pulsating light shows",
+      "weekend dance parties",
+      "koregaon park nightlife"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🌊",
+    "photo": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Waters+Bar+and+Kitchen+Koregaon+Park+Pune",
+    "review_insights": [
+      "spectacular open-air riverside club offering river breezes and dramatic illuminated staging",
+      "electric weekend dance energy with premier commercial and techno djs",
+      "mouthwatering wood-fired pizzas, sushi rolls, and innovative cocktails"
+    ],
+    "why": "Koregaon Park's stunning open-air riverside dance club celebrated for pulsating light shows and weekend club nights."
+  },
+  {
+    "id": "pun-house-of-medici",
+    "name": "The House of Medici",
+    "area": "The Westin / Koregaon Park",
+    "city": "Pune",
+    "latitude": 18.5395,
+    "longitude": 73.9015,
+    "c": [
+      "Nightclub",
+      "Luxury Lounge",
+      "Cocktails"
+    ],
+    "p": "2000_plus",
+    "rating": 4.8,
+    "review_count": 9400,
+    "t": [
+      "party club",
+      "longest horseshoe bar",
+      "westin luxury nightlife",
+      "equestrian theme",
+      "weekend clubbing"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🐎",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+House+of+Medici+Westin+Pune",
+    "review_insights": [
+      "ultra-luxurious equestrian-themed party lounge boasting india's longest horseshoe bar counter",
+      "high-octane weekend club nights with celebrity djs and elite partygoers",
+      "impeccably crafted signature cocktails and decadent multi-cuisine tapas"
+    ],
+    "why": "The Westin's opulent equestrian-themed luxury nightclub featuring India's longest horseshoe bar and elite weekend clubbing."
+  },
+  {
+    "id": "pun-cult-house",
+    "name": "Cult House & Cult Terra",
+    "area": "Magarpatta / Hadapsar",
+    "city": "Pune",
+    "latitude": 18.5142,
+    "longitude": 73.9295,
+    "c": [
+      "Nightclub",
+      "Party Club",
+      "Continental"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.7,
+    "review_count": 12800,
+    "t": [
+      "party club",
+      "colossal indoor club",
+      "stadium grade lighting",
+      "magarpatta party hub",
+      "weekend concerts"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "⚡",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cult+House+Magarpatta+Pune",
+    "review_insights": [
+      "colossal party playground combining an indoor superclub with an expansive outdoor dining deck",
+      "stadium-grade sound system and laser shows hosting top indian and global music producers",
+      "the reigning nightlife capital of east pune with electric weekend crowds"
+    ],
+    "why": "East Pune's colossal superclub and open-air deck in Magarpatta famed for stadium-grade sound and massive party nights."
+  },
+  {
+    "id": "pun-elephant-co",
+    "name": "Elephant & Co. (Eco)",
+    "area": "Kalyani Nagar / Baner",
+    "city": "Pune",
+    "latitude": 22.5485,
+    "longitude": 73.9035,
+    "c": [
+      "Party Bar",
+      "Gastropub",
+      "Cocktails"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.8,
+    "review_count": 13900,
+    "t": [
+      "party club",
+      "neighborhood party pub",
+      "craft cocktails",
+      "pet friendly daytime into night club",
+      "kalyani nagar icon"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🐘",
+    "photo": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Elephant+and+Co+Kalyani+Nagar+Pune",
+    "review_insights": [
+      "pune's favorite neighborhood bar where the energy escalates into a full-blown dance party every weekend",
+      "innovative gin cocktails, craft beers, and mouthwatering bar bites",
+      "warm hospitable crew and electric youth vibe that feels like home"
+    ],
+    "why": "Kalyani Nagar's high-energy neighborhood party pub beloved for craft cocktails, weekend DJ sets, and vibrant crowds."
+  },
+  {
+    "id": "pun-di-mora",
+    "name": "Di Mora Sky Lounge & Club",
+    "area": "Koregaon Park / North Main Road",
+    "city": "Pune",
+    "latitude": 18.5388,
+    "longitude": 73.8965,
+    "c": [
+      "Rooftop Club",
+      "Party Lounge",
+      "Italian"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.7,
+    "review_count": 8100,
+    "t": [
+      "party club",
+      "rooftop skyline club",
+      "techno and commercial nights",
+      "koregaon park rooftop party"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🌃",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Di+Mora+Koregaon+Park+Pune",
+    "review_insights": [
+      "glamorous high-altitude rooftop club overlooking the lush canopy of koregaon park",
+      "hypnotic techno, house, and commercial dance sessions under starlit skies",
+      "artisan wood-fired pizzas, sushi, and bespoke cocktails"
+    ],
+    "why": "High-altitude Koregaon Park rooftop dance club offering panoramic treetop views, craft cocktails, and pulsating beats."
+  },
+  {
+    "id": "pun-2bhk-key-club",
+    "name": "2BHK Diner & Key Club",
+    "area": "The Mills / Bund Garden Road",
+    "city": "Pune",
+    "latitude": 18.5315,
+    "longitude": 73.8765,
+    "c": [
+      "Nightclub",
+      "European Diner",
+      "Cocktails"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.8,
+    "review_count": 14600,
+    "t": [
+      "party club",
+      "the mills nightlife centerpiece",
+      "vintage chandeliers",
+      "weekend clubbing",
+      "pune celebrity favorite"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🔑",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=2BHK+Diner+Key+Club+The+Mills+Pune",
+    "review_insights": [
+      "the centerpiece of the mills nightlife district with baroque chandeliers and dramatic high ceilings",
+      "explodes into one of pune's most energetic party clubs on Friday and Saturday nights",
+      "stellar culinary offerings, craft signature drinks, and star-studded crowds"
+    ],
+    "why": "The Mills' premier nightlife institution featuring baroque chandeliers, celebrity crowds, and high-voltage dance weekends."
+  },
+  {
+    "id": "pun-1bhk-baner",
+    "name": "1 BHK Superbar",
+    "area": "Baner",
+    "city": "Pune",
+    "latitude": 18.5585,
+    "longitude": 73.7895,
+    "c": [
+      "Party Bar",
+      "Nightclub",
+      "Continental"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.7,
+    "review_count": 11500,
+    "t": [
+      "party club",
+      "baner nightlife epicenter",
+      "sprawling dance floor",
+      "weekend commercial djs",
+      "west pune club"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🍸",
+    "photo": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=1+BHK+Superbar+Baner+Pune",
+    "review_insights": [
+      "west pune's most popular party club where IT crowds and youth pack the dance floor",
+      "electric mix of commercial chartbusters and retro dance anthems",
+      "fantastic wood-fired pizzas, sliders, and craft cocktails"
+    ],
+    "why": "West Pune's reigning Baner party superbar famed for sprawling dance floors, energetic DJ nights, and craft cocktails."
+  },
+  {
+    "id": "pun-effingut-kp",
+    "name": "Effingut Brewerkz",
+    "area": "Koregaon Park / Lane 6",
+    "city": "Pune",
+    "latitude": 18.5408,
+    "longitude": 73.8985,
+    "c": [
+      "Brewery",
+      "Party Pub",
+      "Continental"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.8,
+    "review_count": 16200,
+    "t": [
+      "party club",
+      "craft beer pioneer",
+      "hefeweizen and apple cider",
+      "rock and commercial party nights",
+      "effingut energy"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "nonveg",
+      "vegetarian"
+    ],
+    "emoji": "🍺",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Effingut+Koregaon+Park+Pune",
+    "review_insights": [
+      "high-energy craft brewpub famous for artisanal apple ciders, dunkelweizens, and hefeweizens",
+      "roaring rock and commercial dance parties with friendly passionate staff and patrons",
+      "mouthwatering bacon-wrapped sausages, crispy pizzas, and fiery chicken wings"
+    ],
+    "why": "Koregaon Park craft brewpub pioneer known for artisanal apple ciders, rock anthems, and high-energy dance weekends."
   }
 ];

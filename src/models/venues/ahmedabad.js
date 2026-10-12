@@ -3933,5 +3933,438 @@ const catalog=[
       "essential morning breakfast stop for every authentic ahmedabadi"
     ],
     "why": "Century-old 1922 farsan pioneer famed for spiced vatana khaman and pomegranate sev khaman."
+  },
+  {
+    "id": "ahm-cept-khau-gali",
+    "name": "CEPT Khau Gali & University Stalls",
+    "area": "University Road / Navrangpura",
+    "city": "Ahmedabad",
+    "latitude": 23.0372,
+    "longitude": 72.5485,
+    "c": [
+      "Street Food",
+      "Fast Food",
+      "Sandwiches"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 8900,
+    "t": [
+      "cept student hangout",
+      "cheese blast maggi",
+      "bun maska chai",
+      "mexican bhel",
+      "university road late night"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=CEPT+Khau+Gali+University+Road+Ahmedabad",
+    "review_insights": [
+      "the legendary student adda outside cept university for late night discussions and cheese-loaded maggi",
+      "spicy mexican bhel, butter bun maska, and hot cutting chai that fuels design students",
+      "vibrant high-energy street vibe that is an essential part of ahmedabad youth culture"
+    ],
+    "why": "Legendary student hub on University Road outside CEPT celebrated for midnight cheese Maggi, bun maska, and Mexican bhel."
+  },
+  {
+    "id": "ahm-municipal-market",
+    "name": "Municipal Market (MM Khau Gali)",
+    "area": "CG Road / Navrangpura",
+    "city": "Ahmedabad",
+    "latitude": 23.0325,
+    "longitude": 72.5592,
+    "c": [
+      "Street Food",
+      "Fast Food",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 12400,
+    "t": [
+      "cg road youth hub",
+      "cheese chocolate sandwich",
+      "dabeli pizza",
+      "thick cold coco",
+      "mm street food"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Municipal+Market+CG+Road+Ahmedabad",
+    "review_insights": [
+      "ahmedabad's original fast-food street where generations of students have congregated on cg road",
+      "insanely decadent chocolate cheese grilled sandwiches and rich surti cold coco",
+      "bustling energetic street atmosphere filled with youth and delicious street aromas"
+    ],
+    "why": "CG Road's iconic Municipal Market street food strip famous for chocolate cheese sandwiches and Surti cold coco."
+  },
+  {
+    "id": "ahm-vastrapur-lake-bites",
+    "name": "Vastrapur Lake Fast Food Plaza",
+    "area": "Vastrapur",
+    "city": "Ahmedabad",
+    "latitude": 23.0358,
+    "longitude": 72.5285,
+    "c": [
+      "Fast Food",
+      "Street Food",
+      "Snacks"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 9800,
+    "t": [
+      "lake promenade street food",
+      "crispy frankies",
+      "paneer cheese burgers",
+      "french fries",
+      "vastrapur youth hub"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🍟",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Vastrapur+Lake+Fast+Food+Ahmedabad",
+    "review_insights": [
+      "bustling food street overlooking the illuminated vastrapur lake promenade",
+      "piping hot spicy tandoori paneer frankies and loaded cheese burgers at pocket-friendly prices",
+      "popular evening hangout for nearby iim and gujarat university students"
+    ],
+    "why": "Vastrapur Lake's lively fast-food street market popular among university students for spicy frankies and loaded burgers."
+  },
+  {
+    "id": "ahm-manek-chowk-night",
+    "name": "Manek Chowk Midnight Food Court",
+    "area": "Manek Chowk / Old City",
+    "city": "Ahmedabad",
+    "latitude": 23.0245,
+    "longitude": 72.5895,
+    "c": [
+      "Street Food",
+      "Midnight Feast",
+      "Snacks"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 28500,
+    "t": [
+      "midnight street party",
+      "chocolate pineapple sandwich",
+      "ghotala pav bhaji",
+      "rabdi kulfi",
+      "open air bazaar"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🌙",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Manek+Chowk+Ahmedabad",
+    "review_insights": [
+      "jewelry market by day transforms into india's most electric midnight street food festival by night",
+      "legendary butter-drenched ghotala pav bhaji and viral chocolate cheese sandwiches",
+      "thousands of people dining on open plastic tables until 2am under heritage havelis"
+    ],
+    "why": "World-famous midnight street food extravaganza in the historic walled city operating into the wee hours."
+  },
+  {
+    "id": "ahm-rk-egg-vastrapur",
+    "name": "RK Egg Zone & Fast Food",
+    "area": "Vastrapur / Bodakdev",
+    "city": "Ahmedabad",
+    "latitude": 23.0385,
+    "longitude": 72.5225,
+    "c": [
+      "Egg Specialties",
+      "Street Food",
+      "Fast Food"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 6700,
+    "t": [
+      "cheese crush egg fry",
+      "boil tikka",
+      "egg lapeta",
+      "midnight egg dishes",
+      "vastrapur youth spot"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "hot",
+    "dietaryOptions": [
+      "nonveg"
+    ],
+    "emoji": "🍳",
+    "photo": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=RK+Egg+Zone+Vastrapur+Ahmedabad",
+    "review_insights": [
+      "sensational egg preparations including green garlic boil fry and cheese crush omelette",
+      "piping hot buttery pav soaked in fiery spicy egg gravies",
+      "popular late-night destination for foodies and college night owls"
+    ],
+    "why": "High-energy Vastrapur egg eatery revered for sizzling boil tikkas, cheese lapetas, and buttery street gravies."
+  },
+  {
+    "id": "ahm-sphere-lounge",
+    "name": "Sphere Lounge",
+    "area": "SG Highway / Bodakdev",
+    "city": "Ahmedabad",
+    "latitude": 23.0315,
+    "longitude": 72.5095,
+    "c": [
+      "Party Lounge",
+      "Rooftop Club",
+      "Continental",
+      "Mocktails"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.7,
+    "review_count": 9400,
+    "t": [
+      "party club",
+      "rooftop dance floor",
+      "live dj nights",
+      "neon lighting",
+      "sg highway nightlife",
+      "gourmet finger food"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🪩",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sphere+Lounge+SG+Highway+Ahmedabad",
+    "review_insights": [
+      "the reigning rooftop party destination on sg highway with pulsating live dj beats and light shows",
+      "electric dance floor packed with the city's youth partying on weekend nights",
+      "superb wood-fired pizzas, loaded nachos, and artisanal molecular mocktails"
+    ],
+    "why": "SG Highway's premier rooftop party club featuring live DJ dance floors, neon ambiance, and high-energy nightlife."
+  },
+  {
+    "id": "ahm-topaz-club",
+    "name": "Topaz Restaurant & Party Lounge",
+    "area": "SG Highway",
+    "city": "Ahmedabad",
+    "latitude": 23.0425,
+    "longitude": 72.5142,
+    "c": [
+      "Party Lounge",
+      "Multi-Cuisine",
+      "Continental"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.6,
+    "review_count": 6200,
+    "t": [
+      "party club",
+      "disco lights",
+      "sound system",
+      "dj party nights",
+      "celebration hub",
+      "sg highway club"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🎉",
+    "photo": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Topaz+Party+Lounge+SG+Highway+Ahmedabad",
+    "review_insights": [
+      "dedicated high-energy party lounge with club acoustics and professional club lighting",
+      "fabulous venue for youth birthdays, graduation parties, and weekend celebrations",
+      "generous multi-cuisine buffet spreads with sizzling platters and mocktails"
+    ],
+    "why": "Sprawling SG Highway celebration club equipped with concert-grade sound, disco lighting, and vibrant party vibes."
+  },
+  {
+    "id": "ahm-skyz-lounge",
+    "name": "Skyz Restaurant & Party Lounge",
+    "area": "Prahladnagar",
+    "city": "Ahmedabad",
+    "latitude": 23.0145,
+    "longitude": 72.5052,
+    "c": [
+      "Rooftop Lounge",
+      "Party Club",
+      "Mexican",
+      "Italian"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.6,
+    "review_count": 8100,
+    "t": [
+      "party club",
+      "open terrace dj",
+      "panoramic city view",
+      "live music weekends",
+      "prahladnagar nightlife"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🍸",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Skyz+Restaurant+Prahladnagar+Ahmedabad",
+    "review_insights": [
+      "massive open-air terrace with sweeping views of the prahladnagar skyline",
+      "upbeat commercial and bollywood dance tracks played by in-house djs on weekends",
+      "tasty sizzlers, cheese fondues, and refreshing party mocktails under the stars"
+    ],
+    "why": "Prahladnagar's high-altitude party terrace popular for weekend DJ nights and skyline celebrations."
+  },
+  {
+    "id": "ahm-the-dark-cafe",
+    "name": "Brewville & The Dark Club Lounge",
+    "area": "Sindhu Bhavan Road (SBR)",
+    "city": "Ahmedabad",
+    "latitude": 23.0482,
+    "longitude": 72.4965,
+    "c": [
+      "Nightclub Lounge",
+      "Continental",
+      "Fast Food"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.6,
+    "review_count": 5300,
+    "t": [
+      "party club",
+      "neon club aesthetic",
+      "deep bass sound",
+      "sindhu bhavan party strip",
+      "late night clubbing"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "⚡",
+    "photo": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Brewville+The+Dark+Cafe+Sindhu+Bhavan+Ahmedabad",
+    "review_insights": [
+      "moody neon-lit club setting on sindhu bhavan road that feels like a modern nightclub",
+      "heavy bass sound system with energetic electronic and commercial music",
+      "crispy stone-baked pizzas, loaded fries, and craft milkshakes"
+    ],
+    "why": "Sindhu Bhavan party club lounge sporting neon aesthetics, concert-level bass, and electric late-night vibes."
+  },
+  {
+    "id": "ahm-rhythm-lounge",
+    "name": "Rhythm Club & Party Lounge",
+    "area": "Bodakdev",
+    "city": "Ahmedabad",
+    "latitude": 23.0345,
+    "longitude": 72.5185,
+    "c": [
+      "Party Lounge",
+      "Continental",
+      "Finger Food"
+    ],
+    "p": "1000_to_2000",
+    "rating": 4.6,
+    "review_count": 4700,
+    "t": [
+      "party club",
+      "dance floor",
+      "birthday party hub",
+      "smoke machine lasers",
+      "bodakdev youth club"
+    ],
+    "a": [
+      "lively"
+    ],
+    "o": [
+      "party"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🕺",
+    "photo": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rhythm+Club+Lounge+Bodakdev+Ahmedabad",
+    "review_insights": [
+      "dedicated private club dance floor equipped with strobe lights, smoke machines, and dj booth",
+      "unbeatable spot for throwing graduation, farewell, and youth dance parties",
+      "delicious finger foods including cheese poppers, peri peri nachos, and mocktail bowls"
+    ],
+    "why": "Bodakdev high-energy dance club fitted with strobe lights, smoke machines, and dedicated DJ dance floor."
   }
 ];

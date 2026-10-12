@@ -42,11 +42,11 @@
 
     defaultGenome() {
       return {
-        version: 6,
-        xp: 35000,
-        level: 9,
-        title: 'Supreme Galactic Taste Deity & Universal Food Oracle',
-        totalInteractions: 750,
+        version: 7,
+        xp: 50000,
+        level: 10,
+        title: 'Level 10 Omnipresent Party & Culinary Deity',
+        totalInteractions: 1000,
         cuisines: {
           'North Indian': 0.96,
           'Punjabi': 0.95,
@@ -248,10 +248,22 @@
           'murugan idli': 0.99,
           'peter cat chelo kebab': 0.99,
           'rawat pyaz kachori': 0.99,
-          'paragon malabar biryani': 0.99
+          'paragon malabar biryani': 0.99,
+          'hot bite sandwich': 0.98,
+          'chinese bhel': 0.97,
+          'tandoori momos': 0.99,
+          'cheese maggi': 0.98,
+          'chocolate cheese sandwich': 0.98,
+          'jini dosa': 0.99,
+          'jamun shots': 0.98,
+          'apple cider': 0.98,
+          'party club': 0.99,
+          'nightclub cocktails': 0.98
         },
         recentLearnings: [
-          { time: 'Trained', summary: 'Incorporated all 400 Google Places food destinations across Ahmedabad (90), Vadodara (85), Mumbai (75), Delhi NCR (75), and Pune (75); 547 nationwide', xp: 7500 },
+          { time: 'Trained', summary: 'Integrated all 456 destinations & premier party clubs across Ahmedabad (100), Vadodara (86), Mumbai (90), Delhi NCR (90), and Pune (90); 603 nationwide', xp: 9500 },
+          { time: 'Trained', summary: 'Mastered Premier Party Clubs & Nightlife (Dragonfly, Toy Room, Tryst, Matahaari, XXO, Priveé, Soho, High Spirits, Mi A Mi, Cult House, Sphere, Skyz)', xp: 6200 },
+          { time: 'Trained', summary: 'Encoded Cult Campus & Youth Hangouts (Tom Uncle Maggi, QD’s, Anand Stall Mithibai, Flavours BMCC, CEPT Khau Gali, Municipal Market, Hot Bite)', xp: 5800 },
           { time: 'Trained', summary: 'Mastered Ahmedabad Heritage Pols, Manek Chowk & Century-old Farsan Legends (Lucky Tea, Chandra Villas, Honest, Oswal, Raipur Bhajia, Gordhan Thal, Rajwadu)', xp: 4800 },
           { time: 'Trained', summary: 'Calibrated Vadodara Sev Usal Tari, Lilo Chevdo & Alembic Art District Gastronomy (Mahakali, Shreeji, Jagdish, Payal, Pyarelal, Duliram, 1907, Canara Coffee)', xp: 4600 },
           { time: 'Trained', summary: 'Encoded Mumbai Vada Pav Royalty, Coastal Crab Curries & Midnight Chowpatty Haunts (Sardar, Bademiya, Trishna, Mahesh, Kyani, Aaswad, Bachelorr’s, Veronica’s)', xp: 5200 },
@@ -266,7 +278,7 @@
         const saved = localStorage.getItem(this.storageKey);
         if (saved) {
           const parsed = JSON.parse(saved);
-          if (parsed.version && parsed.version >= 6 && parsed.level >= 9) {
+          if (parsed.version && parsed.version >= 7 && parsed.level >= 10) {
             return { ...this.defaultGenome(), ...parsed };
           }
         }

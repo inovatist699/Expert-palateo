@@ -207,12 +207,21 @@ const puneCount = sandbox.allMetroVenues.filter(v => v.city === 'Pune').length;
 const ahmedabadCount = sandbox.ahmedabadCatalog.length;
 const vadodaraCount = sandbox.vadodaraCatalog.length;
 
-assert.ok(mumbaiCount >= 75, `Must have at least 75 verified venues in Mumbai, found ${mumbaiCount}`);
-assert.ok(delhiCount >= 75, `Must have at least 75 verified venues in Delhi NCR, found ${delhiCount}`);
-assert.ok(puneCount >= 75, `Must have at least 75 verified venues in Pune, found ${puneCount}`);
-assert.ok(ahmedabadCount >= 90, `Must have at least 90 verified venues in Ahmedabad, found ${ahmedabadCount}`);
-assert.ok(vadodaraCount >= 85, `Must have at least 85 verified venues in Vadodara, found ${vadodaraCount}`);
-assert.ok(sandbox.allMetroVenues.length >= 370, `Must have 370+ metro venues total, found ${sandbox.allMetroVenues.length}`);
+assert.ok(mumbaiCount >= 90, `Must have at least 90 verified venues in Mumbai, found ${mumbaiCount}`);
+assert.ok(delhiCount >= 90, `Must have at least 90 verified venues in Delhi NCR, found ${delhiCount}`);
+assert.ok(puneCount >= 90, `Must have at least 90 verified venues in Pune, found ${puneCount}`);
+assert.ok(ahmedabadCount >= 100, `Must have at least 100 verified venues in Ahmedabad, found ${ahmedabadCount}`);
+assert.ok(vadodaraCount >= 86, `Must have at least 86 verified venues in Vadodara, found ${vadodaraCount}`);
+assert.ok(sandbox.vadodaraCatalog.some(v => v.id === 'vad-hot-bite'), 'Must include Hot Bite in Vadodara catalog');
+assert.ok(sandbox.allMetroVenues.some(v => v.id === 'mum-dragonfly-club'), 'Must include Dragonfly club in Mumbai');
+assert.ok(sandbox.allMetroVenues.some(v => v.id === 'del-privee-club'), 'Must include Privee club in Delhi');
+assert.ok(sandbox.allMetroVenues.some(v => v.id === 'pun-high-spirits'), 'Must include High Spirits club in Pune');
+assert.ok(sandbox.ahmedabadCatalog.some(v => v.id === 'ahm-sphere-lounge'), 'Must include Sphere Lounge club in Ahmedabad');
+assert.ok(sandbox.allMetroVenues.some(v => v.id === 'del-tom-uncles-maggi'), 'Must include Tom Uncle Maggi in Delhi');
+assert.ok(sandbox.allMetroVenues.some(v => v.id === 'mum-mithibai-anand-dosa'), 'Must include Anand Stall Mithibai in Mumbai');
+assert.ok(sandbox.allMetroVenues.some(v => v.id === 'pun-flavours-sandwich'), 'Must include Flavours BMCC in Pune');
+assert.ok(sandbox.ahmedabadCatalog.some(v => v.id === 'ahm-cept-khau-gali'), 'Must include CEPT Khau Gali in Ahmedabad');
+assert.ok(sandbox.allMetroVenues.length >= 415, `Must have 415+ metro venues total, found ${sandbox.allMetroVenues.length}`);
 
 console.log('PASS: Palo animated vector mascot anatomy');
 console.log('PASS: Non-blocking attached speech bubble architecture');

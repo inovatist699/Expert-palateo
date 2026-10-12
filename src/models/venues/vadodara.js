@@ -3662,5 +3662,50 @@ const vadodaraCatalog=[
       "convenient location near railway station for arriving travelers craving authentic taste"
     ],
     "why": "Sayajigunj thali stalwart famous for smoky winter ringna no olo, bajra rotlas, and unlimited Gujarati hospitality."
+  },
+  {
+    "id": "vad-hot-bite",
+    "name": "Hot Bite (Hot Bites)",
+    "area": "Sayajigunj / Opp. MSU",
+    "city": "Vadodara",
+    "latitude": 22.3135,
+    "longitude": 73.1878,
+    "c": [
+      "Fast Food",
+      "Chinese",
+      "Street Food",
+      "North Indian"
+    ],
+    "p": "under_500",
+    "rating": 4.3,
+    "review_count": 3820,
+    "t": [
+      "sayajigunj student hangout",
+      "veg cheese grilled sandwich",
+      "chinese bhel",
+      "noodles manchurian",
+      "pav bhaji",
+      "thick cold coffee"
+    ],
+    "a": [
+      "bustling"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "jain"
+    ],
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hot+Bite+Sayajigunj+Vadodara",
+    "review_insights": [
+      "the quintessential sayajigunj youth hangout spot operating for over two decades opposite msu",
+      "loaded jumbo veg cheese grilled sandwiches and spicy crispy chinese bhel",
+      "comforting quick bites, hakka noodles with gravy manchurian, and frothy cold coffee"
+    ],
+    "why": "Legendary Sayajigunj fast-food institution opposite MSU famous for jumbo cheese grilled sandwiches, Chinese bhel, and thick shakes."
   }
 ];

@@ -36,6 +36,8 @@ assert.ok(companionJs.includes("type === 'curious'"), 'Must implement procedural
 assert.ok(companionJs.includes("type === 'warm'"), 'Must implement procedural warm harmonic chime');
 assert.ok(companionJs.includes("type === 'playful'"), 'Must implement procedural playful syncopated chirp');
 assert.ok(companionJs.includes("type === 'gentle'"), 'Must implement procedural gentle descending chime');
+assert.ok(companionJs.includes('PaloCognitiveBrain'), 'Must implement PaloCognitiveBrain');
+assert.ok(companionJs.includes('paloThoughtBox'), 'Must render live cognitive thought stream');
 
 // 2. CSS Animation & Mobile Ergonomics Audit
 assert.ok(interactiveCss.includes('paloFloat'), 'Must include floating breathing animation');
@@ -49,6 +51,10 @@ assert.ok(interactiveCss.includes('is-playful'), 'Must include is-playful animat
 assert.ok(interactiveCss.includes('is-gentle'), 'Must include is-gentle animation state');
 assert.ok(interactiveCss.includes('paloReviewCard'), 'Must style verified review citation card');
 assert.ok(interactiveCss.includes('paloBrainDrawer'), 'Must style ML taste genome drawer');
+assert.ok(interactiveCss.includes('paloThoughtBox'), 'Must style live cognitive thought stream');
+assert.ok(interactiveCss.includes('paloBrainStatsGrid'), 'Must style cognitive stats grid');
+assert.ok(interactiveCss.includes('paloTeachForm'), 'Must style teach brain form');
+assert.ok(interactiveCss.includes('paloConceptCloud'), 'Must style concept cloud');
 assert.ok(interactiveCss.includes('@media(prefers-reduced-motion:reduce)'), 'Must respect vestibular accessibility');
 
 // 3. VM Execution & Behavioral Simulation
@@ -288,6 +294,46 @@ engine.playCuteSound('warm');
 engine.playCuteSound('playful');
 engine.playCuteSound('gentle');
 
+// 10. Verify Cognitive Brain Architecture, Reasoning Engine & Pondering
+const brain = sandbox.window.paloBrain;
+assert.ok(brain, 'Must export paloBrain on window');
+assert.ok(sandbox.window.PaloCognitiveBrain, 'Must export PaloCognitiveBrain on window');
+assert.ok(Object.keys(brain.concepts).length >= 10, 'Must contain pre-seeded culinary concepts');
+assert.ok(brain.concepts['sev usal'], 'Must know Vadodara Sev Usal');
+assert.ok(brain.concepts['vada pav'], 'Must know Mumbai Vada Pav');
+assert.ok(brain.concepts['butter chicken'], 'Must know Delhi Butter Chicken');
+assert.ok(brain.concepts['puneri misal'], 'Must know Puneri Misal');
+
+// Verify 4-stage multi-step cognitive reasoning
+const thoughtChain = brain.think('teekha biryani', {
+  city: 'Mumbai',
+  topVenue: bombayCanteen,
+  mlScore: 94,
+  venueCount: 5,
+  emotion: 'playful'
+});
+assert.equal(thoughtChain.length, 4, 'Must return 4-stage reasoning pipeline');
+assert.ok(thoughtChain[0].stage.includes('Deconstruct Intent'), 'Stage 1 must deconstruct intent');
+assert.ok(thoughtChain[1].stage.includes('Synaptic Memory Retrieval'), 'Stage 2 must retrieve synaptic memory');
+assert.ok(thoughtChain[2].stage.includes('Neural Deliberation'), 'Stage 3 must deliberate candidates');
+assert.ok(thoughtChain[3].stage.includes('Cognitive Epiphany'), 'Stage 4 must formulate cognitive epiphany');
+
+// Verify autonomous foodie pondering
+const prevThoughts = brain.totalThoughts;
+const epiphany = brain.ponder('Vadodara');
+assert.ok(epiphany.topic, 'Must ponder a foodie topic');
+assert.ok(epiphany.thought, 'Must formulate authentic philosophical thought');
+assert.ok(epiphany.insight, 'Must articulate culinary insight');
+assert.ok(brain.totalThoughts > prevThoughts, 'Must increment totalThoughts counter');
+
+// Verify active concept learning
+const prevXp = sandbox.window.paloML.genome.xp;
+const newConcept = brain.learnNewConcept('Undhiyu', 'Slow cooked winter pot delicacy in earthen matka', 'Test case');
+assert.ok(newConcept, 'Must return learned concept object');
+assert.equal(brain.concepts['undhiyu'].title, 'Undhiyu');
+assert.ok(brain.memories.some(m => m.fact.includes('Undhiyu')), 'Must log episodic memory for learned concept');
+assert.equal(sandbox.window.paloML.genome.xp, prevXp + 75, 'Must award +75 XP for learning a concept');
+
 console.log('PASS: Palo animated vector mascot anatomy');
 console.log('PASS: Non-blocking attached speech bubble architecture');
 console.log('PASS: Cute voice synthesis & procedural Web Audio chirps');
@@ -298,4 +344,5 @@ console.log('PASS: Web search access & online reinforcement learning engine');
 console.log('PASS: Authentic Indian Hindi voice accent and vocal cadence');
 console.log('PASS: Emotional voice profiles and dynamic vocal modulation');
 console.log('PASS: Comprehensive restaurant coverage across all 13 listed cities');
+console.log('PASS: Palo cognitive brain reasoning engine, pondering & active concept learning');
 console.log('All Palo checks passed successfully.\n');

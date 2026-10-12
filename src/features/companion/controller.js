@@ -436,9 +436,346 @@
       if (venue.s === 'mild') score += (0.5 - this.genome.spiceTolerance) * 10;
       return Math.max(1, Math.min(99, Math.round(score)));
     }
+
+    recalculateLevel() {
+      const prevLevel = this.genome.level;
+      this.genome.level = Math.max(5, Math.floor(this.genome.xp / 1600) + 1);
+      return this.genome.level > prevLevel;
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // 2.5 PALO COGNITIVE BRAIN & REASONING ENGINE (AUTONOMOUS THINKING & LEARNING)
+  // --------------------------------------------------------------------------
+  class PaloCognitiveBrain {
+    constructor(mlEngine) {
+      this.ml = mlEngine;
+      this.storageKey = 'palateo_palo_cognitive_brain';
+      const state = this.loadState();
+      this.concepts = state.concepts || this.defaultConcepts();
+      this.memories = state.memories || this.defaultMemories();
+      this.thoughtLog = state.thoughtLog || [];
+      this.totalThoughts = state.totalThoughts || 142;
+    }
+
+    defaultConcepts() {
+      return {
+        'sev usal': {
+          title: 'Vadodara Sev Usal',
+          category: 'Street Food',
+          fact: 'Vadodara cult spicy pea usal immersed in extra fiery tari oil, topped with spring onions and sev, eaten with spongy ladi pav.',
+          tags: ['vadodara', 'spicy', 'street food'],
+          confidence: 0.98,
+          learnedAt: 'Heritage calibration'
+        },
+        'vada pav': {
+          title: 'Mumbai Vada Pav',
+          category: 'Street Food',
+          fact: 'The heartbeat of Mumbai: spiced potato vada in ladi pav laced with pungent dry garlic-coconut chutney and fried green chili.',
+          tags: ['mumbai', 'heritage', 'street food'],
+          confidence: 0.99,
+          learnedAt: 'Heritage calibration'
+        },
+        'butter chicken': {
+          title: 'Delhi Butter Chicken',
+          category: 'North Indian',
+          fact: 'Born at Moti Mahal Daryaganj in the 1950s; velvety tomato-butter-cream gravy balancing smoky tandoori chicken.',
+          tags: ['delhi', 'mughlai', 'curry'],
+          confidence: 0.98,
+          learnedAt: 'Heritage calibration'
+        },
+        'puneri misal': {
+          title: 'Puneri Misal',
+          category: 'Maharashtrian',
+          fact: 'Pune staple of sprouted moth beans layered with crunchy chivda farsan, chopped onion, lemon and searing red rassa gravy.',
+          tags: ['pune', 'spicy', 'breakfast'],
+          confidence: 0.98,
+          learnedAt: 'Heritage calibration'
+        },
+        'fafda jalebi': {
+          title: 'Amdavadi Fafda Jalebi',
+          category: 'Gujarati Farsan',
+          fact: 'Sunday ritual across Gujarat: crunchy besan strips paired with syrup-dripping golden jalebi and grated raw papaya sambharo.',
+          tags: ['ahmedabad', 'farsan', 'sweet'],
+          confidence: 0.98,
+          learnedAt: 'Heritage calibration'
+        },
+        'dum biryani': {
+          title: 'Hyderabadi & Awadhi Dum Biryani',
+          category: 'Royal Indian',
+          fact: 'Slow dough-sealed handi cooking that traps meat juices, basmati rice, saffron, and fried onions in fragrant harmony.',
+          tags: ['biryani', 'royal', 'mughlai'],
+          confidence: 0.99,
+          learnedAt: 'Heritage calibration'
+        },
+        'crookie': {
+          title: 'Viral Crookie',
+          category: 'Modern Fusion',
+          fact: 'Parisian viral bakery sensation combining flaky, butter-laminated croissants with warm molten chocolate chip cookie dough.',
+          tags: ['viral', 'bakery', 'trending'],
+          confidence: 0.95,
+          learnedAt: 'Web trend discovery'
+        },
+        'kunafa': {
+          title: 'Middle Eastern Kunafa',
+          category: 'Desserts',
+          fact: 'Spun kataifi pastry baked with sweet molten akkawi or mozzarella cheese, soaked in fragrant orange blossom sugar syrup.',
+          tags: ['middle eastern', 'dessert', 'late night'],
+          confidence: 0.96,
+          learnedAt: 'Web trend discovery'
+        },
+        'bingsu': {
+          title: 'Korean Shaved Ice Bingsu',
+          category: 'Desserts',
+          fact: 'Micro-shaved frozen milk snow drizzled with sweet condensed milk, fresh mango chunks, and chewy rice mochi.',
+          tags: ['korean', 'dessert', 'cafe'],
+          confidence: 0.94,
+          learnedAt: 'Web trend discovery'
+        },
+        'chelo kebab': {
+          title: 'Peter Cat Chelo Kebab',
+          category: 'Heritage Platter',
+          fact: 'Iconic Park Street Kolkata delicacy: buttered aromatic rice crowned with grilled tomato, mutton seekh kebab, and a melting pat of butter.',
+          tags: ['kolkata', 'heritage', 'kebabs'],
+          confidence: 0.97,
+          learnedAt: 'Heritage calibration'
+        },
+        'shrewsbury biscuits': {
+          title: 'Kayani Shrewsbury Biscuits',
+          category: 'Bakery',
+          fact: 'Pune cult butter biscuits created at Kayani Bakery since 1955; rich, crumbly, and carrying a distinct buttery aroma.',
+          tags: ['pune', 'bakery', 'heritage'],
+          confidence: 0.97,
+          learnedAt: 'Heritage calibration'
+        },
+        'filter coffee': {
+          title: 'South Indian Filter Kaapi',
+          category: 'Beverage',
+          fact: 'Dark-roasted chicory-blended coffee brewed through a brass dabarah and tumbler, frothy and intensely aromatic.',
+          tags: ['south indian', 'beverage', 'cafe'],
+          confidence: 0.98,
+          learnedAt: 'Heritage calibration'
+        }
+      };
+    }
+
+    defaultMemories() {
+      return [
+        { time: 'Trained', fact: 'Palo bonded with you to curate authentic Indian gastronomic adventures.', tag: 'bond' },
+        { time: 'Trained', fact: 'Trained on 603 verified culinary destinations across 13 Indian metro regions.', tag: 'destinations' },
+        { time: 'Trained', fact: 'Calibrated spice tolerance vector to authentic Indian chatpata standards.', tag: 'taste' },
+        { time: 'Trained', fact: 'Mastered verified diner review receipts & quotes over promotional ratings.', tag: 'receipts' }
+      ];
+    }
+
+    loadState() {
+      try {
+        const saved = localStorage.getItem(this.storageKey);
+        if (saved) return JSON.parse(saved);
+      } catch (e) {}
+      return {};
+    }
+
+    saveState() {
+      try {
+        localStorage.setItem(this.storageKey, JSON.stringify({
+          concepts: this.concepts,
+          memories: this.memories,
+          thoughtLog: this.thoughtLog.slice(0, 15),
+          totalThoughts: this.totalThoughts
+        }));
+      } catch (e) {}
+    }
+
+    // ------------------------------------------------------------------------
+    // THINKING PIPELINE: 4-Stage Multi-Step Cognitive Reasoning
+    // ------------------------------------------------------------------------
+    think(query, context = {}) {
+      this.totalThoughts++;
+      const city = context.city || 'your city';
+      const q = String(query || '').trim().toLowerCase();
+
+      // Stage 1: Deconstruction & Linguistic Parsing
+      const intentTokens = [];
+      if (/teekha|tikha|spicy|tadka|mirchi/.test(q)) intentTokens.push('Fiery Spice 🌶️');
+      if (/meetha|sweet|dessert|mithai/.test(q)) intentTokens.push('Sweet Tooth 🍨');
+      if (/chai|coffee|cafe/.test(q)) intentTokens.push('Brew / Cafe ☕');
+      if (/biryani|gosht|mutton/.test(q)) intentTokens.push('Biryani Royalty 🍛');
+      if (/saste|budget|cheap|pocket/.test(q)) intentTokens.push('Pocket-Friendly 💸');
+      if (/date|romantic|peaceful|cozy/.test(q)) intentTokens.push('Romantic Vibe 🍷');
+      if (/club|party|nightlife/.test(q)) intentTokens.push('Party High Energy 🎉');
+      if (!intentTokens.length) intentTokens.push('Culinary Discovery ✨');
+
+      const stage1 = {
+        stage: '1. Deconstruct Intent',
+        icon: '🔍',
+        text: `Query analyzed: “${query || 'Pick for me'}” in ${city}. Detected intent: ${intentTokens.join(', ')}.`
+      };
+
+      // Stage 2: Memory & Concept Recall
+      const recalledConcepts = [];
+      for (const [key, concept] of Object.entries(this.concepts)) {
+        if (q.includes(key) || (concept.tags || []).some(t => q.includes(t))) {
+          recalledConcepts.push(concept.title);
+        }
+      }
+      const stage2 = {
+        stage: '2. Synaptic Memory Retrieval',
+        icon: '🧠',
+        text: recalledConcepts.length
+          ? `Recalled concepts from cognitive brain: ${recalledConcepts.slice(0, 3).join(', ')}. Taste genome aligned.`
+          : `Retrieved ${Object.keys(this.concepts).length} culinary concepts and user taste genome (Spice: ${Math.round(this.ml.genome.spiceTolerance * 100)}%).`
+      };
+
+      // Stage 3: Deliberation & Counter-Factual Reasoning
+      const topMatch = context.topVenue;
+      const venueCount = context.venueCount || 10;
+      const stage3 = {
+        stage: '3. Neural Deliberation',
+        icon: '⚖️',
+        text: topMatch
+          ? `Evaluated ${venueCount} candidate spots against verified diner receipts. Selected ${topMatch.name} with ${context.mlScore || 90}% taste fit.`
+          : `Weighed flavor balances and diner review sentiments across ${city}. Formulating optimal recommendation.`
+      };
+
+      // Stage 4: Epiphany & Expression
+      const emotion = context.emotion || 'friendly';
+      const stage4 = {
+        stage: '4. Cognitive Epiphany',
+        icon: '💡',
+        text: `Generated response with ${emotion.toUpperCase()} vocal modulation, expressive Indian cadence & procedural audio.`
+      };
+
+      const thoughtChain = [stage1, stage2, stage3, stage4];
+      this.thoughtLog.unshift({
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        query: query || 'Pick for me',
+        thoughtChain
+      });
+      if (this.thoughtLog.length > 12) this.thoughtLog.pop();
+
+      this.saveState();
+      return thoughtChain;
+    }
+
+    // ------------------------------------------------------------------------
+    // AUTONOMOUS FOODIE PONDERING: Palo thinks deeply on his own!
+    // ------------------------------------------------------------------------
+    ponder(city = 'your city') {
+      this.totalThoughts++;
+      const epiphanies = [
+        {
+          topic: 'Tapri Culture vs Modern Cafes',
+          thought: `Main soch raha tha... Mumbai ka cutting chai aur Vadodara ka Canara coffee tapri culture ki jaan hain. 15 rupaye ki kadak chai me jo dosti aur sukoon hai, wo 400 rupaye ke cold brew me dhoondhna mushkil hai! 💭☕`,
+          emotion: 'warm',
+          insight: 'Simplicity and human connection beat extravagant aesthetics in true food culture.'
+        },
+        {
+          topic: 'The Dum Cooking Enigma',
+          thought: `Ever wondered why authentic Dum Biryani feels like an emotion? When handi is sealed with dough, the saffron, meat juices, and whole spices are forced into a high-pressure flavor dance. It’s 400 years of culinary thermodynamics! 🍛✨`,
+          emotion: 'joy',
+          insight: 'Pressure-sealed steam cooking preserves volatile spice aromatics that open flame destroys.'
+        },
+        {
+          topic: 'Street Food Queues as a Mathematical Truth',
+          thought: `Palo's rule of thumb: Agar kisi tapri ya lari ke samne local auto walas, college students aur elderly uncles ek sath khade hain, toh wahan ka khana statistically 10/10 guaranteed hai! No marketing beats local loyalty. 🎯`,
+          emotion: 'playful',
+          insight: 'Multi-demographic local street queues are the most accurate quality indicator in gastronomy.'
+        },
+        {
+          topic: 'The Golden Farsan Papaya Sambharo Hack',
+          thought: `In Gujarat, fafda is never served alone—it always comes with grated raw papaya sambharo and fried green chilies. Papaya contains papain enzymes that digest heavy gram-flour instantly! Traditional culinary wisdom was pure science. 💡`,
+          emotion: 'curious',
+          insight: 'Traditional culinary pairings were naturally designed for metabolic digestive balance.'
+        },
+        {
+          topic: 'The Midnight Foodie Psychology',
+          thought: `Late night bhookh hits differently! Midnight pav bhaji at Manek Chowk or midnight butter chicken at Pandara Road tastes 2x better because food shared under city streetlights carries pure nostalgia. 🌙`,
+          emotion: 'joy',
+          insight: 'Circadian hunger and shared midnight camaraderie dramatically amplify dopamine response.'
+        },
+        {
+          topic: 'The Soul of Sev Usal',
+          thought: `Baroda ke Sev Usal me jo tari ki layer hoti hai, wo sirf mirchi nahi hai—wo slow-cooked garlic, ginger aur clove infusion hai. Ek bite and your brain releases instant endorphins! 🌶️`,
+          emotion: 'playful',
+          insight: 'Capsaicin releases endorphins that turn fiery street food into an addictive mood booster.'
+        }
+      ];
+
+      const chosen = epiphanies[Math.floor(Math.random() * epiphanies.length)];
+      
+      const stage1 = { stage: '1. Autonomous Wandering', icon: '💭', text: `Palo began contemplating: “${chosen.topic}”.` };
+      const stage2 = { stage: '2. Culinary Knowledge Synthesis', icon: '🧠', text: chosen.insight };
+      const stage3 = { stage: '3. Epiphany Articulation', icon: '💡', text: `Formulating philosophical foodie realization for ${city}.` };
+
+      this.thoughtLog.unshift({
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        query: `Autonomous thought on ${chosen.topic}`,
+        thoughtChain: [stage1, stage2, stage3]
+      });
+      if (this.thoughtLog.length > 12) this.thoughtLog.pop();
+
+      this.saveState();
+      return chosen;
+    }
+
+    // ------------------------------------------------------------------------
+    // ACTIVE LEARNING: Palo learns ANY concept or fact taught by user
+    // ------------------------------------------------------------------------
+    learnNewConcept(topic, fact, source = 'User teaching') {
+      if (!topic || !fact) return null;
+      const cleanKey = String(topic).toLowerCase().trim();
+      const existing = this.concepts[cleanKey];
+
+      const conceptObj = {
+        title: topic.trim(),
+        category: 'Learned Knowledge',
+        fact: fact.trim(),
+        tags: [cleanKey, ...fact.toLowerCase().split(/\s+/).filter(w => w.length > 4).slice(0, 3)],
+        confidence: existing ? Math.min(1.0, existing.confidence + 0.1) : 0.92,
+        learnedAt: source,
+        updatedAt: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      };
+
+      this.concepts[cleanKey] = conceptObj;
+
+      // Add episodic memory
+      this.memories.unshift({
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        fact: `Learned concept “${topic}”: ${fact}`,
+        tag: 'concept'
+      });
+      if (this.memories.length > 20) this.memories.pop();
+
+      // Boost ML engine XP
+      this.ml.genome.xp += 75;
+      this.ml.recalculateLevel();
+      this.ml.genome.recentLearnings.unshift({
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        summary: `Brain Learned Concept: “${topic}” · +75 XP`,
+        xp: 75
+      });
+      if (this.ml.genome.recentLearnings.length > 8) this.ml.genome.recentLearnings.pop();
+      this.ml.saveGenome();
+
+      this.saveState();
+      return conceptObj;
+    }
+
+    recordMemory(fact, tag = 'user_fact') {
+      if (!fact) return;
+      this.memories.unshift({
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        fact,
+        tag
+      });
+      if (this.memories.length > 20) this.memories.pop();
+      this.saveState();
+    }
   }
 
   const paloML = new PaloMLTasteEngine();
+  const paloBrain = new PaloCognitiveBrain(paloML);
 
   // --------------------------------------------------------------------------
   // 3. HINDI & HINGLISH CULINARY DICTIONARY & CONVERSATIONAL INTELLIGENCE
@@ -1141,7 +1478,7 @@
                   ⚡ Lvl <span id="paloLevelNum">1</span> · <span id="paloXpNum">40</span> XP
                 </button>
               </div>
-              <p class="paloSubtitle">Your Adaptive Culinary Companion · 🇮🇳 Hindi Accent · 🌐 Web Learner</p>
+              <p class="paloSubtitle">Your Adaptive Food Companion · 🧠 Cognitive Brain · 🇮🇳 Hindi Accent · 🌐 Web Learner</p>
             </div>
           </div>
           <div class="paloHeaderActions">
@@ -1157,8 +1494,17 @@
         <!-- Palo Live Message -->
         <div class="paloSpeechBody">
           <p id="paloMessageText" class="paloMessageText">
-            Hi! I’m Palo, your food pet. I learn what you love and scan latest diner reviews to pick your next great meal!
+            Hi! I’m Palo, your food pet. I have my own cognitive brain to think, learn food concepts, and reason through diner reviews!
           </p>
+        </div>
+
+        <!-- Live Cognitive Thinking Stream (Palo's Own Brain in Action!) -->
+        <div id="paloThoughtBox" class="paloThoughtBox" style="display:none;">
+          <div class="paloThoughtHeader" id="paloThoughtToggle" role="button" tabindex="0">
+            <span class="paloThoughtBadge">🧠 Palo's Train of Thought</span>
+            <span class="paloThoughtState" id="paloThoughtState">Reasoning active</span>
+          </div>
+          <div class="paloThoughtSteps" id="paloThoughtSteps"></div>
         </div>
 
         <!-- Latest Review Citation Card (Populated on recommendations) -->
@@ -1170,6 +1516,7 @@
         <!-- Quick Suggestions Chips (English & Hinglish) -->
         <div class="paloChipRail" aria-label="Quick requests">
           <button type="button" data-palo-action="foryou">✨ Pick For Me</button>
+          <button type="button" data-palo-action="ponder">💭 Ponder & Think</button>
           <button type="button" data-palo-action="websearch">🌐 Web Search & Learn</button>
           <button type="button" data-palo-dish="mast biryani">🍛 Mast Biryani</button>
           <button type="button" data-palo-dish="kuch teekha">🌶️ Chatpata & Teekha</button>
@@ -1180,7 +1527,7 @@
           <button type="button" data-palo-dish="date night">🍷 Romantic Date</button>
           <button type="button" data-palo-dish="dosto ke sath">🎉 Dosto ke Sath</button>
           <button type="button" data-palo-action="reviews">💬 Top Reviews</button>
-          <button type="button" data-palo-action="brain">🧠 What I've Learned</button>
+          <button type="button" data-palo-action="brain">🧠 Inspect Brain</button>
         </div>
 
         <!-- Results Deck -->
@@ -1231,14 +1578,19 @@
   const moodPill = document.getElementById('paloMoodPill');
   const sparkles = document.getElementById('paloSparkles');
 
+  const thoughtBox = document.getElementById('paloThoughtBox');
+  const thoughtSteps = document.getElementById('paloThoughtSteps');
+  const thoughtToggle = document.getElementById('paloThoughtToggle');
+  const thoughtState = document.getElementById('paloThoughtState');
+
   let isBubbleOpen = true;
   let isListening = false;
   let recognitionInstance = null;
   let listenTimeout = null;
 
   function updateBrainStats() {
-    levelNum.textContent = paloML.genome.level;
-    xpNum.textContent = paloML.genome.xp;
+    if (levelNum) levelNum.textContent = paloML.genome.level;
+    if (xpNum) xpNum.textContent = paloML.genome.xp;
   }
   updateBrainStats();
 
@@ -1257,6 +1609,61 @@
     if (stateClass && stateClass !== 'is-idle' && stateClass !== 'is-listening' && stateClass !== 'is-thinking') {
       creature.classList.add('is-speaking');
     }
+  }
+
+  function renderThoughtBox(thoughtChain) {
+    if (!thoughtBox || !thoughtSteps) return;
+    if (!thoughtChain || !thoughtChain.length) {
+      thoughtBox.style.display = 'none';
+      return;
+    }
+    thoughtBox.style.display = 'block';
+    thoughtSteps.style.display = 'flex';
+    if (thoughtState) thoughtState.textContent = `${thoughtChain.length}-step reasoning`;
+    thoughtSteps.innerHTML = thoughtChain.map(step => `
+      <div class="paloThoughtStep">
+        <span class="paloThoughtIcon" aria-hidden="true">${esc(step.icon || '🧠')}</span>
+        <div>
+          <strong class="paloThoughtStage">${esc(step.stage)}</strong>
+          <p class="paloThoughtDesc">${esc(step.text)}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  thoughtToggle?.addEventListener('click', () => {
+    if (thoughtSteps) {
+      const isHidden = thoughtSteps.style.display === 'none';
+      thoughtSteps.style.display = isHidden ? 'flex' : 'none';
+      if (thoughtState) thoughtState.textContent = isHidden ? 'Expanded' : 'Collapsed';
+    }
+  });
+
+  function handlePonder() {
+    stopSpeaking();
+    stopListening();
+    brainDrawer.style.display = 'none';
+    resultsDeck.replaceChildren();
+    reviewCard.style.display = 'none';
+    if (webSearchCard) webSearchCard.style.display = 'none';
+
+    setPetState('is-thinking');
+    playCuteSound('think');
+    setPetMood('Pondering 💭');
+
+    const city = typeof cityName === 'function' ? cityName() : 'your city';
+    const epiphany = paloBrain.ponder(city);
+
+    renderThoughtBox(paloBrain.thoughtLog[0]?.thoughtChain || []);
+
+    setTimeout(() => {
+      setPetState('is-idle');
+      setPetMood(epiphany.emotion === 'joy' ? 'Excited! 🌟' : (epiphany.emotion === 'playful' ? 'Teekha & Fun! 🌶️' : 'Loving 🥰'));
+      messageText.textContent = epiphany.thought;
+      statusText.textContent = `Palo pondered: “${epiphany.topic}” · Cognitive IQ Level ${paloML.genome.level}`;
+      speakCute(epiphany.thought, epiphany.emotion);
+      updateBrainStats();
+    }, 350);
   }
 
   function triggerDelightAnimation() {
@@ -1319,6 +1726,13 @@
         </div>
       `;
     }
+
+    const thoughtChain = paloBrain.think(q, {
+      city,
+      venueCount: allVenues.length,
+      emotion: 'curious'
+    });
+    renderThoughtBox(thoughtChain);
 
     const reply = `Arrey waah! Maine web par search kiya aur “${q}” ke baare me naya swad seekh liya! Online foodie community bolti hai: ${data.summary}`;
     messageText.textContent = reply;
@@ -1387,6 +1801,62 @@
     if (isExplicitWebSearch) {
       const cleanTerm = query.replace(/^(?:web\s*search|search\s*web|google|internet\s*pe|search\s*internet|find\s*online|web\s*pe)\s*(?:for|pe)?\s*/i, '').trim() || 'trending food';
       executeWebSearch(cleanTerm, city, allVenues);
+      return;
+    }
+
+    // Check for explicit pondering request ("What are you thinking?", "Ponder", "Kuch socho")
+    if (/^(?:what are you thinking|think about food|kya soch rahe ho|kuch socho|socho|ponder)\b/i.test(query)) {
+      handlePonder();
+      input.value = '';
+      return;
+    }
+
+    // Check for explicit cognitive learning / teaching commands
+    const learnMatch = query.match(/^(?:palo[,:\s]+)?(?:learn(?:\s+that|\s+about)?|teach\s+palo|did\s+you\s+know(?:\s+that)?|remember\s+that|yaad\s+rakhna\s+ki|seekho)\s*[:\-]?\s*(.+)$/i);
+    if (learnMatch) {
+      const fullText = learnMatch[1].trim();
+      let topic = '';
+      let fact = fullText;
+
+      if (fullText.includes(':')) {
+        const parts = fullText.split(':');
+        topic = parts[0].trim();
+        fact = parts.slice(1).join(':').trim();
+      } else if (fullText.toLowerCase().includes(' is ')) {
+        const parts = fullText.split(/\s+is\s+/i);
+        topic = parts[0].trim();
+        fact = fullText;
+      } else if (fullText.toLowerCase().includes(' originated in ')) {
+        const parts = fullText.split(/\s+originated\s+in\s+/i);
+        topic = parts[0].trim();
+        fact = fullText;
+      } else {
+        const words = fullText.split(/\s+/);
+        topic = words.slice(0, Math.min(3, words.length)).join(' ');
+        fact = fullText;
+      }
+
+      setPetState('is-learning');
+      playCuteSound('learn');
+      setPetMood('Learning 🧠');
+
+      paloBrain.learnNewConcept(topic, fact, 'User taught in chat');
+      triggerLearningAnimation(`Brain Learned: ${topic}`);
+      updateBrainStats();
+
+      const thoughtChain = [
+        { stage: '1. Absorb Input', icon: '📥', text: `Received user culinary teaching on “${topic}”.` },
+        { stage: '2. Neural Encoding', icon: '🧠', text: `Encoded concept into semantic memory graph with high confidence.` },
+        { stage: '3. Synaptic Link', icon: '⚡', text: `Linked with taste genome affinities (+75 XP Brain Boost).` },
+        { stage: '4. Memory Secured', icon: '💾', text: `Persisted into long-term cognitive storage.` }
+      ];
+      renderThoughtBox(thoughtChain);
+
+      const reply = `Arrey waah! Maine apne brain me ye naya concept record kar liya! “${topic}” ab meri permanent memory me save ho gaya hai. Agli baar jab aap iske baare me poochhenge, toh mujhe poora yaad rahega! 🧠✨`;
+      messageText.textContent = reply;
+      statusText.textContent = `Palo learned “${topic}” · Cognitive Brain Level ${paloML.genome.level} (${paloML.genome.xp} XP)`;
+      speakCute(reply, 'joy');
+      input.value = '';
       return;
     }
 
@@ -1501,6 +1971,17 @@
       messageText.textContent = reply;
       statusText.textContent = `Showing ${matches.length} places with verified diner receipts.`;
 
+      // Palo Cognitive Brain Reasoning Pipeline
+      const emotion = detectEmotion(reply);
+      const thoughtChain = paloBrain.think(query, {
+        city,
+        topVenue: top.r,
+        mlScore: top.mlTasteScore,
+        venueCount: matches.length,
+        emotion
+      });
+      renderThoughtBox(thoughtChain);
+
       // Render top review card
       reviewCard.style.display = 'block';
       reviewCard.innerHTML = `
@@ -1554,14 +2035,63 @@
     const g = paloML.genome;
     const topCuisines = Object.entries(g.cuisines).sort((a, b) => b[1] - a[1]).slice(0, 5);
     const recent = g.recentLearnings || [];
+    const conceptEntries = Object.entries(paloBrain.concepts);
+    const memories = paloBrain.memories || [];
 
     brainDrawer.innerHTML = `
       <div class="paloBrainHead">
-        <h4>Palo's ML Taste Genome</h4>
-        <span class="paloXpTag">Level ${g.level} · ${g.xp} XP total</span>
+        <div>
+          <h4>Palo's Cognitive Brain & ML Genome</h4>
+          <span class="paloXpTag">Level ${g.level} · ${g.xp} XP</span>
+        </div>
+        <button type="button" class="paloCloseBrainBtn" id="paloCloseBrainBtnTop" aria-label="Close brain view">✕</button>
       </div>
-      <p class="paloBrainIntro">Palo uses continuous online reinforcement learning. Every like, dish rating, and review you inspect evolves these weights.</p>
-      
+
+      <div class="paloBrainStatsGrid">
+        <div class="paloStatCard">
+          <span class="paloStatVal">${g.level}</span>
+          <span class="paloStatLabel">Brain Level</span>
+        </div>
+        <div class="paloStatCard">
+          <span class="paloStatVal">${conceptEntries.length}</span>
+          <span class="paloStatLabel">Concepts</span>
+        </div>
+        <div class="paloStatCard">
+          <span class="paloStatVal">${memories.length}</span>
+          <span class="paloStatLabel">Memories</span>
+        </div>
+        <div class="paloStatCard">
+          <span class="paloStatVal">${paloBrain.totalThoughts}</span>
+          <span class="paloStatLabel">Thoughts</span>
+        </div>
+      </div>
+
+      <!-- Teach Palo's Brain Form -->
+      <div class="paloGenomeSection">
+        <h5>🎓 Teach Palo a New Concept</h5>
+        <p class="paloSectionSub">Teach Palo culinary history, dish origins, or secret food facts. Palo saves it in permanent cognitive memory and levels up (+75 XP)!</p>
+        <form class="paloTeachForm" id="paloTeachBrainForm">
+          <input type="text" id="paloTeachTopic" class="paloTeachInput" placeholder="Dish or concept (e.g. Gujarati Undhiyu, Neapolitan Pizza)" required maxlength="60" />
+          <textarea id="paloTeachFact" class="paloTeachTextarea" placeholder="Explain the origin, secret preparation, or truth..." required maxlength="240" rows="2"></textarea>
+          <button type="submit" class="paloTeachBtn" id="paloTeachSubmit">Teach Palo's Brain (+75 XP) 🧠</button>
+        </form>
+      </div>
+
+      <!-- Mastered Concept Cloud -->
+      <div class="paloGenomeSection">
+        <h5>💡 Mastered Culinary Concepts (${conceptEntries.length})</h5>
+        <p class="paloSectionSub">Tap any concept to inspect Palo's neural memory graph.</p>
+        <div class="paloConceptCloud">
+          ${conceptEntries.map(([key, c]) => `
+            <button type="button" class="paloConceptPill" data-palo-concept="${esc(key)}">
+              ${esc(c.title)}
+            </button>
+          `).join('')}
+        </div>
+        <div id="paloConceptDetailBox" class="paloConceptDetailBox" style="display:none;"></div>
+      </div>
+
+      <!-- ML Taste Preferences -->
       <div class="paloGenomeSection">
         <h5>Top Learned Cuisines</h5>
         <div class="paloAffinities">
@@ -1584,6 +2114,16 @@
         </div>
       </div>
 
+      <!-- Episodic Memories & Log -->
+      ${memories.length ? `
+        <div class="paloGenomeSection">
+          <h5>Episodic Memory Bank</h5>
+          <ul class="paloLogList">
+            ${memories.slice(0, 6).map(m => `<li><span class="paloLogTime">${esc(m.time)}</span> ${esc(m.fact)}</li>`).join('')}
+          </ul>
+        </div>
+      ` : ''}
+
       ${recent.length ? `
         <div class="paloGenomeSection">
           <h5>Recent Learning Events</h5>
@@ -1600,6 +2140,56 @@
 
     document.getElementById('paloCloseBrainBtn')?.addEventListener('click', () => {
       brainDrawer.style.display = 'none';
+    });
+    document.getElementById('paloCloseBrainBtnTop')?.addEventListener('click', () => {
+      brainDrawer.style.display = 'none';
+    });
+
+    const detailBox = document.getElementById('paloConceptDetailBox');
+    brainDrawer.querySelectorAll('.paloConceptPill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        const key = pill.dataset.paloConcept;
+        const concept = paloBrain.concepts[key];
+        if (concept && detailBox) {
+          brainDrawer.querySelectorAll('.paloConceptPill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          detailBox.style.display = 'block';
+          detailBox.innerHTML = `
+            <div class="paloConceptDetailHead">
+              <h6>${esc(concept.title)}</h6>
+              <span class="paloConceptCategory">${esc(concept.category || 'General')}</span>
+            </div>
+            <p class="paloConceptDetailFact">${esc(concept.fact)}</p>
+            <div class="paloConceptDetailMeta">
+              <span>Confidence: ${Math.round((concept.confidence || 0.95) * 100)}%</span>
+              <span>Source: ${esc(concept.learnedAt || 'Learning')}</span>
+            </div>
+          `;
+          playCuteSound('blip');
+        }
+      });
+    });
+
+    const teachForm = document.getElementById('paloTeachBrainForm');
+    teachForm?.addEventListener('submit', e => {
+      e.preventDefault();
+      const topicInput = document.getElementById('paloTeachTopic');
+      const factInput = document.getElementById('paloTeachFact');
+      const topic = topicInput?.value.trim();
+      const fact = factInput?.value.trim();
+      if (!topic || !fact) return;
+
+      paloBrain.learnNewConcept(topic, fact, 'Taught in Brain Drawer');
+      triggerLearningAnimation(`Brain Learned: ${topic}`);
+      updateBrainStats();
+      playCuteSound('learn');
+
+      const reply = `Maine seekh liya! “${topic}” mere permanent cognitive memory graph me add ho gaya hai! (+75 XP) 🧠✨`;
+      messageText.textContent = reply;
+      statusText.textContent = `Palo learned “${topic}” · Level ${paloML.genome.level}`;
+      speakCute(reply, 'joy');
+
+      renderBrainDrawer();
     });
   }
 
@@ -1668,6 +2258,8 @@
       if (act === 'foryou') {
         input.value = '';
         handleQuery(null, true);
+      } else if (act === 'ponder') {
+        handlePonder();
       } else if (act === 'websearch') {
         input.value = 'viral food trends';
         handleQuery('viral food trends', false, true);
@@ -1925,6 +2517,11 @@
     video.muted = true;
     video.play().catch(close);
   }
+
+  // Expose ML and Cognitive Brain on window for runtime testing & external controllers
+  window.paloML = paloML;
+  window.paloBrain = paloBrain;
+  window.PaloCognitiveBrain = PaloCognitiveBrain;
 
   showIntro();
 })();

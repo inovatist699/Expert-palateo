@@ -241,6 +241,17 @@ html{scrollbar-color:#519cab #c3e7f1}
 .paloSpeechBody{padding:14px 16px 8px;max-height:160px;overflow-y:auto;flex:none}
 .paloMessageText{font-size:13px;line-height:1.65;color:#20373b;margin:0;font-weight:550}
 
+/* Live Cognitive Thinking Monologue (Palo's Own Brain in Action) */
+.paloThoughtBox{margin:6px 16px 10px;padding:10px 12px;background:#f8faf9;border:1px solid #9fc1b8;border-left:4px solid #183b3e;border-radius:14px;box-shadow:0 2px 10px rgba(24,59,62,0.08);animation:paloSlideDown .2s ease-out}
+.paloThoughtHeader{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}
+.paloThoughtBadge{font-size:10px;font-weight:800;color:#183b3e;letter-spacing:.5px;text-transform:uppercase;display:flex;align-items:center;gap:4px}
+.paloThoughtState{font-size:9.5px;font-weight:700;color:#3f6963;background:#e2eeea;padding:2px 7px;border-radius:8px}
+.paloThoughtSteps{display:flex;flex-direction:column;gap:6px;margin-top:8px;padding-top:8px;border-top:1px dashed #cadcd6}
+.paloThoughtStep{display:flex;align-items:flex-start;gap:8px;font-size:11px}
+.paloThoughtIcon{font-size:13px;line-height:1.2;flex:none}
+.paloThoughtStage{display:block;font-size:10px;font-weight:800;color:#183b3e;text-transform:uppercase;letter-spacing:.4px}
+.paloThoughtDesc{margin:1px 0 0;color:#385752;line-height:1.4}
+
 /* Verified Review Citation Card */
 .paloReviewCard{margin:6px 16px 10px;padding:12px 14px;background:#fff9ea;border:1px solid #ffd875;border-left:4px solid #ffc64f;border-radius:14px;box-shadow:0 3px 10px rgba(255,198,79,0.18);animation:paloSlideDown .2s ease-out}
 .paloReviewHeader{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;gap:8px}
@@ -286,12 +297,42 @@ html{scrollbar-color:#519cab #c3e7f1}
 .paloFeedbackBtn:hover{background:#ffc64f;border-color:#ffc64f}
 .paloFeedbackBtn.active{background:#183b3e;color:#fff;border-color:#183b3e}
 
-/* ML Brain Inspection Drawer */
-.paloBrainDrawer{padding:14px 16px;background:#edf5f2;border-top:1px solid #c2d8d3;max-height:280px;overflow-y:auto;overscroll-behavior:contain}
-.paloBrainHead{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
-.paloBrainHead h4{font-size:14px;font-weight:800;color:#183b3e;margin:0}
-.paloXpTag{font-size:10px;font-weight:750;background:#ffc64f;color:#20373b;padding:3px 8px;border-radius:12px}
-.paloBrainIntro{font-size:11px;color:#55706c;line-height:1.5;margin:0 0 12px}
+/* ML & Cognitive Brain Drawer */
+.paloBrainDrawer{padding:14px 16px;background:#edf5f2;border-top:1px solid #c2d8d3;max-height:300px;overflow-y:auto;overscroll-behavior:contain}
+.paloBrainHead{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.paloBrainHead h4{font-size:13.5px;font-weight:800;color:#183b3e;margin:0}
+.paloXpTag{font-size:10px;font-weight:750;background:#ffc64f;color:#20373b;padding:3px 8px;border-radius:12px;margin-top:2px;display:inline-block}
+
+/* Cognitive Brain Drawer Stats Grid */
+.paloBrainStatsGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:12px}
+.paloStatCard{background:#ffffff;border:1px solid #c8ded8;border-radius:12px;padding:8px 4px;text-align:center}
+.paloStatVal{display:block;font-size:15px;font-weight:850;color:#183b3e;line-height:1.1}
+.paloStatLabel{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.4px;font-weight:750;color:#5a7b75;margin-top:2px}
+
+.paloSectionSub{font-size:10.5px;color:#55706c;line-height:1.45;margin:0 0 8px}
+
+/* Teach Form */
+.paloTeachForm{display:flex;flex-direction:column;gap:6px;background:#ffffff;padding:10px;border-radius:12px;border:1px solid #c2dbd4}
+.paloTeachInput,.paloTeachTextarea{border:1px solid #9dbbb4;border-radius:8px;padding:6px 9px;font:500 11.5px/1.3 "Plus Jakarta Sans",sans-serif;color:#183b3e;background:#fafcfb}
+.paloTeachInput:focus,.paloTeachTextarea:focus{outline:0;border-color:#ffc64f;box-shadow:0 0 0 2px rgba(255,198,79,0.25)}
+.paloTeachTextarea{resize:none}
+.paloTeachBtn{border:0;border-radius:10px;background:#183b3e;color:#ffffff;font:800 11px/1 "Plus Jakarta Sans",sans-serif;padding:8px 12px;cursor:pointer;transition:background-color .15s}
+.paloTeachBtn:hover{background:#ffc64f;color:#183b3e}
+
+/* Concept Cloud */
+.paloConceptCloud{display:flex;flex-wrap:wrap;gap:5px;max-height:130px;overflow-y:auto;padding-right:2px}
+.paloConceptPill{border:1px solid #9dc3ba;background:#ffffff;color:#1c423f;border-radius:12px;padding:4px 8px;font:700 10.5px/1 "Plus Jakarta Sans",sans-serif;cursor:pointer;transition:background-color .15s,transform .15s}
+.paloConceptPill:hover{background:#ffc64f;border-color:#ffc64f;transform:translateY(-1px)}
+.paloConceptPill.active{background:#183b3e;color:#fff;border-color:#183b3e}
+
+/* Concept Detail Box */
+.paloConceptDetailBox{margin-top:8px;padding:9px 11px;background:#ffffff;border:1px solid #73b8a6;border-left:3px solid #ffc64f;border-radius:10px;animation:paloSlideDown .15s ease-out}
+.paloConceptDetailHead{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px}
+.paloConceptDetailHead h6{margin:0;font-size:12px;font-weight:800;color:#183b3e}
+.paloConceptCategory{font-size:9.5px;font-weight:750;background:#d8efe8;color:#0b5749;padding:2px 6px;border-radius:8px}
+.paloConceptDetailFact{font-size:11px;color:#2c4b46;line-height:1.45;margin:0 0 6px}
+.paloConceptDetailMeta{display:flex;align-items:center;justify-content:space-between;font-size:9.5px;color:#678580;font-weight:600}
+
 .paloGenomeSection{margin-bottom:12px}
 .paloGenomeSection h5{font-size:11px;text-transform:uppercase;letter-spacing:.7px;font-weight:800;color:#35534f;margin:0 0 6px}
 .paloAffinities{display:flex;flex-direction:column;gap:5px}

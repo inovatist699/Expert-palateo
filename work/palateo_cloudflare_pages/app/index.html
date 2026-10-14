@@ -30626,7 +30626,7 @@ const cityCenters={
   Chandigarh:[30.7333,76.7794]
 };
 let state=load(), page='home', supabaseClient=null, discoverCuisine='all', discoverQuery='', homeCuisine='all', homeLimit=12, searchEventTimer=null, authRequired=true, homeView='map', selectedPinId=null, mapZoom=1, map3d=false;
-let selectedCity=state.selectedCity&&cityCenters[state.selectedCity]?state.selectedCity:'Ahmedabad',userLocation=null;
+let selectedCity=state.selectedCity&&cityCenters[state.selectedCity]?state.selectedCity:'Ahmedabad',userLocation=null,pureVegOnly=false,discoverSort='match';
 const LEGAL_VERSION='2026-10-14';
 let legalConsentBusy=false;
 function consentControls(){return '<div class="consentNotice"><p>Your account details, taste choices and activity are used for sign-in, personalised recommendations and cloud sync. Location is optional. Read the policies before choosing.</p><label class="consentChoice"><input id="legalTerms" type="checkbox" required><span>I agree to the <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.</span></label><label class="consentChoice"><input id="legalPrivacy" type="checkbox" required><span>I consent to the account, recommendation and sync processing described in the <a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. I can withdraw this consent by contacting Palateo.</span></label><p class="consentHelp">If you are under 18, use Palateo with a parent or guardian’s knowledge and permission.</p></div>'}
@@ -30639,7 +30639,7 @@ function legalMetadata(consent){
 function hasLegalConsent(user){const m=user?.user_metadata||{};return m.palateo_legal_version===LEGAL_VERSION&&m.palateo_privacy_consent===true}
 function useAccount(user){
  const id=user?.id||null;
- if(state.userId!==id||(!user&&(state.profile||state.onboarded))){state={selectedCity,userId:id,answers:{},feedback:{},dishFeedback:{},saves:[],follows:[],ai:{likes:0,dislikes:0,visits:0,signals:{}}};userLocation=null;dishRevision++;dishCalibrationIndex=0;dishSyncStatus='';lastCalibratedDish=null;detailRestaurantId=null}
+ if(state.userId!==id||(!user&&(state.profile||state.onboarded))){state={selectedCity,userId:id,answers:{},feedback:{},dishFeedback:{},saves:[],follows:[],ai:{likes:0,dislikes:0,visits:0,signals:{}}};userLocation=null;pureVegOnly=false;discoverSort='match';dishRevision++;dishCalibrationIndex=0;dishSyncStatus='';lastCalibratedDish=null;detailRestaurantId=null}
  currentUser=user;backendReady=!!user;authRequired=!user||!hasLegalConsent(user);state.userId=id;state.backendConnected=!!supabaseClient;
  if(user&&['auth','consent'].includes(page))page='home';
  persist();
@@ -30918,11 +30918,25 @@ function tasteModelAdjustment(r){
 /* Adaptive recommendation algorithm.
    Base content similarity -> feedback reinforcement -> social similarity -> exploration.
 */
+function restaurantDietaryEvidence(r){
+ const values=[...(Array.isArray(r.dietaryOptions)?r.dietaryOptions:[]),...(Array.isArray(r.dietary_options)?r.dietary_options:[]),...(r.t||[]),...(r.tags||[]),r.dietaryType,r.dietary_type].filter(value=>typeof value==='string').map(value=>value.toLowerCase().replace(/[^a-z]/g,''));
+ const has=options=>values.some(value=>options.includes(value));
+ const hasEgg=has(['egg','eggs','eggetarian','ovovegetarian','eggoptions']);
+ const hasNonVeg=has(['nonveg','nonvegetarian','nonvegetarianoptions','mixed','both']);
+ const pureClaim=r.isPureVeg===true||r.is_pure_veg===true||r.pure_veg===true||has(['pureveg','purevegetarian','vegetarianonly','vegonly','veganonly']);
+ const hasVeg=pureClaim||has(['veg','vegetarian','jain','vegan','vegetarianoptions','vegoptions','mixed','both']);
+ return {hasVeg,hasEgg,hasNonVeg,pureVegetarian:pureClaim&&!hasEgg&&!hasNonVeg};
+}
+function isPureVegRestaurant(r){return restaurantDietaryEvidence(r).pureVegetarian}
+function matchesDietaryPreference(r){
+ const evidence=restaurantDietaryEvidence(r),diet=state.answers?.diet;
+ return diet==='veg'?evidence.hasVeg:diet==='eggetarian'?(evidence.hasVeg||evidence.hasEgg):diet==='nonveg'?evidence.hasNonVeg:true;
+}
+function compareRecommendations(a,b){return b.score-a.score||(a.distanceKm??Infinity)-(b.distanceKm??Infinity)||String(a.id).localeCompare(String(b.id))}
 function rec(r){
 const a=state.answers||{},f=state.feedback||{},why=[];
 const list=v=>Array.isArray(v)?v.map(x=>String(x).toLowerCase().trim()):[];
 const cuisines=list(r.c||r.cuisines),ambience=list(r.a||r.ambience_tags),occasions=list(r.o||r.occasion_tags),tags=list(r.t||r.tags);
-const diet=list(r.dietaryOptions||r.dietary_options).map(x=>x.replace(/[^a-z]/g,''));
 const preferenceFactors=[];
 const addFactor=(label,weight,factor,matchLabel)=>{preferenceFactors.push({label,weight,factor});if(factor>0.45&&matchLabel)why.push(matchLabel);else if(factor<-.45)why.push(label+' differs from your preference')};
 const wordMatch=(values,terms)=>values.some(x=>terms.some(term=>x===term||x.includes(term)));
@@ -30937,12 +30951,9 @@ if(a.budget&&Object.hasOwn(budgetRanks,a.budget)&&Object.hasOwn(budgetRanks,r.p)
  const factor=gap===0?1:gap===1?-.15:-.8;
  addFactor('Price',20,factor,gap===0?'Budget fit':null);
 }
-const hasVeg=diet.some(x=>['veg','vegetarian','pureveg','jain','vegan','vegetarianonly','vegetarianoptions'].includes(x));
-const hasNonVeg=diet.some(x=>['nonveg','nonvegetarian','nonvegetarianoptions','mixed','both'].includes(x));
-const vegetarianOnly=diet.some(x=>['vegetarian','pureveg','jain','vegan','vegetarianonly'].includes(x));
-const hasEgg=diet.some(x=>['egg','eggs','eggetarian','ovovegetarian','eggoptions'].includes(x));
+const {hasVeg,hasNonVeg,hasEgg}=restaurantDietaryEvidence(r);
 const dietMatch=a.diet==='veg'?hasVeg:a.diet==='eggetarian'?(hasVeg||hasEgg):hasNonVeg;
-const dietConflict=(a.diet==='veg'&&(hasNonVeg||hasEgg)&&!hasVeg)||(a.diet==='eggetarian'&&hasNonVeg&&!hasVeg&&!hasEgg)||(a.diet==='nonveg'&&vegetarianOnly&&!hasNonVeg);
+const dietConflict=(a.diet==='veg'&&(hasNonVeg||hasEgg)&&!hasVeg)||(a.diet==='eggetarian'&&hasNonVeg&&!hasVeg&&!hasEgg)||(a.diet==='nonveg'&&hasVeg&&!hasNonVeg);
 if(['veg','eggetarian','nonveg'].includes(a.diet)){
  const known=dietMatch||dietConflict;
  addFactor('Dietary options',22,dietMatch?1:known?-1:0,a.diet==='eggetarian'?(hasEgg?'Egg options noted':'Vegetarian options suit your diet'):a.diet==='veg'?'Vegetarian options noted':'Non-vegetarian options noted');
@@ -30957,6 +30968,8 @@ if(a.occasion){const hit=occasions.includes(String(a.occasion).toLowerCase());ad
 if(a.spice&&a.spice!=='depends'&&r.s){const spice=String(r.s).toLowerCase(),wanted=String(a.spice).toLowerCase();addFactor('Spice level',8,spice===wanted?1:-.65,'Spice fit')}
 if(a.priority==='unique'){const unique=wordMatch([...ambience,...tags],['heritage','live music','unique','themed','brewpub']);addFactor('Experience',8,unique?1:0,unique?'Distinctive experience noted':null)}
 if(a.priority==='value'&&Object.hasOwn(budgetRanks,r.p)){const factor=budgetRanks[r.p]<=1?1:budgetRanks[r.p]===2?-.25:-.7;addFactor('Value',8,factor,factor>0?'Value fit':null)}
+const distanceKm=venueDistanceKm(r),travelRange=Number(a.distance);
+if(distanceKm!==null)addFactor('Distance',12,Math.max(0,1-distanceKm/(Number.isFinite(travelRange)&&travelRange>0?travelRange:10)),'Nearby · '+distanceKm.toFixed(1)+' km away');
 let totalWeight=preferenceFactors.reduce((sum,x)=>sum+x.weight,0),preferenceScore=totalWeight?preferenceFactors.reduce((sum,x)=>sum+x.factor*x.weight,0)/totalWeight:0;
 let s=55+preferenceScore*36;
 /* Rating and review count add a small confidence signal; they never override taste conflicts. */
@@ -30985,9 +30998,9 @@ if(f[r.id]==='visited'){s+=4;why.unshift('You visited this place')}
 if(dietConflict)s=Math.min(s,35);
 s=Math.max(1,Math.min(99,Math.round(s)));
 if(!why.length)why.push('Matches your overall palate');
-return {...r,description:r.description||(typeof r.why==='string'?r.why:''),score:s,why,matchBreakdown:preferenceFactors};
+return {...r,distanceKm,description:r.description||(typeof r.why==='string'?r.why:''),score:s,why,matchBreakdown:preferenceFactors};
 }
-function ranked(){return catalog.map(rec).sort((a,b)=>b.score-a.score)}
+function ranked(){return hasTasteProfile()?getActiveCatalog().filter(r=>isQualifiedVenue(r)&&matchesDietaryPreference(r)&&(!pureVegOnly||isPureVegRestaurant(r))&&withinTravelRange(r)).map(rec).sort(compareRecommendations):[]}
 let feedbackRevision=0;
 function restaurantFeatures(r){return [...new Set([...(r.c||[]),...(r.t||[]),...(r.a||[]),...(r.o||[]),...(r.review_insights||[])].map(x=>String(x).trim().toLowerCase()).filter(Boolean))]}
 function feedbackCount(){return (state.ai?.likes||0)+(state.ai?.dislikes||0)+(state.ai?.visits||0)}
@@ -31009,10 +31022,13 @@ function learn(r,type){
  rebuildLearning();persist();
 }
 function photo(r){const fallback='<svg class="venuePlaceholder" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V9h16v12M3 9l3-6h12l3 6M8 21v-7h8v7M3 9h18"/></svg>';const imgUrl=(r.photo&&r.photo.startsWith('https://'))?r.photo:resolveVenuePhoto(r);if(!imgUrl)return fallback;try{const url=new URL(imgUrl,location.href);if((url.protocol!=='https:'&&url.origin!==location.origin)||url.username||url.password)return fallback;return fallback+'<img src="'+esc(url.href)+'" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=\'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80\';">'}catch(e){return fallback}}
+function pureVegFilterControl(){return `<button type="button" class="filterChip ${pureVegOnly?'active':''}" aria-pressed="${pureVegOnly}" aria-describedby="dietaryFilterNote" data-action="pure-veg">Pure veg restaurants</button>`}
+function dietaryFilterNote(){return `<p class="feedNote" id="dietaryFilterNote">${pureVegOnly?'Only explicitly listed vegetarian-only kitchens. Mixed and unverified kitchens are hidden.':state.answers?.diet==='veg'?'Showing listed vegetarian options. Choose Pure veg to exclude mixed kitchens.':'Your dietary preference and travel range stay applied to these results.'}</p>`}
+function togglePureVegFilter(){pureVegOnly=!pureVegOnly;homeLimit=12;selectedPinId=null;go(page,{keepScroll:true});document.querySelector('[data-action="pure-veg"]')?.focus({preventScroll:true})}
 function card(r){
  const saved=state.saves.includes(r.id),f=state.feedback[r.id],id=esc(r.id);
  const place=r.area||r.city||cityName(),rating=Number(r.rating).toFixed(1),reviews=Number(r.review_count)||0;
- return `<article class="card restaurant-card" data-place-id="${id}" id="card-${id}"><div class="resthead"><button type="button" class="photo" data-action="open-place" data-rest-id="${id}" aria-label="Explore ${esc(r.name)}">${photo(r)}</button><div><h3 class="restname"><button type="button" class="restnameButton" data-action="open-place" data-rest-id="${id}">${esc(r.name)}</button></h3><div class="meta">${esc(place)} · ${esc(displayPrice(r))}<br>★ ${rating}${reviews?" · "+reviews.toLocaleString()+" ratings":""}${r.ratingSource?" · "+esc(r.ratingSource):""}</div></div><div class="match ${r.score>=75?"strong":r.score>=50?"mixed":"low"}" title="Estimated taste fit from your quiz and feedback"><b>${r.score}%</b><span>PALATE MATCH</span></div></div><div class="tags">${[...new Set([...(r.c||[]),...(r.t||[])])].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div><p class="fitReason"><b>Why it fits</b> · ${esc(r.why[0])}</p><details class="why"><summary>Your match explained</summary><p>${esc(r.why.join(" · "))}<br><br>An estimate from your quiz and active feedback. Tap a selected rating again to undo it. Venue details and prices can change; confirm before visiting.</p></details><div class="actions"><button type="button" data-rest-action="like" data-rest-id="${id}" aria-pressed="${f==='like'}" aria-label="${f==='like'?'Unlike':'Like'} ${esc(r.name)}">${f==='like'?'♥ Undo like':'♡ Like'}</button><button type="button" data-rest-action="dislike" data-rest-id="${id}" aria-pressed="${f==='dislike'}" aria-label="${f==='dislike'?'Undo not for me':'Not for me'}: ${esc(r.name)}">${f==='dislike'?'Undo pass':'Not for me'}</button><button type="button" class="dark" data-rest-action="save" data-rest-id="${id}" aria-label="${saved?'Remove':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button></div><div class="actions"><button type="button" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}" aria-label="${f==='visited'?'Undo visited':'I visited'}: ${esc(r.name)}">${f==='visited'?'Undo visit':'I visited'}</button><button type="button" data-action="view-pin" data-rest-id="${id}" aria-label="Locate ${esc(r.name)} on your map">On your map</button><button type="button" data-rest-action="maps" data-rest-id="${id}" aria-label="Directions to ${esc(r.name)}">Directions ↗</button></div></article>`
+ return `<article class="card restaurant-card" data-place-id="${id}" id="card-${id}"><div class="resthead"><button type="button" class="photo" data-action="open-place" data-rest-id="${id}" aria-label="Explore ${esc(r.name)}">${photo(r)}</button><div><h3 class="restname"><button type="button" class="restnameButton" data-action="open-place" data-rest-id="${id}">${esc(r.name)}</button></h3><div class="meta">${esc(place)}${Number.isFinite(r.distanceKm)?' · ~'+r.distanceKm.toFixed(1)+' km away':''} · ${esc(displayPrice(r))}<br>★ ${rating}${reviews?" · "+reviews.toLocaleString()+" ratings":""}${r.ratingSource?" · "+esc(r.ratingSource):""}</div></div><div class="match ${r.score>=75?"strong":r.score>=50?"mixed":"low"}" title="Estimated taste fit from your quiz and feedback"><b>${r.score}%</b><span>PALATE MATCH</span></div></div><div class="tags">${[...new Set([...(r.c||[]),...(r.t||[])])].slice(0,3).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div><p class="fitReason"><b>Why it fits</b> · ${esc(r.why[0])}</p><details class="why"><summary>Your match explained</summary><p>${esc(r.why.join(" · "))}<br><br>An estimate from your quiz and active feedback. Tap a selected rating again to undo it. Venue details and prices can change; confirm before visiting.</p></details><div class="actions"><button type="button" data-rest-action="like" data-rest-id="${id}" aria-pressed="${f==='like'}" aria-label="${f==='like'?'Unlike':'Like'} ${esc(r.name)}">${f==='like'?'♥ Undo like':'♡ Like'}</button><button type="button" data-rest-action="dislike" data-rest-id="${id}" aria-pressed="${f==='dislike'}" aria-label="${f==='dislike'?'Undo not for me':'Not for me'}: ${esc(r.name)}">${f==='dislike'?'Undo pass':'Not for me'}</button><button type="button" class="dark" data-rest-action="save" data-rest-id="${id}" aria-label="${saved?'Remove':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button></div><div class="actions"><button type="button" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}" aria-label="${f==='visited'?'Undo visited':'I visited'}: ${esc(r.name)}">${f==='visited'?'Undo visit':'I visited'}</button><button type="button" data-action="view-pin" data-rest-id="${id}" aria-label="Locate ${esc(r.name)} on your map">On your map</button><button type="button" data-rest-action="maps" data-rest-id="${id}" aria-label="Directions to ${esc(r.name)}">Directions ↗</button></div></article>`
 }
 function go(p,{keepScroll=false}={}){
 if(!currentUser){requireAuthGate();return}
@@ -31369,6 +31385,7 @@ const viewTabs=`<div class="viewSwitcher" role="group" aria-label="Choose recomm
 </div>`;
 
 const filterPills=`<div class="filterChips homeFilterChips" role="group" aria-label="Filter recommendations by category">
+${pureVegFilterControl()}
 <button type="button" class="filterChip ${homeCuisine==='all'?'active':''}" aria-pressed="${homeCuisine==='all'}" data-action="home-cuisine" data-cuisine="all">For you</button>
 <button type="button" class="filterChip ${homeCuisine==='Cafe'?'active':''}" aria-pressed="${homeCuisine==='Cafe'}" data-action="home-cuisine" data-cuisine="Cafe">Cafés</button>
 <button type="button" class="filterChip ${homeCuisine==='Dessert'?'active':''}" aria-pressed="${homeCuisine==='Dessert'}" data-action="home-cuisine" data-cuisine="Dessert">Desserts</button>
@@ -31384,7 +31401,7 @@ const selectedVenue=selectedPinId?allRanked.find(r=>r.id===selectedPinId):null;
 const mappedPlaces=filtered.filter(r=>hasCoordinates(r));
 const mapComponent=`<div class="zestMapContainer" id="zestMapContainer"><div class="zestMapStage ${map3d?'is3d':''}" id="zestMapStage"><div class="homeMapToolbar">${viewTabs}<button type="button" class="homeSearch" data-action="navigate" data-page="discover" aria-label="Search restaurants in ${esc(cityName())}"><svg class="smallIcon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Search</span></button></div><div class="zestMapLegend"><span><i style="background:#20373b"></i> 80%+ match</span><span><i style="background:#ffc64f"></i> Visited</span><span><i style="background:#519cab"></i> Saved</span></div>${renderZestMapSvg(mappedPlaces,cityName(),selectedPinId)}<div class="zestMapControls"><button type="button" class="zestMapBtn zestMapBtn3d ${map3d?'active':''}" data-action="toggle-3d" aria-label="Toggle map perspective" aria-pressed="${map3d}" title="${map3d?'Switch to flat view':'Switch to perspective view'}">${map3d?'3D':'2D'}</button><button type="button" class="zestMapBtn" data-action="zoom-in" aria-label="Zoom in">+</button><button type="button" class="zestMapBtn" data-action="zoom-out" aria-label="Zoom out">−</button><button type="button" class="zestMapBtn" data-action="zoom-reset" aria-label="Reset zoom"><svg class="smallIcon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6"/><path d="M12 2v5m0 10v5M2 12h5m10 0h5"/></svg></button></div></div>${selectedVenue?renderZestSheet(selectedVenue):''}<p class="mapNotice">${mappedPlaces.length} places mapped · ${visitedCount} visited. Illustrative area overview; use Directions for navigation.</p></div>`;
 
-const emptyMessage=homeCuisine==='Visited'
+const emptyMessage=pureVegOnly?'<div class="empty"><h2>No listed pure veg matches</h2><p>Try another category or turn off Pure veg. Your dietary preference and travel range still apply.</p></div>':homeCuisine==='Visited'
   ?'<div class="empty"><h2>Your Dining Map is waiting</h2><p>Tap “I visited” on places you’ve tried in '+esc(cityName())+' to automatically build your personal dining map.</p></div>'
   :homeCuisine==='Saved'
   ?'<div class="empty"><h2>No saved spots yet</h2><p>Tap “Save” on any restaurant to pin your shortlist to your Palate Map.</p></div>'
@@ -31392,16 +31409,16 @@ const emptyMessage=homeCuisine==='Visited'
 
 const cardsContent=rs.length?rs.map(card).join(''):emptyMessage;
 
-document.getElementById('root').innerHTML=`<section class="screen home-screen ${homeView==='map'?'homeMapView':'homeListView'}">${homeView==='map'?mapComponent:`<div class="homeListToolbar">${viewTabs}<button type="button" class="homeSearch" data-action="navigate" data-page="discover">Search places</button></div>`}<div class="homeRecommendations"><div class="section"><h1>For you</h1>${topPick?`<div class="confidence">${topPick.score}%<small> top taste match</small></div>`:`<span>${filtered.length} places</span>`}</div>${filterPills}<div class="restaurantGrid" aria-label="Recommendations for your taste">${cardsContent}</div>${showMoreButton}${travelRangeNote()}<p class="homeEstimateNote">Matches are estimates from your taste quiz and feedback.</p></div></section>`
+document.getElementById('root').innerHTML=`<section class="screen home-screen ${homeView==='map'?'homeMapView':'homeListView'}">${homeView==='map'?mapComponent:`<div class="homeListToolbar">${viewTabs}<button type="button" class="homeSearch" data-action="navigate" data-page="discover">Search places</button></div>`}<div class="homeRecommendations"><div class="section"><h1>For you</h1>${topPick?`<div class="confidence">${topPick.score}%<small> top taste match</small></div>`:`<span>${filtered.length} places</span>`}</div>${filterPills}${dietaryFilterNote()}<div class="restaurantGrid" aria-label="Recommendations for your taste">${cardsContent}</div>${showMoreButton}${travelRangeNote()}<p class="homeEstimateNote">Matches are estimates from your taste quiz and feedback.</p></div></section>`
 }
 function summaryChips(){let a=state.answers||{};return [...preferredCuisines(a).map(x=>cuisineLabels[x]||x),a.diet&&a.diet!=='any'?dietLabel(a.diet):null,a.budget?price(a.budget):null,...preferredVibes(a),a.spice].filter(Boolean).map(x=>`<span class="chip">${esc(x)}</span>`).join('')}
 function discover(){
-document.getElementById('root').innerHTML=`<section class="screen discover-screen"><div class="hero"><div class="eyebrow">A little inspiration</div><h1>Find your next favourite.</h1><p>Search cafés and restaurants in ${cityName()}. Filter by what you’re craving and see how each place fits your palate.</p></div>${travelRangeNote()}<div class="discoverTools"><input class="search" id="q" aria-label="Search restaurants" placeholder="Restaurant, cuisine, area…" value="${esc(discoverQuery)}" data-action="filter"><label class="sortControl">Sort by<select id="discoverSort" aria-label="Sort restaurants" data-action="sort"><option value="match">Best match</option><option value="rating">Top rated</option><option value="name">Name A–Z</option></select></label></div><div class="filterChips" role="group" aria-label="Filter by cuisine or place type"><button type="button" class="filterChip ${discoverCuisine==='all'?'active':''}" id="filter-all" aria-pressed="${discoverCuisine==='all'}" data-action="cuisine" data-cuisine="all">For you</button><button type="button" class="filterChip ${discoverCuisine==='Cafe'?'active':''}" id="filter-cafe" aria-pressed="${discoverCuisine==='Cafe'}" data-action="cuisine" data-cuisine="Cafe">Cafés</button><button type="button" class="filterChip ${discoverCuisine==='Dessert'?'active':''}" id="filter-dessert" aria-pressed="${discoverCuisine==='Dessert'}" data-action="cuisine" data-cuisine="Dessert">Desserts</button><button type="button" class="filterChip ${discoverCuisine==='Restaurant'?'active':''}" id="filter-restaurant" aria-pressed="${discoverCuisine==='Restaurant'}" data-action="cuisine" data-cuisine="Restaurant">Restaurants</button><button type="button" class="filterChip ${discoverCuisine==='Fast food'?'active':''}" id="filter-fast-food" aria-pressed="${discoverCuisine==='Fast food'}" data-action="cuisine" data-cuisine="Fast food">Quick bites</button><button type="button" class="filterChip ${discoverCuisine==='Food court'?'active':''}" id="filter-food-court" aria-pressed="${discoverCuisine==='Food court'}" data-action="cuisine" data-cuisine="Food court">Food courts</button><button type="button" class="filterChip ${discoverCuisine==='Gujarati'?'active':''}" id="filter-gujarati" aria-pressed="${discoverCuisine==='Gujarati'}" data-action="cuisine" data-cuisine="Gujarati">Gujarati</button><button type="button" class="filterChip ${discoverCuisine==='Italian'?'active':''}" id="filter-italian" aria-pressed="${discoverCuisine==='Italian'}" data-action="cuisine" data-cuisine="Italian">Italian</button><button type="button" class="filterChip ${discoverCuisine==='Indian'?'active':''}" id="filter-indian" aria-pressed="${discoverCuisine==='Indian'}" data-action="cuisine" data-cuisine="Indian">Indian</button></div><div class="section discoverSummary"><h2>Rated places around ${cityName()}</h2><span id="resultCount"></span></div><div id="list" class="restaurantGrid"></div></section>`;
+document.getElementById('root').innerHTML=`<section class="screen discover-screen"><div class="hero"><div class="eyebrow">A little inspiration</div><h1>Find your next favourite.</h1><p>Search cafés and restaurants in ${cityName()}. Filter by what you’re craving and see how each place fits your palate.</p></div>${travelRangeNote()}<div class="discoverTools"><input class="search" id="q" aria-label="Search restaurants" placeholder="Restaurant, cuisine, area…" value="${esc(discoverQuery)}" data-action="filter"><label class="sortControl">Sort by<select id="discoverSort" aria-label="Sort restaurants" data-action="sort"><option value="match" ${discoverSort==='match'?'selected':''}>Best match</option><option value="distance" ${discoverSort==='distance'?'selected':''} ${userLocation?'':'disabled'}>Nearest to me</option><option value="rating" ${discoverSort==='rating'?'selected':''}>Top rated</option><option value="name" ${discoverSort==='name'?'selected':''}>Name A–Z</option></select></label></div><div class="filterChips" role="group" aria-label="Filter recommendations">${pureVegFilterControl()}<button type="button" class="filterChip ${discoverCuisine==='all'?'active':''}" id="filter-all" aria-pressed="${discoverCuisine==='all'}" data-action="cuisine" data-cuisine="all">For you</button><button type="button" class="filterChip ${discoverCuisine==='Cafe'?'active':''}" id="filter-cafe" aria-pressed="${discoverCuisine==='Cafe'}" data-action="cuisine" data-cuisine="Cafe">Cafés</button><button type="button" class="filterChip ${discoverCuisine==='Dessert'?'active':''}" id="filter-dessert" aria-pressed="${discoverCuisine==='Dessert'}" data-action="cuisine" data-cuisine="Dessert">Desserts</button><button type="button" class="filterChip ${discoverCuisine==='Restaurant'?'active':''}" id="filter-restaurant" aria-pressed="${discoverCuisine==='Restaurant'}" data-action="cuisine" data-cuisine="Restaurant">Restaurants</button><button type="button" class="filterChip ${discoverCuisine==='Fast food'?'active':''}" id="filter-fast-food" aria-pressed="${discoverCuisine==='Fast food'}" data-action="cuisine" data-cuisine="Fast food">Quick bites</button><button type="button" class="filterChip ${discoverCuisine==='Food court'?'active':''}" id="filter-food-court" aria-pressed="${discoverCuisine==='Food court'}" data-action="cuisine" data-cuisine="Food court">Food courts</button><button type="button" class="filterChip ${discoverCuisine==='Gujarati'?'active':''}" id="filter-gujarati" aria-pressed="${discoverCuisine==='Gujarati'}" data-action="cuisine" data-cuisine="Gujarati">Gujarati</button><button type="button" class="filterChip ${discoverCuisine==='Italian'?'active':''}" id="filter-italian" aria-pressed="${discoverCuisine==='Italian'}" data-action="cuisine" data-cuisine="Italian">Italian</button><button type="button" class="filterChip ${discoverCuisine==='Indian'?'active':''}" id="filter-indian" aria-pressed="${discoverCuisine==='Indian'}" data-action="cuisine" data-cuisine="Indian">Indian</button></div>${dietaryFilterNote()}<div class="section discoverSummary"><h2>Rated places around ${cityName()}</h2><span id="resultCount"></span></div><div id="list" class="restaurantGrid"></div></section>`;
 drawDiscover();
 }
 function setDiscoverCuisine(cuisine){
 discoverCuisine=cuisine;
-document.querySelectorAll('.filterChip').forEach(button=>{const selected=button.id==='filter-'+(cuisine==='all'?'all':String(cuisine).toLowerCase().replace(/[^a-z0-9]+/g,'-'));button.classList.toggle('active',selected);button.setAttribute('aria-pressed',String(selected))});
+document.querySelectorAll('[data-action="cuisine"]').forEach(button=>{const selected=button.id==='filter-'+(cuisine==='all'?'all':String(cuisine).toLowerCase().replace(/[^a-z0-9]+/g,'-'));button.classList.toggle('active',selected);button.setAttribute('aria-pressed',String(selected))});
 drawDiscover();
 }
 function drawDiscover(query){
@@ -31417,7 +31434,8 @@ return textMatches&&cuisineMatches;
 });
 if(sort==='rating')matches.sort((a,b)=>(b.rating??-1)-(a.rating??-1)||b.score-a.score);
 if(sort==='name')matches.sort((a,b)=>a.name.localeCompare(b.name));
-list.innerHTML=matches.length?matches.map(card).join(''):'<div class="empty"><h2>No places found</h2><p>Try another search or clear a filter to see more '+esc(cityName())+'-area places.</p></div>';
+if(sort==='distance')matches.sort((a,b)=>(a.distanceKm??Infinity)-(b.distanceKm??Infinity)||compareRecommendations(a,b));
+list.innerHTML=matches.length?matches.map(card).join(''):'<div class="empty"><h2>No matching places found</h2><p>Try another search or turn off a filter. Your dietary preference and travel range still apply; places without matching dietary information are hidden.</p></div>';
 const count=document.getElementById('resultCount');
 if(count)count.textContent=matches.length===1?'1 place':matches.length+' places';
 if(searchEventTimer)clearTimeout(searchEventTimer);
@@ -32037,7 +32055,7 @@ if(!types.length)types.push(/\b(cafe|coffee|tea\s+(?:lounge|house|room))\b/i.tes
 const cuisines=[...new Set([...types,...(r.cuisines||[])])],placeTags=[...new Set([...(r.tags||[]),...types])];
 const emoji=types.includes("Cafe")?"☕":types.includes("Fast food")?"🥪":types.includes("Food court")?"🍜":"🍽️";
 const stableId=(r.external_provider==='palateo-curated'||r.external_provider==='palateo_demo'||(r.external_place_id&&!r.external_place_id.startsWith('node/')))?r.external_place_id:r.id;
-  return {id:stableId,dbId:r.id,name:r.name,area:r.area||r.city||"Ahmedabad",address:r.address||"",city:r.city||"Ahmedabad",latitude:r.latitude,longitude:r.longitude,c:cuisines,p:r.price??null,displayPrice:r.price_display||undefined,rating:r.rating==null?null:Number(r.rating),review_count:r.review_count,ratingSource:r.external_place_id?.startsWith('dno-')?'Swiggy Dineout':r.external_place_id?.startsWith('zom-')?'Zomato':null,t:placeTags,a:r.ambience_tags||[],o:r.occasion_tags||[],s:r.spice_profile||null,dietaryOptions:Array.isArray(r.dietary_options)?r.dietary_options:[],business_status:r.business_status||r.businessStatus||r.operational_status||r.status||null,permanently_closed:r.permanently_closed??r.is_permanently_closed??false,emoji,description:typeof r.description==='string'?r.description:'',photo:resolveVenuePhoto(r),maps:r.maps||r.maps_url||("https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((r.name||"")+" "+(r.area||"")+" "+(r.city||selectedCity))),review_insights:Array.isArray(r.review_insights)?r.review_insights:[],why:["Place matched to your palate"]};
+  return {id:stableId,dbId:r.id,name:r.name,area:r.area||r.city||"Ahmedabad",address:r.address||"",city:r.city||"Ahmedabad",latitude:r.latitude,longitude:r.longitude,c:cuisines,p:r.price??null,displayPrice:r.price_display||undefined,rating:r.rating==null?null:Number(r.rating),review_count:r.review_count,ratingSource:r.external_place_id?.startsWith('dno-')?'Swiggy Dineout':r.external_place_id?.startsWith('zom-')?'Zomato':null,t:placeTags,a:r.ambience_tags||[],o:r.occasion_tags||[],s:r.spice_profile||null,dietaryOptions:Array.isArray(r.dietary_options)?r.dietary_options:[],isPureVeg:r.is_pure_veg===true||r.isPureVeg===true||r.pure_veg===true,dietaryType:r.dietary_type||r.dietaryType||null,business_status:r.business_status||r.businessStatus||r.operational_status||r.status||null,permanently_closed:r.permanently_closed??r.is_permanently_closed??false,emoji,description:typeof r.description==='string'?r.description:'',photo:resolveVenuePhoto(r),maps:r.maps||r.maps_url||("https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((r.name||"")+" "+(r.area||"")+" "+(r.city||selectedCity))),review_insights:Array.isArray(r.review_insights)?r.review_insights:[],why:["Place matched to your palate"]};
 }
 function updateMode(){
 const modeButton=document.getElementById('mode');
@@ -32384,6 +32402,7 @@ document.addEventListener('click',event=>{
   case 'onboard-step': if(Number.isInteger(step))onboard(step); break;
   case 'next-step': if(Number.isInteger(step))nextQ(step); break;
   case 'cuisine': setDiscoverCuisine(d.cuisine); break;
+  case 'pure-veg': togglePureVegFilter(); break;
   case 'home-cuisine': if(d.cuisine)setHomeCuisine(d.cuisine); break;
   case 'load-more-home': loadMoreHome(); break;
   case 'home-view': if(d.view){homeView=d.view;home();document.querySelector('[data-action="home-view"][data-view="'+d.view+'"]')?.focus({preventScroll:true})} break;
@@ -32425,7 +32444,7 @@ document.addEventListener('input',event=>{
 document.addEventListener('change',event=>{
  const target=event.target;
  if(!(target instanceof Element))return;
- if(target.dataset.action==='sort')drawDiscover();
+ if(target.dataset.action==='sort'){discoverSort=target.value;drawDiscover();}
  if(target.dataset.action==='city-select')setCity(target.value);
 });
 document.addEventListener('submit',event=>{
@@ -32492,18 +32511,17 @@ if(currentUser)await syncInteraction(restaurant,'directions');
  function getActiveCatalog(){const source=[...dbCatalog,...catalog,...vadodaraCatalog,...allMetroVenues],seen=new Set();return source.filter(r=>{const city=r.city||'Ahmedabad';if(city!==selectedCity)return false;const key=(r.name||'').trim().toLowerCase()+'|'+city.toLowerCase();if(seen.has(key))return false;seen.add(key);return true})}
 function travelRangeNote(){
  const range=Number(state.answers?.distance);if(!Number.isFinite(range)||range<=0)return '';
- return '<p class="feedNote">'+(userLocation?'Showing places with known coordinates within '+range+' km. Select your city again to browse the whole city.':'Allow location access using “Use my location” to apply your travel range. Currently browsing the whole city.')+'</p>';
+ return '<p class="feedNote">'+(userLocation?'Showing places within '+range+' km in a straight line from your location. Places without coordinates are hidden.':'Allow location access using “Use my location” to apply your travel range. Currently browsing the whole city.')+'</p>';
 }
-function withinTravelRange(r){
- const range=Number(state.answers?.distance);
- if(!userLocation||!Number.isFinite(range)||range<=0)return true;
- if(r.latitude==null||r.longitude==null)return false;
- const lat=Number(r.latitude),lon=Number(r.longitude);if(!Number.isFinite(lat)||!Number.isFinite(lon)||Math.abs(lat)>90||Math.abs(lon)>180)return false;
+function venueDistanceKm(r){
+ const valid=(value,max)=>(typeof value==='number'||typeof value==='string'&&value.trim()!=='')&&Number.isFinite(Number(value))&&Math.abs(Number(value))<=max;
+ if(!userLocation||!valid(userLocation.lat,90)||!valid(userLocation.lon,180)||!valid(r.latitude,90)||!valid(r.longitude,180))return null;
+ const lat=Number(r.latitude),lon=Number(r.longitude);
  const rad=x=>x*Math.PI/180,dLat=rad(lat-userLocation.lat),dLon=rad(lon-userLocation.lon);
  const a=Math.sin(dLat/2)**2+Math.cos(rad(userLocation.lat))*Math.cos(rad(lat))*Math.sin(dLon/2)**2;
- return 6371*2*Math.atan2(Math.sqrt(a),Math.sqrt(Math.max(0,1-a)))<=range;
+ return 6371*2*Math.atan2(Math.sqrt(Math.min(1,a)),Math.sqrt(Math.max(0,1-a)));
 }
-ranked=function(){return hasTasteProfile()?getActiveCatalog().filter(r=>isQualifiedVenue(r)&&withinTravelRange(r)).map(rec).sort((a,b)=>b.score-a.score):[];};
+function withinTravelRange(r){const range=Number(state.answers?.distance);if(!userLocation||!Number.isFinite(range)||range<=0)return true;const km=venueDistanceKm(r);return km!==null&&km<=range}
 rate=rateV5;saveRest=saveV5;follow=followV5;maps=mapsV5;finish=finishV5;
 supabaseAuthListenerReady=false;
 function startAuthListener(){

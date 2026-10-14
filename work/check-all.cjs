@@ -6,6 +6,7 @@ const scripts = [
   'check-waitlist.cjs',
   'check-sentry.cjs',
   'test-recommendation-quality.cjs',
+  'check-diet-distance.cjs',
   'check-taste-model.cjs',
   'check-dish-calibration.cjs',
   'check-design-colors.cjs',

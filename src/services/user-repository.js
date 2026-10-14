@@ -1,7 +1,4 @@
 async function logEvent(eventName,metadata={}){
- if(isRailwayActive()){
-  try{await railwayFetch('/api/user/events',{method:'POST',body:JSON.stringify({event_name:eventName,metadata})});return true;}catch(e){return false;}
- }
  if(!currentUser||!backendReady)return false;
  try{
   const {error}=await supabaseClient.from('app_events').insert({user_id:currentUser.id,event_name:eventName,metadata});
@@ -13,12 +10,6 @@ async function syncTaste(){
  if(!currentUser)throw new Error('Sign in to sync your taste profile.');
  if(!hasTasteAnswers())throw new Error('Complete your taste profile before syncing it.');
  const owner=currentUser,a=state.answers||{};
- if(isRailwayActive()){
-  const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==='any'?null:Number(a.distance||5),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
-  await railwayFetch('/api/user/taste',{method:'PUT',body:JSON.stringify(payload)});
-  await logEvent('onboarding_complete',{answer_count:Object.keys(a).length});
-  return true;
- }
  const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==='any'?null:Number(a.distance||5),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
  const {error}=await supabaseClient.from('taste_profiles').upsert(payload);
  if(error)throw error;
@@ -36,9 +27,6 @@ async function syncTaste(){
 }
 async function syncInteraction(rest,type,metadata={}){
  if(!currentUser||!rest?.dbId)return false;
- if(isRailwayActive()){
-  try{await railwayFetch('/api/user/interactions',{method:'POST',body:JSON.stringify({restaurant_id:rest.dbId,type,source:'palateo_v5',metadata})});return true;}catch(e){console.warn('event sync',e);return false;}
- }
  const {error}=await supabaseClient.from('interactions').insert({user_id:currentUser.id,restaurant_id:rest.dbId,type,source:'palateo_v5',metadata});
  if(error)throw error;
  return true;
@@ -46,10 +34,6 @@ async function syncInteraction(rest,type,metadata={}){
 async function syncSave(rest,saved){
  if(!currentUser)throw new Error('Sign in to sync your saved places.');
  if(!rest?.dbId)throw new Error('This place is not available in the cloud catalogue.');
- if(isRailwayActive()){
-  await railwayFetch('/api/user/saves',{method:saved?'POST':'DELETE',body:JSON.stringify({restaurant_id:rest.dbId})});
-  return true;
- }
  const result=saved?await supabaseClient.from('saved_restaurants').upsert({user_id:currentUser.id,restaurant_id:rest.dbId}):await supabaseClient.from('saved_restaurants').delete().eq('user_id',currentUser.id).eq('restaurant_id',rest.dbId);
  if(result.error)throw result.error;
  return true;
@@ -64,7 +48,6 @@ async function loadAllRows(query){
 }
 async function loadCloudState(){
  if(!currentUser)return false;
- if(isRailwayActive())return await loadRailwayCloudState();
  const requestUserId=currentUser.id;
  const requestAnswers=state.answers;
  const requestFeedbackRevision=feedbackRevision;

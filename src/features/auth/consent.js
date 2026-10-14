@@ -1,4 +1,4 @@
-const LEGAL_VERSION='2026-10-14';
+const LEGAL_VERSION='2026-10-06';
 let legalConsentBusy=false;
 function consentControls(){return '<div class="consentNotice"><p>Your account details, taste choices and activity are used for sign-in, personalised recommendations and cloud sync. Location is optional. Read the policies before choosing.</p><label class="consentChoice"><input id="legalTerms" type="checkbox" required><span>I agree to the <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.</span></label><label class="consentChoice"><input id="legalPrivacy" type="checkbox" required><span>I consent to the account, recommendation and sync processing described in the <a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. I can withdraw this consent by contacting Palateo.</span></label><p class="consentHelp">If you are under 18, use Palateo with a parent or guardian’s knowledge and permission.</p></div>'}
 function readLegalConsent(){return {terms:document.getElementById('legalTerms')?.checked===true,privacy:document.getElementById('legalPrivacy')?.checked===true}}
@@ -19,7 +19,7 @@ function requireLegalConsent(){
  authRequired=true;page='consent';document.getElementById('nav')?.classList.add('hide');
  document.getElementById('root').innerHTML='<section class="authGate"><div class="eyebrow">Your privacy matters</div><h1>Your palate, your choice.</h1><p>Review how Palateo uses your data before continuing. You can read both policies without signing in.</p></section>';
  document.getElementById('authModal')?.remove();
- document.body.insertAdjacentHTML('beforeend','<div class="modal authRequired" id="authModal" role="dialog" aria-modal="true" aria-labelledby="legalTitle"><div class="modalCard"><div class="eyebrow">Policies · 14 October 2026</div><h2 id="legalTitle">Before you continue</h2><form data-action="legal-submit">'+consentControls()+'<div class="status" id="legalStatus" aria-live="polite"></div><div class="modalActions"><button class="btn secondary" type="button" data-action="legal-decline">Sign out</button><button class="btn green" type="submit" id="legalSubmit">Accept and continue</button></div></form><p class="legalLinks">Questions? <a href="mailto:palateo.com@gmail.com">Contact Palateo</a></p></div></div>');
+ document.body.insertAdjacentHTML('beforeend','<div class="modal authRequired" id="authModal" role="dialog" aria-modal="true" aria-labelledby="legalTitle"><div class="modalCard"><div class="eyebrow">Policies · 6 October 2026</div><h2 id="legalTitle">Before you continue</h2><form data-action="legal-submit">'+consentControls()+'<div class="status" id="legalStatus" aria-live="polite"></div><div class="modalActions"><button class="btn secondary" type="button" data-action="legal-decline">Sign out</button><button class="btn green" type="submit" id="legalSubmit">Accept and continue</button></div></form><p class="legalLinks">Questions? <a href="mailto:palateo.com@gmail.com">Contact Palateo</a></p></div></div>');
  document.getElementById('legalTerms')?.focus();
 }
 async function acceptLegalConsent(){
@@ -28,12 +28,6 @@ async function acceptLegalConsent(){
  try{
   const metadata=legalMetadata(readLegalConsent());if(!currentUser)throw new Error('Sign in again to continue.');
   legalConsentBusy=true;if(button)button.disabled=true;if(status){status.dataset.kind='loading';status.textContent='Saving your choice…'}
-  if(isRailwayActive()){
-   const data=await railwayFetch('/api/auth/update-user',{method:'POST',body:JSON.stringify(metadata)});
-   if(!data.status)throw Error('Your choice was not saved. Please retry.');
-   const user=await betterAuthGetSession();if(!user)throw Error('Please sign in again.');
-   useAccount(user);closeAuth();await initV5();toast('Your choice has been saved.');return;
-  }
   const {data,error}=await getSupabaseClient().auth.updateUser({data:metadata});if(error)throw error;if(!data?.user)throw new Error('Your choice was not saved. Please try again.');
   useAccount(data.user);await logEvent('legal_consent',{version:LEGAL_VERSION});closeAuth();await initV5();toast('Your choice has been saved.');
  }catch(error){if(status){status.dataset.kind='error';status.textContent=error.message||'Could not save your choice. Please try again.'}}

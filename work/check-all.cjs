@@ -6,13 +6,9 @@ const scripts = [
   'check-waitlist.cjs',
   'check-sentry.cjs',
   'test-recommendation-quality.cjs',
-  'check-taste-model.cjs',
   'check-dish-calibration.cjs',
   'check-design-colors.cjs',
-  'check-palo-pet.cjs',
-  'check-omniroute-palo.cjs',
-  'check-better-auth-railway.cjs',
-  'check-release.cjs'
+  'check-palo-pet.cjs'
 ];
 
 let failed = false;

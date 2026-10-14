@@ -7,21 +7,6 @@
     "update:csp": "node scripts/build.cjs && node work/check-taste-onboarding.cjs --update-csp",
     "check:live": "node scripts/build.cjs && node work/check-palateo-live.cjs",
     "preview:mobile": "node scripts/build.cjs && node work/preview-mobile-taste.cjs",
-    "connect:openclaw": "powershell -ExecutionPolicy Bypass -File work/connect-openclaw.ps1",
-    "omniroute:start": "node scripts/omniroute_server.cjs",
-    "omniroute:status": "node scripts/omniroute_server.cjs --status",
-    "agents:fleet": "node scripts/agents/fleet.cjs",
-    "agents:ops": "node scripts/agents/fleet.cjs --ops",
-    "agents:marketing": "node scripts/agents/fleet.cjs --marketing",
-    "agents:deploy": "node scripts/agents/fleet.cjs --ops --deploy",
-    "agents:status": "node scripts/agents/fleet.cjs --status",
-    "agents:daemon": "node scripts/agents/fleet.cjs --daemon",
-    "reels:generate": "node scripts/generate_trendy_reels.cjs",
-    "server:start": "node --env-file-if-exists=.env.palo.local server/index.js",
-    "server:dev": "node --env-file-if-exists=.env.palo.local --watch server/index.js",
-    "server:migrate": "node server/scripts/migrate.js",
-    "skillui": "skillui.cmd",
-    "mobile:build": "npm --prefix mobile run build",
-    "mobile:sync": "npm --prefix mobile run sync"
+    "connect:openclaw": "powershell -ExecutionPolicy Bypass -File work/connect-openclaw.ps1"
   }
 }

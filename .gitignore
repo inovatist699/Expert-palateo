@@ -8,14 +8,3 @@ outputs/
 *.zip
 **/.well-known/strix-verify.txt
 .playwright-cli/
-
-mobile/www/
-mobile/android/.gradle/
-mobile/android/**/build/
-mobile/ios/App/Pods/
-mobile/ios/**/xcuserdata/
-*.jks
-*.keystore
-*.p12
-*.mobileprovision
-__pycache__/

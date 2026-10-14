@@ -93,20 +93,3 @@ openclaw gateway status
 # Restart gateway to reload workspace changes
 openclaw gateway restart
 ```
-
----
-
-## 5. Autonomous Agent Fleet Commands
-
-### Master Fleet Runner
-```bash
-npm run agents:fleet       # Full cycle: Operations + Marketing
-npm run agents:ops         # Operations & Engineering swarm only
-npm run agents:marketing   # Creative & Instagram marketing swarm only
-npm run agents:deploy      # Gated verification and production deployment
-npm run agents:status      # Live agent fleet roster and health status
-npm run agents:daemon      # Continuous scheduled heartbeat daemon (30m intervals)
-```
-
-Documentation and architecture specifications are in [`docs/AUTONOMOUS_AGENTS.md`](file:///c:/Users/Aayush/Documents/ChatGPT/Palateo/docs/AUTONOMOUS_AGENTS.md).
-

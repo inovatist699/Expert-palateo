@@ -1,4 +1,18 @@
 async function signInV5(email,password){
+if(isRailwayActive()){
+const user=await betterAuthSignIn(email,password);
+authRequired=!hasLegalConsent(user);
+backendReady=true;
+if(!hasLegalConsent(user)){updateMode();requireLegalConsent();return}
+const md=user.user_metadata||{};
+const profilePayload={id:user.id,display_name:md.full_name||md.name||email.split('@')[0],phone:md.phone||null,email:user.email||email};
+state.profile={name:profilePayload.display_name,phone:profilePayload.phone||'',email:profilePayload.email||''};
+state.userId=user.id;state.backendConnected=true;persist();
+const cloudLoaded=state.retakeInProgress?true:await loadRailwayCloudState();
+updateMode();closeAuth();document.getElementById('nav')?.classList.remove('hide');go('home');
+toast(cloudLoaded?'Welcome back ✨':'Signed in, but some cloud data could not sync.');
+return;
+}
 const client=getSupabaseClient();
 const {data,error}=await client.auth.signInWithPassword({email,password});
 if(error)throw error;
@@ -17,6 +31,14 @@ updateMode();closeAuth();document.getElementById('nav').classList.remove('hide')
 toast(profileSyncOk&&cloudLoaded?'Welcome back ✨':'Signed in, but some cloud data could not sync.');
 }
 async function signUpV5(name,phone,email,password,consent){
+if(isRailwayActive()){
+const user=await betterAuthSignUp(name,phone,email,password,consent);
+authRequired=false;backendReady=true;
+await logEvent('account_created',{has_phone:!!phone,has_email:!!email});
+updateMode();closeAuth();document.getElementById('nav')?.classList.remove('hide');onboard(0);
+toast('Account created — build your palate next ✓');
+return;
+}
 const metadata=legalMetadata(consent);
 const client=getSupabaseClient();
 const {data,error}=await client.auth.signUp({email,password,options:{emailRedirectTo:'https://palateo.in/app/',data:{name,full_name:name,phone,...metadata}}});
@@ -40,6 +62,11 @@ await logEvent('account_created',{has_phone:!!phone,has_email:!!email});
   updateMode();closeAuth();document.getElementById('nav').classList.remove('hide');onboard(0);toast(syncOk?'Account created — build your palate next ✓':'Account created; profile sync needs attention');
 }
 async function signOutV5(){
+if(isRailwayActive()){
+await betterAuthSignOut();
+state.backendConnected=false;persist();updateMode();requireAuthGate('You’ve signed out. Sign in again to use Palateo.');
+return;
+}
 try{
 const {error}=await supabaseClient.auth.signOut();if(error)throw error;
 useAccount(null);state.backendConnected=false;persist();updateMode();requireAuthGate('You’ve signed out. Sign in again to use Palateo.');

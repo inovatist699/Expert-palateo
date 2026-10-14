@@ -1,7 +1,7 @@
 function go(p,{keepScroll=false}={}){
 if(!currentUser){requireAuthGate();return}
 if(!hasLegalConsent(currentUser)){requireLegalConsent();return}
-if(!['home','discover','social','saved','profile','place'].includes(p))p='home';
+if(!['home','discover','ask','social','saved','profile','place'].includes(p))p='home';
  if(!hasTasteProfile()){const missing=questions.findIndex(q=>!q.o.some(([value])=>value===state.answers?.[q.k]));onboard(missing<0?questions.length-1:missing);return}
 document.getElementById('nav').classList.remove('hide');
 const previousSort=keepScroll?document.getElementById('discoverSort')?.value:null;
@@ -13,7 +13,8 @@ page=p;
 document.querySelectorAll('.nav button').forEach(x=>{x.classList.remove('active');x.removeAttribute('aria-current')});
 const activeNav=document.getElementById('n-'+(p==='place'?detailOrigin:p));
 activeNav?.classList.add('active');activeNav?.setAttribute('aria-current','page');
-({home,discover,social,saved,profile,place}[p])();
+({home,discover,ask,social,saved,profile,place}[p])();
+if(typeof syncPaloPage==='function')syncPaloPage(p);
 if(keepScroll){
  if(p==='discover'&&previousSort){document.getElementById('discoverSort').value=previousSort;drawDiscover()}
  if(focusedAction&&focusedRestaurant){Array.from(document.querySelectorAll('[data-rest-action]')).find(button=>button.getAttribute('data-rest-action')===focusedAction&&button.getAttribute('data-rest-id')===focusedRestaurant)?.focus({preventScroll:true})}

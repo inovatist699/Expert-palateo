@@ -2,6 +2,7 @@ let feedbackRevision=0;
 function restaurantFeatures(r){return [...new Set([...(r.c||[]),...(r.t||[]),...(r.a||[]),...(r.o||[]),...(r.review_insights||[])].map(x=>String(x).trim().toLowerCase()).filter(Boolean))]}
 function feedbackCount(){return (state.ai?.likes||0)+(state.ai?.dislikes||0)+(state.ai?.visits||0)}
 function rebuildLearning(){
+ tasteModelCache=null;
  state.ai={likes:0,dislikes:0,visits:0,signals:{}};
  for(const [id,type] of Object.entries(state.feedback||{})){
   const r=activeRestaurant(id);if(!r||!['like','dislike','visited'].includes(type))continue;

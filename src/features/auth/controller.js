@@ -11,16 +11,18 @@ async function submitAuth(mode){
 if(authBusy)return;
 const status=document.getElementById('authStatus'),submit=document.getElementById('authSubmit');
 if(!status)return;
-const email=document.getElementById('authEmail')?.value.trim()||'',password=document.getElementById('authPass')?.value||'';
+let email=document.getElementById('authEmail')?.value.trim()||'',password=document.getElementById('authPass')?.value||'';
+if(email&&email.includes('@')&&!email.includes('.')){email+='.com';const el=document.getElementById('authEmail');if(el)el.value=email;}
 const setError=message=>{status.dataset.kind='error';status.textContent=message};
 if(!email){setError('Please enter your email address.');document.getElementById('authEmail')?.focus();return}
 if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){setError('Please enter a valid email address.');document.getElementById('authEmail')?.focus();return}
 if(password.length<6){setError('Password must be at least 6 characters.');document.getElementById('authPass')?.focus();return}
 let name='',phone='';
 if(mode==='signup'){
+if(password.length<8){setError('Use at least 8 characters for a new password.');return}
 name=document.getElementById('authName')?.value.trim()||'';phone=document.getElementById('authPhone')?.value.trim()||'';
 if(name.length<2){setError('Please enter your full name.');document.getElementById('authName')?.focus();return}
-if(phone.replace(/\D/g,'').length<7){setError('Please enter a phone number with at least 7 digits.');document.getElementById('authPhone')?.focus();return}
+if(phone&&phone.replace(/\D/g,'').length<7){setError('Please enter a phone number with at least 7 digits.');document.getElementById('authPhone')?.focus();return}
 }
 authBusy=true;if(submit)submit.disabled=true;
 status.dataset.kind='loading';status.textContent=mode==='signup'?'Creating your account…':'Signing you in…';

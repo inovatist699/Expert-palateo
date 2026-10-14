@@ -1,6 +1,6 @@
 # Release readiness — 15 October 2026
 
-Status: release candidate source prepared; **not cleared for public launch or store submission**. The owner confirmed both store accounts are ready and approved `in.palateo.app` for both identifiers.
+Status: Android release artifacts built and signed; **not cleared for public launch or store submission**. The owner approved `in.palateo.app` and deferred iOS on 15 October 2026. The active CI workflow builds Android only. Android version 1.0/build 7 has a verified signed AAB and universal release APK from successful CI run 38650305041. APK v2/v3 signatures match the locally generated upload certificate.
 
 ## Implemented
 
@@ -12,20 +12,18 @@ Status: release candidate source prepared; **not cleared for public launch or st
 - In-app password-confirmed deletion, associated-data cleanup, public deletion instructions and support page. Supabase deletion migration applied; a transaction test used synthetic accounts and rolled everything back. Better Auth local deletion and session invalidation tested. PostgreSQL Better Auth trigger still needs staging verification.
 - Optional phone number; new passwords require at least eight characters in the UI. Consent records are stored rather than inferred for Better Auth. Updated privacy text reflects Palo's processing and bounded device-local memory.
 - Explicit permission before live AI context sharing; withdrawal control in Palate → Privacy and account.
-- GitHub Actions configuration for regression/audit gates and both native builds, with manual signed IPA/AAB exports from `main`. Signing secrets and workflow execution are pending; see `mobile/README.md`.
-
-- GitHub Actions workflow prepared for Android and iOS, including manual signed exports. Configure the mobile-release environment secrets listed in mobile/README.md. Native CI execution and signing remain pending.
+- GitHub Actions regression/audit gates and Android native builds passed. The active workflow now targets Android only, with manual signed APK/AAB exports from `main`; configure its four Android secrets for future builds. See `mobile/README.md`.
 
 ## Required before submission
 
-1. Build and test on real iPhone and Android devices: fresh install, returning login, password recovery, quiz, saved places, Love/Pass/undo, denied location, network loss, foreground/background, keyboard/safe areas, screen reader, and deletion. Verify the archived iOS privacy report and SDK manifests. Browser tests do not certify these native behaviors.
-2. Produce and validate a signed iOS archive with Xcode 26/iOS 26 SDK or later, and a signed Android AAB targeting API 36. This machine has no Xcode, Java or Android SDK. The new GitHub Actions workflow provides macOS and Android runners; configure its `mobile-release` environment secrets and run it from reviewed `main`. Do not send secrets in chat.
+1. Test the signed APK on real Android devices: fresh install, returning login, password recovery, quiz, saved places, Love/Pass/undo, denied location, network loss, foreground/background, keyboard/safe areas, screen reader, and deletion. Browser tests and successful compilation do not certify these native behaviors. iOS checks are deferred.
+2. The Android API 36 AAB and universal APK are signed and verified. For future signed CI exports, configure the four Android secrets documented in `mobile/README.md`. Keep the upload key backed up securely and confirm it matches the package's registered upload certificate before uploading.
 3. Deploy the frontend and API candidate to staging, then verify the full hosted flow. Public URLs must serve this release: `https://palateo.in/privacy/`, `/support/`, `/delete-account/`. Configure the hosted Palo API's authenticated, network-reachable gateway. The local OmniRoute process is not production hosting.
 4. Verify production secrets, database backups/restore and auth email delivery. If a previous backend deployment seeded the published demonstration account, rotate its credential or remove that account after confirming ownership. Removal of seed code does not change an existing account.
 5. Audit venue data and image rights. The catalogue currently contains snapshot/illustrative information; remove or clearly label any samples and unverified social activity before public launch. Verify every city/store claim against available data.
-6. Complete Apple App Privacy and Google Data Safety from actual provider contracts and production behavior. Confirm AI-provider retention and suitability for user data, including the UncloseAI service; disable any provider without acceptable terms. Review waitlist RPC privileges and enable leaked-password protection if supported by the Supabase plan. No advisor finding was produced for the new deletion function; existing waitlist RPC and auth warnings remain.
-7. Provide a private, working reviewer account in each console and capture screenshots from the final native builds. Complete age-rating, content-rights, export-compliance, support-contact and distribution-country forms. Do not describe this as medical/allergy advice or guaranteed live venue information.
-8. Use TestFlight and Play internal/closed testing before release. Check any testing requirement shown for the specific Play developer account. Store review decides minimum-functionality acceptance; a wrapper is not an approval guarantee.
+6. Complete Google Data Safety from actual provider contracts and production behavior. Confirm AI-provider retention and suitability for user data, including the UncloseAI service; disable any provider without acceptable terms. Review waitlist RPC privileges and enable leaked-password protection if supported by the Supabase plan. No advisor finding was produced for the new deletion function; existing waitlist RPC and auth warnings remain.
+7. Provide a private, working reviewer account in Play Console and capture screenshots from the final Android build. Complete content-rating, content-rights, support-contact and distribution-country forms. Do not describe this as medical/allergy advice or guaranteed live venue information.
+8. Use Play internal/closed testing before release. Check any testing requirement shown for the specific Play developer account. Store review decides minimum-functionality acceptance; a wrapper is not an approval guarantee.
 
 ## Store listing draft
 

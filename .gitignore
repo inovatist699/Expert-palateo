@@ -10,6 +10,7 @@ outputs/
 .playwright-cli/
 
 mobile/www/
+mobile/.web-build/
 mobile/android/.gradle/
 mobile/android/**/build/
 mobile/ios/App/Pods/
@@ -19,5 +20,6 @@ mobile/ios/**/xcuserdata/
 *.p12
 *.mobileprovision
 __pycache__/
+mobile/signing/
 
 __pycache__/

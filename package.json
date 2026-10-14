@@ -3,6 +3,9 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build.cjs",
+    "web:build": "node scripts/build.cjs",
+    "web:check": "npm run check",
+    "check:builds": "node work/check-build-isolation.cjs",
     "check": "node scripts/build.cjs && node work/check-all.cjs",
     "update:csp": "node scripts/build.cjs && node work/check-taste-onboarding.cjs --update-csp",
     "check:live": "node scripts/build.cjs && node work/check-palateo-live.cjs",

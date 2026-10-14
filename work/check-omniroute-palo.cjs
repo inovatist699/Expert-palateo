@@ -248,4 +248,3 @@ testApiHandler().then(() => {
   console.error('FAIL in testApiHandler:', err);
   process.exit(1);
 });
-

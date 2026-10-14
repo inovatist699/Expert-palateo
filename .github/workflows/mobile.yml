@@ -2,8 +2,10 @@ name: Android builds
 
 on:
   pull_request:
+    paths: ['src/**', 'config/**', 'scripts/build*.cjs', 'package.json', 'mobile/**', 'server/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/mobile.yml', '.gitmodules']
   push:
     branches: [main]
+    paths: ['src/**', 'config/**', 'scripts/build*.cjs', 'package.json', 'mobile/**', 'server/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/mobile.yml', '.gitmodules']
   workflow_dispatch:
     inputs:
       signed:
@@ -46,6 +48,7 @@ jobs:
       - run: npm run check
       - run: npm run update:csp
       - run: npm run mobile:build
+      - run: npm run check:builds
       - run: npm --prefix server audit --audit-level=high
       - run: npm --prefix mobile audit --audit-level=high
 

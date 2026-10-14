@@ -15,6 +15,8 @@ npx cap sync android
 
 Android uses Capacitor 8, Java 21, SDK 36 and a bundled web app. There is no remote `server.url` or live-update mechanism. After each app change, rebuild the public assets and sync Android before compilation. Generated web assets, signing files and build outputs are ignored by Git.
 
+Android assembles shared source into `mobile/.web-build/` and packages `mobile/www/` independently of the website's deployment output. Web releases and Android releases have separate CI workflows; neither build changes the other's output. See `docs/MAINTENANCE.md` for the automatic maintenance and release policy.
+
 ## Builds and signing
 
 `.github/workflows/mobile.yml` runs regression checks, CSP verification and dependency audits, then Android lint and native compilation. Automatic runs retain a debug APK, unsigned release AAB and lint report for 14 days.

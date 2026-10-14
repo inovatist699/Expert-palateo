@@ -1,8 +1,10 @@
-const fs=require('node:fs'),path=require('node:path'),{execFileSync}=require('node:child_process');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
 const root=path.resolve(__dirname,'..'),mobile=path.join(root,'mobile'),output=path.join(mobile,'www');
-execFileSync(process.execPath,[path.join(__dirname,'build.cjs')],{stdio:'inherit'});
-const built=path.join(root,'work/palateo_cloudflare_pages');
-// Copy only the web build's explicit public allowlist; never server code or credentials.
+execFileSync(process.execPath,[path.join(__dirname,'build.cjs'),'mobile'],{stdio:'inherit'});
+const built=path.join(mobile,'.web-build');
+assert.ok(output.startsWith(mobile+path.sep)&&path.basename(output)==='www','Only clear generated mobile assets');
+fs.rmSync(output,{recursive:true,force:true});
+// Copy only the shared source's public allowlist; never web deployment output or server code.
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'src/app/manifest.json')));
 for(const dest of ['app/index.html',...Object.values(manifest.publicFiles)].filter(file=>!file.startsWith('api/'))){
  const target=path.resolve(output,dest);if(!target.startsWith(output+path.sep))throw Error('Invalid mobile asset path');

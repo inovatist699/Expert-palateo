@@ -6,7 +6,9 @@ const assert = require('node:assert/strict');
 
 const root = path.resolve(__dirname, '..');
 const source = path.join(root, 'src');
-const output = path.join(root, 'work/palateo_cloudflare_pages');
+const target = process.argv[2] || 'web';
+assert.ok(['web', 'mobile'].includes(target) && process.argv.length <= 3, 'Build target must be web or mobile');
+const output = path.join(root, target === 'web' ? 'work/palateo_cloudflare_pages' : 'mobile/.web-build');
 const manifest = JSON.parse(fs.readFileSync(path.join(source, 'app/manifest.json'), 'utf8'));
 function inside(directory, relative) {
  assert.ok(typeof relative === 'string' && !path.isAbsolute(relative), 'Expected a relative path');
@@ -45,7 +47,7 @@ const csp = config.headers[0].headers.find(header => header.key === 'Content-Sec
 assert.ok(csp && /sha256-[A-Za-z0-9+/=]+/.test(csp.value), 'Missing app CSP hash');
 csp.value = csp.value.replace(/sha256-[A-Za-z0-9+/=]+/, hash);
 const destinations = new Set(['app/index.html', 'vercel.json']);
-const publicFiles = Object.entries(manifest.publicFiles).map(([from, to]) => {
+const publicFiles = Object.entries(manifest.publicFiles).filter(([, to]) => target === 'web' || !to.startsWith('api/')).map(([from, to]) => {
  assert.ok(!destinations.has(to), 'Duplicate build destination: ' + to);
  destinations.add(to);
  inside(output, to);
@@ -54,4 +56,4 @@ const publicFiles = Object.entries(manifest.publicFiles).map(([from, to]) => {
 write('app/index.html', shell);
 for (const [destination, content] of publicFiles) write(destination, content);
 write('vercel.json', JSON.stringify(config, null, 2) + '\n');
-console.log('Built Palateo: ' + manifest.scripts.length + ' script fragments, ' + manifest.styles.length + ' styles; CSP updated.');
+console.log('Built Palateo ' + target + ': ' + manifest.scripts.length + ' script fragments, ' + manifest.styles.length + ' styles; CSP updated.');

@@ -2,6 +2,8 @@
 
 Open `C:/Users/Aayush/Documents/ChatGPT/Palateo` in Codex. Edit `src/`, then run `npm run build`. The build writes the existing Vercel deployment directory, `work/palateo_cloudflare_pages/`, and updates the app's CSP hash. No package installation is required.
 
+Web and Android use separate build outputs and CI workflows. `npm run mobile:build` assembles shared source into ignored `mobile/.web-build/` and packages `mobile/www/` without accessing the web deployment directory. `npm run check:builds` verifies this isolation. Release policy and the scheduled maintenance agent are documented in `docs/MAINTENANCE.md`.
+
 ## Folder responsibilities
 
 ```text

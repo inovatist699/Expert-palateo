@@ -1,0 +1,40 @@
+name: Web checks
+
+on:
+  pull_request:
+    paths: ['src/**', 'config/**', 'scripts/build.cjs', 'package.json', 'server/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/web.yml', '.gitmodules']
+  push:
+    branches: [main]
+    paths: ['src/**', 'config/**', 'scripts/build.cjs', 'package.json', 'server/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/web.yml', '.gitmodules']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: web-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  web:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: server/package-lock.json
+      - run: npm --prefix server ci
+      - run: npm run web:check
+      - run: npm run update:csp
+      - run: npm --prefix server audit --audit-level=high
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: palateo-web-${{ github.run_number }}
+          path: work/palateo_cloudflare_pages/
+          if-no-files-found: error
+          retention-days: 14

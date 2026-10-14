@@ -3707,5 +3707,741 @@ const vadodaraCatalog=[
       "comforting quick bites, hakka noodles with gravy manchurian, and frothy cold coffee"
     ],
     "why": "Legendary Sayajigunj fast-food institution opposite MSU famous for jumbo cheese grilled sandwiches, Chinese bhel, and thick shakes."
+  },
+  {
+    "id": "vad-champaner-heritage",
+    "name": "Champaner Heritage Resort & Dining",
+    "area": "Champaner (42km)",
+    "city": "Vadodara",
+    "latitude": 22.4833,
+    "longitude": 73.5333,
+    "address": "Bhamariya Well Road, Champaner, Halol, Gujarat 389350",
+    "c": [
+      "Gujarati",
+      "Regional",
+      "Continental"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,600 for two",
+    "rating": 4.7,
+    "review_count": 680,
+    "t": [
+      "Restaurant",
+      "Heritage"
+    ],
+    "a": [
+      "peaceful",
+      "heritage",
+      "scenic"
+    ],
+    "o": [
+      "family",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🏰",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Champaner+Heritage+Resort+Halol",
+    "review_insights": [
+      "royal kathiyawadi thali",
+      "heritage mango orchards",
+      "peaceful countryside getaway",
+      "spiced khichdi"
+    ]
+  },
+  {
+    "id": "vad-cloud9-halol",
+    "name": "Cafe Cloud 9 & Bistro",
+    "area": "Halol Highway (38km)",
+    "city": "Vadodara",
+    "latitude": 22.5021,
+    "longitude": 73.4682,
+    "address": "Vadodara-Halol Toll Road, near Jarod Cross Road, Halol 389350",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.6,
+    "review_count": 420,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "cozy",
+      "highway",
+      "modern"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Cloud+9+Halol+Highway",
+    "review_insights": [
+      "artisan hazelnut frappe",
+      "highway breather",
+      "woodfired margherita",
+      "cozy highway lounge"
+    ]
+  },
+  {
+    "id": "vad-creamery-anand",
+    "name": "The Creamery Gelato & Waffles",
+    "area": "VV Nagar, Anand (41km)",
+    "city": "Vadodara",
+    "latitude": 22.5518,
+    "longitude": 72.9234,
+    "address": "Bhaikaka Statue Road, Vallabh Vidyanagar, Anand 388120",
+    "c": [
+      "Desserts",
+      "Bakery",
+      "Ice Cream"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.8,
+    "review_count": 890,
+    "t": [
+      "Dessert",
+      "Bakery"
+    ],
+    "a": [
+      "lively",
+      "youthful",
+      "vibrant"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🧇",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Creamery+Gelato+VV+Nagar+Anand",
+    "review_insights": [
+      "belgian dark chocolate waffle",
+      "artisanal pistachio gelato",
+      "thick shakes",
+      "student hotspot"
+    ]
+  },
+  {
+    "id": "vad-brown-burger-anand",
+    "name": "Brown Burger Co & Specialty Cafe",
+    "area": "Anand (42km)",
+    "city": "Vadodara",
+    "latitude": 22.5645,
+    "longitude": 72.932,
+    "address": "Nana Bazaar, near Amul Dairy Road, Anand 388001",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Burgers"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹700 for two",
+    "rating": 4.5,
+    "review_count": 530,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "modern",
+      "casual"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍔",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Brown+Burger+Co+Anand",
+    "review_insights": [
+      "gourmet peri peri burger",
+      "loaded cheesy fries",
+      "caramel macchiato",
+      "youth hangout"
+    ]
+  },
+  {
+    "id": "vad-madhavrao-kathiyawadi",
+    "name": "Madhavrao Kathiyawadi Dhaba",
+    "area": "Anand-Sojitra Rd (44km)",
+    "city": "Vadodara",
+    "latitude": 22.5381,
+    "longitude": 72.8872,
+    "address": "Sojitra Road, Tarapur Cross, Anand 388170",
+    "c": [
+      "Gujarati",
+      "Kathiyawadi",
+      "Regional"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹500 for two",
+    "rating": 4.7,
+    "review_count": 1250,
+    "t": [
+      "Restaurant",
+      "Regional"
+    ],
+    "a": [
+      "traditional",
+      "rustic",
+      "family"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🥘",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Madhavrao+Kathiyawadi+Anand",
+    "review_insights": [
+      "ringna no olo",
+      "garlic sev tameta",
+      "chulhe ki bajra rotla",
+      "makhan with chaas"
+    ]
+  },
+  {
+    "id": "vad-dabhoi-heritage-sweets",
+    "name": "Shree Hira Bhagol Sweets & Farsan",
+    "area": "Dabhoi (34km)",
+    "city": "Vadodara",
+    "latitude": 22.1345,
+    "longitude": 73.435,
+    "address": "Hira Bhagol Gate, Main Fort Road, Dabhoi 391110",
+    "c": [
+      "Desserts",
+      "Street Food",
+      "Regional"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹300 for two",
+    "rating": 4.8,
+    "review_count": 760,
+    "t": [
+      "Dessert",
+      "Sweets"
+    ],
+    "a": [
+      "heritage",
+      "traditional",
+      "bustling"
+    ],
+    "o": [
+      "family",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🍮",
+    "photo": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hira+Bhagol+Sweets+Dabhoi",
+    "review_insights": [
+      "rich kesar basundi",
+      "hot crispy fafda jalebi",
+      "authentic mohanthal",
+      "heritage fort stop"
+    ]
+  },
+  {
+    "id": "vad-pavagadh-valley-cafe",
+    "name": "Pavagadh Valley Hilltop Cafe",
+    "area": "Pavagadh (45km)",
+    "city": "Vadodara",
+    "latitude": 22.4612,
+    "longitude": 73.522,
+    "address": "Machi Plateau, Pavagadh Hill, Panchmahal 389360",
+    "c": [
+      "Cafe",
+      "Beverages",
+      "Snacks"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.6,
+    "review_count": 580,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "scenic",
+      "peaceful",
+      "hilltop"
+    ],
+    "o": [
+      "friends",
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pavagadh+Valley+Cafe",
+    "review_insights": [
+      "hill view ginger tea",
+      "steaming hot handvo",
+      "sunset viewpoint",
+      "refreshing lime cooler"
+    ]
+  },
+  {
+    "id": "vad-cafe-appetito-manjalpur",
+    "name": "Café Appetito",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.2735,
+    "longitude": 73.1942,
+    "address": "Raama Emperor, Behind Shell Petrol Pump, Manjalpur, Vadodara 390011",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Italian",
+      "Fast Food"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.7,
+    "review_count": 890,
+    "t": [
+      "Cafe",
+      "Coffee",
+      "Rooftop"
+    ],
+    "a": [
+      "cozy",
+      "patio",
+      "lively"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Appetito+Manjalpur+Vadodara",
+    "review_insights": [
+      "woodfired thin crust pizza",
+      "circular rooftop patio",
+      "hazelnut frappe",
+      "cozy couple corner"
+    ]
+  },
+  {
+    "id": "vad-allevio-cafe-manjalpur",
+    "name": "Allevio Café & Kitchen",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.2782,
+    "longitude": 73.1915,
+    "address": "Mani Villa Complex, Near Eva Mall Road, Manjalpur, Vadodara 390011",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.8,
+    "review_count": 670,
+    "t": [
+      "Cafe",
+      "Restaurant"
+    ],
+    "a": [
+      "aesthetic",
+      "cozy",
+      "chic"
+    ],
+    "o": [
+      "date",
+      "friends",
+      "family"
+    ],
+    "s": "mild",
+    "emoji": "🍝",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Allevio+Cafe+Manjalpur+Vadodara",
+    "review_insights": [
+      "creamy pesto pasta",
+      "loaded cheese fries",
+      "aesthetic interior",
+      "specialty pour-over"
+    ]
+  },
+  {
+    "id": "vad-chocolate-room-manjalpur",
+    "name": "The Chocolate Room",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.271,
+    "longitude": 73.197,
+    "address": "Near Patidar Cross Road, Manjalpur Main Road, Vadodara 390011",
+    "c": [
+      "Desserts",
+      "Cafe",
+      "Bakery",
+      "Beverages"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹650 for two",
+    "rating": 4.6,
+    "review_count": 1120,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "cozy",
+      "sweet",
+      "lively"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Chocolate+Room+Manjalpur+Vadodara",
+    "review_insights": [
+      "belgian chocolate waffle",
+      "fondue platter",
+      "thick hot chocolate",
+      "live music nights"
+    ]
+  },
+  {
+    "id": "vad-koa-cafe-manjalpur",
+    "name": "Koa Cafe",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.276,
+    "longitude": 73.201,
+    "address": "Near Tulsidham Char Rasta, Manjalpur, Vadodara 390011",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Fast Food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.7,
+    "review_count": 520,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "minimalist",
+      "peaceful",
+      "bohemian"
+    ],
+    "o": [
+      "solo",
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Koa+Cafe+Manjalpur+Vadodara",
+    "review_insights": [
+      "minimalist white corners",
+      "thick lotus biscoff shake",
+      "crispy paneer wrap",
+      "quiet reading nook"
+    ]
+  },
+  {
+    "id": "vad-coffee-culture-manjalpur",
+    "name": "Coffee Culture",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.2755,
+    "longitude": 73.1965,
+    "address": "Near Manjalpur Char Rasta, Opp. Shreyas School, Vadodara 390011",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.6,
+    "review_count": 1480,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "lively",
+      "themed",
+      "youthful"
+    ],
+    "o": [
+      "friends",
+      "work"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Coffee+Culture+Manjalpur+Vadodara",
+    "review_insights": [
+      "signature sizzlers",
+      "maggi pizza",
+      "irish cold coffee",
+      "fun group hangout"
+    ]
+  },
+  {
+    "id": "vad-times-cafe-manjalpur",
+    "name": "Times Cafe",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.274,
+    "longitude": 73.193,
+    "address": "Near Eva The Mall, Manjalpur, Vadodara 390011",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Coffee"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.5,
+    "review_count": 390,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "casual",
+      "pocket-friendly"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Times+Cafe+Manjalpur+Vadodara",
+    "review_insights": [
+      "cold coffee with ice cream",
+      "grilled cheese sandwich",
+      "peri peri french fries",
+      "quick bite hangout"
+    ]
+  },
+  {
+    "id": "vad-big-scoop-makarpura",
+    "name": "Big Scoop Café & Boba Bar",
+    "area": "Makarpura",
+    "city": "Vadodara",
+    "latitude": 22.256,
+    "longitude": 73.1965,
+    "address": "Opposite ONGC Main Gate, near Baroda Dairy, Makarpura Road, Vadodara 390009",
+    "c": [
+      "Cafe",
+      "Desserts",
+      "Beverages",
+      "Korean"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹600 for two",
+    "rating": 4.8,
+    "review_count": 780,
+    "t": [
+      "Cafe",
+      "Boba",
+      "Dessert"
+    ],
+    "a": [
+      "trendy",
+      "vibrant",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🧋",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Big+Scoop+Cafe+Makarpura+Vadodara",
+    "review_insights": [
+      "strawberry matcha boba",
+      "korean cheese ramen",
+      "taro milk bubble tea",
+      "cozy outdoor fairy lights"
+    ]
+  },
+  {
+    "id": "vad-night-life-makarpura",
+    "name": "Night Life Cafe",
+    "area": "Makarpura",
+    "city": "Vadodara",
+    "latitude": 22.249,
+    "longitude": 73.199,
+    "address": "Near Baliyadev Temple Chowkdi, beside Gokul Restaurant, Makarpura, Vadodara 390010",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Beverages"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.6,
+    "review_count": 450,
+    "t": [
+      "Cafe",
+      "Late Night"
+    ],
+    "a": [
+      "late-night",
+      "chill",
+      "lively"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🌙",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Night+Life+Cafe+Makarpura+Vadodara",
+    "review_insights": [
+      "late night cold coffee",
+      "cheesy garlic bread",
+      "hot brownie with ice cream",
+      "midnight hangout"
+    ]
+  },
+  {
+    "id": "vad-flavour-dine-makarpura",
+    "name": "Flavour Dine Cafe & Kitchen",
+    "area": "Makarpura",
+    "city": "Vadodara",
+    "latitude": 22.243,
+    "longitude": 73.1925,
+    "address": "Opposite Ganesh Honda Showroom, near Maneja Crossing, Makarpura, Vadodara 390013",
+    "c": [
+      "Cafe",
+      "North Indian",
+      "Chinese",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.5,
+    "review_count": 620,
+    "t": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "a": [
+      "comfortable",
+      "family",
+      "spacious"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍽️",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Flavour+Dine+Makarpura+Vadodara",
+    "review_insights": [
+      "alfredo white sauce pasta",
+      "paneer tikka platter",
+      "chilled mocktails",
+      "family dinner hub"
+    ]
+  },
+  {
+    "id": "vad-barodians-chai-makarpura",
+    "name": "Barodian's Chai & Cafe Nasta",
+    "area": "Makarpura",
+    "city": "Vadodara",
+    "latitude": 22.2515,
+    "longitude": 73.198,
+    "address": "Makarpura GIDC Main Road, near Susen Tarsali Ring Road, Vadodara 390010",
+    "c": [
+      "Cafe",
+      "Street Food",
+      "Tea"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹250 for two",
+    "rating": 4.7,
+    "review_count": 510,
+    "t": [
+      "Cafe",
+      "Chai"
+    ],
+    "a": [
+      "bustling",
+      "street-style",
+      "friendly"
+    ],
+    "o": [
+      "friends",
+      "solo"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Barodians+Chai+Makarpura+Vadodara",
+    "review_insights": [
+      "masala kulhad chai",
+      "bun maska jam",
+      "crispy vegetable frankie",
+      "quick afternoon chai break"
+    ]
+  },
+  {
+    "id": "vad-maneja-food-lounge",
+    "name": "The Maneja Lounge & Cafe",
+    "area": "Makarpura",
+    "city": "Vadodara",
+    "latitude": 22.241,
+    "longitude": 73.194,
+    "address": "Near Maneja Railway Crossing, Makarpura, Vadodara 390013",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Fast Food"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹650 for two",
+    "rating": 4.5,
+    "review_count": 340,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "rooftop",
+      "chill",
+      "open-air"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍹",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Maneja+Lounge+Cafe+Vadodara",
+    "review_insights": [
+      "sunset breeze rooftop",
+      "loaded paneer pizza",
+      "kitkat shake",
+      "weekend chilling"
+    ]
   }
 ];

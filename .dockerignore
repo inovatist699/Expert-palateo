@@ -1,0 +1,12 @@
+node_modules
+server/node_modules
+.git
+.github
+.agents
+graphify-out
+work/palateo_cloudflare_pages
+docs
+*.log
+.env*
+**/.env*
+mobile

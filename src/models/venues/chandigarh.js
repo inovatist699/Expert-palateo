@@ -668,5 +668,125 @@ const chandigarhCatalog=[
       "uncompromising hygiene with glove service that attracts crowds from across the tri-city"
     ],
     "why": "Sector 23's legendary chaat counter famous for five-flavor-water Golgappas and creamy Dahi Bhallas."
+  },
+  {
+    "id": "chd-brew-bros-mohali",
+    "name": "Brew Bros Craft Cafe",
+    "area": "Mohali Sector 70",
+    "city": "Chandigarh",
+    "latitude": 30.6985,
+    "longitude": 76.711,
+    "address": "Sector 70, SAS Nagar, Mohali 160071",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1420,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "modern",
+      "youthful",
+      "vibrant"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Brew+Bros+Mohali+Chandigarh",
+    "review_insights": [
+      "cold brew tonic",
+      "woodfired paneer pizza",
+      "thick chocolate shake",
+      "spacious open terrace"
+    ]
+  },
+  {
+    "id": "chd-coffee-bean-panchkula",
+    "name": "The Coffee Bean & Tea Leaf",
+    "area": "Panchkula Sector 5",
+    "city": "Chandigarh",
+    "latitude": 30.6945,
+    "longitude": 76.851,
+    "address": "Sector 5, Panchkula, Haryana 134109",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.7,
+    "review_count": 1100,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "relaxing",
+      "cozy",
+      "scenic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Coffee+Bean+Sector+5+Panchkula",
+    "review_insights": [
+      "hazelnut ice blended",
+      "blueberry cream cheese bagel",
+      "quiet garden view",
+      "date night favourite"
+    ]
+  },
+  {
+    "id": "chd-uncle-jacks-zirakpur",
+    "name": "Uncle Jack's All-American Diner",
+    "area": "Zirakpur",
+    "city": "Chandigarh",
+    "latitude": 30.6415,
+    "longitude": 76.819,
+    "address": "VIP Road, Zirakpur, Punjab 140603",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹750 for two",
+    "rating": 4.6,
+    "review_count": 1850,
+    "t": [
+      "Cafe",
+      "Diner"
+    ],
+    "a": [
+      "american-diner",
+      "lively"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍟",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Uncle+Jacks+Zirakpur+Chandigarh",
+    "review_insights": [
+      "cheesy fries in a cup",
+      "chicago deep dish slider",
+      "monster shakes",
+      "fun youth pitstop"
+    ]
   }
 ];

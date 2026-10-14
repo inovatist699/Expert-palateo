@@ -670,5 +670,87 @@ const goaCatalog=[
       "spicy tangy Prawn Balchao preserved in vintage ceramic jars"
     ],
     "why": "Panaji culinary treasure dedicated to preserving indigenous Christian and Hindu Goan heirloom home recipes."
+  },
+  {
+    "id": "goa-cafe-central-porvorim",
+    "name": "Cafe Central & Patisserie",
+    "area": "Porvorim",
+    "city": "Goa",
+    "latitude": 15.5345,
+    "longitude": 73.829,
+    "address": "CHOGM Road, Alto Porvorim, Goa 403521",
+    "c": [
+      "Bakery",
+      "Desserts",
+      "Cafe"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.8,
+    "review_count": 2400,
+    "t": [
+      "Bakery",
+      "Goan"
+    ],
+    "a": [
+      "heritage",
+      "traditional",
+      "cozy"
+    ],
+    "o": [
+      "family",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🥧",
+    "photo": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Central+Porvorim+Goa",
+    "review_insights": [
+      "legendary goan bebinca",
+      "mushroom samosa puff",
+      "traditional baath cake",
+      "authentic local stop"
+    ]
+  },
+  {
+    "id": "goa-carpe-diem-margao",
+    "name": "Carpe Diem Cultural Cafe",
+    "area": "Margao / Majorda",
+    "city": "Goa",
+    "latitude": 15.2815,
+    "longitude": 73.961,
+    "address": "Gomes Pereira Road, Majorda near Margao, South Goa 403713",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹750 for two",
+    "rating": 4.8,
+    "review_count": 980,
+    "t": [
+      "Cafe",
+      "Art"
+    ],
+    "a": [
+      "art-gallery",
+      "heritage",
+      "serene"
+    ],
+    "o": [
+      "solo",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🎨",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Carpe+Diem+Cafe+Majorda+Goa",
+    "review_insights": [
+      "art gallery garden patio",
+      "fresh waffles with honey",
+      "lemon drizzle cake",
+      "peaceful south goa sanctuary"
+    ]
   }
 ];

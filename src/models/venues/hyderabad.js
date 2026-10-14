@@ -961,5 +961,128 @@ const hyderabadCatalog=[
       "plush sophisticated interior with courteous and attentive white-glove service"
     ],
     "why": "Upscale Jubilee Hills fine dining establishment offering gourmet vegetarian and Jain gastronomy."
+  },
+  {
+    "id": "hyd-roastery-kukatpally",
+    "name": "Roastery Coffee House & Courtyard",
+    "area": "Kukatpally",
+    "city": "Hyderabad",
+    "latitude": 17.4945,
+    "longitude": 78.398,
+    "address": "KPHB Phase 3, Kukatpally, Hyderabad 500072",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.8,
+    "review_count": 2800,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "vintage",
+      "courtyard",
+      "scenic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Roastery+Coffee+House+Kukatpally+Hyderabad",
+    "review_insights": [
+      "pour over specialty roast",
+      "onion rings platter",
+      "cascara spritzer",
+      "shady courtyard seating"
+    ]
+  },
+  {
+    "id": "hyd-autumn-leaf-gachibowli",
+    "name": "Autumn Leaf Cafe & Garden",
+    "area": "Gachibowli",
+    "city": "Hyderabad",
+    "latitude": 17.44,
+    "longitude": 78.3485,
+    "address": "Financial District, Nanakramguda, Gachibowli, Hyderabad 500032",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Bakery"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.7,
+    "review_count": 3100,
+    "t": [
+      "Cafe",
+      "Garden"
+    ],
+    "a": [
+      "lush",
+      "peaceful",
+      "artistic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🍂",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Autumn+Leaf+Cafe+Gachibowli+Hyderabad",
+    "review_insights": [
+      "tree canopy garden",
+      "grilled chicken stroganoff",
+      "walnut brownie with gelato",
+      "peaceful work sanctuary"
+    ]
+  },
+  {
+    "id": "hyd-concu-sainikpuri",
+    "name": "Conçu Patisserie & Cafe",
+    "area": "AS Rao Nagar / Sainikpuri",
+    "city": "Hyderabad",
+    "latitude": 17.489,
+    "longitude": 78.549,
+    "address": "Sainikpuri Main Road, Secunderabad 500094",
+    "c": [
+      "Bakery",
+      "Desserts",
+      "Cafe"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,100 for two",
+    "rating": 4.8,
+    "review_count": 1950,
+    "t": [
+      "Bakery",
+      "Dessert"
+    ],
+    "a": [
+      "elegant",
+      "pastel",
+      "chic"
+    ],
+    "o": [
+      "date",
+      "family"
+    ],
+    "s": "mild",
+    "emoji": "🍰",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Concu+Sainikpuri+Hyderabad",
+    "review_insights": [
+      "choux pastry buns",
+      "french macarons",
+      "single estate espresso",
+      "serene green patio"
+    ]
   }
 ];

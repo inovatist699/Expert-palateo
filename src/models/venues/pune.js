@@ -4033,5 +4033,450 @@ const puneCatalog=[
       "mouthwatering bacon-wrapped sausages, crispy pizzas, and fiery chicken wings"
     ],
     "why": "Koregaon Park craft brewpub pioneer known for artisanal apple ciders, rock anthems, and high-energy dance weekends."
+  },
+  {
+    "id": "pun-german-bakery-lonavala",
+    "name": "German Bakery Wunderbar",
+    "area": "Lonavala (48km)",
+    "city": "Pune",
+    "latitude": 18.7512,
+    "longitude": 73.4089,
+    "address": "Old Mumbai Pune Highway, Lonavala 410401",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "European",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.8,
+    "review_count": 3100,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "hills",
+      "cozy",
+      "scenic"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🥐",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=German+Bakery+Wunderbar+Lonavala",
+    "review_insights": [
+      "cinnamon swirl buns",
+      "apple strudel with cream",
+      "pourover arabica",
+      "misty hills patio"
+    ]
+  },
+  {
+    "id": "pun-coopers-fudge-lonavala",
+    "name": "Cooper's Legendary Fudge & Ice Creams",
+    "area": "Lonavala (47km)",
+    "city": "Pune",
+    "latitude": 18.7545,
+    "longitude": 73.4112,
+    "address": "Opposite Lonavala Railway Station, Lonavala 410401",
+    "c": [
+      "Desserts",
+      "Sweets"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.9,
+    "review_count": 4200,
+    "t": [
+      "Dessert",
+      "Sweets"
+    ],
+    "a": [
+      "heritage",
+      "iconic"
+    ],
+    "o": [
+      "family",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Coopers+Fudge+Lonavala",
+    "review_insights": [
+      "melt-in-mouth walnut fudge",
+      "butterscotch crunch",
+      "heritage sweet shop",
+      "ghat road souvenir"
+    ]
+  },
+  {
+    "id": "pun-rama-krishna-lonavala",
+    "name": "Rama Krishna Pure Veg Dining",
+    "area": "Lonavala (48km)",
+    "city": "Pune",
+    "latitude": 18.7523,
+    "longitude": 73.4065,
+    "address": "Mumbai-Pune Road, near Bus Stand, Lonavala 410401",
+    "c": [
+      "South Indian",
+      "North Indian",
+      "Regional"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹650 for two",
+    "rating": 4.6,
+    "review_count": 2890,
+    "t": [
+      "Restaurant"
+    ],
+    "a": [
+      "family",
+      "bustling"
+    ],
+    "o": [
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rama+Krishna+Lonavala",
+    "review_insights": [
+      "crispy benne dosa",
+      "steaming south indian filter coffee",
+      "spiced misal pav",
+      "family hill-station tradition"
+    ]
+  },
+  {
+    "id": "pun-chokolade-talegaon",
+    "name": "Cafe Chokolade & Thick Shakes",
+    "area": "Talegaon Dabhade (33km)",
+    "city": "Pune",
+    "latitude": 18.7345,
+    "longitude": 73.682,
+    "address": "Talegaon Station Road, Talegaon Dabhade 410506",
+    "c": [
+      "Desserts",
+      "Cafe",
+      "Fast Food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹350 for two",
+    "rating": 4.7,
+    "review_count": 620,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "casual",
+      "youthful"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🥤",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Chokolade+Talegaon",
+    "review_insights": [
+      "signature B2 thick chocolate",
+      "sundae bowls",
+      "grilled paneer sandwich",
+      "student favorite"
+    ]
+  },
+  {
+    "id": "pun-basho-mulshi",
+    "name": "Basho's Lakeside Cafe",
+    "area": "Mulshi (44km)",
+    "city": "Pune",
+    "latitude": 18.5112,
+    "longitude": 73.5089,
+    "address": "Mulshi Dam Lakefront, Gondawane, Mulshi 412108",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,500 for two",
+    "rating": 4.8,
+    "review_count": 1450,
+    "t": [
+      "Cafe",
+      "Restaurant"
+    ],
+    "a": [
+      "lakeside",
+      "scenic",
+      "peaceful"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🌊",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bashos+Lakeside+Cafe+Mulshi",
+    "review_insights": [
+      "wooden deck over mulshi lake",
+      "thin crust four-cheese pizza",
+      "herbal mountain tea",
+      "breathtaking sunset views"
+    ]
+  },
+  {
+    "id": "pun-bougainvillea-mulshi",
+    "name": "Bougainvillea Country Kitchen & Bakes",
+    "area": "Mulshi (42km)",
+    "city": "Pune",
+    "latitude": 18.5289,
+    "longitude": 73.521,
+    "address": "Tamhini Ghat Road, Mulshi, Maharashtra 412108",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.6,
+    "review_count": 520,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "rustic",
+      "scenic",
+      "cozy"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bougainvillea+Mulshi",
+    "review_insights": [
+      "freshly baked country quiche",
+      "lemon pound cake",
+      "valley view coffee",
+      "peaceful countryside escape"
+    ]
+  },
+  {
+    "id": "pun-mezza9-hinjawadi",
+    "name": "Mezza9 Family Bistro & Bar",
+    "area": "Hinjawadi Phase 3 (24km)",
+    "city": "Pune",
+    "latitude": 18.588,
+    "longitude": 73.6912,
+    "address": "Opposite Wipro Circle, Hinjawadi Phase 3, Pune 411057",
+    "c": [
+      "North Indian",
+      "Continental",
+      "Asian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.5,
+    "review_count": 1780,
+    "t": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "a": [
+      "modern",
+      "spacious",
+      "cabana"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍛",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mezza9+Hinjawadi+Pune",
+    "review_insights": [
+      "al fresco cabana seating",
+      "creamy butter chicken",
+      "woodfired calzone",
+      "it hub celebrations"
+    ]
+  },
+  {
+    "id": "pun-cult-house-hadapsar",
+    "name": "The Cult House Cafe & Terrace",
+    "area": "Hadapsar",
+    "city": "Pune",
+    "latitude": 18.5135,
+    "longitude": 73.9312,
+    "address": "Magarpatta Road, Hadapsar, Pune 411028",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.7,
+    "review_count": 1980,
+    "t": [
+      "Cafe",
+      "Terrace"
+    ],
+    "a": [
+      "lush",
+      "open-air",
+      "vibrant"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🌿",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Cult+House+Hadapsar+Pune",
+    "review_insights": [
+      "woodfired thin crust pizza",
+      "terrace cocktail evenings",
+      "crispy mezze platter",
+      "lush garden seating"
+    ]
+  },
+  {
+    "id": "pun-11-east-street-wakad",
+    "name": "11 East Street Cafe & Diner",
+    "area": "Wakad",
+    "city": "Pune",
+    "latitude": 18.5985,
+    "longitude": 73.762,
+    "address": "Datta Mandir Road, Wakad, Pune 411057",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Bakery"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,200 for two",
+    "rating": 4.6,
+    "review_count": 1450,
+    "t": [
+      "Cafe",
+      "Diner"
+    ],
+    "a": [
+      "london-bus",
+      "lively",
+      "themed"
+    ],
+    "o": [
+      "friends",
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "🚌",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=11+East+Street+Cafe+Wakad+Pune",
+    "review_insights": [
+      "london red bus decor",
+      "chicken sizzlers",
+      "apple pie with custard",
+      "fun photo spots"
+    ]
+  },
+  {
+    "id": "pun-tea-villa-pimple-saudagar",
+    "name": "Tea Villa Cafe & Bakery",
+    "area": "Pimple Saudagar",
+    "city": "Pune",
+    "latitude": 18.598,
+    "longitude": 73.7925,
+    "address": "Kunal Icon Road, Pimple Saudagar, Pune 411027",
+    "c": [
+      "Cafe",
+      "Tea",
+      "Waffles",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1120,
+    "t": [
+      "Cafe",
+      "Dessert"
+    ],
+    "a": [
+      "cozy",
+      "family",
+      "pleasant"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tea+Villa+Pimple+Saudagar+Pune",
+    "review_insights": [
+      "belgian chocolate waffle",
+      "earl grey lavender tea",
+      "paneer tikka pizza",
+      "peaceful balcony seats"
+    ]
+  },
+  {
+    "id": "pun-cafe-durga-sinhagad-rd",
+    "name": "Cafe Durga & Thick Shakes",
+    "area": "Sinhagad Road",
+    "city": "Pune",
+    "latitude": 18.479,
+    "longitude": 73.821,
+    "address": "Manik Baug, Sinhagad Road, Pune 411051",
+    "c": [
+      "Cafe",
+      "Beverages",
+      "Street Food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹300 for two",
+    "rating": 4.6,
+    "review_count": 2400,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "bustling",
+      "pocket-friendly"
+    ],
+    "o": [
+      "friends",
+      "solo"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Durga+Sinhagad+Road+Pune",
+    "review_insights": [
+      "legendary cold coffee",
+      "spiced misal pav",
+      "crispy poha",
+      "puneri student classic"
+    ]
   }
 ];

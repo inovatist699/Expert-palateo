@@ -4034,5 +4034,491 @@ const delhiCatalog=[
       "oversized signature LIITs and inventive fusion street food bites"
     ],
     "why": "DLF Cyber Hub's high-octane party bar featuring dramatic multi-tier chawl design and packed weekend DJ dance parties."
+  },
+  {
+    "id": "del-di-ghent-gurugram",
+    "name": "Di Ghent Cafe",
+    "area": "Golf Course Road, Gurugram (28km)",
+    "city": "Delhi NCR",
+    "latitude": 28.4682,
+    "longitude": 77.0984,
+    "address": "Cross Point Mall, DLF Phase 4, Golf Course Road, Gurugram 122002",
+    "c": [
+      "Cafe",
+      "Belgian",
+      "Bakery",
+      "Coffee"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,600 for two",
+    "rating": 4.8,
+    "review_count": 2450,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "european",
+      "cozy",
+      "woody"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🧇",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Di+Ghent+Cafe+Gurugram",
+    "review_insights": [
+      "authentic belgian liege waffles",
+      "poached eggs benedict",
+      "rich hot chocolate",
+      "warm woody european ambience"
+    ]
+  },
+  {
+    "id": "del-paul-ambience-gurugram",
+    "name": "Paul Bakery & Patisserie",
+    "area": "Ambience Mall, Gurugram (24km)",
+    "city": "Delhi NCR",
+    "latitude": 28.5032,
+    "longitude": 77.097,
+    "address": "Ground Floor, Ambience Mall, NH 8, Gurugram 122002",
+    "c": [
+      "Bakery",
+      "French",
+      "Desserts",
+      "Cafe"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,500 for two",
+    "rating": 4.7,
+    "review_count": 1890,
+    "t": [
+      "Bakery",
+      "Cafe"
+    ],
+    "a": [
+      "parisian",
+      "elegant",
+      "luxurious"
+    ],
+    "o": [
+      "date",
+      "family"
+    ],
+    "s": "mild",
+    "emoji": "🥐",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Paul+Ambience+Mall+Gurugram",
+    "review_insights": [
+      "butter flake croissants",
+      "strawberry millefeuille",
+      "french cafe au lait",
+      "artisanal sourdough"
+    ]
+  },
+  {
+    "id": "del-cafe-dori-gurugram",
+    "name": "Cafe Dori Roastery & Panini",
+    "area": "Sector 58, Gurugram (33km)",
+    "city": "Delhi NCR",
+    "latitude": 28.4092,
+    "longitude": 77.1045,
+    "address": "Magnolias Approach, Sector 58, Gurugram 122102",
+    "c": [
+      "Cafe",
+      "European",
+      "Coffee"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.7,
+    "review_count": 1620,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "pet-friendly",
+      "warehouse",
+      "modern"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Dori+Gurugram",
+    "review_insights": [
+      "pet-friendly warehouse aesthetic",
+      "cortado & pourovers",
+      "croque monsieur",
+      "artisan chocolate babka"
+    ]
+  },
+  {
+    "id": "del-haven-noida-104",
+    "name": "The Haven International Coffee House",
+    "area": "Sector 104, Noida (29km)",
+    "city": "Delhi NCR",
+    "latitude": 28.5412,
+    "longitude": 77.3689,
+    "address": "Sector 104 Market, Hajipur, Noida 201304",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.8,
+    "review_count": 940,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "cozy",
+      "peaceful",
+      "work"
+    ],
+    "o": [
+      "solo",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Haven+Coffee+House+Noida",
+    "review_insights": [
+      "specialty aero-press brews",
+      "fresh cinnamon buns",
+      "quiet work friendly nook",
+      "iced spanish latte"
+    ]
+  },
+  {
+    "id": "del-creme-borne-noida",
+    "name": "Creme Borne Dessert Parlour",
+    "area": "Sector 104, Noida (30km)",
+    "city": "Delhi NCR",
+    "latitude": 28.5425,
+    "longitude": 77.371,
+    "address": "Gardenia Gateway Market, Sector 104, Noida 201304",
+    "c": [
+      "Desserts",
+      "Ice Cream",
+      "Bakery"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.6,
+    "review_count": 810,
+    "t": [
+      "Dessert",
+      "Ice cream"
+    ],
+    "a": [
+      "instagrammable",
+      "vibrant"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍦",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Creme+Borne+Noida",
+    "review_insights": [
+      "black charcoal soft serve",
+      "crispy churros with chocolate dip",
+      "overloaded waffle cones",
+      "instagrammable desserts"
+    ]
+  },
+  {
+    "id": "del-creme-castle-gr-noida",
+    "name": "Creme Castle Bakery & Cafe",
+    "area": "Greater Noida (42km)",
+    "city": "Delhi NCR",
+    "latitude": 28.4744,
+    "longitude": 77.504,
+    "address": "Ansal Plaza, Pari Chowk, Greater Noida 201308",
+    "c": [
+      "Bakery",
+      "Desserts",
+      "Cafe"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹750 for two",
+    "rating": 4.7,
+    "review_count": 1530,
+    "t": [
+      "Bakery",
+      "Cafe"
+    ],
+    "a": [
+      "celebratory",
+      "lively"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🎂",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Creme+Castle+Greater+Noida",
+    "review_insights": [
+      "belgian mousse jars",
+      "customized designer cakes",
+      "creamy pesto penne",
+      "vibrant celebratory cafe"
+    ]
+  },
+  {
+    "id": "del-amrik-sukhdev-murthal",
+    "name": "Amrik Sukhdev Legendary Dhaba",
+    "area": "Murthal (48km)",
+    "city": "Delhi NCR",
+    "latitude": 28.9833,
+    "longitude": 77.0667,
+    "address": "52.250 KM Stone, G.T. Road, Murthal, Sonipat 131027",
+    "c": [
+      "North Indian",
+      "Regional",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹500 for two",
+    "rating": 4.8,
+    "review_count": 14500,
+    "t": [
+      "Restaurant",
+      "Highway"
+    ],
+    "a": [
+      "iconic",
+      "highway",
+      "bustling"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🫓",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Amrik+Sukhdev+Murthal",
+    "review_insights": [
+      "white butter aloo parantha",
+      "piping hot clay cup kulhad chai",
+      "jalebi with thick rabri",
+      "iconic 24x7 highway stop"
+    ]
+  },
+  {
+    "id": "del-chapter-twelve-faridabad",
+    "name": "Chapter Twelve Rooftop Cafe",
+    "area": "Sector 12, Faridabad (32km)",
+    "city": "Delhi NCR",
+    "latitude": 28.3889,
+    "longitude": 77.318,
+    "address": "Bhatia Tower, Mathura Road, Sector 12, Faridabad 121007",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,300 for two",
+    "rating": 4.6,
+    "review_count": 890,
+    "t": [
+      "Cafe",
+      "Rooftop"
+    ],
+    "a": [
+      "rooftop",
+      "lively",
+      "scenic"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Chapter+Twelve+Faridabad",
+    "review_insights": [
+      "rooftop city lights view",
+      "stone baked farmhouse pizza",
+      "refreshing peach iced tea",
+      "live acoustic music"
+    ]
+  },
+  {
+    "id": "del-drool-kitchen-dwarka",
+    "name": "Drool Kitchen & Cafe Lounge",
+    "area": "Dwarka",
+    "city": "Delhi NCR",
+    "latitude": 28.5815,
+    "longitude": 77.057,
+    "address": "Under Metro Station, Sector 10, Dwarka, New Delhi 110075",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,500 for two",
+    "rating": 4.6,
+    "review_count": 2200,
+    "t": [
+      "Cafe",
+      "Lounge"
+    ],
+    "a": [
+      "outdoor",
+      "lively",
+      "spacious"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Drool+Kitchen+Dwarka+Delhi",
+    "review_insights": [
+      "woodfired gourmet pizza",
+      "signature berry mocktails",
+      "spacious courtyard",
+      "live sports screenings"
+    ]
+  },
+  {
+    "id": "del-woodbox-rohini",
+    "name": "Woodbox Cafe & Shake Bar",
+    "area": "Rohini",
+    "city": "Delhi NCR",
+    "latitude": 28.7112,
+    "longitude": 77.1215,
+    "address": "DC Chowk, Sector 9, Rohini, New Delhi 110085",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹750 for two",
+    "rating": 4.7,
+    "review_count": 1890,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "rustic",
+      "wooden",
+      "youthful"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍔",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Woodbox+Cafe+Rohini+Delhi",
+    "review_insights": [
+      "flying nachos platter",
+      "thick ferrero shake",
+      "peri peri pasta",
+      "creative wooden decor"
+    ]
+  },
+  {
+    "id": "del-uncover-pitampura",
+    "name": "Cafe Uncover & Pizzeria",
+    "area": "Pitampura",
+    "city": "Delhi NCR",
+    "latitude": 28.6945,
+    "longitude": 77.149,
+    "address": "Netaji Subhash Place, Pitampura, New Delhi 110034",
+    "c": [
+      "Cafe",
+      "Italian",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.8,
+    "review_count": 1450,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "aesthetic",
+      "cozy",
+      "romantic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Uncover+Pitampura+Delhi",
+    "review_insights": [
+      "pink sauce pasta",
+      "hazelnut mocha",
+      "fairy light canopy",
+      "date night favourite"
+    ]
+  },
+  {
+    "id": "del-cafe21-laxmi-nagar",
+    "name": "Cafe 21 & Continental Bites",
+    "area": "Laxmi Nagar",
+    "city": "Delhi NCR",
+    "latitude": 28.631,
+    "longitude": 77.279,
+    "address": "Vikas Marg, near Nirman Vihar Metro, Laxmi Nagar, New Delhi 110092",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Fast Food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹500 for two",
+    "rating": 4.5,
+    "review_count": 820,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "casual",
+      "pocket-friendly"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+21+Laxmi+Nagar+Delhi",
+    "review_insights": [
+      "chilli cheese toast",
+      "cold coffee shake",
+      "white sauce penne",
+      "student friendly hangout"
+    ]
   }
 ];

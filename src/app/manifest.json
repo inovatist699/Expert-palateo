@@ -30,6 +30,7 @@
     "features/quiz/controller.js",
     "features/calibration/model.js",
     "features/calibration/controller.js",
+    "features/recommendations/learner.js",
     "features/recommendations/engine.js",
     "features/recommendations/feedback.js",
     "shared/ui/restaurant-card.js",
@@ -45,12 +46,14 @@
     "features/profile/views.js",
     "app/legacy-actions.js",
     "services/auth-storage.js",
+    "services/better-auth-client.js",
     "services/supabase-client.js",
     "services/catalog-repository.js",
     "services/user-repository.js",
     "features/auth/service.js",
     "features/auth/views.js",
     "features/auth/recovery.js",
+    "features/auth/deletion.js",
     "features/auth/controller.js",
     "app/events.js",
     "features/quiz/sync.js",
@@ -96,6 +99,9 @@
     "resources/public/intro.webm": "app/intro.webm",
     "resources/public/vendor/maplibre-gl.js": "app/maplibre-gl.js",
     "resources/public/vendor/maplibre-gl.css": "app/maplibre-gl.css",
-    "resources/public/vendor/maplibre-LICENSE.txt": "app/maplibre-LICENSE.txt"
+    "resources/public/vendor/maplibre-LICENSE.txt": "app/maplibre-LICENSE.txt",
+    "server/api/palo.js": "api/palo.js",
+    "legal/delete-account/index.html": "delete-account/index.html",
+    "pages/support/index.html": "support/index.html"
   }
 }

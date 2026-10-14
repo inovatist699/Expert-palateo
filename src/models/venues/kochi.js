@@ -670,5 +670,86 @@ const kochiCatalog=[
       "romantic candlelit courtyard under swaying palms near the chinese fishing nets"
     ],
     "why": "Romantic Fort Kochi coastal haven preparing the freshest sea catch with traditional Malabar coconut spices."
+  },
+  {
+    "id": "koc-cocoa-tree-kakkanad",
+    "name": "Cocoa Tree & Coffee Lounge",
+    "area": "Kakkanad / InfoPark",
+    "city": "Kochi",
+    "latitude": 10.015,
+    "longitude": 76.3585,
+    "address": "Infopark Expressway, Kakkanad, Kochi 682042",
+    "c": [
+      "Cafe",
+      "Desserts",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1650,
+    "t": [
+      "Cafe",
+      "Dessert"
+    ],
+    "a": [
+      "modern",
+      "tech-corridor",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "work"
+    ],
+    "s": "mild",
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cocoa+Tree+Kakkanad+Kochi",
+    "review_insights": [
+      "belgian mudpie",
+      "chicken melt sandwich",
+      "chilled mocha frappe",
+      "infopark crowd hub"
+    ]
+  },
+  {
+    "id": "koc-cafe-17-edappally",
+    "name": "Cafe 17 & Italian Bistro",
+    "area": "Edappally",
+    "city": "Kochi",
+    "latitude": 10.0245,
+    "longitude": 76.308,
+    "address": "Near Lulu Junction, Edappally, Kochi 682024",
+    "c": [
+      "Cafe",
+      "Italian",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹900 for two",
+    "rating": 4.6,
+    "review_count": 1120,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "cozy",
+      "warm",
+      "bistro"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🍝",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+17+Edappally+Kochi",
+    "review_insights": [
+      "woodfired thin pizza",
+      "creamy carbonara pasta",
+      "filter coffee cold brew",
+      "comfortable corner booths"
+    ]
   }
 ];

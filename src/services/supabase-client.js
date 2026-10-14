@@ -24,5 +24,5 @@ state.backendConnected=true;state.userId=user?.id||null;persist();
 document.getElementById('mode').textContent='Supabase connected';toast('Backend connected ✓');
 return user;
 }
-window.Palateo={connectBackend,ranked,rate,saveRest};
+window.Palateo = Object.assign(window.Palateo || {}, { connectBackend, connectRailway, ranked, rate, saveRest });
 

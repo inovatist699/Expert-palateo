@@ -1,0 +1,8 @@
+{
+  "appId": "in.palateo.app",
+  "appName": "Palateo",
+  "webDir": "www",
+  "server": { "androidScheme": "https", "iosScheme": "capacitor", "hostname": "localhost" },
+  "ios": { "contentInset": "automatic" },
+  "android": { "allowMixedContent": false }
+}

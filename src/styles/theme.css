@@ -89,3 +89,509 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,su
  @keyframes palateo-hello{0%,100%{box-shadow:0 0 0 #ffc64f00}45%{box-shadow:0 0 22px #ffc64f80}}
 }
 @media(prefers-reduced-motion:reduce){.screen,.zestMapSheet,.brandEmblem{animation:none}.restaurant-card,.choice,.btn,.zestMapBtn,.nav button{transition:none}}
+
+/* ==========================================================================
+   AUTHENTIC ZEST / TASTETRAIL INDIA (GOOGLE AI STUDIO) DARK APPLE GLASS THEME
+   - Exact Gunmetal (#142427) base, Frosted Surface (#1A2F33), Card (#254146)
+   - Apple Glass Specular Rim reflections, Saffron (#FFC64F) & Moonstone (#519CAB)
+   ========================================================================== */
+html, body {
+  background: #142427 !important;
+  color: #F7FBFC !important;
+}
+.app {
+  background: transparent !important;
+  color: #F7FBFC !important;
+}
+.top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.logo .logoText, .logo .logoText span {
+  color: #FFFFFF !important;
+}
+.logo .brandEmblem {
+  background: #FFC64F !important;
+  color: #142427 !important;
+  border-radius: 10px !important;
+}
+.mode {
+  background: #1A2F33 !important;
+  color: #F7FBFC !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+.mode:hover {
+  background: #254146 !important;
+}
+.cityPicker {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.citySelectLabel {
+  color: #8BA6AC !important;
+}
+.citySelectLabel select {
+  background: #1A2F33 !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+.cityPicker .locationButton {
+  background: #1A2F33 !important;
+  color: #FFC64F !important;
+  border: 1px solid rgba(255, 198, 79, 0.4) !important;
+}
+.cityPicker .locationButton:hover {
+  background: #254146 !important;
+}
+
+/* Cards & Glass Elements */
+.card, .restaurant-card, .appleGlassCard, .modalCard, .curatedTrailCard {
+  background: #1A2F33 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #F7FBFC !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+}
+.card:hover, .restaurant-card:hover, .curatedTrailCard:hover {
+  border-color: #FFC64F !important;
+  box-shadow: 0 8px 28px rgba(255, 198, 79, 0.15) !important;
+}
+.restname {
+  color: #FFFFFF !important;
+}
+.meta, .fitReason {
+  color: #8BA6AC !important;
+}
+.fitReason b {
+  color: #F7FBFC !important;
+}
+.section h1, .section h2 {
+  color: #FFFFFF !important;
+}
+.section span {
+  color: #8BA6AC !important;
+}
+.filterChip {
+  background: #1A2F33 !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #8BA6AC !important;
+}
+.filterChip:hover {
+  border-color: #FFC64F !important;
+  color: #F7FBFC !important;
+}
+.filterChip.active {
+  background: #FFC64F !important;
+  border-color: #FFC64F !important;
+  color: #142427 !important;
+  font-weight: 750 !important;
+}
+.viewSwitcher {
+  background: #101F22 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.viewTab {
+  color: #8BA6AC !important;
+}
+.viewTab.active {
+  background: #FFC64F !important;
+  color: #142427 !important;
+}
+
+/* Buttons & Actions */
+.btn.primary, .btn.green, .heroCta, .actions .dark {
+  background: #FFC64F !important;
+  color: #142427 !important;
+  border: 1px solid #FFC64F !important;
+  font-weight: 750 !important;
+}
+.btn.primary:hover, .btn.green:hover, .heroCta:hover, .actions .dark:hover {
+  background: #FFE0A1 !important;
+}
+.btn.secondary {
+  background: #1A2F33 !important;
+  color: #F7FBFC !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+.btn.secondary:hover {
+  background: #254146 !important;
+}
+.actions button {
+  background: #254146 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #F7FBFC !important;
+}
+.actions button:hover {
+  background: #2C4D53 !important;
+  border-color: #FFC64F !important;
+}
+.actions button[aria-pressed=true] {
+  background: #FFC64F !important;
+  color: #142427 !important;
+  border-color: #FFC64F !important;
+}
+.actions button[data-rest-action=visited][aria-pressed=true] {
+  background: #229555 !important;
+  color: #FFFFFF !important;
+  border-color: #229555 !important;
+}
+.match.strong {
+  background: #FFC64F !important;
+  color: #142427 !important;
+}
+.match.mixed {
+  background: #4C4028 !important;
+  color: #F8D48A !important;
+}
+.match.low {
+  background: #4B293A !important;
+  color: #FF8F87 !important;
+}
+.tag {
+  background: #254146 !important;
+  color: #C3E7F1 !important;
+  border: 1px solid rgba(81, 156, 171, 0.25) !important;
+}
+
+/* Bottom Floating Navigation Bar (AppleGlassFloatingBottomBar) */
+.nav {
+  background: rgba(26, 47, 51, 0.92) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+.nav button {
+  color: #8BA6AC !important;
+}
+.nav button.active {
+  background: #FFC64F !important;
+  color: #142427 !important;
+}
+.nav button.active svg {
+  stroke: #142427 !important;
+}
+.navComingSoonPill {
+  display: inline-block;
+  padding: 2px 5px;
+  background: rgba(120, 179, 191, 0.3);
+  border: 1px solid rgba(120, 179, 191, 0.6);
+  color: #F7FBFC;
+  font-size: 7.5px;
+  font-weight: 800;
+  border-radius: 999px;
+  margin-left: 3px;
+  vertical-align: middle;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Vector Map Canvas & Sheet (ZestMapCanvas.kt) */
+.homeMapView .zestMapContainer {
+  background: #142427 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.homeMapView .zestMapStage, .zestMapStage .zestMapSvg>rect {
+  background: #0F171A !important;
+  fill: #0F171A !important;
+}
+.zestMapBlocks {
+  fill: #132226 !important;
+}
+.zestMapPaths path:first-child {
+  stroke: #254146 !important;
+}
+.zestMapPaths path:last-child {
+  stroke: #315E68 !important;
+}
+.zestMapSvg #riverGrad stop:first-child { stop-color: #122234 !important; }
+.zestMapSvg #riverGrad stop:nth-child(2) { stop-color: #162432 !important; }
+.zestMapSvg #riverGrad stop:last-child { stop-color: #1A2F33 !important; }
+.zestMapSvg>text { fill: #8BA6AC !important; }
+.zestMapSvg .zestMapAreaLabel rect { fill: #1A2F33 !important; stroke: rgba(255, 255, 255, 0.15) !important; }
+.zestMapSvg .zestMapAreaLabel text { fill: #F7FBFC !important; }
+.homeMapToolbar .viewSwitcher, .homeMapToolbar .homeSearch, .zestMapBtn, .zestMapLegend {
+  background: rgba(26, 47, 51, 0.92) !important;
+  color: #F7FBFC !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(12px) !important;
+}
+.homeMapToolbar .viewTab { color: #8BA6AC !important; }
+.homeMapToolbar .viewTab.active, .zestMapBtn.active {
+  background: #FFC64F !important;
+  color: #142427 !important;
+}
+.zestPinCircle { stroke: #FFFFFF !important; stroke-width: 2 !important; }
+.zestPin.active .zestPinCircle { stroke: #FFC64F !important; stroke-width: 4 !important; }
+.zestMapSheet {
+  background: #1A2F33 !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #F7FBFC !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6) !important;
+}
+.zestSheetTitle { color: #FFFFFF !important; }
+.zestSheetMeta, .zestSheetWhy { color: #8BA6AC !important; }
+.zestSheetBadge {
+  background: #254146 !important;
+  color: #FFC64F !important;
+  border: 1px solid #FFC64F !important;
+}
+.zestSheetClose {
+  background: #254146 !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+.mapNotice {
+  color: #8BA6AC !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Taste Studio Profile & Palate Passport */
+.palatePassportCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #132A24 !important;
+  border: 1.2px solid #229555 !important;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+.passportCardContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.passportIconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(34, 149, 85, 0.2);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.passportInfo strong {
+  font-size: 15px;
+  font-weight: 750;
+  color: #FFFFFF;
+  display: block;
+}
+.passportInfo p {
+  font-size: 12px;
+  color: #C3E7F1;
+  margin: 2px 0 0;
+}
+.passportBadges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+.passportVisitsBadge {
+  background: #229555;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 750;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+.cloudSyncBadge {
+  background: #1A2F33;
+  border: 1px solid rgba(81, 156, 171, 0.4);
+  color: #C3E7F1;
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.profileTasteSummary {
+  background: #1A2F33 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.profileTasteSummary h2 {
+  color: #FFFFFF !important;
+}
+.profileMonogram {
+  background: #519CAB !important;
+  color: #142427 !important;
+}
+.profileStats .stat {
+  background: #1A2F33 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.profileStats .stat b {
+  color: #FFC64F !important;
+}
+.profileStats .stat span {
+  color: #8BA6AC !important;
+}
+.profileSavedLink {
+  color: #FFFFFF !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.profileSavedLink span:last-child {
+  color: #FFC64F !important;
+}
+.row {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #8BA6AC !important;
+}
+.row strong {
+  color: #FFFFFF !important;
+}
+.learnedSignals summary, .profilePrivacy summary {
+  color: #519CAB !important;
+}
+.privacyActions a, .dataAttribution a {
+  color: #FFC64F !important;
+}
+.dataAttribution {
+  background: #0D181A !important;
+  color: #8BA6AC !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.calibrationDish {
+  background: #1A2F33 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #F7FBFC !important;
+}
+.calibrationDish h3 {
+  color: #FFFFFF !important;
+}
+.calibrationProgress {
+  color: #FFC64F !important;
+}
+.dishFeedbackActions button {
+  background: #254146 !important;
+  color: #F7FBFC !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+.dishFeedbackActions button:last-child {
+  background: #FFC64F !important;
+  color: #142427 !important;
+  border-color: #FFC64F !important;
+}
+.dishFeedbackActions button[aria-pressed=true] {
+  background: #FFC64F !important;
+  color: #142427 !important;
+  border: 2px solid #FFC64F !important;
+}
+
+/* Ask Palateo & Palo Mascot */
+.askHero {
+  background: #1A2F33 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.askTitleRow h1 {
+  color: #FFFFFF !important;
+}
+.askIconSparkle {
+  font-size: 24px;
+  color: #FFC64F;
+}
+.askSubtitle {
+  color: #8BA6AC !important;
+}
+.askSubtitle strong {
+  color: #FFC64F;
+}
+.paloCompanionToggleCard {
+  background: #142427 !important;
+  border: 1px solid rgba(81, 156, 171, 0.3) !important;
+}
+.toggleInfo strong {
+  color: #FFFFFF !important;
+}
+.toggleInfo p {
+  color: #8BA6AC !important;
+}
+.toggleSlider {
+  background: #254146 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+.toggleSwitch input:checked + .toggleSlider {
+  background: #FFC64F !important;
+}
+.toggleSwitch input:checked + .toggleSlider:before {
+  background: #142427 !important;
+}
+.suggestedHeader h2 {
+  color: #FFFFFF !important;
+}
+.suggestedQuestionChip {
+  background: #1A2F33 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #F7FBFC !important;
+}
+.suggestedQuestionChip:hover {
+  border-color: #FFC64F !important;
+  background: #254146 !important;
+  color: #FFFFFF !important;
+}
+
+/* Friends Circle / Coming Soon Preview */
+.friendsHeroCard {
+  background: #1A2F33 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.friendsHeroCard h1 {
+  color: #FFFFFF !important;
+}
+.friendsHeroSubtitle {
+  color: #8BA6AC !important;
+}
+.comingSoonPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(255, 198, 79, 0.15);
+  border: 1px solid #FFC64F;
+  color: #FFC64F;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 750;
+}
+.comingSoonDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #FFC64F;
+  animation: pulseDot 1.5s infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+.friendsStatsGrid .stat {
+  background: #142427 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.friendsStatsGrid .stat b {
+  color: #FFC64F !important;
+}
+.friendCard {
+  background: #1A2F33 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.friendCard h3 {
+  color: #FFFFFF !important;
+}
+.friendMeta, .friendBio {
+  color: #8BA6AC !important;
+}
+.foodCrawlCard {
+  background: #1A2F33 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.foodCrawlCard h3 {
+  color: #FFFFFF !important;
+}
+.foodCrawlCard p {
+  color: #8BA6AC !important;
+}
+.tasteMatchBadge {
+  color: #FFC64F !important;
+  font-weight: 750;
+}

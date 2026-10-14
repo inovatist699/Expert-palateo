@@ -1,0 +1,140 @@
+name: Mobile builds
+
+on:
+  pull_request:
+  push:
+    branches: [main, 'codex/mobile-*']
+  workflow_dispatch:
+    inputs:
+      signed:
+        description: Build store-signed IPA and AAB (main only; requires mobile-release secrets)
+        type: boolean
+        default: false
+      build_number:
+        description: New store build number, greater than previously uploaded versions
+        type: string
+        required: true
+        default: '1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mobile-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' }}
+
+jobs:
+  quality:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Require main for signed releases
+        if: inputs.signed && github.ref != 'refs/heads/main'
+        run: echo 'Signed releases must run from main after review.' && exit 1
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: |
+            server/package-lock.json
+            mobile/package-lock.json
+      - run: npm --prefix server ci
+      - run: npm --prefix mobile ci
+      - run: npm run check
+      - run: npm run update:csp
+      - run: python3 -m unittest discover -s mobile/ci -p 'test_*.py'
+      - run: npm run mobile:build
+      - run: npm --prefix server audit --audit-level=high
+      - run: npm --prefix mobile audit --audit-level=high
+
+  native:
+    needs: quality
+    if: ${{ !inputs.signed || github.ref == 'refs/heads/main' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: android
+            os: ubuntu-24.04
+          - platform: ios
+            os: macos-26
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 40
+    environment: ${{ inputs.signed && 'mobile-release' || 'mobile-ci' }}
+    env:
+      PALATEO_BUILD_NUMBER: ${{ inputs.build_number || github.run_number }}
+      PALATEO_SIGN_RELEASE: ${{ inputs.signed && 'true' || 'false' }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+      - name: Validate build number
+        shell: bash
+        run: |
+          [[ "$PALATEO_BUILD_NUMBER" =~ ^[1-9][0-9]{0,9}$ ]] && (( PALATEO_BUILD_NUMBER <= 2100000000 ))
+      - run: npm --prefix mobile ci
+      - name: Bundle web assets and regenerate platform paths on this runner
+        run: npm run mobile:sync
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        if: matrix.platform == 'android'
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install Android SDK components
+        if: matrix.platform == 'android'
+        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Android lint and debug APK
+        if: matrix.platform == 'android' && !inputs.signed
+        working-directory: mobile/android
+        run: bash gradlew --no-daemon lintRelease assembleDebug bundleRelease
+      - name: Signed Android release
+        if: matrix.platform == 'android' && inputs.signed
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PATH: ${{ runner.temp }}/palateo-upload.jks
+          ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        shell: bash
+        run: |
+          test -n "$ANDROID_KEYSTORE_BASE64" || { echo 'Missing ANDROID_KEYSTORE_BASE64'; exit 1; }
+          umask 077
+          trap 'rm -f "$ANDROID_KEYSTORE_PATH"' EXIT
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$ANDROID_KEYSTORE_PATH"
+          cd mobile/android
+          bash gradlew --no-daemon lintRelease bundleRelease
+          jarsigner -verify app/build/outputs/bundle/release/app-release.aab
+      - name: iOS simulator build
+        if: matrix.platform == 'ios' && !inputs.signed
+        shell: bash
+        run: |
+          xcodebuild -version
+          xcodebuild -project mobile/ios/App/App.xcodeproj -scheme App -configuration Release -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath "$RUNNER_TEMP/derived" CURRENT_PROJECT_VERSION="$PALATEO_BUILD_NUMBER" CODE_SIGNING_ALLOWED=NO build
+          mkdir -p mobile/ios/App/output
+          ditto -c -k --sequesterRsrc --keepParent "$RUNNER_TEMP/derived/Build/Products/Release-iphonesimulator/App.app" mobile/ios/App/output/Palateo-simulator.zip
+      - name: Signed iOS release
+        if: matrix.platform == 'ios' && inputs.signed
+        env:
+          IOS_CERTIFICATE_BASE64: ${{ secrets.IOS_CERTIFICATE_BASE64 }}
+          IOS_CERTIFICATE_PASSWORD: ${{ secrets.IOS_CERTIFICATE_PASSWORD }}
+          IOS_PROFILE_BASE64: ${{ secrets.IOS_PROFILE_BASE64 }}
+        run: python3 mobile/ci/ios_release.py
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: palateo-${{ matrix.platform }}-${{ inputs.signed && 'signed' || 'test' }}-${{ github.run_number }}
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            mobile/android/app/build/outputs/apk/debug/*.apk
+            mobile/android/app/build/outputs/bundle/release/*.aab
+            mobile/android/app/build/reports/lint-results-release.html
+            mobile/ios/App/output/*.ipa
+            mobile/ios/App/output/*.zip

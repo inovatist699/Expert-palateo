@@ -836,5 +836,130 @@ const kolkataCatalog=[
       "impeccable traditional hospitality with bell-metal thalis and warm Bengali hospitality"
     ],
     "why": "Restored 100-year-old Ballygunge mansion celebrated for royal Bengali dining and baked coconut Daab Chingri."
+  },
+  {
+    "id": "kol-mezzuna-saltlake",
+    "name": "Cafe Mezzuna & Bistro",
+    "area": "Salt Lake Sector V",
+    "city": "Kolkata",
+    "latitude": 22.5805,
+    "longitude": 88.4345,
+    "address": "Forum Rangoli / EP Block, Sector V, Salt Lake, Kolkata 700091",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Mediterranean"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.7,
+    "review_count": 2450,
+    "t": [
+      "Cafe",
+      "Bistro"
+    ],
+    "a": [
+      "chic",
+      "modern",
+      "corporate"
+    ],
+    "o": [
+      "friends",
+      "work",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🥗",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Mezzuna+Sector+V+Kolkata",
+    "review_insights": [
+      "woodfired thin pizzas",
+      "grilled chicken steak",
+      "peach iced tea",
+      "vibrant it-hub evening"
+    ]
+  },
+  {
+    "id": "kol-coffee-bond-newtown",
+    "name": "Coffee Bond & Roastery",
+    "area": "New Town",
+    "city": "Kolkata",
+    "latitude": 22.5895,
+    "longitude": 88.468,
+    "address": "Action Area 1, near Eco Park, New Town, Kolkata 700156",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.8,
+    "review_count": 1250,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "aesthetic",
+      "airy",
+      "scenic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Coffee+Bond+New+Town+Kolkata",
+    "review_insights": [
+      "cold brew tonic",
+      "avocado poached egg sourdough",
+      "lakefront breeze",
+      "scandinavian wooden interior"
+    ]
+  },
+  {
+    "id": "kol-8th-day-jadavpur",
+    "name": "8th Day Cafe & Bakery",
+    "area": "Jadavpur",
+    "city": "Kolkata",
+    "latitude": 22.4975,
+    "longitude": 88.3715,
+    "address": "Jadavpur Central Road, near South City, Kolkata 700032",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.8,
+    "review_count": 1850,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "warm",
+      "community",
+      "cozy"
+    ],
+    "o": [
+      "solo",
+      "friends",
+      "work"
+    ],
+    "s": "mild",
+    "emoji": "🥯",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=8th+Day+Cafe+Jadavpur+Kolkata",
+    "review_insights": [
+      "authentic new york bagels",
+      "cinnamon rolls",
+      "pour-over coffee",
+      "friendly community vibe"
+    ]
   }
 ];

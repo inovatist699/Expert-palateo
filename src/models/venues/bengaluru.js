@@ -1179,5 +1179,171 @@ const bengaluruCatalog=[
       "pure ghee poured generously over everything with unmatched heritage pride"
     ],
     "why": "Historic 1924 Lalbagh culinary monument that invented Rava Idli and serves lavish multi-course silver thalis."
+  },
+  {
+    "id": "blr-coffee-bean-ecity",
+    "name": "The Coffee Bean & Tea Leaf",
+    "area": "Electronic City",
+    "city": "Bengaluru",
+    "latitude": 12.8452,
+    "longitude": 77.6602,
+    "address": "Velankani Tech Park, Phase 1, Electronic City, Bengaluru 560100",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1450,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "modern",
+      "tech-hub",
+      "quiet"
+    ],
+    "o": [
+      "work",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Coffee+Bean+Electronic+City+Bengaluru",
+    "review_insights": [
+      "signature ice blended mocha",
+      "blueberry muffin",
+      "work friendly wifi",
+      "peaceful tech park courtyard"
+    ]
+  },
+  {
+    "id": "blr-glens-whitefield",
+    "name": "Glen's Bakehouse & Cafe",
+    "area": "Whitefield",
+    "city": "Bengaluru",
+    "latitude": 12.9698,
+    "longitude": 77.7499,
+    "address": "ITPL Main Road, Whitefield, Bengaluru 560066",
+    "c": [
+      "Bakery",
+      "Cafe",
+      "Desserts",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.8,
+    "review_count": 3200,
+    "t": [
+      "Bakery",
+      "Cafe"
+    ],
+    "a": [
+      "vintage",
+      "cozy",
+      "brickwork"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🧁",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Glens+Bakehouse+Whitefield+Bengaluru",
+    "review_insights": [
+      "signature red velvet cupcakes",
+      "thin crust sourdough pizza",
+      "citrus cooler",
+      "vintage red brick porch"
+    ]
+  },
+  {
+    "id": "blr-dialogues-hsr",
+    "name": "Dialogues Cafe & Boardgames",
+    "area": "HSR Layout",
+    "city": "Bengaluru",
+    "latitude": 12.9115,
+    "longitude": 77.6385,
+    "address": "15th Cross, Sector 4, HSR Layout, Bengaluru 560102",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Snacks"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹700 for two",
+    "rating": 4.8,
+    "review_count": 1850,
+    "t": [
+      "Cafe",
+      "Co-working"
+    ],
+    "a": [
+      "boardgames",
+      "cozy",
+      "creative"
+    ],
+    "o": [
+      "friends",
+      "work",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🎲",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Dialogues+Cafe+HSR+Layout+Bengaluru",
+    "review_insights": [
+      "hundreds of boardgames",
+      "french press coffee",
+      "chilli cheese toasties",
+      "open community terrace"
+    ]
+  },
+  {
+    "id": "blr-druid-garden-yelahanka",
+    "name": "The Druid Garden Cafe & Bistro",
+    "area": "Yelahanka",
+    "city": "Bengaluru",
+    "latitude": 13.0645,
+    "longitude": 77.591,
+    "address": "Sahakara Nagar, near Yelahanka, Bengaluru 560092",
+    "c": [
+      "Continental",
+      "Cafe",
+      "European"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,600 for two",
+    "rating": 4.7,
+    "review_count": 2400,
+    "t": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "a": [
+      "rooftop",
+      "botanical",
+      "airy"
+    ],
+    "o": [
+      "date",
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "🌿",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Druid+Garden+Bengaluru",
+    "review_insights": [
+      "retractable glass roof",
+      "woodfired sourdough pizza",
+      "herb infused coolers",
+      "stunning botanical greenhouse"
+    ]
   }
 ];

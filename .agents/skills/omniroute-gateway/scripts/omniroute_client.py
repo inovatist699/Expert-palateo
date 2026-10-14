@@ -39,8 +39,9 @@ class RateLimitError(Exception):
 class OmniRouteClient:
     """Client for communicating with the OmniRoute AI gateway."""
 
-    def __init__(self, base_url="http://localhost:20128/v1", requests_per_second=10):
+    def __init__(self, base_url="http://localhost:20128/v1", api_key=None, requests_per_second=10):
         self.base_url = base_url.rstrip("/")
+        self.api_key = api_key or os.environ.get("OMNIROUTE_API_KEY", "sk-250daa1c27d0a19c-4d9abe-e991e759")
         self.delay = 1.0 / requests_per_second
         self.last_request_time = 0.0
 
@@ -58,6 +59,8 @@ class OmniRouteClient:
             "Accept": "application/json",
             "User-Agent": "omniroute-gateway-skill/1.0",
         }
+        if self.api_key:
+            headers["Authorization"] = f"Bearer {self.api_key}"
 
         if payload is not None:
             data = json.dumps(payload).encode("utf-8")
@@ -150,11 +153,12 @@ class OmniRouteClient:
                 "message": f"OmniRoute is already active and responsive at {self.base_url}.",
             }
 
-        npx_path = shutil.which("npx")
-        omniroute_path = shutil.which("omniroute")
-        cmd_used = None
+        node_path = shutil.which("node")
+        server_cjs = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../scripts/omniroute_server.cjs"))
 
-        if omniroute_path:
+        if node_path and os.path.exists(server_cjs):
+            cmd_used = [node_path, server_cjs]
+        elif omniroute_path:
             cmd_used = [omniroute_path]
         elif npx_path:
             cmd_used = [npx_path, "omniroute"]

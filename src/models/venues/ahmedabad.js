@@ -4366,5 +4366,485 @@ const catalog=[
       "delicious finger foods including cheese poppers, peri peri nachos, and mocktail bowls"
     ],
     "why": "Bodakdev high-energy dance club fitted with strobe lights, smoke machines, and dedicated DJ dance floor."
+  },
+  {
+    "id": "ahm-blue-oven-gandhinagar",
+    "name": "The Blue Oven Patisserie & Cafe",
+    "area": "Kudasan, Gandhinagar (24km)",
+    "city": "Ahmedabad",
+    "latitude": 23.1842,
+    "longitude": 72.6288,
+    "address": "Promenade, Kudasan Road, Gandhinagar 382421",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "Desserts",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.7,
+    "review_count": 640,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "bohemian",
+      "cozy",
+      "aesthetic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🥐",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Blue+Oven+Kudasan+Gandhinagar",
+    "review_insights": [
+      "fresh sourdough pizza",
+      "classic tiramisu",
+      "spanish latte",
+      "aesthetic bohemian patio"
+    ]
+  },
+  {
+    "id": "ahm-mocha-infocity",
+    "name": "Mocha Cafe & Bistro",
+    "area": "Infocity, Gandhinagar (26km)",
+    "city": "Ahmedabad",
+    "latitude": 23.195,
+    "longitude": 72.631,
+    "address": "Super Mall 1, Infocity, Gandhinagar 382007",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹1,100 for two",
+    "rating": 4.6,
+    "review_count": 980,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "lively",
+      "modern"
+    ],
+    "o": [
+      "friends",
+      "work"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mocha+Infocity+Gandhinagar",
+    "review_insights": [
+      "chocolate avalanche shake",
+      "mezze platters",
+      "tech corridor hub",
+      "outdoor seating"
+    ]
+  },
+  {
+    "id": "ahm-gift-roastery",
+    "name": "GIFT Tower Artisanal Roastery",
+    "area": "GIFT City (21km)",
+    "city": "Ahmedabad",
+    "latitude": 23.1587,
+    "longitude": 72.6847,
+    "address": "Tower ONE Concourse, GIFT City, Gandhinagar 382355",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.8,
+    "review_count": 510,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "modern",
+      "corporate",
+      "sleek"
+    ],
+    "o": [
+      "work",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=GIFT+City+Coffee+Roastery",
+    "review_insights": [
+      "single-origin pourovers",
+      "avocado sourdough toast",
+      "corporate tech vibe",
+      "cold brew tonic"
+    ]
+  },
+  {
+    "id": "ahm-grand-mercure-bistro",
+    "name": "The Glasshouse Bistro",
+    "area": "GIFT City (22km)",
+    "city": "Ahmedabad",
+    "latitude": 23.161,
+    "longitude": 72.687,
+    "address": "Grand Mercure Hotel, GIFT City, Gandhinagar 382355",
+    "c": [
+      "Continental",
+      "Fine dining",
+      "Asian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,800 for two",
+    "rating": 4.6,
+    "review_count": 420,
+    "t": [
+      "Restaurant",
+      "Fine dining"
+    ],
+    "a": [
+      "luxury",
+      "peaceful",
+      "elegant"
+    ],
+    "o": [
+      "date",
+      "family"
+    ],
+    "s": "mild",
+    "emoji": "✨",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Glasshouse+Bistro+GIFT+City",
+    "review_insights": [
+      "luxurious sunday brunch",
+      "gourmet wild mushroom risotto",
+      "fine dining ambience",
+      "decadent cheesecake"
+    ]
+  },
+  {
+    "id": "ahm-sanand-heritage-cafe",
+    "name": "The Palms Country Cafe & Resort",
+    "area": "Sanand Highway (32km)",
+    "city": "Ahmedabad",
+    "latitude": 22.9812,
+    "longitude": 72.368,
+    "address": "Sanand-Nalsarovar Link Road, Sanand 382110",
+    "c": [
+      "Cafe",
+      "North Indian",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹1,200 for two",
+    "rating": 4.5,
+    "review_count": 670,
+    "t": [
+      "Cafe",
+      "Restaurant"
+    ],
+    "a": [
+      "outdoor",
+      "peaceful",
+      "resort"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🌴",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Palms+Sanand+Highway",
+    "review_insights": [
+      "lawnside bonfire dining",
+      "woodfired thin crust pizza",
+      "weekend retreat",
+      "chocolate brownie fudge"
+    ]
+  },
+  {
+    "id": "ahm-kalol-thaker-dining",
+    "name": "Shree Thaker Kathiyawadi & Sweets",
+    "area": "Kalol (36km)",
+    "city": "Ahmedabad",
+    "latitude": 23.2415,
+    "longitude": 72.5012,
+    "address": "Near Kalol Highway Toll, Kalol 382721",
+    "c": [
+      "Gujarati",
+      "Kathiyawadi",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.7,
+    "review_count": 890,
+    "t": [
+      "Restaurant",
+      "Regional"
+    ],
+    "a": [
+      "traditional",
+      "bustling"
+    ],
+    "o": [
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "🍲",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Shree+Thaker+Kalol",
+    "review_insights": [
+      "unlimited royal thali",
+      "fresh hot malpua",
+      "makhan bharela parotha",
+      "authentic village taste"
+    ]
+  },
+  {
+    "id": "ahm-chhatral-waffle-desserts",
+    "name": "Sweet Indulgence Dessert Studio",
+    "area": "Chhatral Highway (42km)",
+    "city": "Ahmedabad",
+    "latitude": 23.328,
+    "longitude": 72.441,
+    "address": "Highway Food Plaza, Chhatral GIDC, Gujarat 382729",
+    "c": [
+      "Desserts",
+      "Bakery",
+      "Cafe"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.6,
+    "review_count": 380,
+    "t": [
+      "Dessert",
+      "Bakery"
+    ],
+    "a": [
+      "modern",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍰",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sweet+Indulgence+Chhatral",
+    "review_insights": [
+      "nutella loaded waffle",
+      "churros with dulce de leche",
+      "belgian chocolate sundae",
+      "late night sweet tooth"
+    ]
+  },
+  {
+    "id": "ahm-dark-roast-bopal",
+    "name": "The Dark Roast Cafe & Bistro",
+    "area": "South Bopal",
+    "city": "Ahmedabad",
+    "latitude": 23.0315,
+    "longitude": 72.4682,
+    "address": "Gala Gymkhana Road, South Bopal, Ahmedabad 380058",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Italian",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 940,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "cozy",
+      "modern",
+      "aesthetic"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Dark+Roast+Bopal+Ahmedabad",
+    "review_insights": [
+      "single origin pour-over",
+      "sourdough margherita pizza",
+      "tiramisu jar",
+      "peaceful outdoor patio"
+    ]
+  },
+  {
+    "id": "ahm-mocha-chandkheda",
+    "name": "Mocha Cafe & Bites",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.109,
+    "longitude": 72.585,
+    "address": "Tragard Road, Chandkheda, Ahmedabad 382424",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹900 for two",
+    "rating": 4.6,
+    "review_count": 720,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "lively",
+      "youthful"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mocha+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "avalanche chocolate shake",
+      "cheesy peri peri fries",
+      "woodfired calzone",
+      "student hangout"
+    ]
+  },
+  {
+    "id": "ahm-coffee-story-motera",
+    "name": "Coffee Story & Bakery",
+    "area": "Motera",
+    "city": "Ahmedabad",
+    "latitude": 23.0945,
+    "longitude": 72.6015,
+    "address": "Stadium Road, near Narendra Modi Stadium, Motera, Ahmedabad 380005",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.8,
+    "review_count": 610,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "cozy",
+      "sports-vibe"
+    ],
+    "o": [
+      "friends",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🥐",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Coffee+Story+Motera+Ahmedabad",
+    "review_insights": [
+      "match-day hazelnut frappe",
+      "butter croissants",
+      "blueberry cheesecake",
+      "breezy outdoor seats"
+    ]
+  },
+  {
+    "id": "ahm-urban-cafe-nikol",
+    "name": "The Urban Cafe & Lounge",
+    "area": "Nikol",
+    "city": "Ahmedabad",
+    "latitude": 23.045,
+    "longitude": 72.671,
+    "address": "Raspan Arcade, Nikol Gam Road, Ahmedabad 382350",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Coffee"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.5,
+    "review_count": 530,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "casual",
+      "vibrant"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍔",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Urban+Cafe+Nikol+Ahmedabad",
+    "review_insights": [
+      "loaded veggie burger",
+      "cold coffee with brownie",
+      "mexican salsa nachos",
+      "pocket-friendly bites"
+    ]
+  },
+  {
+    "id": "ahm-brew-bite-gota",
+    "name": "Brew & Bite Artisanal Cafe",
+    "area": "Gota",
+    "city": "Ahmedabad",
+    "latitude": 23.1025,
+    "longitude": 72.538,
+    "address": "Vandematram Cross Road, Gota, Ahmedabad 382481",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹750 for two",
+    "rating": 4.7,
+    "review_count": 810,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "modern",
+      "peaceful"
+    ],
+    "o": [
+      "work",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Brew+and+Bite+Gota+Ahmedabad",
+    "review_insights": [
+      "artisan cold brew",
+      "spinach corn garlic toast",
+      "caramel frappe",
+      "spacious work tables"
+    ]
   }
 ];

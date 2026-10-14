@@ -41,12 +41,19 @@ document.addEventListener('click',event=>{
   case 'view-pin': if(d.restId){placePreviewOrigin='view-pin';selectedPinId=d.restId;homeView='map';go('home');document.getElementById('zestMapContainer')?.scrollIntoView({behavior:'smooth',block:'start'});focusPlacePreview()} break;
   case 'open-place': if(d.restId)openPlaceDetails(d.restId,control); break;
   case 'close-place': closePlaceDetails(); break;
+  case 'open-passport': showPalatePassportModal(); break;
+  case 'close-passport': document.getElementById('passportModalBackdrop')?.remove(); break;
+  case 'set-profile-budget': if(d.budget){state.answers.budget=d.budget;persist();if(currentUser)syncTaste().catch(()=>{});profile();toast('Budget set to '+price(d.budget));} break;
+  case 'set-profile-distance': if(d.distance){state.answers.distance=d.distance;persist();if(currentUser)syncTaste().catch(()=>{});profile();toast('Distance range set to '+(d.distance==='any'?'Anywhere':d.distance+' km'));} break;
   case 'dish-rate': rateDish(d.dishId,d.dishValue,d.source); break;
   case 'dish-undo': if(state.dishFeedback?.[d.dishId])rateDish(d.dishId,state.dishFeedback[d.dishId],'edit'); break;
   case 'dish-next': dishCalibrationIndex++;go('profile',{keepScroll:true});document.getElementById('calibrationDishName')?.focus({preventScroll:true}); break;
   case 'dish-retry': retryDishSync(); break;
   case 'scroll-to-card': if(d.restId){const el=document.getElementById('card-'+d.restId);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flashCard');setTimeout(()=>el.classList.remove('flashCard'),1800)}} break;
   case 'follow': if(d.personId)follow(d.personId); break;
+  case 'revoke-ai': if(currentUser){localStorage.removeItem('palateo-palo-ai-consent:'+currentUser.id);toast('Live AI permission withdrawn. Local recommendations remain available.')} break;
+  case 'delete-account': showAccountDeletion(); break;
+  case 'cancel-deletion': if(!accountDeletionBusy){document.getElementById('accountDeletionDialog')?.remove();document.querySelector('[data-action="delete-account"]')?.focus()} break;
   case 'reset-taste': resetTaste(); break;
   case 'close-auth': closeAuth(); break;
   case 'legal-decline': signOutV5(); break;
@@ -69,13 +76,14 @@ document.addEventListener('change',event=>{
 document.addEventListener('submit',event=>{
  const form=event.target;
  if(!(form instanceof HTMLFormElement))return;
+ if(form.dataset.action==='confirm-account-deletion'){event.preventDefault();deletePalateoAccount();return;}
  if(form.dataset.action==='password-reset'){event.preventDefault();resetAccountPassword();return;}
  if(form.dataset.action==='legal-submit'){event.preventDefault();acceptLegalConsent();return;}
  if(form.dataset.action!=='auth-submit')return;
  event.preventDefault();
  if(form.dataset.authMode==='login'||form.dataset.authMode==='signup')submitAuth(form.dataset.authMode);
 });
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(document.getElementById('authModal'))closeAuth();else if(page==='place'){event.preventDefault();closePlaceDetails()}else if(document.getElementById('zestMapSheet')){event.preventDefault();closePlacePreview()}}});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(document.getElementById('authModal'))closeAuth();else if(document.getElementById('passportModalBackdrop')){document.getElementById('passportModalBackdrop').remove()}else if(page==='place'){event.preventDefault();closePlaceDetails()}else if(document.getElementById('zestMapSheet')){event.preventDefault();closePlacePreview()}}});
 document.addEventListener('click',event=>{const target=event.target instanceof Element?event.target:null,card=target?.closest('.restaurant-card');if(card&&!target.closest('button,a,details,summary,input'))openPlaceDetails(card.dataset.placeId,card.querySelector('[data-action="open-place"]'))});
 document.addEventListener('click',event=>{
 const target=event.target instanceof Element?event.target:null,button=target?.closest('[data-rest-action]');

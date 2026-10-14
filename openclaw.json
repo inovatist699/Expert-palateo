@@ -1,7 +1,7 @@
 {
   "$schema": "https://openclaw.ai/schema/openclaw.json",
   "name": "palateo",
-  "description": "Palateo - AI-Powered Taste Quiz and Curated Dining App",
+  "description": "Palateo - AI-Powered Taste Quiz, Curated Dining App & Autonomous Operations Swarm",
   "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
   "agents": {
     "defaults": {
@@ -15,14 +15,79 @@
         "name": "Palateo Lead Engineer & Taste Architect",
         "description": "Autonomous full-stack engineering, verification, and UI/UX design agent for Palateo.",
         "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
-        "rules": [
-          "AGENTS.md",
-          "SOUL.md",
-          "IDENTITY.md",
-          "TOOLS.md",
-          "MEMORY.md",
-          "USER.md"
-        ]
+        "rules": ["AGENTS.md", "SOUL.md", "IDENTITY.md", "TOOLS.md", "MEMORY.md", "USER.md"]
+      },
+      "palateo-sentinel": {
+        "name": "Palateo App Sentinel",
+        "description": "Autonomous health monitoring, test suite execution, CSP integrity, and live domain verification.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/ops/sentinel.cjs"
+      },
+      "palateo-ui-polisher": {
+        "name": "Palateo UI/UX Polisher",
+        "description": "Autonomous design system auditing, WCAG AA contrast enforcement, and mobile ergonomic polish.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/ops/ui_polisher.cjs"
+      },
+      "palateo-version-keeper": {
+        "name": "Palateo Version Keeper",
+        "description": "Dependency scanning, semantic version bumping, and runtime compatibility auditor.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/ops/version_keeper.cjs"
+      },
+      "palateo-ml-engine": {
+        "name": "Palateo ML & Taste Engine",
+        "description": "Recommendation algorithm calibration, taste vector optimization, and Palo AI companion monitoring.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/ops/ml_engine.cjs"
+      },
+      "palateo-email-ops": {
+        "name": "Palateo Email Operations Agent",
+        "description": "Transactional email automation, Resend delivery auditing, and waitlist welcome dispatch.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/ops/email_ops.cjs"
+      },
+      "palateo-data-master": {
+        "name": "Palateo Data & Catalog Master",
+        "description": "13-city dining dataset normalization, Google Photos cache sync, and Supabase migration tracking.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/ops/data_master.cjs"
+      },
+      "palateo-deployer": {
+        "name": "Palateo Release Deployer",
+        "description": "Pre-flight verification gatekeeper, CSP sync, and automated Vercel production deployment.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/ops/deployer.cjs"
+      },
+      "palateo-reel-director": {
+        "name": "Palateo Instagram Reel Director",
+        "description": "Viral 9:16 short video generation, dining storyboards, and audio cues for Instagram Reels.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/marketing/reel_director.cjs"
+      },
+      "palateo-story-engine": {
+        "name": "Palateo Instagram Story Engine",
+        "description": "Daily interactive Instagram Stories, foodie debate polls, and restaurant gem spotlights.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/marketing/story_engine.cjs"
+      },
+      "palateo-post-curator": {
+        "name": "Palateo Instagram Post & Carousel Curator",
+        "description": "Editorial dining guide carousels (4:5 format), taste science breakdowns, and hashtag clusters.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/marketing/post_curator.cjs"
+      },
+      "palateo-insta-publisher": {
+        "name": "Palateo Instagram Graph Publisher",
+        "description": "Official Meta Graph API media upload, container status polling, and scheduled publishing.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/marketing/instagram_publisher.cjs"
+      },
+      "palateo-growth-hacker": {
+        "name": "Palateo Growth Hacker",
+        "description": "Social growth analytics, conversion rate optimization, and viral engagement funnels.",
+        "workspace": "c:\\Users\\Aayush\\Documents\\ChatGPT\\Palateo",
+        "entrypoint": "scripts/agents/marketing/growth_hacker.cjs"
       }
     }
   },
@@ -30,6 +95,11 @@
     "check": "npm run check",
     "update-csp": "npm run update:csp",
     "check-live": "npm run check:live",
-    "preview-mobile": "npm run preview:mobile"
+    "preview-mobile": "npm run preview:mobile",
+    "fleet": "npm run agents:fleet",
+    "fleet-ops": "npm run agents:ops",
+    "fleet-marketing": "npm run agents:marketing",
+    "fleet-deploy": "npm run agents:deploy",
+    "fleet-daemon": "npm run agents:daemon"
   }
 }

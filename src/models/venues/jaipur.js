@@ -664,5 +664,128 @@ const jaipurCatalog=[
       "heritage dessert stall refreshing jaipurites since 1946"
     ],
     "why": "Heritage 1946 dessert stall near Hawa Mahal famed for clay-pot matka kulfis infused with saffron and pistachios."
+  },
+  {
+    "id": "jai-nibs-mansarovar",
+    "name": "Nibs Cafe & Chocolataria",
+    "area": "Mansarovar",
+    "city": "Jaipur",
+    "latitude": 26.8545,
+    "longitude": 75.768,
+    "address": "Madhyam Marg, Mansarovar, Jaipur 302020",
+    "c": [
+      "Cafe",
+      "Desserts",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1890,
+    "t": [
+      "Cafe",
+      "Dessert"
+    ],
+    "a": [
+      "colorful",
+      "quirky",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nibs+Cafe+Mansarovar+Jaipur",
+    "review_insights": [
+      "chocolate syringe shots",
+      "nutella pizza slice",
+      "creamy white sauce pasta",
+      "quirky pop art walls"
+    ]
+  },
+  {
+    "id": "jai-curious-life-vaishali",
+    "name": "Curious Life Coffee Roasters",
+    "area": "Vaishali Nagar",
+    "city": "Jaipur",
+    "latitude": 26.908,
+    "longitude": 75.7485,
+    "address": "Queens Road, Vaishali Nagar, Jaipur 302021",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹900 for two",
+    "rating": 4.9,
+    "review_count": 2600,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "specialty",
+      "minimalist",
+      "calm"
+    ],
+    "o": [
+      "solo",
+      "date",
+      "work"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Curious+Life+Coffee+Vaishali+Jaipur",
+    "review_insights": [
+      "single estate pour overs",
+      "panini sandwiches",
+      "iced vietnamese coffee",
+      "coffee lover heaven"
+    ]
+  },
+  {
+    "id": "jai-stepout-jagatpura",
+    "name": "Stepout Cafe & Rooftop",
+    "area": "Jagatpura",
+    "city": "Jaipur",
+    "latitude": 26.818,
+    "longitude": 75.839,
+    "address": "Mahal Road, Jagatpura, Jaipur 302017",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.6,
+    "review_count": 980,
+    "t": [
+      "Cafe",
+      "Rooftop"
+    ],
+    "a": [
+      "rooftop",
+      "breezy",
+      "lively"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Stepout+Cafe+Jagatpura+Jaipur",
+    "review_insights": [
+      "sunset terrace lights",
+      "peri peri garlic bread",
+      "oreo thickshake",
+      "chill youth vibes"
+    ]
   }
 ];

@@ -832,5 +832,129 @@ const chennaiCatalog=[
       "peaceful sanctuary in the heart of chennai where time slows down"
     ],
     "why": "Serene Royapettah garden cafe nestled in a heritage colonial bungalow surrounded by lush tropical greenery."
+  },
+  {
+    "id": "che-writers-cafe-porur",
+    "name": "Writers Cafe & Bakery",
+    "area": "Porur",
+    "city": "Chennai",
+    "latitude": 13.0385,
+    "longitude": 80.1565,
+    "address": "Mount Poonamallee Road, Porur, Chennai 600116",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "European",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.8,
+    "review_count": 2200,
+    "t": [
+      "Cafe",
+      "Books"
+    ],
+    "a": [
+      "cozy",
+      "bookish",
+      "inspiring"
+    ],
+    "o": [
+      "solo",
+      "friends",
+      "work"
+    ],
+    "s": "mild",
+    "emoji": "📚",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Writers+Cafe+Porur+Chennai",
+    "review_insights": [
+      "flammkuchen thin pizza",
+      "hot chocolate with marshmallows",
+      "book browsing aisles",
+      "inclusive social kitchen"
+    ]
+  },
+  {
+    "id": "che-sandys-velachery",
+    "name": "Sandy's Chocolate Laboratory",
+    "area": "Velachery",
+    "city": "Chennai",
+    "latitude": 12.979,
+    "longitude": 80.2185,
+    "address": "100 Feet Bypass Road, Velachery, Chennai 600042",
+    "c": [
+      "Desserts",
+      "Cafe",
+      "Continental"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,300 for two",
+    "rating": 4.7,
+    "review_count": 1750,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "quirky",
+      "modern",
+      "lively"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🧪",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sandys+Chocolate+Laboratory+Velachery+Chennai",
+    "review_insights": [
+      "signature tiny tub cake",
+      "chocolate syringe brownie",
+      "truffle pasta",
+      "fun dessert experiments"
+    ]
+  },
+  {
+    "id": "che-that-madras-place-annanagar",
+    "name": "That Madras Place & Pizzeria",
+    "area": "Anna Nagar West",
+    "city": "Chennai",
+    "latitude": 13.089,
+    "longitude": 80.2045,
+    "address": "2nd Avenue, Anna Nagar West, Chennai 600040",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,100 for two",
+    "rating": 4.7,
+    "review_count": 1420,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "quirky",
+      "artistic",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=That+Madras+Place+Anna+Nagar+Chennai",
+    "review_insights": [
+      "aglio olio pasta",
+      "caramel sea salt cheesecake",
+      "doodled wall art",
+      "chill afternoon vibe"
+    ]
   }
 ];

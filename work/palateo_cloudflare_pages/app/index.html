@@ -66,7 +66,9 @@ html{scroll-behavior:smooth}body{min-width:320px;background:radial-gradient(elli
 </style>
 <style>.dataAttribution{max-width:1280px;margin:0 auto;padding:8px 0 28px;color:#5c6c62;font-size:11px;line-height:1.55;text-align:center}.dataAttribution a{color:var(--green);text-underline-offset:2px}@media(max-width:839px){.dataAttribution{padding:0 18px 92px}}</style>
 <style id="required-auth-style">.authGate{max-width:760px;margin:7vh auto 110px;padding:28px;border:1px solid rgba(220,230,220,.9);border-radius:28px;background:linear-gradient(135deg,#ffffff,#edf5ef);box-shadow:0 10px 30px rgba(15,73,55,.05)}.authGate .eyebrow{margin-bottom:14px}.authGate h1{margin:0 0 12px;font-size:clamp(30px,5vw,48px);letter-spacing:-2px;line-height:1.02}.authGate p{max-width:560px;color:var(--muted);font-size:14px;line-height:1.65}.authRequiredNote{padding:11px 13px;border-radius:12px;background:#eef5f0;color:#144c38;font-size:12px;font-weight:750;line-height:1.5}.modal.authRequired{cursor:default;overflow-y:auto;align-items:center}.modal.authRequired .modalCard{cursor:auto;max-height:calc(100vh - 32px);overflow-y:auto}.modal.authRequired .modalClose{display:none}</style>
-<style id="legal-controls">.legalLinks{font-size:12px;line-height:1.6}.legalLinks a,.consentChoice a{color:var(--green);text-underline-offset:3px}.consentNotice{margin:16px 0;padding:13px;border:1px solid var(--line);border-radius:14px;background:#f7faf7}.consentNotice p{margin:0 0 12px;font-size:12px}.consentChoice{display:flex;align-items:flex-start;gap:9px;margin:12px 0;font-size:12px;line-height:1.6;color:#3d4e43}.consentChoice input{flex:none;margin-top:4px;accent-color:var(--green)}.privacyActions{display:flex;gap:10px;flex-wrap:wrap}.privacyActions a{padding:10px 12px;border:1px solid var(--line);border-radius:12px;color:var(--green);font-size:12px;font-weight:800;text-underline-offset:3px}</style>
+<style id="legal-controls">.legalLinks{font-size:12px;line-height:1.6}.legalLinks a,.consentChoice a{color:var(--green);text-underline-offset:3px}.consentNotice{margin:16px 0;padding:13px;border:1px solid var(--line);border-radius:14px;background:#f7faf7}.consentNotice p{margin:0 0 12px;font-size:12px}.consentChoice{display:flex;align-items:flex-start;gap:9px;margin:12px 0;font-size:12px;line-height:1.6;color:#3d4e43}.consentChoice input{flex:none;margin-top:4px;accent-color:var(--green)}.privacyActions{display:flex;gap:10px;flex-wrap:wrap}.privacyActions a{padding:10px 12px;border:1px solid var(--line);border-radius:12px;color:var(--green);font-size:12px;font-weight:800;text-underline-offset:3px}
+#accountDeletionDialog{max-width:420px;width:calc(100% - 40px);max-height:85dvh;overflow:auto;border:1px solid var(--line);border-radius:18px;background:var(--bg);color:var(--ink);padding:24px}#accountDeletionDialog::backdrop{background:#0008}#accountDeletionDialog label{display:block;margin:16px 0 8px}#accountDeletionDialog .field{box-sizing:border-box;width:100%}
+</style>
 
 
 <script src="/vendor/sentry-11.4.0.min.js"></script><script src="/monitoring.js"></script><style id="palateo-mobile-taste">
@@ -4637,6 +4639,486 @@ const catalog=[
       "delicious finger foods including cheese poppers, peri peri nachos, and mocktail bowls"
     ],
     "why": "Bodakdev high-energy dance club fitted with strobe lights, smoke machines, and dedicated DJ dance floor."
+  },
+  {
+    "id": "ahm-blue-oven-gandhinagar",
+    "name": "The Blue Oven Patisserie & Cafe",
+    "area": "Kudasan, Gandhinagar (24km)",
+    "city": "Ahmedabad",
+    "latitude": 23.1842,
+    "longitude": 72.6288,
+    "address": "Promenade, Kudasan Road, Gandhinagar 382421",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "Desserts",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.7,
+    "review_count": 640,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "bohemian",
+      "cozy",
+      "aesthetic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🥐",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Blue+Oven+Kudasan+Gandhinagar",
+    "review_insights": [
+      "fresh sourdough pizza",
+      "classic tiramisu",
+      "spanish latte",
+      "aesthetic bohemian patio"
+    ]
+  },
+  {
+    "id": "ahm-mocha-infocity",
+    "name": "Mocha Cafe & Bistro",
+    "area": "Infocity, Gandhinagar (26km)",
+    "city": "Ahmedabad",
+    "latitude": 23.195,
+    "longitude": 72.631,
+    "address": "Super Mall 1, Infocity, Gandhinagar 382007",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹1,100 for two",
+    "rating": 4.6,
+    "review_count": 980,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "lively",
+      "modern"
+    ],
+    "o": [
+      "friends",
+      "work"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mocha+Infocity+Gandhinagar",
+    "review_insights": [
+      "chocolate avalanche shake",
+      "mezze platters",
+      "tech corridor hub",
+      "outdoor seating"
+    ]
+  },
+  {
+    "id": "ahm-gift-roastery",
+    "name": "GIFT Tower Artisanal Roastery",
+    "area": "GIFT City (21km)",
+    "city": "Ahmedabad",
+    "latitude": 23.1587,
+    "longitude": 72.6847,
+    "address": "Tower ONE Concourse, GIFT City, Gandhinagar 382355",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.8,
+    "review_count": 510,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "modern",
+      "corporate",
+      "sleek"
+    ],
+    "o": [
+      "work",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=GIFT+City+Coffee+Roastery",
+    "review_insights": [
+      "single-origin pourovers",
+      "avocado sourdough toast",
+      "corporate tech vibe",
+      "cold brew tonic"
+    ]
+  },
+  {
+    "id": "ahm-grand-mercure-bistro",
+    "name": "The Glasshouse Bistro",
+    "area": "GIFT City (22km)",
+    "city": "Ahmedabad",
+    "latitude": 23.161,
+    "longitude": 72.687,
+    "address": "Grand Mercure Hotel, GIFT City, Gandhinagar 382355",
+    "c": [
+      "Continental",
+      "Fine dining",
+      "Asian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,800 for two",
+    "rating": 4.6,
+    "review_count": 420,
+    "t": [
+      "Restaurant",
+      "Fine dining"
+    ],
+    "a": [
+      "luxury",
+      "peaceful",
+      "elegant"
+    ],
+    "o": [
+      "date",
+      "family"
+    ],
+    "s": "mild",
+    "emoji": "✨",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Glasshouse+Bistro+GIFT+City",
+    "review_insights": [
+      "luxurious sunday brunch",
+      "gourmet wild mushroom risotto",
+      "fine dining ambience",
+      "decadent cheesecake"
+    ]
+  },
+  {
+    "id": "ahm-sanand-heritage-cafe",
+    "name": "The Palms Country Cafe & Resort",
+    "area": "Sanand Highway (32km)",
+    "city": "Ahmedabad",
+    "latitude": 22.9812,
+    "longitude": 72.368,
+    "address": "Sanand-Nalsarovar Link Road, Sanand 382110",
+    "c": [
+      "Cafe",
+      "North Indian",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹1,200 for two",
+    "rating": 4.5,
+    "review_count": 670,
+    "t": [
+      "Cafe",
+      "Restaurant"
+    ],
+    "a": [
+      "outdoor",
+      "peaceful",
+      "resort"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🌴",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Palms+Sanand+Highway",
+    "review_insights": [
+      "lawnside bonfire dining",
+      "woodfired thin crust pizza",
+      "weekend retreat",
+      "chocolate brownie fudge"
+    ]
+  },
+  {
+    "id": "ahm-kalol-thaker-dining",
+    "name": "Shree Thaker Kathiyawadi & Sweets",
+    "area": "Kalol (36km)",
+    "city": "Ahmedabad",
+    "latitude": 23.2415,
+    "longitude": 72.5012,
+    "address": "Near Kalol Highway Toll, Kalol 382721",
+    "c": [
+      "Gujarati",
+      "Kathiyawadi",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.7,
+    "review_count": 890,
+    "t": [
+      "Restaurant",
+      "Regional"
+    ],
+    "a": [
+      "traditional",
+      "bustling"
+    ],
+    "o": [
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "🍲",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Shree+Thaker+Kalol",
+    "review_insights": [
+      "unlimited royal thali",
+      "fresh hot malpua",
+      "makhan bharela parotha",
+      "authentic village taste"
+    ]
+  },
+  {
+    "id": "ahm-chhatral-waffle-desserts",
+    "name": "Sweet Indulgence Dessert Studio",
+    "area": "Chhatral Highway (42km)",
+    "city": "Ahmedabad",
+    "latitude": 23.328,
+    "longitude": 72.441,
+    "address": "Highway Food Plaza, Chhatral GIDC, Gujarat 382729",
+    "c": [
+      "Desserts",
+      "Bakery",
+      "Cafe"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.6,
+    "review_count": 380,
+    "t": [
+      "Dessert",
+      "Bakery"
+    ],
+    "a": [
+      "modern",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍰",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sweet+Indulgence+Chhatral",
+    "review_insights": [
+      "nutella loaded waffle",
+      "churros with dulce de leche",
+      "belgian chocolate sundae",
+      "late night sweet tooth"
+    ]
+  },
+  {
+    "id": "ahm-dark-roast-bopal",
+    "name": "The Dark Roast Cafe & Bistro",
+    "area": "South Bopal",
+    "city": "Ahmedabad",
+    "latitude": 23.0315,
+    "longitude": 72.4682,
+    "address": "Gala Gymkhana Road, South Bopal, Ahmedabad 380058",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Italian",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 940,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "cozy",
+      "modern",
+      "aesthetic"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Dark+Roast+Bopal+Ahmedabad",
+    "review_insights": [
+      "single origin pour-over",
+      "sourdough margherita pizza",
+      "tiramisu jar",
+      "peaceful outdoor patio"
+    ]
+  },
+  {
+    "id": "ahm-mocha-chandkheda",
+    "name": "Mocha Cafe & Bites",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.109,
+    "longitude": 72.585,
+    "address": "Tragard Road, Chandkheda, Ahmedabad 382424",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹900 for two",
+    "rating": 4.6,
+    "review_count": 720,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "lively",
+      "youthful"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mocha+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "avalanche chocolate shake",
+      "cheesy peri peri fries",
+      "woodfired calzone",
+      "student hangout"
+    ]
+  },
+  {
+    "id": "ahm-coffee-story-motera",
+    "name": "Coffee Story & Bakery",
+    "area": "Motera",
+    "city": "Ahmedabad",
+    "latitude": 23.0945,
+    "longitude": 72.6015,
+    "address": "Stadium Road, near Narendra Modi Stadium, Motera, Ahmedabad 380005",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.8,
+    "review_count": 610,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "cozy",
+      "sports-vibe"
+    ],
+    "o": [
+      "friends",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🥐",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Coffee+Story+Motera+Ahmedabad",
+    "review_insights": [
+      "match-day hazelnut frappe",
+      "butter croissants",
+      "blueberry cheesecake",
+      "breezy outdoor seats"
+    ]
+  },
+  {
+    "id": "ahm-urban-cafe-nikol",
+    "name": "The Urban Cafe & Lounge",
+    "area": "Nikol",
+    "city": "Ahmedabad",
+    "latitude": 23.045,
+    "longitude": 72.671,
+    "address": "Raspan Arcade, Nikol Gam Road, Ahmedabad 382350",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Coffee"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.5,
+    "review_count": 530,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "casual",
+      "vibrant"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍔",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Urban+Cafe+Nikol+Ahmedabad",
+    "review_insights": [
+      "loaded veggie burger",
+      "cold coffee with brownie",
+      "mexican salsa nachos",
+      "pocket-friendly bites"
+    ]
+  },
+  {
+    "id": "ahm-brew-bite-gota",
+    "name": "Brew & Bite Artisanal Cafe",
+    "area": "Gota",
+    "city": "Ahmedabad",
+    "latitude": 23.1025,
+    "longitude": 72.538,
+    "address": "Vandematram Cross Road, Gota, Ahmedabad 382481",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹750 for two",
+    "rating": 4.7,
+    "review_count": 810,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "modern",
+      "peaceful"
+    ],
+    "o": [
+      "work",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Brew+and+Bite+Gota+Ahmedabad",
+    "review_insights": [
+      "artisan cold brew",
+      "spinach corn garlic toast",
+      "caramel frappe",
+      "spacious work tables"
+    ]
   }
 ];
 const people=[
@@ -8367,6 +8849,742 @@ const vadodaraCatalog=[
       "comforting quick bites, hakka noodles with gravy manchurian, and frothy cold coffee"
     ],
     "why": "Legendary Sayajigunj fast-food institution opposite MSU famous for jumbo cheese grilled sandwiches, Chinese bhel, and thick shakes."
+  },
+  {
+    "id": "vad-champaner-heritage",
+    "name": "Champaner Heritage Resort & Dining",
+    "area": "Champaner (42km)",
+    "city": "Vadodara",
+    "latitude": 22.4833,
+    "longitude": 73.5333,
+    "address": "Bhamariya Well Road, Champaner, Halol, Gujarat 389350",
+    "c": [
+      "Gujarati",
+      "Regional",
+      "Continental"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,600 for two",
+    "rating": 4.7,
+    "review_count": 680,
+    "t": [
+      "Restaurant",
+      "Heritage"
+    ],
+    "a": [
+      "peaceful",
+      "heritage",
+      "scenic"
+    ],
+    "o": [
+      "family",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🏰",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Champaner+Heritage+Resort+Halol",
+    "review_insights": [
+      "royal kathiyawadi thali",
+      "heritage mango orchards",
+      "peaceful countryside getaway",
+      "spiced khichdi"
+    ]
+  },
+  {
+    "id": "vad-cloud9-halol",
+    "name": "Cafe Cloud 9 & Bistro",
+    "area": "Halol Highway (38km)",
+    "city": "Vadodara",
+    "latitude": 22.5021,
+    "longitude": 73.4682,
+    "address": "Vadodara-Halol Toll Road, near Jarod Cross Road, Halol 389350",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.6,
+    "review_count": 420,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "cozy",
+      "highway",
+      "modern"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Cloud+9+Halol+Highway",
+    "review_insights": [
+      "artisan hazelnut frappe",
+      "highway breather",
+      "woodfired margherita",
+      "cozy highway lounge"
+    ]
+  },
+  {
+    "id": "vad-creamery-anand",
+    "name": "The Creamery Gelato & Waffles",
+    "area": "VV Nagar, Anand (41km)",
+    "city": "Vadodara",
+    "latitude": 22.5518,
+    "longitude": 72.9234,
+    "address": "Bhaikaka Statue Road, Vallabh Vidyanagar, Anand 388120",
+    "c": [
+      "Desserts",
+      "Bakery",
+      "Ice Cream"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.8,
+    "review_count": 890,
+    "t": [
+      "Dessert",
+      "Bakery"
+    ],
+    "a": [
+      "lively",
+      "youthful",
+      "vibrant"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🧇",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Creamery+Gelato+VV+Nagar+Anand",
+    "review_insights": [
+      "belgian dark chocolate waffle",
+      "artisanal pistachio gelato",
+      "thick shakes",
+      "student hotspot"
+    ]
+  },
+  {
+    "id": "vad-brown-burger-anand",
+    "name": "Brown Burger Co & Specialty Cafe",
+    "area": "Anand (42km)",
+    "city": "Vadodara",
+    "latitude": 22.5645,
+    "longitude": 72.932,
+    "address": "Nana Bazaar, near Amul Dairy Road, Anand 388001",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Burgers"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹700 for two",
+    "rating": 4.5,
+    "review_count": 530,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "modern",
+      "casual"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍔",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Brown+Burger+Co+Anand",
+    "review_insights": [
+      "gourmet peri peri burger",
+      "loaded cheesy fries",
+      "caramel macchiato",
+      "youth hangout"
+    ]
+  },
+  {
+    "id": "vad-madhavrao-kathiyawadi",
+    "name": "Madhavrao Kathiyawadi Dhaba",
+    "area": "Anand-Sojitra Rd (44km)",
+    "city": "Vadodara",
+    "latitude": 22.5381,
+    "longitude": 72.8872,
+    "address": "Sojitra Road, Tarapur Cross, Anand 388170",
+    "c": [
+      "Gujarati",
+      "Kathiyawadi",
+      "Regional"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹500 for two",
+    "rating": 4.7,
+    "review_count": 1250,
+    "t": [
+      "Restaurant",
+      "Regional"
+    ],
+    "a": [
+      "traditional",
+      "rustic",
+      "family"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🥘",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Madhavrao+Kathiyawadi+Anand",
+    "review_insights": [
+      "ringna no olo",
+      "garlic sev tameta",
+      "chulhe ki bajra rotla",
+      "makhan with chaas"
+    ]
+  },
+  {
+    "id": "vad-dabhoi-heritage-sweets",
+    "name": "Shree Hira Bhagol Sweets & Farsan",
+    "area": "Dabhoi (34km)",
+    "city": "Vadodara",
+    "latitude": 22.1345,
+    "longitude": 73.435,
+    "address": "Hira Bhagol Gate, Main Fort Road, Dabhoi 391110",
+    "c": [
+      "Desserts",
+      "Street Food",
+      "Regional"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹300 for two",
+    "rating": 4.8,
+    "review_count": 760,
+    "t": [
+      "Dessert",
+      "Sweets"
+    ],
+    "a": [
+      "heritage",
+      "traditional",
+      "bustling"
+    ],
+    "o": [
+      "family",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🍮",
+    "photo": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hira+Bhagol+Sweets+Dabhoi",
+    "review_insights": [
+      "rich kesar basundi",
+      "hot crispy fafda jalebi",
+      "authentic mohanthal",
+      "heritage fort stop"
+    ]
+  },
+  {
+    "id": "vad-pavagadh-valley-cafe",
+    "name": "Pavagadh Valley Hilltop Cafe",
+    "area": "Pavagadh (45km)",
+    "city": "Vadodara",
+    "latitude": 22.4612,
+    "longitude": 73.522,
+    "address": "Machi Plateau, Pavagadh Hill, Panchmahal 389360",
+    "c": [
+      "Cafe",
+      "Beverages",
+      "Snacks"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.6,
+    "review_count": 580,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "scenic",
+      "peaceful",
+      "hilltop"
+    ],
+    "o": [
+      "friends",
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pavagadh+Valley+Cafe",
+    "review_insights": [
+      "hill view ginger tea",
+      "steaming hot handvo",
+      "sunset viewpoint",
+      "refreshing lime cooler"
+    ]
+  },
+  {
+    "id": "vad-cafe-appetito-manjalpur",
+    "name": "Café Appetito",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.2735,
+    "longitude": 73.1942,
+    "address": "Raama Emperor, Behind Shell Petrol Pump, Manjalpur, Vadodara 390011",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Italian",
+      "Fast Food"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.7,
+    "review_count": 890,
+    "t": [
+      "Cafe",
+      "Coffee",
+      "Rooftop"
+    ],
+    "a": [
+      "cozy",
+      "patio",
+      "lively"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Appetito+Manjalpur+Vadodara",
+    "review_insights": [
+      "woodfired thin crust pizza",
+      "circular rooftop patio",
+      "hazelnut frappe",
+      "cozy couple corner"
+    ]
+  },
+  {
+    "id": "vad-allevio-cafe-manjalpur",
+    "name": "Allevio Café & Kitchen",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.2782,
+    "longitude": 73.1915,
+    "address": "Mani Villa Complex, Near Eva Mall Road, Manjalpur, Vadodara 390011",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.8,
+    "review_count": 670,
+    "t": [
+      "Cafe",
+      "Restaurant"
+    ],
+    "a": [
+      "aesthetic",
+      "cozy",
+      "chic"
+    ],
+    "o": [
+      "date",
+      "friends",
+      "family"
+    ],
+    "s": "mild",
+    "emoji": "🍝",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Allevio+Cafe+Manjalpur+Vadodara",
+    "review_insights": [
+      "creamy pesto pasta",
+      "loaded cheese fries",
+      "aesthetic interior",
+      "specialty pour-over"
+    ]
+  },
+  {
+    "id": "vad-chocolate-room-manjalpur",
+    "name": "The Chocolate Room",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.271,
+    "longitude": 73.197,
+    "address": "Near Patidar Cross Road, Manjalpur Main Road, Vadodara 390011",
+    "c": [
+      "Desserts",
+      "Cafe",
+      "Bakery",
+      "Beverages"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹650 for two",
+    "rating": 4.6,
+    "review_count": 1120,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "cozy",
+      "sweet",
+      "lively"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Chocolate+Room+Manjalpur+Vadodara",
+    "review_insights": [
+      "belgian chocolate waffle",
+      "fondue platter",
+      "thick hot chocolate",
+      "live music nights"
+    ]
+  },
+  {
+    "id": "vad-koa-cafe-manjalpur",
+    "name": "Koa Cafe",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.276,
+    "longitude": 73.201,
+    "address": "Near Tulsidham Char Rasta, Manjalpur, Vadodara 390011",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Fast Food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.7,
+    "review_count": 520,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "minimalist",
+      "peaceful",
+      "bohemian"
+    ],
+    "o": [
+      "solo",
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Koa+Cafe+Manjalpur+Vadodara",
+    "review_insights": [
+      "minimalist white corners",
+      "thick lotus biscoff shake",
+      "crispy paneer wrap",
+      "quiet reading nook"
+    ]
+  },
+  {
+    "id": "vad-coffee-culture-manjalpur",
+    "name": "Coffee Culture",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.2755,
+    "longitude": 73.1965,
+    "address": "Near Manjalpur Char Rasta, Opp. Shreyas School, Vadodara 390011",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.6,
+    "review_count": 1480,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "lively",
+      "themed",
+      "youthful"
+    ],
+    "o": [
+      "friends",
+      "work"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Coffee+Culture+Manjalpur+Vadodara",
+    "review_insights": [
+      "signature sizzlers",
+      "maggi pizza",
+      "irish cold coffee",
+      "fun group hangout"
+    ]
+  },
+  {
+    "id": "vad-times-cafe-manjalpur",
+    "name": "Times Cafe",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.274,
+    "longitude": 73.193,
+    "address": "Near Eva The Mall, Manjalpur, Vadodara 390011",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Coffee"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.5,
+    "review_count": 390,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "casual",
+      "pocket-friendly"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Times+Cafe+Manjalpur+Vadodara",
+    "review_insights": [
+      "cold coffee with ice cream",
+      "grilled cheese sandwich",
+      "peri peri french fries",
+      "quick bite hangout"
+    ]
+  },
+  {
+    "id": "vad-big-scoop-makarpura",
+    "name": "Big Scoop Café & Boba Bar",
+    "area": "Makarpura",
+    "city": "Vadodara",
+    "latitude": 22.256,
+    "longitude": 73.1965,
+    "address": "Opposite ONGC Main Gate, near Baroda Dairy, Makarpura Road, Vadodara 390009",
+    "c": [
+      "Cafe",
+      "Desserts",
+      "Beverages",
+      "Korean"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹600 for two",
+    "rating": 4.8,
+    "review_count": 780,
+    "t": [
+      "Cafe",
+      "Boba",
+      "Dessert"
+    ],
+    "a": [
+      "trendy",
+      "vibrant",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🧋",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Big+Scoop+Cafe+Makarpura+Vadodara",
+    "review_insights": [
+      "strawberry matcha boba",
+      "korean cheese ramen",
+      "taro milk bubble tea",
+      "cozy outdoor fairy lights"
+    ]
+  },
+  {
+    "id": "vad-night-life-makarpura",
+    "name": "Night Life Cafe",
+    "area": "Makarpura",
+    "city": "Vadodara",
+    "latitude": 22.249,
+    "longitude": 73.199,
+    "address": "Near Baliyadev Temple Chowkdi, beside Gokul Restaurant, Makarpura, Vadodara 390010",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Beverages"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.6,
+    "review_count": 450,
+    "t": [
+      "Cafe",
+      "Late Night"
+    ],
+    "a": [
+      "late-night",
+      "chill",
+      "lively"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🌙",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Night+Life+Cafe+Makarpura+Vadodara",
+    "review_insights": [
+      "late night cold coffee",
+      "cheesy garlic bread",
+      "hot brownie with ice cream",
+      "midnight hangout"
+    ]
+  },
+  {
+    "id": "vad-flavour-dine-makarpura",
+    "name": "Flavour Dine Cafe & Kitchen",
+    "area": "Makarpura",
+    "city": "Vadodara",
+    "latitude": 22.243,
+    "longitude": 73.1925,
+    "address": "Opposite Ganesh Honda Showroom, near Maneja Crossing, Makarpura, Vadodara 390013",
+    "c": [
+      "Cafe",
+      "North Indian",
+      "Chinese",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.5,
+    "review_count": 620,
+    "t": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "a": [
+      "comfortable",
+      "family",
+      "spacious"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍽️",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Flavour+Dine+Makarpura+Vadodara",
+    "review_insights": [
+      "alfredo white sauce pasta",
+      "paneer tikka platter",
+      "chilled mocktails",
+      "family dinner hub"
+    ]
+  },
+  {
+    "id": "vad-barodians-chai-makarpura",
+    "name": "Barodian's Chai & Cafe Nasta",
+    "area": "Makarpura",
+    "city": "Vadodara",
+    "latitude": 22.2515,
+    "longitude": 73.198,
+    "address": "Makarpura GIDC Main Road, near Susen Tarsali Ring Road, Vadodara 390010",
+    "c": [
+      "Cafe",
+      "Street Food",
+      "Tea"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹250 for two",
+    "rating": 4.7,
+    "review_count": 510,
+    "t": [
+      "Cafe",
+      "Chai"
+    ],
+    "a": [
+      "bustling",
+      "street-style",
+      "friendly"
+    ],
+    "o": [
+      "friends",
+      "solo"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Barodians+Chai+Makarpura+Vadodara",
+    "review_insights": [
+      "masala kulhad chai",
+      "bun maska jam",
+      "crispy vegetable frankie",
+      "quick afternoon chai break"
+    ]
+  },
+  {
+    "id": "vad-maneja-food-lounge",
+    "name": "The Maneja Lounge & Cafe",
+    "area": "Makarpura",
+    "city": "Vadodara",
+    "latitude": 22.241,
+    "longitude": 73.194,
+    "address": "Near Maneja Railway Crossing, Makarpura, Vadodara 390013",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Fast Food"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹650 for two",
+    "rating": 4.5,
+    "review_count": 340,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "rooftop",
+      "chill",
+      "open-air"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍹",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Maneja+Lounge+Cafe+Vadodara",
+    "review_insights": [
+      "sunset breeze rooftop",
+      "loaded paneer pizza",
+      "kitkat shake",
+      "weekend chilling"
+    ]
   }
 ];
 const mumbaiCatalog=[
@@ -12396,6 +13614,494 @@ const mumbaiCatalog=[
       "unrivalled glamour and exquisite sushi and seafood offerings"
     ],
     "why": "Glamorous 48th-floor rooftop party club in Kohinoor Square boasting a plunge pool and celebrity dance parties."
+  },
+  {
+    "id": "mum-commis-station-belapur",
+    "name": "Commis Station Specialty Coffee",
+    "area": "CBD Belapur (34km)",
+    "city": "Mumbai",
+    "latitude": 19.021,
+    "longitude": 73.041,
+    "address": "Sector 11, CBD Belapur, Navi Mumbai 400614",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.8,
+    "review_count": 730,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "minimalist",
+      "scandi",
+      "peaceful"
+    ],
+    "o": [
+      "solo",
+      "date",
+      "work"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Commis+Station+CBD+Belapur",
+    "review_insights": [
+      "artisanal aero-press",
+      "pain au chocolat",
+      "scandi minimalist design",
+      "matcha latte"
+    ]
+  },
+  {
+    "id": "mum-sweet-bengal-vashi",
+    "name": "Sweet Bengal & Artisanal Mishti",
+    "area": "Vashi (28km)",
+    "city": "Mumbai",
+    "latitude": 19.0768,
+    "longitude": 72.9984,
+    "address": "Sector 17, Vashi, Navi Mumbai 400703",
+    "c": [
+      "Desserts",
+      "Bengali",
+      "Sweets"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.7,
+    "review_count": 1420,
+    "t": [
+      "Dessert",
+      "Sweets"
+    ],
+    "a": [
+      "traditional",
+      "bustling"
+    ],
+    "o": [
+      "family",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🍮",
+    "photo": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sweet+Bengal+Vashi",
+    "review_insights": [
+      "steaming hot baked rasgulla",
+      "nolen gur sandesh",
+      "creamy kheer kodom",
+      "festive delicacies"
+    ]
+  },
+  {
+    "id": "mum-yellow-straw-thane",
+    "name": "The Yellow Straw & Artisan Patisserie",
+    "area": "Meadows, Thane (29km)",
+    "city": "Mumbai",
+    "latitude": 19.2312,
+    "longitude": 72.9654,
+    "address": "Vasant Vihar, Pokhran Rd 2, Thane West 400610",
+    "c": [
+      "Desserts",
+      "Cafe",
+      "Beverages"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹650 for two",
+    "rating": 4.6,
+    "review_count": 820,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "cheerful",
+      "outdoor"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍓",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Yellow+Straw+Thane",
+    "review_insights": [
+      "fresh fruit cheesecakes",
+      "cold-pressed smoothies",
+      "chocochip waffle sticks",
+      "cheerful terrace seating"
+    ]
+  },
+  {
+    "id": "mum-pop-tates-viviana",
+    "name": "Pop Tate's Gastro Pub & Cafe",
+    "area": "Viviana Mall, Thane (31km)",
+    "city": "Mumbai",
+    "latitude": 19.2089,
+    "longitude": 72.9715,
+    "address": "Viviana Mall, Eastern Express Highway, Thane 400606",
+    "c": [
+      "Continental",
+      "Cafe",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.5,
+    "review_count": 1850,
+    "t": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "a": [
+      "lively",
+      "vibrant"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pop+Tates+Viviana+Mall+Thane",
+    "review_insights": [
+      "sizzling brownie",
+      "cheesy garlic twists",
+      "classic chicken burger",
+      "vibrant weekend energy"
+    ]
+  },
+  {
+    "id": "mum-farmhouse-vasai",
+    "name": "Farmhouse Sea N Sand",
+    "area": "Vasai West (44km)",
+    "city": "Mumbai",
+    "latitude": 19.3512,
+    "longitude": 72.808,
+    "address": "Pachubunder, Killa Road, Vasai West 401201",
+    "c": [
+      "Seafood",
+      "Coastal",
+      "Cafe",
+      "Continental"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,500 for two",
+    "rating": 4.7,
+    "review_count": 2300,
+    "t": [
+      "Restaurant",
+      "Seafood"
+    ],
+    "a": [
+      "coastal",
+      "scenic",
+      "breezy"
+    ],
+    "o": [
+      "family",
+      "date"
+    ],
+    "s": "spicy",
+    "emoji": "🦐",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Farmhouse+Sea+N+Sand+Vasai",
+    "review_insights": [
+      "sunset riverfront dining",
+      "surmai rawa fry",
+      "woodfired margherita",
+      "breezy outdoor deck"
+    ]
+  },
+  {
+    "id": "mum-chocolicious-vasai",
+    "name": "Cafe Chocolicious & Waffle House",
+    "area": "Vasai (42km)",
+    "city": "Mumbai",
+    "latitude": 19.3789,
+    "longitude": 72.8245,
+    "address": "Stella, Anand Nagar, Vasai West 401202",
+    "c": [
+      "Cafe",
+      "Desserts",
+      "Bakery"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.6,
+    "review_count": 670,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "cozy",
+      "youthful"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Chocolicious+Vasai",
+    "review_insights": [
+      "chocolate fountain waffles",
+      "brownie earthquake",
+      "thick hazelnut coffee",
+      "youth hangout"
+    ]
+  },
+  {
+    "id": "mum-dutch-bakes-panvel",
+    "name": "Dutch Cafe & Artisan Bakes",
+    "area": "Old Panvel (45km)",
+    "city": "Mumbai",
+    "latitude": 18.9912,
+    "longitude": 73.1189,
+    "address": "Opposite Orion Mall, Old Panvel, Navi Mumbai 410206",
+    "c": [
+      "Bakery",
+      "Cafe",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹700 for two",
+    "rating": 4.6,
+    "review_count": 540,
+    "t": [
+      "Bakery",
+      "Cafe"
+    ],
+    "a": [
+      "cozy",
+      "modern"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🍰",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Dutch+Cafe+Panvel",
+    "review_insights": [
+      "dutch chocolate truffle cake",
+      "blueberry cold cheesecake",
+      "iced caramel frappe",
+      "highway dessert pitstop"
+    ]
+  },
+  {
+    "id": "mum-village-cafe-borivali",
+    "name": "The Village Cafe & Bakery",
+    "area": "Borivali West",
+    "city": "Mumbai",
+    "latitude": 19.2307,
+    "longitude": 72.8567,
+    "address": "Shimpoli Road, Borivali West, Mumbai 400092",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "European"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1420,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "cozy",
+      "rustic",
+      "aesthetic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Village+Cafe+Borivali+Mumbai",
+    "review_insights": [
+      "woodfired garlic bread",
+      "nutella stuffed crepes",
+      "iced vanilla latte",
+      "fairylight wooden patio"
+    ]
+  },
+  {
+    "id": "mum-tea-villa-kandivali",
+    "name": "Tea Villa Cafe & Bistro",
+    "area": "Kandivali West",
+    "city": "Mumbai",
+    "latitude": 19.2135,
+    "longitude": 72.842,
+    "address": "Mahavir Nagar, Kandivali West, Mumbai 400067",
+    "c": [
+      "Cafe",
+      "Tea",
+      "Waffles",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹900 for two",
+    "rating": 4.6,
+    "review_count": 1850,
+    "t": [
+      "Cafe",
+      "Tea"
+    ],
+    "a": [
+      "lively",
+      "luxurious"
+    ],
+    "o": [
+      "friends",
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "🧇",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tea+Villa+Kandivali+Mumbai",
+    "review_insights": [
+      "belgian chocolate waffle",
+      "hundred exotic teas",
+      "fondue platter",
+      "vibrant evening vibe"
+    ]
+  },
+  {
+    "id": "mum-cafe-monza-mulund",
+    "name": "Cafe Monza & Artisan Kitchen",
+    "area": "Mulund West",
+    "city": "Mumbai",
+    "latitude": 19.1726,
+    "longitude": 72.9425,
+    "address": "Devidayal Road, Mulund West, Mumbai 400080",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,200 for two",
+    "rating": 4.8,
+    "review_count": 980,
+    "t": [
+      "Cafe",
+      "Restaurant"
+    ],
+    "a": [
+      "chic",
+      "modern",
+      "cozy"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍝",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Monza+Mulund+Mumbai",
+    "review_insights": [
+      "handcrafted ravioli",
+      "hazelnut cold brew",
+      "woodfired margherita",
+      "intimate candlelit seating"
+    ]
+  },
+  {
+    "id": "mum-grandmamas-chembur",
+    "name": "Grandmama's Cafe & Patisserie",
+    "area": "Chembur",
+    "city": "Mumbai",
+    "latitude": 19.0622,
+    "longitude": 72.8995,
+    "address": "Central Avenue, near Diamond Garden, Chembur, Mumbai 400071",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Desserts"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.7,
+    "review_count": 2100,
+    "t": [
+      "Cafe",
+      "Dessert"
+    ],
+    "a": [
+      "quaint",
+      "pastel",
+      "cheery"
+    ],
+    "o": [
+      "family",
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍰",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Grandmamas+Cafe+Chembur+Mumbai",
+    "review_insights": [
+      "rajma chawal in a bowl",
+      "truffle mac and cheese",
+      "mud cake shake",
+      "vintage floral interior"
+    ]
+  },
+  {
+    "id": "mum-waffle-world-mira-road",
+    "name": "Waffle World & Specialty Cafe",
+    "area": "Mira Road",
+    "city": "Mumbai",
+    "latitude": 19.2812,
+    "longitude": 72.868,
+    "address": "Shanti Park, Mira Road East, Mumbai 401107",
+    "c": [
+      "Desserts",
+      "Cafe",
+      "Bakery"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.6,
+    "review_count": 670,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "youthful",
+      "casual"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🧇",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Waffle+World+Mira+Road+Mumbai",
+    "review_insights": [
+      "triple chocolate waffle",
+      "fresh berry crepe",
+      "caramel frappe",
+      "late night sweet treats"
+    ]
   }
 ];
 const delhiCatalog=[
@@ -16434,6 +18140,492 @@ const delhiCatalog=[
       "oversized signature LIITs and inventive fusion street food bites"
     ],
     "why": "DLF Cyber Hub's high-octane party bar featuring dramatic multi-tier chawl design and packed weekend DJ dance parties."
+  },
+  {
+    "id": "del-di-ghent-gurugram",
+    "name": "Di Ghent Cafe",
+    "area": "Golf Course Road, Gurugram (28km)",
+    "city": "Delhi NCR",
+    "latitude": 28.4682,
+    "longitude": 77.0984,
+    "address": "Cross Point Mall, DLF Phase 4, Golf Course Road, Gurugram 122002",
+    "c": [
+      "Cafe",
+      "Belgian",
+      "Bakery",
+      "Coffee"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,600 for two",
+    "rating": 4.8,
+    "review_count": 2450,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "european",
+      "cozy",
+      "woody"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🧇",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Di+Ghent+Cafe+Gurugram",
+    "review_insights": [
+      "authentic belgian liege waffles",
+      "poached eggs benedict",
+      "rich hot chocolate",
+      "warm woody european ambience"
+    ]
+  },
+  {
+    "id": "del-paul-ambience-gurugram",
+    "name": "Paul Bakery & Patisserie",
+    "area": "Ambience Mall, Gurugram (24km)",
+    "city": "Delhi NCR",
+    "latitude": 28.5032,
+    "longitude": 77.097,
+    "address": "Ground Floor, Ambience Mall, NH 8, Gurugram 122002",
+    "c": [
+      "Bakery",
+      "French",
+      "Desserts",
+      "Cafe"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,500 for two",
+    "rating": 4.7,
+    "review_count": 1890,
+    "t": [
+      "Bakery",
+      "Cafe"
+    ],
+    "a": [
+      "parisian",
+      "elegant",
+      "luxurious"
+    ],
+    "o": [
+      "date",
+      "family"
+    ],
+    "s": "mild",
+    "emoji": "🥐",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Paul+Ambience+Mall+Gurugram",
+    "review_insights": [
+      "butter flake croissants",
+      "strawberry millefeuille",
+      "french cafe au lait",
+      "artisanal sourdough"
+    ]
+  },
+  {
+    "id": "del-cafe-dori-gurugram",
+    "name": "Cafe Dori Roastery & Panini",
+    "area": "Sector 58, Gurugram (33km)",
+    "city": "Delhi NCR",
+    "latitude": 28.4092,
+    "longitude": 77.1045,
+    "address": "Magnolias Approach, Sector 58, Gurugram 122102",
+    "c": [
+      "Cafe",
+      "European",
+      "Coffee"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.7,
+    "review_count": 1620,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "pet-friendly",
+      "warehouse",
+      "modern"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Dori+Gurugram",
+    "review_insights": [
+      "pet-friendly warehouse aesthetic",
+      "cortado & pourovers",
+      "croque monsieur",
+      "artisan chocolate babka"
+    ]
+  },
+  {
+    "id": "del-haven-noida-104",
+    "name": "The Haven International Coffee House",
+    "area": "Sector 104, Noida (29km)",
+    "city": "Delhi NCR",
+    "latitude": 28.5412,
+    "longitude": 77.3689,
+    "address": "Sector 104 Market, Hajipur, Noida 201304",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.8,
+    "review_count": 940,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "cozy",
+      "peaceful",
+      "work"
+    ],
+    "o": [
+      "solo",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Haven+Coffee+House+Noida",
+    "review_insights": [
+      "specialty aero-press brews",
+      "fresh cinnamon buns",
+      "quiet work friendly nook",
+      "iced spanish latte"
+    ]
+  },
+  {
+    "id": "del-creme-borne-noida",
+    "name": "Creme Borne Dessert Parlour",
+    "area": "Sector 104, Noida (30km)",
+    "city": "Delhi NCR",
+    "latitude": 28.5425,
+    "longitude": 77.371,
+    "address": "Gardenia Gateway Market, Sector 104, Noida 201304",
+    "c": [
+      "Desserts",
+      "Ice Cream",
+      "Bakery"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.6,
+    "review_count": 810,
+    "t": [
+      "Dessert",
+      "Ice cream"
+    ],
+    "a": [
+      "instagrammable",
+      "vibrant"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍦",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Creme+Borne+Noida",
+    "review_insights": [
+      "black charcoal soft serve",
+      "crispy churros with chocolate dip",
+      "overloaded waffle cones",
+      "instagrammable desserts"
+    ]
+  },
+  {
+    "id": "del-creme-castle-gr-noida",
+    "name": "Creme Castle Bakery & Cafe",
+    "area": "Greater Noida (42km)",
+    "city": "Delhi NCR",
+    "latitude": 28.4744,
+    "longitude": 77.504,
+    "address": "Ansal Plaza, Pari Chowk, Greater Noida 201308",
+    "c": [
+      "Bakery",
+      "Desserts",
+      "Cafe"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹750 for two",
+    "rating": 4.7,
+    "review_count": 1530,
+    "t": [
+      "Bakery",
+      "Cafe"
+    ],
+    "a": [
+      "celebratory",
+      "lively"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🎂",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Creme+Castle+Greater+Noida",
+    "review_insights": [
+      "belgian mousse jars",
+      "customized designer cakes",
+      "creamy pesto penne",
+      "vibrant celebratory cafe"
+    ]
+  },
+  {
+    "id": "del-amrik-sukhdev-murthal",
+    "name": "Amrik Sukhdev Legendary Dhaba",
+    "area": "Murthal (48km)",
+    "city": "Delhi NCR",
+    "latitude": 28.9833,
+    "longitude": 77.0667,
+    "address": "52.250 KM Stone, G.T. Road, Murthal, Sonipat 131027",
+    "c": [
+      "North Indian",
+      "Regional",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹500 for two",
+    "rating": 4.8,
+    "review_count": 14500,
+    "t": [
+      "Restaurant",
+      "Highway"
+    ],
+    "a": [
+      "iconic",
+      "highway",
+      "bustling"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🫓",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Amrik+Sukhdev+Murthal",
+    "review_insights": [
+      "white butter aloo parantha",
+      "piping hot clay cup kulhad chai",
+      "jalebi with thick rabri",
+      "iconic 24x7 highway stop"
+    ]
+  },
+  {
+    "id": "del-chapter-twelve-faridabad",
+    "name": "Chapter Twelve Rooftop Cafe",
+    "area": "Sector 12, Faridabad (32km)",
+    "city": "Delhi NCR",
+    "latitude": 28.3889,
+    "longitude": 77.318,
+    "address": "Bhatia Tower, Mathura Road, Sector 12, Faridabad 121007",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,300 for two",
+    "rating": 4.6,
+    "review_count": 890,
+    "t": [
+      "Cafe",
+      "Rooftop"
+    ],
+    "a": [
+      "rooftop",
+      "lively",
+      "scenic"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Chapter+Twelve+Faridabad",
+    "review_insights": [
+      "rooftop city lights view",
+      "stone baked farmhouse pizza",
+      "refreshing peach iced tea",
+      "live acoustic music"
+    ]
+  },
+  {
+    "id": "del-drool-kitchen-dwarka",
+    "name": "Drool Kitchen & Cafe Lounge",
+    "area": "Dwarka",
+    "city": "Delhi NCR",
+    "latitude": 28.5815,
+    "longitude": 77.057,
+    "address": "Under Metro Station, Sector 10, Dwarka, New Delhi 110075",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,500 for two",
+    "rating": 4.6,
+    "review_count": 2200,
+    "t": [
+      "Cafe",
+      "Lounge"
+    ],
+    "a": [
+      "outdoor",
+      "lively",
+      "spacious"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Drool+Kitchen+Dwarka+Delhi",
+    "review_insights": [
+      "woodfired gourmet pizza",
+      "signature berry mocktails",
+      "spacious courtyard",
+      "live sports screenings"
+    ]
+  },
+  {
+    "id": "del-woodbox-rohini",
+    "name": "Woodbox Cafe & Shake Bar",
+    "area": "Rohini",
+    "city": "Delhi NCR",
+    "latitude": 28.7112,
+    "longitude": 77.1215,
+    "address": "DC Chowk, Sector 9, Rohini, New Delhi 110085",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹750 for two",
+    "rating": 4.7,
+    "review_count": 1890,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "rustic",
+      "wooden",
+      "youthful"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍔",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Woodbox+Cafe+Rohini+Delhi",
+    "review_insights": [
+      "flying nachos platter",
+      "thick ferrero shake",
+      "peri peri pasta",
+      "creative wooden decor"
+    ]
+  },
+  {
+    "id": "del-uncover-pitampura",
+    "name": "Cafe Uncover & Pizzeria",
+    "area": "Pitampura",
+    "city": "Delhi NCR",
+    "latitude": 28.6945,
+    "longitude": 77.149,
+    "address": "Netaji Subhash Place, Pitampura, New Delhi 110034",
+    "c": [
+      "Cafe",
+      "Italian",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.8,
+    "review_count": 1450,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "aesthetic",
+      "cozy",
+      "romantic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Uncover+Pitampura+Delhi",
+    "review_insights": [
+      "pink sauce pasta",
+      "hazelnut mocha",
+      "fairy light canopy",
+      "date night favourite"
+    ]
+  },
+  {
+    "id": "del-cafe21-laxmi-nagar",
+    "name": "Cafe 21 & Continental Bites",
+    "area": "Laxmi Nagar",
+    "city": "Delhi NCR",
+    "latitude": 28.631,
+    "longitude": 77.279,
+    "address": "Vikas Marg, near Nirman Vihar Metro, Laxmi Nagar, New Delhi 110092",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Fast Food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹500 for two",
+    "rating": 4.5,
+    "review_count": 820,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "casual",
+      "pocket-friendly"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+21+Laxmi+Nagar+Delhi",
+    "review_insights": [
+      "chilli cheese toast",
+      "cold coffee shake",
+      "white sauce penne",
+      "student friendly hangout"
+    ]
   }
 ];
 const bengaluruCatalog=[
@@ -17617,6 +19809,172 @@ const bengaluruCatalog=[
       "pure ghee poured generously over everything with unmatched heritage pride"
     ],
     "why": "Historic 1924 Lalbagh culinary monument that invented Rava Idli and serves lavish multi-course silver thalis."
+  },
+  {
+    "id": "blr-coffee-bean-ecity",
+    "name": "The Coffee Bean & Tea Leaf",
+    "area": "Electronic City",
+    "city": "Bengaluru",
+    "latitude": 12.8452,
+    "longitude": 77.6602,
+    "address": "Velankani Tech Park, Phase 1, Electronic City, Bengaluru 560100",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1450,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "modern",
+      "tech-hub",
+      "quiet"
+    ],
+    "o": [
+      "work",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Coffee+Bean+Electronic+City+Bengaluru",
+    "review_insights": [
+      "signature ice blended mocha",
+      "blueberry muffin",
+      "work friendly wifi",
+      "peaceful tech park courtyard"
+    ]
+  },
+  {
+    "id": "blr-glens-whitefield",
+    "name": "Glen's Bakehouse & Cafe",
+    "area": "Whitefield",
+    "city": "Bengaluru",
+    "latitude": 12.9698,
+    "longitude": 77.7499,
+    "address": "ITPL Main Road, Whitefield, Bengaluru 560066",
+    "c": [
+      "Bakery",
+      "Cafe",
+      "Desserts",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.8,
+    "review_count": 3200,
+    "t": [
+      "Bakery",
+      "Cafe"
+    ],
+    "a": [
+      "vintage",
+      "cozy",
+      "brickwork"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🧁",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Glens+Bakehouse+Whitefield+Bengaluru",
+    "review_insights": [
+      "signature red velvet cupcakes",
+      "thin crust sourdough pizza",
+      "citrus cooler",
+      "vintage red brick porch"
+    ]
+  },
+  {
+    "id": "blr-dialogues-hsr",
+    "name": "Dialogues Cafe & Boardgames",
+    "area": "HSR Layout",
+    "city": "Bengaluru",
+    "latitude": 12.9115,
+    "longitude": 77.6385,
+    "address": "15th Cross, Sector 4, HSR Layout, Bengaluru 560102",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Snacks"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹700 for two",
+    "rating": 4.8,
+    "review_count": 1850,
+    "t": [
+      "Cafe",
+      "Co-working"
+    ],
+    "a": [
+      "boardgames",
+      "cozy",
+      "creative"
+    ],
+    "o": [
+      "friends",
+      "work",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🎲",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Dialogues+Cafe+HSR+Layout+Bengaluru",
+    "review_insights": [
+      "hundreds of boardgames",
+      "french press coffee",
+      "chilli cheese toasties",
+      "open community terrace"
+    ]
+  },
+  {
+    "id": "blr-druid-garden-yelahanka",
+    "name": "The Druid Garden Cafe & Bistro",
+    "area": "Yelahanka",
+    "city": "Bengaluru",
+    "latitude": 13.0645,
+    "longitude": 77.591,
+    "address": "Sahakara Nagar, near Yelahanka, Bengaluru 560092",
+    "c": [
+      "Continental",
+      "Cafe",
+      "European"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,600 for two",
+    "rating": 4.7,
+    "review_count": 2400,
+    "t": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "a": [
+      "rooftop",
+      "botanical",
+      "airy"
+    ],
+    "o": [
+      "date",
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "🌿",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Druid+Garden+Bengaluru",
+    "review_insights": [
+      "retractable glass roof",
+      "woodfired sourdough pizza",
+      "herb infused coolers",
+      "stunning botanical greenhouse"
+    ]
   }
 ];
 const hyderabadCatalog=[
@@ -18582,6 +20940,129 @@ const hyderabadCatalog=[
       "plush sophisticated interior with courteous and attentive white-glove service"
     ],
     "why": "Upscale Jubilee Hills fine dining establishment offering gourmet vegetarian and Jain gastronomy."
+  },
+  {
+    "id": "hyd-roastery-kukatpally",
+    "name": "Roastery Coffee House & Courtyard",
+    "area": "Kukatpally",
+    "city": "Hyderabad",
+    "latitude": 17.4945,
+    "longitude": 78.398,
+    "address": "KPHB Phase 3, Kukatpally, Hyderabad 500072",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.8,
+    "review_count": 2800,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "vintage",
+      "courtyard",
+      "scenic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Roastery+Coffee+House+Kukatpally+Hyderabad",
+    "review_insights": [
+      "pour over specialty roast",
+      "onion rings platter",
+      "cascara spritzer",
+      "shady courtyard seating"
+    ]
+  },
+  {
+    "id": "hyd-autumn-leaf-gachibowli",
+    "name": "Autumn Leaf Cafe & Garden",
+    "area": "Gachibowli",
+    "city": "Hyderabad",
+    "latitude": 17.44,
+    "longitude": 78.3485,
+    "address": "Financial District, Nanakramguda, Gachibowli, Hyderabad 500032",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Bakery"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.7,
+    "review_count": 3100,
+    "t": [
+      "Cafe",
+      "Garden"
+    ],
+    "a": [
+      "lush",
+      "peaceful",
+      "artistic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🍂",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Autumn+Leaf+Cafe+Gachibowli+Hyderabad",
+    "review_insights": [
+      "tree canopy garden",
+      "grilled chicken stroganoff",
+      "walnut brownie with gelato",
+      "peaceful work sanctuary"
+    ]
+  },
+  {
+    "id": "hyd-concu-sainikpuri",
+    "name": "Conçu Patisserie & Cafe",
+    "area": "AS Rao Nagar / Sainikpuri",
+    "city": "Hyderabad",
+    "latitude": 17.489,
+    "longitude": 78.549,
+    "address": "Sainikpuri Main Road, Secunderabad 500094",
+    "c": [
+      "Bakery",
+      "Desserts",
+      "Cafe"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,100 for two",
+    "rating": 4.8,
+    "review_count": 1950,
+    "t": [
+      "Bakery",
+      "Dessert"
+    ],
+    "a": [
+      "elegant",
+      "pastel",
+      "chic"
+    ],
+    "o": [
+      "date",
+      "family"
+    ],
+    "s": "mild",
+    "emoji": "🍰",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Concu+Sainikpuri+Hyderabad",
+    "review_insights": [
+      "choux pastry buns",
+      "french macarons",
+      "single estate espresso",
+      "serene green patio"
+    ]
   }
 ];
 const chennaiCatalog=[
@@ -19418,6 +21899,130 @@ const chennaiCatalog=[
       "peaceful sanctuary in the heart of chennai where time slows down"
     ],
     "why": "Serene Royapettah garden cafe nestled in a heritage colonial bungalow surrounded by lush tropical greenery."
+  },
+  {
+    "id": "che-writers-cafe-porur",
+    "name": "Writers Cafe & Bakery",
+    "area": "Porur",
+    "city": "Chennai",
+    "latitude": 13.0385,
+    "longitude": 80.1565,
+    "address": "Mount Poonamallee Road, Porur, Chennai 600116",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "European",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.8,
+    "review_count": 2200,
+    "t": [
+      "Cafe",
+      "Books"
+    ],
+    "a": [
+      "cozy",
+      "bookish",
+      "inspiring"
+    ],
+    "o": [
+      "solo",
+      "friends",
+      "work"
+    ],
+    "s": "mild",
+    "emoji": "📚",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Writers+Cafe+Porur+Chennai",
+    "review_insights": [
+      "flammkuchen thin pizza",
+      "hot chocolate with marshmallows",
+      "book browsing aisles",
+      "inclusive social kitchen"
+    ]
+  },
+  {
+    "id": "che-sandys-velachery",
+    "name": "Sandy's Chocolate Laboratory",
+    "area": "Velachery",
+    "city": "Chennai",
+    "latitude": 12.979,
+    "longitude": 80.2185,
+    "address": "100 Feet Bypass Road, Velachery, Chennai 600042",
+    "c": [
+      "Desserts",
+      "Cafe",
+      "Continental"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,300 for two",
+    "rating": 4.7,
+    "review_count": 1750,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "quirky",
+      "modern",
+      "lively"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🧪",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sandys+Chocolate+Laboratory+Velachery+Chennai",
+    "review_insights": [
+      "signature tiny tub cake",
+      "chocolate syringe brownie",
+      "truffle pasta",
+      "fun dessert experiments"
+    ]
+  },
+  {
+    "id": "che-that-madras-place-annanagar",
+    "name": "That Madras Place & Pizzeria",
+    "area": "Anna Nagar West",
+    "city": "Chennai",
+    "latitude": 13.089,
+    "longitude": 80.2045,
+    "address": "2nd Avenue, Anna Nagar West, Chennai 600040",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,100 for two",
+    "rating": 4.7,
+    "review_count": 1420,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "quirky",
+      "artistic",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=That+Madras+Place+Anna+Nagar+Chennai",
+    "review_insights": [
+      "aglio olio pasta",
+      "caramel sea salt cheesecake",
+      "doodled wall art",
+      "chill afternoon vibe"
+    ]
   }
 ];
 const kolkataCatalog=[
@@ -20258,6 +22863,131 @@ const kolkataCatalog=[
       "impeccable traditional hospitality with bell-metal thalis and warm Bengali hospitality"
     ],
     "why": "Restored 100-year-old Ballygunge mansion celebrated for royal Bengali dining and baked coconut Daab Chingri."
+  },
+  {
+    "id": "kol-mezzuna-saltlake",
+    "name": "Cafe Mezzuna & Bistro",
+    "area": "Salt Lake Sector V",
+    "city": "Kolkata",
+    "latitude": 22.5805,
+    "longitude": 88.4345,
+    "address": "Forum Rangoli / EP Block, Sector V, Salt Lake, Kolkata 700091",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Mediterranean"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.7,
+    "review_count": 2450,
+    "t": [
+      "Cafe",
+      "Bistro"
+    ],
+    "a": [
+      "chic",
+      "modern",
+      "corporate"
+    ],
+    "o": [
+      "friends",
+      "work",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🥗",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Mezzuna+Sector+V+Kolkata",
+    "review_insights": [
+      "woodfired thin pizzas",
+      "grilled chicken steak",
+      "peach iced tea",
+      "vibrant it-hub evening"
+    ]
+  },
+  {
+    "id": "kol-coffee-bond-newtown",
+    "name": "Coffee Bond & Roastery",
+    "area": "New Town",
+    "city": "Kolkata",
+    "latitude": 22.5895,
+    "longitude": 88.468,
+    "address": "Action Area 1, near Eco Park, New Town, Kolkata 700156",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.8,
+    "review_count": 1250,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "aesthetic",
+      "airy",
+      "scenic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Coffee+Bond+New+Town+Kolkata",
+    "review_insights": [
+      "cold brew tonic",
+      "avocado poached egg sourdough",
+      "lakefront breeze",
+      "scandinavian wooden interior"
+    ]
+  },
+  {
+    "id": "kol-8th-day-jadavpur",
+    "name": "8th Day Cafe & Bakery",
+    "area": "Jadavpur",
+    "city": "Kolkata",
+    "latitude": 22.4975,
+    "longitude": 88.3715,
+    "address": "Jadavpur Central Road, near South City, Kolkata 700032",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.8,
+    "review_count": 1850,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "warm",
+      "community",
+      "cozy"
+    ],
+    "o": [
+      "solo",
+      "friends",
+      "work"
+    ],
+    "s": "mild",
+    "emoji": "🥯",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=8th+Day+Cafe+Jadavpur+Kolkata",
+    "review_insights": [
+      "authentic new york bagels",
+      "cinnamon rolls",
+      "pour-over coffee",
+      "friendly community vibe"
+    ]
   }
 ];
 const puneCatalog=[
@@ -24295,6 +27025,451 @@ const puneCatalog=[
       "mouthwatering bacon-wrapped sausages, crispy pizzas, and fiery chicken wings"
     ],
     "why": "Koregaon Park craft brewpub pioneer known for artisanal apple ciders, rock anthems, and high-energy dance weekends."
+  },
+  {
+    "id": "pun-german-bakery-lonavala",
+    "name": "German Bakery Wunderbar",
+    "area": "Lonavala (48km)",
+    "city": "Pune",
+    "latitude": 18.7512,
+    "longitude": 73.4089,
+    "address": "Old Mumbai Pune Highway, Lonavala 410401",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "European",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.8,
+    "review_count": 3100,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "hills",
+      "cozy",
+      "scenic"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🥐",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=German+Bakery+Wunderbar+Lonavala",
+    "review_insights": [
+      "cinnamon swirl buns",
+      "apple strudel with cream",
+      "pourover arabica",
+      "misty hills patio"
+    ]
+  },
+  {
+    "id": "pun-coopers-fudge-lonavala",
+    "name": "Cooper's Legendary Fudge & Ice Creams",
+    "area": "Lonavala (47km)",
+    "city": "Pune",
+    "latitude": 18.7545,
+    "longitude": 73.4112,
+    "address": "Opposite Lonavala Railway Station, Lonavala 410401",
+    "c": [
+      "Desserts",
+      "Sweets"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.9,
+    "review_count": 4200,
+    "t": [
+      "Dessert",
+      "Sweets"
+    ],
+    "a": [
+      "heritage",
+      "iconic"
+    ],
+    "o": [
+      "family",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Coopers+Fudge+Lonavala",
+    "review_insights": [
+      "melt-in-mouth walnut fudge",
+      "butterscotch crunch",
+      "heritage sweet shop",
+      "ghat road souvenir"
+    ]
+  },
+  {
+    "id": "pun-rama-krishna-lonavala",
+    "name": "Rama Krishna Pure Veg Dining",
+    "area": "Lonavala (48km)",
+    "city": "Pune",
+    "latitude": 18.7523,
+    "longitude": 73.4065,
+    "address": "Mumbai-Pune Road, near Bus Stand, Lonavala 410401",
+    "c": [
+      "South Indian",
+      "North Indian",
+      "Regional"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹650 for two",
+    "rating": 4.6,
+    "review_count": 2890,
+    "t": [
+      "Restaurant"
+    ],
+    "a": [
+      "family",
+      "bustling"
+    ],
+    "o": [
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rama+Krishna+Lonavala",
+    "review_insights": [
+      "crispy benne dosa",
+      "steaming south indian filter coffee",
+      "spiced misal pav",
+      "family hill-station tradition"
+    ]
+  },
+  {
+    "id": "pun-chokolade-talegaon",
+    "name": "Cafe Chokolade & Thick Shakes",
+    "area": "Talegaon Dabhade (33km)",
+    "city": "Pune",
+    "latitude": 18.7345,
+    "longitude": 73.682,
+    "address": "Talegaon Station Road, Talegaon Dabhade 410506",
+    "c": [
+      "Desserts",
+      "Cafe",
+      "Fast Food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹350 for two",
+    "rating": 4.7,
+    "review_count": 620,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "casual",
+      "youthful"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🥤",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Chokolade+Talegaon",
+    "review_insights": [
+      "signature B2 thick chocolate",
+      "sundae bowls",
+      "grilled paneer sandwich",
+      "student favorite"
+    ]
+  },
+  {
+    "id": "pun-basho-mulshi",
+    "name": "Basho's Lakeside Cafe",
+    "area": "Mulshi (44km)",
+    "city": "Pune",
+    "latitude": 18.5112,
+    "longitude": 73.5089,
+    "address": "Mulshi Dam Lakefront, Gondawane, Mulshi 412108",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,500 for two",
+    "rating": 4.8,
+    "review_count": 1450,
+    "t": [
+      "Cafe",
+      "Restaurant"
+    ],
+    "a": [
+      "lakeside",
+      "scenic",
+      "peaceful"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🌊",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bashos+Lakeside+Cafe+Mulshi",
+    "review_insights": [
+      "wooden deck over mulshi lake",
+      "thin crust four-cheese pizza",
+      "herbal mountain tea",
+      "breathtaking sunset views"
+    ]
+  },
+  {
+    "id": "pun-bougainvillea-mulshi",
+    "name": "Bougainvillea Country Kitchen & Bakes",
+    "area": "Mulshi (42km)",
+    "city": "Pune",
+    "latitude": 18.5289,
+    "longitude": 73.521,
+    "address": "Tamhini Ghat Road, Mulshi, Maharashtra 412108",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.6,
+    "review_count": 520,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "rustic",
+      "scenic",
+      "cozy"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bougainvillea+Mulshi",
+    "review_insights": [
+      "freshly baked country quiche",
+      "lemon pound cake",
+      "valley view coffee",
+      "peaceful countryside escape"
+    ]
+  },
+  {
+    "id": "pun-mezza9-hinjawadi",
+    "name": "Mezza9 Family Bistro & Bar",
+    "area": "Hinjawadi Phase 3 (24km)",
+    "city": "Pune",
+    "latitude": 18.588,
+    "longitude": 73.6912,
+    "address": "Opposite Wipro Circle, Hinjawadi Phase 3, Pune 411057",
+    "c": [
+      "North Indian",
+      "Continental",
+      "Asian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.5,
+    "review_count": 1780,
+    "t": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "a": [
+      "modern",
+      "spacious",
+      "cabana"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍛",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mezza9+Hinjawadi+Pune",
+    "review_insights": [
+      "al fresco cabana seating",
+      "creamy butter chicken",
+      "woodfired calzone",
+      "it hub celebrations"
+    ]
+  },
+  {
+    "id": "pun-cult-house-hadapsar",
+    "name": "The Cult House Cafe & Terrace",
+    "area": "Hadapsar",
+    "city": "Pune",
+    "latitude": 18.5135,
+    "longitude": 73.9312,
+    "address": "Magarpatta Road, Hadapsar, Pune 411028",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.7,
+    "review_count": 1980,
+    "t": [
+      "Cafe",
+      "Terrace"
+    ],
+    "a": [
+      "lush",
+      "open-air",
+      "vibrant"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🌿",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Cult+House+Hadapsar+Pune",
+    "review_insights": [
+      "woodfired thin crust pizza",
+      "terrace cocktail evenings",
+      "crispy mezze platter",
+      "lush garden seating"
+    ]
+  },
+  {
+    "id": "pun-11-east-street-wakad",
+    "name": "11 East Street Cafe & Diner",
+    "area": "Wakad",
+    "city": "Pune",
+    "latitude": 18.5985,
+    "longitude": 73.762,
+    "address": "Datta Mandir Road, Wakad, Pune 411057",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Bakery"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,200 for two",
+    "rating": 4.6,
+    "review_count": 1450,
+    "t": [
+      "Cafe",
+      "Diner"
+    ],
+    "a": [
+      "london-bus",
+      "lively",
+      "themed"
+    ],
+    "o": [
+      "friends",
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "🚌",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=11+East+Street+Cafe+Wakad+Pune",
+    "review_insights": [
+      "london red bus decor",
+      "chicken sizzlers",
+      "apple pie with custard",
+      "fun photo spots"
+    ]
+  },
+  {
+    "id": "pun-tea-villa-pimple-saudagar",
+    "name": "Tea Villa Cafe & Bakery",
+    "area": "Pimple Saudagar",
+    "city": "Pune",
+    "latitude": 18.598,
+    "longitude": 73.7925,
+    "address": "Kunal Icon Road, Pimple Saudagar, Pune 411027",
+    "c": [
+      "Cafe",
+      "Tea",
+      "Waffles",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1120,
+    "t": [
+      "Cafe",
+      "Dessert"
+    ],
+    "a": [
+      "cozy",
+      "family",
+      "pleasant"
+    ],
+    "o": [
+      "family",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tea+Villa+Pimple+Saudagar+Pune",
+    "review_insights": [
+      "belgian chocolate waffle",
+      "earl grey lavender tea",
+      "paneer tikka pizza",
+      "peaceful balcony seats"
+    ]
+  },
+  {
+    "id": "pun-cafe-durga-sinhagad-rd",
+    "name": "Cafe Durga & Thick Shakes",
+    "area": "Sinhagad Road",
+    "city": "Pune",
+    "latitude": 18.479,
+    "longitude": 73.821,
+    "address": "Manik Baug, Sinhagad Road, Pune 411051",
+    "c": [
+      "Cafe",
+      "Beverages",
+      "Street Food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹300 for two",
+    "rating": 4.6,
+    "review_count": 2400,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "bustling",
+      "pocket-friendly"
+    ],
+    "o": [
+      "friends",
+      "solo"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Durga+Sinhagad+Road+Pune",
+    "review_insights": [
+      "legendary cold coffee",
+      "spiced misal pav",
+      "crispy poha",
+      "puneri student classic"
+    ]
   }
 ];
 const jaipurCatalog=[
@@ -24963,6 +28138,129 @@ const jaipurCatalog=[
       "heritage dessert stall refreshing jaipurites since 1946"
     ],
     "why": "Heritage 1946 dessert stall near Hawa Mahal famed for clay-pot matka kulfis infused with saffron and pistachios."
+  },
+  {
+    "id": "jai-nibs-mansarovar",
+    "name": "Nibs Cafe & Chocolataria",
+    "area": "Mansarovar",
+    "city": "Jaipur",
+    "latitude": 26.8545,
+    "longitude": 75.768,
+    "address": "Madhyam Marg, Mansarovar, Jaipur 302020",
+    "c": [
+      "Cafe",
+      "Desserts",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1890,
+    "t": [
+      "Cafe",
+      "Dessert"
+    ],
+    "a": [
+      "colorful",
+      "quirky",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nibs+Cafe+Mansarovar+Jaipur",
+    "review_insights": [
+      "chocolate syringe shots",
+      "nutella pizza slice",
+      "creamy white sauce pasta",
+      "quirky pop art walls"
+    ]
+  },
+  {
+    "id": "jai-curious-life-vaishali",
+    "name": "Curious Life Coffee Roasters",
+    "area": "Vaishali Nagar",
+    "city": "Jaipur",
+    "latitude": 26.908,
+    "longitude": 75.7485,
+    "address": "Queens Road, Vaishali Nagar, Jaipur 302021",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹900 for two",
+    "rating": 4.9,
+    "review_count": 2600,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "specialty",
+      "minimalist",
+      "calm"
+    ],
+    "o": [
+      "solo",
+      "date",
+      "work"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Curious+Life+Coffee+Vaishali+Jaipur",
+    "review_insights": [
+      "single estate pour overs",
+      "panini sandwiches",
+      "iced vietnamese coffee",
+      "coffee lover heaven"
+    ]
+  },
+  {
+    "id": "jai-stepout-jagatpura",
+    "name": "Stepout Cafe & Rooftop",
+    "area": "Jagatpura",
+    "city": "Jaipur",
+    "latitude": 26.818,
+    "longitude": 75.839,
+    "address": "Mahal Road, Jagatpura, Jaipur 302017",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.6,
+    "review_count": 980,
+    "t": [
+      "Cafe",
+      "Rooftop"
+    ],
+    "a": [
+      "rooftop",
+      "breezy",
+      "lively"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Stepout+Cafe+Jagatpura+Jaipur",
+    "review_insights": [
+      "sunset terrace lights",
+      "peri peri garlic bread",
+      "oreo thickshake",
+      "chill youth vibes"
+    ]
   }
 ];
 const kochiCatalog=[
@@ -25637,6 +28935,87 @@ const kochiCatalog=[
       "romantic candlelit courtyard under swaying palms near the chinese fishing nets"
     ],
     "why": "Romantic Fort Kochi coastal haven preparing the freshest sea catch with traditional Malabar coconut spices."
+  },
+  {
+    "id": "koc-cocoa-tree-kakkanad",
+    "name": "Cocoa Tree & Coffee Lounge",
+    "area": "Kakkanad / InfoPark",
+    "city": "Kochi",
+    "latitude": 10.015,
+    "longitude": 76.3585,
+    "address": "Infopark Expressway, Kakkanad, Kochi 682042",
+    "c": [
+      "Cafe",
+      "Desserts",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1650,
+    "t": [
+      "Cafe",
+      "Dessert"
+    ],
+    "a": [
+      "modern",
+      "tech-corridor",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "work"
+    ],
+    "s": "mild",
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cocoa+Tree+Kakkanad+Kochi",
+    "review_insights": [
+      "belgian mudpie",
+      "chicken melt sandwich",
+      "chilled mocha frappe",
+      "infopark crowd hub"
+    ]
+  },
+  {
+    "id": "koc-cafe-17-edappally",
+    "name": "Cafe 17 & Italian Bistro",
+    "area": "Edappally",
+    "city": "Kochi",
+    "latitude": 10.0245,
+    "longitude": 76.308,
+    "address": "Near Lulu Junction, Edappally, Kochi 682024",
+    "c": [
+      "Cafe",
+      "Italian",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹900 for two",
+    "rating": 4.6,
+    "review_count": 1120,
+    "t": [
+      "Cafe"
+    ],
+    "a": [
+      "cozy",
+      "warm",
+      "bistro"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🍝",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+17+Edappally+Kochi",
+    "review_insights": [
+      "woodfired thin pizza",
+      "creamy carbonara pasta",
+      "filter coffee cold brew",
+      "comfortable corner booths"
+    ]
   }
 ];
 const goaCatalog=[
@@ -26311,6 +29690,88 @@ const goaCatalog=[
       "spicy tangy Prawn Balchao preserved in vintage ceramic jars"
     ],
     "why": "Panaji culinary treasure dedicated to preserving indigenous Christian and Hindu Goan heirloom home recipes."
+  },
+  {
+    "id": "goa-cafe-central-porvorim",
+    "name": "Cafe Central & Patisserie",
+    "area": "Porvorim",
+    "city": "Goa",
+    "latitude": 15.5345,
+    "longitude": 73.829,
+    "address": "CHOGM Road, Alto Porvorim, Goa 403521",
+    "c": [
+      "Bakery",
+      "Desserts",
+      "Cafe"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.8,
+    "review_count": 2400,
+    "t": [
+      "Bakery",
+      "Goan"
+    ],
+    "a": [
+      "heritage",
+      "traditional",
+      "cozy"
+    ],
+    "o": [
+      "family",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🥧",
+    "photo": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Central+Porvorim+Goa",
+    "review_insights": [
+      "legendary goan bebinca",
+      "mushroom samosa puff",
+      "traditional baath cake",
+      "authentic local stop"
+    ]
+  },
+  {
+    "id": "goa-carpe-diem-margao",
+    "name": "Carpe Diem Cultural Cafe",
+    "area": "Margao / Majorda",
+    "city": "Goa",
+    "latitude": 15.2815,
+    "longitude": 73.961,
+    "address": "Gomes Pereira Road, Majorda near Margao, South Goa 403713",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹750 for two",
+    "rating": 4.8,
+    "review_count": 980,
+    "t": [
+      "Cafe",
+      "Art"
+    ],
+    "a": [
+      "art-gallery",
+      "heritage",
+      "serene"
+    ],
+    "o": [
+      "solo",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🎨",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Carpe+Diem+Cafe+Majorda+Goa",
+    "review_insights": [
+      "art gallery garden patio",
+      "fresh waffles with honey",
+      "lemon drizzle cake",
+      "peaceful south goa sanctuary"
+    ]
   }
 ];
 const chandigarhCatalog=[
@@ -26983,14 +30444,134 @@ const chandigarhCatalog=[
       "uncompromising hygiene with glove service that attracts crowds from across the tri-city"
     ],
     "why": "Sector 23's legendary chaat counter famous for five-flavor-water Golgappas and creamy Dahi Bhallas."
+  },
+  {
+    "id": "chd-brew-bros-mohali",
+    "name": "Brew Bros Craft Cafe",
+    "area": "Mohali Sector 70",
+    "city": "Chandigarh",
+    "latitude": 30.6985,
+    "longitude": 76.711,
+    "address": "Sector 70, SAS Nagar, Mohali 160071",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1420,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "modern",
+      "youthful",
+      "vibrant"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Brew+Bros+Mohali+Chandigarh",
+    "review_insights": [
+      "cold brew tonic",
+      "woodfired paneer pizza",
+      "thick chocolate shake",
+      "spacious open terrace"
+    ]
+  },
+  {
+    "id": "chd-coffee-bean-panchkula",
+    "name": "The Coffee Bean & Tea Leaf",
+    "area": "Panchkula Sector 5",
+    "city": "Chandigarh",
+    "latitude": 30.6945,
+    "longitude": 76.851,
+    "address": "Sector 5, Panchkula, Haryana 134109",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹950 for two",
+    "rating": 4.7,
+    "review_count": 1100,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "relaxing",
+      "cozy",
+      "scenic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Coffee+Bean+Sector+5+Panchkula",
+    "review_insights": [
+      "hazelnut ice blended",
+      "blueberry cream cheese bagel",
+      "quiet garden view",
+      "date night favourite"
+    ]
+  },
+  {
+    "id": "chd-uncle-jacks-zirakpur",
+    "name": "Uncle Jack's All-American Diner",
+    "area": "Zirakpur",
+    "city": "Chandigarh",
+    "latitude": 30.6415,
+    "longitude": 76.819,
+    "address": "VIP Road, Zirakpur, Punjab 140603",
+    "c": [
+      "Cafe",
+      "Fast Food",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹750 for two",
+    "rating": 4.6,
+    "review_count": 1850,
+    "t": [
+      "Cafe",
+      "Diner"
+    ],
+    "a": [
+      "american-diner",
+      "lively"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍟",
+    "photo": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Uncle+Jacks+Zirakpur+Chandigarh",
+    "review_insights": [
+      "cheesy fries in a cup",
+      "chicago deep dish slider",
+      "monster shakes",
+      "fun youth pitstop"
+    ]
   }
 ];
 const FALLBACK_INTERIORS={
-  cafe:['https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80'],
-  finedining:['https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80'],
-  regional:['https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80'],
-  dessert:['https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80'],
-  casual:['https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=800&q=80']
+  cafe:['https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'],
+  finedining:['https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=800&q=80'],
+  regional:['https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80'],
+  dessert:['https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80'],
+  casual:['https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80']
 };
 function resolveVenuePhoto(r){
   if(r.photo_url&&typeof r.photo_url==='string'&&r.photo_url.startsWith('https://'))return r.photo_url;
@@ -27046,7 +30627,7 @@ const cityCenters={
 };
 let state=load(), page='home', supabaseClient=null, discoverCuisine='all', discoverQuery='', homeCuisine='all', homeLimit=12, searchEventTimer=null, authRequired=true, homeView='map', selectedPinId=null, mapZoom=1, map3d=false;
 let selectedCity=state.selectedCity&&cityCenters[state.selectedCity]?state.selectedCity:'Ahmedabad',userLocation=null;
-const LEGAL_VERSION='2026-10-06';
+const LEGAL_VERSION='2026-10-14';
 let legalConsentBusy=false;
 function consentControls(){return '<div class="consentNotice"><p>Your account details, taste choices and activity are used for sign-in, personalised recommendations and cloud sync. Location is optional. Read the policies before choosing.</p><label class="consentChoice"><input id="legalTerms" type="checkbox" required><span>I agree to the <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.</span></label><label class="consentChoice"><input id="legalPrivacy" type="checkbox" required><span>I consent to the account, recommendation and sync processing described in the <a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. I can withdraw this consent by contacting Palateo.</span></label><p class="consentHelp">If you are under 18, use Palateo with a parent or guardian’s knowledge and permission.</p></div>'}
 function readLegalConsent(){return {terms:document.getElementById('legalTerms')?.checked===true,privacy:document.getElementById('legalPrivacy')?.checked===true}}
@@ -27067,7 +30648,7 @@ function requireLegalConsent(){
  authRequired=true;page='consent';document.getElementById('nav')?.classList.add('hide');
  document.getElementById('root').innerHTML='<section class="authGate"><div class="eyebrow">Your privacy matters</div><h1>Your palate, your choice.</h1><p>Review how Palateo uses your data before continuing. You can read both policies without signing in.</p></section>';
  document.getElementById('authModal')?.remove();
- document.body.insertAdjacentHTML('beforeend','<div class="modal authRequired" id="authModal" role="dialog" aria-modal="true" aria-labelledby="legalTitle"><div class="modalCard"><div class="eyebrow">Policies · 6 October 2026</div><h2 id="legalTitle">Before you continue</h2><form data-action="legal-submit">'+consentControls()+'<div class="status" id="legalStatus" aria-live="polite"></div><div class="modalActions"><button class="btn secondary" type="button" data-action="legal-decline">Sign out</button><button class="btn green" type="submit" id="legalSubmit">Accept and continue</button></div></form><p class="legalLinks">Questions? <a href="mailto:palateo.com@gmail.com">Contact Palateo</a></p></div></div>');
+ document.body.insertAdjacentHTML('beforeend','<div class="modal authRequired" id="authModal" role="dialog" aria-modal="true" aria-labelledby="legalTitle"><div class="modalCard"><div class="eyebrow">Policies · 14 October 2026</div><h2 id="legalTitle">Before you continue</h2><form data-action="legal-submit">'+consentControls()+'<div class="status" id="legalStatus" aria-live="polite"></div><div class="modalActions"><button class="btn secondary" type="button" data-action="legal-decline">Sign out</button><button class="btn green" type="submit" id="legalSubmit">Accept and continue</button></div></form><p class="legalLinks">Questions? <a href="mailto:palateo.com@gmail.com">Contact Palateo</a></p></div></div>');
  document.getElementById('legalTerms')?.focus();
 }
 async function acceptLegalConsent(){
@@ -27076,6 +30657,12 @@ async function acceptLegalConsent(){
  try{
   const metadata=legalMetadata(readLegalConsent());if(!currentUser)throw new Error('Sign in again to continue.');
   legalConsentBusy=true;if(button)button.disabled=true;if(status){status.dataset.kind='loading';status.textContent='Saving your choice…'}
+  if(isRailwayActive()){
+   const data=await railwayFetch('/api/auth/update-user',{method:'POST',body:JSON.stringify(metadata)});
+   if(!data.status)throw Error('Your choice was not saved. Please retry.');
+   const user=await betterAuthGetSession();if(!user)throw Error('Please sign in again.');
+   useAccount(user);closeAuth();await initV5();toast('Your choice has been saved.');return;
+  }
   const {data,error}=await getSupabaseClient().auth.updateUser({data:metadata});if(error)throw error;if(!data?.user)throw new Error('Your choice was not saved. Please try again.');
   useAccount(data.user);await logEvent('legal_consent',{version:LEGAL_VERSION});closeAuth();await initV5();toast('Your choice has been saved.');
  }catch(error){if(status){status.dataset.kind='error';status.textContent=error.message||'Could not save your choice. Please try again.'}}
@@ -27091,12 +30678,67 @@ function updateCityPicker(){
   for(const [city,id] of cityMap){const button=document.getElementById(id);if(button){const active=city===selectedCity;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active))}}
 }
 function setCity(city){if(!cityCenters[city])return;selectedCity=city;userLocation=null;state.selectedCity=city;homeLimit=12;homeCuisine='all';selectedPinId=null;persist();const status=document.getElementById('cityPickerStatus');if(status)status.textContent=city+' selected';updateCityPicker();setTimeout(()=>{const node=document.getElementById('cityPickerStatus');if(node)node.textContent=''},2400);if(currentUser){go(page);}}
-function useMyLocation(){const button=document.getElementById('useLocationButton'),status=document.getElementById('cityPickerStatus');if(!navigator.geolocation){if(status)status.textContent='Location is unavailable in this browser.';return}if(button)button.disabled=true;if(status)status.textContent='Requesting location permission…';navigator.geolocation.getCurrentPosition(position=>{const lat=position.coords.latitude,lon=position.coords.longitude,rad=x=>x*Math.PI/180,distance=center=>{const dLat=rad(center[0]-lat),dLon=rad(center[1]-lon),a=Math.sin(dLat/2)**2+Math.cos(rad(lat))*Math.cos(rad(center[0]))*Math.sin(dLon/2)**2;return 6371*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))},nearest=Object.entries(cityCenters).map(([city,center])=>({city,km:distance(center)})).sort((a,b)=>a.km-b.km)[0];if(nearest.km>75){if(status)status.textContent='You are outside our Indian metropolitan coverage. Choose a city above.';userLocation=null}else{selectedCity=nearest.city;state.selectedCity=selectedCity;persist();userLocation={lat,lon};if(status)status.textContent='Showing '+selectedCity+' (nearest city)';updateCityPicker();if(currentUser)go(page)}if(button)button.disabled=false;setTimeout(()=>{const node=document.getElementById('cityPickerStatus');if(node)node.textContent=''},5000)},error=>{if(status)status.textContent=error.code===1?'Location permission was declined. Choose a city manually.':'Could not get your location. Choose a city manually.';if(button)button.disabled=false}, {enableHighAccuracy:false,timeout:10000,maximumAge:300000})}
+function useMyLocation(){const button=document.getElementById('useLocationButton'),status=document.getElementById('cityPickerStatus');if(!navigator.geolocation&&!window.PalateoNative){if(status)status.textContent='Location is unavailable in this browser.';return}if(button)button.disabled=true;if(status)status.textContent='Requesting location permission…';const locate=window.PalateoNative?((ok,fail,options)=>window.PalateoNative.getCurrentPosition(options).then(ok,fail)):navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);locate(position=>{const lat=position.coords.latitude,lon=position.coords.longitude,rad=x=>x*Math.PI/180,distance=center=>{const dLat=rad(center[0]-lat),dLon=rad(center[1]-lon),a=Math.sin(dLat/2)**2+Math.cos(rad(lat))*Math.cos(rad(center[0]))*Math.sin(dLon/2)**2;return 6371*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))},nearest=Object.entries(cityCenters).map(([city,center])=>({city,km:distance(center)})).sort((a,b)=>a.km-b.km)[0];if(nearest.km>75){if(status)status.textContent='You are outside our Indian metropolitan coverage. Choose a city above.';userLocation=null}else{selectedCity=nearest.city;state.selectedCity=selectedCity;persist();userLocation={lat,lon};if(status)status.textContent='Showing '+selectedCity+' (nearest city)';updateCityPicker();if(currentUser)go(page)}if(button)button.disabled=false;setTimeout(()=>{const node=document.getElementById('cityPickerStatus');if(node)node.textContent=''},5000)},error=>{if(status)status.textContent=error.code===1?'Location permission was declined. Choose a city manually.':'Could not get your location. Choose a city manually.';if(button)button.disabled=false}, {enableHighAccuracy:false,timeout:10000,maximumAge:300000})}
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){console.warn('Local preferences could not be saved',e)}}
 function esc(s){return String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[x]))}
 function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1800)}
 function price(p){return ({'under_500':'Under ₹500','500_1000':'₹500–₹1,000','1000_2000':'₹1,000–₹2,000','2000_plus':'₹2,000+'})[p]||'Price varies'}
 function displayPrice(r){return r.displayPrice||price(r.p)}
+function getISTDate(){
+  const now = new Date();
+  const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+  return new Date(utc + (330 * 60000));
+}
+function parseTimeStr(tStr){
+  if(!tStr) return null;
+  const m = tStr.trim().match(/(\d+)(?::(\d+))?\s*(AM|PM)?/i);
+  if(!m) return null;
+  let h = parseInt(m[1], 10);
+  const min = parseInt(m[2] || '0', 10);
+  const mer = (m[3] || '').toUpperCase();
+  if(mer === 'PM' && h < 12) h += 12;
+  if(mer === 'AM' && h === 12) h = 0;
+  return h * 60 + min;
+}
+function getVenueOpenStatus(r){
+  const ist = getISTDate();
+  const currentMinutes = ist.getHours() * 60 + ist.getMinutes();
+  let openTiming = r.openTiming || r.hours || r.timing;
+  if(!openTiming){
+    const pool = [...(r.c||[]), ...(r.t||[])].map(x => String(x).toLowerCase()).join(' ');
+    if(pool.includes('cafe') || pool.includes('coffee') || pool.includes('dessert') || pool.includes('bakery')) {
+      openTiming = '11:00 AM – 11:30 PM';
+    } else {
+      openTiming = '11:00 AM – 11:30 PM';
+    }
+  }
+  const parts = openTiming.split(/[–—\-]| to /i);
+  let openTimeStr = '11:00 AM', closeTimeStr = '11:30 PM';
+  if(parts.length >= 2){
+    openTimeStr = parts[0].trim();
+    closeTimeStr = parts[1].trim();
+  }
+  const openMin = parseTimeStr(openTimeStr) ?? (11 * 60);
+  const closeMin = parseTimeStr(closeTimeStr) ?? (23 * 60 + 30);
+  let isOpen = false;
+  if(closeMin > openMin){
+    isOpen = currentMinutes >= openMin && currentMinutes < closeMin;
+  } else {
+    isOpen = currentMinutes >= openMin || currentMinutes < closeMin;
+  }
+  const statusText = isOpen ? `Open Now · Closes ${closeTimeStr}` : `Closed · Opens ${openTimeStr}`;
+  const timingText = `${openTimeStr} – ${closeTimeStr} (${statusText})`;
+  return { isOpen, statusText, timingText, openTimeStr, closeTimeStr };
+}
+function formatReviewCount(count){
+  const n = Number(count || 0);
+  if(n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+  return String(n);
+}
+function titleCase(str){
+  if(!str) return '';
+  return String(str).split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+}
 function hasListedPrice(value){if(typeof value==='number')return Number.isFinite(value)&&value>=0;const text=String(value??'').trim().toLowerCase();return !!text&&!['unknown','not listed','price varies','varies','n/a','na',''].includes(text)}
 function isPermanentlyClosed(r){if(r.permanently_closed===true||r.is_permanently_closed===true||r.closed_permanently===true)return true;const status=[r.business_status,r.businessStatus,r.operational_status,r.status,r.lifecycle_status,r.operationalStatus].filter(Boolean).join(' ').toLowerCase().replace(/[_-]+/g,' ');return /\b(permanently closed|closed permanently|disused|abandoned|demolished|not operational)\b/.test(status)}
 function isExcludedVenue(r){const name=String(r.name||'').toLowerCase();if(name.includes('bombay canteen'))return false;const descriptor=[name,...(r.t||[]),...(r.c||[]),...(r.tags||[]),...(r.cuisines||[])].filter(Boolean).join(' ').toLowerCase();if(isPermanentlyClosed(r))return true;if(/\b(?:school|college|campus|university|hostel|institute)\s+(?:canteen|cafeteria|mess)\b|\b(?:student\s+mess|mess\s+hall|hostel\s+canteen)\b/.test(descriptor))return true;if(/\b(?:school|college|campus|university|institute)\s+canteen\b/.test(name))return true;if(/\bgruh\s*laxmi\s*spices?\b|\b(?:spice|masala)\s+(?:shop|store|retail|wholesale|distributor)\b/.test(descriptor))return true;return /\b(?:mcdonald'?s|mcd|la\s*pino'?z|domino'?s|burger\s*king|kfc|subway|pizza\s*hut|taco\s*bell|wendy'?s|starbucks|popeyes|hardee'?s|little\s*caesars|costa\s*coffee|tim\s*hortons|dunkin'?|papa\s*john'?s|carl'?s\s*jr|baskin\s*robbins|wow\s*momo|burger\s*singh)\b/.test(name)}
@@ -27202,7 +30844,7 @@ function dishButtons(d,source='detail'){
 function renderCalibrationDeck(){
  const dishes=availableCalibrationDishes(),d=dishes[dishCalibrationIndex%dishes.length],feedback=normalizeDishFeedback(state.dishFeedback),rated=dishes.filter(x=>feedback[x.id]);
  const example=ranked().find(r=>dishAffinity(r,d)>0);
- return `<section class="dishCalibration" aria-labelledby="calibrationTitle"><h2 id="calibrationTitle">Live dish calibration</h2><p class="studioHint">Love a flavour or give it a pass. Your estimated matches update immediately.</p><div class="calibrationDish"><span class="calibrationProgress">${rated.length} active preferences · ${dishCalibrationIndex%dishes.length+1} of ${dishes.length}</span><h3 id="calibrationDishName" tabindex="-1">${esc(d.name)}</h3><p>${esc(d.description)}</p>${dishButtons(d,'deck')}<button type="button" class="dishSkip" data-action="dish-next">Skip this dish →</button></div>${lastCalibratedDish&&feedback[lastCalibratedDish]?`<button type="button" class="linkBtn" data-action="dish-undo" data-dish-id="${lastCalibratedDish}">Undo last dish feedback</button>`:''}<button type="button" class="dishRetry" data-action="dish-retry" ${state.unsyncedDishes?'':'hidden'}>Retry cloud sync</button><p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Dish choices sync with your account.')}</p>${example?`<div class="calibrationMatch"><span>${esc(example.name)}</span><strong>${example.score}% estimated match</strong></div>`:''}<p class="studioHint">These are taste examples, not confirmed menu items. Venue matches use the cuisine and tags we have.</p>${rated.length?`<details class="ratedDishes"><summary>Edit ${rated.length} rated dishes</summary>${rated.map(x=>`<div class="ratedDish"><strong>${esc(x.name)}</strong>${dishButtons(x,'edit')}</div>`).join('')}</details>`:''}</section>`;
+ return `<section class="dishCalibration" aria-labelledby="calibrationTitle"><h2 id="calibrationTitle">Live dish calibration <span class="betaBadge">BETA</span></h2><p class="studioHint">Love a flavour or give it a pass. Your estimated matches update immediately.</p><div class="calibrationDish"><span class="calibrationProgress">${rated.length} active preferences · ${dishCalibrationIndex%dishes.length+1} of ${dishes.length}</span><h3 id="calibrationDishName" tabindex="-1">${esc(d.name)}</h3><p>${esc(d.description)}</p>${dishButtons(d,'deck')}<button type="button" class="dishSkip" data-action="dish-next">Skip this dish →</button></div>${lastCalibratedDish&&feedback[lastCalibratedDish]?`<button type="button" class="linkBtn" data-action="dish-undo" data-dish-id="${lastCalibratedDish}">Undo last dish feedback</button>`:''}<button type="button" class="dishRetry" data-action="dish-retry" ${state.unsyncedDishes?'':'hidden'}>Retry cloud sync</button><p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Dish choices sync with your account.')}</p>${example?`<div class="calibrationMatch"><span>${esc(example.name)}</span><strong>${example.score}% estimated match</strong></div>`:''}<p class="studioHint">These are taste examples, not confirmed menu items. Venue matches use the cuisine and tags we have.</p>${rated.length?`<details class="ratedDishes"><summary>Edit ${rated.length} rated dishes</summary>${rated.map(x=>`<div class="ratedDish"><strong>${esc(x.name)}</strong>${dishButtons(x,'edit')}</div>`).join('')}</details>`:''}</section>`;
 }
 async function rateDish(id,value,source='detail'){
  if(!hasTasteProfile()||!calibrationDishes.some(d=>d.id===id)||!['love','pass'].includes(value))return;
@@ -27241,6 +30883,38 @@ async function retryDishSync(){
  return feedbackSyncQueue;
 }
 
+// A per-account logistic model, rebuilt from explicit feedback so edits and undo are exact.
+let tasteModelCache=null;
+function tasteFeatures(r){
+ const features=[];
+ for(const [group,values] of Object.entries({cuisine:r.c,tag:r.t,ambience:r.a,occasion:r.o})){
+  for(const value of Array.isArray(values)?values:[]){const text=String(value).trim().toLowerCase();if(text&&text.length<=60)features.push(group+':'+text)}
+ }
+ if(r.p)features.push('price:'+r.p);if(r.s)features.push('spice:'+r.s);
+ return [...new Set(features)].sort().slice(0,40);
+}
+function trainTasteModel(excludedId){
+ const samples=Object.entries(state.feedback||{}).filter(([id,value])=>id!==excludedId&&['like','dislike'].includes(value)).sort(([a],[b])=>a.localeCompare(b)).map(([id,value])=>{const r=activeRestaurant(id);return r?{features:tasteFeatures(r),target:value==='like'?1:0}:null}).filter(s=>s?.features.length);
+ const weights=Object.create(null);
+ for(let epoch=0;epoch<12;epoch++)for(const sample of samples){
+  const scale=1/Math.sqrt(sample.features.length),score=sample.features.reduce((n,f)=>n+(weights[f]||0)*scale,0),prediction=1/(1+Math.exp(-Math.max(-20,Math.min(20,score))));
+  for(const feature of sample.features)weights[feature]=(weights[feature]||0)*.997+.25*(sample.target-prediction)*scale;
+ }
+ return {weights,samples:samples.length};
+}
+function tasteModelAdjustment(r){
+ if(['like','dislike'].includes(state.feedback?.[r.id]))return 0;
+ const key=String(currentUser?.id||'')+'|'+JSON.stringify(Object.entries(state.feedback||{}).sort(([a],[b])=>a.localeCompare(b)));
+ if(!tasteModelCache||tasteModelCache.key!==key)tasteModelCache={key,models:new Map()};
+ // Direct feedback already handles known places; the model generalises to unrated places.
+ const excluded='';
+ if(!tasteModelCache.models.has(excluded))tasteModelCache.models.set(excluded,trainTasteModel(excluded));
+ const model=tasteModelCache.models.get(excluded),features=tasteFeatures(r);
+ if(!model.samples||!features.length)return 0;
+ const score=features.reduce((sum,f)=>sum+(model.weights[f]||0),0)/Math.sqrt(features.length);
+ const probability=1/(1+Math.exp(-Math.max(-20,Math.min(20,score))));
+ return Math.max(-6,Math.min(6,(probability-.5)*12*Math.min(1,model.samples/3)));
+}
 /* Adaptive recommendation algorithm.
    Base content similarity -> feedback reinforcement -> social similarity -> exploration.
 */
@@ -27296,17 +30970,9 @@ if(Array.isArray(r.review_insights)&&r.review_insights.length){
  if(a.priority==='unique'&&/\b(heritage|iconic|historic|authentic)\b/.test(insightText)){s+=1.5;why.push('Diners highlight authentic character')}
 }
 
-/* Learned feature signals */
-const sig=state.ai?.signals||{};
-let learnedSignal=0;
-const features=restaurantFeatures(r),ownDelta=f[r.id]==='dislike'?-1.5:f[r.id]==='visited'?2:f[r.id]==='like'?1:0;
-for(const feature of features){
-// This place's feedback is applied once below; only other places teach shared preferences.
-const w=(Number(sig[feature])||0)-ownDelta;
-learnedSignal+=Math.sign(w)*Math.min(3,Math.abs(w)*.5);
-}
-/* Many overlapping tags must not overwhelm the explicit taste choices. */
-s+=Math.max(-6,Math.min(6,learnedSignal));
+const learnedDelta=tasteModelAdjustment(r);s+=learnedDelta;
+if(learnedDelta>=1)why.unshift('Similar to places you liked');
+else if(learnedDelta<=-1)why.unshift('Similar to places you passed');
 const dishDelta=dishAdjustment(r);s+=dishDelta;
 if(dishDelta>=1)why.unshift('Your dish preferences favour this cuisine');
 else if(dishDelta<=-1)why.unshift('Your dish passes lower this estimate');
@@ -27326,6 +30992,7 @@ let feedbackRevision=0;
 function restaurantFeatures(r){return [...new Set([...(r.c||[]),...(r.t||[]),...(r.a||[]),...(r.o||[]),...(r.review_insights||[])].map(x=>String(x).trim().toLowerCase()).filter(Boolean))]}
 function feedbackCount(){return (state.ai?.likes||0)+(state.ai?.dislikes||0)+(state.ai?.visits||0)}
 function rebuildLearning(){
+ tasteModelCache=null;
  state.ai={likes:0,dislikes:0,visits:0,signals:{}};
  for(const [id,type] of Object.entries(state.feedback||{})){
   const r=activeRestaurant(id);if(!r||!['like','dislike','visited'].includes(type))continue;
@@ -27341,7 +31008,7 @@ function learn(r,type){
  if(type)state.feedback[r.id]=type;else delete state.feedback[r.id];
  rebuildLearning();persist();
 }
-function photo(r){const fallback='<svg class="venuePlaceholder" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V9h16v12M3 9l3-6h12l3 6M8 21v-7h8v7M3 9h18"/></svg>';const imgUrl=(r.photo&&r.photo.startsWith('https://'))?r.photo:resolveVenuePhoto(r);if(!imgUrl)return fallback;try{const url=new URL(imgUrl,location.href);if((url.protocol!=='https:'&&url.origin!==location.origin)||url.username||url.password)return fallback;return fallback+'<img src="'+esc(url.href)+'" alt="" loading="lazy" decoding="async">'}catch(e){return fallback}}
+function photo(r){const fallback='<svg class="venuePlaceholder" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V9h16v12M3 9l3-6h12l3 6M8 21v-7h8v7M3 9h18"/></svg>';const imgUrl=(r.photo&&r.photo.startsWith('https://'))?r.photo:resolveVenuePhoto(r);if(!imgUrl)return fallback;try{const url=new URL(imgUrl,location.href);if((url.protocol!=='https:'&&url.origin!==location.origin)||url.username||url.password)return fallback;return fallback+'<img src="'+esc(url.href)+'" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=\'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80\';">'}catch(e){return fallback}}
 function card(r){
  const saved=state.saves.includes(r.id),f=state.feedback[r.id],id=esc(r.id);
  const place=r.area||r.city||cityName(),rating=Number(r.rating).toFixed(1),reviews=Number(r.review_count)||0;
@@ -27519,10 +31186,141 @@ function closePlaceDetails(fromHistory=false){
 window.addEventListener?.('popstate',event=>{if(event.state?.palateoPlace){detailOrigin=event.state.origin||'home';detailRestaurantId=event.state.palateoPlace;go('place');document.getElementById('placeBack')?.focus({preventScroll:true})}else if(page==='place'){detailOrigin=event.state?.palateoPage||detailOrigin;closePlaceDetails(true)}else if(event.state?.palateoPage)go(event.state.palateoPage)});
 function place(){
  const raw=activeRestaurant(detailRestaurantId);if(!raw){detailRestaurantId=null;page='home';home();return}
- const r=rec(raw),id=esc(r.id),f=state.feedback[r.id],saved=state.saves.includes(r.id),dishes=availableCalibrationDishes().filter(d=>dishAffinity(r,d)>0).slice(0,3);
- const tags=[...new Set([...(r.c||[]),...(r.a||[])])].filter(Boolean).slice(0,6);
+ const r=rec(raw),id=esc(r.id),f=state.feedback[r.id],saved=state.saves.includes(r.id);
+ const openInfo=getVenueOpenStatus(r);
  const cuisines=(r.c||[]).filter(x=>!['Restaurant','Cafe'].includes(x));
- document.getElementById('root').innerHTML=`<article class="screen place-screen" aria-labelledby="placeTitle"><div class="placeHero"><div class="placeHeroPhoto" aria-hidden="true">${photo(r)}</div><div class="placeHeroControls"><button type="button" id="placeBack" data-action="close-place" aria-label="Back to places">← Back</button><button type="button" data-rest-action="save" data-rest-id="${id}" aria-pressed="${saved}" aria-label="${saved?'Remove saved':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button></div><div class="placeHeroTitle"><div><h1 id="placeTitle">${esc(r.name)}</h1><p>${esc(r.area||r.city)} · ${esc(r.city||cityName())}</p></div><div class="placeMatch"><strong>${r.score}%</strong><span>Palate match</span></div></div></div><div class="placeBody"><div class="placeQuickStats"><span>★ ${Number(r.rating).toFixed(1)}${r.review_count?' · '+Number(r.review_count).toLocaleString()+' ratings':''}${r.ratingSource?' · '+esc(r.ratingSource):''}</span><span>${esc(displayPrice(r))}</span></div><div class="tags">${tags.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><section class="placeBreakdown"><h2>Your palate match</h2><p>${esc(r.why.join(' · '))}.</p><div class="matchFactors">${r.matchBreakdown.map(x=>`<div><span>${esc(x.label)}</span><strong class="${x.factor>.45?'fit':x.factor<-.45?'conflict':'unknown'}">${x.factor>.45?'Good fit':x.factor<-.45?'Different preference':'Limited detail'}</strong></div>`).join('')}</div><p class="placeCaveat">An estimate from your quiz, dish preferences and place feedback. It is not a guarantee that you will enjoy a place.</p></section><section class="placeAbout"><h2>About</h2><p>${esc(r.description||`${r.name} is listed in ${r.area||r.city||cityName()}${cuisines.length?' with '+cuisines.join(', ')+' cuisine':''}.`)}</p>${r.a?.length?`<p><strong>Atmosphere</strong> · ${r.a.map(esc).join(', ')}</p>`:''}${r.dietaryOptions?.length?`<p><strong>Dietary information</strong> · ${r.dietaryOptions.map(x=>esc(String(x).replaceAll('_',' '))).join(', ')}</p>`:'<p class="placeCaveat">Dietary options are not verified. Check with the venue for allergies or dietary requirements.</p>'}<div class="placeAddress"><strong>Location</strong><p>${esc(r.address||[r.area,r.city||cityName()].filter(Boolean).join(', '))}</p><button type="button" class="btn secondary" data-rest-action="maps" data-rest-id="${id}">Get directions ↗</button></div><p class="placeCaveat">Hours and current menu are not verified. Confirm with the venue before visiting.</p></section><section class="placeDishes" aria-labelledby="placeDishTitle"><h2 id="placeDishTitle">Live dish calibration</h2><p class="studioHint">Rate these flavour examples to refine your match. They are not confirmed menu items at this venue.</p>${dishes.length?dishes.map(d=>`<div class="placeDish"><div><h3>${esc(d.name)}</h3><p>${esc(d.description)}</p></div>${dishButtons(d)}</div>`).join(''):'<p>We don’t have enough cuisine detail to choose dish examples here. Use the taste studio to calibrate your preferences.</p>'}<button type="button" class="dishRetry" data-action="dish-retry" ${state.unsyncedDishes?'':'hidden'}>Retry cloud sync</button><p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Tap the same selected choice to undo it.')}</p><button type="button" class="linkBtn" data-action="navigate" data-page="profile">Open taste studio →</button></section><section class="placeFeedback"><h2>How does this place feel?</h2><div class="actions"><button type="button" data-rest-action="like" data-rest-id="${id}" aria-pressed="${f==='like'}">${f==='like'?'Undo like':'Like this place'}</button><button type="button" data-rest-action="dislike" data-rest-id="${id}" aria-pressed="${f==='dislike'}">${f==='dislike'?'Undo pass':'Not for me'}</button><button type="button" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}">${f==='visited'?'Undo visit':'I visited'}</button></div></section></div></article>`;
+ const primaryCategory=(r.c&&r.c.find(x=>!['Restaurant'].includes(x)))||'Artisanal Cafe';
+ const categoryEmoji=r.emoji||(r.c?.includes('Cafe')?'☕':r.c?.includes('Desserts')||r.c?.includes('Dessert')?'🍰':'🍽️');
+
+ const insights=Array.isArray(r.review_insights)&&r.review_insights.length?r.review_insights:[];
+ const rawDishes=(r.signatureDishes&&r.signatureDishes.length)?r.signatureDishes:(insights.length?insights.slice(0,3).map((ins,idx)=>({
+   id:r.id+'-dish-'+idx,
+   name:ins.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' '),
+   price:r.p==='under_500'?'₹56':r.p==='500_1000'?'₹180':'₹320',
+   description:`Signature crowd favourite highlighted in ${r.name} reviews`,
+   tasteHighlight:ins.toLowerCase(),
+   isVeg:!((r.dietaryOptions||[]).includes('non_veg')||(r.dietaryOptions||[]).includes('non_vegetarian'))
+ })):availableCalibrationDishes().filter(d=>dishAffinity(r,d)>0).slice(0,2).map(d=>({
+   id:d.id,
+   name:d.name,
+   price:r.p==='under_500'?'₹56':r.p==='500_1000'?'₹180':'₹320',
+   description:d.description,
+   tasteHighlight:d.name.toLowerCase(),
+   isVeg:true
+ })));
+
+ const aboutSummary=r.description||`${r.name} in ${r.area||r.city||cityName()}.${insights.length?' '+insights.slice(0,2).join(', '):(cuisines.length?' '+cuisines.join(', '):'')}`;
+
+ document.getElementById('root').innerHTML=`<article class="screen place-screen" aria-labelledby="placeTitle">
+  <div class="placeHero">
+    <div class="placeHeroPhoto" aria-hidden="true">${photo(r)}</div>
+    <div class="placeHeroControls">
+      <button type="button" id="placeBack" data-action="close-place" aria-label="Back to places">← Back</button>
+      <button type="button" data-rest-action="save" data-rest-id="${id}" aria-pressed="${saved}" aria-label="${saved?'Remove saved':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button>
+    </div>
+    <div class="placeHeroTitle">
+      <div>
+        <h1 id="placeTitle">${esc(r.name)}</h1>
+        <p>${esc(r.area||r.city)} · ${esc(r.city||cityName())}</p>
+      </div>
+      <div class="placeMatch">
+        <strong>${r.score}%</strong>
+        <span>Palate match</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="placeBody">
+    <section class="aboutSpotSection" aria-labelledby="aboutSpotHeading">
+      <h2 id="aboutSpotHeading" class="spotSectionHeading">About This Spot</h2>
+      <p class="spotDescriptionText">${esc(aboutSummary)}</p>
+      
+      <div class="aboutSpotCard">
+        <div class="spotPillRow">
+          <span class="spotCategoryPill">${categoryEmoji} ${esc(primaryCategory)}</span>
+          <span class="spotStatusPill ${openInfo.isOpen?'isOpen':'isClosed'}">
+            <span class="statusDot"></span> ${esc(openInfo.statusText)}
+          </span>
+        </div>
+
+        <div class="spotInfoRow timingRow">
+          <span class="spotRowIcon">🕒</span>
+          <span class="spotRowText">${esc(openInfo.timingText)}</span>
+        </div>
+
+        <div class="spotInfoRow addressRow">
+          <span class="spotRowIcon">📍</span>
+          <span class="spotRowText">${esc(r.address||[r.area,r.city||cityName()].filter(Boolean).join(', '))}</span>
+        </div>
+
+        <div class="spotBottomBadgeRow">
+          <span class="spotRatingPill">⭐ ${Number(r.rating).toFixed(1)} (${Number(r.review_count||0).toLocaleString()})</span>
+          <span class="spotVerifiedPill">
+            <svg class="gmapsPinIcon" viewBox="0 0 24 24" width="14" height="14" fill="#ea4335" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Google Maps Verified
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="signatureDishesSection" aria-labelledby="placeDishTitle">
+      <h2 id="placeDishTitle" class="spotSectionHeading">Signature Dishes &amp; Palate Match</h2>
+      <p class="spotSectionSub">Rate dishes to dynamically train your personal Palate Genome</p>
+
+      <div class="signatureDishesDeck">
+        ${rawDishes.map(d=>{
+          const ratedVal=state.dishFeedback?.[d.id];
+          const isLoved=ratedVal==='love';
+          const isPassed=ratedVal==='pass';
+          return `<div class="spotDishCard" data-dish-id="${esc(d.id)}">
+            <div class="dishHeaderRow">
+              <div class="dishTitleWrap">
+                <span class="dietaryIndicator ${d.isVeg?'veg':'nonVeg'}" aria-label="${d.isVeg?'Vegetarian':'Non-vegetarian'}">
+                  <span class="dietaryDot"></span>
+                </span>
+                <h3 class="dishNameText">${esc(d.name)}</h3>
+              </div>
+              <span class="dishPriceText">${esc(d.price||'₹56')}</span>
+            </div>
+            <p class="dishDescriptionText">${esc(d.description)}</p>
+            <div class="dishFooterRow">
+              <span class="dishHighlightPill">✨ ${esc(d.tasteHighlight||d.name.toLowerCase())}</span>
+              <div class="dishTasteAction">
+                <span class="tastePrompt">Taste it?</span>
+                <button type="button" class="dishVoteBtn thumbUp ${isLoved?'active':''}" data-action="dish-rate" data-dish-id="${esc(d.id)}" data-dish-value="love" data-source="detail" aria-pressed="${isLoved}" aria-label="Love ${esc(d.name)}">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="${isLoved?'#ffc64f':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                </button>
+                <button type="button" class="dishVoteBtn thumbDown ${isPassed?'active':''}" data-action="dish-rate" data-dish-id="${esc(d.id)}" data-dish-value="pass" data-source="detail" aria-pressed="${isPassed}" aria-label="Pass on ${esc(d.name)}">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="${isPassed?'#9b3f38':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+
+      <p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Tap thumbs up or thumbs down to train your Palate Genome.')}</p>
+    </section>
+
+    <section class="placeBreakdown">
+      <h2>Your palate match (${r.score}%)</h2>
+      <p>${esc(r.why.join(' · '))}.</p>
+      <div class="matchFactors">
+        ${r.matchBreakdown.map(x=>`<div><span>${esc(x.label)}</span><strong class="${x.factor>.45?'fit':x.factor<-.45?'conflict':'unknown'}">${x.factor>.45?'Good fit':x.factor<-.45?'Different preference':'Limited detail'}</strong></div>`).join('')}
+      </div>
+    </section>
+
+    <div class="spotStickyActionBar">
+      <button type="button" class="spotActionBtn markVisitedBtn ${f==='visited'?'active':''}" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>${f==='visited'?'✓ Visited':'+ Mark Visited'}</span>
+      </button>
+      <button type="button" class="spotActionBtn getDirectionsBtn" data-rest-action="maps" data-rest-id="${id}">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        <span>Get Directions</span>
+      </button>
+    </div>
+  </div>
+ </article>`;
 }
 function zoomMap(delta){
  mapZoom=Math.max(0.85,Math.min(1.8,Number((mapZoom+delta).toFixed(2))));
@@ -27633,9 +31431,195 @@ const x=hasTasteProfile()?state.saves.map(activeRestaurant).filter(r=>r&&isQuali
 const savedContent=x.length?`<div class="restaurantGrid">${x.map(card).join('')}</div>`:`<div class="empty"><h2>Your shortlist starts here</h2><p>Save places you want to try and they’ll be waiting here for your next food plan.</p><button class="btn green" type="button" data-action="navigate" data-page="discover">Explore restaurants</button></div>`;
 document.getElementById('root').innerHTML=`<section class="screen saved-screen"><div class="hero"><div class="eyebrow">Your collection</div><h1>Keep the good ones close.</h1><p>Your personal restaurant shortlist, ready whenever you are.</p></div>${savedContent}</section>`
 }
+function renderPassportModal(){
+  const all=ranked();
+  const visited=all.filter(r=>state.feedback[r.id]==='visited');
+  return `<div class="passportModalBackdrop" id="passportModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="passportModalTitle">
+    <div class="passportModalCard appleGlassCard">
+      <div class="passportModalHeader">
+        <div>
+          <div class="passportModalBadge">✦ PALATE PASSPORT</div>
+          <h2 id="passportModalTitle">Places You Have Visited</h2>
+          <p>${visited.length} culinary stamp${visited.length===1?'':'s'} recorded in ${esc(cityName())}</p>
+        </div>
+        <button type="button" class="passportModalClose" data-action="close-passport" aria-label="Close passport">×</button>
+      </div>
+      <div class="passportPlacesList">
+        ${visited.length ? visited.map(r=>{
+          const openInfo=getVenueOpenStatus(r);
+          return `<div class="passportPlaceItem" data-place-id="${esc(r.id)}">
+            <div class="passportPlacePhoto">${photo(r)}</div>
+            <div class="passportPlaceInfo">
+              <div class="passportPlaceTop">
+                <span class="passportStamp">✓ Stamped Visit</span>
+                <span class="passportRating">★ ${Number(r.rating).toFixed(1)}</span>
+              </div>
+              <h3 class="passportPlaceName">${esc(r.name)}</h3>
+              <p class="passportPlaceMeta">${esc(r.area||r.city)} · ${esc(displayPrice(r))}</p>
+              <div class="passportStatusRow">
+                <span class="passportOpenStatus ${openInfo.isOpen?'open':'closed'}">${openInfo.isOpen?'🟢 ':'🔴 '}${esc(openInfo.statusText)}</span>
+              </div>
+              <div class="passportPlaceActions">
+                <button type="button" class="btn primary small" data-action="open-place" data-rest-id="${esc(r.id)}">Details →</button>
+                <button type="button" class="btn secondary small" data-rest-action="maps" data-rest-id="${esc(r.id)}">Directions ↗</button>
+              </div>
+            </div>
+          </div>`;
+        }).join('') : `
+          <div class="passportEmpty">
+            <div class="passportEmptyIcon">🗺️</div>
+            <h3>No Stamped Visits Yet</h3>
+            <p>Whenever you dine at a café, bistro or restaurant in ${esc(cityName())}, tap <strong>"+ Mark Visited"</strong> to stamp your official Palate Passport!</p>
+            <button type="button" class="btn primary" data-action="close-passport">Explore Recommendations →</button>
+          </div>
+        `}
+      </div>
+    </div>
+  </div>`;
+}
+
+function showPalatePassportModal(){
+  document.getElementById('passportModalBackdrop')?.remove();
+  document.body.insertAdjacentHTML('beforeend',renderPassportModal());
+  document.querySelector('.passportModalClose')?.focus();
+}
+
 function profile(){
-const a=state.answers||{},ai=state.ai||{likes:0,dislikes:0,visits:0,signals:{}};
-document.getElementById('root').innerHTML=`<section class="screen profile-screen"><header class="tasteProfileHeader"><div class="profileMonogram" aria-hidden="true">P</div><div><h1>Taste studio</h1><p>Your taste, shaped by ${feedbackCount()} place ratings and ${Object.keys(normalizeDishFeedback(state.dishFeedback)).length} dish preferences.</p></div></header><div class="profileTasteSummary"><h2>Your taste preferences</h2><div class="chips">${summaryChips()}</div><p>Cuisine, spice and vibe preferences set the starting point. Dish feedback refines your matches.</p></div><div class="statGrid profileStats"><div class="stat"><b>${Number(ai.likes)||0}</b><span>likes</span></div><div class="stat"><b>${Number(ai.dislikes)||0}</b><span>passes</span></div><div class="stat"><b>${Number(ai.visits)||0}</b><span>visits</span></div><div class="stat"><b>${state.saves.length}</b><span>saved</span></div></div><button type="button" class="profileSavedLink" data-action="navigate" data-page="saved"><span>Saved places</span><span>${state.saves.length} places →</span></button><div class="profileColumns"><div><div class="section"><h2>Your preferences</h2><span>Taste quiz</span></div><div class="card">${[['Cuisine',a.cuisine||'Not set'],['Dietary preference',dietLabel(a.diet)],['Budget',price(a.budget)],['Vibe',a.mood||'Not set'],['Occasion',a.occasion||'Not set'],['Spice',a.spice||'Not set']].map(x=>`<div class="row"><strong>${x[0]}</strong><span>${esc(x[1])}</span></div>`).join('')}</div><button class="btn primary profileRetake" type="button" data-action="reset-taste">Retake taste quiz</button></div><div><div class="section"><h2>What you’ve taught us</h2><span>Active feedback</span></div><details class="card learnedSignals"><summary>See learned taste signals</summary>${Object.entries(ai.signals||{}).sort((x,y)=>y[1]-x[1]).slice(0,8).map(x=>`<div class="row"><strong>${esc(x[0])}</strong><span>${x[1]>0?'+':''}${Number(x[1]).toFixed(1)}</span></div>`).join('')||'<p class="feedNote">Rate a few places to start building your taste profile.</p>'}</details><p class="feedNote">Taste matches are estimates from your preferences and feedback.</p></div></div>${renderCalibrationDeck()}<details class="card profilePrivacy"><summary>Privacy and account</summary><p class="feedNote">For a copy or correction of your data, account deletion, consent withdrawal, or a privacy complaint, contact Aayush Mittal at palateo.com@gmail.com from your registered email. We may verify account ownership. Never send your password.</p><div class="privacyActions"><a href="mailto:palateo.com@gmail.com?subject=Palateo%20privacy%20request">Send a privacy request</a><a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a><a href="/terms/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></div><p class="feedNote">Signing out clears your Palateo preferences and profile details from this browser. Cloud account deletion is handled separately after a verified request.</p></details></section>`
+  const a=state.answers||{},ai=state.ai||{likes:0,dislikes:0,visits:0,signals:{}};
+  const spiceLabel = a.spice === 'hot' ? 'Fiery Byadgi & Ghost Pepper (🌶️🌶️🌶️🌶️)' : a.spice === 'mild' ? 'Mild & Comforting (🌶️)' : 'Balanced Medium Kick (🌶️🌶️)';
+  const currentBudget = a.budget || '500_1000';
+  const currentDist = String(a.distance || '5');
+
+  document.getElementById('root').innerHTML=`<section class="screen profile-screen" id="tasteStudioScreen">
+    <!-- 1. Palate Genome Studio Header (From TasteStudioScreen.kt) -->
+    <header class="tasteProfileHeader">
+      <div class="profileMonogram" aria-hidden="true">✦</div>
+      <div>
+        <h1>Palate Genome Studio</h1>
+        <p>Teach Palateo AI your culinary DNA &amp; flavor rules · Shaped by ${feedbackCount()} place ratings and ${Object.keys(normalizeDishFeedback(state.dishFeedback)).length} dish preferences.</p>
+      </div>
+    </header>
+
+    <!-- 2. Palate Passport Visited Card & Cloud Sync Status (Tap to view visited places) -->
+    <div class="card appleGlassCard palatePassportCard" data-action="open-passport" role="button" tabindex="0" aria-label="Open Palate Passport to view visited places" style="cursor:pointer;">
+      <div class="passportCardContent">
+        <div class="passportIconWrap">✨</div>
+        <div class="passportInfo">
+          <strong>Palate Passport <span class="passportTapHint">Tap to view visited spots →</span></strong>
+          <p>Your tracked café, bistro &amp; restaurant visits in ${esc(cityName())}</p>
+        </div>
+      </div>
+      <div class="passportBadges">
+        <span class="passportVisitsBadge">🗺️ ${Number(ai.visits)||0} spots visited</span>
+        <span class="cloudSyncBadge">☁️ Supabase Cloud Sync Active</span>
+      </div>
+    </div>
+
+    <!-- 3. Palate Summary Card -->
+    <div class="profileTasteSummary appleGlassCard">
+      <h2>Your Taste DNA</h2>
+      <div class="chips">${summaryChips()}</div>
+      <p>Cuisine, spice and vibe preferences set the baseline. Dish feedback refines your matches in real-time.</p>
+    </div>
+
+    <!-- 4. Stats Grid -->
+    <div class="statGrid profileStats">
+      <div class="stat appleGlassStat"><b>${Number(ai.likes)||0}</b><span>likes</span></div>
+      <div class="stat appleGlassStat"><b>${Number(ai.dislikes)||0}</b><span>passes</span></div>
+      <div class="stat appleGlassStat" data-action="open-passport" role="button" tabindex="0" style="cursor:pointer;" title="View Visited Spots"><b>${Number(ai.visits)||0}</b><span>visits ↗</span></div>
+      <div class="stat appleGlassStat"><b>${state.saves.length}</b><span>saved</span></div>
+    </div>
+
+    <button type="button" class="profileSavedLink" data-action="navigate" data-page="saved">
+      <span>Saved places</span>
+      <span>${state.saves.length} places →</span>
+    </button>
+
+    <!-- 5. Profile Columns with Interactive Budget and Distance Filter -->
+    <div class="profileColumns">
+      <div>
+        <div class="section">
+          <h2>Your preferences</h2>
+          <span>Taste Studio</span>
+        </div>
+        <div class="card appleGlassCard profilePrefsCard">
+          <!-- Budget Selector (You section only) -->
+          <div class="prefInteractiveGroup">
+            <div class="prefLabelRow">
+              <strong>Comfortable spend budget</strong>
+              <span class="prefCurrentVal">${price(currentBudget)}</span>
+            </div>
+            <div class="budgetChoicePills" role="group" aria-label="Budget tier">
+              ${[
+                ['under_500', 'Under ₹500'],
+                ['500_1000', '₹500–₹1,000'],
+                ['1000_2000', '₹1,000–₹2,000'],
+                ['2000_plus', '₹2,000+']
+              ].map(([val, lbl]) => `<button type="button" class="budgetPill ${currentBudget===val?'active':''}" data-action="set-profile-budget" data-budget="${val}">${lbl}</button>`).join('')}
+            </div>
+          </div>
+
+          <!-- Distance Filter (You section only) -->
+          <div class="prefInteractiveGroup">
+            <div class="prefLabelRow">
+              <strong>Distance range filter</strong>
+              <span class="prefCurrentVal">${currentDist==='any'?'Anywhere':currentDist+' km'}</span>
+            </div>
+            <div class="distanceChoicePills" role="group" aria-label="Distance range">
+              ${[
+                ['2', '2 km'],
+                ['5', '5 km'],
+                ['10', '10 km'],
+                ['25', '25 km'],
+                ['50', '50 km'],
+                ['any', '50km+ (All city)']
+              ].map(([val, lbl]) => `<button type="button" class="distPill ${currentDist===val?'active':''}" data-action="set-profile-distance" data-distance="${val}">${lbl}</button>`).join('')}
+            </div>
+          </div>
+
+          <div class="prefDivider"></div>
+
+          ${[
+            ['Cuisine', a.cuisine||'Not set'],
+            ['Dietary philosophy', dietLabel(a.diet)],
+            ['Preferred vibe', a.mood||'Not set'],
+            ['Occasion', a.occasion||'Not set'],
+            ['Spice calibration', spiceLabel]
+          ].map(x=>`<div class="row"><strong>${x[0]}</strong><span>${esc(x[1])}</span></div>`).join('')}
+        </div>
+      </div>
+
+      <div>
+        <div class="section">
+          <h2>What you’ve taught us</h2>
+          <span>Active feedback</span>
+        </div>
+        <details class="card appleGlassCard learnedSignals">
+          <summary>See learned taste signals</summary>
+          ${Object.entries(ai.signals||{}).sort((x,y)=>y[1]-x[1]).slice(0,8).map(x=>`<div class="row"><strong>${esc(x[0])}</strong><span>${x[1]>0?'+':''}${Number(x[1]).toFixed(1)}</span></div>`).join('')||'<p class="feedNote">Rate a few places to start building your taste profile.</p>'}
+        </details>
+        <p class="feedNote">Taste matches are estimated from your sensory preferences, dish feedback, and verified receipts.</p>
+      </div>
+    </div>
+
+    <!-- 6. Quick Dish Calibration Deck (From TasteStudioScreen.kt) -->
+    ${renderCalibrationDeck()}
+
+    <!-- 7. Privacy & Account Settings -->
+    <details class="card appleGlassCard profilePrivacy">
+      <summary>Privacy and account</summary>
+      <p class="feedNote">For a copy or correction of your data, account deletion, consent withdrawal, or a privacy complaint, contact Aayush Mittal at palateo.com@gmail.com from your registered email. We may verify account ownership. Never send your password.</p>
+      <div class="privacyActions">
+        <button class="btn secondary" type="button" data-action="revoke-ai">Withdraw live AI permission</button>
+        <button class="btn" type="button" data-action="delete-account">Delete my account</button>
+        <a href="/support/">Help and support</a>
+        <a href="mailto:palateo.com@gmail.com?subject=Palateo%20privacy%20request">Send a privacy request</a>
+        <a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
+      </div>
+      <p class="feedNote">Signing out clears your Palateo preferences and profile details from this browser. Delete your account here to remove your cloud data.</p>
+    </details>
+  </section>`;
 }
 function rate(id,t){const r=activeRestaurant(id)||catalog.find(x=>x.id===id);learn(r,t);toast(t==='like'?'Palate updated ❤️':t==='visited'?'Visit learned ✓':'We’ll show you less like this');go(page)}
 function saveRest(id){const i=state.saves.indexOf(id);if(i>=0){state.saves.splice(i,1);toast('Removed from saved')}else{state.saves.push(id);toast('Saved ♥')}persist();go(page)}
@@ -27692,6 +31676,326 @@ const palateoAuthStorage={
   }
 };
 
+/* ============================================================================
+   PALATEO BETTER AUTH & RAILWAY BACKEND CLIENT
+   Framework-agnostic, zero-dependency client connector for Better Auth.
+   Connects to Railway backend with fallback to Supabase or offline storage.
+   ============================================================================ */
+
+let palateoRailwayUrl = typeof window !== 'undefined'
+  ? (window.PALATEO_API_URL || window.localStorage?.getItem('palateo_backend_url') || '')
+  : '';
+
+let betterAuthToken = null;
+let betterAuthSession = null;
+
+function getRailwayUrl() {
+  return palateoRailwayUrl || (typeof window !== 'undefined' ? window.PALATEO_API_URL || window.localStorage?.getItem('palateo_backend_url') || '' : '');
+}
+
+function setRailwayUrl(url) {
+  palateoRailwayUrl = url ? String(url).replace(/\/+$/, '') : '';
+  if (typeof window !== 'undefined' && window.localStorage) {
+    if (palateoRailwayUrl) {
+      window.localStorage.setItem('palateo_backend_url', palateoRailwayUrl);
+    } else {
+      window.localStorage.removeItem('palateo_backend_url');
+    }
+  }
+}
+
+function isRailwayActive() {
+  return Boolean(getRailwayUrl() && state.backendType === 'railway');
+}
+
+/**
+ * Standard HTTP fetcher for Railway API with credentials & Bearer authorization
+ */
+async function railwayFetch(endpoint, options = {}) {
+  const base = getRailwayUrl();
+  if (!base) throw new Error('Railway backend URL is not configured.');
+
+  const headers = {
+    'Content-Type': 'application/json',
+    ...(options.headers || {})
+  };
+
+  // Add stored token if present
+  const token = betterAuthToken || (typeof window !== 'undefined' ? window.localStorage?.getItem('better_auth_token') : null);
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  const url = `${base}${endpoint.startsWith('/') ? '' : '/'}${endpoint}`;
+  const response = await fetch(url, {
+    credentials: 'include',
+    ...options,
+    headers
+  });
+
+  if (!response.ok) {
+    const errorBody = await response.json().catch(() => ({}));
+    const message = errorBody.message || errorBody.error || `HTTP error ${response.status}`;
+    const err = new Error(message);
+    err.status = response.status;
+    err.code = errorBody.code;
+    throw err;
+  }
+
+  return response.json().catch(() => ({ ok: true }));
+}
+
+/**
+ * Normalize Better Auth user into Palateo currentUser format
+ */
+function normalizeBetterAuthUser(user) {
+  if (!user) return null;
+  return {
+    id: user.id,
+    email: user.email,
+    name: user.name || user.display_name || user.email?.split('@')[0],
+    user_metadata: {
+      full_name: user.name || user.display_name || user.email?.split('@')[0],
+      name: user.name || user.display_name || user.email?.split('@')[0],
+      phone: user.phone || null,
+      palateo_legal_version: user.palateo_legal_version || null,
+      palateo_legal_accepted_at: user.palateo_legal_accepted_at || null,
+      palateo_privacy_consent: user.palateo_privacy_consent === true
+    }
+  };
+}
+
+/**
+ * Better Auth sign up
+ */
+async function betterAuthSignUp(name, phone, email, password, consent) {
+  const metadata = legalMetadata(consent);
+  const data = await railwayFetch('/api/auth/sign-up/email', {
+    method: 'POST',
+    body: JSON.stringify({
+      email,
+      password,
+      name,
+      phone: phone || null,
+      onboarding_completed: false,
+      ...metadata
+    })
+  });
+
+  if (data.token) {
+    betterAuthToken = data.token;
+    if (typeof window !== 'undefined' && window.localStorage) {
+      window.localStorage.setItem('better_auth_token', data.token);
+    }
+  }
+
+  const user = normalizeBetterAuthUser(data.user);
+  betterAuthSession = { user, token: data.token };
+  useAccount(user);
+  state.backendConnected = true;
+  state.backendType = 'railway';
+  state.userId = user.id;
+  state.profile = { name, phone: phone || '', email };
+  persist();
+
+  return user;
+}
+
+/**
+ * Better Auth sign in
+ */
+async function betterAuthSignIn(email, password) {
+  const data = await railwayFetch('/api/auth/sign-in/email', {
+    method: 'POST',
+    body: JSON.stringify({
+      email,
+      password
+    })
+  });
+
+  if (data.token) {
+    betterAuthToken = data.token;
+    if (typeof window !== 'undefined' && window.localStorage) {
+      window.localStorage.setItem('better_auth_token', data.token);
+    }
+  }
+
+  const user = normalizeBetterAuthUser(data.user);
+  betterAuthSession = { user, token: data.token };
+  useAccount(user);
+  state.backendConnected = true;
+  state.backendType = 'railway';
+  state.userId = user.id;
+
+  const profile = {
+    name: user.user_metadata?.full_name || email.split('@')[0],
+    phone: user.user_metadata?.phone || '',
+    email: user.email
+  };
+  state.profile = profile;
+  persist();
+
+  return user;
+}
+
+/**
+ * Better Auth sign out
+ */
+async function betterAuthSignOut() {
+  try {
+    await railwayFetch('/api/auth/sign-out', { method: 'POST' });
+  } catch (e) {
+    console.warn('Railway sign out error:', e);
+  } finally {
+    betterAuthToken = null;
+    betterAuthSession = null;
+    if (typeof window !== 'undefined' && window.localStorage) {
+      window.localStorage.removeItem('better_auth_token');
+    }
+    useAccount(null);
+    state.backendConnected = false;
+    persist();
+  }
+}
+
+/**
+ * Retrieve active Better Auth session
+ */
+async function betterAuthGetSession() {
+  try {
+    const data = await railwayFetch('/api/auth/get-session', { method: 'GET' });
+    if (data?.user) {
+      const user = normalizeBetterAuthUser(data.user);
+      betterAuthSession = { user, session: data.session };
+      return user;
+    }
+    return null;
+  } catch (e) {
+    return null;
+  }
+}
+
+/**
+ * Load cloud state from Railway backend (/api/user/state)
+ */
+async function loadRailwayCloudState() {
+  if (!currentUser) return false;
+  try {
+    const data = await railwayFetch('/api/user/state', { method: 'GET' });
+    const { profile, taste, saves, interactions } = data;
+
+    if (profile) {
+      state.profile = {
+        name: profile.display_name || currentUser.name || '',
+        phone: profile.phone || '',
+        email: profile.email || currentUser.email || '',
+        photo: profile.profile_photo_url || '',
+        bio: profile.bio || ''
+      };
+    }
+
+    if (taste && !state.retakeInProgress) {
+      state.confidence = Number(taste.confidence || state.confidence || 82);
+      const a = {};
+      const tCuisines = typeof taste.cuisines === 'string' ? JSON.parse(taste.cuisines) : (taste.cuisines || {});
+      const tAmbience = typeof taste.ambience === 'string' ? JSON.parse(taste.ambience) : (taste.ambience || {});
+      const tOccasions = typeof taste.occasions === 'string' ? JSON.parse(taste.occasions) : (taste.occasions || {});
+      const tPriorities = typeof taste.priorities === 'string' ? JSON.parse(taste.priorities) : (taste.priorities || {});
+
+      if (tCuisines.primary) a.cuisine = tCuisines.primary;
+      if (Array.isArray(tCuisines.favorites)) a.cuisines = tCuisines.favorites.filter(x => Object.hasOwn(cuisineAliases, x));
+      if (taste.spice_level) a.spice = taste.spice_level;
+      if (taste.budget) a.budget = taste.budget;
+      if (tAmbience.primary) a.mood = tAmbience.primary;
+      if (Array.isArray(tAmbience.favorites)) a.vibes = tAmbience.favorites.filter(x => ['quiet', 'lively', 'date', 'family'].includes(x));
+      if (tOccasions.primary) a.occasion = tOccasions.primary;
+      if (tPriorities.primary) a.priority = tPriorities.primary;
+      if (tPriorities.dietary_preference) a.diet = tPriorities.dietary_preference;
+      if (taste.max_distance_km === null) a.distance = 'any';
+      else if (taste.max_distance_km !== undefined) a.distance = String(taste.max_distance_km);
+
+      if (hasTasteAnswers(a)) {
+        state.answers = a;
+        state.onboarded = true;
+        state.ai = state.ai || { likes: 0, dislikes: 0, visits: 0, signals: {} };
+        state.ai.signals = typeof taste.taste_vector === 'string' ? JSON.parse(taste.taste_vector) : (taste.taste_vector || state.ai.signals || {});
+      }
+    }
+
+    if (Array.isArray(saves)) {
+      state.cloudSaves = saves;
+      if (dbCatalog.length) {
+        const ids = new Set(saves);
+        const localOnly = state.saves.filter(id => !dbCatalog.some(r => r.id === id));
+        state.saves = [...new Set([...dbCatalog.filter(r => ids.has(r.dbId)).map(r => r.id), ...localOnly])];
+      }
+    }
+
+    if (Array.isArray(interactions) && dbCatalog.length) {
+      const byDb = new Map(dbCatalog.map(r => [r.dbId, r]));
+      for (const r of dbCatalog) delete state.feedback[r.id];
+      for (const row of interactions) {
+        const r = byDb.get(row.restaurant_id);
+        const meta = typeof row.metadata === 'string' ? JSON.parse(row.metadata) : (row.metadata || {});
+        if (r && ['like', 'dislike', 'visited'].includes(row.type)) {
+          if (meta.removed === true) delete state.feedback[r.id];
+          else state.feedback[r.id] = row.type;
+        }
+      }
+    }
+
+    rebuildLearning();
+    persist();
+    return true;
+  } catch (error) {
+    console.warn('[Railway] Cloud load error:', error);
+    return false;
+  }
+}
+
+/**
+ * Connect Palateo to a Railway backend service with Better Auth
+ */
+async function connectRailway(url) {
+  const targetUrl = url || prompt('Enter your Railway Backend URL (e.g. https://palateo-backend.up.railway.app):', getRailwayUrl() || 'http://localhost:3000');
+  if (!targetUrl) return null;
+
+  setRailwayUrl(targetUrl);
+  state.backendType = 'railway';
+  persist();
+
+  try {
+    const health = await railwayFetch('/health');
+    console.log('[Railway] Connected to backend:', health);
+
+    const user = await betterAuthGetSession();
+    if (user) {
+      useAccount(user);
+      state.backendConnected = true;
+      persist();
+      await loadRailwayCloudState();
+      updateMode();
+      toast('Railway + Better Auth connected ✓');
+      return user;
+    } else {
+      updateMode();
+      showAuth('login', 'Connected to Railway. Sign in with Better Auth to continue.');
+      return null;
+    }
+  } catch (error) {
+    console.error('[Railway] Connection failed:', error);
+    toast(`Could not connect to Railway backend at ${targetUrl}`);
+    return null;
+  }
+}
+
+// Attach to Palateo runtime global
+if (typeof window !== 'undefined') {
+  window.Palateo = window.Palateo || {};
+  window.Palateo.connectRailway = connectRailway;
+  window.Palateo.getRailwayUrl = getRailwayUrl;
+  window.Palateo.setRailwayUrl = setRailwayUrl;
+}
 function makeSupabaseClient(url,key){
   return window.supabase.createClient(url,key,{
     auth:{
@@ -27718,7 +32022,7 @@ state.backendConnected=true;state.userId=user?.id||null;persist();
 document.getElementById('mode').textContent='Supabase connected';toast('Backend connected ✓');
 return user;
 }
-window.Palateo={connectBackend,ranked,rate,saveRest};
+window.Palateo = Object.assign(window.Palateo || {}, { connectBackend, connectRailway, ranked, rate, saveRest });
 
 /* ===== PALATEO V5 SUPABASE CONNECTED LAYER ===== */
 const PALATEO_SUPABASE_URL = "https://ntuaqcnbhqtbhbnnobmm.supabase.co";
@@ -27763,6 +32067,9 @@ function activeRestaurant(id){
  return found;
 }
 async function logEvent(eventName,metadata={}){
+ if(isRailwayActive()){
+  try{await railwayFetch('/api/user/events',{method:'POST',body:JSON.stringify({event_name:eventName,metadata})});return true;}catch(e){return false;}
+ }
  if(!currentUser||!backendReady)return false;
  try{
   const {error}=await supabaseClient.from('app_events').insert({user_id:currentUser.id,event_name:eventName,metadata});
@@ -27774,6 +32081,12 @@ async function syncTaste(){
  if(!currentUser)throw new Error('Sign in to sync your taste profile.');
  if(!hasTasteAnswers())throw new Error('Complete your taste profile before syncing it.');
  const owner=currentUser,a=state.answers||{};
+ if(isRailwayActive()){
+  const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==='any'?null:Number(a.distance||5),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
+  await railwayFetch('/api/user/taste',{method:'PUT',body:JSON.stringify(payload)});
+  await logEvent('onboarding_complete',{answer_count:Object.keys(a).length});
+  return true;
+ }
  const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==='any'?null:Number(a.distance||5),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
  const {error}=await supabaseClient.from('taste_profiles').upsert(payload);
  if(error)throw error;
@@ -27791,6 +32104,9 @@ async function syncTaste(){
 }
 async function syncInteraction(rest,type,metadata={}){
  if(!currentUser||!rest?.dbId)return false;
+ if(isRailwayActive()){
+  try{await railwayFetch('/api/user/interactions',{method:'POST',body:JSON.stringify({restaurant_id:rest.dbId,type,source:'palateo_v5',metadata})});return true;}catch(e){console.warn('event sync',e);return false;}
+ }
  const {error}=await supabaseClient.from('interactions').insert({user_id:currentUser.id,restaurant_id:rest.dbId,type,source:'palateo_v5',metadata});
  if(error)throw error;
  return true;
@@ -27798,6 +32114,10 @@ async function syncInteraction(rest,type,metadata={}){
 async function syncSave(rest,saved){
  if(!currentUser)throw new Error('Sign in to sync your saved places.');
  if(!rest?.dbId)throw new Error('This place is not available in the cloud catalogue.');
+ if(isRailwayActive()){
+  await railwayFetch('/api/user/saves',{method:saved?'POST':'DELETE',body:JSON.stringify({restaurant_id:rest.dbId})});
+  return true;
+ }
  const result=saved?await supabaseClient.from('saved_restaurants').upsert({user_id:currentUser.id,restaurant_id:rest.dbId}):await supabaseClient.from('saved_restaurants').delete().eq('user_id',currentUser.id).eq('restaurant_id',rest.dbId);
  if(result.error)throw result.error;
  return true;
@@ -27812,6 +32132,7 @@ async function loadAllRows(query){
 }
 async function loadCloudState(){
  if(!currentUser)return false;
+ if(isRailwayActive())return await loadRailwayCloudState();
  const requestUserId=currentUser.id;
  const requestAnswers=state.answers;
  const requestFeedbackRevision=feedbackRevision;
@@ -27854,6 +32175,20 @@ async function loadCloudState(){
  }catch(error){console.warn('cloud load',error);window.reportPalateoError?.('cloud_load_failed');return false;}
 }
 async function signInV5(email,password){
+if(isRailwayActive()){
+const user=await betterAuthSignIn(email,password);
+authRequired=!hasLegalConsent(user);
+backendReady=true;
+if(!hasLegalConsent(user)){updateMode();requireLegalConsent();return}
+const md=user.user_metadata||{};
+const profilePayload={id:user.id,display_name:md.full_name||md.name||email.split('@')[0],phone:md.phone||null,email:user.email||email};
+state.profile={name:profilePayload.display_name,phone:profilePayload.phone||'',email:profilePayload.email||''};
+state.userId=user.id;state.backendConnected=true;persist();
+const cloudLoaded=state.retakeInProgress?true:await loadRailwayCloudState();
+updateMode();closeAuth();document.getElementById('nav')?.classList.remove('hide');go('home');
+toast(cloudLoaded?'Welcome back ✨':'Signed in, but some cloud data could not sync.');
+return;
+}
 const client=getSupabaseClient();
 const {data,error}=await client.auth.signInWithPassword({email,password});
 if(error)throw error;
@@ -27872,6 +32207,14 @@ updateMode();closeAuth();document.getElementById('nav').classList.remove('hide')
 toast(profileSyncOk&&cloudLoaded?'Welcome back ✨':'Signed in, but some cloud data could not sync.');
 }
 async function signUpV5(name,phone,email,password,consent){
+if(isRailwayActive()){
+const user=await betterAuthSignUp(name,phone,email,password,consent);
+authRequired=false;backendReady=true;
+await logEvent('account_created',{has_phone:!!phone,has_email:!!email});
+updateMode();closeAuth();document.getElementById('nav')?.classList.remove('hide');onboard(0);
+toast('Account created — build your palate next ✓');
+return;
+}
 const metadata=legalMetadata(consent);
 const client=getSupabaseClient();
 const {data,error}=await client.auth.signUp({email,password,options:{emailRedirectTo:'https://palateo.in/app/',data:{name,full_name:name,phone,...metadata}}});
@@ -27895,6 +32238,11 @@ await logEvent('account_created',{has_phone:!!phone,has_email:!!email});
   updateMode();closeAuth();document.getElementById('nav').classList.remove('hide');onboard(0);toast(syncOk?'Account created — build your palate next ✓':'Account created; profile sync needs attention');
 }
 async function signOutV5(){
+if(isRailwayActive()){
+await betterAuthSignOut();
+state.backendConnected=false;persist();updateMode();requireAuthGate('You’ve signed out. Sign in again to use Palateo.');
+return;
+}
 try{
 const {error}=await supabaseClient.auth.signOut();if(error)throw error;
 useAccount(null);state.backendConnected=false;persist();updateMode();requireAuthGate('You’ve signed out. Sign in again to use Palateo.');
@@ -27912,7 +32260,7 @@ function showAuth(mode='login',message=''){
 document.getElementById('authModal')?.remove();
 const signup=mode==='signup',title=signup?'Create your Palateo account':'Sign in to Palateo';
 const required=authRequired&&!currentUser;
-document.body.insertAdjacentHTML('beforeend',`<div class="modal ${required?'authRequired':''}" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle" data-action="auth-backdrop" data-required="${required}"><div class="modalCard" >${required?'':'<button class="modalClose" type="button" aria-label="Close sign in" data-action="close-auth">×</button>'}<div class="eyebrow">Palateo cloud</div><h2 id="authTitle">${title}</h2><p>${required?'Sign in is required to continue. Create an account if you’re new to Palateo.':'Your taste profile, likes, saves, and visits will sync to your Palateo account.'}</p><form class="authForm" data-action="auth-submit" data-auth-mode="${esc(mode)}">${signup?'<label class="fieldLabel" for="authName">Full name</label><input class="field" id="authName" name="name" placeholder="Your name" autocomplete="name" minlength="2" required><label class="fieldLabel" for="authPhone">Phone number</label><input class="field" id="authPhone" name="tel" type="tel" placeholder="+91 98765 43210" autocomplete="tel" required>':''}<label class="fieldLabel" for="authEmail">Email address</label><input class="field" id="authEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required><label class="fieldLabel" for="authPass">Password</label><input class="field" id="authPass" name="password" type="password" placeholder="At least 6 characters" autocomplete="${signup?'new-password':'current-password'}" minlength="6" required>${signup?consentControls():''}<p class="legalLinks"><a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> · <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></p><div class="status" id="authStatus" aria-live="polite">${esc(message)}</div><div class="modalActions">${required?'':'<button class="btn secondary" type="button" data-action="close-auth">Not now</button>'}<button class="btn green" type="submit" id="authSubmit">${signup?'Create account':'Sign in'}</button></div></form><button class="linkBtn" type="button" data-action="auth-mode" data-auth-mode="${signup?'login':'signup'}">${signup?'Already have an account? Sign in':'New to Palateo? Create an account'}</button></div></div>`);
+document.body.insertAdjacentHTML('beforeend',`<div class="modal ${required?'authRequired':''}" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle" data-action="auth-backdrop" data-required="${required}"><div class="modalCard" >${required?'':'<button class="modalClose" type="button" aria-label="Close sign in" data-action="close-auth">×</button>'}<div class="eyebrow">Palateo cloud</div><h2 id="authTitle">${title}</h2><p>${required?'Sign in is required to continue. Create an account if you’re new to Palateo.':'Your taste profile, likes, saves, and visits will sync to your Palateo account.'}</p><form class="authForm" data-action="auth-submit" data-auth-mode="${esc(mode)}">${signup?'<label class="fieldLabel" for="authName">Full name</label><input class="field" id="authName" name="name" placeholder="Your name" autocomplete="name" minlength="2" required><label class="fieldLabel" for="authPhone">Phone number (optional)</label><input class="field" id="authPhone" name="tel" type="tel" placeholder="+91 98765 43210" autocomplete="tel">':''}<label class="fieldLabel" for="authEmail">Email address</label><input class="field" id="authEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required><label class="fieldLabel" for="authPass">Password</label><input class="field" id="authPass" name="password" type="password" placeholder="At least 8 characters" autocomplete="${signup?'new-password':'current-password'}" minlength="${signup?8:6}" required>${signup?consentControls():''}<p class="legalLinks"><a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> · <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></p><div class="status" id="authStatus" aria-live="polite">${esc(message)}</div><div class="modalActions">${required?'':'<button class="btn secondary" type="button" data-action="close-auth">Not now</button>'}<button class="btn green" type="submit" id="authSubmit">${signup?'Create account':'Sign in'}</button></div></form><button class="linkBtn" type="button" data-action="auth-mode" data-auth-mode="${signup?'login':'signup'}">${signup?'Already have an account? Sign in':'New to Palateo? Create an account'}</button></div></div>`);
 document.getElementById(signup?'authName':'authEmail')?.focus();
 if(!signup)document.getElementById('authModal').querySelector('.modalCard').insertAdjacentHTML('beforeend','<button class="linkBtn" type="button" data-action="auth-email" data-email-type="recovery">Forgot your password?</button><button class="linkBtn" type="button" data-action="auth-email" data-email-type="signup">Resend confirmation email</button>');
 }
@@ -27943,6 +32291,34 @@ async function resetAccountPassword(){
  try{const {error}=await getSupabaseClient().auth.updateUser({password});if(error)throw error;passwordRecovery=false;document.getElementById('authModal')?.remove();go('home');toast('Your password was updated.')}catch(error){status.textContent=authErrorMessage(error)}finally{authBusy=false;const button=document.getElementById('authSubmit');if(button)button.disabled=false}
 }
 function closeAuth(){if(authRequired&&!currentUser)return;document.getElementById('authModal')?.remove();}
+let accountDeletionBusy=false;
+function showAccountDeletion(){
+ if(!currentUser)return;
+ document.getElementById('accountDeletionDialog')?.remove();
+ document.body.insertAdjacentHTML('beforeend','<dialog id="accountDeletionDialog" aria-labelledby="accountDeletionTitle"><form data-action="confirm-account-deletion"><h2 id="accountDeletionTitle">Delete your Palateo account?</h2><p>This permanently removes your account, taste profile, ratings, saved places and connections. It cannot be undone.</p><label for="deleteAccountPassword">Confirm your password</label><input class="field" type="password" id="deleteAccountPassword" autocomplete="current-password" required maxlength="256"><label><input id="deleteAccountConfirm" type="checkbox" required> I understand that my account and data will be deleted.</label><p id="deleteAccountStatus" role="status"></p><div class="modalActions"><button class="btn secondary" type="button" data-action="cancel-deletion">Cancel</button><button class="btn" type="submit" id="deleteAccountSubmit">Delete permanently</button></div></form></dialog>');
+ const dialog=document.getElementById('accountDeletionDialog');dialog.addEventListener('cancel',event=>{if(accountDeletionBusy)event.preventDefault()});dialog.showModal();document.getElementById('deleteAccountPassword').focus();
+}
+async function deletePalateoAccount(){
+ if(accountDeletionBusy||!currentUser)return;
+ const password=document.getElementById('deleteAccountPassword').value,owner=currentUser.id,email=currentUser.email;
+ const status=document.getElementById('deleteAccountStatus'),button=document.getElementById('deleteAccountSubmit');
+ if(!password||!document.getElementById('deleteAccountConfirm').checked)return;
+ accountDeletionBusy=true;button.disabled=true;status.textContent='Deleting your account…';
+ try{
+  if(isRailwayActive())await railwayFetch('/api/auth/delete-user',{method:'POST',body:JSON.stringify({password})});
+  else{
+   const client=getSupabaseClient();const {data,error}=await client.auth.signInWithPassword({email,password});
+   if(error)throw error;if(data.user?.id!==owner)throw Error('Account changed. Please sign in again.');
+   const result=await client.rpc('delete_own_account');if(result.error)throw Error('Could not delete your account. Please retry or contact support.');
+   await client.auth.signOut({scope:'local'});
+  }
+  localStorage.removeItem('palateo-palo-memory-v2:'+owner);localStorage.removeItem('palateo-palo-ai-consent:'+owner);
+  if(currentUser&&currentUser.id!==owner){document.getElementById('accountDeletionDialog')?.remove();return;}
+  betterAuthToken=null;betterAuthSession=null;localStorage.removeItem('better_auth_token');
+  useAccount(null);document.getElementById('accountDeletionDialog').remove();requireAuthGate('Your account and associated data have been deleted.');
+ }catch(error){status.textContent=error.message||'Deletion failed. Your account has not been confirmed deleted.';}
+ finally{accountDeletionBusy=false;button.disabled=false;}
+}
 let authBusy=false;
 function authErrorMessage(error){
 const message=String(error?.message||'');
@@ -27956,16 +32332,18 @@ async function submitAuth(mode){
 if(authBusy)return;
 const status=document.getElementById('authStatus'),submit=document.getElementById('authSubmit');
 if(!status)return;
-const email=document.getElementById('authEmail')?.value.trim()||'',password=document.getElementById('authPass')?.value||'';
+let email=document.getElementById('authEmail')?.value.trim()||'',password=document.getElementById('authPass')?.value||'';
+if(email&&email.includes('@')&&!email.includes('.')){email+='.com';const el=document.getElementById('authEmail');if(el)el.value=email;}
 const setError=message=>{status.dataset.kind='error';status.textContent=message};
 if(!email){setError('Please enter your email address.');document.getElementById('authEmail')?.focus();return}
 if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){setError('Please enter a valid email address.');document.getElementById('authEmail')?.focus();return}
 if(password.length<6){setError('Password must be at least 6 characters.');document.getElementById('authPass')?.focus();return}
 let name='',phone='';
 if(mode==='signup'){
+if(password.length<8){setError('Use at least 8 characters for a new password.');return}
 name=document.getElementById('authName')?.value.trim()||'';phone=document.getElementById('authPhone')?.value.trim()||'';
 if(name.length<2){setError('Please enter your full name.');document.getElementById('authName')?.focus();return}
-if(phone.replace(/\D/g,'').length<7){setError('Please enter a phone number with at least 7 digits.');document.getElementById('authPhone')?.focus();return}
+if(phone&&phone.replace(/\D/g,'').length<7){setError('Please enter a phone number with at least 7 digits.');document.getElementById('authPhone')?.focus();return}
 }
 authBusy=true;if(submit)submit.disabled=true;
 status.dataset.kind='loading';status.textContent=mode==='signup'?'Creating your account…':'Signing you in…';
@@ -28016,12 +32394,19 @@ document.addEventListener('click',event=>{
   case 'view-pin': if(d.restId){placePreviewOrigin='view-pin';selectedPinId=d.restId;homeView='map';go('home');document.getElementById('zestMapContainer')?.scrollIntoView({behavior:'smooth',block:'start'});focusPlacePreview()} break;
   case 'open-place': if(d.restId)openPlaceDetails(d.restId,control); break;
   case 'close-place': closePlaceDetails(); break;
+  case 'open-passport': showPalatePassportModal(); break;
+  case 'close-passport': document.getElementById('passportModalBackdrop')?.remove(); break;
+  case 'set-profile-budget': if(d.budget){state.answers.budget=d.budget;persist();if(currentUser)syncTaste().catch(()=>{});profile();toast('Budget set to '+price(d.budget));} break;
+  case 'set-profile-distance': if(d.distance){state.answers.distance=d.distance;persist();if(currentUser)syncTaste().catch(()=>{});profile();toast('Distance range set to '+(d.distance==='any'?'Anywhere':d.distance+' km'));} break;
   case 'dish-rate': rateDish(d.dishId,d.dishValue,d.source); break;
   case 'dish-undo': if(state.dishFeedback?.[d.dishId])rateDish(d.dishId,state.dishFeedback[d.dishId],'edit'); break;
   case 'dish-next': dishCalibrationIndex++;go('profile',{keepScroll:true});document.getElementById('calibrationDishName')?.focus({preventScroll:true}); break;
   case 'dish-retry': retryDishSync(); break;
   case 'scroll-to-card': if(d.restId){const el=document.getElementById('card-'+d.restId);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flashCard');setTimeout(()=>el.classList.remove('flashCard'),1800)}} break;
   case 'follow': if(d.personId)follow(d.personId); break;
+  case 'revoke-ai': if(currentUser){localStorage.removeItem('palateo-palo-ai-consent:'+currentUser.id);toast('Live AI permission withdrawn. Local recommendations remain available.')} break;
+  case 'delete-account': showAccountDeletion(); break;
+  case 'cancel-deletion': if(!accountDeletionBusy){document.getElementById('accountDeletionDialog')?.remove();document.querySelector('[data-action="delete-account"]')?.focus()} break;
   case 'reset-taste': resetTaste(); break;
   case 'close-auth': closeAuth(); break;
   case 'legal-decline': signOutV5(); break;
@@ -28044,13 +32429,14 @@ document.addEventListener('change',event=>{
 document.addEventListener('submit',event=>{
  const form=event.target;
  if(!(form instanceof HTMLFormElement))return;
+ if(form.dataset.action==='confirm-account-deletion'){event.preventDefault();deletePalateoAccount();return;}
  if(form.dataset.action==='password-reset'){event.preventDefault();resetAccountPassword();return;}
  if(form.dataset.action==='legal-submit'){event.preventDefault();acceptLegalConsent();return;}
  if(form.dataset.action!=='auth-submit')return;
  event.preventDefault();
  if(form.dataset.authMode==='login'||form.dataset.authMode==='signup')submitAuth(form.dataset.authMode);
 });
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(document.getElementById('authModal'))closeAuth();else if(page==='place'){event.preventDefault();closePlaceDetails()}else if(document.getElementById('zestMapSheet')){event.preventDefault();closePlacePreview()}}});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(document.getElementById('authModal'))closeAuth();else if(document.getElementById('passportModalBackdrop')){document.getElementById('passportModalBackdrop').remove()}else if(page==='place'){event.preventDefault();closePlaceDetails()}else if(document.getElementById('zestMapSheet')){event.preventDefault();closePlacePreview()}}});
 document.addEventListener('click',event=>{const target=event.target instanceof Element?event.target:null,card=target?.closest('.restaurant-card');if(card&&!target.closest('button,a,details,summary,input'))openPlaceDetails(card.dataset.placeId,card.querySelector('[data-action="open-place"]'))});
 document.addEventListener('click',event=>{
 const target=event.target instanceof Element?event.target:null,button=target?.closest('[data-rest-action]');

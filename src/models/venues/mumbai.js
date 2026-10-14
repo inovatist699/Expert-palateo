@@ -4025,5 +4025,493 @@ const mumbaiCatalog=[
       "unrivalled glamour and exquisite sushi and seafood offerings"
     ],
     "why": "Glamorous 48th-floor rooftop party club in Kohinoor Square boasting a plunge pool and celebrity dance parties."
+  },
+  {
+    "id": "mum-commis-station-belapur",
+    "name": "Commis Station Specialty Coffee",
+    "area": "CBD Belapur (34km)",
+    "city": "Mumbai",
+    "latitude": 19.021,
+    "longitude": 73.041,
+    "address": "Sector 11, CBD Belapur, Navi Mumbai 400614",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹800 for two",
+    "rating": 4.8,
+    "review_count": 730,
+    "t": [
+      "Cafe",
+      "Coffee"
+    ],
+    "a": [
+      "minimalist",
+      "scandi",
+      "peaceful"
+    ],
+    "o": [
+      "solo",
+      "date",
+      "work"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Commis+Station+CBD+Belapur",
+    "review_insights": [
+      "artisanal aero-press",
+      "pain au chocolat",
+      "scandi minimalist design",
+      "matcha latte"
+    ]
+  },
+  {
+    "id": "mum-sweet-bengal-vashi",
+    "name": "Sweet Bengal & Artisanal Mishti",
+    "area": "Vashi (28km)",
+    "city": "Mumbai",
+    "latitude": 19.0768,
+    "longitude": 72.9984,
+    "address": "Sector 17, Vashi, Navi Mumbai 400703",
+    "c": [
+      "Desserts",
+      "Bengali",
+      "Sweets"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.7,
+    "review_count": 1420,
+    "t": [
+      "Dessert",
+      "Sweets"
+    ],
+    "a": [
+      "traditional",
+      "bustling"
+    ],
+    "o": [
+      "family",
+      "solo"
+    ],
+    "s": "mild",
+    "emoji": "🍮",
+    "photo": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sweet+Bengal+Vashi",
+    "review_insights": [
+      "steaming hot baked rasgulla",
+      "nolen gur sandesh",
+      "creamy kheer kodom",
+      "festive delicacies"
+    ]
+  },
+  {
+    "id": "mum-yellow-straw-thane",
+    "name": "The Yellow Straw & Artisan Patisserie",
+    "area": "Meadows, Thane (29km)",
+    "city": "Mumbai",
+    "latitude": 19.2312,
+    "longitude": 72.9654,
+    "address": "Vasant Vihar, Pokhran Rd 2, Thane West 400610",
+    "c": [
+      "Desserts",
+      "Cafe",
+      "Beverages"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹650 for two",
+    "rating": 4.6,
+    "review_count": 820,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "cheerful",
+      "outdoor"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍓",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Yellow+Straw+Thane",
+    "review_insights": [
+      "fresh fruit cheesecakes",
+      "cold-pressed smoothies",
+      "chocochip waffle sticks",
+      "cheerful terrace seating"
+    ]
+  },
+  {
+    "id": "mum-pop-tates-viviana",
+    "name": "Pop Tate's Gastro Pub & Cafe",
+    "area": "Viviana Mall, Thane (31km)",
+    "city": "Mumbai",
+    "latitude": 19.2089,
+    "longitude": 72.9715,
+    "address": "Viviana Mall, Eastern Express Highway, Thane 400606",
+    "c": [
+      "Continental",
+      "Cafe",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.5,
+    "review_count": 1850,
+    "t": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "a": [
+      "lively",
+      "vibrant"
+    ],
+    "o": [
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pop+Tates+Viviana+Mall+Thane",
+    "review_insights": [
+      "sizzling brownie",
+      "cheesy garlic twists",
+      "classic chicken burger",
+      "vibrant weekend energy"
+    ]
+  },
+  {
+    "id": "mum-farmhouse-vasai",
+    "name": "Farmhouse Sea N Sand",
+    "area": "Vasai West (44km)",
+    "city": "Mumbai",
+    "latitude": 19.3512,
+    "longitude": 72.808,
+    "address": "Pachubunder, Killa Road, Vasai West 401201",
+    "c": [
+      "Seafood",
+      "Coastal",
+      "Cafe",
+      "Continental"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,500 for two",
+    "rating": 4.7,
+    "review_count": 2300,
+    "t": [
+      "Restaurant",
+      "Seafood"
+    ],
+    "a": [
+      "coastal",
+      "scenic",
+      "breezy"
+    ],
+    "o": [
+      "family",
+      "date"
+    ],
+    "s": "spicy",
+    "emoji": "🦐",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Farmhouse+Sea+N+Sand+Vasai",
+    "review_insights": [
+      "sunset riverfront dining",
+      "surmai rawa fry",
+      "woodfired margherita",
+      "breezy outdoor deck"
+    ]
+  },
+  {
+    "id": "mum-chocolicious-vasai",
+    "name": "Cafe Chocolicious & Waffle House",
+    "area": "Vasai (42km)",
+    "city": "Mumbai",
+    "latitude": 19.3789,
+    "longitude": 72.8245,
+    "address": "Stella, Anand Nagar, Vasai West 401202",
+    "c": [
+      "Cafe",
+      "Desserts",
+      "Bakery"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹450 for two",
+    "rating": 4.6,
+    "review_count": 670,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "cozy",
+      "youthful"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Chocolicious+Vasai",
+    "review_insights": [
+      "chocolate fountain waffles",
+      "brownie earthquake",
+      "thick hazelnut coffee",
+      "youth hangout"
+    ]
+  },
+  {
+    "id": "mum-dutch-bakes-panvel",
+    "name": "Dutch Cafe & Artisan Bakes",
+    "area": "Old Panvel (45km)",
+    "city": "Mumbai",
+    "latitude": 18.9912,
+    "longitude": 73.1189,
+    "address": "Opposite Orion Mall, Old Panvel, Navi Mumbai 410206",
+    "c": [
+      "Bakery",
+      "Cafe",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹700 for two",
+    "rating": 4.6,
+    "review_count": 540,
+    "t": [
+      "Bakery",
+      "Cafe"
+    ],
+    "a": [
+      "cozy",
+      "modern"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🍰",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Dutch+Cafe+Panvel",
+    "review_insights": [
+      "dutch chocolate truffle cake",
+      "blueberry cold cheesecake",
+      "iced caramel frappe",
+      "highway dessert pitstop"
+    ]
+  },
+  {
+    "id": "mum-village-cafe-borivali",
+    "name": "The Village Cafe & Bakery",
+    "area": "Borivali West",
+    "city": "Mumbai",
+    "latitude": 19.2307,
+    "longitude": 72.8567,
+    "address": "Shimpoli Road, Borivali West, Mumbai 400092",
+    "c": [
+      "Cafe",
+      "Bakery",
+      "European"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹850 for two",
+    "rating": 4.7,
+    "review_count": 1420,
+    "t": [
+      "Cafe",
+      "Bakery"
+    ],
+    "a": [
+      "cozy",
+      "rustic",
+      "aesthetic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Village+Cafe+Borivali+Mumbai",
+    "review_insights": [
+      "woodfired garlic bread",
+      "nutella stuffed crepes",
+      "iced vanilla latte",
+      "fairylight wooden patio"
+    ]
+  },
+  {
+    "id": "mum-tea-villa-kandivali",
+    "name": "Tea Villa Cafe & Bistro",
+    "area": "Kandivali West",
+    "city": "Mumbai",
+    "latitude": 19.2135,
+    "longitude": 72.842,
+    "address": "Mahavir Nagar, Kandivali West, Mumbai 400067",
+    "c": [
+      "Cafe",
+      "Tea",
+      "Waffles",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹900 for two",
+    "rating": 4.6,
+    "review_count": 1850,
+    "t": [
+      "Cafe",
+      "Tea"
+    ],
+    "a": [
+      "lively",
+      "luxurious"
+    ],
+    "o": [
+      "friends",
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "🧇",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tea+Villa+Kandivali+Mumbai",
+    "review_insights": [
+      "belgian chocolate waffle",
+      "hundred exotic teas",
+      "fondue platter",
+      "vibrant evening vibe"
+    ]
+  },
+  {
+    "id": "mum-cafe-monza-mulund",
+    "name": "Cafe Monza & Artisan Kitchen",
+    "area": "Mulund West",
+    "city": "Mumbai",
+    "latitude": 19.1726,
+    "longitude": 72.9425,
+    "address": "Devidayal Road, Mulund West, Mumbai 400080",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,200 for two",
+    "rating": 4.8,
+    "review_count": 980,
+    "t": [
+      "Cafe",
+      "Restaurant"
+    ],
+    "a": [
+      "chic",
+      "modern",
+      "cozy"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "medium",
+    "emoji": "🍝",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Monza+Mulund+Mumbai",
+    "review_insights": [
+      "handcrafted ravioli",
+      "hazelnut cold brew",
+      "woodfired margherita",
+      "intimate candlelit seating"
+    ]
+  },
+  {
+    "id": "mum-grandmamas-chembur",
+    "name": "Grandmama's Cafe & Patisserie",
+    "area": "Chembur",
+    "city": "Mumbai",
+    "latitude": 19.0622,
+    "longitude": 72.8995,
+    "address": "Central Avenue, near Diamond Garden, Chembur, Mumbai 400071",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Desserts"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹1,400 for two",
+    "rating": 4.7,
+    "review_count": 2100,
+    "t": [
+      "Cafe",
+      "Dessert"
+    ],
+    "a": [
+      "quaint",
+      "pastel",
+      "cheery"
+    ],
+    "o": [
+      "family",
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🍰",
+    "photo": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Grandmamas+Cafe+Chembur+Mumbai",
+    "review_insights": [
+      "rajma chawal in a bowl",
+      "truffle mac and cheese",
+      "mud cake shake",
+      "vintage floral interior"
+    ]
+  },
+  {
+    "id": "mum-waffle-world-mira-road",
+    "name": "Waffle World & Specialty Cafe",
+    "area": "Mira Road",
+    "city": "Mumbai",
+    "latitude": 19.2812,
+    "longitude": 72.868,
+    "address": "Shanti Park, Mira Road East, Mumbai 401107",
+    "c": [
+      "Desserts",
+      "Cafe",
+      "Bakery"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹400 for two",
+    "rating": 4.6,
+    "review_count": 670,
+    "t": [
+      "Dessert",
+      "Cafe"
+    ],
+    "a": [
+      "youthful",
+      "casual"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🧇",
+    "photo": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Waffle+World+Mira+Road+Mumbai",
+    "review_insights": [
+      "triple chocolate waffle",
+      "fresh berry crepe",
+      "caramel frappe",
+      "late night sweet treats"
+    ]
   }
 ];

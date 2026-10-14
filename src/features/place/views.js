@@ -1,7 +1,138 @@
 function place(){
  const raw=activeRestaurant(detailRestaurantId);if(!raw){detailRestaurantId=null;page='home';home();return}
- const r=rec(raw),id=esc(r.id),f=state.feedback[r.id],saved=state.saves.includes(r.id),dishes=availableCalibrationDishes().filter(d=>dishAffinity(r,d)>0).slice(0,3);
- const tags=[...new Set([...(r.c||[]),...(r.a||[])])].filter(Boolean).slice(0,6);
+ const r=rec(raw),id=esc(r.id),f=state.feedback[r.id],saved=state.saves.includes(r.id);
+ const openInfo=getVenueOpenStatus(r);
  const cuisines=(r.c||[]).filter(x=>!['Restaurant','Cafe'].includes(x));
- document.getElementById('root').innerHTML=`<article class="screen place-screen" aria-labelledby="placeTitle"><div class="placeHero"><div class="placeHeroPhoto" aria-hidden="true">${photo(r)}</div><div class="placeHeroControls"><button type="button" id="placeBack" data-action="close-place" aria-label="Back to places">← Back</button><button type="button" data-rest-action="save" data-rest-id="${id}" aria-pressed="${saved}" aria-label="${saved?'Remove saved':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button></div><div class="placeHeroTitle"><div><h1 id="placeTitle">${esc(r.name)}</h1><p>${esc(r.area||r.city)} · ${esc(r.city||cityName())}</p></div><div class="placeMatch"><strong>${r.score}%</strong><span>Palate match</span></div></div></div><div class="placeBody"><div class="placeQuickStats"><span>★ ${Number(r.rating).toFixed(1)}${r.review_count?' · '+Number(r.review_count).toLocaleString()+' ratings':''}${r.ratingSource?' · '+esc(r.ratingSource):''}</span><span>${esc(displayPrice(r))}</span></div><div class="tags">${tags.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><section class="placeBreakdown"><h2>Your palate match</h2><p>${esc(r.why.join(' · '))}.</p><div class="matchFactors">${r.matchBreakdown.map(x=>`<div><span>${esc(x.label)}</span><strong class="${x.factor>.45?'fit':x.factor<-.45?'conflict':'unknown'}">${x.factor>.45?'Good fit':x.factor<-.45?'Different preference':'Limited detail'}</strong></div>`).join('')}</div><p class="placeCaveat">An estimate from your quiz, dish preferences and place feedback. It is not a guarantee that you will enjoy a place.</p></section><section class="placeAbout"><h2>About</h2><p>${esc(r.description||`${r.name} is listed in ${r.area||r.city||cityName()}${cuisines.length?' with '+cuisines.join(', ')+' cuisine':''}.`)}</p>${r.a?.length?`<p><strong>Atmosphere</strong> · ${r.a.map(esc).join(', ')}</p>`:''}${r.dietaryOptions?.length?`<p><strong>Dietary information</strong> · ${r.dietaryOptions.map(x=>esc(String(x).replaceAll('_',' '))).join(', ')}</p>`:'<p class="placeCaveat">Dietary options are not verified. Check with the venue for allergies or dietary requirements.</p>'}<div class="placeAddress"><strong>Location</strong><p>${esc(r.address||[r.area,r.city||cityName()].filter(Boolean).join(', '))}</p><button type="button" class="btn secondary" data-rest-action="maps" data-rest-id="${id}">Get directions ↗</button></div><p class="placeCaveat">Hours and current menu are not verified. Confirm with the venue before visiting.</p></section><section class="placeDishes" aria-labelledby="placeDishTitle"><h2 id="placeDishTitle">Live dish calibration</h2><p class="studioHint">Rate these flavour examples to refine your match. They are not confirmed menu items at this venue.</p>${dishes.length?dishes.map(d=>`<div class="placeDish"><div><h3>${esc(d.name)}</h3><p>${esc(d.description)}</p></div>${dishButtons(d)}</div>`).join(''):'<p>We don’t have enough cuisine detail to choose dish examples here. Use the taste studio to calibrate your preferences.</p>'}<button type="button" class="dishRetry" data-action="dish-retry" ${state.unsyncedDishes?'':'hidden'}>Retry cloud sync</button><p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Tap the same selected choice to undo it.')}</p><button type="button" class="linkBtn" data-action="navigate" data-page="profile">Open taste studio →</button></section><section class="placeFeedback"><h2>How does this place feel?</h2><div class="actions"><button type="button" data-rest-action="like" data-rest-id="${id}" aria-pressed="${f==='like'}">${f==='like'?'Undo like':'Like this place'}</button><button type="button" data-rest-action="dislike" data-rest-id="${id}" aria-pressed="${f==='dislike'}">${f==='dislike'?'Undo pass':'Not for me'}</button><button type="button" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}">${f==='visited'?'Undo visit':'I visited'}</button></div></section></div></article>`;
+ const primaryCategory=(r.c&&r.c.find(x=>!['Restaurant'].includes(x)))||'Artisanal Cafe';
+ const categoryEmoji=r.emoji||(r.c?.includes('Cafe')?'☕':r.c?.includes('Desserts')||r.c?.includes('Dessert')?'🍰':'🍽️');
+
+ const insights=Array.isArray(r.review_insights)&&r.review_insights.length?r.review_insights:[];
+ const rawDishes=(r.signatureDishes&&r.signatureDishes.length)?r.signatureDishes:(insights.length?insights.slice(0,3).map((ins,idx)=>({
+   id:r.id+'-dish-'+idx,
+   name:ins.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' '),
+   price:r.p==='under_500'?'₹56':r.p==='500_1000'?'₹180':'₹320',
+   description:`Signature crowd favourite highlighted in ${r.name} reviews`,
+   tasteHighlight:ins.toLowerCase(),
+   isVeg:!((r.dietaryOptions||[]).includes('non_veg')||(r.dietaryOptions||[]).includes('non_vegetarian'))
+ })):availableCalibrationDishes().filter(d=>dishAffinity(r,d)>0).slice(0,2).map(d=>({
+   id:d.id,
+   name:d.name,
+   price:r.p==='under_500'?'₹56':r.p==='500_1000'?'₹180':'₹320',
+   description:d.description,
+   tasteHighlight:d.name.toLowerCase(),
+   isVeg:true
+ })));
+
+ const aboutSummary=r.description||`${r.name} in ${r.area||r.city||cityName()}.${insights.length?' '+insights.slice(0,2).join(', '):(cuisines.length?' '+cuisines.join(', '):'')}`;
+
+ document.getElementById('root').innerHTML=`<article class="screen place-screen" aria-labelledby="placeTitle">
+  <div class="placeHero">
+    <div class="placeHeroPhoto" aria-hidden="true">${photo(r)}</div>
+    <div class="placeHeroControls">
+      <button type="button" id="placeBack" data-action="close-place" aria-label="Back to places">← Back</button>
+      <button type="button" data-rest-action="save" data-rest-id="${id}" aria-pressed="${saved}" aria-label="${saved?'Remove saved':'Save'} ${esc(r.name)}">${saved?'Saved ✓':'Save'}</button>
+    </div>
+    <div class="placeHeroTitle">
+      <div>
+        <h1 id="placeTitle">${esc(r.name)}</h1>
+        <p>${esc(r.area||r.city)} · ${esc(r.city||cityName())}</p>
+      </div>
+      <div class="placeMatch">
+        <strong>${r.score}%</strong>
+        <span>Palate match</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="placeBody">
+    <section class="aboutSpotSection" aria-labelledby="aboutSpotHeading">
+      <h2 id="aboutSpotHeading" class="spotSectionHeading">About This Spot</h2>
+      <p class="spotDescriptionText">${esc(aboutSummary)}</p>
+      
+      <div class="aboutSpotCard">
+        <div class="spotPillRow">
+          <span class="spotCategoryPill">${categoryEmoji} ${esc(primaryCategory)}</span>
+          <span class="spotStatusPill ${openInfo.isOpen?'isOpen':'isClosed'}">
+            <span class="statusDot"></span> ${esc(openInfo.statusText)}
+          </span>
+        </div>
+
+        <div class="spotInfoRow timingRow">
+          <span class="spotRowIcon">🕒</span>
+          <span class="spotRowText">${esc(openInfo.timingText)}</span>
+        </div>
+
+        <div class="spotInfoRow addressRow">
+          <span class="spotRowIcon">📍</span>
+          <span class="spotRowText">${esc(r.address||[r.area,r.city||cityName()].filter(Boolean).join(', '))}</span>
+        </div>
+
+        <div class="spotBottomBadgeRow">
+          <span class="spotRatingPill">⭐ ${Number(r.rating).toFixed(1)} (${Number(r.review_count||0).toLocaleString()})</span>
+          <span class="spotVerifiedPill">
+            <svg class="gmapsPinIcon" viewBox="0 0 24 24" width="14" height="14" fill="#ea4335" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Google Maps Verified
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="signatureDishesSection" aria-labelledby="placeDishTitle">
+      <h2 id="placeDishTitle" class="spotSectionHeading">Signature Dishes &amp; Palate Match</h2>
+      <p class="spotSectionSub">Rate dishes to dynamically train your personal Palate Genome</p>
+
+      <div class="signatureDishesDeck">
+        ${rawDishes.map(d=>{
+          const ratedVal=state.dishFeedback?.[d.id];
+          const isLoved=ratedVal==='love';
+          const isPassed=ratedVal==='pass';
+          return `<div class="spotDishCard" data-dish-id="${esc(d.id)}">
+            <div class="dishHeaderRow">
+              <div class="dishTitleWrap">
+                <span class="dietaryIndicator ${d.isVeg?'veg':'nonVeg'}" aria-label="${d.isVeg?'Vegetarian':'Non-vegetarian'}">
+                  <span class="dietaryDot"></span>
+                </span>
+                <h3 class="dishNameText">${esc(d.name)}</h3>
+              </div>
+              <span class="dishPriceText">${esc(d.price||'₹56')}</span>
+            </div>
+            <p class="dishDescriptionText">${esc(d.description)}</p>
+            <div class="dishFooterRow">
+              <span class="dishHighlightPill">✨ ${esc(d.tasteHighlight||d.name.toLowerCase())}</span>
+              <div class="dishTasteAction">
+                <span class="tastePrompt">Taste it?</span>
+                <button type="button" class="dishVoteBtn thumbUp ${isLoved?'active':''}" data-action="dish-rate" data-dish-id="${esc(d.id)}" data-dish-value="love" data-source="detail" aria-pressed="${isLoved}" aria-label="Love ${esc(d.name)}">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="${isLoved?'#ffc64f':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                </button>
+                <button type="button" class="dishVoteBtn thumbDown ${isPassed?'active':''}" data-action="dish-rate" data-dish-id="${esc(d.id)}" data-dish-value="pass" data-source="detail" aria-pressed="${isPassed}" aria-label="Pass on ${esc(d.name)}">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="${isPassed?'#9b3f38':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+
+      <p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Tap thumbs up or thumbs down to train your Palate Genome.')}</p>
+    </section>
+
+    <section class="placeBreakdown">
+      <h2>Your palate match (${r.score}%)</h2>
+      <p>${esc(r.why.join(' · '))}.</p>
+      <div class="matchFactors">
+        ${r.matchBreakdown.map(x=>`<div><span>${esc(x.label)}</span><strong class="${x.factor>.45?'fit':x.factor<-.45?'conflict':'unknown'}">${x.factor>.45?'Good fit':x.factor<-.45?'Different preference':'Limited detail'}</strong></div>`).join('')}
+      </div>
+    </section>
+
+    <div class="spotStickyActionBar">
+      <button type="button" class="spotActionBtn markVisitedBtn ${f==='visited'?'active':''}" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${f==='visited'}">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>${f==='visited'?'✓ Visited':'+ Mark Visited'}</span>
+      </button>
+      <button type="button" class="spotActionBtn getDirectionsBtn" data-rest-action="maps" data-rest-id="${id}">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        <span>Get Directions</span>
+      </button>
+    </div>
+  </div>
+ </article>`;
 }

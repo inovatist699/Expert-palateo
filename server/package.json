@@ -1,0 +1,19 @@
+{
+  "name": "palateo-backend",
+  "version": "1.0.0",
+  "description": "Palateo Production Backend with Better Auth, PostgreSQL & Railway",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "migrate": "node scripts/migrate.js"
+  },
+  "dependencies": {
+    "better-auth": "^1.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.3.0",
+    "pg": "^8.13.1"
+  }
+}

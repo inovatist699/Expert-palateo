@@ -1,0 +1,24 @@
+{
+  "name": "palateo-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node ../scripts/build-mobile.cjs",
+    "sync": "npm run build && cap sync",
+    "ios": "cap open ios",
+    "android": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/app": "8.1.2",
+    "@capacitor/browser": "8.0.5",
+    "@capacitor/core": "8.5.3",
+    "@capacitor/geolocation": "8.2.3",
+    "@capacitor/ios": "8.5.3",
+    "@supabase/supabase-js": "2.117.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.4.3",
+    "esbuild": "0.28.2"
+  }
+}

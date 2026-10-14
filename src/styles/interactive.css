@@ -26,9 +26,11 @@
 @media(max-width:839px){.zestMapSheet{position:fixed}}
 .previewNotice{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 24px;background:#20373b;color:#edf7fa;font:12px/1.5 "Plus Jakarta Sans",sans-serif}
 .previewNotice button{flex:none;min-height:44px;padding:8px 14px;background:#ffc64f;border:1px solid #ffc64f;border-radius:10px;color:#20373b;font:inherit;font-weight:700;cursor:pointer}
-.previewNotice button:focus-visible{outline:3px solid #edf7fa;outline-offset:3px}
-#n-social,.dataAttribution{display:none}
-@media(max-width:600px){.previewNotice{padding:8px 16px;font-size:11px}.previewNotice span{max-width:28ch}}
+.dataAttribution{display:none}
+#n-social{display:flex!important}
+.navComingSoonPill{display:inline-block;background:rgba(255,198,79,0.22);color:#ffc64f;border:1px solid rgba(255,198,79,0.55);font-size:7.5px;font-weight:800;padding:1px 5px;border-radius:99px;margin-left:4px;letter-spacing:0.04em;vertical-align:middle;line-height:1.2}
+.navBetaPill{display:inline-block;background:rgba(81,156,171,0.25);color:#c3e7f1;border:1px solid rgba(81,156,171,0.65);font-size:7.5px;font-weight:800;padding:1px 5px;border-radius:99px;margin-left:4px;letter-spacing:0.04em;vertical-align:middle;line-height:1.2}
+.askTitleRow .navBetaPill{font-size:11px;padding:2px 8px;background:#20373b;color:#ffc64f;border:1px solid #ffc64f;border-radius:99px;font-weight:800;letter-spacing:0.06em;vertical-align:middle;margin-left:8px}
 
 /* Product controls inherit the existing aqua, teal and saffron palette. */
 ::selection{background:#ffc64f;color:#20373b}
@@ -219,17 +221,18 @@ html{scrollbar-color:#519cab #c3e7f1}
 .paloSparkles .s4{bottom:20%;right:8%;animation-delay:.05s}
 
 /* Non-blocking Speech Bubble Hub */
-.paloBubble{position:relative;width:min(420px,calc(100vw - 32px));max-height:74dvh;margin-bottom:12px;background:rgba(246,250,248,0.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1.5px solid #829e97;border-radius:24px;box-shadow:0 18px 50px rgba(16,43,48,0.26),0 4px 14px rgba(255,198,79,0.25);color:#20373b;display:none;flex-direction:column;overflow:hidden;box-sizing:border-box;animation:paloBubbleIn .26s cubic-bezier(.16,1,.3,1)}
+.paloBubble{position:relative;width:min(420px,calc(100vw - 32px));max-height:76dvh;margin-bottom:12px;background:rgba(255,255,255,0.98);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(24,59,62,0.18);border-radius:22px;box-shadow:0 14px 38px rgba(16,43,48,0.18),0 2px 8px rgba(16,43,48,0.06),0 0 0 1px rgba(255,198,79,0.2);color:#20373b;display:none;flex-direction:column;overflow:hidden;box-sizing:border-box;animation:paloBubbleIn .26s cubic-bezier(.16,1,.3,1)}
 .paloBubble.is-open{display:flex}
 
-.paloBubbleTail{position:absolute;bottom:-9px;right:34px;width:18px;height:18px;background:inherit;border-right:1.5px solid #829e97;border-bottom:1.5px solid #829e97;transform:rotate(45deg);z-index:1}
+.paloBubbleTail{position:absolute;bottom:-9px;right:34px;width:18px;height:18px;background:inherit;border-right:1px solid rgba(24,59,62,0.18);border-bottom:1px solid rgba(24,59,62,0.18);transform:rotate(45deg);z-index:1}
 
 /* Header */
 .paloBubbleHeader{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#eef5f2;border-bottom:1px solid #c9dcd8;flex:none}
 .paloIdentity{display:flex;align-items:center;gap:10px}
 .paloAvatarBadge .palo{width:36px;height:34px;transform:scale(.65);transform-origin:left center}
-.paloTitleRow{display:flex;align-items:center;gap:8px}
+.paloTitleRow{display:flex;align-items:center;gap:7px}
 .paloTitleRow h3{font-size:16px;font-weight:800;letter-spacing:-.3px;margin:0;color:#183b3e}
+.paloLiveDot{width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 0 2px rgba(16,185,129,0.25);display:inline-block;animation:paloLivePulse 2s infinite ease-in-out;flex:none}
 .paloSubtitle{font-size:10px;font-weight:600;color:#557276;margin:0;letter-spacing:.2px}
 .paloBrainBadge{border:1px solid #ffc64f;background:#fff6dc;color:#855c03;font:700 10px/1 "Plus Jakarta Sans",sans-serif;padding:4px 8px;border-radius:12px;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:background-color .15s}
 .paloBrainBadge:hover{background:#ffeaad}
@@ -238,27 +241,28 @@ html{scrollbar-color:#519cab #c3e7f1}
 .paloIconBtn:hover{background:#ffc64f;border-color:#ffc64f}
 
 /* Speech Text Body */
-.paloSpeechBody{padding:14px 16px 8px;max-height:160px;overflow-y:auto;flex:none}
-.paloMessageText{font-size:13px;line-height:1.65;color:#20373b;margin:0;font-weight:550}
+.paloSpeechBody{padding:12px 16px 8px;max-height:160px;overflow-y:auto;flex:none}
+.paloMessageText{font-size:13.5px;line-height:1.55;color:#183b3e;margin:0;font-weight:550;letter-spacing:-0.01em}
 
 /* Live Cognitive Thinking Monologue (Palo's Own Brain in Action) */
-.paloThoughtBox{margin:6px 16px 10px;padding:10px 12px;background:#f8faf9;border:1px solid #9fc1b8;border-left:4px solid #183b3e;border-radius:14px;box-shadow:0 2px 10px rgba(24,59,62,0.08);animation:paloSlideDown .2s ease-out}
-.paloThoughtHeader{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}
-.paloThoughtBadge{font-size:10px;font-weight:800;color:#183b3e;letter-spacing:.5px;text-transform:uppercase;display:flex;align-items:center;gap:4px}
-.paloThoughtState{font-size:9.5px;font-weight:700;color:#3f6963;background:#e2eeea;padding:2px 7px;border-radius:8px}
-.paloThoughtSteps{display:flex;flex-direction:column;gap:6px;margin-top:8px;padding-top:8px;border-top:1px dashed #cadcd6}
-.paloThoughtStep{display:flex;align-items:flex-start;gap:8px;font-size:11px}
-.paloThoughtIcon{font-size:13px;line-height:1.2;flex:none}
-.paloThoughtStage{display:block;font-size:10px;font-weight:800;color:#183b3e;text-transform:uppercase;letter-spacing:.4px}
-.paloThoughtDesc{margin:1px 0 0;color:#385752;line-height:1.4}
+.paloThoughtBox{margin:6px 16px 10px;padding:10px 12px;background:#f6faf8;border:1px solid #b8d6cf;border-left:3.5px solid #183b3e;border-radius:12px;box-shadow:0 2px 8px rgba(24,59,62,0.06);animation:paloSlideDown .2s ease-out}
+.paloThoughtHeader{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;gap:8px}
+.paloThoughtBadge{font-size:10.5px;font-weight:800;color:#183b3e;letter-spacing:.5px;text-transform:uppercase;display:flex;align-items:center;gap:5px}
+.paloThoughtState{font-size:9.5px;font-weight:750;color:#1e524b;background:#d7eae4;padding:2px 8px;border-radius:8px}
+.paloThoughtChevron{font-size:11px;color:#51756e;transition:transform 0.2s ease-out;margin-left:auto;padding-left:6px}
+.paloThoughtSteps{display:flex;flex-direction:column;gap:7px;margin-top:8px;padding-top:8px;border-top:1px dashed #c0d8d2}
+.paloThoughtStep{display:flex;align-items:flex-start;gap:9px;font-size:11.5px}
+.paloThoughtIcon{font-size:14px;line-height:1.2;flex:none}
+.paloThoughtStage{display:block;font-size:10px;font-weight:800;color:#183b3e;text-transform:uppercase;letter-spacing:.5px}
+.paloThoughtDesc{margin:1px 0 0;color:#2e4d48;line-height:1.45}
 
 /* Verified Review Citation Card */
-.paloReviewCard{margin:6px 16px 10px;padding:12px 14px;background:#fff9ea;border:1px solid #ffd875;border-left:4px solid #ffc64f;border-radius:14px;box-shadow:0 3px 10px rgba(255,198,79,0.18);animation:paloSlideDown .2s ease-out}
+.paloReviewCard{margin:6px 16px 10px;padding:11px 13px;background:#fffdf6;border:1px solid #ffe18f;border-left:3.5px solid #ffc64f;border-radius:12px;box-shadow:0 2px 8px rgba(255,198,79,0.16);animation:paloSlideDown .2s ease-out}
 .paloReviewHeader{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;gap:8px}
 .paloReviewBadge{font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;font-weight:800;color:#855c03}
-.paloSentimentPill{font-size:10px;font-weight:750;background:#ffefc2;color:#6b4700;padding:2px 7px;border-radius:10px}
-.paloReviewQuote{font-size:12.5px;font-style:italic;color:#354d48;line-height:1.55;margin:0 0 6px}
-.paloReviewTip{font-size:11px;font-weight:600;color:#5a6e69;line-height:1.45;margin:0}
+.paloSentimentPill{font-size:10px;font-weight:750;background:#ffefc2;color:#6b4700;padding:2px 8px;border-radius:10px}
+.paloReviewQuote{font-size:12.5px;font-style:italic;color:#28443f;line-height:1.55;margin:0 0 6px}
+.paloReviewTip{font-size:11px;font-weight:600;color:#516d67;line-height:1.45;margin:0}
 
 /* Live Web Search Intelligence Card */
 .paloWebSearchCard{margin:6px 16px 10px;padding:12px 14px;background:#f0f9f6;border:1px solid #73b8a6;border-left:4px solid #107c68;border-radius:14px;box-shadow:0 3px 12px rgba(16,124,104,0.14);animation:paloSlideDown .2s ease-out}
@@ -272,29 +276,30 @@ html{scrollbar-color:#519cab #c3e7f1}
 .paloWebSearchTag{font-size:9.5px;font-weight:750;background:#ffffff;border:1px solid #94cbbe;color:#183b3e;border-radius:8px;padding:2px 6px}
 
 /* Quick Chip Rail */
-.paloChipRail{display:flex;gap:6px;padding:0 16px 10px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex:none}
+.paloChipRail{display:flex;gap:6px;padding:2px 16px 10px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex:none}
 .paloChipRail::-webkit-scrollbar{display:none}
-.paloChipRail button{flex:none;border:1px solid #829e97;border-radius:16px;padding:7px 12px;background:#ffffff;color:#20373b;font:700 11px/1 "Plus Jakarta Sans",sans-serif;cursor:pointer;transition:background-color .15s,transform .15s;white-space:nowrap}
-.paloChipRail button:hover{background:#ffc64f;border-color:#ffc64f;transform:translateY(-1px)}
+.paloChipRail button{flex:none;border:1px solid #9dc3ba;border-radius:18px;padding:6px 12px;background:#ffffff;color:#183b3e;font:700 11px/1 "Plus Jakarta Sans",sans-serif;cursor:pointer;transition:all .16s ease-out;white-space:nowrap}
+.paloChipRail button:hover{background:#ffc64f;border-color:#ffc64f;color:#183b3e;transform:translateY(-1px);box-shadow:0 2px 6px rgba(255,198,79,0.3)}
+.paloChipRail button:active{transform:scale(0.96)}
 
 /* Results Deck */
-.paloResultsDeck{padding:0 16px;max-height:260px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:10px}
-.paloVenueCard{padding:12px;background:#ffffff;border:1px solid #c2d8d3;border-radius:16px;box-shadow:0 2px 8px rgba(20,55,59,0.06);transition:border-color .15s,box-shadow .15s}
-.paloVenueCard:hover{border-color:#ffc64f;box-shadow:0 4px 14px rgba(255,198,79,0.22)}
+.paloResultsDeck{padding:0 16px 6px;max-height:270px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:10px}
+.paloVenueCard{padding:12px 13px;background:#ffffff;border:1px solid #c9ded9;border-radius:14px;box-shadow:0 2px 8px rgba(20,55,59,0.06);transition:border-color .15s,box-shadow .15s,transform .15s}
+.paloVenueCard:hover{border-color:#ffc64f;box-shadow:0 4px 14px rgba(255,198,79,0.22);transform:translateY(-1px)}
 .paloVenueMeta{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
-.paloCuisineTag{font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;font-weight:750;color:#51736e}
-.paloVenueName{font-size:15px;font-weight:750;margin:2px 0;color:#183b3e;line-height:1.25}
-.paloVenueSub{font-size:11px;color:#5d7776;margin:0;line-height:1.4}
-.paloMatchPill{background:#ffc64f;color:#20373b;border-radius:10px;padding:4px 8px;text-align:center;flex:none}
+.paloCuisineTag{font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;font-weight:800;color:#436963}
+.paloVenueName{font-size:15px;font-weight:800;margin:2px 0;color:#183b3e;line-height:1.25;letter-spacing:-0.01em}
+.paloVenueSub{font-size:11px;color:#55726e;margin:0;line-height:1.4}
+.paloMatchPill{background:#ffc64f;color:#183b3e;border-radius:10px;padding:4px 8px;text-align:center;flex:none;border:1px solid #ebb43e}
 .paloMatchPill strong{display:block;font-size:13px;line-height:1}
 .paloMatchPill span{display:block;font-size:8.5px;text-transform:uppercase;letter-spacing:.5px;font-weight:800}
-.paloVenueQuote{font-size:11.5px;font-style:italic;color:#44615b;margin:7px 0 9px;line-height:1.5;border-left:2px solid #ffc64f;padding-left:8px}
+.paloVenueQuote{font-size:11.5px;font-style:italic;color:#3b5a54;margin:7px 0 9px;line-height:1.5;border-left:2.5px solid #ffc64f;padding-left:8px}
 .paloVenueActions{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.paloExploreBtn{border:0;background:none;color:#1b574f;font:800 12px/1 "Plus Jakarta Sans",sans-serif;padding:6px 0;cursor:pointer;text-align:left}
-.paloExploreBtn:hover{text-decoration:underline;text-underline-offset:3px}
+.paloExploreBtn{border:0;background:none;color:#116053;font:800 12px/1 "Plus Jakarta Sans",sans-serif;padding:6px 0;cursor:pointer;text-align:left;transition:color .15s}
+.paloExploreBtn:hover{color:#0b453b;text-decoration:underline;text-underline-offset:3px}
 .paloFeedbackRow{display:flex;gap:5px}
-.paloFeedbackBtn{border:1px solid #b2cbc6;border-radius:12px;padding:5px 9px;background:#f6faf8;color:#2c4b46;font:700 11px/1 "Plus Jakarta Sans",sans-serif;cursor:pointer;transition:background-color .15s}
-.paloFeedbackBtn:hover{background:#ffc64f;border-color:#ffc64f}
+.paloFeedbackBtn{border:1px solid #a8c8c2;border-radius:12px;padding:5px 10px;background:#f6faf8;color:#203f3a;font:700 11px/1 "Plus Jakarta Sans",sans-serif;cursor:pointer;transition:all .15s}
+.paloFeedbackBtn:hover{background:#ffc64f;border-color:#ffc64f;transform:translateY(-1px)}
 .paloFeedbackBtn.active{background:#183b3e;color:#fff;border-color:#183b3e}
 
 /* ML & Cognitive Brain Drawer */
@@ -352,17 +357,17 @@ html{scrollbar-color:#519cab #c3e7f1}
 .paloCloseBrainBtn{border:1px solid #94b1aa;background:#fff;color:#183b3e;font:700 11px/1 "Plus Jakarta Sans",sans-serif;padding:8px 16px;border-radius:14px;cursor:pointer}
 
 /* Form & Input Bar */
-.paloForm{padding:10px 16px 14px;background:#eef5f2;border-top:1px solid #c9dcd8;flex:none}
-.paloInputRow{display:flex;align-items:center;background:#fff;border:1.5px solid #829e97;border-radius:16px;padding:3px;box-shadow:0 2px 6px rgba(16,43,48,0.06);transition:border-color .15s,box-shadow .15s}
-.paloInputRow:focus-within{border-color:#ffc64f;box-shadow:0 0 0 3px rgba(255,198,79,0.3)}
-.paloInputRow input{flex:1;min-width:0;border:0;background:transparent;padding:10px 12px;font:500 13px/1.3 "Plus Jakarta Sans",sans-serif;color:#20373b;outline:0}
+.paloForm{padding:10px 16px 14px;background:#f4f8f6;border-top:1px solid #d0e3de;flex:none}
+.paloInputRow{display:flex;align-items:center;background:#fff;border:1.5px solid #95bbb1;border-radius:16px;padding:3px;box-shadow:0 2px 6px rgba(16,43,48,0.06);transition:border-color .15s,box-shadow .15s}
+.paloInputRow:focus-within{border-color:#183b3e;box-shadow:0 0 0 3px rgba(255,198,79,0.35)}
+.paloInputRow input{flex:1;min-width:0;border:0;background:transparent;padding:9px 12px;font:500 13px/1.3 "Plus Jakarta Sans",sans-serif;color:#183b3e;outline:0}
 .paloMicBtn,.paloSendBtn{width:36px;height:36px;border:0;border-radius:12px;font-size:15px;display:grid;place-items:center;cursor:pointer;transition:background-color .15s,transform .15s;flex:none}
-.paloMicBtn{background:#eef5f2;color:#20373b;margin-right:4px}
+.paloMicBtn{background:#e8f2ef;color:#183b3e;margin-right:4px}
 .paloMicBtn:hover{background:#ffc64f}
 .paloMicBtn.is-listening{background:#ff5a36;color:#fff;animation:paloMicPulse .8s infinite alternate}
-.paloSendBtn{background:#ffc64f;color:#20373b;font-weight:900}
+.paloSendBtn{background:#ffc64f;color:#183b3e;font-weight:900}
 .paloSendBtn:hover{background:#ffb726;transform:scale(1.05)}
-.paloStatusText{font-size:10.5px;color:#5a7673;margin:6px 4px 0;line-height:1.4}
+.paloStatusText{font-size:10.5px;color:#4f6e69;margin:6px 4px 0;line-height:1.4;display:flex;align-items:center;gap:4px}
 
 /* Keyframe Animations */
 @keyframes paloFloat{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-6px) rotate(2deg)}}
@@ -420,3 +425,889 @@ html{scrollbar-color:#519cab #c3e7f1}
 .paloIntro h2{font-size:clamp(28px,5vw,44px);line-height:1.05;letter-spacing:-1.5px;margin:12px 0 20px}
 .paloIntro button{background:#ffc64f;color:#20373b;padding:12px 19px;border:0;border-radius:30px;font-weight:750;cursor:pointer}
 
+
+/* Live Conversation Transcript */
+#paloTranscript{max-height:140px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:#f7faf8;border-top:1px solid #d5e5e0;border-bottom:1px solid #d5e5e0;padding:8px 14px;margin:0;display:flex;flex-direction:column;gap:6px;scrollbar-width:thin}
+#paloTranscript::-webkit-scrollbar{width:4px}
+#paloTranscript::-webkit-scrollbar-thumb{background:#c0d8d2;border-radius:4px}
+.paloTurn{font-size:12px;line-height:1.45;margin:0;word-break:break-word;display:inline-block;transition:opacity .15s ease-out}
+.paloTurn.user{align-self:flex-end;background:#fff8e5;border:1px solid #fedc8a;color:#183b3e;padding:6px 11px;border-radius:14px 14px 3px 14px;max-width:86%;font-weight:600;box-shadow:0 1px 3px rgba(255,198,79,0.12)}
+.paloTurn.assistant{align-self:flex-start;background:#ffffff;border:1px solid #cfe0db;color:#20373b;padding:7px 11px;border-radius:14px 14px 14px 3px;max-width:90%;box-shadow:0 1px 3px rgba(20,55,59,0.04)}
+
+/* Brain Drawer Controls */
+#paloLearnDish{font:600 13px/1.3 "Plus Jakarta Sans",sans-serif;width:100%;padding:9px 12px;border-radius:10px;border:1.5px solid #9dc3ba;background:#ffffff;color:#183b3e;margin:8px 0 10px;outline:0;box-sizing:border-box;transition:border-color .15s,box-shadow .15s}
+#paloLearnDish:focus{border-color:#183b3e;box-shadow:0 0 0 3px rgba(255,198,79,0.3)}
+#paloLearnActions{display:flex;gap:8px;margin-bottom:8px}
+#paloLearnActions button,#paloSyncRetry{padding:8px 14px;border:1px solid #88a5a7;border-radius:12px;background:#ffffff;color:#20373b;font:700 11px/1 "Plus Jakarta Sans",sans-serif;cursor:pointer;transition:background-color .15s,transform .15s,border-color .15s}
+#paloLearnActions button:hover,#paloSyncRetry:hover{background:#ffc64f;border-color:#ffc64f;transform:translateY(-1px)}
+#paloLearnActions button[aria-pressed=true]{background:#183b3e;color:#ffffff;border-color:#183b3e}
+
+@keyframes paloLivePulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.25);opacity:.7}}
+
+/* Adaptive Memory & Continuous Learning Loop */
+.paloMemoryCard{background:#ffffff;border:1px solid #c2dbd4;border-left:3.5px solid #107c68;border-radius:12px;padding:11px 13px;margin:8px 0 12px;box-shadow:0 2px 8px rgba(16,124,104,0.06)}
+.paloMemoryHead{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.paloMemoryPersona{font-size:12.5px;font-weight:800;color:#183b3e;display:block}
+.paloMemoryMeta{font-size:10px;color:#53736e;margin:2px 0 0}
+.paloLoopBadge{font-size:9.5px;font-weight:750;background:#d8efe8;color:#0b5749;padding:3px 7px;border-radius:10px;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.paloLoopPulse{width:6px;height:6px;border-radius:50%;background:#107c68;animation:paloLivePulse 1.8s infinite ease-in-out}
+.paloMemoryRow{font-size:11px;color:#2c4b46;margin:4px 0;line-height:1.4}
+.paloMemoryRow strong{color:#183b3e;font-weight:750}
+.paloMemoryActions{margin-top:8px;padding-top:7px;border-top:1px dashed #d0e4df;display:flex;justify-content:flex-end}
+.paloClearMemoryBtn{background:none;border:0;color:#7a9993;font:700 10.5px/1 "Plus Jakarta Sans",sans-serif;padding:3px 6px;cursor:pointer;border-radius:6px;transition:color .15s}
+.paloClearMemoryBtn:hover{color:#b34032;text-decoration:underline}
+
+
+/* ==========================================================================
+   PALATEO NEW UI SPEC: MAP, PLACE DETAILS, DISH MATCH & PROFILE PASS
+   ========================================================================== */
+
+/* 1. Complete suppression of OpenFreeMap / OpenStreetMap attribution tags */
+.maplibregl-ctrl-attrib,
+.maplibregl-compact,
+.streetMapFrame .maplibregl-ctrl-attrib {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* 2. Map Floating Widgets: Weather & Theme Capsule */
+.mapWeatherWidget {
+  position: absolute;
+  left: 14px;
+  bottom: 64px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 99px;
+  padding: 5px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #1e293b;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+.mapWeatherWidget .weatherAqi {
+  color: #059669;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.mapThemeToggle {
+  position: absolute;
+  left: 14px;
+  bottom: 22px;
+  z-index: 10;
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 99px;
+  padding: 3px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+.mapThemeBtn {
+  border: 0;
+  border-radius: 99px;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  color: #475569;
+  background: transparent;
+  transition: all 0.16s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.mapThemeBtn.active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.32);
+}
+
+[data-map-dark] .mapWeatherWidget {
+  background: rgba(15, 23, 42, 0.92);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f1f5f9;
+}
+[data-map-dark] .mapThemeToggle {
+  background: rgba(15, 23, 42, 0.92);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+[data-map-dark] .mapThemeBtn {
+  color: #94a3b8;
+}
+[data-map-dark] .mapThemeBtn.active {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+/* 3. Map City Picker Modal */
+.mapCityPickerModal {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.mapCityPickerCard {
+  background: #0f2023;
+  border: 1px solid #1e3a3f;
+  border-radius: 20px;
+  padding: 16px 20px;
+  width: min(340px, 90%);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+.mapCityPickerHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.mapCityPickerHead h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 850;
+  color: #ffffff;
+}
+.mapCityPickerHead button {
+  background: #172d31;
+  border: 0;
+  color: #a0b2ad;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+}
+.mapCityList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mapCityBtn {
+  background: #172d31;
+  border: 1px solid #23474d;
+  color: #e5ede9;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 750;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.mapCityBtn:hover {
+  background: #1f3b40;
+  border-color: #31626a;
+}
+.mapCityBtn.active {
+  background: #0e382d;
+  border-color: #10b981;
+  color: #34d399;
+}
+
+/* 4. Map Preview Card (Screenshot 2 Match) */
+.streetMapFrame .zestMapSheet {
+  margin: 10px 12px 14px;
+  padding: 0;
+  background: #0f2023;
+  border: 1px solid #1e3a3f;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+  color: #f0fdf4;
+  animation: slideUp 0.22s cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+.zestSheetTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.zestCityDropdownBtn {
+  background: #172d31;
+  border: 1px solid #23474d;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 99px;
+  padding: 6px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.zestCityDropdownBtn:hover {
+  background: #1f3b40;
+}
+.zestSheetCountBadge {
+  background: #172d31;
+  border: 1px solid #23474d;
+  color: #fbbf24;
+  font-size: 11.5px;
+  font-weight: 800;
+  border-radius: 99px;
+  padding: 6px 12px;
+}
+.zestSheetSearchBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #172d31;
+  border: 1px solid #23474d;
+  color: #d0ded8;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.zestSheetSearchBtn:hover {
+  background: #1f3b40;
+  color: #ffffff;
+}
+.zestCardImageContainer {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #172d31;
+  cursor: pointer;
+}
+.zestCardImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.zestCardImageContainer:hover img {
+  transform: scale(1.03);
+}
+.zestCardStatusPill {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10.5px;
+  font-weight: 800;
+  border-radius: 99px;
+  padding: 4px 10px;
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+.zestCardStatusPill.isOpen {
+  background: rgba(14, 56, 45, 0.92);
+  border: 1px solid #17604d;
+  color: #34d399;
+}
+.zestCardStatusPill.isClosed {
+  background: rgba(59, 24, 27, 0.92);
+  border: 1px solid #6b262c;
+  color: #f87171;
+}
+.zestCardTopActions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+.zestCardCircleBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(15, 32, 35, 0.88);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.zestCardCircleBtn:hover {
+  transform: scale(1.08);
+}
+.zestCardCircleBtn.navBtn {
+  background: #2563eb;
+  border: 0;
+}
+.zestCardBottomBadgeLeft {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(15, 32, 35, 0.88);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #d0ded8;
+  font-size: 11px;
+  font-weight: 750;
+  border-radius: 99px;
+  padding: 3px 10px;
+  z-index: 2;
+}
+.zestCardBottomBadgeRight {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(15, 32, 35, 0.88);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #d0ded8;
+  font-size: 11px;
+  font-weight: 750;
+  border-radius: 99px;
+  padding: 3px 10px;
+  z-index: 2;
+}
+.zestCardBody {
+  padding: 12px 14px 14px;
+  cursor: pointer;
+}
+.zestCardRow1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.zestCardTitle {
+  font-size: 16.5px;
+  font-weight: 850;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.zestCardRating {
+  font-size: 12px;
+  font-weight: 850;
+  color: #fbbf24;
+  white-space: nowrap;
+}
+.zestCardRating small {
+  color: #8dafa8;
+  font-weight: 600;
+}
+.zestCardRow2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+.zestCardSubtitle {
+  font-size: 12px;
+  color: #9bb7af;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.zestCardMatchPill {
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  color: #fbbf24;
+  font-size: 10.5px;
+  font-weight: 850;
+  border-radius: 99px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  flex: none;
+}
+.zestCardMustOrder {
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.22);
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-size: 11.5px;
+  color: #fbbf24;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.zestCardMustOrder strong {
+  color: #fbbf24;
+  font-weight: 800;
+  flex: none;
+}
+.zestCardMustOrder span {
+  color: #e2ece8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 5. Place Details View (Screenshot 1 Match) */
+.aboutSpotCard {
+  background: #14282b;
+  border: 1px solid #234346;
+  border-radius: 20px;
+  padding: 16px 18px;
+  color: #e5ede9;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 14px;
+}
+.aboutSpotHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.aboutSpotCategoryBadge {
+  background: #1c3639;
+  border: 1px solid #2d555a;
+  color: #a9cdc5;
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 11.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.aboutSpotStatusPill.isOpen {
+  background: #0e382d;
+  border: 1px solid #17604d;
+  color: #34d399;
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 11.5px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.aboutSpotStatusPill.isClosed {
+  background: #3b181b;
+  border: 1px solid #6b262c;
+  color: #f87171;
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 11.5px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.aboutSpotRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #d0ded8;
+}
+.aboutSpotRow .rowIcon {
+  font-size: 15px;
+  color: #fbbf24;
+  flex: none;
+  margin-top: 1px;
+}
+.aboutSpotFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #234346;
+  gap: 8px;
+}
+.aboutSpotRating {
+  background: #1c3639;
+  border: 1px solid #2d555a;
+  color: #fbbf24;
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 11.5px;
+  font-weight: 850;
+}
+.aboutSpotRating span {
+  color: #8dafa8;
+  font-weight: 600;
+  font-size: 11px;
+}
+.aboutSpotVerified {
+  background: #1c3639;
+  border: 1px solid #2d555a;
+  color: #d2ebe4;
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 11.5px;
+  font-weight: 750;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 6. Signature Dishes & Palate Match */
+.signatureDishesSection {
+  margin-top: 26px;
+}
+.signatureDishesSection h2 {
+  font-size: 20px;
+  font-weight: 850;
+  color: #f0fdf4;
+  margin: 0 0 4px;
+  letter-spacing: -0.3px;
+}
+.signatureDishesSection .subtitle {
+  font-size: 12.5px;
+  color: #8baaa2;
+  margin: 0 0 16px;
+}
+.spotDishCard {
+  background: #14282b;
+  border: 1px solid #234346;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 14px;
+  color: #e5ede9;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+.spotDishCard:hover {
+  border-color: #376368;
+  transform: translateY(-1px);
+}
+.dishCardHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.dishTitleArea {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.vegDot {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #22c55e;
+  border-radius: 4px;
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+}
+.vegDot::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+.nonVegDot {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #ef4444;
+  border-radius: 4px;
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+}
+.nonVegDot::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #ef4444;
+  border-radius: 50%;
+}
+.dishName {
+  font-size: 15px;
+  font-weight: 800;
+  color: #f0fdf4;
+  margin: 0;
+}
+.dishPrice {
+  font-size: 15px;
+  font-weight: 850;
+  color: #fbbf24;
+  flex: none;
+}
+.dishDesc {
+  font-size: 12.5px;
+  color: #8dafa8;
+  line-height: 1.45;
+  margin: 0 0 12px;
+}
+.dishCardActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.dishHighlightPill {
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: #fbbf24;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 750;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.dishVoteArea {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+.dishVoteArea span {
+  font-size: 11.5px;
+  color: #8dafa8;
+  font-weight: 600;
+}
+.dishVoteBtn {
+  background: #1c3639;
+  border: 1px solid #2d555a;
+  color: #a9cdc5;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.dishVoteBtn:hover {
+  background: #25474c;
+  border-color: #3f747c;
+}
+.dishVoteBtn.active {
+  background: #fbbf24;
+  color: #14282b;
+  border-color: #fbbf24;
+  font-weight: 850;
+  transform: scale(1.06);
+}
+
+/* 7. Sticky Bottom Action Bar (Screenshot 1) */
+.spotStickyActionBar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(14, 24, 26, 0.94);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid #234346;
+  padding: 12px 16px max(12px, env(safe-area-inset-bottom));
+  display: flex;
+  gap: 12px;
+  z-index: 99;
+  margin: 24px -16px -32px -16px;
+  border-radius: 20px 20px 0 0;
+}
+.spotStickyActionBar .btnVisited {
+  flex: 1;
+  min-height: 48px;
+  border-radius: 14px;
+  background: #14282b;
+  border: 1.5px solid #2a5257;
+  color: #e5ede9;
+  font-size: 13.5px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.spotStickyActionBar .btnVisited.active {
+  background: #0e382d;
+  border-color: #10b981;
+  color: #34d399;
+}
+.spotStickyActionBar .btnDirections {
+  flex: 1.25;
+  min-height: 48px;
+  border-radius: 14px;
+  background: #fbbf24;
+  border: 0;
+  color: #14282b;
+  font-size: 14px;
+  font-weight: 850;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(251, 191, 36, 0.25);
+  transition: all 0.15s ease;
+}
+.spotStickyActionBar .btnDirections:hover {
+  background: #f59e0b;
+}
+
+/* 8. Profile Filters & Passport Modal */
+.profileFilterSection {
+  margin-top: 18px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #d5ded4;
+  border-radius: 18px;
+}
+.profileFilterHeading {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--green);
+  margin: 0 0 10px;
+}
+.profileFilterPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.profileFilterPill {
+  border: 1px solid #c8d8ce;
+  background: #f4f8f5;
+  border-radius: 99px;
+  padding: 6px 13px;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.profileFilterPill.active {
+  background: var(--green);
+  color: #ffffff;
+  border-color: var(--green);
+  box-shadow: 0 2px 8px rgba(11, 89, 63, 0.25);
+}
+
+.passportModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+.passportModalCard {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 22px;
+  width: min(540px, 100%);
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid #e0eae2;
+}
+.passportModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e8efe9;
+  padding-bottom: 12px;
+}
+.passportModalHeader h2 {
+  font-size: 20px;
+  font-weight: 850;
+  color: var(--ink);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.passportModalClose {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 0;
+  background: #eef4f0;
+  color: var(--muted);
+  font-size: 18px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.passportItemCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  border: 1px solid #e2eae3;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.passportItemCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--green);
+}
+.passportItemPhoto {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex: none;
+  background: #f0f5f1;
+}
+.passportItemInfo {
+  flex: 1;
+  min-width: 0;
+}
+.passportItemTitle {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.passportItemMeta {
+  font-size: 12px;
+  color: var(--muted);
+}
+.passportItemScore {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--green);
+  background: #e8f5ec;
+  padding: 3px 8px;
+  border-radius: 99px;
+  flex: none;
+}
+
+/* 9. BETA Badge */
+.betaBadge {
+  display: inline-block;
+  font-size: 9.5px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  padding: 2px 7px;
+  border-radius: 6px;
+  vertical-align: middle;
+  margin-left: 6px;
+}

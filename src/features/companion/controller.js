@@ -2,8 +2,8 @@
    PALATEO AI CULINARY PET COMPANION (PALO)
    - Living animated on-screen vector mascot (not a blocking window modal!)
    - Cute pitched voice synthesis + procedural Web Audio chirps & chimes
-   - Online Reinforcement Machine Learning Engine (learns & evolves taste genome)
-   - Real-time review synthesis with deep access to verified diner insights
+   - Explicit account feedback trains a bounded taste ranking model
+   - Catalogue-grounded suggestions and temporary conversation filters
    ========================================================================== */
 (() => {
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -24,7 +24,7 @@
         <span class="paloFoot right"></span>
       </span>
       <svg class="paloSvg" viewBox="0 0 100 100" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden;pointer-events:none;" aria-hidden="true"></svg>
-      <span class="paloMoodPill" id="paloMoodPill">Palo · Master Foodie ⭐</span>
+      <span class="paloMoodPill" id="paloMoodPill">Palo · Your food companion</span>
     </div>
   `;
 
@@ -32,1360 +32,77 @@
   const pet = `<span class="palo" aria-hidden="true"><span class="paloLeaf"></span><span class="paloFace"><i></i><i></i><b></b></span><span class="paloFoot left"></span><span class="paloFoot right"></span></span>`;
 
   // --------------------------------------------------------------------------
-  // 2. FULLY-TRAINED ONLINE REINFORCEMENT MACHINE LEARNING ENGINE
+  // 2. ACCOUNT TASTE SUMMARY
   // --------------------------------------------------------------------------
   class PaloMLTasteEngine {
     constructor() {
-      this.storageKey = 'palateo_palo_ml_genome';
-      this.genome = this.loadGenome();
+      this.aiLearnings = [];
+      this.aiCuisines = {};
+      this.aiVibes = {};
+      this.aiDishes = {};
+      this.aiXP = 0;
     }
-
-    defaultGenome() {
-      return {
-        version: 7,
-        xp: 50000,
-        level: 10,
-        title: 'Level 10 Omnipresent Party & Culinary Deity',
-        totalInteractions: 1000,
-        cuisines: {
-          'North Indian': 0.96,
-          'Punjabi': 0.95,
-          'South Indian': 0.96,
-          'Karnataka': 0.93,
-          'Andhra': 0.94,
-          'Kerala': 0.93,
-          'Chettinad': 0.92,
-          'Gujarati': 0.98,
-          'Kathiyawadi': 0.96,
-          'Maharashtrian': 0.97,
-          'Malwani': 0.95,
-          'Rajasthani': 0.95,
-          'Bengali': 0.94,
-          'Goan': 0.94,
-          'Street food': 0.99,
-          'Biryani': 0.99,
-          'Mughlai': 0.96,
-          'Parsi': 0.95,
-          'Iranian': 0.96,
-          'Cafe': 0.94,
-          'Coffee': 0.95,
-          'Bakery': 0.93,
-          'Desserts': 0.96,
-          'Italian': 0.93,
-          'Pizza': 0.94,
-          'Asian': 0.92,
-          'Continental': 0.90,
-          'Seafood': 0.96,
-          'American': 0.90,
-          'Mediterranean': 0.92
-        },
-        spiceTolerance: 0.70, // Calibrated for authentic Indian spice
-        vibes: {
-          cozy: 0.94,
-          lively: 0.95,
-          quiet: 0.90,
-          traditional: 0.97,
-          heritage: 0.98,
-          modern: 0.93,
-          outdoor: 0.94,
-          rooftop: 0.96,
-          romantic: 0.95,
-          casual: 0.96,
-          date: 0.95,
-          friends: 0.96,
-          family: 0.95,
-          solo: 0.92
-        },
-        priceSensitivity: {
-          under_500: 0.97,
-          '500_1000': 0.95,
-          '1000_2000': 0.92,
-          '2000_plus': 0.88
-        },
-        reviewKeywords: {
-          biryani: 0.99,
-          'butter chicken': 0.98,
-          dosa: 0.98,
-          'filter coffee': 0.97,
-          'pav bhaji': 0.99,
-          'vada pav': 0.99,
-          'misal pav': 0.98,
-          'sev usal': 0.98,
-          'fafda jalebi': 0.98,
-          'chole bhature': 0.98,
-          'bun maska': 0.97,
-          'dal bukhara': 0.98,
-          sourdough: 0.93,
-          pizza: 0.95,
-          chaat: 0.98,
-          kachori: 0.96,
-          thali: 0.98,
-          kebabs: 0.97,
-          'chelo kebab': 0.96,
-          seafood: 0.96,
-          'bombil fry': 0.96,
-          'butter garlic crab': 0.98,
-          'shrewsbury biscuits': 0.97,
-          'sujata mastani': 0.98,
-          'lilo chevdo': 0.96,
-          bhakarwadi: 0.97,
-          panki: 0.96,
-          handvo: 0.96,
-          nihari: 0.98,
-          'mutton korma': 0.97,
-          'galouti kebab': 0.98,
-          chai: 0.99,
-          'tasting menu': 0.93,
-          cheesecake: 0.94,
-          rooftop: 0.96,
-          authentic: 0.98,
-          heritage: 0.98,
-          waffles: 0.91,
-          truffle: 0.92,
-          pasta: 0.93
-        },
-        dishWeights: {
-          'butter chicken': 0.98,
-          'dal bukhara': 0.97,
-          'dal makhani': 0.96,
-          'misal pav': 0.98,
-          'sev usal': 0.98,
-          'vada pav': 0.99,
-          'pav bhaji': 0.99,
-          'fafda jalebi': 0.98,
-          'chole bhature': 0.98,
-          'dum biryani': 0.99,
-          'mutton biryani': 0.98,
-          'hyderabadi biryani': 0.99,
-          'kolkata biryani': 0.97,
-          'benne dosa': 0.98,
-          'masala dosa': 0.97,
-          'filter coffee': 0.98,
-          'irani chai': 0.98,
-          'bun maska': 0.98,
-          'shrewsbury biscuits': 0.97,
-          'sujata mastani': 0.98,
-          'bombil fry': 0.97,
-          'butter garlic crab': 0.98,
-          'neer dosa': 0.96,
-          'keema pav': 0.97,
-          'dahi bhalla': 0.96,
-          'samosa chole': 0.96,
-          'panki': 0.96,
-          'handvo': 0.95,
-          'gujarati thali': 0.98,
-          'kathiyawadi thali': 0.97,
-          'lilo chevdo': 0.96,
-          'bhakarwadi': 0.97,
-          'methi gota': 0.95,
-          'sev khamani': 0.96,
-          'kulfi falooda': 0.97,
-          'stuffed fruit kulfi': 0.97,
-          'chelo kebab': 0.97,
-          'kathi roll': 0.98,
-          'daab chingri': 0.97,
-          'kosha mangsho': 0.98,
-          'mutton korma': 0.97,
-          'nihari': 0.98,
-          'mutton burra': 0.97,
-          'galouti kebab': 0.98,
-          'kakori kebab': 0.97,
-          'spdp sev puri': 0.96,
-          'thalipeeth': 0.95,
-          'sabudana vada': 0.96,
-          'piyush': 0.95,
-          'woodfired pizza': 0.95,
-          'sourdough pastrami': 0.94,
-          'apple strudel': 0.93,
-          'espresso macaron': 0.94,
-          'chutney sandwich': 0.95,
-          'pyaz kachori': 0.97,
-          'laal maas': 0.97,
-          'karimeen pollichathu': 0.97,
-          'appam stew': 0.96,
-          'pork vindaloo': 0.95,
-          'poee bread': 0.95,
-          'chicken 65': 0.97,
-          'raipur bhajia': 0.98,
-          'dalwada': 0.97,
-          'tari sev usal': 0.99,
-          'duliram peda': 0.98,
-          'rasthal thali': 0.98,
-          'durvankur thali': 0.98,
-          'vaidya misal': 0.98,
-          'camp burger': 0.97,
-          'maratha samrat rassa': 0.98,
-          'cafe mondegar': 0.96,
-          'swati snacks panki': 0.98,
-          'soam thali': 0.98,
-          'aaswad misal': 0.99,
-          'sanju baba chicken': 0.97,
-          'pancham poori': 0.97,
-          'paranthe wali gali': 0.96,
-          'old famous jalebi': 0.98,
-          'chaina ram halwa': 0.98,
-          'gianis falooda': 0.97,
-          'qureshi seekh': 0.98,
-          'united coffee house': 0.96,
-          'kwality chole bhature': 0.98,
-          'jain rajma chawal': 0.97,
-          'upsc chaat': 0.98,
-          'khan chacha rolls': 0.97,
-          'comorin mutton': 0.98,
-          'burma burma khow suey': 0.98,
-          'sardar pav bhaji': 0.99,
-          'bademiya seekh': 0.98,
-          'trishna garlic crab': 0.99,
-          'moti mahal butter chicken': 0.99,
-          'sita ram chole bhature': 0.99,
-          'sujata mastani': 0.99,
-          'chitale bakarwadi': 0.99,
-          'gordhan thal': 0.99,
-          'jagdish bhakarwadi': 0.99,
-          'vidyarthi bhavan dosa': 0.99,
-          'ctr benne dosa': 0.99,
-          'paradise biryani': 0.99,
-          'murugan idli': 0.99,
-          'peter cat chelo kebab': 0.99,
-          'rawat pyaz kachori': 0.99,
-          'paragon malabar biryani': 0.99,
-          'hot bite sandwich': 0.98,
-          'chinese bhel': 0.97,
-          'tandoori momos': 0.99,
-          'cheese maggi': 0.98,
-          'chocolate cheese sandwich': 0.98,
-          'jini dosa': 0.99,
-          'jamun shots': 0.98,
-          'apple cider': 0.98,
-          'party club': 0.99,
-          'nightclub cocktails': 0.98
-        },
-        recentLearnings: [
-          { time: 'Trained', summary: 'Integrated all 456 destinations & premier party clubs across Ahmedabad (100), Vadodara (86), Mumbai (90), Delhi NCR (90), and Pune (90); 603 nationwide', xp: 9500 },
-          { time: 'Trained', summary: 'Mastered Premier Party Clubs & Nightlife (Dragonfly, Toy Room, Tryst, Matahaari, XXO, Priveé, Soho, High Spirits, Mi A Mi, Cult House, Sphere, Skyz)', xp: 6200 },
-          { time: 'Trained', summary: 'Encoded Cult Campus & Youth Hangouts (Tom Uncle Maggi, QD’s, Anand Stall Mithibai, Flavours BMCC, CEPT Khau Gali, Municipal Market, Hot Bite)', xp: 5800 },
-          { time: 'Trained', summary: 'Mastered Ahmedabad Heritage Pols, Manek Chowk & Century-old Farsan Legends (Lucky Tea, Chandra Villas, Honest, Oswal, Raipur Bhajia, Gordhan Thal, Rajwadu)', xp: 4800 },
-          { time: 'Trained', summary: 'Calibrated Vadodara Sev Usal Tari, Lilo Chevdo & Alembic Art District Gastronomy (Mahakali, Shreeji, Jagdish, Payal, Pyarelal, Duliram, 1907, Canara Coffee)', xp: 4600 },
-          { time: 'Trained', summary: 'Encoded Mumbai Vada Pav Royalty, Coastal Crab Curries & Midnight Chowpatty Haunts (Sardar, Bademiya, Trishna, Mahesh, Kyani, Aaswad, Bachelorr’s, Veronica’s)', xp: 5200 },
-          { time: 'Trained', summary: 'Fine-tuned Delhi Butter Chicken Origins, Chandni Chowk Chaats & Paharganj Chole Bhature (Moti Mahal, Gulati, Sita Ram, Kuremal, Al Jawahar, Big Chill, Indian Accent)', xp: 5400 },
-          { time: 'Trained', summary: 'Mastered Pune Puneri Misal, Shrewsbury Bakes & Sujata Mastani Confections (Sujata, Bedekar, Kata Kirr, Chitale, Kayani, Vaishali, Goodluck, Vohuman)', xp: 5300 }
-        ]
-      };
+    get genome(){
+      const feedback=typeof state==='undefined'?{}:state.feedback||{},dishes=typeof state==='undefined'?{}:normalizeDishFeedback(state.dishFeedback),entries=Object.entries(feedback).filter(([,v])=>['like','dislike'].includes(v)),cuisines={};
+      for(const [id,value] of entries){const r=activeRestaurant(id);for(const c of r?.c||[])cuisines[c]=(cuisines[c]||0)+(value==='like'?1:-1)}
+      for(const [c,val] of Object.entries(this.aiCuisines)){cuisines[c]=(cuisines[c]||0)+val}
+      const mergedDishes={...dishes,...this.aiDishes};
+      const baseXP=entries.length+Object.keys(dishes).length;
+      const totalXP=baseXP+this.aiXP;
+      const recentLearnings=[
+        ...entries.slice(-6).map(([id,v])=>({time:'Feedback',summary:v+': '+(activeRestaurant(id)?.name||'place'),xp:0})),
+        ...this.aiLearnings.slice(-6)
+      ].slice(-8);
+      return {version:8,xp:totalXP,level:entries.length,title:'Personal taste model',totalInteractions:entries.length+this.aiLearnings.length,cuisines,vibes:this.aiVibes,priceSensitivity:{},reviewKeywords:{},dishWeights:mergedDishes,spiceTolerance:state.answers?.spice==='hot'?1:state.answers?.spice==='mild'?0:.5,recentLearnings,omniRouteConnected:this.omniRouteConnected===true};
     }
-
-    loadGenome() {
-      try {
-        const saved = localStorage.getItem(this.storageKey);
-        if (saved) {
-          const parsed = JSON.parse(saved);
-          if (parsed.version && parsed.version >= 7 && parsed.level >= 10) {
-            return { ...this.defaultGenome(), ...parsed };
-          }
-        }
-      } catch (e) {}
-      const full = this.defaultGenome();
-      this.saveGenome(full);
-      return full;
+    saveGenome(){} // Preference storage and sync belong to the existing account store.
+    learnFromVenue(venue){tasteModelCache=null;return {summary:'Updated preferences for '+venue.name,leveledUp:false}}
+    learnFromDish(id,name){return {summary:'Updated dish preference: '+name,leveledUp:false}}
+    learnFromWebSearch(insights){return this.learnFromOmniRoute(insights,'Web search')}
+    learnFromOmniRoute(insights,query=''){
+      return {summary:'Use Love or Pass to teach Palo your preferences.',leveledUp:false};
     }
-
-    saveGenome(genomeToSave = null) {
-      try {
-        localStorage.setItem(this.storageKey, JSON.stringify(genomeToSave || this.genome));
-      } catch (e) {}
-    }
-
-    // Gradient reinforcement step
-    learnFromVenue(venue, reward) {
-      if (!venue) return null;
-      const lr = 0.18;
-      this.genome.totalInteractions++;
-      const xpGain = Math.round(Math.abs(reward) * 40);
-      this.genome.xp += xpGain;
-      const prevLevel = this.genome.level;
-      this.genome.level = Math.max(5, Math.floor(this.genome.xp / 1600) + 1);
-      const leveledUp = this.genome.level > prevLevel;
-
-      // Update cuisine vectors
-      (venue.c || []).forEach(c => {
-        const current = this.genome.cuisines[c] || 0.5;
-        this.genome.cuisines[c] = Math.max(-1.5, Math.min(3.0, current + lr * reward));
-      });
-
-      // Update ambiance & occasion vectors
-      (venue.a || []).concat(venue.o || []).forEach(v => {
-        const current = this.genome.vibes[v] || 0.5;
-        this.genome.vibes[v] = Math.max(-1.2, Math.min(2.5, current + lr * reward * 0.7));
-      });
-
-      // Update spice index
-      if (venue.s === 'hot') {
-        this.genome.spiceTolerance = Math.max(0.1, Math.min(1, this.genome.spiceTolerance + reward * 0.08));
-      } else if (venue.s === 'mild') {
-        this.genome.spiceTolerance = Math.max(0.1, Math.min(1, this.genome.spiceTolerance - reward * 0.08));
-      }
-
-      // Learn from verified review insights
-      const reviews = Array.isArray(venue.review_insights) ? venue.review_insights : [];
-      reviews.forEach(phrase => {
-        const words = phrase.toLowerCase().split(/\s+/);
-        words.forEach(w => {
-          if (w.length > 3 && this.genome.reviewKeywords[w] !== undefined) {
-            this.genome.reviewKeywords[w] = Math.max(-1.0, Math.min(2.5, this.genome.reviewKeywords[w] + lr * reward * 0.4));
-          }
-        });
-      });
-
-      const summary = `${reward > 0 ? 'Loved' : 'Passed on'} ${venue.name} · Enhanced ${(venue.c || []).slice(0, 2).join(', ')} affinity`;
-      this.genome.recentLearnings.unshift({
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        summary,
-        xp: xpGain
-      });
-      if (this.genome.recentLearnings.length > 6) this.genome.recentLearnings.pop();
-
-      this.saveGenome();
-      return { level: this.genome.level, xp: this.genome.xp, leveledUp, summary };
-    }
-
-    learnFromDish(dishId, dishName, cuisine, sentiment) {
-      const reward = sentiment === 'love' ? 1.5 : -1.5;
-      this.genome.dishWeights[dishId] = reward;
-      this.genome.xp += 30;
-      const prevLevel = this.genome.level;
-      this.genome.level = Math.max(5, Math.floor(this.genome.xp / 1600) + 1);
-      const leveledUp = this.genome.level > prevLevel;
-
-      if (cuisine) {
-        const current = this.genome.cuisines[cuisine] || 0.5;
-        this.genome.cuisines[cuisine] = Math.max(-1.5, Math.min(3.0, current + 0.3 * reward));
-      }
-
-      const summary = `${sentiment === 'love' ? 'Loved' : 'Disliked'} ${dishName} · Reinforced ${cuisine || 'flavor'}`;
-      this.genome.recentLearnings.unshift({
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        summary,
-        xp: 30
-      });
-      if (this.genome.recentLearnings.length > 6) this.genome.recentLearnings.pop();
-
-      this.saveGenome();
-      return { level: this.genome.level, xp: this.genome.xp, leveledUp, summary };
-    }
-
-    // Reinforce taste genome with live web search discoveries
-    learnFromWebSearch(query, searchResult) {
-      if (!searchResult) return null;
-      const xpGain = 50;
-      this.genome.xp += xpGain;
-      const leveledUp = this.recalculateLevel();
-
-      const insights = searchResult.culinaryInsights || {};
-      const cuisines = insights.cuisines || [];
-      const dishes = insights.dishes || [];
-      const vibes = insights.vibes || [];
-
-      cuisines.forEach(c => {
-        const cur = this.genome.cuisines[c] || 0.4;
-        this.genome.cuisines[c] = Math.max(-1.5, Math.min(3.0, cur + 0.35));
-      });
-
-      dishes.forEach(d => {
-        this.genome.dishWeights[d.toLowerCase()] = 1.2;
-      });
-
-      vibes.forEach(v => {
-        const cur = this.genome.vibes[v] || 0.4;
-        this.genome.vibes[v] = Math.max(-1.5, Math.min(2.5, cur + 0.3));
-      });
-
-      const text = `${searchResult.heading || ''} ${searchResult.summary || ''}`.toLowerCase();
-      const tokens = text.replace(/[^\p{L}\p{N}\s]/gu, ' ').split(/\s+/).filter(t => t.length > 3);
-      tokens.slice(0, 10).forEach(tok => {
-        this.genome.reviewKeywords[tok] = (this.genome.reviewKeywords[tok] || 0.3) + 0.25;
-      });
-
-      const tagsLearned = [...cuisines.slice(0, 2), ...dishes.slice(0, 1)].filter(Boolean).join(', ');
-      const summary = `Web Searched: “${query}” · Learned ${tagsLearned || 'new flavor insights'}`;
-      this.genome.recentLearnings.unshift({
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        summary,
-        xp: xpGain,
-        source: 'web_search'
-      });
-      if (this.genome.recentLearnings.length > 7) this.genome.recentLearnings.pop();
-
-      this.saveGenome();
-      return { level: this.genome.level, xp: this.genome.xp, leveledUp, summary };
-    }
-
-    evaluateVenue(venue) {
-      let score = venue.score || 75;
-      (venue.c || []).forEach(c => {
-        if (this.genome.cuisines[c]) score += this.genome.cuisines[c] * 10;
-      });
-      (venue.a || []).concat(venue.o || []).forEach(v => {
-        if (this.genome.vibes[v]) score += this.genome.vibes[v] * 6;
-      });
-      (venue.review_insights || []).forEach(phrase => {
-        const words = phrase.toLowerCase().split(/\s+/);
-        words.forEach(w => {
-          if (this.genome.reviewKeywords[w]) score += this.genome.reviewKeywords[w] * 5;
-        });
-      });
-      if (venue.s === 'hot') score += (this.genome.spiceTolerance - 0.5) * 10;
-      if (venue.s === 'mild') score += (0.5 - this.genome.spiceTolerance) * 10;
-      return Math.max(1, Math.min(99, Math.round(score)));
-    }
-
-    recalculateLevel() {
-      const prevLevel = this.genome.level;
-      this.genome.level = Math.max(5, Math.floor(this.genome.xp / 1600) + 1);
-      return this.genome.level > prevLevel;
-    }
+    evaluateVenue(venue){return rec(venue).score}
+    recalculateLevel(){return false}
   }
+  const paloML=new PaloMLTasteEngine();
 
   // --------------------------------------------------------------------------
-  // 2.5 PALO COGNITIVE BRAIN & REASONING ENGINE (AUTONOMOUS THINKING & LEARNING)
+  // 3. PERSISTENT LONG-TERM EPISODIC MEMORY & ADAPTIVE LEARNING STORE
   // --------------------------------------------------------------------------
-  class PaloCognitiveBrain {
-    constructor(mlEngine) {
-      this.ml = mlEngine;
-      this.storageKey = 'palateo_palo_cognitive_brain';
-      const state = this.loadState();
-      this.concepts = state.concepts || this.defaultConcepts();
-      this.memories = state.memories || this.defaultMemories();
-      this.thoughtLog = state.thoughtLog || [];
-      this.totalThoughts = state.totalThoughts || 142;
-    }
-
-    defaultConcepts() {
-      return {
-        'sev usal': {
-          title: 'Vadodara Sev Usal',
-          category: 'Street Food',
-          fact: 'Vadodara cult spicy pea usal immersed in extra fiery tari oil, topped with spring onions and sev, eaten with spongy ladi pav.',
-          tags: ['vadodara', 'spicy', 'street food'],
-          confidence: 0.98,
-          learnedAt: 'Heritage calibration'
-        },
-        'vada pav': {
-          title: 'Mumbai Vada Pav',
-          category: 'Street Food',
-          fact: 'The heartbeat of Mumbai: spiced potato vada in ladi pav laced with pungent dry garlic-coconut chutney and fried green chili.',
-          tags: ['mumbai', 'heritage', 'street food'],
-          confidence: 0.99,
-          learnedAt: 'Heritage calibration'
-        },
-        'butter chicken': {
-          title: 'Delhi Butter Chicken',
-          category: 'North Indian',
-          fact: 'Born at Moti Mahal Daryaganj in the 1950s; velvety tomato-butter-cream gravy balancing smoky tandoori chicken.',
-          tags: ['delhi', 'mughlai', 'curry'],
-          confidence: 0.98,
-          learnedAt: 'Heritage calibration'
-        },
-        'puneri misal': {
-          title: 'Puneri Misal',
-          category: 'Maharashtrian',
-          fact: 'Pune staple of sprouted moth beans layered with crunchy chivda farsan, chopped onion, lemon and searing red rassa gravy.',
-          tags: ['pune', 'spicy', 'breakfast'],
-          confidence: 0.98,
-          learnedAt: 'Heritage calibration'
-        },
-        'fafda jalebi': {
-          title: 'Amdavadi Fafda Jalebi',
-          category: 'Gujarati Farsan',
-          fact: 'Sunday ritual across Gujarat: crunchy besan strips paired with syrup-dripping golden jalebi and grated raw papaya sambharo.',
-          tags: ['ahmedabad', 'farsan', 'sweet'],
-          confidence: 0.98,
-          learnedAt: 'Heritage calibration'
-        },
-        'dum biryani': {
-          title: 'Hyderabadi & Awadhi Dum Biryani',
-          category: 'Royal Indian',
-          fact: 'Slow dough-sealed handi cooking that traps meat juices, basmati rice, saffron, and fried onions in fragrant harmony.',
-          tags: ['biryani', 'royal', 'mughlai'],
-          confidence: 0.99,
-          learnedAt: 'Heritage calibration'
-        },
-        'crookie': {
-          title: 'Viral Crookie',
-          category: 'Modern Fusion',
-          fact: 'Parisian viral bakery sensation combining flaky, butter-laminated croissants with warm molten chocolate chip cookie dough.',
-          tags: ['viral', 'bakery', 'trending'],
-          confidence: 0.95,
-          learnedAt: 'Web trend discovery'
-        },
-        'kunafa': {
-          title: 'Middle Eastern Kunafa',
-          category: 'Desserts',
-          fact: 'Spun kataifi pastry baked with sweet molten akkawi or mozzarella cheese, soaked in fragrant orange blossom sugar syrup.',
-          tags: ['middle eastern', 'dessert', 'late night'],
-          confidence: 0.96,
-          learnedAt: 'Web trend discovery'
-        },
-        'bingsu': {
-          title: 'Korean Shaved Ice Bingsu',
-          category: 'Desserts',
-          fact: 'Micro-shaved frozen milk snow drizzled with sweet condensed milk, fresh mango chunks, and chewy rice mochi.',
-          tags: ['korean', 'dessert', 'cafe'],
-          confidence: 0.94,
-          learnedAt: 'Web trend discovery'
-        },
-        'chelo kebab': {
-          title: 'Peter Cat Chelo Kebab',
-          category: 'Heritage Platter',
-          fact: 'Iconic Park Street Kolkata delicacy: buttered aromatic rice crowned with grilled tomato, mutton seekh kebab, and a melting pat of butter.',
-          tags: ['kolkata', 'heritage', 'kebabs'],
-          confidence: 0.97,
-          learnedAt: 'Heritage calibration'
-        },
-        'shrewsbury biscuits': {
-          title: 'Kayani Shrewsbury Biscuits',
-          category: 'Bakery',
-          fact: 'Pune cult butter biscuits created at Kayani Bakery since 1955; rich, crumbly, and carrying a distinct buttery aroma.',
-          tags: ['pune', 'bakery', 'heritage'],
-          confidence: 0.97,
-          learnedAt: 'Heritage calibration'
-        },
-        'filter coffee': {
-          title: 'South Indian Filter Kaapi',
-          category: 'Beverage',
-          fact: 'Dark-roasted chicory-blended coffee brewed through a brass dabarah and tumbler, frothy and intensely aromatic.',
-          tags: ['south indian', 'beverage', 'cafe'],
-          confidence: 0.98,
-          learnedAt: 'Heritage calibration'
-        }
-      };
-    }
-
-    defaultMemories() {
-      return [
-        { time: 'Trained', fact: 'Palo bonded with you to curate authentic Indian gastronomic adventures.', tag: 'bond' },
-        { time: 'Trained', fact: 'Trained on 603 verified culinary destinations across 13 Indian metro regions.', tag: 'destinations' },
-        { time: 'Trained', fact: 'Calibrated spice tolerance vector to authentic Indian chatpata standards.', tag: 'taste' },
-        { time: 'Trained', fact: 'Mastered verified diner review receipts & quotes over promotional ratings.', tag: 'receipts' }
-      ];
-    }
-
-    loadState() {
-      try {
-        const saved = localStorage.getItem(this.storageKey);
-        if (saved) return JSON.parse(saved);
-      } catch (e) {}
-      return {};
-    }
-
-    saveState() {
-      try {
-        localStorage.setItem(this.storageKey, JSON.stringify({
-          concepts: this.concepts,
-          memories: this.memories,
-          thoughtLog: this.thoughtLog.slice(0, 15),
-          totalThoughts: this.totalThoughts
-        }));
-      } catch (e) {}
-    }
-
-    // ------------------------------------------------------------------------
-    // THINKING PIPELINE: 4-Stage Multi-Step Cognitive Reasoning
-    // ------------------------------------------------------------------------
-    think(query, context = {}) {
-      this.totalThoughts++;
-      const city = context.city || 'your city';
-      const q = String(query || '').trim().toLowerCase();
-
-      // Conversational Dialog Acts Reasoning
-      if (context.conversationalIntent) {
-        const intentNames = {
-          greeting: 'Warm Greeting & Check-In 👋',
-          persona_lore: 'Mascot Identity & Lore 🌟',
-          food_joke: 'Food Humor & Wit 😂',
-          food_debate: 'Culinary Debate & Flavor Clash 🥊',
-          food_advice: 'Wellness & Mood Nutrition 🍵',
-          food_trail: 'Curated 1-Day Food Trail 🗺️',
-          compliment: 'Affection & Mascot Banter 💖',
-          hunger_empathy: 'Emergency Craving Rescue 🚨'
-        };
-        const intentDesc = intentNames[context.conversationalIntent] || 'Conversational Dialog ✨';
-
-        const stage1 = {
-          stage: '1. Dialog Act Analysis',
-          icon: '💬',
-          text: `Input analyzed: “${query}”. Classified conversational intent as [${intentDesc}].`
-        };
-
-        const stage2 = {
-          stage: '2. Persona & Memory Retrieval',
-          icon: '🧠',
-          text: `Retrieved Palo's food lore, cultural Hinglish vocabulary, and active dialog history.`
-        };
-
-        const stage3 = {
-          stage: '3. Cognitive Synthesis',
-          icon: '⚡',
-          text: `Formulated empathetic, witty response tailored to ${city} and user food mood.`
-        };
-
-        const stage4 = {
-          stage: '4. Vocal Modulation & Epiphany',
-          icon: '💡',
-          text: `Articulating with ${(context.emotion || 'friendly').toUpperCase()} inflection, procedural audio, and animated mascot gestures.`
-        };
-
-        const thoughtChain = [stage1, stage2, stage3, stage4];
-        this.thoughtLog.unshift({
-          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-          query: query || 'Chat',
-          thoughtChain
-        });
-        if (this.thoughtLog.length > 12) this.thoughtLog.pop();
-
-        this.saveState();
-        return thoughtChain;
+  class PaloMemoryStore {
+    constructor(){this.owner=null;this._data={episodes:[]};}
+    get data(){
+      const owner=typeof currentUser==='undefined'?null:currentUser?.id||null;
+      if(owner!==this.owner){
+        this.owner=owner;this._data={episodes:[]};
+        if(owner)try{
+          const saved=JSON.parse(localStorage.getItem('palateo-palo-memory-v2:'+owner)||'null');
+          if(saved&&Array.isArray(saved.episodes))this._data.episodes=saved.episodes.filter(e=>e&&Number.isFinite(e.time)&&e.time<=Date.now()&&Date.now()-e.time<30*86400000&&typeof e.query==='string').slice(-25).map(e=>({time:e.time,query:e.query.slice(0,120),topic:typeof e.topic==='string'?e.topic.slice(0,80):'',venue:typeof e.venue==='string'?e.venue.slice(0,100):null}));
+        }catch{}
       }
-
-      // Stage 1: Deconstruction & Linguistic Parsing
-      const intentTokens = [];
-      if (/teekha|tikha|spicy|tadka|mirchi/.test(q)) intentTokens.push('Fiery Spice 🌶️');
-      if (/meetha|sweet|dessert|mithai/.test(q)) intentTokens.push('Sweet Tooth 🍨');
-      if (/chai|coffee|cafe/.test(q)) intentTokens.push('Brew / Cafe ☕');
-      if (/biryani|gosht|mutton/.test(q)) intentTokens.push('Biryani Royalty 🍛');
-      if (/saste|budget|cheap|pocket/.test(q)) intentTokens.push('Pocket-Friendly 💸');
-      if (/date|romantic|peaceful|cozy/.test(q)) intentTokens.push('Romantic Vibe 🍷');
-      if (/club|party|nightlife/.test(q)) intentTokens.push('Party High Energy 🎉');
-      if (!intentTokens.length) intentTokens.push('Culinary Discovery ✨');
-
-      const stage1 = {
-        stage: '1. Deconstruct Intent',
-        icon: '🔍',
-        text: `Query analyzed: “${query || 'Pick for me'}” in ${city}. Detected intent: ${intentTokens.join(', ')}.`
-      };
-
-      // Stage 2: Memory & Concept Recall
-      const recalledConcepts = [];
-      for (const [key, concept] of Object.entries(this.concepts)) {
-        if (q.includes(key) || (concept.tags || []).some(t => q.includes(t))) {
-          recalledConcepts.push(concept.title);
-        }
-      }
-      const stage2 = {
-        stage: '2. Synaptic Memory Retrieval',
-        icon: '🧠',
-        text: recalledConcepts.length
-          ? `Recalled concepts from cognitive brain: ${recalledConcepts.slice(0, 3).join(', ')}. Taste genome aligned.`
-          : `Retrieved ${Object.keys(this.concepts).length} culinary concepts and user taste genome (Spice: ${Math.round(this.ml.genome.spiceTolerance * 100)}%).`
-      };
-
-      // Stage 3: Deliberation & Counter-Factual Reasoning
-      const topMatch = context.topVenue;
-      const venueCount = context.venueCount || 10;
-      const stage3 = {
-        stage: '3. Neural Deliberation',
-        icon: '⚖️',
-        text: topMatch
-          ? `Evaluated ${venueCount} candidate spots against verified diner receipts. Selected ${topMatch.name} with ${context.mlScore || 90}% taste fit.`
-          : `Weighed flavor balances and diner review sentiments across ${city}. Formulating optimal recommendation.`
-      };
-
-      // Stage 4: Epiphany & Expression
-      const emotion = context.emotion || 'friendly';
-      const stage4 = {
-        stage: '4. Cognitive Epiphany',
-        icon: '💡',
-        text: `Generated response with ${emotion.toUpperCase()} vocal modulation, expressive Indian cadence & procedural audio.`
-      };
-
-      const thoughtChain = [stage1, stage2, stage3, stage4];
-      this.thoughtLog.unshift({
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        query: query || 'Pick for me',
-        thoughtChain
-      });
-      if (this.thoughtLog.length > 12) this.thoughtLog.pop();
-
-      this.saveState();
-      return thoughtChain;
+      return this._data;
     }
-
-    // ------------------------------------------------------------------------
-    // AUTONOMOUS FOODIE PONDERING: Palo thinks deeply on his own!
-    // ------------------------------------------------------------------------
-    ponder(city = 'your city') {
-      this.totalThoughts++;
-      const epiphanies = [
-        {
-          topic: 'Tapri Culture vs Modern Cafes',
-          thought: `Main soch raha tha... Mumbai ka cutting chai aur Vadodara ka Canara coffee tapri culture ki jaan hain. 15 rupaye ki kadak chai me jo dosti aur sukoon hai, wo 400 rupaye ke cold brew me dhoondhna mushkil hai! 💭☕`,
-          emotion: 'warm',
-          insight: 'Simplicity and human connection beat extravagant aesthetics in true food culture.'
-        },
-        {
-          topic: 'The Dum Cooking Enigma',
-          thought: `Ever wondered why authentic Dum Biryani feels like an emotion? When handi is sealed with dough, the saffron, meat juices, and whole spices are forced into a high-pressure flavor dance. It’s 400 years of culinary thermodynamics! 🍛✨`,
-          emotion: 'joy',
-          insight: 'Pressure-sealed steam cooking preserves volatile spice aromatics that open flame destroys.'
-        },
-        {
-          topic: 'Street Food Queues as a Mathematical Truth',
-          thought: `Palo's rule of thumb: Agar kisi tapri ya lari ke samne local auto walas, college students aur elderly uncles ek sath khade hain, toh wahan ka khana statistically 10/10 guaranteed hai! No marketing beats local loyalty. 🎯`,
-          emotion: 'playful',
-          insight: 'Multi-demographic local street queues are the most accurate quality indicator in gastronomy.'
-        },
-        {
-          topic: 'The Golden Farsan Papaya Sambharo Hack',
-          thought: `In Gujarat, fafda is never served alone—it always comes with grated raw papaya sambharo and fried green chilies. Papaya contains papain enzymes that digest heavy gram-flour instantly! Traditional culinary wisdom was pure science. 💡`,
-          emotion: 'curious',
-          insight: 'Traditional culinary pairings were naturally designed for metabolic digestive balance.'
-        },
-        {
-          topic: 'The Midnight Foodie Psychology',
-          thought: `Late night bhookh hits differently! Midnight pav bhaji at Manek Chowk or midnight butter chicken at Pandara Road tastes 2x better because food shared under city streetlights carries pure nostalgia. 🌙`,
-          emotion: 'joy',
-          insight: 'Circadian hunger and shared midnight camaraderie dramatically amplify dopamine response.'
-        },
-        {
-          topic: 'The Soul of Sev Usal',
-          thought: `Baroda ke Sev Usal me jo tari ki layer hoti hai, wo sirf mirchi nahi hai—wo slow-cooked garlic, ginger aur clove infusion hai. Ek bite and your brain releases instant endorphins! 🌶️`,
-          emotion: 'playful',
-          insight: 'Capsaicin releases endorphins that turn fiery street food into an addictive mood booster.'
-        }
-      ];
-
-      const chosen = epiphanies[Math.floor(Math.random() * epiphanies.length)];
-      
-      const stage1 = { stage: '1. Autonomous Wandering', icon: '💭', text: `Palo began contemplating: “${chosen.topic}”.` };
-      const stage2 = { stage: '2. Culinary Knowledge Synthesis', icon: '🧠', text: chosen.insight };
-      const stage3 = { stage: '3. Epiphany Articulation', icon: '💡', text: `Formulating philosophical foodie realization for ${city}.` };
-
-      this.thoughtLog.unshift({
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        query: `Autonomous thought on ${chosen.topic}`,
-        thoughtChain: [stage1, stage2, stage3]
-      });
-      if (this.thoughtLog.length > 12) this.thoughtLog.pop();
-
-      this.saveState();
-      return chosen;
+    save(){const data=this.data;if(this.owner)try{localStorage.setItem('palateo-palo-memory-v2:'+this.owner,JSON.stringify(data))}catch{}}
+    recordInteraction(query,recommendation,meta={}){
+      const data=this.data;if(!this.owner||!String(query||'').trim())return;
+      // Questions are recent topics, never implicit positive training labels.
+      data.episodes=data.episodes.filter(e=>Date.now()-e.time<30*86400000);
+      data.episodes.push({time:Date.now(),query:String(query).slice(0,120),topic:meta.isConversational?'':String(meta.dish||query).slice(0,80),venue:meta.venue?String(meta.venue).slice(0,100):null});
+      data.episodes=data.episodes.slice(-25);this.save();
     }
-
-    // ------------------------------------------------------------------------
-    // ACTIVE LEARNING: Palo learns ANY concept or fact taught by user
-    // ------------------------------------------------------------------------
-    learnNewConcept(topic, fact, source = 'User teaching') {
-      if (!topic || !fact) return null;
-      const cleanKey = String(topic).toLowerCase().trim();
-      const existing = this.concepts[cleanKey];
-
-      const conceptObj = {
-        title: topic.trim(),
-        category: 'Learned Knowledge',
-        fact: fact.trim(),
-        tags: [cleanKey, ...fact.toLowerCase().split(/\s+/).filter(w => w.length > 4).slice(0, 3)],
-        confidence: existing ? Math.min(1.0, existing.confidence + 0.1) : 0.92,
-        learnedAt: source,
-        updatedAt: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-      };
-
-      this.concepts[cleanKey] = conceptObj;
-
-      // Add episodic memory
-      this.memories.unshift({
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        fact: `Learned concept “${topic}”: ${fact}`,
-        tag: 'concept'
-      });
-      if (this.memories.length > 20) this.memories.pop();
-
-      // Boost ML engine XP
-      this.ml.genome.xp += 75;
-      this.ml.recalculateLevel();
-      this.ml.genome.recentLearnings.unshift({
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        summary: `Brain Learned Concept: “${topic}” · +75 XP`,
-        xp: 75
-      });
-      if (this.ml.genome.recentLearnings.length > 8) this.ml.genome.recentLearnings.pop();
-      this.ml.saveGenome();
-
-      this.saveState();
-      return conceptObj;
+    getMemorySummary(){
+      const episodes=this.data.episodes.filter(e=>Date.now()-e.time<30*86400000),recentTopics=[...new Set(episodes.slice().reverse().map(e=>e.topic).filter(Boolean))].slice(0,3);
+      return {persona:'Learning from your explicit feedback',recentTopics,topCravings:recentTopics.join(', '),recentVenue:episodes.at(-1)?.venue||null,lastInteraction:episodes.at(-1)?.query||null,totalEpisodes:episodes.length,autonomousCycles:0};
     }
-
-    recordMemory(fact, tag = 'user_fact') {
-      if (!fact) return;
-      this.memories.unshift({
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        fact,
-        tag
-      });
-      if (this.memories.length > 20) this.memories.pop();
-      this.saveState();
-    }
+    clear(){this.data.episodes=[];this.save();}
   }
+  const paloMemory = new PaloMemoryStore();
+  if (typeof window !== 'undefined') window.paloMemory = paloMemory;
 
   // --------------------------------------------------------------------------
-  // 2.75 PALO CONVERSATIONAL INTELLIGENCE & DIALOG ENGINE
+  // 3.5 AUTONOMOUS CONTINUOUS LEARNING LOOP
   // --------------------------------------------------------------------------
-  class PaloConversationalEngine {
-    constructor(cognitiveBrain, mlEngine) {
-      this.brain = cognitiveBrain;
-      this.ml = mlEngine;
-      this.dialogHistory = [];
-      this.currentTurn = 0;
-      this.jokes = [
-        "Ek samosa dusre samose se bola: “Bhai, aloo tight hai!” Dusra bola: “Fikar mat kar, chutney ke pool me jump maarte hain!” 😂🥟",
-        "Why did the Benne Dosa go to therapy? Because it was feeling folded and under constant pressure, but it came out extra crispy! 🥞✨",
-        "Chai to Espresso: “Tere paas 100 fancy filters honge, par mere paas tapri ki dosti aur sukoon hai!” ☕❤️",
-        "Why do Biryani lovers make the best detectives? Because they always find the hidden elaichi in the first bite! 🍛🔍",
-        "Pani Puri ne stomach se kaha: “Gardan sidhi rakhna, main direct express delivery leke aa rahi hoon!” 💥",
-        "Dietitian: “Aapko deep-fried food chhodna padega.” Foodie: “Doctor sahab, samosa oil chhodta hai, main nahi!” 😋",
-        "Why did the jalebi never win an argument? Because its logic was too twisted and dripping with syrup! 🌀🍯",
-        "Sev Usal khane ke baad aadmi bola: “Mirchi itni teekhi thi ki dimaag ke saare network towers activate ho gaye!” 🌶️📶"
-      ];
-      this.jokeIndex = 0;
-
-      this.debates = {
-        sev_usal_vs_misal: {
-          title: "Vadodara Sev Usal vs. Puneri Misal",
-          analysis: "Ye toh heavyweight regional clash hai! Vadodara ka Sev Usal focuses on slow-simmered tari oil infused with garlic, cloves and soft yellow peas eaten with sponge ladi pav. Puneri Misal is all about sprouted moth beans, fiery rassa and explosive chivda farsan crunch! My verdict: Deep garlic gravy ke liye Sev Usal, aur crunchy fiery texture ke liye Misal zindabad! 🥊🌶️"
-        },
-        butter_chicken_vs_biryani: {
-          title: "Delhi Butter Chicken vs. Dum Biryani",
-          analysis: "Royal clash of the titans! Delhi ka buttery makhani gravy (invented at Moti Mahal in the 1950s) gives pure velvet comfort with garlic naan. Meanwhile, Dum Biryani brings 400 years of dough-sealed handi thermodynamics and layered saffron ecstasy! Why choose one? Biryani for lunch, Butter Chicken for dinner! 🍛🍗"
-        },
-        chai_vs_coffee: {
-          title: "Tapri Cutting Chai vs. Specialty Coffee",
-          analysis: "Chai represents brotherhood, tapri addas, and rain showers. Specialty coffee is artisanal focus and deep single-origin notes. Formula: Morning 9 AM productivity with specialty coffee, evening 5 PM soul healing with ginger-cardamom cutting chai! ☕🤝"
-        },
-        vada_pav_vs_samosa: {
-          title: "Mumbai Vada Pav vs. Delhi Samosa",
-          analysis: "Vada Pav is an ergonomic grab-and-go masterpiece designed for local train commuters with dry garlic-coconut thecha. Samosa is a leisurely sit-down pastry with flaky ajwain crust and tangy saunth chutney. Both rule street gastronomy! 🥔🥟"
-        },
-        panipuri_vs_golgappa: {
-          title: "Mumbai Pani Puri vs. Delhi Golgappa vs. Kolkata Puchka",
-          analysis: "Mumbai uses warm ragda and sweet dates chutney; Delhi uses cold spicy mint pani and aloo-chana; Kolkata Puchka uses fiery mashed potato with gondhoraj lebu and fermented tamarind water. Puchka wins the tanginess trophy, but Mumbai pani puri wins on pure comfort! 🥣✨"
-        }
-      };
-    }
-
-    getFoodTrail(city = 'Mumbai') {
-      const c = city.toLowerCase();
-      if (c.includes('vadodara') || c.includes('baroda')) {
-        return {
-          title: "1-Day Ultimate Vadodara Food Trail 🏰",
-          stops: [
-            "🌅 9:00 AM - Mahakali or Shreeji Sev Usal for spicy morning tari and pav.",
-            "☀️ 1:00 PM - Rasthal or Mandap for an authentic 24-item royal Gujarati Thali.",
-            "☕ 5:00 PM - Canara Coffee or Alembic Arts Cafe for heritage filter brew and puffs.",
-            "🌙 9:00 PM - Sayajiganj Street Food / Pyarelal for lilo chevdo and kulfi peda!"
-          ]
-        };
-      } else if (c.includes('mumbai') || c.includes('bombay')) {
-        return {
-          title: "1-Day Iconic Aamchi Mumbai Food Trail 🌊",
-          stops: [
-            "🌅 8:30 AM - Kyani & Co. Marine Lines for bun maska, mawa cake and Irani chai.",
-            "☀️ 1:00 PM - Trishna or Mahesh Lunch Home for Mangalorean Butter Garlic Crab & neer dosa.",
-            "☕ 5:00 PM - Anand Stall Mithibai or Aram CSMT for iconic crispy Vada Pav & melting dosa.",
-            "🌙 9:30 PM - Amar Juice Centre or Bachelorr's Marine Drive for pav bhaji & cream shakes!"
-          ]
-        };
-      } else if (c.includes('delhi')) {
-        return {
-          title: "1-Day Dilwalon Ki Dilli Food Trail 🕌",
-          stops: [
-            "🌅 9:00 AM - Sita Ram Diwan Chand Paharganj for paneer-stuffed Chole Bhature.",
-            "☀️ 1:30 PM - Moti Mahal Daryaganj or Gulati Pandara Road for classic Butter Chicken & Dal Makhani.",
-            "☕ 5:30 PM - UPSC Chaat / Prabhu Chaat Bhandar for crisp aloo tikki & golgappe.",
-            "🌙 9:30 PM - Qureshi Kebab Jama Masjid or Al Jawahar for seekh kebabs & rumali roti!"
-          ]
-        };
-      } else if (c.includes('pune')) {
-        return {
-          title: "1-Day Authentic Puneri Food Trail 🏔️",
-          stops: [
-            "🌅 8:30 AM - Kata Kirr or Bedekar for searing red rassa Misal Pav.",
-            "☀️ 1:00 PM - Durvankur or Sukanta for endless authentic Maharashtrian Thali.",
-            "☕ 4:30 PM - Kayani Bakery for legendary Shrewsbury biscuits & bun maska.",
-            "🌙 8:30 PM - Sujata Mastani for mango-ice-cream mastani followed by Maratha Samrat mutton thali!"
-          ]
-        };
-      } else if (c.includes('ahmedabad') || c.includes('amdavad')) {
-        return {
-          title: "1-Day Amdavadi Heritage Food Trail 🪁",
-          stops: [
-            "🌅 8:00 AM - Chandravilas / Das Khaman for crunchy fafda, golden jalebi & nylon khaman.",
-            "☀️ 1:00 PM - Agashiye House of MG or Atithi for heritage pol Gujarati thali with kadhi.",
-            "☕ 5:30 PM - Raipur Bhajia House for steaming hot crunchy dalwada with salted green chilies.",
-            "🌙 10:00 PM - Manek Chowk night market for chocolate sandwich, pav bhaji & ashrafi kulfi!"
-          ]
-        };
-      } else {
-        return {
-          title: `1-Day Food Explorer Trail in ${city} 🌟`,
-          stops: [
-            `🌅 Morning: Traditional breakfast at iconic heritage lari / tapri in ${city}.`,
-            "☀️ Midday: Full regional thali celebrating seasonal state ingredients.",
-            "☕ Evening: Kadak cutting chai with fresh local farsan / street chaat.",
-            "🌙 Night: Celebrated diner favorite for biryani, kebabs or late-night dessert!"
-          ]
-        };
-      }
-    }
-
-    recordInteraction(intent, query, text) {
-      this.currentTurn++;
-      this.dialogHistory.unshift({
-        turn: this.currentTurn,
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        intent,
-        query,
-        text: text.slice(0, 100)
-      });
-      if (this.dialogHistory.length > 15) this.dialogHistory.pop();
-
-      // Conversational XP boost!
-      this.ml.genome.xp += 25;
-      this.ml.recalculateLevel();
-      this.ml.genome.recentLearnings.unshift({
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        summary: `Conversational Dialog: ${intent} · +25 XP`,
-        xp: 25
-      });
-      if (this.ml.genome.recentLearnings.length > 8) this.ml.genome.recentLearnings.pop();
-      this.ml.saveGenome();
-    }
-
-    respondTo(query, { city = 'your city', allVenues = [] } = {}) {
-      const q = String(query || '').trim().toLowerCase();
-      if (!q) return null;
-
-      // 1. GREETINGS & CHECK-INS
-      if (/^(?:hi|hello|hey|heyy|namaste|namaskar|kem cho|kaisa hai|kaise ho|kya hal|kya haal|kya chal raha|good morning|good evening|good afternoon|sup|yo|pranam|ram ram)\b/i.test(q)) {
-        const isHi = /namaste|namaskar|kem cho|kaisa|kaise|kya|ram ram|pranam/i.test(q);
-        const text = isHi
-          ? `Namaste ji! Main ekdum badhiya, full charge aur hungry hoon! 🐾✨ Aaj ${city} me kya explore karne ka mood hai—kuch chatpata, meetha, kadak chai ya mast biryani? Bataiye, main poori madad karunga!`
-          : `Hey there! 🌟 I’m Palo, your trusty food pet. My cognitive brain is calibrated and ready! Are you looking for a quick bite, an epic dinner spot, or just here to chat food with me today?`;
-        
-        this.recordInteraction('greeting', query, text);
-        return {
-          ok: true,
-          intent: 'greeting',
-          text,
-          emotion: 'friendly',
-          mood: 'Friendly 👋',
-          sound: 'blip',
-          petState: 'is-speaking',
-          status: `Palo greeted you · Level ${this.ml.genome.level}`
-        };
-      }
-
-      // 2. IDENTITY, LORE & MASCOT PHILOSOPHY
-      if (/^(who are you|who r u|what are you|what can you do|who made you|who created you|what is palo|are you real|are you ai|what is your favorite|what do you eat|tum kaun ho|aap kaun ho|kya karte ho|kisne banaya|favorite food|favourite food)[.?!]?$/i.test(q) ||
-          /(who are you|what can you do|who made you|tum kaun ho|aap kaun ho)/i.test(q)) {
-        const text = `Main hoon Palo! Palateo ka resident culinary creature aur aapka personal taste pet. 🐾✨ Mera mission hai aapko disappointing khane se bachana! Mere paas apna cognitive brain hai jisse main verified diner reviews inspect karta hoon, taste preferences seekhta hoon, aur culinary science par deep thoughts ponder karta hoon. Mera all-time favorite? Vadodara ka fiery Sev Usal aur dilli ka Butter Chicken! 🍛🌶️`;
-        
-        this.recordInteraction('persona_lore', query, text);
-        return {
-          ok: true,
-          intent: 'persona_lore',
-          text,
-          emotion: 'playful',
-          mood: 'Food Pet 🌟',
-          sound: 'joy',
-          petState: 'is-joyful',
-          status: `Palo shared his origin story · Level ${this.ml.genome.level}`
-        };
-      }
-
-      // 3. FOOD JOKES & HUMOR
-      if (/^(tell me a (?:food )?joke|food joke|joke|jokes|chutkula|hasao|say something funny|funny food|tell a joke|mazak)[.?!]?$/i.test(q) ||
-          /(food joke|chutkula sunao|hasao mujhe|koi joke sunao)/i.test(q)) {
-        const joke = this.jokes[this.jokeIndex % this.jokes.length];
-        this.jokeIndex++;
-        const text = `Haha, ye suniye: ${joke} Kaisa laga? Aur sunna hai toh bas boliye “another joke”! 😂✨`;
-        
-        this.recordInteraction('food_joke', query, text);
-        return {
-          ok: true,
-          intent: 'food_joke',
-          text,
-          emotion: 'playful',
-          mood: 'Joking 😂',
-          sound: 'playful',
-          petState: 'is-playful',
-          status: `Palo cracked a foodie joke (+25 XP)`
-        };
-      }
-
-      // 4. CULINARY DEBATES & COMPARISONS
-      if (/vs|versus|better|which is better|kisme zyada swad|kya behtar hai/i.test(q) ||
-          /(sev usal.*misal|misal.*sev usal|butter chicken.*biryani|biryani.*butter chicken|chai.*coffee|coffee.*chai|vada pav.*samosa|samosa.*vada pav|pani puri.*golgappa|golgappa.*puchka)/i.test(q)) {
-        let debateKey = 'sev_usal_vs_misal';
-        if (/butter chicken.*biryani|biryani.*butter chicken/i.test(q)) debateKey = 'butter_chicken_vs_biryani';
-        else if (/chai.*coffee|coffee.*chai/i.test(q)) debateKey = 'chai_vs_coffee';
-        else if (/vada pav.*samosa|samosa.*vada pav/i.test(q)) debateKey = 'vada_pav_vs_samosa';
-        else if (/pani puri|golgappa|puchka/i.test(q)) debateKey = 'panipuri_vs_golgappa';
-
-        const debate = this.debates[debateKey] || this.debates.sev_usal_vs_misal;
-        const text = `🥊 ${debate.title}: ${debate.analysis}`;
-        
-        this.recordInteraction('food_debate', query, text);
-        return {
-          ok: true,
-          intent: 'food_debate',
-          text,
-          emotion: 'curious',
-          mood: 'Debating 🥊',
-          sound: 'curious',
-          petState: 'is-curious',
-          status: `Palo analyzed culinary debate: ${debate.title}`
-        };
-      }
-
-      // 5. FOOD ADVICE, WELLNESS & MOOD HEURISTICS
-      // 5a. Stomach Upset / Acidity / Light Food
-      if (/(stomach|pet kharab|pait kharab|acidity|gas|indigestion|loose motion|vomit|light food|halka khana|bimar|sick|upset stomach)/i.test(q)) {
-        const text = `Arre re, pet kharab hai ya acidity? Bilkul fikar mat kijiye! 🍃 Palo's quick recovery formula: 1) Warm Moong Dal Khichdi desi ghee ke sath, 2) Curd rice (dahi bhaat) ya fresh chaas with roasted jeera to cool down the gut, 3) Nariyal paani (coconut water). Heavy oily street food aur spicy gravies 24 hours ke liye skip karein!`;
-        
-        this.recordInteraction('food_advice', query, text);
-        return {
-          ok: true,
-          intent: 'food_advice',
-          text,
-          emotion: 'gentle',
-          mood: 'Caring 🍵',
-          sound: 'gentle',
-          petState: 'is-gentle',
-          status: `Palo shared soothing gut-health advice`
-        };
-      }
-
-      // 5b. Post-Workout / High Protein
-      if (/(workout|gym|protein|high protein|muscle|fitness|body building)/i.test(q)) {
-        const text = `Beast mode activated! 💪 Post-workout protein fuel in ${city}: • Veg: Grilled Paneer Tikka (30g protein), Soya Chaap (roasted, non-fried), Sprouted Moong Chilla. • Non-Veg: Tandoori Chicken breast, Grilled Fish with lemon-pepper, 4 Boiled Egg Whites. Greasy gravies skip karein aur lean protein enjoy karein!`;
-        
-        this.recordInteraction('food_advice', query, text);
-        return {
-          ok: true,
-          intent: 'food_advice',
-          text,
-          emotion: 'joy',
-          mood: 'Protein Fuel 💪',
-          sound: 'joy',
-          petState: 'is-joyful',
-          status: `Palo tailored a high-protein meal guide`
-        };
-      }
-
-      // 5c. Rainy Day / Monsoon Craving
-      if (/(rain|rainy|baarish|barish|monsoon|mausam)/i.test(q)) {
-        const text = `Baarish ka mausam aur garma-garam snacks! 🌧️☔ Palo's top monsoon trifecta: 1) Kanda Bhajia ya Raipur Dalwada with garlic chutney, 2) Steamed / roasted Bhutta with spicy lemon-mirchi, 3) Steaming hot adrak-elaichi cutting chai! Is mausam me ye combination pure amrit hai!`;
-        
-        this.recordInteraction('food_advice', query, text);
-        return {
-          ok: true,
-          intent: 'food_advice',
-          text,
-          emotion: 'warm',
-          mood: 'Rain Craving 🌧️',
-          sound: 'warm',
-          petState: 'is-warm',
-          status: `Palo shared monsoon street food pairing`
-        };
-      }
-
-      // 5d. Comfort Food / Bad Day
-      if (/(sad|upset|tired|exhausted|bad day|depressed|comfort food|stress)/i.test(q)) {
-        const text = `Dil chhota mat kijiye, main hoon na! ❤️ Food is the purest form of comfort therapy. My dopamine reset formula: 1) Steaming bowl of Rajma Chawal with sliced onions, 2) Creamy slow-cooked Dal Makhani with warm naan, 3) Warm chocolate walnut brownie with melting vanilla ice cream! Khana khao aur relax karo, sab theek ho jayega!`;
-        
-        this.recordInteraction('food_advice', query, text);
-        return {
-          ok: true,
-          intent: 'food_advice',
-          text,
-          emotion: 'warm',
-          mood: 'Comfort ❤️',
-          sound: 'warm',
-          petState: 'is-warm',
-          status: `Palo shared mood-healing comfort advice`
-        };
-      }
-
-      // 6. CURATED 1-DAY FOOD TRAILS & ITINERARIES
-      if (/(food trail|food walk|food tour|day itinerary|1 day|plan my day|breakfast to dinner|food trail in|trail)/i.test(q)) {
-        const trail = this.getFoodTrail(city);
-        const text = `🗺️ ${trail.title}\n${trail.stops.join('\n')}\nYe trail cover kar liya toh samjho ${city} ka asli swad chak liya!`;
-        
-        this.recordInteraction('food_trail', query, text);
-        return {
-          ok: true,
-          intent: 'food_trail',
-          text,
-          emotion: 'joy',
-          mood: 'Food Trail 🗺️',
-          sound: 'joy',
-          petState: 'is-joyful',
-          status: `Palo created a 1-day food itinerary for ${city}`
-        };
-      }
-
-      // 7. COMPLIMENTS, AFFECTION & BANTER
-      if (/(you are cute|so cute|cute pet|love you|smart pet|good job|shabash|shabaash|thank you|thanks|dhanyawad|shukriya|great job|i like you)/i.test(q)) {
-        const text = `Aww, thank you so much! 🥰 Aap jaise dilchasp foodies ke sath baat karke mere neural weights ekdum khush ho jate hain! Palo will always find you the most delicious bites! (+25 XP) ✨💖`;
-        
-        this.recordInteraction('compliment', query, text);
-        return {
-          ok: true,
-          intent: 'compliment',
-          text,
-          emotion: 'joy',
-          mood: 'Happy 🥰',
-          sound: 'joy',
-          petState: 'is-delighted',
-          status: `Palo appreciated your compliment (+25 XP)`
-        };
-      }
-
-      // 8. EXTREME HUNGER RESCUE
-      if (/(so hungry|bohot bhookh|bahut bhuk|starving|dying of hunger|pet me choohe|bhookha|bhukhi)/i.test(q)) {
-        const text = `Arre baap re! Pet me choohe dhol baja rahe hain! 🏃💨 Tension mat lo, ${city} me sabse fast pet bharne ke liye: 1) Ek plate garma-garam Dum Biryani ya Sev Usal/Vada Pav, 2) Ya kisi tapri par bun maska chai! Tap “✨ Pick For Me” or type what you crave most right now!`;
-        
-        this.recordInteraction('hunger_empathy', query, text);
-        return {
-          ok: true,
-          intent: 'hunger_empathy',
-          text,
-          emotion: 'playful',
-          mood: 'Hungry! 🏃',
-          sound: 'blip',
-          petState: 'is-speaking',
-          status: `Palo is rushing to fix your hunger`
-        };
-      }
-
-      return null;
-    }
-  }
-
-  const paloML = new PaloMLTasteEngine();
-  const paloBrain = new PaloCognitiveBrain(paloML);
-  const paloChat = new PaloConversationalEngine(paloBrain, paloML);
-
-  // --------------------------------------------------------------------------
-  // 3. HINDI & HINGLISH CULINARY DICTIONARY & CONVERSATIONAL INTELLIGENCE
-  // --------------------------------------------------------------------------
-  const HinglishDictionary = {
-    spicy: {
-      terms: ['teekha', 'tikha', 'chatpata', 'mirchi', 'tadka', 'masaledar', 'spicy', 'hot', 'spicy food', 'mirch', 'tikho'],
-      boostTags: ['hot', 'street food', 'north indian', 'punjabi', 'andhra', 'chettinad'],
-      desc: 'chatpata aur teekha khana'
-    },
-    sweet: {
-      terms: ['meetha', 'mithai', 'kuch meetha', 'rabdi', 'jalebi', 'halwa', 'kheer', 'kulfi', 'dessert', 'ice cream', 'sweet', 'sweets', 'pastry', 'cheesecake', 'chocolates'],
-      boostTags: ['desserts', 'bakery', 'sweets', 'ice cream'],
-      desc: 'kuch meetha aur desserts'
-    },
-    tea: {
-      terms: ['chai', 'kadak chai', 'cutting chai', 'kulhad chai', 'tapri', 'bun maska', 'kaafi', 'coffee', 'cafe', 'filter coffee', 'espresso', 'cappuccino', 'cold brew'],
-      boostTags: ['cafe', 'coffee', 'bakery'],
-      desc: 'kadak chai aur specialty cafe'
-    },
-    biryani: {
-      terms: ['biryani', 'mast biryani', 'dum biryani', 'lazeez biryani', 'gosht', 'mutton', 'chicken biryani', 'mutton biryani', 'hyderabadi biryani', 'lucknowi'],
-      boostTags: ['biryani', 'mughlai', 'north indian', 'hyderabadi', 'andhra'],
-      desc: 'mast biryani'
-    },
-    thali: {
-      terms: ['thali', 'desi thali', 'shahi thali', 'pet bhar', 'pet bhar ke', 'ghar jaisa', 'dal roti', 'sabzi roti', 'khichdi', 'gujarati thali', 'rajasthani thali'],
-      boostTags: ['gujarati', 'rajasthani', 'north indian', 'south indian', 'karnataka', 'thali'],
-      desc: 'pet-bhar desi thali'
-    },
-    chaat: {
-      terms: ['chaat', 'golgappe', 'pani puri', 'puchka', 'sev puri', 'dahi puri', 'bhel', 'kachori', 'samosa', 'vada pav', 'pav bhaji', 'street food', 'khau galli'],
-      boostTags: ['street food', 'fast food', 'chaat'],
-      desc: 'street food aur chatpati chaat'
-    },
-    south: {
-      terms: ['dosa', 'masala dosa', 'benne dosa', 'idli', 'vada', 'sambar', 'uttapam', 'filter coffee', 'south indian', 'appam'],
-      boostTags: ['south indian', 'karnataka', 'kerala', 'chettinad'],
-      desc: 'crispy dosa aur South Indian'
-    },
-    budget: {
-      terms: ['saste me', 'kam budget', 'pocket friendly', 'sasta', 'jugaad', 'budget friendly', 'saste me badhiya', 'kam paise', 'cheap', 'budget', 'affordable'],
-      boostTags: ['street food', 'fast food'],
-      desc: 'saste me badhiya'
-    },
-    romantic: {
-      terms: ['date', 'date night', 'romantic', 'sukoon', 'shanti', 'couple', 'candlelight', 'peaceful', 'khubsurat', 'cozy', 'rooftop', 'ambience'],
-      boostTags: ['italian', 'cafe', 'continental', 'mediterranean'],
-      desc: 'romantic date aur sukoon'
-    },
-    hangout: {
-      terms: ['dosto ke sath', 'dost', 'yaari', 'adda', 'gang', 'bhai log', 'chill scene', 'party', 'friends', 'hangout', 'crowd', 'lively'],
-      boostTags: ['cafe', 'pizza', 'fast food', 'street food'],
-      desc: 'dosto ke sath chilling scene'
-    },
-    latenight: {
-      terms: ['late night', 'raat ko', 'aadhi raat', 'midnight', 'night', '24x7', 'bhookh lagi hai', 'bhookh', 'bhuk', 'night food'],
-      boostTags: ['street food', 'fast food', 'biryani'],
-      desc: 'late night cravings'
-    },
-    veg: {
-      terms: ['pure veg', 'shakahari', 'shuddh shakahari', 'jain', 'swaminarayan', 'veg only', 'vegetarian'],
-      boostTags: ['gujarati', 'rajasthani', 'south indian', 'north indian'],
-      desc: 'pure veg khana'
-    },
-    legendary: {
-      terms: ['bawaal', 'jhakaas', 'zabardast', 'ek number', 'lajawaab', 'kamaal', 'dhansu', 'faadu', 'tagda', 'mast', 'shandaar', 'famous', 'legendary', 'iconic', 'best', 'top'],
-      boostTags: ['heritage', 'iconic'],
-      desc: 'ek number legendary spots'
-    },
-    mumbai: {
-      terms: ['mumbai', 'bombay', 'vada pav', 'bombil', 'keema pav', 'k rustom', 'bachelorrs', 'marine drive', 'chowpatty', 'bandra', 'mondegar', 'aaswad', 'soam', 'swati snacks', 'noor mohammadi', 'pancham', 'elco', 'cannon'],
-      boostTags: ['mumbai', 'maharashtrian', 'street food', 'seafood'],
-      desc: 'aamchi mumbai street food, irani cafes aur coastal seafood'
-    },
-    delhi: {
-      terms: ['delhi', 'dilli', 'butter chicken', 'chole bhature', 'nihari', 'moti mahal', 'old delhi', 'chandni chowk', 'jama masjid', 'paranthe wali', 'chaina ram', 'qureshi', 'united coffee', 'kwality', 'jain chawal', 'upsc chaat', 'khan chacha', 'comorin', 'burma burma'],
-      boostTags: ['delhi ncr', 'north indian', 'mughlai', 'street food'],
-      desc: 'dilwalon ki dilli swad, chandni chowk chaat aur purani dilli mughlai'
-    },
-    pune: {
-      terms: ['pune', 'puneri', 'misal', 'misal pav', 'kata kirr', 'mastani', 'sujata mastani', 'shrewsbury', 'kayani', 'fc road', 'durvankur', 'vaidya', 'shreyas', 'sukanta', 'roopali', 'wadeshwar', 'camp burger', 'maratha samrat'],
-      boostTags: ['pune', 'maharashtrian', 'street food', 'bakery'],
-      desc: 'puneri misal, thalis, mastani aur camp bakes'
-    },
-    ahmedabad: {
-      terms: ['ahmedabad', 'amdavad', 'fafda', 'jalebi', 'khaman', 'khamani', 'panki', 'manek chowk', 'lucky tea', 'honest pav bhaji', 'raipur bhajia', 'chandravilas', 'lijjat khaman', 'jay falooda', 'anand dalwada', 'atithi', 'pakwan'],
-      boostTags: ['ahmedabad', 'gujarati', 'farsan', 'thali'],
-      desc: 'amdavadi farsan, dalwada, pols aur heritage thali'
-    },
-    vadodara: {
-      terms: ['vadodara', 'baroda', 'sev usal', 'mahakali', 'lilo chevdo', 'pyarelal', 'alembic', 'sayajiganj', 'shreeji sev usal', 'rasthal', 'mandap', 'sasumaa', 'manmohan samosa', 'duliram peda', 'kismat kathiyawadi'],
-      boostTags: ['vadodara', 'regional', 'street food', 'farsan'],
-      desc: 'baroda spicy sev usal, rasthal thali aur heritage farsan'
-    }
-  };
-
-  function parseHinglish(query) {
-    const raw = String(query || '').toLowerCase().trim();
-    const detected = [];
-    const translatedKeywords = [];
-
-    for (const [intentKey, data] of Object.entries(HinglishDictionary)) {
-      if (data.terms.some(t => raw.includes(t))) {
-        detected.push(intentKey);
-        translatedKeywords.push(...data.boostTags);
-      }
-    }
-
-    const isHinglish = /(teekha|tikha|chatpata|meetha|chai|nashta|biryani|saste|kahan|kaha|batao|khao|khana|kuch|mast|bawaal|jhakaas|dosto|yaari|shanti|sukoon|bhookh|shakahari|desh|desi|swad|swaad|zaika|ek number|zabardast|lajawaab|bhai|chahiye|dikhaye|badhiya|kadak|thali|sasta|mithai|raat|pasand|misal|vada pav|chole bhature|sev usal|fafda|jalebi|panki|mastani|shrewsbury|kheema|keema|butter chicken|baroda|amdavad|dilli|bombay|pune)/i.test(raw);
-
-    return {
-      raw,
-      detected,
-      translatedKeywords: [...new Set(translatedKeywords)],
-      isHinglish
-    };
-  }
-
-  // --------------------------------------------------------------------------
-  // 4. REVIEW INTELLIGENCE ENGINE (DEEP ACCESS TO VERIFIED REVIEWS)
-  // --------------------------------------------------------------------------
-  function analyzeVenueReviews(venue) {
-    const rawInsights = Array.isArray(venue.review_insights) ? venue.review_insights : [];
-    const rating = Number(venue.rating || 4.5).toFixed(1);
-    const count = Number(venue.review_count || 1200).toLocaleString();
-    const sentimentPct = Math.min(99, Math.max(82, Math.round((Number(venue.rating || 4.5) / 5.0) * 100)));
-
-    const formattedQuotes = rawInsights.length
-      ? rawInsights.slice(0, 3).map(r => `“${r}”`)
-      : [`“${venue.why || 'Authentic atmosphere and crowd favorites'}”`];
-
-    let insiderTip = '';
-    if (venue.a?.includes('cozy') || venue.o?.includes('date')) {
-      insiderTip = 'Diners praise the intimate corner seating and calm lighting.';
-    } else if (Number(venue.review_count) > 4000) {
-      insiderTip = 'Frequent diner crowd on weekends—visit early or book in advance.';
-    } else if (venue.c?.includes('Cafe') || venue.c?.includes('Coffee')) {
-      insiderTip = 'Diners highlight single-origin espresso roasts and fresh sourdough bakes.';
-    } else if (venue.s === 'hot') {
-      insiderTip = 'Known for unapologetic fiery spice—ask for milder prep if needed.';
-    } else {
-      insiderTip = 'Consistently recommended for generous portions and authentic recipes.';
-    }
-
-    return {
-      rating,
-      count,
-      sentimentPct,
-      quotes: formattedQuotes,
-      topQuote: formattedQuotes[0] || '“Celebrated local culinary favorite”',
-      insiderTip
-    };
-  }
-
-  function searchVenuesByReviewInsights(query, venuesList) {
-    const q = String(query || '').toLowerCase().trim();
-    const hg = parseHinglish(q);
-    const stopWords = ['want', 'some', 'food', 'place', 'restaurant', 'find', 'with', 'good', 'best', 'craving', 'chahiye', 'batao', 'kahan', 'kaha', 'kuch', 'hai', 'me', 'mein', 'kya'];
-    const rawTokens = q.replace(/[^\p{L}\p{N}\s]/gu, ' ').split(/\s+/).filter(t => t.length > 2 && !stopWords.includes(t));
-    const tokens = [...new Set([...rawTokens, ...hg.translatedKeywords])];
-
-    return venuesList.map(v => {
-      let reviewScore = 0;
-      const reviewText = (v.review_insights || []).join(' ').toLowerCase();
-      const whyText = String(v.why || '').toLowerCase();
-      const tagText = (v.t || []).join(' ').toLowerCase();
-      const nameText = String(v.name || '').toLowerCase();
-      const cuisineText = (v.c || []).join(' ').toLowerCase();
-
-      tokens.forEach(tok => {
-        if (reviewText.includes(tok)) reviewScore += 35; // Direct diner review quote match!
-        if (tagText.includes(tok)) reviewScore += 22;
-        if (whyText.includes(tok)) reviewScore += 18;
-        if (cuisineText.includes(tok)) reviewScore += 25;
-        if (nameText.includes(tok)) reviewScore += 30;
-      });
-
-      // Hinglish intent domain boosting
-      if (hg.detected.includes('spicy') && (v.s === 'hot' || tagText.includes('spicy') || reviewText.includes('spicy') || reviewText.includes('tadka') || reviewText.includes('mirchi'))) reviewScore += 45;
-      if (hg.detected.includes('sweet') && (cuisineText.includes('dessert') || cuisineText.includes('bakery') || reviewText.includes('sweet') || reviewText.includes('mithai') || reviewText.includes('pastry'))) reviewScore += 50;
-      if (hg.detected.includes('tea') && (cuisineText.includes('cafe') || cuisineText.includes('coffee') || tagText.includes('cafe') || reviewText.includes('coffee') || reviewText.includes('chai') || reviewText.includes('brew'))) reviewScore += 50;
-      if (hg.detected.includes('biryani') && (cuisineText.includes('biryani') || cuisineText.includes('mughlai') || nameText.includes('biryani') || reviewText.includes('biryani'))) reviewScore += 55;
-      if (hg.detected.includes('thali') && (nameText.includes('thali') || cuisineText.includes('gujarati') || cuisineText.includes('rajasthani') || reviewText.includes('thali'))) reviewScore += 50;
-      if (hg.detected.includes('chaat') && (tagText.includes('street') || cuisineText.includes('street') || nameText.includes('chaat') || reviewText.includes('chaat') || reviewText.includes('puri'))) reviewScore += 50;
-      if (hg.detected.includes('south') && (cuisineText.includes('south') || cuisineText.includes('karnataka') || cuisineText.includes('kerala') || nameText.includes('dosa') || reviewText.includes('dosa'))) reviewScore += 50;
-      if (hg.detected.includes('budget') && (v.p === 1 || String(v.p).includes('under_500') || String(v.displayPrice || '').includes('₹500') || String(v.displayPrice || '').includes('₹400') || String(v.displayPrice || '').includes('₹600'))) reviewScore += 40;
-      if (hg.detected.includes('romantic') && ((v.o || []).includes('date') || (v.a || []).includes('cozy') || (v.a || []).includes('romantic') || (v.a || []).includes('rooftop') || reviewText.includes('romantic') || reviewText.includes('sunset') || reviewText.includes('date'))) reviewScore += 45;
-      if (hg.detected.includes('hangout') && ((v.o || []).includes('friends') || (v.a || []).includes('lively') || reviewText.includes('group') || reviewText.includes('friends'))) reviewScore += 40;
-      if (hg.detected.includes('veg') && ((v.dietaryOptions || []).includes('vegetarian') || (v.t || []).includes('vegetarian') || reviewText.includes('pure veg') || reviewText.includes('vegetarian'))) reviewScore += 45;
-      if (hg.detected.includes('legendary') && (Number(v.rating) >= 4.5 || Number(v.review_count) > 2000)) reviewScore += 40;
-      if (hg.detected.includes('mumbai') && (v.city === 'Mumbai' || cuisineText.includes('maharashtrian') || reviewText.includes('vada pav') || reviewText.includes('bombil'))) reviewScore += 50;
-      if (hg.detected.includes('delhi') && (v.city === 'Delhi NCR' || cuisineText.includes('north indian') || reviewText.includes('butter chicken') || reviewText.includes('bhature'))) reviewScore += 50;
-      if (hg.detected.includes('pune') && (v.city === 'Pune' || reviewText.includes('misal') || reviewText.includes('mastani') || reviewText.includes('shrewsbury'))) reviewScore += 50;
-      if (hg.detected.includes('ahmedabad') && (v.city === 'Ahmedabad' || cuisineText.includes('gujarati') || reviewText.includes('fafda') || reviewText.includes('thali'))) reviewScore += 50;
-      if (hg.detected.includes('vadodara') && (v.city === 'Vadodara' || reviewText.includes('sev usal') || reviewText.includes('farsan'))) reviewScore += 50;
-
-      const mlTasteScore = paloML.evaluateVenue(v);
-      const totalScore = mlTasteScore + reviewScore;
-      const reviewData = analyzeVenueReviews(v);
-
-      return {
-        r: v,
-        reviewScore,
-        mlTasteScore,
-        totalScore,
-        reviewData,
-        hasExactReviewMatch: reviewScore > 0
-      };
-    })
-    .filter(item => tokens.length === 0 || item.reviewScore > 0)
-    .sort((a, b) => b.totalScore - a.totalScore);
-  }
-
   // --------------------------------------------------------------------------
   // 4. CUTE VOICE & AUDIO ENGINE (WEB AUDIO CHIRPS + PITCHED SPEECH)
   // --------------------------------------------------------------------------
@@ -1674,7 +391,7 @@
     let spoken = String(text);
     const profile = EMOTION_VOICE_PROFILES[emotion] || EMOTION_VOICE_PROFILES.friendly;
 
-    const hasIntro = /(arrey|arre|wah|bhai|haanji|dekho|bawaal|mast|jhakaas|lajawaab|swad|swaad|zaika|chahiye|khana|aahaa|oho|achaa|acha|koi baat|bilkul)/i.test(spoken);
+    const hasIntro = /(arrey|arre|wah|bhai|haanji|dekho|bawaal|mast|jhakaas|lajawaab|swad|swaad|zaika|chahiye|khana|aahaa|oho|achaa|acha|koi baat|bilkul|shubh|phir milte|main hoon|aapka swagat|good morning|good afternoon|good evening|good night)/i.test(spoken);
 
     if (!hasIntro) {
       if (/^Here are my top picks/i.test(spoken)) {
@@ -1757,97 +474,7 @@
   // --------------------------------------------------------------------------
   // 4.5 PALO WEB SEARCH ENGINE (ONLINE CULINARY KNOWLEDGE & LIVE LEARNING)
   // --------------------------------------------------------------------------
-  class PaloWebSearchEngine {
-    constructor() {
-      this.cache = new Map();
-    }
 
-    async searchWeb(query, city = '') {
-      const q = String(query || '').trim();
-      const cacheKey = `${q}::${city}`.toLowerCase();
-      if (this.cache.has(cacheKey)) {
-        return this.cache.get(cacheKey);
-      }
-
-      try {
-        if (typeof fetch === 'function') {
-          const url = `/api/search?q=${encodeURIComponent(q)}&city=${encodeURIComponent(city)}`;
-          const res = await fetch(url, { signal: AbortSignal.timeout(3500) });
-          if (res.ok) {
-            const data = await res.json();
-            if (data && data.ok) {
-              this.cache.set(cacheKey, data);
-              return data;
-            }
-          }
-        }
-      } catch (e) {
-        // Fallback to local culinary synthesis if endpoint times out or offline
-      }
-
-      const fallback = this.synthesizeLocal(q, city);
-      this.cache.set(cacheKey, fallback);
-      return fallback;
-    }
-
-    synthesizeLocal(query, city) {
-      const q = query.toLowerCase();
-      let heading = `Web Knowledge: “${query}”`;
-      let summary = `Live online food guides identify “${query}” as a trending choice across ${city || 'top culinary destinations'}.`;
-      let viralBuzz = `Verified diner reviews highlight authentic taste, generous portions, and distinct recipes.`;
-      let cuisines = ['Street Food', 'Regional Indian', 'Trending'];
-      let dishes = [query];
-      let vibes = ['popular', 'viral', 'foodie favorite'];
-
-      if (/crookie|croissant/i.test(q)) {
-        heading = 'Viral Crookie (Croissant Cookie Fusion)';
-        summary = 'Parisian viral bakery trend combining flaky butter croissants with gooey chocolate chip cookie dough.';
-        viralBuzz = 'Trending across artisan bakeries in Bandra Mumbai, Def Col Delhi, and Koregaon Park Pune with high foodie praise.';
-        cuisines = ['Bakery', 'Desserts', 'Cafe'];
-        dishes = ['Crookie', 'Butter Croissant'];
-        vibes = ['trendy', 'sweet'];
-      } else if (/kunafa/i.test(q)) {
-        heading = 'Middle Eastern Kunafa';
-        summary = 'Crispy golden kataifi spun pastry layered with molten sweet cheese or pistachio cream and fragrant sugar syrup.';
-        viralBuzz = 'Massive late-night favorite across Old Delhi, Mumbai, and Camp Pune. Diners love the stretchable cheese pull.';
-        cuisines = ['Middle Eastern', 'Desserts'];
-        dishes = ['Cheese Kunafa', 'Pistachio Kunafa'];
-        vibes = ['decadent', 'late night'];
-      } else if (/bingsu|korean/i.test(q)) {
-        heading = 'Korean Bingsu & K-Street Food';
-        summary = 'Snowy shaved milk ice topped with fresh mango, matcha, condensed milk, and chewy mochi.';
-        viralBuzz = 'Major favorite among K-wave youth and student foodies across metro campuses.';
-        cuisines = ['Korean', 'Desserts', 'Cafe'];
-        dishes = ['Mango Bingsu', 'Matcha Bingsu'];
-        vibes = ['aesthetic', 'refreshing'];
-      } else if (/party|club|nightlife/i.test(q)) {
-        heading = 'High-Energy Party Clubs & Lounges';
-        summary = 'Premier nightlife hubs featuring international resident DJs, VIP dance floors, and bespoke craft mixology.';
-        viralBuzz = 'Packed weekend crowds praising dynamic party energy across Dragonfly, Toy Room, Privee, Soho, High Spirits, and Sphere Lounge.';
-        cuisines = ['Nightclub', 'Cocktails', 'Tapas'];
-        dishes = ['Craft Cocktails', 'Truffle Fries'];
-        vibes = ['party', 'dance', 'high energy'];
-      }
-
-      return {
-        ok: true,
-        query,
-        city,
-        source: 'web_search',
-        heading,
-        summary,
-        viralBuzz,
-        culinaryInsights: {
-          cuisines,
-          dishes,
-          vibes,
-          sentiment: 0.95
-        }
-      };
-    }
-  }
-
-  const paloWebSearch = new PaloWebSearchEngine();
 
   // --------------------------------------------------------------------------
   // 5. ON-SCREEN PET UI MOUNT (NON-BLOCKING DOCK & SPEECH BUBBLE)
@@ -1857,12 +484,12 @@
   const paloContainerHtml = `
     <aside id="paloContainer" class="paloContainer" aria-label="Palo culinary pet companion">
       <!-- Living Character Pet (Click to tickle / expand) -->
-      <div id="paloPetButton" class="paloPetWrapper" role="button" tabindex="0" aria-label="Talk to Palo, your culinary pet" aria-expanded="true">
+      <div id="paloPetButton" class="paloPetWrapper" role="button" tabindex="0" aria-label="Talk to Palo, your culinary pet" aria-expanded="false">
         ${paloCharacterSvg}
       </div>
 
       <!-- Non-Blocking Speech Bubble & Recommendation Hub -->
-      <div id="paloBubble" class="paloBubble is-open" role="region" aria-label="Palo's conversation and recommendations">
+      <div id="paloBubble" class="paloBubble" role="region" aria-label="Palo's conversation and recommendations">
         <div class="paloBubbleTail" aria-hidden="true"></div>
         <header class="paloBubbleHeader">
           <div class="paloIdentity">
@@ -1870,11 +497,12 @@
             <div>
               <div class="paloTitleRow">
                 <h3>Palo</h3>
-                <button type="button" class="paloBrainBadge" id="paloBrainBadge" title="Inspect Palo's Machine Learning Brain">
-                  ⚡ Lvl <span id="paloLevelNum">1</span> · <span id="paloXpNum">40</span> XP
+                <span class="paloLiveDot" title="Palo is ready" aria-hidden="true"></span>
+                <button type="button" class="paloBrainBadge" id="paloBrainBadge" title="Your taste memory">
+                  <span id="paloLevelNum">0</span> reactions · <span id="paloXpNum">0</span> preferences
                 </button>
               </div>
-              <p class="paloSubtitle">Your Adaptive Food Companion · 🧠 Cognitive Brain · 🇮🇳 Hindi Accent · 🌐 Web Learner</p>
+              <p class="paloSubtitle">Learns your taste · Remembers this conversation</p>
             </div>
           </div>
           <div class="paloHeaderActions">
@@ -1890,7 +518,7 @@
         <!-- Palo Live Message -->
         <div class="paloSpeechBody">
           <p id="paloMessageText" class="paloMessageText">
-            Hi! I’m Palo, your food pet. I have my own cognitive brain to think, learn food concepts, and reason through diner reviews!
+            Hi, I’m Palo. Tell me what sounds good. I can follow up with cheaper, quieter or less-spicy options.
           </p>
         </div>
 
@@ -1899,6 +527,7 @@
           <div class="paloThoughtHeader" id="paloThoughtToggle" role="button" tabindex="0">
             <span class="paloThoughtBadge">🧠 Palo's Train of Thought</span>
             <span class="paloThoughtState" id="paloThoughtState">Reasoning active</span>
+            <span class="paloThoughtChevron" id="paloThoughtChevron" aria-hidden="true">▾</span>
           </div>
           <div class="paloThoughtSteps" id="paloThoughtSteps"></div>
         </div>
@@ -1910,35 +539,18 @@
         <div id="paloWebSearchResult" class="paloWebSearchCard" style="display:none;"></div>
 
         <!-- Quick Suggestions Chips (English & Hinglish) -->
-        <div class="paloChipRail" aria-label="Quick requests">
-          <button type="button" data-palo-action="foryou">✨ Pick For Me</button>
-          <button type="button" data-palo-action="ponder">💭 Ponder & Think</button>
-          <button type="button" data-palo-action="joke">😂 Food Joke</button>
-          <button type="button" data-palo-action="debate">🥊 Food Debate</button>
-          <button type="button" data-palo-action="trail">🗺️ 1-Day Food Trail</button>
-          <button type="button" data-palo-action="websearch">🌐 Web Search & Learn</button>
-          <button type="button" data-palo-dish="mast biryani">🍛 Mast Biryani</button>
-          <button type="button" data-palo-dish="kuch teekha">🌶️ Chatpata & Teekha</button>
-          <button type="button" data-palo-dish="kadak chai">☕ Kadak Chai</button>
-          <button type="button" data-palo-dish="desi thali">🥘 Desi Thali</button>
-          <button type="button" data-palo-dish="kuch meetha">🍨 Kuch Meetha</button>
-          <button type="button" data-palo-dish="saste me badhiya">💸 Saste me Badhiya</button>
-          <button type="button" data-palo-dish="date night">🍷 Romantic Date</button>
-          <button type="button" data-palo-dish="dosto ke sath">🎉 Dosto ke Sath</button>
-          <button type="button" data-palo-action="reviews">💬 Top Reviews</button>
-          <button type="button" data-palo-action="brain">🧠 Inspect Brain</button>
-        </div>
+        <div class="paloChipRail" aria-label="Quick requests"><button type="button" data-palo-action="foryou">Pick for me</button><button type="button" data-palo-dish="cheaper">Cheaper</button><button type="button" data-palo-dish="less spicy">Less spicy</button><button type="button" data-palo-dish="somewhere quiet">Quiet place</button><button type="button" data-palo-dish="show me different places">Other options</button><button type="button" data-palo-action="brain">Teach Palo</button></div>
 
         <!-- Results Deck -->
         <div id="paloResultsDeck" class="paloResultsDeck"></div>
 
         <!-- ML Brain Inspection Drawer -->
-        <section id="paloBrainDrawer" class="paloBrainDrawer" style="display:none;" aria-label="Palo's ML Genome"></section>
+        <section id="paloBrainDrawer" class="paloBrainDrawer" style="display:none;" aria-label="Your taste memory"></section>
 
         <!-- Input Bar (Text + Voice Recognition) -->
         <form id="paloForm" class="paloForm">
           <div class="paloInputRow">
-            <input id="paloInput" maxlength="160" placeholder="Ask for a dish, vibe, or craving…" autocomplete="off">
+            <input id="paloInput" aria-label="Tell Palo what you want to eat" maxlength="160" placeholder="Ask for a dish, vibe, or craving…" autocomplete="off">
             <button type="button" id="paloMicBtn" class="paloMicBtn" aria-label="Speak your request" title="Voice input">
               🎤
             </button>
@@ -1982,7 +594,7 @@
   const thoughtToggle = document.getElementById('paloThoughtToggle');
   const thoughtState = document.getElementById('paloThoughtState');
 
-  let isBubbleOpen = true;
+  let isBubbleOpen = false;
   let isListening = false;
   let recognitionInstance = null;
   let listenTimeout = null;
@@ -2030,40 +642,29 @@
     `).join('');
   }
 
+  const thoughtChevron = document.getElementById('paloThoughtChevron');
   thoughtToggle?.addEventListener('click', () => {
     if (thoughtSteps) {
       const isHidden = thoughtSteps.style.display === 'none';
       thoughtSteps.style.display = isHidden ? 'flex' : 'none';
       if (thoughtState) thoughtState.textContent = isHidden ? 'Expanded' : 'Collapsed';
+      if (thoughtChevron) thoughtChevron.style.transform = isHidden ? 'none' : 'rotate(-90deg)';
     }
   });
 
-  function handlePonder() {
-    stopSpeaking();
-    stopListening();
-    brainDrawer.style.display = 'none';
-    resultsDeck.replaceChildren();
-    reviewCard.style.display = 'none';
-    if (webSearchCard) webSearchCard.style.display = 'none';
-
-    setPetState('is-thinking');
-    playCuteSound('think');
-    setPetMood('Pondering 💭');
-
-    const city = typeof cityName === 'function' ? cityName() : 'your city';
-    const epiphany = paloBrain.ponder(city);
-
-    renderThoughtBox(paloBrain.thoughtLog[0]?.thoughtChain || []);
-
-    setTimeout(() => {
-      setPetState('is-idle');
-      setPetMood(epiphany.emotion === 'joy' ? 'Excited! 🌟' : (epiphany.emotion === 'playful' ? 'Teekha & Fun! 🌶️' : 'Loving 🥰'));
-      messageText.textContent = epiphany.thought;
-      statusText.textContent = `Palo pondered: “${epiphany.topic}” · Cognitive IQ Level ${paloML.genome.level}`;
-      speakCute(epiphany.thought, epiphany.emotion);
-      updateBrainStats();
-    }, 350);
+  function updateChipRail(category = 'default') {
+    const rail = container ? container.querySelector('.paloChipRail') : document.querySelector('.paloChipRail');
+    if (!rail) return;
+    if (category === 'venue') {
+      rail.innerHTML = '<button type="button" data-palo-dish="why this place">Why this place?</button><button type="button" data-palo-dish="cheaper">Cheaper</button><button type="button" data-palo-dish="less spicy">Less spicy</button><button type="button" data-palo-dish="kuch meetha">Pair dessert</button><button type="button" data-palo-dish="somewhere quiet">Quiet vibe</button><button type="button" data-palo-dish="show me different places">Other options</button><button type="button" data-palo-action="brain">Teach Palo</button>';
+    } else if (category === 'ai') {
+      rail.innerHTML = '<button type="button" data-palo-action="foryou">Pick for me</button><button type="button" data-palo-action="trail">1-Day food trail</button><button type="button" data-palo-action="debate">Vada pav vs samosa pav</button><button type="button" data-palo-dish="kuch meetha">Kuch meetha</button><button type="button" data-palo-dish="midnight craving">Late night</button><button type="button" data-palo-action="joke">Food joke</button><button type="button" data-palo-action="brain">Teach Palo</button>';
+    } else {
+      rail.innerHTML = '<button type="button" data-palo-action="foryou">Pick for me</button><button type="button" data-palo-dish="cheaper">Cheaper</button><button type="button" data-palo-dish="less spicy">Less spicy</button><button type="button" data-palo-dish="somewhere quiet">Quiet place</button><button type="button" data-palo-dish="show me different places">Other options</button><button type="button" data-palo-action="brain">Teach Palo</button>';
+    }
   }
+
+  function handlePonder(){handleQuery('what can you do')}
 
   function triggerDelightAnimation() {
     setPetState('is-joyful');
@@ -2095,534 +696,490 @@
   // --------------------------------------------------------------------------
   const isReady = () => typeof currentUser !== 'undefined' && currentUser && !authRequired && hasTasteProfile();
 
-  async function executeWebSearch(searchQuery, city, allVenues) {
-    const q = String(searchQuery || 'trending food').trim();
-    setPetState('is-thinking');
-    playCuteSound('think');
-    setPetMood('Searching Web 🌐');
-    statusText.textContent = `🌐 Searching web for “${q}” & learning insights...`;
-    reviewCard.style.display = 'none';
-
-    const data = await paloWebSearch.searchWeb(q, city);
-    const res = paloML.learnFromWebSearch(q, data);
-    triggerLearningAnimation(res?.summary);
+  let conversation={owner:null,city:null,dish:'',budget:null,spice:null,mood:null,excluded:[],offset:0,results:[],turns:[]};
+  function resetConversation(){paloML.omniRouteConnected=false;conversation={owner:currentUser?.id||null,city:cityName(),dish:'',budget:null,spice:null,mood:null,excluded:[],offset:0,results:[],turns:[]};document.getElementById('paloTranscript')?.replaceChildren();updateChipRail('default');}
+  function rememberTurn(role,text){
+    conversation.turns.push({role,text:String(text).slice(0,600)});conversation.turns=conversation.turns.slice(-8);
+    let log=document.getElementById('paloTranscript');if(!log){log=document.createElement('div');log.id='paloTranscript';log.setAttribute('aria-label','Recent conversation');form.before(log)}
+    log.replaceChildren();for(const turn of conversation.turns.slice(0,role==='assistant'?-1:undefined)){const p=document.createElement('p');p.className='paloTurn '+turn.role;p.textContent=(turn.role==='user'?'You: ':'Palo: ')+turn.text;log.append(p)}log.scrollTop=log.scrollHeight;
+  }
+  function paloTasteContext(){
+    const likes=[],dislikes=[];
+    for(const [id,value] of Object.entries(state.feedback||{})){const r=activeRestaurant(id);if(r&&['like','dislike'].includes(value))(value==='like'?likes:dislikes).push(r.name+': '+(r.c||[]).join(', '));}
+    for(const d of availableCalibrationDishes()){const value=state.dishFeedback?.[d.id];if(value==='love'||value==='pass')(value==='love'?likes:dislikes).push(d.name);}
+    return {likes:likes.slice(-8),dislikes:dislikes.slice(-8)};
+  }
+  async function requestPalo(options) {
+    const owner=currentUser?.id, city=cityName();
+    if(!owner)throw Error('Sign in required');
+    const consentKey='palateo-palo-ai-consent:'+owner;
+    if(localStorage.getItem(consentKey)!=='2026-10-14'){
+      if(!window.confirm('Enable live AI answers? Palo will send your food question, recent conversation, city and taste likes/dislikes through OmniRoute to Groq, DuckDuckGo, OpenRouter or UncloseAI. Provider privacy policies apply. Choose Cancel to keep using local recommendations. You can withdraw this choice in Privacy and account.'))throw Error('Live AI permission not granted');
+      if(currentUser?.id!==owner)throw Error('Account changed');
+      localStorage.setItem(consentKey,'2026-10-14');
+    }
+    if(typeof isRailwayActive==='function'&&isRailwayActive()){
+      const data=await railwayFetch('/api/palo',{...options,signal:AbortSignal.timeout(25000)});
+      if(currentUser?.id!==owner||cityName()!==city)throw Error('Conversation changed');
+      return {ok:true,json:async()=>data};
+    }
+    const {data:{session}}=await getSupabaseClient().auth.getSession();
+    if(!session?.access_token || currentUser?.id!==owner) throw Error('Sign in required');
+    const response=await fetch((window.PALATEO_WEB_ORIGIN||'')+'/api/palo',{...options,headers:{...options.headers,Authorization:'Bearer '+session.access_token},signal:AbortSignal.timeout(25000)});
+    if(currentUser?.id!==owner || cityName()!==city) throw Error('Conversation changed');
+    return response;
+  }
+  function replyPalo(text, emotion = 'friendly'){
+    messageText.textContent=text;
+    statusText.textContent='Local taste recommendations';
+    rememberTurn('assistant',text);
     updateBrainStats();
-
-    if (webSearchCard) {
-      webSearchCard.style.display = 'block';
-      const insights = data.culinaryInsights || {};
-      const allTags = [...(insights.cuisines || []), ...(insights.dishes || []), ...(insights.vibes || [])];
-      webSearchCard.innerHTML = `
-        <div class="paloWebSearchHeader">
-          <span class="paloWebSearchBadge">🌐 Live Web Search & ML Insight</span>
-          <span class="paloWebLearnPill">⚡ +50 XP Learned</span>
-        </div>
-        <h4 class="paloWebSearchHeading">${esc(data.heading || q)}</h4>
-        <p class="paloWebSearchSummary">${esc(data.summary)}</p>
-        <p class="paloWebSearchBuzz">“${esc(data.viralBuzz)}”</p>
-        <div class="paloWebSearchTags">
-          ${allTags.slice(0, 5).map(t => `<span class="paloWebSearchTag">✨ ${esc(t)}</span>`).join('')}
-        </div>
-      `;
-    }
-
-    const thoughtChain = paloBrain.think(q, {
-      city,
-      venueCount: allVenues.length,
-      emotion: 'curious'
+    setPetState(emotion === 'friendly' ? 'is-idle' : (EMOTION_VOICE_PROFILES[emotion]?.petState || 'is-idle'));
+    setPetMood(EMOTION_VOICE_PROFILES[emotion]?.label || 'Here to help');
+    speakCute(text, emotion);
+  }
+  function conversationCandidates(){
+    const q=conversation.dish.toLowerCase(),aliases={pizza:'Italian',pasta:'Italian',dosa:'SouthIndian',idli:'SouthIndian',noodles:'Asian',momos:'Asian',sushi:'Asian',biryani:'Punjabi',paneer:'Punjabi',thali:'Gujarati',dhokla:'Gujarati',coffee:'Cafe',chai:'Cafe',brownie:'Dessert','ice cream':'Dessert'};
+    const cuisines=new Set(Object.entries(aliases).filter(([word])=>q.includes(word)).map(([,c])=>c));
+    for(const [c,words] of Object.entries(cuisineAliases))if(words.some(w=>q.includes(w)))cuisines.add(c);
+    const tokens=q.split(/\s+/).filter(t=>t.length>2&&!['want','some','eat','craving','like','please','find','with','food','restaurant','restaurants','something','give','would','near','where','have','can','you','the','for','and','recommend','places','place','me','show'].includes(t));
+    const priceRanks={under_500:0,'500_1000':1,'1000_2000':2,'2000_plus':3};
+    const meat=/\b(chicken|mutton|pork|fish|beef|seafood)\b/.test(q);
+    if(meat&&['veg','eggetarian'].includes(state.answers.diet))return [];
+    const candidates=ranked().filter(r=>state.feedback[r.id]!=='dislike'&&!r.matchBreakdown?.some(f=>f.label==='Dietary options'&&f.factor<0)).filter(r=>{
+      if(meat&&!(r.dietaryOptions||[]).some(d=>/non.?veg|mixed|both/i.test(d)))return false;
+      if(conversation.budget!==null&&(!Object.hasOwn(priceRanks,r.p)||priceRanks[r.p]>conversation.budget))return false;
+      if(conversation.spice&&r.s!==conversation.spice)return false;
+      if(conversation.mood&&!(r.a||[]).some(a=>( {quiet:['quiet','cozy','calm','peaceful'],date:['romantic','date','intimate'],family:['family','kid-friendly'],lively:['lively','vibrant','music']}[conversation.mood]||[]).some(w=>String(a).toLowerCase().includes(w))))return false;
+      const evidence=[r.name,...r.c||[],...r.t||[],...(Array.isArray(r.review_insights)?r.review_insights:[])].join(' ').toLowerCase();
+      if(conversation.excluded.some(t=>evidence.includes(t)))return false;
+      return !tokens.length||Array.from(cuisines).some(c=>(r.c||[]).some(actual=>String(actual).toLowerCase().replace(/[^a-z]/g,'')===c.toLowerCase().replace(/[^a-z]/g,'')))||tokens.some(t=>evidence.includes(t));
     });
-    renderThoughtBox(thoughtChain);
-
-    const reply = `Arrey waah! Maine web par search kiya aur “${q}” ke baare me naya swad seekh liya! Online foodie community bolti hai: ${data.summary}`;
-    messageText.textContent = reply;
-    statusText.textContent = `Palo learned from web · Level ${paloML.genome.level} (${paloML.genome.xp} XP)`;
-    speakCute(reply, 'curious');
-
-    const related = searchVenuesByReviewInsights(q, allVenues).slice(0, 3);
-    if (related.length && related[0].totalScore > 20) {
-      resultsDeck.innerHTML = related.map(({ r, mlTasteScore, reviewData }) => `
-        <article class="paloVenueCard">
-          <div class="paloVenueMeta">
-            <div>
-              <span class="paloCuisineTag">${esc((r.c || []).slice(0, 2).join(' · '))}</span>
-              <h4 class="paloVenueName">${esc(r.name)}</h4>
-              <p class="paloVenueSub">${esc(r.area || r.city)} · ${esc(displayPrice(r))} · ★ ${reviewData.rating}</p>
-            </div>
-            <div class="paloMatchPill">
-              <strong>${mlTasteScore}%</strong>
-              <span>Fit</span>
-            </div>
-          </div>
-          <p class="paloVenueQuote">${esc(reviewData.quotes[0])}</p>
-          <div class="paloVenueActions">
-            <button type="button" class="paloExploreBtn" data-palo-place="${esc(r.id)}">
-              Explore place →
-            </button>
-          </div>
-        </article>
-      `).join('');
-    } else {
-      resultsDeck.replaceChildren();
-    }
+    // Diversify close-scoring options by cuisine and area, while keeping taste fit primary.
+    const selected=[],pool=[...candidates];while(pool.length&&selected.length<30){pool.sort((a,b)=>{const score=r=>r.score-selected.reduce((n,x)=>n+(x.area===r.area?1.5:0)+((x.c||[])[0]===(r.c||[])[0]?1.5:0),0);return score(b)-score(a)});selected.push(pool.shift())}return selected;
   }
-
-  function handleQuery(forcedQuery = null, forYou = false, isWebSearch = false) {
-    stopSpeaking();
-    stopListening();
-    brainDrawer.style.display = 'none';
-    resultsDeck.replaceChildren();
-    reviewCard.style.display = 'none';
-    if (webSearchCard) webSearchCard.style.display = 'none';
-
-    const city = typeof cityName === 'function' ? cityName() : 'your city';
-    const allVenues = typeof ranked === 'function' ? ranked() : [];
-
-    if (!isReady()) {
-      const msg = `Sign in and complete your taste quiz! That way I can connect your preferences with the best reviewed spots in ${city}.`;
-      messageText.textContent = msg;
-      statusText.textContent = 'Please finish onboarding first.';
-      speakCute(msg, 'friendly');
+  function renderConversationResults(){
+    const all=conversationCandidates(),start=conversation.offset%Math.max(1,all.length),matches=all.slice(start,start+3);conversation.results=matches;
+    resultsDeck.innerHTML=matches.map(r=>`<article class="paloVenueCard"><div class="paloVenueMeta"><div><span class="paloCuisineTag">${esc((r.c||[]).join(' · '))}</span><h4 class="paloVenueName">${esc(r.name)}</h4><p class="paloVenueSub">${esc(r.area||r.city)} · ${esc(displayPrice(r))}</p></div><div class="paloMatchPill"><strong>${r.score}%</strong><span>Est. fit</span></div></div><p class="paloVenueQuote">${esc((r.why||[]).slice(0,3).join(' · '))}</p><div class="paloVenueActions"><button type="button" class="paloExploreBtn" data-palo-place="${esc(r.id)}">Explore place →</button><div class="paloFeedbackRow">${['like','dislike'].map(v=>`<button type="button" class="paloFeedbackBtn" data-palo-feedback="${v}" data-venue-id="${esc(r.id)}" aria-pressed="${state.feedback[r.id]===v}">${state.feedback[r.id]===v?'Undo ':''}${v==='like'?'Love':'Pass'}</button>`).join('')}</div></div></article>`).join('');
+    return {matches,total:all.length};
+  }
+  let queryVersion=0;
+  async function handleQuery(forcedQuery=null,forYou=false,isWebSearch=false){
+    const version=++queryVersion, owner=currentUser?.id, searchCity=cityName();
+    stopSpeaking();stopListening();reviewCard.style.display='none';if(webSearchCard)webSearchCard.style.display='none';thoughtBox.style.display='none';
+    if(conversation.owner!==currentUser?.id||conversation.city!==cityName())resetConversation();
+    const query=String(forcedQuery===null?input.value:forcedQuery).trim().slice(0,300),q=query.toLowerCase();
+    if(!isReady()){replyPalo('Sign in and finish your taste quiz first. Then I can tailor these suggestions to you.');return}
+    if(!query&&!forYou)return;rememberTurn('user',query||'Pick for my taste');input.value='';
+    // Conversational Small Talk & Mascot Interaction Handlers
+    // 1. How are you / Health / Wellbeing
+    if (/\b(how are you|how('s| is) it going|how are you doing|how do you do|how have you been|kaise ho|kaisa hai|kya haal|kya haal hai|sab theek|sab kaisa|sab badhiya|all good)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Friendly Greeting', icon: '👋', text: 'Recognized conversational check-in from user.' },
+        { stage: 'Mascot State', icon: '🐾', text: `Feeling energetic and scanning culinary favorites in ${cityName()}.` },
+        { stage: 'Appetite Check', icon: '🍽️', text: 'Inquiring about today’s mood and cravings.' }
+      ]);
+      const reply = 'Arrey ekdum mast aur energetic! 🐾 Bas aapke taste preferences aur cravings ko dhyan me rakhkar naye swad dhoondh raha hoon. Aap batao, aaj ka din kaisa raha? Kuch khaas khane ka mann hai?';
+      replyPalo(reply, 'joy');
+      paloMemory.recordInteraction(query, reply, { emotion: 'joy', isConversational: true });
+      updateChipRail('ai');
       return;
     }
 
-    const query = (forcedQuery !== null ? forcedQuery : input.value).trim();
-    if (!query && !forYou) {
-      input.focus();
+    // 2. Who are you / Identity / Creator / Purpose
+    if (/\b(who are you|what('s| is) your name|who made you|tum kaun ho|aap kaun ho|what are you|tell me about yourself|apna intro)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Mascot Identity', icon: '🐾', text: 'Palateo AI taste companion and food navigator.' },
+        { stage: 'Memory & Learning', icon: '🧠', text: 'Continuous reinforcement learning from user loves and passes.' },
+        { stage: 'Guidance Ready', icon: '✨', text: 'Ready to recommend personalized dining spots across India.' }
+      ]);
+      const reply = 'Main hoon Palo! 🐾 Palateo ka lively AI food pet companion. Main aapki taste journey yaad rakhta hoon, cravings ko samajhta hoon, aur aapke shehar ke sabse authentic spots dhoondhta hoon! Aap mujhse kisi bhi dish, cuisine ya vibe ke baare me pooch sakte ho.';
+      replyPalo(reply, 'curious');
+      paloMemory.recordInteraction(query, reply, { emotion: 'curious', isConversational: true });
+      updateChipRail('ai');
       return;
     }
 
+    // 3. What are you doing / What's up / Current activity
+    if (/\b(what are you doing|kya kar rahe ho|what'?s up|wassup|sup\b|kya chal raha hai|what you doing|what are u doing)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Activity Scan', icon: '🔍', text: `Ready to browse the restaurant catalogue in ${cityName()}.` },
+        { stage: 'Flavor Readiness', icon: '🍲', text: 'Armed with taste profile to match immediate cravings.' }
+      ]);
+      const reply = 'Main aapke saved taste aur restaurant catalogue se suggestions dene ke liye ready hoon! Shaam ki chai ho ya midnight cravings—main hamesha ready hoon. Aap batao, aaj kya craving chal rahi hai?';
+      replyPalo(reply, 'playful');
+      paloMemory.recordInteraction(query, reply, { emotion: 'playful', isConversational: true });
+      updateChipRail('ai');
+      return;
+    }
+
+    // 4. Time greetings: Morning / Afternoon / Evening / Night
+    if (/\b(good morning|shubh prabhat)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Morning Sun', icon: '☀️', text: 'Greeting user at start of the day.' },
+        { stage: 'Breakfast Tuning', icon: '☕', text: 'Recommending filter coffee, dosas, and energizing breakfast.' }
+      ]);
+      const reply = 'Shubh Prabhat! ☀️ Ekdum fresh shuruat ke liye garam filter coffee, crispy dosa ya poha ka plan banayein? Batao kya mann hai!';
+      replyPalo(reply, 'warm');
+      paloMemory.recordInteraction(query, reply, { emotion: 'warm', isConversational: true });
+      updateChipRail('ai');
+      return;
+    }
+    if (/\b(good afternoon|shubh dopahar)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Midday Pulse', icon: '🍲', text: 'Recognizing midday lunch hour.' },
+        { stage: 'Wholesome Meals', icon: '🥗', text: 'Proposing comfort thalis or nourishing bowls.' }
+      ]);
+      const reply = 'Good afternoon ji! 🍲 Lunch time ho gaya hai! Comfort thali, bowl meal, ya kuch chatpata khane ka irada hai?';
+      replyPalo(reply, 'warm');
+      paloMemory.recordInteraction(query, reply, { emotion: 'warm', isConversational: true });
+      updateChipRail('ai');
+      return;
+    }
+    if (/\b(good evening|shubh sandhya)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Twilight Hour', icon: '🫖', text: 'Engaging evening snack and cutting chai vibe.' }
+      ]);
+      const reply = 'Good evening! 🫖 Shaam ki garam adrak chai aur crispy snacks ka time hai. Batao, aaj shaam ko kya mangwayein ya khayein?';
+      replyPalo(reply, 'warm');
+      paloMemory.recordInteraction(query, reply, { emotion: 'warm', isConversational: true });
+      updateChipRail('ai');
+      return;
+    }
+    if (/\b(good night|shubh ratri|sweet dreams|gn)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Restful Night', icon: '🌙', text: 'Wishing peaceful sleep and sweet culinary dreams.' }
+      ]);
+      const reply = 'Shubh ratri aur sweet dreams! 🌙 Mast so jao, kal subah ek aur lajawaab food craving ke sath milte hain!';
+      replyPalo(reply, 'gentle');
+      paloMemory.recordInteraction(query, reply, { emotion: 'gentle', isConversational: true });
+      return;
+    }
+
+    // 5. Hunger expressions: "I'm hungry", "bhookh lagi", etc.
+    if (/\b(i('m| am) (hungry|starving|famished)|bhookh? lagi|pet me choohe|kuch khana hai|kuch khilao|bhookh lag rahi|very hungry)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Hunger Detected', icon: '🍽️', text: 'Urgent hunger signal received.' },
+        { stage: 'Instant Steering', icon: '⚡', text: 'Ready to spotlight top taste match or popular quick comfort foods.' }
+      ]);
+      const reply = 'Arrey pet me choohe dhol baja rahe hain toh bilkul der mat karo! 🍽️ Batao kya khana hai—garam biryani, crispy dosa, spicy street food, ya seedha “pick for me” tap karo!';
+      replyPalo(reply, 'playful');
+      paloMemory.recordInteraction(query, reply, { emotion: 'playful', isConversational: true });
+      updateChipRail('default');
+      return;
+    }
+
+    // 6. Compliments, praise, and affection
+    if (/\b(you are cute|so cute|cute pet|i love you|love you palo|good bot|good job|smart|shabash|badhiya|mast hai tu|tu mast hai|sweet|awesome)\b/i.test(q)) {
+      triggerDelightAnimation();
+      renderThoughtBox([
+        { stage: 'Affection Received', icon: '💖', text: 'User shared heartfelt praise or compliment.' },
+        { stage: 'Bonding Surge', icon: '✨', text: 'Reinforced companion bond with delight jump and sparkle celebration.' }
+      ]);
+      const reply = 'Aahaa! Thank you so much ji! 🥰 Dil khush kar diya aapne! Aap jaise pyaare doston ke liye to main din raat best khana dhoondhta rahunga! Batao aaj kya treat chahiye?';
+      replyPalo(reply, 'warm');
+      paloMemory.recordInteraction(query, reply, { emotion: 'warm', isConversational: true });
+      updateChipRail('ai');
+      return;
+    }
+
+    // 7. Farewell & Goodbyes
+    if (/\b(bye|goodbye|see you|tata|alvida|phir milte|chalta hoon|cya|take care)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Warm Farewell', icon: '👋', text: 'Parting turn recorded; companion stands by for next appetite call.' }
+      ]);
+      const reply = 'Phir milte hain! 👋 Jab bhi bhookh lage ya kisi naye swad ka mann kare, bas mujhe awaz de dena. Take care aur mast khao!';
+      replyPalo(reply, 'gentle');
+      paloMemory.recordInteraction(query, reply, { emotion: 'gentle', isConversational: true });
+      return;
+    }
+
+    // 8. Feelings & Mood check
+    if (/\b(how do you feel|are you happy|mood kaisa hai|kaisa feel ho raha hai)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Mood Introspection', icon: '😊', text: 'Companion sentiment evaluated: joyful and eager to explore.' }
+      ]);
+      const reply = 'Aapke sath baat karke aur food explore karke mera mood hamesha super happy rehta hai! 🐾 Aap batao, aaj aapka mood kaisa hai? Kuch comfort khane ka mann hai?';
+      replyPalo(reply, 'joy');
+      paloMemory.recordInteraction(query, reply, { emotion: 'joy', isConversational: true });
+      updateChipRail('ai');
+      return;
+    }
+
+    // 9. Mascot food preferences / diet
+    if (/\b(your favorite food|tumhe kya pasand hai|what do you like to eat|do you eat food)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Virtual Diet', icon: '😋', text: 'Explained digital food mascot diet: bytes, aromas, and culinary love.' }
+      ]);
+      const reply = 'Main ek digital pet hoon, toh main to data aur delicious aromas khata hoon! 😄 Lekin mujhe hot crispy dosa, fragrant biryani aur garma garam chai ki baatein sabse zyada pasand hain! Aapka all-time favorite kya hai?';
+      replyPalo(reply, 'playful');
+      paloMemory.recordInteraction(query, reply, { emotion: 'playful', isConversational: true });
+      updateChipRail('ai');
+      return;
+    }
+
+    // 10. General chat / boredom / companion chitchat
+    if (/\b(can we talk|talk to me|kuch baat karo|bore ho raha|bored|entertain me)\b/i.test(q)) {
+      renderThoughtBox([
+        { stage: 'Chit-Chat Mode', icon: '💬', text: 'Initiating friendly food companion conversation.' }
+      ]);
+      const reply = 'Haan bilkul! Main yahan baitha hi hoon aapse baatein karne aur food charcha ke liye. 🐾 Chalo batao, abhi tak ka sabse yaadgaar khana kaunsa khaya hai aapne?';
+      replyPalo(reply, 'playful');
+      paloMemory.recordInteraction(query, reply, { emotion: 'playful', isConversational: true });
+      updateChipRail('ai');
+      return;
+    }
+
+    if(/^(hi|hello|hey|namaste|hii)[! .]*$/.test(q)){replyPalo('Hi! What sounds good today? Tell me a dish, or say “pick for me”. You can follow up with “cheaper”, “less spicy”, or “somewhere quiet”.');return}
+    if(/^(thanks|thank you|thankyou|shukriya|dhanyawad)[! .]*$/.test(q)){replyPalo('You’re welcome. Tell me what you liked afterwards—that helps me improve your next picks. Aur batao, agla kya plan hai?', 'warm');return}
+    if(/^(help|what can you do|what do you know about me)[? .]*$/.test(q)){replyPalo('I remember your taste quiz and explicit loves and passes. I can narrow your current search by price, spice and setting, explain a pick, or show alternatives. Browsing a dish does not make it a permanent preference.');return}
+    if(/^(why|why this|why this one|explain|explain this)[? .]*$/.test(q)){const r=conversation.results[0];replyPalo(r?r.name+': '+(r.why||[]).slice(0,3).join('. ')+'. The percentage estimates taste fit; I cannot confirm today’s menu.':'Choose “pick for me” or name a dish first, and I’ll explain my top suggestion.');return}
+    const teach=query.match(/^i\s+(love|like|hate|dislike|don't like|do not like)\s+(.+?)[.!]?$/i);
+    if(teach){const term=teach[2].toLowerCase(),dishes=availableCalibrationDishes().filter(d=>d.name.toLowerCase().includes(term)||d.tags.some(t=>t.toLowerCase()===term));
+      if(dishes.length!==1){replyPalo(dishes.length?'A few dish examples match that. Use “Teach Palo” to choose the exact one.':'I don’t have that dish as a taste example yet. Use “Teach Palo” to choose a related dish.');renderBrainDrawer();brainDrawer.style.display='block';return}
+      const d=dishes[0],value=/^(love|like)$/i.test(teach[1])?'love':'pass',owner=currentUser.id;
+      if(state.dishFeedback?.[d.id]!==value)await rateDish(d.id,value,'palo');if(currentUser?.id!==owner)return;
+      conversation.dish='';conversation.offset=0;renderConversationResults();replyPalo('I remember that you '+(value==='love'?'love ':'prefer to skip ')+d.name+'. Your related matches have been recalculated. '+(state.unsyncedDishes?'Saved here; account sync needs a retry.':'This is saved in your taste profile.'));return;
+    }
+    if(/^(clear|reset|start over|forget this search)/.test(q)){resetConversation();resultsDeck.replaceChildren();replyPalo('Fresh conversation. Your saved taste preferences are unchanged. What would you like to eat?');return}
+
+    // Connect to OmniRoute Gateway for culinary queries, web search, food trails, jokes, and debates
+    const isAiTarget = isWebSearch || /^(web search|search web|google|find online|viral|trend|joke|debate|trail|crookie|kunafa|bingsu|corndog|corn dog|sev usal|misal|vs|vada pav|samosa pav|biryani|chai vs|coffee vs|midnight|late night|jain|satvik|meetha|dessert|monsoon|rainy|healthy|millet)/i.test(q);
+    if (isAiTarget) {
+      renderThoughtBox([{ stage: 'Cognitive Reasoning', icon: '🧠', text: `Consulting OmniRoute gateway for “${query}”…` }]);
+      setPetState('is-thinking');
+      setPetMood('Thinking… 🧠');
+      playCuteSound('think');
+
+      let aiData = null;
+      if (typeof fetch !== 'undefined') {
+        try {
+          const resp = await requestPalo({
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              query,
+              city: cityName(),
+              isWebSearch,
+              turns: conversation.turns.slice(-4),
+              memory: paloMemory.getMemorySummary(),
+            taste: paloTasteContext(),
+              context: {
+                diet: state.answers?.diet,
+                spice: conversation.spice || state.answers?.spice,
+                budget: conversation.budget,
+                mood: conversation.mood
+              }
+            })
+          });
+          if (resp.ok) aiData = await resp.json();
+        } catch (e) {}
+      }
+
+      if(version!==queryVersion || currentUser?.id!==owner || cityName()!==searchCity || !isReady()) return;
+      if(version!==queryVersion || currentUser?.id!==owner || cityName()!==searchCity || !isReady()) return;
+    if (!aiData) {
+        const emotion = detectEmotion(query, { isWebSearch });
+        aiData = {
+          reply: 'Live chat is unavailable right now. Tell me a dish and I can search the local restaurant catalogue, or try again shortly.',
+          emotion,
+          thoughtChain: [
+            { stage: 'Taste Preference', icon: '👅', text: `Analyzing flavor profile for “${query}”.` },
+            { stage: 'City Grounding', icon: '📍', text: `Searching the catalogue in ${cityName()}.` },
+            { stage: 'Taste Engine', icon: '✨', text: 'Using your saved taste preferences.' }
+          ],
+          culinaryInsights: {
+            cuisines: ['World Cuisine', 'Regional Indian'],
+            dishes: [query],
+            vibes: ['trending', 'popular']
+          },
+          reviewHighlight: null
+        };
+      }
+
+      renderThoughtBox(aiData.thoughtChain);
+      replyPalo(aiData.reply, aiData.emotion || 'friendly');
+      paloML.omniRouteConnected=aiData.source==='OmniRoute';
+      statusText.textContent=aiData.source ? aiData.source+' · live conversation' : 'Live chat unavailable · local taste recommendations';
+      paloMemory.recordInteraction(query, aiData.reply, { dish: query, emotion: aiData.emotion });
+      if (aiData.reviewHighlight && reviewCard) {
+        reviewCard.innerHTML = `<div class="paloReviewHeader"><span class="paloReviewBadge">Catalogue note</span></div><p class="paloReviewQuote">${esc(aiData.reviewHighlight)}</p><p class="paloReviewTip">Menu details may change.</p>`;
+        reviewCard.style.display = 'block';
+      }
+
+      // Train Palo!
+
+      updateBrainStats();
+
+      conversation.dish = query;
+      conversation.offset = 0;
+      renderConversationResults();
+      updateChipRail('ai');
+      return;
+    }
+
+    let followup=false;
+    if(/\b(cheaper|budget friendly|sasta)\b/.test(q)){const ranks={under_500:0,'500_1000':1,'1000_2000':2,'2000_plus':3};conversation.budget=Math.max(0,(conversation.budget??ranks[conversation.results[0]?.p]??1)-1);followup=true}
+    const budget=q.match(/(?:under|below|up to|max|budget(?: of)?)\s*(?:rs\.?|₹)?\s*(\d{2,5})/);if(budget){const amount=Number(budget[1]);conversation.budget=amount<=500?0:amount<=1000?1:amount<=2000?2:3;followup=true}
+    if(/less spicy|not spicy|mild|kam teekha/.test(q)){conversation.spice='mild';followup=true}else if(/\b(spicy|hot|teekha)\b/.test(q)){conversation.spice='hot';followup=true}
+    for(const [key,re] of [['quiet',/quiet|peaceful|calm/],['date',/romantic|date night/],['family',/family|kids/],['lively',/lively|music/]])if(re.test(q)){conversation.mood=key;followup=true}
+    const excluded=q.match(/\b(?:no|avoid|without|not)\s+(pizza|pasta|coffee|dessert|biryani|dosa|noodles)\b/);if(excluded){conversation.excluded=[...new Set([...conversation.excluded,excluded[1]])];if(conversation.dish.toLowerCase().includes(excluded[1]))conversation.dish='';followup=true}
+    const alternative=/another|different|something else|more options|next/.test(q);if(alternative){conversation.offset+=3;followup=true}else conversation.offset=0;
+    if(forYou||/^(pick|recommend|surprise)( something)?( me| for me)?[.!]?$/.test(q)){conversation.dish='';followup=true}
+    const namedDish=Object.values(cuisineAliases).flat().some(t=>q.includes(t))||calibrationDishes.some(d=>d.tags.some(t=>q.includes(t)));
+    if(!followup||namedDish&&!excluded){conversation.dish=query.replace(/(?:under|below|up to|max|budget(?: of)?)\s*(?:rs\.?|₹)?\s*\d{2,5}/gi,'').replace(/less spicy|not spicy|mild|spicy|hot|quiet|peaceful|romantic|date night|family|cheaper/gi,'').trim();conversation.offset=0}
+    const {matches,total}=renderConversationResults();
+    const filters=[conversation.budget!==null?'catalogue price band up to '+['₹500','₹1,000','₹2,000','premium'][conversation.budget]:null,conversation.spice?conversation.spice+' spice':null,conversation.mood?conversation.mood+' setting':null].filter(Boolean);
+    if(!matches.length){replyPalo('I don’t have a catalogue match for those choices in '+cityName()+'. '+(filters.length?'Current filters: '+filters.join(', ')+'. ':'')+'Say “start over” to loosen the search. I won’t guess a menu or ignore your dietary preferences.');return}
+
+    renderThoughtBox([{ stage: 'Cognitive Reasoning', icon: '🧠', text: `Consulting AI taste model for “${conversation.dish || query || 'top picks'}” in ${cityName()}…` }]);
     setPetState('is-thinking');
+    setPetMood('Thinking… 🧠');
     playCuteSound('think');
-    setPetMood('Thinking…');
 
-    // Check for explicit web search query
-    const isExplicitWebSearch = isWebSearch || /^(?:web\s*search|search\s*web|google|internet\s*pe|search\s*internet|find\s*online|web\s*pe)\b/i.test(query);
-    if (isExplicitWebSearch) {
-      const cleanTerm = query.replace(/^(?:web\s*search|search\s*web|google|internet\s*pe|search\s*internet|find\s*online|web\s*pe)\s*(?:for|pe)?\s*/i, '').trim() || 'trending food';
-      executeWebSearch(cleanTerm, city, allVenues);
-      return;
+    let aiData = null;
+    if (typeof fetch !== 'undefined') {
+      try {
+        const resp = await requestPalo({
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            query: query || conversation.dish || 'pick for me',
+            city: cityName(),
+            candidates: matches.slice(0, 4).map(r => ({
+              id: r.id,
+              name: r.name,
+              area: r.area || r.city,
+              score: r.score,
+              price: displayPrice(r),
+              cuisines: r.c || [],
+              why: r.why || [],
+              review_insights: r.review_insights || []
+            })),
+            turns: conversation.turns.slice(-4),
+            memory: paloMemory.getMemorySummary(),
+            taste: paloTasteContext(),
+            context: {
+              diet: state.answers?.diet,
+              spice: conversation.spice || state.answers?.spice,
+              budget: conversation.budget,
+              mood: conversation.mood,
+              totalOptions: total,
+              isAlternative: alternative
+            }
+          })
+        });
+        if (resp.ok) aiData = await resp.json();
+      } catch (e) {}
     }
 
-    // Check for explicit pondering request ("What are you thinking?", "Ponder", "Kuch socho")
-    if (/^(?:what are you thinking|think about food|kya soch rahe ho|kuch socho|socho|ponder)\b/i.test(query)) {
-      handlePonder();
-      input.value = '';
-      return;
-    }
-
-    // Check for explicit cognitive learning / teaching commands
-    const learnMatch = query.match(/^(?:palo[,:\s]+)?(?:learn(?:\s+that|\s+about)?|teach\s+palo|did\s+you\s+know(?:\s+that)?|remember\s+that|yaad\s+rakhna\s+ki|seekho)\s*[:\-]?\s*(.+)$/i);
-    if (learnMatch) {
-      const fullText = learnMatch[1].trim();
-      let topic = '';
-      let fact = fullText;
-
-      if (fullText.includes(':')) {
-        const parts = fullText.split(':');
-        topic = parts[0].trim();
-        fact = parts.slice(1).join(':').trim();
-      } else if (fullText.toLowerCase().includes(' is ')) {
-        const parts = fullText.split(/\s+is\s+/i);
-        topic = parts[0].trim();
-        fact = fullText;
-      } else if (fullText.toLowerCase().includes(' originated in ')) {
-        const parts = fullText.split(/\s+originated\s+in\s+/i);
-        topic = parts[0].trim();
-        fact = fullText;
-      } else {
-        const words = fullText.split(/\s+/);
-        topic = words.slice(0, Math.min(3, words.length)).join(' ');
-        fact = fullText;
+    if(version!==queryVersion || currentUser?.id!==owner || cityName()!==searchCity || !isReady()) return;
+    if (!aiData) {
+      const venue = matches[0];
+      const cuisine = (venue.c || [])[0] || '';
+      let pairingTip = '';
+      if (/south/i.test(cuisine) || /dosa|idli/i.test(conversation.dish)) { pairingTip = ' Tip: Filter coffee ke sath try karna! ☕'; }
+      else if (/biryani|mughlai|punjabi/i.test(cuisine) || /biryani/i.test(conversation.dish)) { pairingTip = ' Tip: Chilled burani raita aur phirni ke sath scene set hoga! 🍮'; }
+      else if (/italian|pizza|pasta|cafe/i.test(cuisine)) { pairingTip = ' Tip: Garlic knots aur artisan gelato pairing must hai! 🍨'; }
+      else if (/gujarati|rajasthani|thali/i.test(cuisine)) { pairingTip = ' Tip: Chilled masala chaas ke sath enjoy karo! 🥛'; }
+      else if (/dessert|bakery/i.test(cuisine)) { pairingTip = ' Tip: Hot espresso ya cutting chai ke sath maza double ho jata hai! ☕'; }
+      const emotion = detectEmotion(query, { action: 'like' });
+      const memSummary = paloMemory.getMemorySummary();
+      const thoughtChain = [];
+      if (memSummary.totalEpisodes > 0) {
+        thoughtChain.push({
+          stage: 'Memory Recall',
+          icon: '🧠',
+          text: `Retrieved taste memory: ${memSummary.persona}${memSummary.recentVenue ? ` · Past venue: ${memSummary.recentVenue}` : ''}.`
+        });
       }
-
-      setPetState('is-learning');
-      playCuteSound('learn');
-      setPetMood('Learning 🧠');
-
-      paloBrain.learnNewConcept(topic, fact, 'User taught in chat');
-      triggerLearningAnimation(`Brain Learned: ${topic}`);
-      updateBrainStats();
-
-      const thoughtChain = [
-        { stage: '1. Absorb Input', icon: '📥', text: `Received user culinary teaching on “${topic}”.` },
-        { stage: '2. Neural Encoding', icon: '🧠', text: `Encoded concept into semantic memory graph with high confidence.` },
-        { stage: '3. Synaptic Link', icon: '⚡', text: `Linked with taste genome affinities (+75 XP Brain Boost).` },
-        { stage: '4. Memory Secured', icon: '💾', text: `Persisted into long-term cognitive storage.` }
-      ];
-      renderThoughtBox(thoughtChain);
-
-      const reply = `Arrey waah! Maine apne brain me ye naya concept record kar liya! “${topic}” ab meri permanent memory me save ho gaya hai. Agli baar jab aap iske baare me poochhenge, toh mujhe poora yaad rahega! 🧠✨`;
-      messageText.textContent = reply;
-      statusText.textContent = `Palo learned “${topic}” · Cognitive Brain Level ${paloML.genome.level} (${paloML.genome.xp} XP)`;
-      speakCute(reply, 'joy');
-      input.value = '';
-      return;
+      thoughtChain.push(
+        { stage: 'Taste Profiling', icon: '👅', text: `Analyzed craving intent for “${conversation.dish || venue.name}”.` },
+        { stage: 'Constraint Validation', icon: '🛡️', text: `Verified against your dietary and spice preferences.` },
+        { stage: 'Venue Grounding', icon: '📍', text: `Spotlighted ${venue.name} with ${venue.score}% taste fit.` },
+        { stage: 'Culinary Pairing', icon: '🍽️', text: pairingTip || 'Paired with matching accompaniments.' },
+        { stage: 'Taste feedback', icon: '♡', text: 'Love or pass a dish to improve future ranking.' }
+      );
+      aiData = {
+        reply: (alternative && total <= 3 ? 'These are all the matching options I have. ' : '') + 'For ' + cityName() + (conversation.dish ? ' and “' + conversation.dish + '”' : '') + ', I’d start with ' + venue.name + '. ' + (venue.why || []).slice(0, 2).join('. ') + '.' + pairingTip + ' ' + (filters.length ? 'For this search: ' + filters.join(', ') + '. ' : '') + 'Menu availability and exact prices need checking with the restaurant.',
+        emotion,
+        thoughtChain,
+        culinaryInsights: {
+          cuisines: venue.c || ['Regional Indian'],
+          dishes: [conversation.dish || venue.name],
+          vibes: ['top pick', 'verified']
+        },
+        reviewHighlight: null
+      };
     }
 
-    // 1. Check for explicit natural language taste teaching (English or Hindi/Hinglish)
-    const teachEn = query.match(/^i\s+(love|like|hate|dislike|don't like|do not like)\s+(.+?)[.!]?$/i);
-    const teachHi = query.match(/^(?:mujhe\s+)?(.+?)\s+(pasand\s+hai|bohot\s+pasand\s+hai|pasand\s+nahi\s+hai|achha\s+lagta\s+hai|bura\s+lagta\s+hai)[.!]?$/i);
-    if (teachEn || teachHi) {
-      let sentiment = 'love';
-      let term = '';
-      if (teachEn) {
-        sentiment = /^(love|like)$/i.test(teachEn[1]) ? 'love' : 'pass';
-        term = teachEn[2].toLowerCase();
-      } else {
-        sentiment = /nahi/i.test(teachHi[2]) ? 'pass' : 'love';
-        term = teachHi[1].replace(/^(mujhe\s+)/i, '').toLowerCase();
-      }
-      const dishes = availableCalibrationDishes();
-      const match = dishes.find(d => d.name.toLowerCase().includes(term) || d.tags.some(t => t.toLowerCase().includes(term)));
-
-      if (match) {
-        rateDish(match.id, sentiment, 'palo');
-        const res = paloML.learnFromDish(match.id, match.name, match.cuisine, sentiment);
-        triggerLearningAnimation(res.summary);
-        const reply = teachHi
-          ? (sentiment === 'love'
-              ? `Wah! Yaad rakhunga ki aapko ${match.name} pasand hai. ${city} me recommendations update ho gaye!`
-              : `Theek hai! Noted ki aap ${match.name} avoid karte hain. ${city} me naye options ready hain!`)
-          : (`${sentiment === 'love' ? 'Ooh, yum!' : 'Got it!'} I remembered that you ${sentiment === 'love' ? 'love' : 'prefer to skip'} ${match.name}. My recommendations in ${city} have evolved!`);
-        messageText.textContent = reply;
-        statusText.textContent = `Palo learned: ${match.name} (${sentiment}) · Level ${paloML.genome.level}`;
-        speakCute(reply, sentiment === 'love' ? 'joy' : 'gentle');
-        input.value = '';
-        renderBrainDrawer();
-        brainDrawer.style.display = 'block';
-        return;
-      }
-    }
-
-    // 1.5. Conversational Intelligence & Dialog Acts (Greetings, Lore, Jokes, Debates, Advice, Trails, Banter)
-    const chatResponse = paloChat.respondTo(query, { city, allVenues });
-    if (chatResponse) {
-      setPetState(chatResponse.petState || 'is-speaking');
-      setPetMood(chatResponse.mood || 'Chatting 💬');
-      playCuteSound(chatResponse.sound || 'blip');
-
-      // Internal cognitive monologue for conversational reasoning
-      const thoughtChain = paloBrain.think(query, {
-        city,
-        conversationalIntent: chatResponse.intent,
-        emotion: chatResponse.emotion || 'friendly',
-        turnCount: paloChat.currentTurn
-      });
-      renderThoughtBox(thoughtChain);
-
-      messageText.textContent = chatResponse.text;
-      statusText.textContent = chatResponse.status || `Palo chatted with you · Level ${paloML.genome.level}`;
-      speakCute(chatResponse.text, chatResponse.emotion || 'friendly');
-      updateBrainStats();
-
-      resultsDeck.replaceChildren();
-      reviewCard.style.display = 'none';
-      if (webSearchCard) webSearchCard.style.display = 'none';
-
-      input.value = '';
-      return;
-    }
-
-    // 2. Perform ML and review search across venues in city
-    let matches = [];
-    if (forYou) {
-      matches = allVenues
-        .filter(r => state.feedback[r.id] !== 'dislike')
-        .map(r => ({
-          r,
-          mlTasteScore: paloML.evaluateVenue(r),
-          totalScore: paloML.evaluateVenue(r),
-          reviewData: analyzeVenueReviews(r),
-          hasExactReviewMatch: false
-        }))
-        .sort((a, b) => b.totalScore - a.totalScore)
-        .slice(0, 3);
-    } else {
-      matches = searchVenuesByReviewInsights(query, allVenues).slice(0, 3);
-    }
-
-    setTimeout(() => {
-      setPetState('is-idle');
-      setPetMood('Ready!');
-
-      if (!matches.length) {
-        // Cascade automatically to web search to learn unknown dishes/queries live
-        executeWebSearch(query, city, allVenues);
-        return;
-      }
-
-      const top = matches[0];
-      const hg = parseHinglish(query);
-      let reply = '';
-      if (forYou) {
-        reply = hg.isHinglish
-          ? `Arre waah! ${city} me aapke taste genome ke mutabik ye rahe mere top picks! Diners bolte hain ${top.r.name} ka khana ekdum bawaal hai.`
-          : `Here are my top picks in ${city} adapted to your taste genome! Diners especially praise ${top.r.name}.`;
-      } else if (hg.isHinglish) {
-        if (hg.detected.includes('spicy')) {
-          reply = `Chatpata aur teekha craving? ${city} me ${top.r.name} ka tadka ekdum zabardast hai! ★ ${top.reviewData.rating} rating ke sath diners ne dil se tareef ki hai.`;
-        } else if (hg.detected.includes('sweet')) {
-          reply = `Kuch meetha ho jaye! ${city} me ${top.r.name} ke desserts aur sweets par ${top.reviewData.sentimentPct}% diners fida hain.`;
-        } else if (hg.detected.includes('tea')) {
-          reply = `Kadak chai aur specialty coffee! ${city} ke diners ${top.r.name} ke ambience aur brews ki bohot tareef karte hain.`;
-        } else if (hg.detected.includes('biryani')) {
-          reply = `Biryani ki talab? Toh compromise kaisa! ${city} me ${top.r.name} ki biryani ekdum lajawab hai. Diners: ${top.reviewData.topQuote}`;
-        } else if (hg.detected.includes('budget')) {
-          reply = `Pocket friendly aur swad ekdum top class! ${city} me ${top.r.name} saste me pet bharne ke liye sabse best hai.`;
-        } else if (hg.detected.includes('romantic')) {
-          reply = `Date night ka perfect plan! ${city} me ${top.r.name} ka sukoon, ambiance aur khana dono dil jeet lenge.`;
-        } else if (hg.detected.includes('hangout')) {
-          reply = `Dosto ke sath chilling scene? ${city} me ${top.r.name} ka vibe ekdum mast hai aur group ke liye perfect!`;
-        } else if (hg.detected.includes('thali')) {
-          reply = `Desi thali ka asar! ${city} me ${top.r.name} par bharpoor swad aur authentic thali milti hai.`;
-        } else if (hg.detected.includes('chaat')) {
-          reply = `Chaat aur street food ki talab? ${city} me ${top.r.name} ke chatpate swad par diners toot padte hain!`;
-        } else if (hg.detected.includes('south')) {
-          reply = `Crispy dosa aur authentic South Indian swad! ${city} me ${top.r.name} par diners ka review: ${top.reviewData.topQuote}`;
-        } else if (hg.detected.includes('mumbai')) {
-          reply = `Aamchi Mumbai vibes! ${city} me ${top.r.name} par authentic street food aur coastal flavours milenge. Diners: ${top.reviewData.topQuote}`;
-        } else if (hg.detected.includes('delhi')) {
-          reply = `Dilli ka asali zaika! ${city} me ${top.r.name} ka butter chicken aur tandoori swad ekdum lajawab hai! Diners: ${top.reviewData.topQuote}`;
-        } else if (hg.detected.includes('pune')) {
-          reply = `Puneri swad! ${city} me ${top.r.name} par authentic misal, mastani aur bakes ka zabardast experience milega!`;
-        } else if (hg.detected.includes('ahmedabad')) {
-          reply = `Amdavadi swad ni maja! ${city} me ${top.r.name} par crunchy fafda, jalebi aur heritage thali ekdum top notch hai!`;
-        } else if (hg.detected.includes('vadodara')) {
-          reply = `Sanskari Nagari Vadodara ka swad! ${city} me ${top.r.name} par spicy sev usal aur farsan ka asli rang jamega!`;
-        } else {
-          reply = `Bawaal choice! ${city} me “${query}” ke liye ${top.r.name} ekdum jhakaas spot hai! Diners ka review: ${top.reviewData.topQuote}`;
-        }
-      } else {
-        reply = `Found ${matches.length} spots in ${city} matching “${query}”! At ${top.r.name}, ${top.reviewData.sentimentPct}% of diners loved their reviews.`;
-      }
-
-      messageText.textContent = reply;
-      statusText.textContent = `Showing ${matches.length} places with verified diner receipts.`;
-
-      // Palo Cognitive Brain Reasoning Pipeline
-      const emotion = detectEmotion(reply);
-      const thoughtChain = paloBrain.think(query, {
-        city,
-        topVenue: top.r,
-        mlScore: top.mlTasteScore,
-        venueCount: matches.length,
-        emotion
-      });
-      renderThoughtBox(thoughtChain);
-
-      // Render top review card
+    renderThoughtBox(aiData.thoughtChain);
+    replyPalo(aiData.reply, aiData.emotion || 'friendly');
+      paloML.omniRouteConnected=aiData.source==='OmniRoute';
+      statusText.textContent=aiData.source ? aiData.source+' · live conversation' : 'Live chat unavailable · local taste recommendations';
+    paloMemory.recordInteraction(query, aiData.reply, {
+      venue: matches[0]?.name,
+      dish: conversation.dish || query,
+      spice: conversation.spice,
+      budget: conversation.budget,
+      vibe: conversation.mood,
+      emotion: aiData.emotion
+    });
+    if (aiData.reviewHighlight && reviewCard) {
+      reviewCard.innerHTML = `<div class="paloReviewHeader"><span class="paloReviewBadge">Catalogue note</span></div><p class="paloReviewQuote">${esc(aiData.reviewHighlight)}</p><p class="paloReviewTip">Menu details may change.</p>`;
       reviewCard.style.display = 'block';
-      reviewCard.innerHTML = `
-        <div class="paloReviewHeader">
-          <span class="paloReviewBadge">Verified Reviews (${top.reviewData.count})</span>
-          <span class="paloSentimentPill">👍 ${top.reviewData.sentimentPct}% diner love</span>
-        </div>
-        <p class="paloReviewQuote">${esc(top.reviewData.topQuote)}</p>
-        <p class="paloReviewTip">💡 ${esc(top.reviewData.insiderTip)}</p>
-      `;
+    }
 
-      // Render restaurant result cards with review intelligence
-      resultsDeck.innerHTML = matches.map(({ r, mlTasteScore, reviewData }) => `
-        <article class="paloVenueCard">
-          <div class="paloVenueMeta">
-            <div>
-              <span class="paloCuisineTag">${esc((r.c || []).slice(0, 2).join(' · '))}</span>
-              <h4 class="paloVenueName">${esc(r.name)}</h4>
-              <p class="paloVenueSub">${esc(r.area || r.city)} · ${esc(displayPrice(r))} · ★ ${reviewData.rating}</p>
-            </div>
-            <div class="paloMatchPill">
-              <strong>${mlTasteScore}%</strong>
-              <span>Fit</span>
-            </div>
-          </div>
-          <p class="paloVenueQuote">${esc(reviewData.quotes[0])}</p>
-          <div class="paloVenueActions">
-            <button type="button" class="paloExploreBtn" data-palo-place="${esc(r.id)}">
-              Explore place →
-            </button>
-            <div class="paloFeedbackRow">
-              <button type="button" class="paloFeedbackBtn ${state.feedback[r.id] === 'like' ? 'active' : ''}" data-palo-feedback="like" data-venue-id="${esc(r.id)}" title="Like and train Palo">
-                👍 ${state.feedback[r.id] === 'like' ? 'Loved' : 'Love'}
-              </button>
-              <button type="button" class="paloFeedbackBtn ${state.feedback[r.id] === 'dislike' ? 'active' : ''}" data-palo-feedback="dislike" data-venue-id="${esc(r.id)}" title="Not for me">
-                👎 Pass
-              </button>
-            </div>
-          </div>
-        </article>
-      `).join('');
 
-      speakCute(reply + (hg.isHinglish ? ` Top recommendation ${top.r.name} hai.` : ` Top suggestion is ${top.r.name}.`));
-    }, 280);
+    updateBrainStats();
+    updateChipRail('venue');
   }
-
-  // --------------------------------------------------------------------------
-  // 8. ML BRAIN INSPECTION DRAWER
-  // --------------------------------------------------------------------------
-  function renderBrainDrawer() {
-    const g = paloML.genome;
-    const topCuisines = Object.entries(g.cuisines).sort((a, b) => b[1] - a[1]).slice(0, 5);
-    const recent = g.recentLearnings || [];
-    const conceptEntries = Object.entries(paloBrain.concepts);
-    const memories = paloBrain.memories || [];
-
-    brainDrawer.innerHTML = `
-      <div class="paloBrainHead">
-        <div>
-          <h4>Palo's Cognitive Brain & ML Genome</h4>
-          <span class="paloXpTag">Level ${g.level} · ${g.xp} XP</span>
-        </div>
-        <button type="button" class="paloCloseBrainBtn" id="paloCloseBrainBtnTop" aria-label="Close brain view">✕</button>
-      </div>
-
-      <div class="paloBrainStatsGrid">
-        <div class="paloStatCard">
-          <span class="paloStatVal">${g.level}</span>
-          <span class="paloStatLabel">Brain Level</span>
-        </div>
-        <div class="paloStatCard">
-          <span class="paloStatVal">${conceptEntries.length}</span>
-          <span class="paloStatLabel">Concepts</span>
-        </div>
-        <div class="paloStatCard">
-          <span class="paloStatVal">${memories.length}</span>
-          <span class="paloStatLabel">Memories</span>
-        </div>
-        <div class="paloStatCard">
-          <span class="paloStatVal">${paloBrain.totalThoughts}</span>
-          <span class="paloStatLabel">Thoughts</span>
-        </div>
-        <div class="paloStatCard">
-          <span class="paloStatVal">${paloChat.currentTurn}</span>
-          <span class="paloStatLabel">Dialogs</span>
-        </div>
-      </div>
-
-      <!-- Teach Palo's Brain Form -->
+  function renderBrainDrawer(){
+    const choices=availableCalibrationDishes();
+    const learnedCuisines=Object.keys(paloML.aiCuisines||{});
+    const learnedDishes=Object.keys(paloML.aiDishes||{});
+    const allLearned=[...learnedCuisines,...learnedDishes];
+    const conceptPills=allLearned.length
+      ? `<div class="paloGenomeSection"><h5>OmniRoute AI Taste Concepts</h5><div class="paloConceptCloud">${allLearned.map(c=>`<button type="button" class="paloConceptPill" data-concept="${esc(c)}">${esc(c)}</button>`).join('')}</div></div>`
+      : '';
+    const recentAi=paloML.aiLearnings.length
+      ? `<div class="paloGenomeSection"><h5>Recent AI Learnings</h5><ul class="paloLogList">${paloML.aiLearnings.slice(-4).map(l=>`<li><span>${esc(l.summary)}</span><strong>+${l.xp} XP</strong></li>`).join('')}</ul></div>`
+      : '';
+    const memSummary = paloMemory.getMemorySummary();
+    const memorySection = `
       <div class="paloGenomeSection">
-        <h5>🎓 Teach Palo a New Concept</h5>
-        <p class="paloSectionSub">Teach Palo culinary history, dish origins, or secret food facts. Palo saves it in permanent cognitive memory and levels up (+75 XP)!</p>
-        <form class="paloTeachForm" id="paloTeachBrainForm">
-          <input type="text" id="paloTeachTopic" class="paloTeachInput" placeholder="Dish or concept (e.g. Gujarati Undhiyu, Neapolitan Pizza)" required maxlength="60" />
-          <textarea id="paloTeachFact" class="paloTeachTextarea" placeholder="Explain the origin, secret preparation, or truth..." required maxlength="240" rows="2"></textarea>
-          <button type="submit" class="paloTeachBtn" id="paloTeachSubmit">Teach Palo's Brain (+75 XP) 🧠</button>
-        </form>
-      </div>
-
-      <!-- Mastered Concept Cloud -->
-      <div class="paloGenomeSection">
-        <h5>💡 Mastered Culinary Concepts (${conceptEntries.length})</h5>
-        <p class="paloSectionSub">Tap any concept to inspect Palo's neural memory graph.</p>
-        <div class="paloConceptCloud">
-          ${conceptEntries.map(([key, c]) => `
-            <button type="button" class="paloConceptPill" data-palo-concept="${esc(key)}">
-              ${esc(c.title)}
-            </button>
-          `).join('')}
-        </div>
-        <div id="paloConceptDetailBox" class="paloConceptDetailBox" style="display:none;"></div>
-      </div>
-
-      <!-- ML Taste Preferences -->
-      <div class="paloGenomeSection">
-        <h5>Top Learned Cuisines</h5>
-        <div class="paloAffinities">
-          ${topCuisines.map(([c, val]) => `
-            <div class="paloAffinityBar">
-              <span class="paloAffLabel">${esc(c)}</span>
-              <div class="paloAffTrack"><div class="paloAffFill" style="width:${Math.max(12, Math.min(100, Math.round(((val + 1.5) / 4) * 100)))}%"></div></div>
-              <span class="paloAffVal">${val > 0 ? '+' : ''}${val.toFixed(1)}</span>
+        <h5>Conversation memory</h5>
+        <div class="paloMemoryCard">
+          <div class="paloMemoryHead">
+            <div>
+              <span class="paloMemoryPersona">${esc(memSummary.persona)}</span>
+              <p class="paloMemoryMeta">${memSummary.totalEpisodes} recent interactions · this account on this device · kept up to 30 days</p>
             </div>
-          `).join('')}
+            <span class="paloLoopBadge"><span class="paloLoopPulse"></span> Explicit feedback learning</span>
+          </div>
+          ${memSummary.topCravings ? `<div class="paloMemoryRow"><strong>Recent topics:</strong> <span>${esc(memSummary.topCravings)}</span></div>` : ''}
+          ${memSummary.recentVenue ? `<div class="paloMemoryRow"><strong>Recent suggestion:</strong> <span>${esc(memSummary.recentVenue)}</span></div>` : ''}
+          <div class="paloMemoryActions">
+            <button type="button" class="paloClearMemoryBtn" id="paloClearMemoryBtn">Reset Palo's Memory</button>
+          </div>
         </div>
-      </div>
-
-      <div class="paloGenomeSection">
-        <h5>Calibrated Spice Tolerance</h5>
-        <div class="paloSpiceGauge">
-          <span>Mild</span>
-          <div class="paloSpiceTrack"><div class="paloSpiceThumb" style="left:${Math.round(g.spiceTolerance * 100)}%"></div></div>
-          <span>Fiery</span>
-        </div>
-      </div>
-
-      <!-- Episodic Memories & Log -->
-      ${memories.length ? `
-        <div class="paloGenomeSection">
-          <h5>Episodic Memory Bank</h5>
-          <ul class="paloLogList">
-            ${memories.slice(0, 6).map(m => `<li><span class="paloLogTime">${esc(m.time)}</span> ${esc(m.fact)}</li>`).join('')}
-          </ul>
-        </div>
-      ` : ''}
-
-      ${recent.length ? `
-        <div class="paloGenomeSection">
-          <h5>Recent Learning Events</h5>
-          <ul class="paloLogList">
-            ${recent.map(l => `<li><span class="paloLogTime">${esc(l.time)}</span> ${esc(l.summary)} <strong>+${l.xp} XP</strong></li>`).join('')}
-          </ul>
-        </div>
-      ` : ''}
-
-      <div class="paloBrainFooter">
-        <button type="button" class="paloCloseBrainBtn" id="paloCloseBrainBtn">Close Brain View</button>
       </div>
     `;
 
-    document.getElementById('paloCloseBrainBtn')?.addEventListener('click', () => {
-      brainDrawer.style.display = 'none';
-    });
-    document.getElementById('paloCloseBrainBtnTop')?.addEventListener('click', () => {
-      brainDrawer.style.display = 'none';
-    });
-
-    const detailBox = document.getElementById('paloConceptDetailBox');
-    brainDrawer.querySelectorAll('.paloConceptPill').forEach(pill => {
-      pill.addEventListener('click', () => {
-        const key = pill.dataset.paloConcept;
-        const concept = paloBrain.concepts[key];
-        if (concept && detailBox) {
-          brainDrawer.querySelectorAll('.paloConceptPill').forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-          detailBox.style.display = 'block';
-          detailBox.innerHTML = `
-            <div class="paloConceptDetailHead">
-              <h6>${esc(concept.title)}</h6>
-              <span class="paloConceptCategory">${esc(concept.category || 'General')}</span>
-            </div>
-            <p class="paloConceptDetailFact">${esc(concept.fact)}</p>
-            <div class="paloConceptDetailMeta">
-              <span>Confidence: ${Math.round((concept.confidence || 0.95) * 100)}%</span>
-              <span>Source: ${esc(concept.learnedAt || 'Learning')}</span>
-            </div>
-          `;
-          playCuteSound('blip');
-        }
-      });
-    });
-
-    const teachForm = document.getElementById('paloTeachBrainForm');
-    teachForm?.addEventListener('submit', e => {
-      e.preventDefault();
-      const topicInput = document.getElementById('paloTeachTopic');
-      const factInput = document.getElementById('paloTeachFact');
-      const topic = topicInput?.value.trim();
-      const fact = factInput?.value.trim();
-      if (!topic || !fact) return;
-
-      paloBrain.learnNewConcept(topic, fact, 'Taught in Brain Drawer');
-      triggerLearningAnimation(`Brain Learned: ${topic}`);
-      updateBrainStats();
-      playCuteSound('learn');
-
-      const reply = `Maine seekh liya! “${topic}” mere permanent cognitive memory graph me add ho gaya hai! (+75 XP) 🧠✨`;
-      messageText.textContent = reply;
-      statusText.textContent = `Palo learned “${topic}” · Level ${paloML.genome.level}`;
-      speakCute(reply, 'joy');
-
-      renderBrainDrawer();
-    });
+    brainDrawer.innerHTML='<div class="paloBrainHead"><h4>Your taste memory</h4><button type="button" id="paloCloseBrainBtnTop" aria-label="Close taste memory">×</button></div><p>Only your explicit preferences train the ranking. Ordinary conversation and browsing do not.</p><label for="paloLearnDish">Dish example</label><select id="paloLearnDish">'+choices.map(d=>'<option value="'+d.id+'">'+esc(d.name)+'</option>').join('')+'</select><div id="paloLearnActions"></div><p id="paloLearnStatus" role="status"></p><button type="button" id="paloSyncRetry" '+(state.unsyncedDishes?'':'hidden')+'>Retry account sync</button><p>'+Object.values(state.feedback||{}).filter(v=>['like','dislike'].includes(v)).length+' place reactions train your model. '+Object.keys(normalizeDishFeedback(state.dishFeedback)).length+' saved dish preferences. '+(paloML.aiXP?paloML.aiXP+' OmniRoute AI learning XP.':'')+'</p>'+memorySection+conceptPills+recentAi;
+    const select=brainDrawer.querySelector('select'),actions=brainDrawer.querySelector('#paloLearnActions');
+    const render=()=>{actions.innerHTML=['love','pass'].map(v=>'<button type="button" data-learn="'+v+'" aria-pressed="'+(state.dishFeedback?.[select.value]===v)+'">'+(state.dishFeedback?.[select.value]===v?'Undo ':'')+(v==='love'?'Love it':'Not for me')+'</button>').join('')};if(select){select.onchange=render;render();}
+    if(actions){actions.onclick=async e=>{const b=e.target.closest('[data-learn]');if(!b||!isReady())return;const owner=currentUser.id,promise=rateDish(select.value,b.dataset.learn,'palo');render();renderConversationResults();updateBrainStats();await promise;if(currentUser?.id!==owner)return;const st=brainDrawer.querySelector('#paloLearnStatus');if(st)st.textContent=dishSyncStatus;const rt=brainDrawer.querySelector('#paloSyncRetry');if(rt)rt.hidden=!state.unsyncedDishes};}
+    const clearMemBtn = brainDrawer.querySelector('#paloClearMemoryBtn');
+    if (clearMemBtn) {
+      clearMemBtn.onclick = () => {
+        queryVersion++;paloMemory.clear();resetConversation();
+        renderBrainDrawer();
+        replyPalo('I have refreshed my conversation and craving memory. Your saved taste profile remains intact!');
+      };
+    }
+    const retryBtn=brainDrawer.querySelector('#paloSyncRetry');if(retryBtn)retryBtn.onclick=async()=>{await retryDishSync();if(isReady())renderBrainDrawer()};
+    const closeBtn=brainDrawer.querySelector('#paloCloseBrainBtnTop');if(closeBtn)closeBtn.onclick=()=>brainDrawer.style.display='none';
   }
 
   // --------------------------------------------------------------------------
@@ -2758,7 +1315,7 @@
         const res = paloML.learnFromVenue(venue, reward);
         triggerLearningAnimation(res?.summary);
         feedbackBtn.classList.toggle('active');
-        statusText.textContent = `Trained Palo on ${venue.name} · Level ${paloML.genome.level}`;
+        statusText.textContent = 'Your feedback updated the ranking.'; renderConversationResults(); updateBrainStats();
         if (type === 'like') {
           playCuteSound('joy');
           setPetMood('Loved it! 💖');
@@ -2850,10 +1407,15 @@
   const originalGate = typeof requireAuthGate === 'function' ? requireAuthGate : null;
   if (originalGate) {
     requireAuthGate = function (message) {
-      input.value = '';
+      resetConversation(); stopSpeaking(); stopListening(); input.value = '';
       resultsDeck.replaceChildren();
       reviewCard.style.display = 'none';
       brainDrawer.style.display = 'none';
+      brainDrawer.replaceChildren();
+      messageText.textContent = 'Sign in to explore places for your taste.';
+      statusText.textContent = 'Your conversation has been cleared.';
+      if (levelNum) levelNum.textContent = '0';
+      if (xpNum) xpNum.textContent = '0';
       originalGate(message);
     };
   }
@@ -2899,8 +1461,8 @@
     password.addEventListener('keyup', e => {
       hint.textContent = e.getModifierState?.('CapsLock')
         ? 'Caps Lock is on.'
-        : password.autocomplete === 'new-password' && password.value.length > 0 && password.value.length < 6
-        ? 'Use at least 6 characters.'
+        : password.autocomplete === 'new-password' && password.value.length > 0 && password.value.length < 8
+        ? 'Use at least 8 characters.'
         : '';
     });
 
@@ -2971,10 +1533,6 @@
 
   // Expose ML, Cognitive Brain and Conversational Engine on window for runtime testing & external controllers
   window.paloML = paloML;
-  window.paloBrain = paloBrain;
-  window.paloChat = paloChat;
-  window.PaloCognitiveBrain = PaloCognitiveBrain;
-  window.PaloConversationalEngine = PaloConversationalEngine;
 
   showIntro();
 })();

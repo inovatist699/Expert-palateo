@@ -42,7 +42,7 @@ Palateo/
 
 This is a web implementation of the separation Apple describes in [App organization](https://developer.apple.com/documentation/swiftui/app-organization) and [Managing model data](https://developer.apple.com/documentation/swiftui/managing-model-data-in-your-app). Apple does not prescribe one universal folder layout. Here, app composition belongs in `app/`, model data in `models/` and `core/`, views/controllers in `features/`, reusable presentation in `shared/ui/`, and external I/O in `services/`.
 
-This source tree is not a Swift project or an App Store submission. The existing HTML/CSS/JavaScript runtime and Supabase integration remain in use.
+The shared web runtime is packaged by Capacitor in mobile/ios and mobile/android. Run npm run mobile:sync before native compilation; mobile/README.md describes CI, signing and release checks.
 
 ## Build contract
 

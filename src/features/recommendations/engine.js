@@ -53,17 +53,9 @@ if(Array.isArray(r.review_insights)&&r.review_insights.length){
  if(a.priority==='unique'&&/\b(heritage|iconic|historic|authentic)\b/.test(insightText)){s+=1.5;why.push('Diners highlight authentic character')}
 }
 
-/* Learned feature signals */
-const sig=state.ai?.signals||{};
-let learnedSignal=0;
-const features=restaurantFeatures(r),ownDelta=f[r.id]==='dislike'?-1.5:f[r.id]==='visited'?2:f[r.id]==='like'?1:0;
-for(const feature of features){
-// This place's feedback is applied once below; only other places teach shared preferences.
-const w=(Number(sig[feature])||0)-ownDelta;
-learnedSignal+=Math.sign(w)*Math.min(3,Math.abs(w)*.5);
-}
-/* Many overlapping tags must not overwhelm the explicit taste choices. */
-s+=Math.max(-6,Math.min(6,learnedSignal));
+const learnedDelta=tasteModelAdjustment(r);s+=learnedDelta;
+if(learnedDelta>=1)why.unshift('Similar to places you liked');
+else if(learnedDelta<=-1)why.unshift('Similar to places you passed');
 const dishDelta=dishAdjustment(r);s+=dishDelta;
 if(dishDelta>=1)why.unshift('Your dish preferences favour this cuisine');
 else if(dishDelta<=-1)why.unshift('Your dish passes lower this estimate');

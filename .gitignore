@@ -19,5 +19,6 @@ mobile/ios/**/xcuserdata/
 *.p12
 *.mobileprovision
 __pycache__/
+mobile/signing/
 
 __pycache__/

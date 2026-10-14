@@ -3,7 +3,7 @@ name: Mobile builds
 on:
   pull_request:
   push:
-    branches: [main, 'codex/mobile-*']
+    branches: [main]
   workflow_dispatch:
     inputs:
       signed:
@@ -90,7 +90,7 @@ jobs:
           java-version: '21'
       - name: Install Android SDK components
         if: matrix.platform == 'android'
-        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+        run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0"'
       - name: Android lint and debug APK
         if: matrix.platform == 'android' && !inputs.signed
         working-directory: mobile/android

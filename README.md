@@ -2,6 +2,8 @@
 
 This is the canonical Codex project for the current Palateo app and waitlist.
 
+`main` is the single maintained app version. Edit `src/` and build the generated deployment; `mobile/` packages that same app for native devices. The retired AI Studio reference app is available only in Git history. Private local drafts and snapshots belong in ignored `local-imports/`.
+
 - Production: https://palateo.in/
 - App: https://palateo.in/app/
 - Editable source: `src/` ([folder guide](docs/ARCHITECTURE.md))
@@ -49,8 +51,8 @@ Private `.env*` files, `.vercel` account/project files, test credentials, local 
 
 ## Verified release baseline
 
-On 9 October 2026, deployment `dpl_BbAtKnmAjDR2sPEVhExBmLdMcvCh` published the user-selected Zestmaps-inspired app and waitlist to https://palateo.in/. The eight-question taste quiz, existing Supabase integration and reversible feedback remain connected. The layout reference includes Zest's official App Store screenshots; no verified UI video walkthrough was available in the inspected sources.
+On 15 October 2026, deployment `dpl_BUYVYx1Q7vYSrz16Ft7oA7xme8gq` published the app represented by commit `925b5968067f718a2eeb0b98d0fa3a4a85449810` to https://palateo.in/. It includes strict dietary eligibility, optional budget/distance filters, review-supported recommendation scoring, saved places, and reversible feedback.
 
-Recorded checks passed for onboarding/account isolation, feedback races and undo, recovery/email cooldown, waitlist, Sentry, live CSP/private-file protection and Supabase account-data isolation. The real browser check on the public domain completed all eight quiz steps, restored the session on reopening and changed a test venue **67% → 74% → 67%** for like then undo. App and waitlist layout checks covered 320, 375 and 1440px without page overflow or JavaScript runtime errors.
+All 13 automated suites, CSP checks, web and Android CI, build isolation, and browser smoke checks passed for that release. Production sign-in display, recommendations with a synthetic local profile, mobile layout, map loading, public policy pages, and anonymous account-data isolation were checked. These smoke checks alone do not establish real-account sign-in or saved-place persistence.
 
 Read [PRODUCT.md](PRODUCT.md), [DESIGN.md](DESIGN.md), [the design brief](docs/ZEST_REDESIGN_BRIEF.md) and [UI/UX design](docs/UI_UX_DESIGN.md) before further frontend changes. Physical-device Safari, full screen-reader compliance and recommendation accuracy against a labelled satisfaction dataset remain unverified. Screenshots and detailed execution records are local-only in `outputs/`.

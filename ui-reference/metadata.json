@@ -1,6 +1,0 @@
-{
-  "name": "Palateo",
-  "description": "AI-powered palate intelligence & Indian restaurant discovery map tailored to your personal taste genome.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

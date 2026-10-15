@@ -1,0 +1,322 @@
+/* Measurements and materials from the supplied Android UI, adapted to browser safe areas. */
+.studioApp{--bg:#142427;--card:#1a2f33;--ink:#f7fbfc;--muted:#bed6db;--line:#45646a;--soft:#20373b;--green:#ffc64f;background:#0d181a;color:#f7fbfc;font-family:Arial,system-ui,sans-serif;scrollbar-color:#519cab #142427}
+.studioApp .studioIcon{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
+.studioApp .app{width:min(1180px,100%);padding:0 0 100px;margin:auto}
+.studioApp[data-page] .top,.studioApp[data-page] .app>.cityPicker{display:none}
+.studioApp .screen{padding:44px 16px 30px;color:#f7fbfc}
+.studioApp h1,.studioApp h2,.studioApp h3,.studioApp .restnameButton{font-family:Arial,system-ui,sans-serif;color:#f7fbfc;letter-spacing:0}
+.studioApp h1{font-size:27px;line-height:1.15;margin:0 0 7px;font-weight:700}
+.studioApp h2{font-size:16px;line-height:1.3;font-weight:700}
+.studioApp p{color:#c3dbe0;line-height:1.45}
+.studioApp button{cursor:pointer;touch-action:manipulation}
+.studioApp button:focus-visible,.studioApp input:focus-visible,.studioApp select:focus-visible,.studioApp summary:focus-visible,.studioApp #paloPetButton:focus-visible{outline:3px solid #ffc64f;outline-offset:3px}
+.studioApp .nav{position:fixed!important;inset:auto 16px calc(14px + env(safe-area-inset-bottom))!important;display:flex!important;justify-content:space-between;align-items:stretch;gap:3px;width:auto!important;max-width:520px;min-width:0;margin:0 auto;padding:5px!important;border:1px solid #a1bec57a!important;border-radius:32px!important;background:linear-gradient(180deg,#26464ce8,#10282de8)!important;box-shadow:inset 0 1px 1px #ffffff38,0 7px 24px #0007!important;backdrop-filter:blur(18px);z-index:50;height:64px;box-sizing:border-box;transform:none!important}
+.studioApp .nav.hide{display:none!important}
+.studioApp .nav button{display:flex!important;flex:1!important;flex-direction:column;justify-content:center;align-items:center;gap:5px;min-width:0!important;min-height:50px!important;width:auto!important;padding:5px 2px!important;color:#b5d2d8!important;font:500 10px/1.1 Arial,sans-serif!important;background:transparent!important;border:1px solid transparent!important;border-radius:24px!important;box-shadow:none!important}
+.studioApp .nav button b{margin:0!important;display:block;height:21px;line-height:1}
+.studioApp .nav button .studioIcon{width:21px;height:21px}
+.studioApp .nav button.active{background:linear-gradient(180deg,#38626b,#163338)!important;border-color:#b8d8dd80!important;box-shadow:inset 0 1px 2px #ffffff40,0 0 12px #c3e7f133!important;color:white!important}
+.studioApp .nav button.active .studioIcon{color:#ffc64f;stroke:currentColor!important;filter:drop-shadow(0 0 5px #ffc64f80)}
+.studioApp[data-page=place] .nav{display:none!important}
+.studioApp>.paloContainer{display:none!important}
+.studioApp .studioCity{display:flex;align-items:center;gap:3px;border:1px solid #70949d66;border-radius:20px;background:#183338;padding:0 10px;height:36px;box-sizing:border-box;max-width:172px}
+.studioApp .studioCity>.studioIcon{width:14px;color:#fa776a}
+.studioApp .studioCity select{background:transparent!important;border:0!important;color:#f7fbfc!important;min-height:32px!important;height:32px;max-width:136px;padding:0 2px!important;font-size:13px!important;font-weight:700;border-radius:0;color-scheme:dark;box-shadow:none}
+.studioApp .studioSpotCount{font-size:10px;color:#ffda79;padding:5px 8px;background:#203b41;border:1px solid #ffffff24;border-radius:14px;margin-left:auto;white-space:nowrap}
+.studioApp .studioSearch{display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:50%;background:#1a363c;color:#dceff2;padding:6px}
+.studioApp .home-screen{padding:0;display:block}
+.studioApp .home-screen .tasteTuning{display:none}
+.studioApp .streetMapFrame{margin:0!important;border:0!important;border-radius:0!important;overflow:hidden;background:#f6f5f2}
+.studioApp .streetMapFrame .zestMapStage{height:420px!important;min-height:420px!important;border-radius:0!important}
+.studioApp .streetMapFrame .homeMapToolbar{top:14px!important;left:10px!important;right:0!important;width:auto!important;display:block!important;z-index:5;pointer-events:none}
+.studioApp .homeMapToolbar .homeFilterChips{pointer-events:auto;padding:0 10px 8px 0;margin:0;display:flex;gap:7px;overflow:auto;scrollbar-width:none;max-width:100%;white-space:nowrap}
+.studioApp .homeMapToolbar .filterChip{display:flex;align-items:center;gap:5px;font:600 11px/1 Arial,sans-serif!important;min-height:33px!important;padding:8px 11px!important;color:#26383d!important;background:#fffffff2!important;border:1px solid #dce4e7!important;box-shadow:0 2px 6px #20373b0d;border-radius:18px;flex:none}
+.studioApp .homeMapToolbar .filterChip .studioIcon{width:13px;height:13px}
+.studioApp .homeMapToolbar .filterChip.active{background:#fff0bd!important;border-color:#eac65f!important}
+.studioApp .homeMapToolbar .filterChip[data-cuisine=all],.studioApp .homeMapToolbar .filterChip[data-cuisine=Visited],.studioApp .homeMapToolbar .filterChip[data-cuisine=Saved]{display:none}
+.studioApp .streetMapFrame .zestMapControls{top:65px!important;right:12px!important}
+.studioApp .streetMapFrame .zestMapLegend{bottom:25px!important;left:10px!important;max-width:calc(100% - 75px);flex-wrap:wrap}
+.studioApp .streetMapFrame .mapNotice{background:#ffffffda;color:#29464d;font-size:9px;bottom:0;line-height:1.25;padding:3px 10px;margin:0}
+.studioApp .streetMapFrame .zestMapSheet{position:absolute!important;inset:auto 55px 38px 16px!important;width:auto!important;display:block!important;max-height:180px;z-index:10;border-radius:16px!important;background:white!important;border:1px solid #d9e1e3;box-shadow:0 5px 16px #20373b25}
+.studioApp .streetMapFrame .zestSheetPhoto{display:none}
+.studioApp .streetMapFrame .mapPlaceBody{padding:12px 14px!important;color:#20373b}
+.studioApp .streetMapFrame .mapPlaceBody h3{color:#20373b!important;font-size:14px;margin:0 0 4px}
+.studioApp .streetMapFrame .mapPlaceBody p{font-size:11px;color:#526e76!important;margin:3px 0}
+.studioApp .streetMapFrame .mapPlaceMatch{float:right;color:#725500!important;font-size:10px}
+.studioApp .streetMapFrame .venuePrimary{display:flex!important;gap:8px;margin-top:8px}
+.studioApp .streetMapFrame .venuePrimary button{min-height:34px!important;font-size:11px!important;padding:6px 14px!important}
+.studioApp .streetMapFrame .venuePrimary .btn{background:#007aff!important;color:white!important}
+.studioApp .streetMapFrame .venueDirections{display:block!important;color:#20373b!important}
+.studioApp .streetMapFrame .mapVisited{display:none}
+.studioApp .homeRecommendations{position:relative;margin-top:-12px;padding:18px 12px 4px!important;border-radius:28px 28px 0 0;background:linear-gradient(180deg,#142429,#111d20 65%,#0f181b);border-top:1px solid #8ca8ae7a;z-index:12;overflow:hidden}
+.studioApp .homeRecommendations:before{content:"";position:absolute;top:6px;left:calc(50% - 18px);width:36px;height:3px;border-radius:3px;background:#7291987a}
+.studioApp .homeRecommendations>.section{display:flex!important;flex-direction:row!important;align-items:center!important;gap:8px!important;margin:0 0 8px!important}
+.studioApp .railControls,.studioApp .homeMoreAction,.studioApp .homeRecommendations>.feedNote{display:none!important}
+.studioApp .homeMapView .restaurantGrid{display:flex!important;align-items:start;gap:12px!important;margin:0 -12px!important;padding:3px 12px 18px!important;scroll-padding-inline:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.studioApp .homeMapView .restaurantGrid .studioCard{flex:0 0 312px!important;min-width:312px!important;width:312px;scroll-snap-align:start}
+.studioApp .restaurantGrid .studioCard{position:relative;isolation:isolate;display:block!important;padding:0!important;margin:0!important;overflow:hidden!important;border-radius:22px!important;border:1px solid #aac7cd80!important;background:linear-gradient(155deg,#25444a,#172f34)!important;color:#eef8fb!important;box-shadow:inset 0 1px 0 #ffffff40,0 0 13px #ffc64f26,0 7px 18px #0003!important;min-width:0;box-sizing:border-box}
+.studioApp .restaurantGrid .studioCard:focus-within,.studioApp .restaurantGrid .studioCard:hover{border-color:#ffc64f!important;box-shadow:0 0 18px #ffc64f45,0 8px 22px #0005!important}
+.studioApp .studioCardMedia{position:relative;height:125px;overflow:hidden;background:#213b40}
+.studioApp .restaurantGrid .studioCard .photo{position:absolute!important;inset:0!important;width:100%!important;height:125px!important;border:0!important;border-radius:0!important;display:block;margin:0;padding:0;background:#213b40;overflow:hidden}
+.studioApp .studioCard .photo img{width:100%!important;height:100%!important;object-fit:cover;border-radius:0!important;transform:none!important}
+.studioApp .studioCardMedia:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(#14242750,transparent 35%,#142427e6)}
+.studioApp .venuePlaceholder{width:34px;height:34px;color:#8ba6ac;position:absolute;inset:0;margin:auto;fill:none;stroke:currentColor}
+.studioApp .studioPhotoTop{position:absolute;top:8px;left:8px;right:8px;display:flex;align-items:start;justify-content:space-between;gap:5px;z-index:2;pointer-events:none}
+.studioApp .studioPhotoTop button{pointer-events:auto}
+.studioApp .studioStatus{border:1px solid #adc8cd50;background:#14272be6;color:#d5e7eb;font-size:9px;border-radius:9px;padding:4px 6px;white-space:nowrap;line-height:1.1}
+.studioApp .studioPhotoControls{display:flex;gap:6px}
+.studioApp .studioPhotoControls button{display:grid;place-items:center;position:static!important;width:30px!important;height:30px!important;min-height:30px!important;border-radius:50%!important;background:#14272be0!important;border:1px solid #c3e7f144!important;color:#eef8fb!important;margin:0;padding:6px;box-shadow:none}
+.studioApp .studioPhotoControls button:first-child{color:#52a4ff!important}
+.studioApp .studioPhotoControls button[aria-pressed=true]{color:#ffc64f!important;background:#254146!important}
+.studioApp .studioPhotoControls .studioIcon{width:16px;height:16px}
+.studioApp .studioPhotoBottom{position:absolute;bottom:6px;left:10px;right:10px;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:5px;pointer-events:none}
+.studioApp .studioPhotoBottom span{display:flex;align-items:center;gap:4px;background:#18373ce6;border:1px solid #a1bec54d;border-radius:6px;padding:5px;font-size:9px;white-space:nowrap}
+.studioApp .studioPhotoBottom .studioIcon{width:11px;height:11px}
+.studioApp .studioPhotoBottom strong{font-size:10px;font-weight:600;color:#d9edf2}
+.studioApp .studioVisitedBadge{position:absolute;top:44px;left:8px;border:1px solid #34c759;background:#132a24dd;border-radius:8px;padding:3px 6px;color:#7bef9a;font-size:9px;z-index:2}
+.studioApp .studioCardBody{padding:10px}
+.studioApp .studioNameRow,.studioApp .studioMetaRow{display:flex;align-items:center;justify-content:space-between;gap:6px;min-width:0}
+.studioApp .studioCard .restname{min-width:0;flex:1;font-size:16px;line-height:1.15;margin:0!important;color:white!important;overflow:hidden}
+.studioApp .studioCard .restnameButton{font-size:16px;font-weight:700;color:white!important;background:transparent;border:0;padding:0;text-align:left;line-height:1.25;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;max-width:100%;display:block;min-height:24px}
+.studioApp .studioRating{flex:none;white-space:nowrap;border:1px solid #c3e7f126;border-radius:7px;background:#102b30;padding:3px 5px;font-size:10px;line-height:1.4;font-variant-numeric:tabular-nums}
+.studioApp .studioRating b{color:#ffd60a}.studioApp .studioRating small{font-size:8px;color:#c3dbe0}
+.studioApp .studioMetaRow{margin-top:2px}
+.studioApp .studioMetaRow>span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;font-size:11px;color:#d2e7eb;line-height:1.5}
+.studioApp .studioMatch{flex:none;color:#ffdc82!important;border:1px solid #dcae4499;background:#ffc64f25;border-radius:7px;padding:3px 5px;font-size:9px;line-height:1.1;white-space:nowrap}
+.studioApp .studioKnown{margin:6px 0 8px!important;background:#142c31b3;border:1px solid #c3e7f133;border-radius:8px;padding:5px 8px;color:#d5eaf0!important;font-size:10px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.studioApp .studioKnown strong{color:#ffdb7b;font-weight:600}
+.studioApp .studioCardActions{margin:0!important;gap:8px!important;align-items:stretch}
+.studioApp .studioCardActions button,.studioApp .studioFriend .actions button{display:flex;align-items:center;justify-content:center;gap:4px;flex:1;min-height:36px!important;border:1px solid #a1bec54d!important;background:#19363ce0!important;color:#eef8fb!important;border-radius:12px!important;padding:6px 3px!important;font-size:11px!important;white-space:nowrap;line-height:1.15}
+.studioApp .studioCardActions .studioIcon,.studioApp .studioFriend .actions .studioIcon{width:13px;height:13px}
+.studioApp .studioCardActions button.studioDetails,.studioApp .studioDetails{background:#ffc64f!important;color:#142427!important;border:1px solid #ffe29a!important;font-weight:700!important}
+.studioApp .studioCardActions button[data-rest-action=visited][aria-pressed=true],.studioApp .studioDetailDock [aria-pressed=true]{color:#72ef94!important;border-color:#34c759!important;background:#34c7592e!important}
+.studioApp .studioCardActions button[data-rest-action=like][aria-pressed=true]{background:#ef444438!important;color:#ffb8b8!important;border-color:#ef4444!important}
+.studioApp .studioPageHeader{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 16px}
+.studioApp .studioPageHeader h1{font-size:22px;margin:0 0 4px;display:flex;align-items:center;gap:6px}
+.studioApp .studioPageHeader h1>.studioIcon{color:#ffc64f;width:21px;height:21px}
+.studioApp .studioPageHeader p{font-size:11px;line-height:1.25;margin:0;color:#c3dbe0}
+.studioApp .studioPageHeader>.studioCity{padding-inline:7px;max-width:130px;height:34px}
+.studioApp .studioPageHeader>.studioCity select{max-width:95px;font-size:11px!important}
+.studioApp .studioPopular .studioPageHeader h1{font-size:18px;white-space:nowrap}
+.studioApp .studioSegments{display:flex;align-items:stretch;padding:4px;gap:3px;background:#0a1c20;border:1px solid #5b7e8566;border-radius:17px;margin-bottom:12px}
+.studioApp .studioSegments button{display:flex;align-items:center;justify-content:center;gap:6px;flex:1;min-height:35px;background:transparent;color:#e4f2f5;border:0;border-radius:13px;padding:6px 5px;font-size:11px;font-weight:700;white-space:nowrap}
+.studioApp .studioSegments button[aria-pressed=true]{background:#ffc64f;color:#142427;box-shadow:0 2px 6px #ffc64f30}
+.studioApp .studioSegments .studioIcon{width:14px;height:14px}
+.studioApp .studioPopularFilters{display:flex;gap:6px;overflow:auto;scrollbar-width:none;margin-bottom:12px}
+.studioApp .studioPopularFilters button{flex:none;border:1px solid #607d8566;background:#20373b;color:#eef8fb;border-radius:18px;font-size:10px;padding:7px 10px;min-height:32px}
+.studioApp .studioPopularFilters button[aria-pressed=true]{background:#ffc64f;color:#142427;border-color:#ffc64f;font-weight:700}
+.studioApp .studioPopular .discoverTools{display:flex;gap:7px;margin:0 0 12px!important;padding:0!important;grid-template-columns:1fr}
+.studioApp .studioPopular .discoverTools input{width:100%;min-width:0;min-height:38px!important;padding:8px 10px;font-size:12px;background:#1a2f33!important;color:#eef8fb!important;border:1px solid #45646a!important}
+.studioApp .studioPopular .discoverTools select{min-width:0;max-width:115px;min-height:38px!important;background:#1a2f33!important;color:#eef8fb!important;border:1px solid #45646a!important;font-size:11px;padding:5px}
+.studioApp .studioResults{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.studioApp .studioSearchToggle{position:relative;z-index:1;height:0;display:flex;justify-content:flex-end}
+.studioApp .studioSearchToggle button{position:relative;top:-48px;right:0;display:grid;place-items:center;overflow:hidden;width:30px;height:30px;min-height:30px;padding:5px;border:1px solid #567b8466;border-radius:50%;background:#20373b;color:#e4f2f5;font-size:0;box-shadow:-7px 0 9px #142427}
+.studioApp .studioSearchToggle .studioIcon{width:15px;height:15px}
+.studioApp .studioPopularFilters{padding-right:37px}
+.studioApp .studioPopular .restaurantGrid{display:grid;grid-template-columns:1fr;gap:16px;align-items:start}
+.studioApp .studioPopular .studioCardMedia,.studioApp .studioPopular .studioCard .photo{height:175px!important}
+.studioApp .studioPopular .studioCard .restnameButton{font-size:19px}
+.studioApp .studioPopular .studioCardBody{padding:12px}
+.studioApp .studioRank{background:#ffc64f;color:#142427;border-color:#ffe29a;font-weight:800;font-size:10px}
+.studioApp .studioPopular .studioRankedCard{border-color:#ffcf69b3!important}
+.studioApp .studioLeaderboard{display:flex;justify-content:space-between;font-size:15px;line-height:1.4;margin:4px 0 0}
+.studioApp .studioLeaderboard small{font-size:10px;color:#ffda79;font-weight:400}
+.studioApp .studioPopular .studioCardActions button{min-height:40px!important;font-size:11px!important}
+.studioApp .studioPopular .studioCardActions .studioDetails{flex:1.3;white-space:normal}
+.studioApp .studioSocial{background:linear-gradient(180deg,#0f171a,#132025,#16272c)}
+.studioApp .studioPageHeader h1 small{font-size:9px;border:1px solid #9380d080;padding:3px 7px;border-radius:12px;color:#ebe4ff;background:#7c5ce52e;white-space:nowrap}
+.studioApp .studioAdd{background:#ffc64f;color:#142427;border:0;border-radius:14px;padding:9px 12px;font-weight:700;min-height:36px}
+.studioApp .studioCommunityNote{padding:12px 14px;border:1px solid #34c75988;background:#132a24;border-radius:16px;margin:0 0 14px}
+.studioApp .studioCommunityNote strong{font-size:13px}.studioApp .studioCommunityNote p{font-size:11px;margin:3px 0 0;color:#cee6db}
+.studioApp .studioFriend{padding:13px;border:1px solid #6ca78d7a;background:linear-gradient(150deg,#1a3539,#122529);border-radius:21px;margin:0 0 14px;box-shadow:0 5px 14px #0002}
+.studioApp .studioFriendTop{display:flex;align-items:center;gap:9px}.studioApp .studioFriendTop>div{min-width:0;flex:1}
+.studioApp .studioAvatar{display:grid;place-items:center;border:1px solid #73bfa4;border-radius:50%;width:39px;height:39px;flex:none;font-size:12px;background:#17372e;color:#ffda79;font-weight:700}
+.studioApp .studioFriend h3{font-size:15px;margin:0 0 3px}.studioApp .studioFriend h3 small{font-size:9px;color:#bed6db;font-weight:400}
+.studioApp .studioFriendTop p{font-size:9px;color:#8be8aa;margin:0}
+.studioApp .studioFriendSpot{border-radius:9px;background:#061b20;padding:8px 10px;margin:10px 0;font-size:12px}
+.studioApp .studioFriendSpot p{font-size:11px;margin:4px 0 0;color:#c3dbe0}
+.studioApp .studioFriend>p{font-size:12px}
+.studioApp .studioFriend>button,.studioApp .studioTrail button{border:1px solid #607d85;background:#18383e;color:#edf7fa;border-radius:10px;padding:9px 12px;min-height:36px}
+.studioApp .studioTrail{border-radius:20px;border:1px solid #67868e;background:#193338;padding:16px}
+.studioApp .studioTrail>p{font-size:12px}.studioApp .studioTrailStop{display:flex;gap:10px;align-items:center;padding:14px 0;border-top:1px solid #45646a}.studioApp .studioTrailStop>b{color:#ffc64f}.studioApp .studioTrailStop>div{flex:1}.studioApp .studioTrailStop h3{font-size:14px;margin:0}.studioApp .studioTrailStop p{font-size:11px;margin:4px 0 0}
+.studioApp .studioAskHeader{margin-bottom:18px}.studioApp .studioAskHeader p{font-size:13px;color:#ffda79;margin:0}
+.studioApp .studioDna{display:flex;align-items:center;gap:10px;border:1px solid #519cab66;background:#193338;border-radius:14px;padding:12px 14px;margin:0 0 20px}
+.studioApp .studioDna>.studioIcon,.studioApp .studioDna>span{color:#ffc64f}.studioApp .studioDna strong{font-size:12px;line-height:1.3;display:block}.studioApp .studioDna p{font-size:11px;margin:3px 0 0;color:#c3e7f1}
+.studioApp .studioAsk h2{font-size:14px;margin:20px 0 10px}
+.studioApp .studioSuggestions{display:flex;align-items:start;flex-direction:column;gap:8px}
+.studioApp .studioSuggestions button{display:flex;gap:7px;align-items:center;text-align:left;font-size:11px;line-height:1.35;color:#e4f2f5;background:#183338;border:1px solid #567b8466;border-radius:14px;min-height:34px;padding:8px 10px}
+.studioApp .studioSuggestions .studioIcon{width:13px;height:13px;color:#ffc64f}
+.studioApp .studioAsk .paloContainer{position:static!important;display:block!important;width:100%;max-width:none;inset:auto!important;z-index:auto}
+.studioApp .studioAsk #paloPetButton{display:none!important}
+.studioApp .studioAsk .paloCreature{position:relative;width:58px;height:62px;flex:none;transform:scale(.65);transform-origin:center;margin:-10px 0}
+.studioApp .studioAsk .paloMoodPill{display:none}
+.studioApp .studioAsk .paloBubble{display:flex!important;flex-direction:column;opacity:1!important;visibility:visible!important;position:static!important;inset:auto!important;transform:none!important;width:100%!important;max-width:none!important;max-height:none!important;border:1px solid #acbd8477;border-radius:20px!important;overflow:hidden;background:linear-gradient(150deg,#25444a,#173035);box-shadow:0 0 16px #ffc64f19;animation:none}
+.studioApp .studioAsk .paloBubbleTail,.studioApp .studioAsk #paloMinimizeBtn{display:none}
+.studioApp .studioAsk .paloBubbleHeader{order:1;background:transparent;border:0;padding:14px 14px 7px;align-items:center}
+.studioApp .studioAsk .paloBubbleHeader h3{color:#ffda79;font-size:15px}.studioApp .studioAsk .paloSubtitle{font-size:10px;color:#c3dbe0}
+.studioApp .studioAsk .paloBrainBadge{color:#ffda79;background:#193338;border-color:#6c876b;font-size:9px}
+.studioApp .studioAsk .paloForm{order:0;background:#173035;border:0;border-bottom:1px solid #567b8466;padding:12px}
+.studioApp .studioAskPrompt .paloForm{border:0;border-radius:18px;background:transparent;padding:0}
+.studioApp .studioAskPrompt .paloInputRow{min-height:56px}
+.studioApp .studioAsk .paloBrainBadge{display:none}
+.studioApp .studioAsk #studioPaloHost{margin-top:10px}
+.studioApp .studioAsk .paloInputRow{background:#142b30;border:1px solid #6e959e;border-radius:15px;padding:4px;box-shadow:none}
+.studioApp .studioAsk .paloInputRow input{color:#f7fbfc;background:transparent;font-size:13px;min-height:44px;padding:8px}
+.studioApp .studioAsk input::placeholder{color:#b6cdd3!important;opacity:1}
+.studioApp .studioAsk .paloStatusText{color:#c3dbe0;font-size:10px}
+.studioApp .studioAsk .paloMicBtn,.studioApp .studioAsk .paloIconBtn{background:#26484e;color:#edf7fa;border-color:#67868e}
+.studioApp .studioAsk .paloSpeechBody{order:2;padding:4px 16px 16px}.studioApp .studioAsk .paloMessageText{font-size:14px;color:#eef8fb;line-height:1.5}
+.studioApp .studioAsk .paloChipRail{order:3;padding:0 14px 12px}.studioApp .studioAsk .paloChipRail button{background:#142b30;color:#dceff2;border-color:#567b84;white-space:nowrap}
+.studioApp .studioAsk .paloResultsDeck{order:4;max-height:none;padding:0 12px}.studioApp .studioAsk .paloReviewCard,.studioApp .studioAsk .paloWebSearchCard,.studioApp .studioAsk .paloBrainDrawer,.studioApp .studioAsk .paloThoughtBox{order:5}
+.studioApp .profile-screen{padding-top:44px}.studioApp .tasteProfileHeader{margin-bottom:18px;display:block}.studioApp .tasteProfileHeader h1{font-size:26px}.studioApp .tasteProfileHeader p{font-size:12px;line-height:1.4;color:#c3dbe0;margin:0}
+.studioApp .palatePassportCard{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #34c75999!important;background:#132a24!important;border-radius:16px;padding:12px;margin-bottom:12px}
+.studioApp .passportCardContent{gap:9px;min-width:0}.studioApp .passportInfo strong{font-size:13px;color:#f7fbfc}.studioApp .passportInfo p{font-size:10px;margin:3px 0 0}.studioApp .passportIconWrap{color:#ffc64f;background:#163e2e;font-size:18px;width:34px;height:34px;border-radius:50%}
+.studioApp .passportBadges{display:flex;flex-direction:column;align-items:end;gap:4px}.studioApp .passportVisitsBadge{font-size:10px;white-space:nowrap;background:#34c75933;color:#9aefb0;border-radius:10px;padding:5px 8px}.studioApp .cloudSyncBadge{font-size:8px;color:#bed6db;text-align:right;background:transparent;padding:0;max-width:100px}
+.studioApp .studioGenome{position:relative;min-height:126px;overflow:hidden;border:1px solid #ffc64f;border-radius:20px;margin:16px 0 24px;background:#20373b}
+.studioApp .studioGenomePhoto{position:absolute;inset:0}.studioApp .studioGenomePhoto img{width:100%;height:100%;object-fit:cover;opacity:.5}.studioApp .studioGenomePhoto:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,#10262a)}
+.studioApp .studioGenome>div:last-child{position:relative;padding:42px 14px 14px}.studioApp .studioGenome small{font-size:10px;color:#ffda79;font-weight:700}.studioApp .studioGenome h2{font-size:20px;margin:4px 0}.studioApp .studioGenome p{font-size:11px;margin:0;color:#e4f2f5}
+.studioApp .studioPreferences h2{margin:22px 0 8px;font-size:15px}.studioApp .studioPreferences>p{font-size:12px;margin:0 0 10px}.studioApp .studioPreferences .studioSpiceLabel{color:#ffda79;text-transform:capitalize;font-weight:600}
+.studioApp .studioPreferences input[type=range]{width:100%;accent-color:#ffc64f;min-height:36px;padding:0;background:transparent;border:0}
+.studioApp .studioChoices{display:flex;flex-wrap:wrap;gap:8px}.studioApp .studioChoices button{background:#1a353b;border:1px solid #67868e66;color:#ecf6f8;font-size:11px;padding:10px 12px;min-height:36px;border-radius:10px}.studioApp .studioChoices button[aria-pressed=true]{background:#519cab;border-color:#c3e7f1;color:#fff}
+.studioApp .profileColumns{display:block;margin-top:25px}.studioApp .profileColumns>.card,.studioApp .profileColumns .card,.studioApp .profilePrivacy,.studioApp .calibrationDeck{background:#1a2f33!important;border-color:#45646a!important;color:#eef8fb!important}
+.studioApp .profileSavedLink{margin:24px 0 8px;background:#193338;border-color:#45646a;color:#eef8fb}.studioApp .profileColumns .row span,.studioApp .profileColumns .feedNote{color:#c3dbe0}.studioApp .profile-screen .section h2{font-size:17px}
+.studioApp .profile-screen .btn,.studioApp .profile-screen .linkBtn{color:#142427}.studioApp .profile-screen .secondary{background:#294a52;color:#eef8fb}.studioApp .profile-screen .profilePrivacy summary{color:#eef8fb}.studioApp .profile-screen .feedNote,.studioApp .profile-screen .studioHint{color:#c3dbe0}
+.studioApp .place-screen{padding:0!important;position:relative;animation:none!important;transform:none!important}.studioApp .placeHero{height:270px;min-height:270px;border-radius:0;background:#142427;overflow:hidden}.studioApp .placeHeroPhoto{position:absolute;inset:0}.studioApp .placeHeroPhoto img{width:100%;height:100%;object-fit:cover}.studioApp .placeHeroPhoto:after{background:linear-gradient(#14242716,transparent 25%,#0d2024)}
+.studioApp .placeHeroControls{position:absolute;top:20px;left:16px;right:16px;padding:0}.studioApp .placeHeroControls button{min-height:40px;min-width:40px;border:1px solid #a1bec54d;border-radius:50%;padding:8px;background:#14272be6;color:#eef8fb;font-size:11px}
+.studioApp .placeHeroTitle{position:absolute;left:16px;right:16px;bottom:16px;gap:12px;padding:0}.studioApp .placeHeroTitle h1{font-size:27px;line-height:1.1;margin-bottom:5px}.studioApp .placeHeroTitle p{font-size:12px;color:#eef8fb;margin:0}.studioApp .placeMatch{display:flex;align-items:center;gap:4px;background:#ffc64f!important;color:#142427!important;padding:9px 12px;border-radius:14px;flex:none}.studioApp .placeMatch strong{font-size:16px}.studioApp .placeMatch span{font-size:9px;color:#142427!important;max-width:35px;line-height:1.2}
+.studioApp .placeBody{padding:14px 16px 90px;max-width:800px;margin:auto}.studioApp .placeQuickStats{font-size:12px;color:#ffda79;margin:4px 0 14px;display:flex;justify-content:space-between}.studioApp .placeBody>.tags{margin:0 0 16px;gap:6px}.studioApp .placeBody>.tags .tag{background:#1a353b;border:1px solid #67868e66;border-radius:7px;color:#eef8fb;font-size:10px;padding:5px 8px}
+.studioApp .studioVisit{display:flex;align-items:center;gap:10px;border:1px solid #519cab66;background:#173338;border-radius:16px;padding:12px;margin:16px 0 20px}.studioApp .studioVisit>.studioIcon{width:27px;height:27px}.studioApp .studioVisit>div{flex:1}.studioApp .studioVisit h2{font-size:12px;margin:0 0 4px}.studioApp .studioVisit p{font-size:10px;margin:0}.studioApp .studioVisit button{background:#ffc64f;border:0;color:#142427;padding:7px 9px;border-radius:12px;font-size:10px;min-height:32px}.studioApp .studioVisit.isVisited{border-color:#34c759;background:#132a24}.studioApp .studioVisit.isVisited>.studioIcon{color:#74ed92}
+.studioApp .placeBreakdown{border:1px solid #519cab80!important;background:#183338!important;padding:18px 14px;border-radius:18px;margin-bottom:22px;position:relative}.studioApp .placeBreakdown h2{font-size:15px;margin:0 0 20px;max-width:75%}.studioApp .placeBreakdown>p{font-size:12px;margin:8px 0;color:#d9edf2}.studioApp .placeCaveat{font-size:10px!important;line-height:1.4!important;color:#bed6db!important}.studioApp .studioDeepDive{font-size:11px;color:#d9edf2;margin-top:12px}.studioApp .studioDeepDive summary{color:#ffda79;font-weight:600;cursor:pointer;padding:8px 0}.studioApp .matchFactors>div{border-color:#45646a;color:#c3dbe0}.studioApp .matchFactors .fit{color:#8de5bc}.studioApp .matchFactors .unknown{color:#d9edf2}.studioApp .matchFactors .conflict{color:#ffb8ad}
+.studioApp .placeAbout{padding:0!important;border:0!important;background:transparent!important}.studioApp .placeAbout h2{font-size:16px;margin:0 0 10px}.studioApp .placeAbout p{font-size:13px;line-height:1.5;margin-bottom:14px;color:#d9edf2}.studioApp .placeAddress{padding:16px;background:#183338;border:1px solid #519cab66;border-radius:16px}.studioApp .placeAddress .btn{font-size:12px;background:#ffc64f;color:#142427}
+.studioApp .placeDishes,.studioApp .placeFeedback{padding:16px 0;border-top:1px solid #45646a;margin-top:22px}.studioApp .placeDish{background:#1a353b;border:1px solid #45646a;border-radius:12px;padding:12px;margin:10px 0}.studioApp .placeDish h3{font-size:15px}.studioApp .placeDish p{font-size:12px}.studioApp .placeDish button{color:#dceff2;background:#274950;border-color:#67868e}
+.studioApp .studioDetailDock{position:fixed;bottom:0;left:0;right:0;z-index:40;display:flex;gap:10px;padding:10px 16px calc(12px + env(safe-area-inset-bottom));border-top:1px solid #a1bec54d;background:#14272bf2;backdrop-filter:blur(16px)}
+.studioApp .studioDetailDock button{display:flex;align-items:center;justify-content:center;gap:7px;flex:1;min-height:44px;border-radius:13px;border:1px solid #45646a;color:#eef8fb;background:#091e22;font-size:12px;font-weight:700}.studioApp .studioDetailDock button:last-child{color:#142427;background:#ffc64f;border-color:#ffe29a}
+.studioApp .empty{grid-column:1/-1;background:#1a2f33;border-color:#45646a;color:#d9edf2;padding:20px}.studioApp .empty p{color:#c3dbe0}
+@media(max-width:839px){
+ .studioApp .app{padding-bottom:98px}.studioApp[data-page=home] .app{padding:0;height:100dvh;overflow:hidden}.studioApp .homeMapView{height:calc(100dvh - 88px);display:flex;flex-direction:column;overflow:hidden}.studioApp .streetMapFrame{flex:1 1 52%;min-height:160px}.studioApp .streetMapFrame .zestMapStage{height:100%!important;min-height:100%!important}.studioApp .homeRecommendations{flex:none;min-height:310px;height:calc(48dvh - 30px);box-sizing:border-box}.studioApp .homeMapView .restaurantGrid{height:calc(100% - 44px);overflow-y:auto!important}.studioApp .streetMapStatus{font-size:11px}
+}
+@media(min-width:840px){
+ .studioApp .screen:not(.home-screen):not(.place-screen){max-width:760px;margin:0 auto}.studioApp .home-screen{display:grid;grid-template-columns:1fr 420px;min-height:calc(100dvh - 100px)}.studioApp .streetMapFrame{height:calc(100dvh - 100px);min-height:560px}.studioApp .streetMapFrame .zestMapStage{height:100%!important;min-height:100%!important}.studioApp .homeRecommendations{margin:0;border-radius:24px 0 0 24px;max-height:calc(100dvh - 100px);overflow:auto}.studioApp .homeMapView .restaurantGrid{display:grid!important;grid-template-columns:1fr;overflow:visible;gap:18px!important;padding:12px!important}.studioApp .homeMapView .restaurantGrid .studioCard{width:100%;min-width:0!important}.studioApp .studioPopular .restaurantGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.studioApp .studioPopular .studioLeaderboard{grid-column:1/-1}.studioApp .studioDetailDock{left:calc(50% - 400px);right:calc(50% - 400px);border-radius:18px 18px 0 0}.studioApp .placeHero{height:360px}
+}
+@media(max-width:359px){.studioApp h1{font-size:23px}.studioApp .studioPageHeader h1{font-size:18px}.studioApp .studioPageHeader>.studioCity{max-width:110px}.studioApp .studioPageHeader>.studioCity select{max-width:80px}.studioApp .homeMapView .restaurantGrid .studioCard{flex-basis:280px!important;min-width:280px!important}.studioApp .studioCard .restnameButton{font-size:14px}.studioApp .studioCardActions{gap:5px!important}.studioApp .studioCardActions button{font-size:10px!important}.studioApp .nav{inset-inline:10px!important}.studioApp .studioFriend h3{font-size:13px}.studioApp .studioFriend h3 small{display:block}.studioApp .studioMatch{font-size:8px}.studioApp .studioSegments button{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.studioApp *{scroll-behavior:auto!important}.studioApp .nav .studioIcon{filter:none}.studioApp .studioCard:hover{transform:none!important}}
+@media(max-width:359px){.studioApp .studioPopular .studioPageHeader h1{font-size:15px}.studioApp .studioPopular .studioPageHeader>.studioCity{max-width:100px}.studioApp .studioPopular .studioPageHeader>.studioCity select{max-width:70px}}
+/* Availability and companion controls stay visible at mobile widths. */
+.studioApp .studioBadge{display:inline-flex;align-items:center;width:max-content;white-space:nowrap;padding:4px 7px;border:1px solid #98b9a966;border-radius:7px;background:#213b35;color:#bbebc9;font:700 10px/1 Arial,sans-serif;vertical-align:middle}
+.studioApp .studioAskHeader{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.studioApp .studioAskHeader h1{display:flex;align-items:center;gap:9px;font-size:26px}
+.studioApp .studioAskHeader .studioBadge{color:#ffdc82;background:#46391d;border-color:#ad8b3b}
+.studioApp .nav{height:72px}
+.studioApp .nav button{gap:3px!important;position:relative}
+.studioApp .studioNavBadge{font:600 7px/1 Arial,sans-serif;color:#c6e9d2;white-space:nowrap}
+.studioApp #n-ask .studioNavBadge{color:#ffdc82}
+.studioApp .studioCityControls{min-width:0;flex:1}
+.studioApp .studioCityRow{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.studioApp .studioCityRow .studioCity{max-width:145px;height:40px;padding-inline:7px;min-width:0}
+.studioApp .studioCityRow .studioCity select{max-width:108px;font-size:12px!important}
+.studioApp .studioLocate{display:flex;align-items:center;gap:4px;min-height:40px;padding:7px;border:1px solid #64858d;border-radius:13px;background:#203d42;color:#dceff2;font-size:10px;white-space:nowrap}
+.studioApp .studioLocate .studioIcon{width:13px;height:13px;color:#8ec6ff}
+.studioApp .studioLocationStatus{font-size:10px;line-height:1.35;margin:5px 0 0;color:#c3e7f1}
+.studioApp .studioLocationStatus:empty{display:none}
+.studioApp .homeRecommendations>.section{align-items:flex-start!important;gap:5px!important}
+.studioApp .homeRecommendations .studioSpotCount{display:none}
+.studioApp .homeRecommendations .studioSearch{height:40px;width:32px;flex:none}
+.studioApp .studioPopular .studioPageHeader{flex-wrap:wrap;align-items:flex-start}
+.studioApp .studioPopular .studioPageHeader>.studioCityControls{flex-basis:100%}
+.studioApp .studioPaloToggle{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 10px;min-height:44px;flex:none;border:1px solid #678b91;border-radius:15px;background:#19383e;color:#e4f2f5;font-size:11px;pointer-events:auto;white-space:nowrap}
+.studioApp .studioPaloToggle>.studioIcon{width:14px;height:14px;color:#ffc64f}
+.studioApp .studioPaloToggle i{display:block;position:relative;width:29px;height:18px;border:1px solid #90aab0;border-radius:12px;background:#3c565d;box-sizing:border-box}
+.studioApp .studioPaloToggle i:after{content:"";position:absolute;left:2px;top:2px;width:12px;height:12px;background:#e7f4f7;border-radius:50%;transition:transform .18s ease-out}
+.studioApp .studioPaloToggle[aria-checked=true] i{background:#ffc64f;border-color:#ffc64f}
+.studioApp .studioPaloToggle[aria-checked=true] i:after{transform:translateX(11px);background:#193338}
+.studioApp .homeMapToolbar .studioPaloToggle{min-height:33px;padding:6px 9px;font-size:11px;background:#18383e;border-color:#688b92;box-shadow:0 2px 6px #20373b30}
+.studioApp .homeMapToolbar .studioBadge{font-size:8px;padding:3px 4px;background:#e8f1e7;color:#31533c;border-color:#8ea391}
+.studioApp .studioCompanionSetting{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0 20px;margin-bottom:16px;border-bottom:1px solid #45646a}
+.studioApp .studioCompanionSetting strong{font-size:14px}.studioApp .studioCompanionSetting p{font-size:11px;margin:5px 0 0}
+.studioApp[data-palo-visible=true]>.paloContainer{display:flex!important;right:12px;bottom:calc(110px + env(safe-area-inset-bottom));z-index:45}
+.studioApp>.paloContainer #paloBubble,.studioApp>.paloContainer .paloMoodPill{display:none!important}
+.studioApp>.paloContainer .paloCreature{width:62px;height:66px;transform:scale(.74);transform-origin:bottom center}
+.studioApp>.paloContainer .paloPetWrapper{width:62px;height:66px;filter:drop-shadow(0 3px 7px #0005)}
+.studioApp .studioPaloHide{position:absolute;top:-7px;right:-7px;width:32px;height:32px;min-height:32px;padding:0;border:1px solid #7e9da4;background:#19363e;color:#e4f2f5;border-radius:50%;font-size:20px;line-height:1;box-shadow:0 3px 8px #0003}
+.studioApp .studioAsk .studioPaloHide,.studioApp:has(.nav.hide)>.paloContainer,.studioApp[data-page=place]>.paloContainer{display:none!important}
+.studioApp[data-palo-visible=false] .studioAsk .paloAvatarBadge{display:none}
+.studioApp .studioCircleLaunch{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 18px;color:#b4d4c8;font-size:11px}
+.studioApp .studioCircleLaunch .studioBadge{padding:7px 10px;background:#224839;border-color:#78ae8e;color:#ceefdb;font-size:11px}
+.studioApp .studioSocial .studioPageHeader{margin-bottom:14px}
+.studioApp .studioSocial .studioPageHeader h1{font-size:25px}
+.studioApp .studioSocial button:disabled{cursor:default;box-shadow:none!important;background:#233a3d!important;border-color:#58777a!important;color:#b9ced2!important;opacity:1}
+.studioApp .studioCommunityNote{border-color:#5e997d;background:#16342b;padding:14px;margin-bottom:18px}
+.studioApp .studioCommunityNote strong{color:#def4e6;font-size:14px}.studioApp .studioCommunityNote p{line-height:1.5;margin-top:6px}
+.studioApp .studioFriend{border-color:#629e81;padding:15px}.studioApp .studioFriend h3 small{display:block;margin-top:3px}
+.studioApp .studioFriendTop p{color:#bfdcd0;line-height:1.3;margin-top:5px}
+.studioApp .studioFriendSpot{padding:11px 12px;margin:13px 0}.studioApp .studioFriendSpot>b{display:block;font-size:13px;margin-top:5px}
+.studioApp .studioSampleLabel{font-size:8px;color:#b6d2c6;letter-spacing:.04em}
+.studioApp .studioFriend .actions button{min-height:42px!important}
+.studioApp .studioFriend .actions button.studioDetails{background:#ffc64f!important;border-color:#ffe29a!important;color:#142427!important}
+.studioApp .studioCircleActivity{display:flex;gap:11px;padding:18px 0;border-bottom:1px solid #42645d}
+.studioApp .studioCircleActivity>div{flex:1;min-width:0}.studioApp .studioCircleActivity h3{font-size:14px;margin:0}.studioApp .studioCircleActivity h3 small{display:block;font-size:10px;color:#bcd8cd;margin-top:4px;font-weight:400}
+.studioApp .studioCircleActivity p{font-size:12px;margin:8px 0}.studioApp .studioCircleActivity>button{align-self:center;display:grid;place-items:center;width:40px;min-height:40px;border:1px solid #58777a;border-radius:12px}
+.studioApp .studioCircleCrawl{border:1px solid #629e81;border-radius:20px;overflow:hidden;background:#183136}
+.studioApp .studioCrawlPhoto{height:150px;position:relative;overflow:hidden}.studioApp .studioCrawlPhoto img{width:100%;height:100%;object-fit:cover}.studioApp .studioCrawlPhoto>.studioBadge{position:absolute;bottom:12px;left:12px;background:#16342beF}
+.studioApp .studioCrawlBody{padding:17px}.studioApp .studioCrawlBody h2{font-size:19px;margin:0}.studioApp .studioCrawlBody>p{font-size:12px;margin:6px 0 16px}
+.studioApp .studioCrawlBody ol{padding-left:24px;color:#ffdc82}.studioApp .studioCrawlBody li{padding:0 0 18px 7px;font-size:13px}.studioApp .studioCrawlBody li strong{color:#edf8f5}.studioApp .studioCrawlBody li span{display:block;margin-top:4px;font-size:11px;color:#c3dbe0}
+.studioApp .studioCrawlBody>button{width:100%;min-height:44px;border:1px solid #58777a;border-radius:12px;font-size:12px}
+.studioUserLocation{width:15px;height:15px;background:#1672df;border:3px solid white;border-radius:50%;box-shadow:0 0 0 8px #1672df24,0 2px 7px #1b487b55}
+.studioApp button[aria-busy=true]{cursor:progress;opacity:.75}
+.studioApp ::selection{background:#ffc64f;color:#142427}.studioApp input{caret-color:#ffc64f}
+@media(max-width:359px){.studioApp .studioCityRow{gap:4px}.studioApp .studioCityRow .studioCity{max-width:117px}.studioApp .studioCityRow .studioCity select{max-width:83px;font-size:11px!important}.studioApp .studioLocate{font-size:9px;padding:6px;gap:3px}.studioApp .studioAskHeader h1{font-size:22px}.studioApp .studioAskHeader .studioPaloToggle{padding:7px;gap:4px}.studioApp .studioAskHeader .studioPaloToggle>.studioIcon{display:none}.studioApp .studioSocial .studioPageHeader h1{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.studioApp .studioPaloToggle i:after{transition:none}.studioApp .paloCreature *{animation:none!important}}
+@media(max-width:839px){.studioApp[data-page=home]>.paloContainer{bottom:calc(48dvh + 110px)}}
+/* The map sheet uses the reference's deep emerald glass and warm metal accents. */
+.studioApp .homeRecommendations{background:linear-gradient(155deg,#173136 0%,#091c20 55%,#071619 100%);border-top-color:#b7c8bd88;box-shadow:0 -8px 28px #05131635,inset 0 1px #ecf8ee12}
+.studioApp .studioCityRow .studioCity{background:linear-gradient(145deg,#f9dfaa,#d8b66d);border-color:#ffe8b3;box-shadow:inset 0 1px #fff2ce,0 3px 10px #0003}
+.studioApp .studioCityRow .studioCity>.studioIcon{color:#863d2b}
+.studioApp .studioCityRow .studioCity select{color:#172e30!important;color-scheme:light;font-weight:700}
+.studioApp .studioCityRow .studioCity option{background:#173338;color:#f5f7ed}
+.studioApp .studioLocate{background:linear-gradient(#23454b,#173338);border-color:#86a8ae88;color:#dceff2;box-shadow:inset 0 1px #e5faf012}
+.studioApp .studioBrowseRow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 6px;min-height:36px}
+.studioApp .studioBrowseRow h2{margin:0;font-size:11px;font-weight:500;color:#cfdbd5;letter-spacing:.02em}
+.studioApp .studioBrowseRow .railControls{display:flex!important;gap:7px;margin-left:auto}
+.studioApp .studioBrowseRow .railControls button{display:grid;place-items:center;width:42px;height:36px;min-height:36px;padding:0;border:1px solid #aac7bd66;background:linear-gradient(#2a4b50,#19383e);color:#f9dfa2;box-shadow:inset 0 1px #effff712;border-radius:12px;font-size:18px}
+.studioApp .studioBrowseRow .railControls button:disabled{background:#10292e;border-color:#6c888d55;color:#91a8ab;opacity:.6;cursor:default}
+.studioApp .homeMapToolbar .filterChip[data-cuisine=all]{display:flex}
+.studioApp .restaurantGrid .studioCard{background:linear-gradient(145deg,#204249,#102a30 60%,#10262b)!important;border-color:#d6d2a878!important;box-shadow:inset 0 1px #edf8d82b,0 0 15px #ffc64f20,0 8px 22px #0004!important}
+.studioApp .studioCardMedia:after{background:linear-gradient(#05161942,transparent 38%,#0e272de8)}
+.studioApp .studioKnown{background:#081e2399;border-color:#a3b69d3d}
+.studioApp .studioCardActions button{background:linear-gradient(#24464d,#16363e)!important;border-color:#9cbcbf66!important;box-shadow:inset 0 1px #d8eff010}
+.studioApp .studioCardActions button.studioDetails{background:linear-gradient(135deg,#ffdc79,#ffc447)!important;border-color:#ffe6a4!important;color:#182a2c!important;box-shadow:inset 0 1px #fff4d780,0 3px 8px #0002}
+.studioApp .nav{background:linear-gradient(160deg,#31565deF,#10292feF 65%)!important;border-color:#c5d7cd80!important;box-shadow:inset 0 1px 1px #f1fff94d,0 8px 26px #0007!important}
+.studioApp .streetMapFrame .restaurantMarker{min-width:44px;min-height:44px;width:44px;height:44px;padding:10px;justify-content:center;background:transparent;border:0;box-shadow:none}
+.studioApp .streetMapFrame .restaurantMarker:after{display:none}
+.studioApp .streetMapFrame .restaurantMarker .markerDot{width:20px;height:20px;border:3px solid #fff;box-shadow:0 2px 7px #143c5355;box-sizing:border-box}
+.studioApp .streetMapFrame .restaurantMarker .markerScore{display:none;position:absolute;bottom:35px;left:50%;transform:translateX(-50%);padding:6px 8px;border-radius:10px;background:#fff;border:1px solid #b6ced1;box-shadow:0 3px 10px #173b4226;color:#183238;font-size:10px;white-space:nowrap}
+.studioApp .streetMapFrame .restaurantMarker:is(.active,:focus-visible,:hover) .markerScore{display:block}
+.studioApp .streetMapFrame .restaurantMarker.active .markerDot{outline:2px solid #cf9a2b;outline-offset:3px}
+.studioApp .streetMapFrame .restaurantMarker .markerName{display:none}
+@media(max-width:839px){
+ .studioApp .homeRecommendations{display:flex;flex-direction:column;height:calc(48dvh + 4px);min-height:382px}
+ .studioApp .homeRecommendations>.section{flex:none;margin-bottom:5px!important}
+ .studioApp .studioBrowseRow{flex:none}
+ .studioApp .homeMapView .restaurantGrid{flex:1;min-height:0;height:auto!important;padding-bottom:8px!important}
+ .studioApp[data-page=home]>.paloContainer{top:72px;bottom:auto;left:12px;right:auto}
+}
+@media(min-width:840px){.studioApp .studioBrowseRow .railControls{display:none!important}}
+@media(max-height:740px) and (max-width:839px){.studioApp .streetMapFrame .zestMapControls{top:59px!important;gap:5px}.studioApp .streetMapFrame .zestMapControls .zestMapBtn{width:38px;height:38px;min-height:38px;padding:6px}}
+@media(max-height:600px) and (max-width:839px){
+ .studioApp[data-page=home] .app{height:auto;overflow:visible;padding-bottom:100px}
+ .studioApp .homeMapView{height:auto;overflow:visible}
+ .studioApp .streetMapFrame{height:260px;min-height:260px;flex:none}
+ .studioApp .homeRecommendations{height:390px}
+ .studioApp[data-page=home]>.paloContainer{top:auto;bottom:110px;left:auto;right:12px}
+}
+.studioApp .studioFilters{padding:22px 0!important;margin:24px 0!important;border:0!important;border-top:1px solid #526d66!important;border-bottom:1px solid #526d66!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+.studioApp .studioFilters .prefInteractiveGroup+.prefInteractiveGroup{margin-top:28px}
+.studioApp .studioFilters .prefLabelRow{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:13px}
+.studioApp .studioFilters .prefLabelRow strong{color:#f7fbfc;font-size:14px}.studioApp .studioFilters .prefCurrentVal{font-size:11px;color:#ffdc82;text-align:right}
+.studioApp .studioFilters .budgetChoicePills{display:flex;flex-wrap:wrap;gap:8px}
+.studioApp .studioFilters .budgetPill,.studioApp .studioFilters .distPill{min-height:42px;padding:10px 12px;border:1px solid #67868e;border-radius:11px;background:#1a353b;color:#ecf6f8;font-size:11px}
+.studioApp .studioFilters button[aria-pressed=true]{background:#f4cd70;color:#172e30;border-color:#ffe6a4;font-weight:700}
+.studioApp .studioFilters label{color:#d3e6de;font-size:11px}.studioApp .studioFilters input[type=range]{width:100%;min-height:44px;padding:0;accent-color:#ffc64f;background:transparent;border:0;box-shadow:none}
+.studioApp .studioFilters .spiceMeterEnds{display:flex;justify-content:space-between;gap:12px;color:#c6dcd0;font-size:10px;margin:0 0 14px}
+.studioApp .studioFilters .studioHint,.studioApp .studioFilterStatus{font-size:11px;line-height:1.5;color:#c6dcd0;margin:12px 0 0}
+.studioApp .studioFilterStatus:empty{display:none}.studioApp .betaBadge{font:700 9px/1 Arial,sans-serif;color:#ffdc82;background:#46391d;border:1px solid #ad8b3b;border-radius:6px;padding:4px 6px;vertical-align:middle;white-space:nowrap}

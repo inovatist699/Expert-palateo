@@ -18,7 +18,7 @@ const root=path.resolve(__dirname,'..'),read=file=>fs.readFileSync(path.join(roo
  assert.match(read('src/features/companion/controller.js'),/Live AI permission not granted/);
  assert.match(read('src/legal/privacy/index.html'),/OpenRouter/);
  assert.match(read('src/features/auth/deletion.js'),/delete_own_account/);
- const vm=require('node:vm'),source=read('src/features/companion/controller.js');
+ const vm=require('node:vm'),source=read('src/features/companion/controller.js').replace(/\r\n?/g,'\n');
  const requestCode=source.match(/  async function requestPalo\(options\) \{[\s\S]*?\n  \}\n  function replyPalo/)[0].replace(/\n  function replyPalo$/,'');
  const saved=new Map();let accepted=false,calls=0,prompts=0;
  const context=vm.createContext({currentUser:{id:'owner'},cityName:()=> 'Mumbai',isRailwayActive:()=>true,AbortSignal,Error,

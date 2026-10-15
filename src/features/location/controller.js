@@ -4,5 +4,38 @@ function updateCityPicker(){
   const cityMap=[['Ahmedabad','cityAhmedabad'],['Vadodara','cityVadodara'],['Mumbai','cityMumbai'],['Delhi NCR','cityDelhiNCR'],['Bengaluru','cityBengaluru'],['Hyderabad','cityHyderabad'],['Chennai','cityChennai'],['Kolkata','cityKolkata'],['Pune','cityPune'],['Jaipur','cityJaipur'],['Kochi','cityKochi'],['Goa','cityGoa'],['Chandigarh','cityChandigarh']];
   for(const [city,id] of cityMap){const button=document.getElementById(id);if(button){const active=city===selectedCity;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active))}}
 }
-function setCity(city){if(!cityCenters[city])return;selectedCity=city;userLocation=null;state.selectedCity=city;homeLimit=12;homeCuisine='all';selectedPinId=null;persist();const status=document.getElementById('cityPickerStatus');if(status)status.textContent=city+' selected';updateCityPicker();setTimeout(()=>{const node=document.getElementById('cityPickerStatus');if(node)node.textContent=''},2400);if(currentUser){go(page);}}
-function useMyLocation(){const button=document.getElementById('useLocationButton'),status=document.getElementById('cityPickerStatus');if(!navigator.geolocation&&!window.PalateoNative){if(status)status.textContent='Location is unavailable in this browser.';return}if(button)button.disabled=true;if(status)status.textContent='Requesting location permission…';const locate=window.PalateoNative?((ok,fail,options)=>window.PalateoNative.getCurrentPosition(options).then(ok,fail)):navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);locate(position=>{const lat=position.coords.latitude,lon=position.coords.longitude,rad=x=>x*Math.PI/180,distance=center=>{const dLat=rad(center[0]-lat),dLon=rad(center[1]-lon),a=Math.sin(dLat/2)**2+Math.cos(rad(lat))*Math.cos(rad(center[0]))*Math.sin(dLon/2)**2;return 6371*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))},nearest=Object.entries(cityCenters).map(([city,center])=>({city,km:distance(center)})).sort((a,b)=>a.km-b.km)[0];if(nearest.km>75){if(status)status.textContent='You are outside our Indian metropolitan coverage. Choose a city above.';userLocation=null}else{selectedCity=nearest.city;state.selectedCity=selectedCity;persist();userLocation={lat,lon};if(status)status.textContent='Showing '+selectedCity+' (nearest city)';updateCityPicker();if(currentUser)go(page)}if(button)button.disabled=false;setTimeout(()=>{const node=document.getElementById('cityPickerStatus');if(node)node.textContent=''},5000)},error=>{if(status)status.textContent=error.code===1?'Location permission was declined. Choose a city manually.':'Could not get your location. Choose a city manually.';if(button)button.disabled=false}, {enableHighAccuracy:false,timeout:10000,maximumAge:300000})}
+let locationRequestPending=false,locationStatusMessage='',locationRequestId=0,locationPromise=null,resolveLocationRequest=null;
+function updateLocationStatus(message){
+ locationStatusMessage=message;
+ document.querySelectorAll('#cityPickerStatus,[data-location-status]').forEach(node=>node.textContent=message);
+ document.querySelectorAll('[data-action="location"]').forEach(button=>{button.disabled=locationRequestPending;button.setAttribute('aria-busy',String(locationRequestPending))});
+}
+function setCity(city){
+ if(!cityCenters[city])return;
+ resolveLocationRequest?.(false);resolveLocationRequest=null;locationPromise=null;
+ locationRequestId++;locationRequestPending=false;selectedCity=city;userLocation=null;state.selectedCity=city;homeLimit=12;homeCuisine='all';selectedPinId=null;
+ state.answers.distance='any';
+ persist();updateCityPicker();locationStatusMessage=city+' selected';if(currentUser)go(page);updateLocationStatus(locationStatusMessage);
+}
+function useMyLocation({changeCity=true}={}){
+ if(locationRequestPending)return locationPromise;
+ if(!navigator.geolocation&&!window.PalateoNative){updateLocationStatus('Location is unavailable in this browser. Showing anywhere in '+cityName()+'.');return Promise.resolve(false)}
+ const requestId=++locationRequestId,owner=currentUser?.id;
+ locationPromise=new Promise(resolve=>{resolveLocationRequest=resolve});const result=locationPromise;
+ locationRequestPending=true;updateLocationStatus('Requesting your location…');
+ const finish=(message,located=false)=>{locationRequestPending=false;updateLocationStatus(message);resolveLocationRequest?.(located);resolveLocationRequest=null;locationPromise=null};
+ const locate=window.PalateoNative?((ok,fail,options)=>window.PalateoNative.getCurrentPosition(options).then(ok,fail)):navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+ locate(position=>{
+  if(requestId!==locationRequestId)return;
+  if(currentUser?.id!==owner){finish('Location request cancelled.');return}
+  const lat=position.coords.latitude,lon=position.coords.longitude;
+  if(!Number.isFinite(lat)||!Number.isFinite(lon)||Math.abs(lat)>90||Math.abs(lon)>180){finish('Could not get your location. Choose a city manually.');return}
+  const rad=x=>x*Math.PI/180,distance=center=>{const dLat=rad(center[0]-lat),dLon=rad(center[1]-lon),a=Math.sin(dLat/2)**2+Math.cos(rad(lat))*Math.cos(rad(center[0]))*Math.sin(dLon/2)**2;return 6371*2*Math.atan2(Math.sqrt(a),Math.sqrt(Math.max(0,1-a)))},nearest=Object.entries(cityCenters).map(([city,center])=>({city,km:distance(center)})).sort((a,b)=>a.km-b.km)[0];
+  if(nearest.km>75){finish('You are outside our city coverage. Choose a city manually.');return}
+  if(changeCity){selectedCity=nearest.city;state.selectedCity=selectedCity;state.answers.distance='any';homeLimit=12;homeCuisine='all';selectedPinId=null}
+  userLocation={lat,lon};persist();locationRequestPending=false;locationStatusMessage='Using your location · '+selectedCity;
+  updateCityPicker();if(changeCity&&currentUser)go(page);finish(locationStatusMessage,true);
+  if(typeof fitStreetPlaces==='function')fitStreetPlaces(550);
+ },error=>{if(requestId!==locationRequestId)return;finish(error.code===1?'Location permission was declined. Choose a city manually.':'Could not get your location. Choose a city manually.')},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
+ return result;
+}

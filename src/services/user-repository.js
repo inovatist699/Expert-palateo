@@ -14,12 +14,12 @@ async function syncTaste(){
  if(!hasTasteAnswers())throw new Error('Complete your taste profile before syncing it.');
  const owner=currentUser,a=state.answers||{};
  if(isRailwayActive()){
-  const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==='any'?null:Number(a.distance||5),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
+  const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==null||a.distance===''||a.distance==='any'?null:Number(a.distance),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
   await railwayFetch('/api/user/taste',{method:'PUT',body:JSON.stringify(payload)});
   await logEvent('onboarding_complete',{answer_count:Object.keys(a).length});
   return true;
  }
- const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==='any'?null:Number(a.distance||5),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
+ const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==null||a.distance===''||a.distance==='any'?null:Number(a.distance),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
  const {error}=await supabaseClient.from('taste_profiles').upsert(payload);
  if(error)throw error;
  if(currentUser?.id!==owner.id)throw new Error('Account changed during taste sync.');

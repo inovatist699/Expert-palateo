@@ -1,6 +1,4 @@
-/* Adaptive recommendation algorithm.
-   Base content similarity -> feedback reinforcement -> social similarity -> exploration.
-*/
+/* Preference fit plus bounded proximity, review evidence and reversible feedback. */
 function restaurantDietaryEvidence(r){
  const values=[...(Array.isArray(r.dietaryOptions)?r.dietaryOptions:[]),...(Array.isArray(r.dietary_options)?r.dietary_options:[]),...(r.t||[]),...(r.tags||[]),r.dietaryType,r.dietary_type].filter(value=>typeof value==='string').map(value=>value.toLowerCase().replace(/[^a-z]/g,''));
  const has=options=>values.some(value=>options.includes(value));
@@ -29,9 +27,9 @@ if(a.cuisine){
  addFactor('Cuisine',a.priority==='food'?32:24,hit?1:known?-0.7:0,'One of your favourite cuisines');
 }
 const budgetRanks={under_500:0,'500_1000':1,'1000_2000':2,'2000_plus':3};
-if(a.budget&&Object.hasOwn(budgetRanks,a.budget)&&Object.hasOwn(budgetRanks,r.p)){
+if(a.budget&&Object.hasOwn(budgetRanks,a.budget)){
  const gap=Math.abs(budgetRanks[a.budget]-budgetRanks[r.p]);
- const factor=gap===0?1:gap===1?-.15:-.8;
+ const factor=!Object.hasOwn(budgetRanks,r.p)?0:gap===0?1:gap===1?-.15:-.8;
  addFactor('Price',20,factor,gap===0?'Budget fit':null);
 }
 const {hasVeg,hasNonVeg,hasEgg}=restaurantDietaryEvidence(r);
@@ -48,16 +46,20 @@ if(a.mood){
  addFactor('Ambience',a.priority==='ambience'?20:14,hit?1:ambience.length?-.55:0,'Vibe match');
 }
 if(a.occasion){const hit=occasions.includes(String(a.occasion).toLowerCase());addFactor('Occasion',12,hit?1:occasions.length?-.6:0,'Occasion fit')}
-if(a.spice&&a.spice!=='depends'&&r.s){const spice=String(r.s).toLowerCase(),wanted=String(a.spice).toLowerCase();addFactor('Spice level',8,spice===wanted?1:-.65,'Spice fit')}
+if(a.spice&&a.spice!=='depends'){const spice=String(r.s||'').toLowerCase(),wanted=String(a.spice).toLowerCase();addFactor('Spice level',8,spice===wanted?1:['mild','medium','hot'].includes(spice)?-.65:0,'Spice fit')}
 if(a.priority==='unique'){const unique=wordMatch([...ambience,...tags],['heritage','live music','unique','themed','brewpub']);addFactor('Experience',8,unique?1:0,unique?'Distinctive experience noted':null)}
-if(a.priority==='value'&&Object.hasOwn(budgetRanks,r.p)){const factor=budgetRanks[r.p]<=1?1:budgetRanks[r.p]===2?-.25:-.7;addFactor('Value',8,factor,factor>0?'Value fit':null)}
+if(a.priority==='value'){const factor=!Object.hasOwn(budgetRanks,r.p)?0:budgetRanks[r.p]<=1?1:budgetRanks[r.p]===2?-.25:-.7;addFactor('Value',8,factor,factor>0?'Value fit':null)}
 const distanceKm=venueDistanceKm(r),travelRange=Number(a.distance);
-if(distanceKm!==null)addFactor('Distance',12,Math.max(0,1-distanceKm/(Number.isFinite(travelRange)&&travelRange>0?travelRange:10)),'Nearby · '+distanceKm.toFixed(1)+' km away');
 let totalWeight=preferenceFactors.reduce((sum,x)=>sum+x.weight,0),preferenceScore=totalWeight?preferenceFactors.reduce((sum,x)=>sum+x.factor*x.weight,0)/totalWeight:0;
 let s=55+preferenceScore*36;
+// GPS enriches a match without changing the denominator of its taste score.
+if(distanceKm!==null){const proximity=Math.max(0,1-distanceKm/(Number.isFinite(travelRange)&&travelRange>0?travelRange:10));s+=3*proximity;addFactor('Distance',0,proximity,'Nearby · '+distanceKm.toFixed(1)+' km away')}
 /* Rating and review count add a small confidence signal; they never override taste conflicts. */
-if(a.priority==='food'&&Number.isFinite(Number(r.rating)))s+=(Number(r.rating)-4)*2;
-const reviewCount=Number(r.review_count||0);if(reviewCount>=100)s+=1.5;else if(reviewCount>=30)s+=.75;
+const count=Number(r.review_count),reviewCount=Number.isFinite(count)&&count>0?count:0;
+// Shrink sparse ratings toward 4 stars; 30 reviews give the observed rating half weight.
+const rating=Number(r.rating);
+if(a.priority==='food'&&Number.isFinite(rating)&&rating>0&&rating<=5)s+=(rating-4)*2*reviewCount/(reviewCount+30);
+if(reviewCount>=100)s+=1.5;else if(reviewCount>=30)s+=.75;
 if(Array.isArray(r.review_insights)&&r.review_insights.length){
  const insightText=r.review_insights.join(' ').toLowerCase();
  if(a.mood==='quiet'&&/\b(peaceful|calm|cozy|serene|tranquil|quiet)\b/.test(insightText)){s+=1.5;why.push('Diners highlight peaceful ambience')}

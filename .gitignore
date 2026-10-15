@@ -21,3 +21,8 @@ mobile/ios/**/xcuserdata/
 *.mobileprovision
 __pycache__/
 mobile/signing/
+
+# Private snapshots and temporary checkouts are never release inputs.
+/local-imports/
+/work/github-main-merge/
+/previews/

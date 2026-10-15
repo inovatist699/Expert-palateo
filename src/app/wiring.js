@@ -1,3 +1,2 @@
-ranked=function(){return hasTasteProfile()?getActiveCatalog().filter(r=>isQualifiedVenue(r)&&withinTravelRange(r)).map(rec).sort((a,b)=>b.score-a.score):[];};
 rate=rateV5;saveRest=saveV5;follow=followV5;maps=mapsV5;finish=finishV5;
 supabaseAuthListenerReady=false;

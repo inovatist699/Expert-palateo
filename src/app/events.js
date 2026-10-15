@@ -29,6 +29,7 @@ document.addEventListener('click',event=>{
   case 'onboard-step': if(Number.isInteger(step))onboard(step); break;
   case 'next-step': if(Number.isInteger(step))nextQ(step); break;
   case 'cuisine': setDiscoverCuisine(d.cuisine); break;
+  case 'pure-veg': togglePureVegFilter(); break;
   case 'home-cuisine': if(d.cuisine)setHomeCuisine(d.cuisine); break;
   case 'load-more-home': loadMoreHome(); break;
   case 'home-view': if(d.view){homeView=d.view;home();document.querySelector('[data-action="home-view"][data-view="'+d.view+'"]')?.focus({preventScroll:true})} break;
@@ -70,7 +71,7 @@ document.addEventListener('input',event=>{
 document.addEventListener('change',event=>{
  const target=event.target;
  if(!(target instanceof Element))return;
- if(target.dataset.action==='sort')drawDiscover();
+ if(target.dataset.action==='sort'){discoverSort=target.value;drawDiscover();}
  if(target.dataset.action==='city-select')setCity(target.value);
 });
 document.addEventListener('submit',event=>{

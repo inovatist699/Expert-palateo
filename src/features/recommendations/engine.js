@@ -1,11 +1,25 @@
 /* Adaptive recommendation algorithm.
    Base content similarity -> feedback reinforcement -> social similarity -> exploration.
 */
+function restaurantDietaryEvidence(r){
+ const values=[...(Array.isArray(r.dietaryOptions)?r.dietaryOptions:[]),...(Array.isArray(r.dietary_options)?r.dietary_options:[]),...(r.t||[]),...(r.tags||[]),r.dietaryType,r.dietary_type].filter(value=>typeof value==='string').map(value=>value.toLowerCase().replace(/[^a-z]/g,''));
+ const has=options=>values.some(value=>options.includes(value));
+ const hasEgg=has(['egg','eggs','eggetarian','ovovegetarian','eggoptions']);
+ const hasNonVeg=has(['nonveg','nonvegetarian','nonvegetarianoptions','mixed','both']);
+ const pureClaim=r.isPureVeg===true||r.is_pure_veg===true||r.pure_veg===true||has(['pureveg','purevegetarian','vegetarianonly','vegonly','veganonly']);
+ const hasVeg=pureClaim||has(['veg','vegetarian','jain','vegan','vegetarianoptions','vegoptions','mixed','both']);
+ return {hasVeg,hasEgg,hasNonVeg,pureVegetarian:pureClaim&&!hasEgg&&!hasNonVeg};
+}
+function isPureVegRestaurant(r){return restaurantDietaryEvidence(r).pureVegetarian}
+function matchesDietaryPreference(r){
+ const evidence=restaurantDietaryEvidence(r),diet=state.answers?.diet;
+ return diet==='veg'?evidence.hasVeg:diet==='eggetarian'?(evidence.hasVeg||evidence.hasEgg):diet==='nonveg'?evidence.hasNonVeg:true;
+}
+function compareRecommendations(a,b){return b.score-a.score||(a.distanceKm??Infinity)-(b.distanceKm??Infinity)||String(a.id).localeCompare(String(b.id))}
 function rec(r){
 const a=state.answers||{},f=state.feedback||{},why=[];
 const list=v=>Array.isArray(v)?v.map(x=>String(x).toLowerCase().trim()):[];
 const cuisines=list(r.c||r.cuisines),ambience=list(r.a||r.ambience_tags),occasions=list(r.o||r.occasion_tags),tags=list(r.t||r.tags);
-const diet=list(r.dietaryOptions||r.dietary_options).map(x=>x.replace(/[^a-z]/g,''));
 const preferenceFactors=[];
 const addFactor=(label,weight,factor,matchLabel)=>{preferenceFactors.push({label,weight,factor});if(factor>0.45&&matchLabel)why.push(matchLabel);else if(factor<-.45)why.push(label+' differs from your preference')};
 const wordMatch=(values,terms)=>values.some(x=>terms.some(term=>x===term||x.includes(term)));
@@ -20,12 +34,9 @@ if(a.budget&&Object.hasOwn(budgetRanks,a.budget)&&Object.hasOwn(budgetRanks,r.p)
  const factor=gap===0?1:gap===1?-.15:-.8;
  addFactor('Price',20,factor,gap===0?'Budget fit':null);
 }
-const hasVeg=diet.some(x=>['veg','vegetarian','pureveg','jain','vegan','vegetarianonly','vegetarianoptions'].includes(x));
-const hasNonVeg=diet.some(x=>['nonveg','nonvegetarian','nonvegetarianoptions','mixed','both'].includes(x));
-const vegetarianOnly=diet.some(x=>['vegetarian','pureveg','jain','vegan','vegetarianonly'].includes(x));
-const hasEgg=diet.some(x=>['egg','eggs','eggetarian','ovovegetarian','eggoptions'].includes(x));
+const {hasVeg,hasNonVeg,hasEgg}=restaurantDietaryEvidence(r);
 const dietMatch=a.diet==='veg'?hasVeg:a.diet==='eggetarian'?(hasVeg||hasEgg):hasNonVeg;
-const dietConflict=(a.diet==='veg'&&(hasNonVeg||hasEgg)&&!hasVeg)||(a.diet==='eggetarian'&&hasNonVeg&&!hasVeg&&!hasEgg)||(a.diet==='nonveg'&&vegetarianOnly&&!hasNonVeg);
+const dietConflict=(a.diet==='veg'&&(hasNonVeg||hasEgg)&&!hasVeg)||(a.diet==='eggetarian'&&hasNonVeg&&!hasVeg&&!hasEgg)||(a.diet==='nonveg'&&hasVeg&&!hasNonVeg);
 if(['veg','eggetarian','nonveg'].includes(a.diet)){
  const known=dietMatch||dietConflict;
  addFactor('Dietary options',22,dietMatch?1:known?-1:0,a.diet==='eggetarian'?(hasEgg?'Egg options noted':'Vegetarian options suit your diet'):a.diet==='veg'?'Vegetarian options noted':'Non-vegetarian options noted');
@@ -40,6 +51,8 @@ if(a.occasion){const hit=occasions.includes(String(a.occasion).toLowerCase());ad
 if(a.spice&&a.spice!=='depends'&&r.s){const spice=String(r.s).toLowerCase(),wanted=String(a.spice).toLowerCase();addFactor('Spice level',8,spice===wanted?1:-.65,'Spice fit')}
 if(a.priority==='unique'){const unique=wordMatch([...ambience,...tags],['heritage','live music','unique','themed','brewpub']);addFactor('Experience',8,unique?1:0,unique?'Distinctive experience noted':null)}
 if(a.priority==='value'&&Object.hasOwn(budgetRanks,r.p)){const factor=budgetRanks[r.p]<=1?1:budgetRanks[r.p]===2?-.25:-.7;addFactor('Value',8,factor,factor>0?'Value fit':null)}
+const distanceKm=venueDistanceKm(r),travelRange=Number(a.distance);
+if(distanceKm!==null)addFactor('Distance',12,Math.max(0,1-distanceKm/(Number.isFinite(travelRange)&&travelRange>0?travelRange:10)),'Nearby · '+distanceKm.toFixed(1)+' km away');
 let totalWeight=preferenceFactors.reduce((sum,x)=>sum+x.weight,0),preferenceScore=totalWeight?preferenceFactors.reduce((sum,x)=>sum+x.factor*x.weight,0)/totalWeight:0;
 let s=55+preferenceScore*36;
 /* Rating and review count add a small confidence signal; they never override taste conflicts. */
@@ -68,6 +81,6 @@ if(f[r.id]==='visited'){s+=4;why.unshift('You visited this place')}
 if(dietConflict)s=Math.min(s,35);
 s=Math.max(1,Math.min(99,Math.round(s)));
 if(!why.length)why.push('Matches your overall palate');
-return {...r,description:r.description||(typeof r.why==='string'?r.why:''),score:s,why,matchBreakdown:preferenceFactors};
+return {...r,distanceKm,description:r.description||(typeof r.why==='string'?r.why:''),score:s,why,matchBreakdown:preferenceFactors};
 }
-function ranked(){return catalog.map(rec).sort((a,b)=>b.score-a.score)}
+function ranked(){return hasTasteProfile()?getActiveCatalog().filter(r=>isQualifiedVenue(r)&&matchesDietaryPreference(r)&&(!pureVegOnly||isPureVegRestaurant(r))&&withinTravelRange(r)).map(rec).sort(compareRecommendations):[]}

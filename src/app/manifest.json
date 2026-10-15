@@ -102,6 +102,8 @@
     "resources/public/vendor/maplibre-LICENSE.txt": "app/maplibre-LICENSE.txt",
     "server/api/palo.js": "api/palo.js",
     "legal/delete-account/index.html": "delete-account/index.html",
-    "pages/support/index.html": "support/index.html"
+    "pages/support/index.html": "support/index.html",
+    "shared/ui/studio-screens.js": "app/studio-screens.js",
+    "styles/studio.css": "app/studio.css"
   }
 }

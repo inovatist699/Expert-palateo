@@ -53,9 +53,8 @@ function showPalatePassportModal(){
 
 function profile(){
   const a=state.answers||{},ai=state.ai||{likes:0,dislikes:0,visits:0,signals:{}};
-  const spiceLabel = a.spice === 'hot' ? 'Fiery Byadgi & Ghost Pepper (🌶️🌶️🌶️🌶️)' : a.spice === 'mild' ? 'Mild & Comforting (🌶️)' : 'Balanced Medium Kick (🌶️🌶️)';
-  const currentBudget = a.budget || '500_1000';
-  const currentDist = String(a.distance || '5');
+  const currentBudget = a.budget || '';
+  const currentDist = userLocation?String(a.distance ?? 'any'):'any';
 
   document.getElementById('root').innerHTML=`<section class="screen profile-screen" id="tasteStudioScreen">
     <!-- 1. Palate Genome Studio Header (From TasteStudioScreen.kt) -->
@@ -102,72 +101,47 @@ function profile(){
       <span>${state.saves.length} places →</span>
     </button>
 
-    <!-- 5. Profile Columns with Interactive Budget and Distance Filter -->
-    <div class="profileColumns">
-      <div>
-        <div class="section">
-          <h2>Your preferences</h2>
-          <span>Taste Studio</span>
-        </div>
-        <div class="card appleGlassCard profilePrefsCard">
+    <div class="card appleGlassCard studioFilters" aria-label="Taste Genome Studio filters">
           <!-- Budget Selector (You section only) -->
           <div class="prefInteractiveGroup">
             <div class="prefLabelRow">
-              <strong>Comfortable spend budget</strong>
-              <span class="prefCurrentVal">${price(currentBudget)}</span>
+              <strong>Budget tier (optional)</strong>
+              <span class="prefCurrentVal">${currentBudget?price(currentBudget):'Any budget'}</span>
             </div>
             <div class="budgetChoicePills" role="group" aria-label="Budget tier">
               ${[
+                ['', 'Any budget'],
                 ['under_500', 'Under ₹500'],
                 ['500_1000', '₹500–₹1,000'],
                 ['1000_2000', '₹1,000–₹2,000'],
                 ['2000_plus', '₹2,000+']
-              ].map(([val, lbl]) => `<button type="button" class="budgetPill ${currentBudget===val?'active':''}" data-action="set-profile-budget" data-budget="${val}">${lbl}</button>`).join('')}
+              ].map(([val, lbl]) => `<button type="button" class="budgetPill ${currentBudget===val?'active':''}" aria-pressed="${currentBudget===val}" data-action="set-profile-budget" data-budget="${val}">${lbl}</button>`).join('')}
             </div>
           </div>
 
           <!-- Distance Filter (You section only) -->
           <div class="prefInteractiveGroup">
             <div class="prefLabelRow">
-              <strong>Distance range filter</strong>
-              <span class="prefCurrentVal">${currentDist==='any'?'Anywhere':currentDist+' km'}</span>
+              <strong>Distance filter (optional)</strong>
+              <span class="prefCurrentVal">${currentDist==='any'?'Anywhere in '+esc(cityName()):currentDist+' km'}</span>
             </div>
-            <div class="distanceChoicePills" role="group" aria-label="Distance range">
-              ${[
-                ['2', '2 km'],
-                ['5', '5 km'],
-                ['10', '10 km'],
-                ['25', '25 km'],
-                ['50', '50 km'],
-                ['any', '50km+ (All city)']
-              ].map(([val, lbl]) => `<button type="button" class="distPill ${currentDist===val?'active':''}" data-action="set-profile-distance" data-distance="${val}">${lbl}</button>`).join('')}
-            </div>
+            <label for="profileDistance">Maximum distance</label>
+            <input type="range" class="spiceMeter" id="profileDistance" min="0" max="51" step="1" value="${currentDist==='any'?51:Number(currentDist)}" aria-valuetext="${currentDist==='any'?'50+ km — anywhere in '+esc(cityName()):currentDist+' km'}" data-action="profile-distance">
+            <div class="spiceMeterEnds"><span>0 km</span><span>50+ km · Anywhere in ${esc(cityName())}</span></div>
+            <button type="button" class="distPill ${currentDist==='any'?'active':''}" aria-pressed="${currentDist==='any'}" data-action="set-profile-distance" data-distance="any">No distance limit</button>
+            <p class="studioHint" id="profileDistanceHint">Optional. Choose 50+ for anywhere in ${esc(cityName())}. A shorter range needs your location. Without access, we show anywhere in this city.</p>
+            <p class="studioFilterStatus" data-location-status role="status">${esc(locationStatusMessage)}</p>
           </div>
 
-          <div class="prefDivider"></div>
+    </div>
 
-          ${[
-            ['Cuisine', a.cuisine||'Not set'],
-            ['Dietary philosophy', dietLabel(a.diet)],
-            ['Preferred vibe', a.mood||'Not set'],
-            ['Occasion', a.occasion||'Not set'],
-            ['Spice calibration', spiceLabel]
-          ].map(x=>`<div class="row"><strong>${x[0]}</strong><span>${esc(x[1])}</span></div>`).join('')}
-        </div>
-      </div>
-
-      <div>
-        <div class="section">
-          <h2>What you’ve taught us</h2>
-          <span>Active feedback</span>
-        </div>
+    <div class="section"><h2>What you’ve taught us</h2><span>Active feedback</span></div>
         <details class="card appleGlassCard learnedSignals">
           <summary>See learned taste signals</summary>
           ${Object.entries(ai.signals||{}).sort((x,y)=>y[1]-x[1]).slice(0,8).map(x=>`<div class="row"><strong>${esc(x[0])}</strong><span>${x[1]>0?'+':''}${Number(x[1]).toFixed(1)}</span></div>`).join('')||'<p class="feedNote">Rate a few places to start building your taste profile.</p>'}
         </details>
         <p class="feedNote">Taste matches are estimated from your sensory preferences, dish feedback, and verified receipts.</p>
-      </div>
-    </div>
+
 
     <!-- 6. Quick Dish Calibration Deck (From TasteStudioScreen.kt) -->
     ${renderCalibrationDeck()}

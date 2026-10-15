@@ -24,7 +24,7 @@ document.addEventListener('click',event=>{
   case 'mode': currentUser?signOutV5():showAuth(); break;
   case 'city': setCity(d.city); break;
   case 'location': useMyLocation(); break;
-  case 'navigate': if(['home','discover','social','saved','profile'].includes(d.page))go(d.page); break;
+  case 'navigate': if(['home','discover','social','saved','profile','ask'].includes(d.page))go(d.page); break;
   case 'pick': if(Number.isInteger(step)&&questions.some(q=>q.k===d.key))pick(d.key,d.value,step); break;
   case 'onboard-step': if(Number.isInteger(step))onboard(step); break;
   case 'next-step': if(Number.isInteger(step))nextQ(step); break;
@@ -44,8 +44,8 @@ document.addEventListener('click',event=>{
   case 'close-place': closePlaceDetails(); break;
   case 'open-passport': showPalatePassportModal(); break;
   case 'close-passport': document.getElementById('passportModalBackdrop')?.remove(); break;
-  case 'set-profile-budget': if(d.budget){state.answers.budget=d.budget;persist();if(currentUser)syncTaste().catch(()=>{});profile();toast('Budget set to '+price(d.budget));} break;
-  case 'set-profile-distance': if(d.distance){state.answers.distance=d.distance;persist();if(currentUser)syncTaste().catch(()=>{});profile();toast('Distance range set to '+(d.distance==='any'?'Anywhere':d.distance+' km'));} break;
+  case 'set-profile-budget': if(['','under_500','500_1000','1000_2000','2000_plus'].includes(d.budget)){state.answers.budget=d.budget;persistProfileFilters();profile();toast(d.budget?'Budget set to '+price(d.budget):'Budget preference cleared');} break;
+  case 'set-profile-distance': if(d.distance==='any')setProfileDistance(51); break;
   case 'dish-rate': rateDish(d.dishId,d.dishValue,d.source); break;
   case 'dish-undo': if(state.dishFeedback?.[d.dishId])rateDish(d.dishId,state.dishFeedback[d.dishId],'edit'); break;
   case 'dish-next': dishCalibrationIndex++;go('profile',{keepScroll:true});document.getElementById('calibrationDishName')?.focus({preventScroll:true}); break;
@@ -55,7 +55,6 @@ document.addEventListener('click',event=>{
   case 'revoke-ai': if(currentUser){localStorage.removeItem('palateo-palo-ai-consent:'+currentUser.id);toast('Live AI permission withdrawn. Local recommendations remain available.')} break;
   case 'delete-account': showAccountDeletion(); break;
   case 'cancel-deletion': if(!accountDeletionBusy){document.getElementById('accountDeletionDialog')?.remove();document.querySelector('[data-action="delete-account"]')?.focus()} break;
-  case 'reset-taste': resetTaste(); break;
   case 'close-auth': closeAuth(); break;
   case 'legal-decline': signOutV5(); break;
   case 'auth-mode': if(d.authMode==='login'||d.authMode==='signup')showAuth(d.authMode); break;
@@ -65,12 +64,17 @@ document.addEventListener('click',event=>{
 document.addEventListener('input',event=>{
  const target=event.target;
  if(!(target instanceof Element))return;
+ if(target.dataset.action==='profile-distance'){
+  const label=Number(target.value)===51?'50+ km — anywhere in '+cityName():target.value+' km';
+  target.setAttribute('aria-valuetext',label);target.closest('.prefInteractiveGroup').querySelector('.prefCurrentVal').textContent=label;
+ }
  if(target.dataset.action==='filter')filter(target.value);
  if(target.dataset.action==='spice-slider')pick('spice',['mild','medium','hot'][Number(target.value)],Number(target.dataset.step));
 });
 document.addEventListener('change',event=>{
  const target=event.target;
  if(!(target instanceof Element))return;
+ if(target.dataset.action==='profile-distance')setProfileDistance(Number(target.value));
  if(target.dataset.action==='sort'){discoverSort=target.value;drawDiscover();}
  if(target.dataset.action==='city-select')setCity(target.value);
 });

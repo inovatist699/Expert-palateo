@@ -5133,11 +5133,9 @@ const questions=[
 {k:'mood',q:'What kind of night?',o:[['quiet','Quiet & cosy'],['lively','Loud & lively'],['date','Date night'],['family','Family time']]},
 {k:'cuisine',q:'Which cuisines do you love?',o:[['Gujarati','Gujarati'],['Punjabi','North Indian'],['Italian','Italian & continental'],['Cafe','Café & coffee'],['SouthIndian','South Indian'],['Asian','Asian'],['Dessert','Desserts']]},
 {k:'diet',q:'Any dietary preference?',o:[['veg','Vegetarian (veg)'],['eggetarian','Eggetarian (veg + eggs)'],['nonveg','Non-vegetarian (non-veg)'],['any','All foods / no restriction']]},
-{k:'budget',q:'What is your comfortable spend?',o:[['under_500','Under ₹500'],['500_1000','₹500–₹1,000'],['1000_2000','₹1,000–₹2,000'],['2000_plus','₹2,000+']]},
 {k:'spice',q:'How much spice?',o:[['mild','Mild'],['medium','Medium'],['hot','Bring the heat'],['depends','Depends']]},
 {k:'occasion',q:'Who is coming?',o:[['date','Partner'],['friends','Friends'],['family','Family'],['solo','Just me / work']]},
 {k:'priority',q:'What matters most?',o:[['food','Food quality'],['ambience','Ambience'],['value','Value'],['unique','Unique experience']]},
-{k:'distance',q:'Travel range (applied when you allow location access)',o:[['2','Within 2 km'],['5','Within 5 km'],['10','Within 10 km'],['any','Anywhere in Ahmedabad']]}
 ];
 
 const vadodaraCatalog=[
@@ -30677,8 +30675,41 @@ function updateCityPicker(){
   const cityMap=[['Ahmedabad','cityAhmedabad'],['Vadodara','cityVadodara'],['Mumbai','cityMumbai'],['Delhi NCR','cityDelhiNCR'],['Bengaluru','cityBengaluru'],['Hyderabad','cityHyderabad'],['Chennai','cityChennai'],['Kolkata','cityKolkata'],['Pune','cityPune'],['Jaipur','cityJaipur'],['Kochi','cityKochi'],['Goa','cityGoa'],['Chandigarh','cityChandigarh']];
   for(const [city,id] of cityMap){const button=document.getElementById(id);if(button){const active=city===selectedCity;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active))}}
 }
-function setCity(city){if(!cityCenters[city])return;selectedCity=city;userLocation=null;state.selectedCity=city;homeLimit=12;homeCuisine='all';selectedPinId=null;persist();const status=document.getElementById('cityPickerStatus');if(status)status.textContent=city+' selected';updateCityPicker();setTimeout(()=>{const node=document.getElementById('cityPickerStatus');if(node)node.textContent=''},2400);if(currentUser){go(page);}}
-function useMyLocation(){const button=document.getElementById('useLocationButton'),status=document.getElementById('cityPickerStatus');if(!navigator.geolocation&&!window.PalateoNative){if(status)status.textContent='Location is unavailable in this browser.';return}if(button)button.disabled=true;if(status)status.textContent='Requesting location permission…';const locate=window.PalateoNative?((ok,fail,options)=>window.PalateoNative.getCurrentPosition(options).then(ok,fail)):navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);locate(position=>{const lat=position.coords.latitude,lon=position.coords.longitude,rad=x=>x*Math.PI/180,distance=center=>{const dLat=rad(center[0]-lat),dLon=rad(center[1]-lon),a=Math.sin(dLat/2)**2+Math.cos(rad(lat))*Math.cos(rad(center[0]))*Math.sin(dLon/2)**2;return 6371*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))},nearest=Object.entries(cityCenters).map(([city,center])=>({city,km:distance(center)})).sort((a,b)=>a.km-b.km)[0];if(nearest.km>75){if(status)status.textContent='You are outside our Indian metropolitan coverage. Choose a city above.';userLocation=null}else{selectedCity=nearest.city;state.selectedCity=selectedCity;persist();userLocation={lat,lon};if(status)status.textContent='Showing '+selectedCity+' (nearest city)';updateCityPicker();if(currentUser)go(page)}if(button)button.disabled=false;setTimeout(()=>{const node=document.getElementById('cityPickerStatus');if(node)node.textContent=''},5000)},error=>{if(status)status.textContent=error.code===1?'Location permission was declined. Choose a city manually.':'Could not get your location. Choose a city manually.';if(button)button.disabled=false}, {enableHighAccuracy:false,timeout:10000,maximumAge:300000})}
+let locationRequestPending=false,locationStatusMessage='',locationRequestId=0,locationPromise=null,resolveLocationRequest=null;
+function updateLocationStatus(message){
+ locationStatusMessage=message;
+ document.querySelectorAll('#cityPickerStatus,[data-location-status]').forEach(node=>node.textContent=message);
+ document.querySelectorAll('[data-action="location"]').forEach(button=>{button.disabled=locationRequestPending;button.setAttribute('aria-busy',String(locationRequestPending))});
+}
+function setCity(city){
+ if(!cityCenters[city])return;
+ resolveLocationRequest?.(false);resolveLocationRequest=null;locationPromise=null;
+ locationRequestId++;locationRequestPending=false;selectedCity=city;userLocation=null;state.selectedCity=city;homeLimit=12;homeCuisine='all';selectedPinId=null;
+ state.answers.distance='any';
+ persist();updateCityPicker();locationStatusMessage=city+' selected';if(currentUser)go(page);updateLocationStatus(locationStatusMessage);
+}
+function useMyLocation({changeCity=true}={}){
+ if(locationRequestPending)return locationPromise;
+ if(!navigator.geolocation&&!window.PalateoNative){updateLocationStatus('Location is unavailable in this browser. Showing anywhere in '+cityName()+'.');return Promise.resolve(false)}
+ const requestId=++locationRequestId,owner=currentUser?.id;
+ locationPromise=new Promise(resolve=>{resolveLocationRequest=resolve});const result=locationPromise;
+ locationRequestPending=true;updateLocationStatus('Requesting your location…');
+ const finish=(message,located=false)=>{locationRequestPending=false;updateLocationStatus(message);resolveLocationRequest?.(located);resolveLocationRequest=null;locationPromise=null};
+ const locate=window.PalateoNative?((ok,fail,options)=>window.PalateoNative.getCurrentPosition(options).then(ok,fail)):navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+ locate(position=>{
+  if(requestId!==locationRequestId)return;
+  if(currentUser?.id!==owner){finish('Location request cancelled.');return}
+  const lat=position.coords.latitude,lon=position.coords.longitude;
+  if(!Number.isFinite(lat)||!Number.isFinite(lon)||Math.abs(lat)>90||Math.abs(lon)>180){finish('Could not get your location. Choose a city manually.');return}
+  const rad=x=>x*Math.PI/180,distance=center=>{const dLat=rad(center[0]-lat),dLon=rad(center[1]-lon),a=Math.sin(dLat/2)**2+Math.cos(rad(lat))*Math.cos(rad(center[0]))*Math.sin(dLon/2)**2;return 6371*2*Math.atan2(Math.sqrt(a),Math.sqrt(Math.max(0,1-a)))},nearest=Object.entries(cityCenters).map(([city,center])=>({city,km:distance(center)})).sort((a,b)=>a.km-b.km)[0];
+  if(nearest.km>75){finish('You are outside our city coverage. Choose a city manually.');return}
+  if(changeCity){selectedCity=nearest.city;state.selectedCity=selectedCity;state.answers.distance='any';homeLimit=12;homeCuisine='all';selectedPinId=null}
+  userLocation={lat,lon};persist();locationRequestPending=false;locationStatusMessage='Using your location · '+selectedCity;
+  updateCityPicker();if(changeCity&&currentUser)go(page);finish(locationStatusMessage,true);
+  if(typeof fitStreetPlaces==='function')fitStreetPlaces(550);
+ },error=>{if(requestId!==locationRequestId)return;finish(error.code===1?'Location permission was declined. Choose a city manually.':'Could not get your location. Choose a city manually.')},{enableHighAccuracy:false,timeout:10000,maximumAge:300000});
+ return result;
+}
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){console.warn('Local preferences could not be saved',e)}}
 function esc(s){return String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[x]))}
 function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1800)}
@@ -31033,21 +31064,33 @@ function card(r){
 function go(p,{keepScroll=false}={}){
 if(!currentUser){requireAuthGate();return}
 if(!hasLegalConsent(currentUser)){requireLegalConsent();return}
-if(!['home','discover','social','saved','profile','place'].includes(p))p='home';
+if(!['home','discover','social','saved','profile','place','ask'].includes(p))p='home';
  if(!hasTasteProfile()){const missing=questions.findIndex(q=>!q.o.some(([value])=>value===state.answers?.[q.k]));onboard(missing<0?questions.length-1:missing);return}
 document.getElementById('nav').classList.remove('hide');
 const previousSort=keepScroll?document.getElementById('discoverSort')?.value:null;
 const focusedAction=keepScroll?document.activeElement?.getAttribute('data-rest-action'):null;
 const focusedRestaurant=keepScroll?document.activeElement?.getAttribute('data-rest-id'):null;
+const previousRail=keepScroll?document.querySelector?.('.homeMapView .restaurantGrid'):null;
+const previousSheet=keepScroll?document.querySelector?.('.homeRecommendations'):null;
+const previousScroll=keepScroll?window.scrollY:0,sheetScroll=previousSheet?.scrollTop||0;
+const anchor=previousRail&&(Array.from(previousRail.children).find(card=>card.dataset.placeId===focusedRestaurant)||Array.from(previousRail.children).find(card=>card.getBoundingClientRect().right>previousRail.getBoundingClientRect().left+13));
+const railPosition=previousRail?{id:anchor?.dataset.placeId,offset:anchor?anchor.getBoundingClientRect().left-previousRail.getBoundingClientRect().left:0,left:previousRail.scrollLeft,top:previousRail.scrollTop,horizontal:previousRail.scrollWidth>previousRail.clientWidth+1,sheetOffset:anchor&&previousSheet?anchor.getBoundingClientRect().top-previousSheet.getBoundingClientRect().top:0}:null;
 if(!keepScroll)window.scrollTo(0,0);
 if(p!=='place')window.history?.replaceState({palateoPage:p},'');
 page=p;
 document.querySelectorAll('.nav button').forEach(x=>{x.classList.remove('active');x.removeAttribute('aria-current')});
 const activeNav=document.getElementById('n-'+(p==='place'?detailOrigin:p));
 activeNav?.classList.add('active');activeNav?.setAttribute('aria-current','page');
-({home,discover,social,saved,profile,place}[p])();
+if(p==='ask'&&typeof ask==='function')ask();else ({home,discover,social,saved,profile,place}[p]||home)();
 if(keepScroll){
  if(p==='discover'&&previousSort){document.getElementById('discoverSort').value=previousSort;drawDiscover()}
+ if(railPosition){
+  const rail=document.querySelector('.homeMapView .restaurantGrid'),card=rail&&Array.from(rail.children).find(card=>card.dataset.placeId===railPosition.id);
+  if(rail){rail.scrollLeft=card?rail.scrollLeft+card.getBoundingClientRect().left-rail.getBoundingClientRect().left-railPosition.offset:railPosition.left;rail.scrollTop=railPosition.top}
+ }
+ const sheet=document.querySelector?.('.homeRecommendations');if(sheet)sheet.scrollTop=sheetScroll;
+ if(railPosition&&!railPosition.horizontal&&sheet){const card=Array.from(document.querySelector('.homeMapView .restaurantGrid')?.children||[]).find(card=>card.dataset.placeId===railPosition.id);if(card)sheet.scrollTop+=card.getBoundingClientRect().top-sheet.getBoundingClientRect().top-railPosition.sheetOffset}
+ if((window.scrollY||0)!==(previousScroll||0))window.scrollTo(0,previousScroll||0);
  if(focusedAction&&focusedRestaurant){Array.from(document.querySelectorAll('[data-rest-action]')).find(button=>button.getAttribute('data-rest-action')===focusedAction&&button.getAttribute('data-rest-id')===focusedRestaurant)?.focus({preventScroll:true})}
 }
 if(currentUser&&backendReady)logEvent('screen_view',{screen:p});
@@ -31376,7 +31419,7 @@ if(homeCuisine!=='all'){
 }
 const selectedIndex=filtered.findIndex(r=>r.id===selectedPinId);
 if(selectedIndex>=homeLimit)homeLimit=selectedIndex+1;
-const rs=filtered.slice(0,homeLimit);
+const rs=homeView==='map'?filtered:filtered.slice(0,homeLimit);
 const showMoreButton=filtered.length>rs.length?`<div class="homeMoreAction"><button class="btn secondary" type="button" data-action="load-more-home">Show more recommendations (${filtered.length-rs.length} more) ↓</button></div>`:'';
 
 const viewTabs=`<div class="viewSwitcher" role="group" aria-label="Choose recommendation view">
@@ -31506,9 +31549,8 @@ function showPalatePassportModal(){
 
 function profile(){
   const a=state.answers||{},ai=state.ai||{likes:0,dislikes:0,visits:0,signals:{}};
-  const spiceLabel = a.spice === 'hot' ? 'Fiery Byadgi & Ghost Pepper (🌶️🌶️🌶️🌶️)' : a.spice === 'mild' ? 'Mild & Comforting (🌶️)' : 'Balanced Medium Kick (🌶️🌶️)';
-  const currentBudget = a.budget || '500_1000';
-  const currentDist = String(a.distance || '5');
+  const currentBudget = a.budget || '';
+  const currentDist = userLocation?String(a.distance ?? 'any'):'any';
 
   document.getElementById('root').innerHTML=`<section class="screen profile-screen" id="tasteStudioScreen">
     <!-- 1. Palate Genome Studio Header (From TasteStudioScreen.kt) -->
@@ -31555,72 +31597,47 @@ function profile(){
       <span>${state.saves.length} places →</span>
     </button>
 
-    <!-- 5. Profile Columns with Interactive Budget and Distance Filter -->
-    <div class="profileColumns">
-      <div>
-        <div class="section">
-          <h2>Your preferences</h2>
-          <span>Taste Studio</span>
-        </div>
-        <div class="card appleGlassCard profilePrefsCard">
+    <div class="card appleGlassCard studioFilters" aria-label="Taste Genome Studio filters">
           <!-- Budget Selector (You section only) -->
           <div class="prefInteractiveGroup">
             <div class="prefLabelRow">
-              <strong>Comfortable spend budget</strong>
-              <span class="prefCurrentVal">${price(currentBudget)}</span>
+              <strong>Budget tier (optional)</strong>
+              <span class="prefCurrentVal">${currentBudget?price(currentBudget):'Any budget'}</span>
             </div>
             <div class="budgetChoicePills" role="group" aria-label="Budget tier">
               ${[
+                ['', 'Any budget'],
                 ['under_500', 'Under ₹500'],
                 ['500_1000', '₹500–₹1,000'],
                 ['1000_2000', '₹1,000–₹2,000'],
                 ['2000_plus', '₹2,000+']
-              ].map(([val, lbl]) => `<button type="button" class="budgetPill ${currentBudget===val?'active':''}" data-action="set-profile-budget" data-budget="${val}">${lbl}</button>`).join('')}
+              ].map(([val, lbl]) => `<button type="button" class="budgetPill ${currentBudget===val?'active':''}" aria-pressed="${currentBudget===val}" data-action="set-profile-budget" data-budget="${val}">${lbl}</button>`).join('')}
             </div>
           </div>
 
           <!-- Distance Filter (You section only) -->
           <div class="prefInteractiveGroup">
             <div class="prefLabelRow">
-              <strong>Distance range filter</strong>
-              <span class="prefCurrentVal">${currentDist==='any'?'Anywhere':currentDist+' km'}</span>
+              <strong>Distance filter (optional)</strong>
+              <span class="prefCurrentVal">${currentDist==='any'?'Anywhere in '+esc(cityName()):currentDist+' km'}</span>
             </div>
-            <div class="distanceChoicePills" role="group" aria-label="Distance range">
-              ${[
-                ['2', '2 km'],
-                ['5', '5 km'],
-                ['10', '10 km'],
-                ['25', '25 km'],
-                ['50', '50 km'],
-                ['any', '50km+ (All city)']
-              ].map(([val, lbl]) => `<button type="button" class="distPill ${currentDist===val?'active':''}" data-action="set-profile-distance" data-distance="${val}">${lbl}</button>`).join('')}
-            </div>
+            <label for="profileDistance">Maximum distance</label>
+            <input type="range" class="spiceMeter" id="profileDistance" min="0" max="51" step="1" value="${currentDist==='any'?51:Number(currentDist)}" aria-valuetext="${currentDist==='any'?'50+ km — anywhere in '+esc(cityName()):currentDist+' km'}" data-action="profile-distance">
+            <div class="spiceMeterEnds"><span>0 km</span><span>50+ km · Anywhere in ${esc(cityName())}</span></div>
+            <button type="button" class="distPill ${currentDist==='any'?'active':''}" aria-pressed="${currentDist==='any'}" data-action="set-profile-distance" data-distance="any">No distance limit</button>
+            <p class="studioHint" id="profileDistanceHint">Optional. Choose 50+ for anywhere in ${esc(cityName())}. A shorter range needs your location. Without access, we show anywhere in this city.</p>
+            <p class="studioFilterStatus" data-location-status role="status">${esc(locationStatusMessage)}</p>
           </div>
 
-          <div class="prefDivider"></div>
+    </div>
 
-          ${[
-            ['Cuisine', a.cuisine||'Not set'],
-            ['Dietary philosophy', dietLabel(a.diet)],
-            ['Preferred vibe', a.mood||'Not set'],
-            ['Occasion', a.occasion||'Not set'],
-            ['Spice calibration', spiceLabel]
-          ].map(x=>`<div class="row"><strong>${x[0]}</strong><span>${esc(x[1])}</span></div>`).join('')}
-        </div>
-      </div>
-
-      <div>
-        <div class="section">
-          <h2>What you’ve taught us</h2>
-          <span>Active feedback</span>
-        </div>
+    <div class="section"><h2>What you’ve taught us</h2><span>Active feedback</span></div>
         <details class="card appleGlassCard learnedSignals">
           <summary>See learned taste signals</summary>
           ${Object.entries(ai.signals||{}).sort((x,y)=>y[1]-x[1]).slice(0,8).map(x=>`<div class="row"><strong>${esc(x[0])}</strong><span>${x[1]>0?'+':''}${Number(x[1]).toFixed(1)}</span></div>`).join('')||'<p class="feedNote">Rate a few places to start building your taste profile.</p>'}
         </details>
         <p class="feedNote">Taste matches are estimated from your sensory preferences, dish feedback, and verified receipts.</p>
-      </div>
-    </div>
+
 
     <!-- 6. Quick Dish Calibration Deck (From TasteStudioScreen.kt) -->
     ${renderCalibrationDeck()}
@@ -32102,12 +32119,12 @@ async function syncTaste(){
  if(!hasTasteAnswers())throw new Error('Complete your taste profile before syncing it.');
  const owner=currentUser,a=state.answers||{};
  if(isRailwayActive()){
-  const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==='any'?null:Number(a.distance||5),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
+  const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==null||a.distance===''||a.distance==='any'?null:Number(a.distance),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
   await railwayFetch('/api/user/taste',{method:'PUT',body:JSON.stringify(payload)});
   await logEvent('onboarding_complete',{answer_count:Object.keys(a).length});
   return true;
  }
- const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==='any'?null:Number(a.distance||5),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
+ const payload={user_id:owner.id,cuisines:a.cuisine?{primary:a.cuisine,favorites:preferredCuisines(a)}:{},spice_level:a.spice||null,budget:a.budget||null,ambience:a.mood?{primary:a.mood,favorites:preferredVibes(a)}:{},occasions:a.occasion?{primary:a.occasion}:{},priorities:{...(a.priority?{primary:a.priority}:{}),dietary_preference:a.diet||'any',dish_feedback:normalizeDishFeedback(state.dishFeedback)},max_distance_km:a.distance==null||a.distance===''||a.distance==='any'?null:Number(a.distance),confidence:Number(state.confidence??0),taste_vector:state.ai?.signals||{}};
  const {error}=await supabaseClient.from('taste_profiles').upsert(payload);
  if(error)throw error;
  if(currentUser?.id!==owner.id)throw new Error('Account changed during taste sync.');
@@ -32397,7 +32414,7 @@ document.addEventListener('click',event=>{
   case 'mode': currentUser?signOutV5():showAuth(); break;
   case 'city': setCity(d.city); break;
   case 'location': useMyLocation(); break;
-  case 'navigate': if(['home','discover','social','saved','profile'].includes(d.page))go(d.page); break;
+  case 'navigate': if(['home','discover','social','saved','profile','ask'].includes(d.page))go(d.page); break;
   case 'pick': if(Number.isInteger(step)&&questions.some(q=>q.k===d.key))pick(d.key,d.value,step); break;
   case 'onboard-step': if(Number.isInteger(step))onboard(step); break;
   case 'next-step': if(Number.isInteger(step))nextQ(step); break;
@@ -32417,8 +32434,8 @@ document.addEventListener('click',event=>{
   case 'close-place': closePlaceDetails(); break;
   case 'open-passport': showPalatePassportModal(); break;
   case 'close-passport': document.getElementById('passportModalBackdrop')?.remove(); break;
-  case 'set-profile-budget': if(d.budget){state.answers.budget=d.budget;persist();if(currentUser)syncTaste().catch(()=>{});profile();toast('Budget set to '+price(d.budget));} break;
-  case 'set-profile-distance': if(d.distance){state.answers.distance=d.distance;persist();if(currentUser)syncTaste().catch(()=>{});profile();toast('Distance range set to '+(d.distance==='any'?'Anywhere':d.distance+' km'));} break;
+  case 'set-profile-budget': if(['','under_500','500_1000','1000_2000','2000_plus'].includes(d.budget)){state.answers.budget=d.budget;persistProfileFilters();profile();toast(d.budget?'Budget set to '+price(d.budget):'Budget preference cleared');} break;
+  case 'set-profile-distance': if(d.distance==='any')setProfileDistance(51); break;
   case 'dish-rate': rateDish(d.dishId,d.dishValue,d.source); break;
   case 'dish-undo': if(state.dishFeedback?.[d.dishId])rateDish(d.dishId,state.dishFeedback[d.dishId],'edit'); break;
   case 'dish-next': dishCalibrationIndex++;go('profile',{keepScroll:true});document.getElementById('calibrationDishName')?.focus({preventScroll:true}); break;
@@ -32428,7 +32445,6 @@ document.addEventListener('click',event=>{
   case 'revoke-ai': if(currentUser){localStorage.removeItem('palateo-palo-ai-consent:'+currentUser.id);toast('Live AI permission withdrawn. Local recommendations remain available.')} break;
   case 'delete-account': showAccountDeletion(); break;
   case 'cancel-deletion': if(!accountDeletionBusy){document.getElementById('accountDeletionDialog')?.remove();document.querySelector('[data-action="delete-account"]')?.focus()} break;
-  case 'reset-taste': resetTaste(); break;
   case 'close-auth': closeAuth(); break;
   case 'legal-decline': signOutV5(); break;
   case 'auth-mode': if(d.authMode==='login'||d.authMode==='signup')showAuth(d.authMode); break;
@@ -32438,12 +32454,17 @@ document.addEventListener('click',event=>{
 document.addEventListener('input',event=>{
  const target=event.target;
  if(!(target instanceof Element))return;
+ if(target.dataset.action==='profile-distance'){
+  const label=Number(target.value)===51?'50+ km — anywhere in '+cityName():target.value+' km';
+  target.setAttribute('aria-valuetext',label);target.closest('.prefInteractiveGroup').querySelector('.prefCurrentVal').textContent=label;
+ }
  if(target.dataset.action==='filter')filter(target.value);
  if(target.dataset.action==='spice-slider')pick('spice',['mild','medium','hot'][Number(target.value)],Number(target.dataset.step));
 });
 document.addEventListener('change',event=>{
  const target=event.target;
  if(!(target instanceof Element))return;
+ if(target.dataset.action==='profile-distance')setProfileDistance(Number(target.value));
  if(target.dataset.action==='sort'){discoverSort=target.value;drawDiscover();}
  if(target.dataset.action==='city-select')setCity(target.value);
 });
@@ -32510,7 +32531,7 @@ if(currentUser)await syncInteraction(restaurant,'directions');
 }
  function getActiveCatalog(){const source=[...dbCatalog,...catalog,...vadodaraCatalog,...allMetroVenues],seen=new Set();return source.filter(r=>{const city=r.city||'Ahmedabad';if(city!==selectedCity)return false;const key=(r.name||'').trim().toLowerCase()+'|'+city.toLowerCase();if(seen.has(key))return false;seen.add(key);return true})}
 function travelRangeNote(){
- const range=Number(state.answers?.distance);if(!Number.isFinite(range)||range<=0)return '';
+ const value=state.answers?.distance,range=Number(value);if(value==null||value===''||!Number.isFinite(range)||range<0)return '';
  return '<p class="feedNote">'+(userLocation?'Showing places within '+range+' km in a straight line from your location. Places without coordinates are hidden.':'Allow location access using “Use my location” to apply your travel range. Currently browsing the whole city.')+'</p>';
 }
 function venueDistanceKm(r){
@@ -32521,7 +32542,22 @@ function venueDistanceKm(r){
  const a=Math.sin(dLat/2)**2+Math.cos(rad(userLocation.lat))*Math.cos(rad(lat))*Math.sin(dLon/2)**2;
  return 6371*2*Math.atan2(Math.sqrt(Math.min(1,a)),Math.sqrt(Math.max(0,1-a)));
 }
-function withinTravelRange(r){const range=Number(state.answers?.distance);if(!userLocation||!Number.isFinite(range)||range<=0)return true;const km=venueDistanceKm(r);return km!==null&&km<=range}
+function withinTravelRange(r){const value=state.answers?.distance,range=Number(value);if(!userLocation||value==null||value===''||!Number.isFinite(range)||range<0)return true;const km=venueDistanceKm(r);return km!==null&&km<=range}
+
+let profileDistanceRevision=0;
+function persistProfileFilters(){
+ const owner=currentUser?.id;persist();
+ feedbackSyncQueue=feedbackSyncQueue.catch(()=>{}).then(async()=>{if(!owner||currentUser?.id!==owner)return;try{await syncTaste()}catch{if(currentUser?.id===owner)toast('Filters saved on this device; cloud sync failed.')}});
+}
+async function setProfileDistance(km){
+ if(!Number.isInteger(km)||km<0||km>51)return;
+ const owner=currentUser?.id,city=cityName(),revision=++profileDistanceRevision;
+ const located=km===51||!!userLocation||await useMyLocation({changeCity:false});
+ if(currentUser?.id!==owner||cityName()!==city||revision!==profileDistanceRevision)return;
+ state.answers.distance=located&&km!==51?String(km):'any';persistProfileFilters();
+ profile();document.getElementById('profileDistance')?.focus({preventScroll:true});
+ if(!located)toast('Location unavailable — showing anywhere in '+cityName());
+}
 rate=rateV5;saveRest=saveV5;follow=followV5;maps=mapsV5;finish=finishV5;
 supabaseAuthListenerReady=false;
 function startAuthListener(){
@@ -32602,5 +32638,7 @@ initV5();
 </script>
 <script src="discovery-experience.js"></script>
 <script src="companion.js"></script>
+<link rel="stylesheet" href="studio.css">
+<script src="studio-screens.js"></script>
 </body>
 </html>

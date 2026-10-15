@@ -18,7 +18,7 @@ if(homeCuisine!=='all'){
 }
 const selectedIndex=filtered.findIndex(r=>r.id===selectedPinId);
 if(selectedIndex>=homeLimit)homeLimit=selectedIndex+1;
-const rs=filtered.slice(0,homeLimit);
+const rs=homeView==='map'?filtered:filtered.slice(0,homeLimit);
 const showMoreButton=filtered.length>rs.length?`<div class="homeMoreAction"><button class="btn secondary" type="button" data-action="load-more-home">Show more recommendations (${filtered.length-rs.length} more) ↓</button></div>`:'';
 
 const viewTabs=`<div class="viewSwitcher" role="group" aria-label="Choose recommendation view">

@@ -21,5 +21,3 @@ mobile/ios/**/xcuserdata/
 *.mobileprovision
 __pycache__/
 mobile/signing/
-
-__pycache__/

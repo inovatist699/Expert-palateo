@@ -18,6 +18,14 @@ vm.runInContext(`
  const contradictory={...base,id:'conflict',name:'Conflicting pure claim',dietaryOptions:['pure veg','eggs']};
  dbCatalog=[pure,veg,egg,meat,mixed,unknown];getActiveCatalog=()=>dbCatalog;
  const ids=()=>ranked().map(r=>r.id).sort();
+ const originalBudget=state.answers.budget;state.answers.budget='500_1000';
+ assert.ok(rec({...veg,p:'under_500'}).score>rec({...veg,p:'1000_2000'}).score,'An affordable alternative should beat an equally distant over-budget option');
+ assert.match(rec({...veg,p:'under_500'}).why.join(' '),/budget/i);
+ state.answers.budget=originalBudget;
+ state.saves.push(veg.id);learn(veg,'dislike');
+ assert.ok(!ids().includes(veg.id),'Explicit passes are excluded from recommendations');
+ assert.ok(state.saves.includes(veg.id),'Passing must not delete saved places');
+ learn(veg,null);assert.ok(ids().includes(veg.id),'Undo restores eligibility');
  assert.deepEqual(ids(),['mixed','pure','veg'],'Vegetarian is a hard eligibility rule, not only a score penalty');
  learn(egg,'like');assert.ok(!ids().includes('egg'),'Likes cannot override vegetarian exclusions');learn(egg,null);
  state.answers.diet='eggetarian';assert.deepEqual(ids(),['egg','mixed','pure','veg']);

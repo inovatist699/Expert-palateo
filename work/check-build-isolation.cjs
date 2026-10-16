@@ -26,6 +26,8 @@ try{
  assert.deepEqual(snapshot(mobile),mobileBefore,'A web build must not change the packaged Android release');
  assert.doesNotMatch(fs.readFileSync(path.join(web,'app/index.html'),'utf8'),/<script src="\/native.js">/);
  assert.equal(fs.existsSync(path.join(web,'api/palo.js')),true,'Web APIs remain in the web deployment only');
+ const webHtml=fs.readFileSync(path.join(web,'app/index.html'),'utf8');
+ assert.equal(mobileHtml.match(/<script>([\s\S]*?)<\/script>/)[1],webHtml.match(/<script>([\s\S]*?)<\/script>/)[1],'Web and Android must ship identical recommendation, account and preference logic');
  assert.throws(()=>execFileSync(process.execPath,[path.join(temporary,'scripts/build.cjs'),'../unexpected'],{stdio:'pipe'}),'Reject unrecognized build targets');
  console.log('PASS: independent web/Android build outputs, native-only bridge, stale mobile API removal and fixed target paths');
 }finally{

@@ -19,12 +19,21 @@ const html=fs.readFileSync(path.join(built,'app/index.html'),'utf8').replace(/^i
   page.on('pageerror',e=>errors.push(e.message));await page.addInitScript(()=>{sessionStorage.setItem('palo-intro','1');localStorage.setItem('palateo-palo-voice','off')});
   await page.goto('http://127.0.0.1:'+server.address().port+'/app/');
   assert.match(await page.locator('#list .restaurant-card').first().textContent(),/0.1 km away/);assert.equal(await page.locator('#list .restaurant-card').count(),2);assert.equal(await page.locator('[data-place-id="egg"]').count(),0);
-  await page.locator('#discoverSort').selectOption('distance');assert.equal(await page.locator('#list .restaurant-card').first().getAttribute('data-place-id'),'pure');
+  await page.locator('[data-studio-toggle-search]').click();await page.locator('#discoverSort').selectOption('distance');assert.equal(await page.locator('#list .restaurant-card').first().getAttribute('data-place-id'),'pure');
   const toggle=page.locator('[data-action="pure-veg"]');await toggle.click();assert.equal(await toggle.getAttribute('aria-pressed'),'true');assert.equal(await page.locator('#list .restaurant-card').count(),1);
-  await page.locator('#filter-gujarati').click();assert.equal(await toggle.getAttribute('aria-pressed'),'true');assert.equal(await page.locator('#discoverSort').inputValue(),'distance');
+  await page.locator('[data-studio-filter="Gujarati"]').click();assert.equal(await toggle.getAttribute('aria-pressed'),'true');assert.equal(await page.locator('#discoverSort').inputValue(),'distance');
   await toggle.focus();await page.keyboard.press('Space');assert.equal(await toggle.getAttribute('aria-pressed'),'false');assert.match(await page.locator('#list .restaurant-card').first().textContent(),/0.1 km away/);assert.equal(await page.locator('#list .restaurant-card').count(),2);
   await page.evaluate(()=>go('home'));await toggle.click();assert.equal(await toggle.getAttribute('aria-pressed'),'true');assert.equal(await page.evaluate(()=>ranked().length),1);
   assert.ok(await page.locator('#dietaryFilterNote').isVisible());assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+  await page.evaluate(()=>{syncTaste=async()=>{};go('discover')});
+  await page.locator('[data-rest-action="dislike"][data-rest-id="pure"]').click();
+  assert.equal(await page.locator('#list [data-place-id="pure"]').count(),0,'A passed place disappears from suggestions');
+  await page.evaluate(()=>go('profile'));
+  await page.locator('[data-passed-summary]').click();
+  await page.getByRole('button',{name:'Undo pass for Listed pure veg',exact:true}).click();
+  assert.match(await page.locator('[data-passed-summary]').textContent(),/\(0\)/);
+  assert.equal(await page.locator('[data-passed-summary]').evaluate(el=>el===document.activeElement),true,'Undo keeps keyboard focus');
+  await page.evaluate(()=>go('discover'));assert.equal(await page.locator('#list [data-place-id="pure"]').count(),1,'Undo restores the recommendation');
   if(process.env.PALATEO_TEST_OUTPUT){fs.mkdirSync(process.env.PALATEO_TEST_OUTPUT,{recursive:true});await page.screenshot({path:path.join(process.env.PALATEO_TEST_OUTPUT,'pure-veg-mobile.png'),fullPage:true})}
   assert.deepEqual(errors,[]);console.log('PASS: mobile-width dietary exclusion, pure-veg toggle, keyboard access, cuisine/sort persistence and home filter');
  }finally{await browser?.close();server.close()}

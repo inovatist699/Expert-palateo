@@ -29,3 +29,23 @@
 
 .button-primary:hover,.button-primary:focus-visible,.join-card:focus-within{box-shadow:0 0 0 1px #ffc64f,0 0 24px #ffc64f40}
 @media(prefers-reduced-motion:no-preference){.button{transition:box-shadow .2s ease,transform .2s ease}.button:active{transform:scale(.98)}}
+
+/* Keep signup readable and reachable at phone sizes, including browser text zoom. */
+.site-header nav>a{min-height:44px}
+.site-header nav>a:not(.nav-cta){padding-block:12px}
+.join-layout{align-items:start;gap:clamp(32px,7vw,100px)}
+.join-card{width:100%;max-width:480px;margin-inline:auto;padding:32px;border:1px solid #638e97;box-shadow:none}
+.join-card:focus-within{box-shadow:none}
+.join-card h3{font-size:38px;line-height:1.15}
+.join-card .form-intro{font-size:14px;line-height:1.6;margin:12px 0 26px}
+#waitlist-form>label:not(.consent){font-size:14px;line-height:1.5;margin-bottom:8px}
+.join-card :is(input[type=email],select){min-height:52px;font-size:16px;line-height:1.5;border-color:#638e97;border-radius:10px;background:#102b30;color:#edf7fa;padding:12px 14px}
+.join-card .consent{min-height:44px;font-size:13px;line-height:1.65;gap:12px;cursor:pointer}
+.join-card .consent input{width:20px;height:20px;accent-color:#ffc64f}
+.join-card .button{min-height:52px;font-size:15px;box-shadow:none}
+.join-card .form-status{font-size:14px;line-height:1.6;min-height:24px;overflow-wrap:anywhere}
+.join-card .form-note{font-size:12px;line-height:1.6;margin-top:12px}
+.join-card .form-status.error{color:#ffc4b8}
+.join-card :is(input,select,button,a):focus-visible{outline:3px solid #ffc64f;outline-offset:3px}
+@media(max-width:720px){.join-card{padding:26px 22px}.site-header nav{gap:14px}.site-header .nav-quiz{display:none}.site-header .nav-cta{white-space:nowrap}.hero-actions{flex-wrap:wrap}.opening-bottom{flex-wrap:wrap;gap:12px}.join-copy h2{font-size:clamp(40px,11vw,54px)}}
+@media(max-width:380px){.join-card{padding:24px 18px}.site-header{gap:14px}.site-header .brand{font-size:26px}.site-header .nav-cta{padding:10px 12px;gap:8px}}

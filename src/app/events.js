@@ -35,10 +35,6 @@ document.addEventListener('click',event=>{
   case 'home-view': if(d.view){homeView=d.view;home();document.querySelector('[data-action="home-view"][data-view="'+d.view+'"]')?.focus({preventScroll:true})} break;
   case 'select-pin': if(d.restId){placePreviewOrigin='select-pin';if(selectedPinId===d.restId)closePlacePreview();else{selectedPinId=d.restId;home();focusPlacePreview()}} break;
   case 'close-pin': closePlacePreview(); break;
-  case 'zoom-in': zoomMap(0.2); break;
-  case 'zoom-out': zoomMap(-0.2); break;
-  case 'zoom-reset': resetMapZoom(); break;
-  case 'toggle-3d': map3d=!map3d; home();document.querySelector('[data-action="toggle-3d"]')?.focus({preventScroll:true}); break;
   case 'view-pin': if(d.restId){placePreviewOrigin='view-pin';selectedPinId=d.restId;homeView='map';go('home');document.getElementById('zestMapContainer')?.scrollIntoView({behavior:'smooth',block:'start'});focusPlacePreview()} break;
   case 'open-place': if(d.restId)openPlaceDetails(d.restId,control); break;
   case 'close-place': closePlaceDetails(); break;
@@ -51,7 +47,7 @@ document.addEventListener('click',event=>{
   case 'dish-next': dishCalibrationIndex++;go('profile',{keepScroll:true});document.getElementById('calibrationDishName')?.focus({preventScroll:true}); break;
   case 'dish-retry': retryDishSync(); break;
   case 'scroll-to-card': if(d.restId){const el=document.getElementById('card-'+d.restId);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flashCard');setTimeout(()=>el.classList.remove('flashCard'),1800)}} break;
-  case 'follow': if(d.personId)follow(d.personId); break;
+  case 'follow': if(d.personId)followV5(d.personId); break;
   case 'revoke-ai': if(currentUser){localStorage.removeItem('palateo-palo-ai-consent:'+currentUser.id);toast('Live AI permission withdrawn. Local recommendations remain available.')} break;
   case 'delete-account': showAccountDeletion(); break;
   case 'cancel-deletion': if(!accountDeletionBusy){document.getElementById('accountDeletionDialog')?.remove();document.querySelector('[data-action="delete-account"]')?.focus()} break;
@@ -95,10 +91,10 @@ const target=event.target instanceof Element?event.target:null,button=target?.cl
 if(!button)return;
 const id=button.getAttribute('data-rest-id'),action=button.getAttribute('data-rest-action');
 let task;
-if(action==='like')task=rate(id,'like');
-if(action==='dislike')task=rate(id,'dislike');
-if(action==='visited')task=rate(id,'visited');
-if(action==='save')task=saveRest(id);
-if(action==='maps')task=maps(id);
+if(action==='like')task=rateV5(id,'like');
+if(action==='dislike')task=rateV5(id,'dislike');
+if(action==='visited')task=rateV5(id,'visited');
+if(action==='save')task=saveV5(id);
+if(action==='maps')task=mapsV5(id);
 Promise.resolve(task).catch(error=>{console.warn('Restaurant action',error);toast('This action did not sync to your account. Please try again when online.')});
 });

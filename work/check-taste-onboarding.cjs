@@ -103,11 +103,11 @@ globalThis.runChecks=async()=>{
  const originalSync=syncInteraction;let synced;
  syncInteraction=async(rest,type,metadata)=>{synced={type,metadata};return true};logEvent=async()=>true;
  await rateV5(restaurant.id,'like');assert.equal(state.ai.likes,1);
- assert.match(card(rec(restaurant)),/♥ Undo like/);
+ assert.match(card(rec(restaurant)),/aria-pressed="true" aria-label="Undo like /);
  const beforeUndoScroll=scrollCalls;
  await rateV5(restaurant.id,'like');assert.equal(state.ai.likes,0);assert.equal(synced.metadata.removed,true);assert.equal(synced.type,'like');
  assert.equal(scrollCalls,beforeUndoScroll,'Undo must preserve reading position');
- assert.match(card(rec(restaurant)),/♡ Like/);
+ assert.match(card(rec(restaurant)),/aria-pressed="false" aria-label="Like /);
  syncInteraction=async()=>false;await rateV5(restaurant.id,'like');assert.match(document.getElementById('toast').textContent,/cloud sync failed/);
  await loadCloudState();assert.equal(state.feedback[restaurant.id],'like','Failed cloud writes must preserve local feedback on reopen');
  syncInteraction=originalSync;

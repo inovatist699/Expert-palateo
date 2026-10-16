@@ -34,6 +34,8 @@ const html=fs.readFileSync(path.join(built,'app/index.html'),'utf8').replace(/^i
   assert.match(await page.locator('[data-passed-summary]').textContent(),/\(0\)/);
   assert.equal(await page.locator('[data-passed-summary]').evaluate(el=>el===document.activeElement),true,'Undo keeps keyboard focus');
   await page.evaluate(()=>go('discover'));assert.equal(await page.locator('#list [data-place-id="pure"]').count(),1,'Undo restores the recommendation');
+  await page.evaluate(()=>{state.saves=['pure'];go('saved')});assert.equal(await page.locator('[data-place-id="pure"]').count(),1,'Saved places still render through the shared scorer');
+  await page.evaluate(()=>go('discover'));
   if(process.env.PALATEO_TEST_OUTPUT){fs.mkdirSync(process.env.PALATEO_TEST_OUTPUT,{recursive:true});await page.screenshot({path:path.join(process.env.PALATEO_TEST_OUTPUT,'pure-veg-mobile.png'),fullPage:true})}
   assert.deepEqual(errors,[]);console.log('PASS: mobile-width dietary exclusion, pure-veg toggle, keyboard access, cuisine/sort persistence and home filter');
  }finally{await browser?.close();server.close()}

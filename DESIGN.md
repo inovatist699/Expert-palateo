@@ -24,11 +24,11 @@ colors:
   app-danger: "#9b3f38"
   waitlist-action: "#ffc64f"
   waitlist-action-hover: "#ffe0a1"
-  waitlist-focus: "#c3e7f1"
-  waitlist-background: "#20373b"
-  waitlist-section: "#20373b"
-  waitlist-ink: "#edf7fa"
-  waitlist-muted: "#c3e7f1"
+  waitlist-focus: "#ffc64f"
+  waitlist-background: "#0d181a"
+  waitlist-section: "#142427"
+  waitlist-ink: "#f7fbfc"
+  waitlist-muted: "#bed6db"
   waitlist-action-ink: "#20373b"
   quiz-wash: "#c3e7f1"
   map-plane: "#c3e7f1"
@@ -46,11 +46,11 @@ typography:
     lineHeight: 1.2
     letterSpacing: "-0.03em"
   app-dialog-title:
-    fontFamily: "Plus Jakarta Sans, system-ui, sans-serif"
-    fontSize: "36px"
-    fontWeight: 750
-    lineHeight: 1.12
-    letterSpacing: "-0.03em"
+    fontFamily: "Arial, system-ui, sans-serif"
+    fontSize: "28px"
+    fontWeight: 700
+    lineHeight: 1.2
+    letterSpacing: "-0.02em"
   app-copy:
     fontFamily: "Plus Jakarta Sans, system-ui, sans-serif"
     fontSize: "14px"
@@ -62,11 +62,11 @@ typography:
     fontWeight: 400
     lineHeight: 1.6
   waitlist-mobile-heading:
-    fontFamily: "Asap Condensed, sans-serif"
-    fontSize: "48px"
+    fontFamily: "DM Sans, sans-serif"
+    fontSize: "34px"
     fontWeight: 700
-    lineHeight: 1.02
-    letterSpacing: "-0.025em"
+    lineHeight: 1.1
+    letterSpacing: "-0.03em"
 rounded:
   tag: "6px"
   waitlist-field: "7px"
@@ -140,6 +140,10 @@ components:
     textColor: "{colors.light-blue}"
 ---
 # Design System: Palateo
+
+## Current entry screens — 16 October 2026
+
+The login and public waitlist follow the dark materials already used by the live map and taste studio in `src/styles/studio.css`: page `#0d181a`, section/field `#142427`, panel `#1a2f33`, primary copy `#f7fbfc`, secondary copy `#bed6db`, and Saffron actions. Control borders use `#638e97` for visible boundaries. The public page retains DM Sans; the login inherits the current app typeface. Map geography remains light, matching the live map's distinct surface. Existing copy, account consent and API flows are preserved. This entry-screen treatment supersedes the earlier light public sections described below.
 
 ## Overview
 

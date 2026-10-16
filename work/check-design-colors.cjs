@@ -4,10 +4,11 @@ const styles=file=>fs.readFileSync(path.join(__dirname,'palateo_cloudflare_pages
 const token=(css,name)=>Array.from(css.matchAll(new RegExp('--'+name+':\\s*(#[0-9a-fA-F]{6})','g'))).at(-1)?.[1];
 const app=styles('app/theme.css'),waitlist=styles('waitlist.css');
 for(const [name,value] of Object.entries({bg:'#c3e7f1',card:'#edf7fa',ink:'#20373b',muted:'#315e68',green:'#315e68',green2:'#519cab',gold:'#ffc64f','control-line':'#315e68'}))assert.equal(token(app,name),value,'App '+name+' source token');
-for(const [name,value] of Object.entries({navy:'#20373b',teal:'#315159',aqua:'#ffc64f',white:'#edf7fa',soft:'#c3e7f1',moonstone:'#519cab'}))assert.equal(token(waitlist,name),value,'Waitlist '+name+' source token');
+for(const [name,value] of Object.entries({navy:'#0d181a',teal:'#142427',aqua:'#ffc64f',white:'#f7fbfc',soft:'#bed6db',moonstone:'#519cab',panel:'#1a2f33','control-line':'#638e97'}))assert.equal(token(waitlist,name),value,'Waitlist '+name+' source token');
 const luminance=hex=>{const c=hex.replace('#','').match(/../g).map(x=>parseInt(x,16)/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4);return c[0]*.2126+c[1]*.7152+c[2]*.0722};
 const contrast=(a,b)=>{const values=[luminance(a),luminance(b)].sort((x,y)=>y-x);return (values[0]+.05)/(values[1]+.05)};
 const pairs=[
+ ['entry text','#f7fbfc','#1a2f33',4.5],['entry copy','#bed6db','#1a2f33',4.5],['entry field boundary','#638e97','#142427',3],
  ['venue text','#edf7fa','#102b30',4.5],['venue muted','#b5d5dc','#102b30',4.5],['venue control border','#638e97','#102b30',3],['map text','#b5d5dc','#091d20',4.5],
  ['app text','#20373b','#c3e7f1',4.5],['app muted','#315e68','#dbeef4',4.5],
  ['saffron action','#20373b','#ffc64f',4.5],['dark navigation','#c3e7f1','#20373b',4.5],

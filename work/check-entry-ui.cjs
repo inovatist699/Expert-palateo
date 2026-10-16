@@ -20,7 +20,7 @@ async function readable(locator){
  try{
   browser=await chromium.launch({headless:true,channel:'msedge'});const origin='http://127.0.0.1:'+server.address().port;
   if(output)fs.mkdirSync(output,{recursive:true});
-  for(const width of [320,390,1440]){
+  for(const width of [320,390,768,1440]){
    const page=await browser.newPage({viewport:{width,height:900},reducedMotion:'reduce'}),errors=[];
    page.on('pageerror',e=>errors.push(e.message));
    await page.addInitScript(()=>{sessionStorage.setItem('palo-intro','1');localStorage.setItem('palateo-palo-voice','off')});
@@ -33,6 +33,8 @@ async function readable(locator){
    assert.equal(await page.locator('#authEmail').evaluate(el=>getComputedStyle(el).fontSize),'16px');
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
    assert.ok(await page.locator('#authModal .modalCard').evaluate(el=>el.scrollWidth<=el.clientWidth));
+   assert.equal(await page.locator('#authModal .modalCard').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(26, 47, 51)','Login uses the current app panel');
+   if(output)await page.screenshot({path:path.join(output,'login-start-'+width+'.png'),fullPage:true});
    await page.locator('#authEmail').fill('reader@example.invalid');await page.locator('#authPass').fill('fixture-password');
    await page.getByRole('button',{name:'Show password',exact:true}).click();assert.equal(await page.locator('#authPass').getAttribute('type'),'text');
    await page.getByRole('button',{name:'Hide password',exact:true}).click();assert.equal(await page.locator('#authPass').getAttribute('type'),'password');
@@ -48,6 +50,10 @@ async function readable(locator){
    await page.goto(origin+'/#join');
    if(output)await page.screenshot({path:path.join(output,'waitlist-'+width+'.png'),fullPage:true});
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+   assert.equal(await page.locator('.join-card').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(26, 47, 51)','Waitlist uses the current app panel');
+   assert.equal(await page.locator('.opening').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(13, 24, 26)','Waitlist uses the current app background');
+   await page.locator('#motion-toggle').click();assert.equal(await page.locator('.phone').evaluate(el=>getComputedStyle(el).transform),'none','Pausing motion keeps the preview upright');
+   if(output){await page.locator('#join').screenshot({path:path.join(output,'waitlist-form-start-'+width+'.png')});await page.locator('.opening').screenshot({path:path.join(output,'waitlist-hero-'+width+'.png')});}
    for(const selector of ['.join-card h3','.join-card .form-intro','#waitlist-form>label','.join-card .form-note'])await readable(page.locator(selector).first());
    assert.equal(await page.locator('#email').evaluate(el=>getComputedStyle(el).fontSize),'16px');
    await page.locator('#email').fill('reader@example.invalid');await page.locator('#city').selectOption('Ahmedabad');
@@ -62,6 +68,6 @@ async function readable(locator){
    if(output){await page.screenshot({path:path.join(output,'waitlist-'+width+'.png'),fullPage:true});await page.locator('#join').screenshot({path:path.join(output,'waitlist-form-'+width+'.png')});}
    assert.deepEqual(errors,[]);await page.close();
   }
-  console.log('PASS: 320/390/1440px login/signup, password toggle, sign-in error recovery, form contrast, waitlist consent/success/rate-limit and preserved input (isolated API fixtures)');
+  console.log('PASS: 320/390/768/1440px current app materials, login/signup, password toggle, sign-in error recovery, form contrast, waitlist consent/success/rate-limit and preserved input (isolated API fixtures)');
  }finally{await browser?.close();server.close()}
 })().then(()=>process.exit(0)).catch(error=>{console.error(error);server.close();process.exit(1)});

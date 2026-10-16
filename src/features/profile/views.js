@@ -1,3 +1,7 @@
+function renderPassedPlaces(){
+ const passed=Object.entries(state.feedback||{}).filter(([,value])=>value==='dislike').map(([id])=>activeRestaurant(id)).filter(Boolean);
+ return `<details class="card appleGlassCard"><summary data-passed-summary>Passed places (${passed.length})</summary><p class="feedNote">These places are hidden from recommendations. Show one again to undo its pass and update your learned tastes.</p>${passed.map(r=>`<div class="row"><span>${esc(r.name)} · ${esc(r.city||cityName())}</span><button type="button" class="btn secondary" data-rest-action="dislike" data-rest-id="${esc(r.id)}" aria-label="Undo pass for ${esc(r.name)}">Show again</button></div>`).join('')||'<p class="feedNote">No passed places.</p>'}</details>`;
+}
 function renderPassportModal(){
   const all=ranked();
   const visited=all.filter(r=>state.feedback[r.id]==='visited');
@@ -136,6 +140,7 @@ function profile(){
     </div>
 
     <div class="section"><h2>What you’ve taught us</h2><span>Active feedback</span></div>
+        ${renderPassedPlaces()}
         <details class="card appleGlassCard learnedSignals">
           <summary>See learned taste signals</summary>
           ${Object.entries(ai.signals||{}).sort((x,y)=>y[1]-x[1]).slice(0,8).map(x=>`<div class="row"><strong>${esc(x[0])}</strong><span>${x[1]>0?'+':''}${Number(x[1]).toFixed(1)}</span></div>`).join('')||'<p class="feedNote">Rate a few places to start building your taste profile.</p>'}

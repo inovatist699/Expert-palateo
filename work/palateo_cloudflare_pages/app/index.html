@@ -30955,32 +30955,35 @@ let tasteModelCache=null;
 function tasteFeatures(r){
  const features=[];
  for(const [group,values] of Object.entries({cuisine:r.c,tag:r.t,ambience:r.a,occasion:r.o})){
-  for(const value of Array.isArray(values)?values:[]){const text=String(value).trim().toLowerCase();if(text&&text.length<=60)features.push(group+':'+text)}
+  for(const value of Array.isArray(values)?values:[]){const text=String(value).trim().toLowerCase();if(text&&text.length<=60&&!['restaurant','food court','fast food','veg','vegetarian','nonveg','non-vegetarian'].includes(text))features.push(group+':'+text)}
  }
  if(r.p)features.push('price:'+r.p);if(r.s)features.push('spice:'+r.s);
  return [...new Set(features)].sort().slice(0,40);
 }
-function trainTasteModel(excludedId){
- const samples=Object.entries(state.feedback||{}).filter(([id,value])=>id!==excludedId&&['like','dislike'].includes(value)).sort(([a],[b])=>a.localeCompare(b)).map(([id,value])=>{const r=activeRestaurant(id);return r?{features:tasteFeatures(r),target:value==='like'?1:0}:null}).filter(s=>s?.features.length);
+function trainTasteModel(samples){
  const weights=Object.create(null);
  for(let epoch=0;epoch<12;epoch++)for(const sample of samples){
   const scale=1/Math.sqrt(sample.features.length),score=sample.features.reduce((n,f)=>n+(weights[f]||0)*scale,0),prediction=1/(1+Math.exp(-Math.max(-20,Math.min(20,score))));
   for(const feature of sample.features)weights[feature]=(weights[feature]||0)*.997+.25*(sample.target-prediction)*scale;
  }
- return {weights,samples:samples.length};
+ return {weights,samples};
 }
-function tasteModelAdjustment(r){
+function getTasteModel(){
+ const samples=Object.entries(state.feedback||{}).filter(([,value])=>['like','dislike'].includes(value)).sort(([a],[b])=>a.localeCompare(b)).map(([id,value])=>{const r=activeRestaurant(id);return r?{id,features:tasteFeatures(r),target:value==='like'?1:0}:null}).filter(s=>s?.features.length);
+ // Catalogue corrections and late cloud loads must invalidate the same feedback's model.
+ const key=String(currentUser?.id||'')+'|'+JSON.stringify(samples);
+ if(!tasteModelCache||tasteModelCache.key!==key)tasteModelCache={key,model:trainTasteModel(samples)};
+ return tasteModelCache.model;
+}
+function tasteModelAdjustment(r,model){
  if(['like','dislike'].includes(state.feedback?.[r.id]))return 0;
- const key=String(currentUser?.id||'')+'|'+JSON.stringify(Object.entries(state.feedback||{}).sort(([a],[b])=>a.localeCompare(b)));
- if(!tasteModelCache||tasteModelCache.key!==key)tasteModelCache={key,models:new Map()};
- // Direct feedback already handles known places; the model generalises to unrated places.
- const excluded='';
- if(!tasteModelCache.models.has(excluded))tasteModelCache.models.set(excluded,trainTasteModel(excluded));
- const model=tasteModelCache.models.get(excluded),features=tasteFeatures(r);
- if(!model.samples||!features.length)return 0;
+ model=model||getTasteModel();
+ const features=tasteFeatures(r);
+ const support=model.samples.filter(sample=>sample.features.some(feature=>features.includes(feature))).length;
+ if(!support||!features.length)return 0;
  const score=features.reduce((sum,f)=>sum+(model.weights[f]||0),0)/Math.sqrt(features.length);
  const probability=1/(1+Math.exp(-Math.max(-20,Math.min(20,score))));
- return Math.max(-6,Math.min(6,(probability-.5)*12*Math.min(1,model.samples/3)));
+ return Math.max(-6,Math.min(6,(probability-.5)*12*Math.min(1,support/3)));
 }
 /* Preference fit plus bounded proximity, review evidence and reversible feedback. */
 function restaurantDietaryEvidence(r){
@@ -30998,7 +31001,7 @@ function matchesDietaryPreference(r){
  return diet==='veg'?evidence.hasVeg:diet==='eggetarian'?(evidence.hasVeg||evidence.hasEgg):diet==='nonveg'?evidence.hasNonVeg:true;
 }
 function compareRecommendations(a,b){return b.score-a.score||(a.distanceKm??Infinity)-(b.distanceKm??Infinity)||String(a.id).localeCompare(String(b.id))}
-function rec(r){
+function rec(r,tasteModel){
 const a=state.answers||{},f=state.feedback||{},why=[];
 const list=v=>Array.isArray(v)?v.map(x=>String(x).toLowerCase().trim()):[];
 const cuisines=list(r.c||r.cuisines),ambience=list(r.a||r.ambience_tags),occasions=list(r.o||r.occasion_tags),tags=list(r.t||r.tags);
@@ -31012,9 +31015,9 @@ if(a.cuisine){
 }
 const budgetRanks={under_500:0,'500_1000':1,'1000_2000':2,'2000_plus':3};
 if(a.budget&&Object.hasOwn(budgetRanks,a.budget)){
- const gap=Math.abs(budgetRanks[a.budget]-budgetRanks[r.p]);
- const factor=!Object.hasOwn(budgetRanks,r.p)?0:gap===0?1:gap===1?-.15:-.8;
- addFactor('Price',20,factor,gap===0?'Budget fit':null);
+ const gap=budgetRanks[r.p]-budgetRanks[a.budget];
+ const factor=!Object.hasOwn(budgetRanks,r.p)?0:gap===0?1:gap<0?.7:gap===1?-.35:-.9;
+ addFactor('Price',20,factor,gap===0?'Budget fit':gap<0?'Within your budget':null);
 }
 const {hasVeg,hasNonVeg,hasEgg}=restaurantDietaryEvidence(r);
 const dietMatch=a.diet==='veg'?hasVeg:a.diet==='eggetarian'?(hasVeg||hasEgg):hasNonVeg;
@@ -31052,7 +31055,7 @@ if(Array.isArray(r.review_insights)&&r.review_insights.length){
  if(a.priority==='unique'&&/\b(heritage|iconic|historic|authentic)\b/.test(insightText)){s+=1.5;why.push('Diners highlight authentic character')}
 }
 
-const learnedDelta=tasteModelAdjustment(r);s+=learnedDelta;
+const learnedDelta=tasteModelAdjustment(r,tasteModel);s+=learnedDelta;
 if(learnedDelta>=1)why.unshift('Similar to places you liked');
 else if(learnedDelta<=-1)why.unshift('Similar to places you passed');
 const dishDelta=dishAdjustment(r);s+=dishDelta;
@@ -31069,7 +31072,11 @@ s=Math.max(1,Math.min(99,Math.round(s)));
 if(!why.length)why.push('Matches your overall palate');
 return {...r,distanceKm,description:r.description||(typeof r.why==='string'?r.why:''),score:s,why,matchBreakdown:preferenceFactors};
 }
-function ranked(){return hasTasteProfile()?getActiveCatalog().filter(r=>isQualifiedVenue(r)&&matchesDietaryPreference(r)&&(!pureVegOnly||isPureVegRestaurant(r))&&withinTravelRange(r)).map(rec).sort(compareRecommendations):[]}
+function ranked(){
+ if(!hasTasteProfile())return [];
+ const model=getTasteModel();
+ return getActiveCatalog().filter(r=>state.feedback?.[r.id]!=='dislike'&&isQualifiedVenue(r)&&matchesDietaryPreference(r)&&(!pureVegOnly||isPureVegRestaurant(r))&&withinTravelRange(r)).map(r=>rec(r,model)).sort(compareRecommendations);
+}
 let feedbackRevision=0;
 function restaurantFeatures(r){return [...new Set([...(r.c||[]),...(r.t||[]),...(r.a||[]),...(r.o||[]),...(r.review_insights||[])].map(x=>String(x).trim().toLowerCase()).filter(Boolean))]}
 function feedbackCount(){return (state.ai?.likes||0)+(state.ai?.dislikes||0)+(state.ai?.visits||0)}
@@ -31528,9 +31535,13 @@ function social(){
 document.getElementById('root').innerHTML=`<section class="screen social-screen"><div class="hero"><div class="eyebrow">Palateo People</div><h1>Good taste brings people together.</h1><p>Explore community taste profiles and discover what ${esc(cityName())} food lovers are enjoying.</p></div><div class="card"><div class="statGrid"><div class="stat"><b>${people.length}</b><span>sample taste profiles</span></div><div class="stat"><b>${state.follows.length}</b><span>your connections</span></div></div></div><div class="section"><h2>Close taste matches</h2><span>Sample community profiles</span></div><div class="peopleGrid">${people.map(personCard).join('')}</div><div class="section"><h2>More ways to explore</h2><span>Coming soon</span></div><div class="peopleGrid"><div class="card"><b>Shared collections</b><p class="feedNote">Create a “${esc(cityName())} date night” or “Best cafés” collection with friends.</p></div><div class="card"><b>Dining together</b><p class="feedNote">Compare two palates and find restaurants everyone can enjoy.</p></div></div></section>`
 }
 function saved(){
-const x=hasTasteProfile()?state.saves.map(activeRestaurant).filter(r=>r&&isQualifiedVenue(r)).map(rec).sort((a,b)=>b.score-a.score):[];
+const x=hasTasteProfile()?state.saves.map(activeRestaurant).filter(r=>r&&isQualifiedVenue(r)).map(r=>rec(r)).sort((a,b)=>b.score-a.score):[];
 const savedContent=x.length?`<div class="restaurantGrid">${x.map(card).join('')}</div>`:`<div class="empty"><h2>Your shortlist starts here</h2><p>Save places you want to try and they’ll be waiting here for your next food plan.</p><button class="btn green" type="button" data-action="navigate" data-page="discover">Explore restaurants</button></div>`;
 document.getElementById('root').innerHTML=`<section class="screen saved-screen"><div class="hero"><div class="eyebrow">Your collection</div><h1>Keep the good ones close.</h1><p>Your personal restaurant shortlist, ready whenever you are.</p></div>${savedContent}</section>`
+}
+function renderPassedPlaces(){
+ const passed=Object.entries(state.feedback||{}).filter(([,value])=>value==='dislike').map(([id])=>activeRestaurant(id)).filter(Boolean);
+ return `<details class="card appleGlassCard"><summary data-passed-summary>Passed places (${passed.length})</summary><p class="feedNote">These places are hidden from recommendations. Show one again to undo its pass and update your learned tastes.</p>${passed.map(r=>`<div class="row"><span>${esc(r.name)} · ${esc(r.city||cityName())}</span><button type="button" class="btn secondary" data-rest-action="dislike" data-rest-id="${esc(r.id)}" aria-label="Undo pass for ${esc(r.name)}">Show again</button></div>`).join('')||'<p class="feedNote">No passed places.</p>'}</details>`;
 }
 function renderPassportModal(){
   const all=ranked();
@@ -31670,6 +31681,7 @@ function profile(){
     </div>
 
     <div class="section"><h2>What you’ve taught us</h2><span>Active feedback</span></div>
+        ${renderPassedPlaces()}
         <details class="card appleGlassCard learnedSignals">
           <summary>See learned taste signals</summary>
           ${Object.entries(ai.signals||{}).sort((x,y)=>y[1]-x[1]).slice(0,8).map(x=>`<div class="row"><strong>${esc(x[0])}</strong><span>${x[1]>0?'+':''}${Number(x[1]).toFixed(1)}</span></div>`).join('')||'<p class="feedNote">Rate a few places to start building your taste profile.</p>'}
@@ -32543,6 +32555,7 @@ async function rateV5(id,t){
  const r=activeRestaurant(id);if(!r||!['like','dislike','visited'].includes(t))return;
  const removed=state.feedback[id]===t,ownerId=currentUser?.id;
  learn(r,removed?null:t);state.unsyncedFeedback=state.unsyncedFeedback||{};state.unsyncedFeedback[id]=removed?null:t;persist();go(page,{keepScroll:true});
+ if(t==='dislike'&&page==='profile')document.querySelector('[data-passed-summary]')?.focus({preventScroll:true});
  // Keep cloud history ordered while allowing an immediate undo in the UI.
  feedbackSyncQueue=feedbackSyncQueue.catch(()=>{}).then(async()=>{
   if(currentUser?.id!==ownerId)return;
@@ -32552,7 +32565,7 @@ async function rateV5(id,t){
   if((state.feedback[id]||null)!==(removed?null:t))return;
   if(cloudOk)delete state.unsyncedFeedback[id];
   persist();
-  const message=removed?'Rating removed · Your palate was updated':t==='like'?'Palate updated ❤️':t==='visited'?'Visit learned ✓':'We’ll show you less like this';
+  const message=removed?'Rating removed · Your palate was updated':t==='like'?'Palate updated ❤️':t==='visited'?'Visit learned ✓':'Hidden from recommendations · Undo in Palate → Passed places';
   toast(currentUser&&!cloudOk?'Saved on this device; cloud sync failed.':message);
  });
  return feedbackSyncQueue;

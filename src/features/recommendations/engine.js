@@ -14,7 +14,7 @@ function matchesDietaryPreference(r){
  return diet==='veg'?evidence.hasVeg:diet==='eggetarian'?(evidence.hasVeg||evidence.hasEgg):diet==='nonveg'?evidence.hasNonVeg:true;
 }
 function compareRecommendations(a,b){return b.score-a.score||(a.distanceKm??Infinity)-(b.distanceKm??Infinity)||String(a.id).localeCompare(String(b.id))}
-function rec(r){
+function rec(r,tasteModel){
 const a=state.answers||{},f=state.feedback||{},why=[];
 const list=v=>Array.isArray(v)?v.map(x=>String(x).toLowerCase().trim()):[];
 const cuisines=list(r.c||r.cuisines),ambience=list(r.a||r.ambience_tags),occasions=list(r.o||r.occasion_tags),tags=list(r.t||r.tags);
@@ -28,9 +28,9 @@ if(a.cuisine){
 }
 const budgetRanks={under_500:0,'500_1000':1,'1000_2000':2,'2000_plus':3};
 if(a.budget&&Object.hasOwn(budgetRanks,a.budget)){
- const gap=Math.abs(budgetRanks[a.budget]-budgetRanks[r.p]);
- const factor=!Object.hasOwn(budgetRanks,r.p)?0:gap===0?1:gap===1?-.15:-.8;
- addFactor('Price',20,factor,gap===0?'Budget fit':null);
+ const gap=budgetRanks[r.p]-budgetRanks[a.budget];
+ const factor=!Object.hasOwn(budgetRanks,r.p)?0:gap===0?1:gap<0?.7:gap===1?-.35:-.9;
+ addFactor('Price',20,factor,gap===0?'Budget fit':gap<0?'Within your budget':null);
 }
 const {hasVeg,hasNonVeg,hasEgg}=restaurantDietaryEvidence(r);
 const dietMatch=a.diet==='veg'?hasVeg:a.diet==='eggetarian'?(hasVeg||hasEgg):hasNonVeg;
@@ -68,7 +68,7 @@ if(Array.isArray(r.review_insights)&&r.review_insights.length){
  if(a.priority==='unique'&&/\b(heritage|iconic|historic|authentic)\b/.test(insightText)){s+=1.5;why.push('Diners highlight authentic character')}
 }
 
-const learnedDelta=tasteModelAdjustment(r);s+=learnedDelta;
+const learnedDelta=tasteModelAdjustment(r,tasteModel);s+=learnedDelta;
 if(learnedDelta>=1)why.unshift('Similar to places you liked');
 else if(learnedDelta<=-1)why.unshift('Similar to places you passed');
 const dishDelta=dishAdjustment(r);s+=dishDelta;
@@ -85,4 +85,8 @@ s=Math.max(1,Math.min(99,Math.round(s)));
 if(!why.length)why.push('Matches your overall palate');
 return {...r,distanceKm,description:r.description||(typeof r.why==='string'?r.why:''),score:s,why,matchBreakdown:preferenceFactors};
 }
-function ranked(){return hasTasteProfile()?getActiveCatalog().filter(r=>isQualifiedVenue(r)&&matchesDietaryPreference(r)&&(!pureVegOnly||isPureVegRestaurant(r))&&withinTravelRange(r)).map(rec).sort(compareRecommendations):[]}
+function ranked(){
+ if(!hasTasteProfile())return [];
+ const model=getTasteModel();
+ return getActiveCatalog().filter(r=>state.feedback?.[r.id]!=='dislike'&&isQualifiedVenue(r)&&matchesDietaryPreference(r)&&(!pureVegOnly||isPureVegRestaurant(r))&&withinTravelRange(r)).map(r=>rec(r,model)).sort(compareRecommendations);
+}

@@ -34,6 +34,6 @@ function pick(k,v,i){
  const slider=document.getElementById('quizSpice');if(slider){slider.value=String(Math.max(0,['mild','medium','hot'].indexOf(v)));slider.setAttribute('aria-valuetext',v==='depends'?'Depends on the dish':v);}
  document.getElementById('tasteContinue').disabled=!state.answers[k];
 }
-function nextQ(i){i<questions.length-1?onboard(i+1):finish()}
-function finish(){state.onboarded=true;state.confidence=82;state.ai={likes:0,dislikes:0,visits:0,signals:{}};persist();document.getElementById('nav').classList.remove('hide');go('home');toast('Your palate is ready ✨')}
+function nextQ(i){i<questions.length-1?onboard(i+1):finishV5()}
+function resetTaste(){state.onboarded=false;state.retakeInProgress=true;state.answers={};state.onboardingStep=0;persist();onboard(0)}
 

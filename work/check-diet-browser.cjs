@@ -41,7 +41,19 @@ const html=fs.readFileSync(path.join(built,'app/index.html'),'utf8').replace(/^i
   assert.ok(await page.locator('#aboutSpotHeading').isVisible(),'Current details layout opens without obsolete patches');
   assert.ok(await page.locator('.spotStickyActionBar [data-rest-action="visited"]').isVisible());
   assert.ok(await page.locator('.spotStickyActionBar [data-rest-action="maps"]').isVisible());
+  assert.match(await page.locator('.aboutSpotStatusPill').textContent(),/Hours unverified/);
+  assert.match(await page.locator('.signatureDishesSection').textContent(),/not a verified menu/);
+  const dish=page.locator('.dishVoteBtn.thumbUp').first(),dishId=await dish.getAttribute('data-dish-id');
+  await dish.click();assert.equal(await page.evaluate(id=>state.dishFeedback[id],dishId),'love','Details dish votes must teach the learning engine');
+  await page.locator('.dishVoteBtn.thumbUp').first().click();assert.equal(await page.evaluate(id=>state.dishFeedback[id]||null,dishId),null,'Dish votes can be undone');
   await page.locator('#placeBack').click();assert.ok(await page.locator('.discover-screen').isVisible());
+  await page.evaluate(()=>{state.feedback.mixed='visited';go('profile')});
+  const passport=page.locator('[data-action="open-passport"]');await passport.focus();await page.keyboard.press('Enter');
+  assert.ok(await page.locator('#passportModalBackdrop').isVisible());assert.match(await page.locator('#passportModalBackdrop').textContent(),/Mixed kitchen/,'Filters must not erase visit history');
+  await page.locator('#passportModalBackdrop [data-action="open-place"]').first().click();assert.equal(await page.locator('#passportModalBackdrop').count(),0,'Opening a visit closes the Passport overlay');assert.equal(await page.locator('#placeTitle').textContent(),'Mixed kitchen');
+  await page.locator('#placeBack').click();await passport.focus();await page.keyboard.press('Space');
+  await page.keyboard.press('Escape');assert.equal(await page.locator('#passportModalBackdrop').count(),0);assert.equal(await passport.evaluate(el=>el===document.activeElement),true);
+  assert.deepEqual(await page.evaluate(()=>{const img=document.createElement('img');img.setAttribute('data-venue-photo','');document.body.append(img);img.dispatchEvent(new Event('error'));const used=img.dataset.photoFallback==='true';img.dispatchEvent(new Event('error'));return [used,!img.isConnected]}),[true,true],'Photo fallback works without inline script and stops retrying');
   if(process.env.PALATEO_TEST_OUTPUT){fs.mkdirSync(process.env.PALATEO_TEST_OUTPUT,{recursive:true});await page.screenshot({path:path.join(process.env.PALATEO_TEST_OUTPUT,'pure-veg-mobile.png'),fullPage:true})}
   assert.deepEqual(errors,[]);console.log('PASS: mobile-width dietary exclusion, pure-veg toggle, keyboard access, cuisine/sort persistence and home filter');
  }finally{await browser?.close();server.close()}

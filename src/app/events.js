@@ -39,7 +39,7 @@ document.addEventListener('click',event=>{
   case 'open-place': if(d.restId)openPlaceDetails(d.restId,control); break;
   case 'close-place': closePlaceDetails(); break;
   case 'open-passport': showPalatePassportModal(); break;
-  case 'close-passport': document.getElementById('passportModalBackdrop')?.remove(); break;
+  case 'close-passport': closePalatePassportModal(); break;
   case 'set-profile-budget': if(['','under_500','500_1000','1000_2000','2000_plus'].includes(d.budget)){state.answers.budget=d.budget;persistProfileFilters();profile();toast(d.budget?'Budget set to '+price(d.budget):'Budget preference cleared');} break;
   case 'set-profile-distance': if(d.distance==='any')setProfileDistance(51); break;
   case 'dish-rate': rateDish(d.dishId,d.dishValue,d.source); break;
@@ -84,7 +84,7 @@ document.addEventListener('submit',event=>{
  event.preventDefault();
  if(form.dataset.authMode==='login'||form.dataset.authMode==='signup')submitAuth(form.dataset.authMode);
 });
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(document.getElementById('authModal'))closeAuth();else if(document.getElementById('passportModalBackdrop')){document.getElementById('passportModalBackdrop').remove()}else if(page==='place'){event.preventDefault();closePlaceDetails()}else if(document.getElementById('zestMapSheet')){event.preventDefault();closePlacePreview()}}});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(document.getElementById('authModal'))closeAuth();else if(document.getElementById('passportModalBackdrop')){closePalatePassportModal()}else if(page==='place'){event.preventDefault();closePlaceDetails()}else if(document.getElementById('zestMapSheet')){event.preventDefault();closePlacePreview()}}});
 document.addEventListener('click',event=>{const target=event.target instanceof Element?event.target:null,card=target?.closest('.restaurant-card');if(card&&!target.closest('button,a,details,summary,input'))openPlaceDetails(card.dataset.placeId,card.querySelector('[data-action="open-place"]'))});
 document.addEventListener('click',event=>{
 const target=event.target instanceof Element?event.target:null,button=target?.closest('[data-rest-action]');
@@ -98,3 +98,13 @@ if(action==='save')task=saveV5(id);
 if(action==='maps')task=mapsV5(id);
 Promise.resolve(task).catch(error=>{console.warn('Restaurant action',error);toast('This action did not sync to your account. Please try again when online.')});
 });
+
+document.addEventListener('keydown',event=>{
+ if((event.key==='Enter'||event.key===' ')&&event.target.matches('[data-action="open-passport"]')){event.preventDefault();showPalatePassportModal()}
+});
+
+document.addEventListener('error',event=>{
+ const image=event.target;if(!(image instanceof HTMLImageElement)||!image.hasAttribute('data-venue-photo'))return;
+ if(image.dataset.photoFallback){image.remove();return}
+ image.dataset.photoFallback='true';image.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80';
+},true);

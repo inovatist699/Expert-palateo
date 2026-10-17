@@ -7,46 +7,26 @@ function getISTDate(){
   const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
   return new Date(utc + (330 * 60000));
 }
-function parseTimeStr(tStr){
-  if(!tStr) return null;
-  const m = tStr.trim().match(/(\d+)(?::(\d+))?\s*(AM|PM)?/i);
-  if(!m) return null;
-  let h = parseInt(m[1], 10);
-  const min = parseInt(m[2] || '0', 10);
-  const mer = (m[3] || '').toUpperCase();
-  if(mer === 'PM' && h < 12) h += 12;
-  if(mer === 'AM' && h === 12) h = 0;
-  return h * 60 + min;
+function parseTimeStr(value){
+ if(typeof value!=='string')return null;
+ const m=value.trim().match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)?$/i);
+ if(!m||(!m[2]&&!m[3]))return null;
+ let h=Number(m[1]);const minute=Number(m[2]||0),mer=(m[3]||'').toUpperCase();
+ if(minute>59||(mer?(h<1||h>12):h>23))return null;
+ if(mer==='PM'&&h<12)h+=12;if(mer==='AM'&&h===12)h=0;
+ return h*60+minute;
 }
 function getVenueOpenStatus(r){
-  const ist = getISTDate();
-  const currentMinutes = ist.getHours() * 60 + ist.getMinutes();
-  let openTiming = r.openTiming || r.hours || r.timing;
-  if(!openTiming){
-    const pool = [...(r.c||[]), ...(r.t||[])].map(x => String(x).toLowerCase()).join(' ');
-    if(pool.includes('cafe') || pool.includes('coffee') || pool.includes('dessert') || pool.includes('bakery')) {
-      openTiming = '11:00 AM – 11:30 PM';
-    } else {
-      openTiming = '11:00 AM – 11:30 PM';
-    }
-  }
-  const parts = openTiming.split(/[–—\-]| to /i);
-  let openTimeStr = '11:00 AM', closeTimeStr = '11:30 PM';
-  if(parts.length >= 2){
-    openTimeStr = parts[0].trim();
-    closeTimeStr = parts[1].trim();
-  }
-  const openMin = parseTimeStr(openTimeStr) ?? (11 * 60);
-  const closeMin = parseTimeStr(closeTimeStr) ?? (23 * 60 + 30);
-  let isOpen = false;
-  if(closeMin > openMin){
-    isOpen = currentMinutes >= openMin && currentMinutes < closeMin;
-  } else {
-    isOpen = currentMinutes >= openMin || currentMinutes < closeMin;
-  }
-  const statusText = isOpen ? `Open Now · Closes ${closeTimeStr}` : `Closed · Opens ${openTimeStr}`;
-  const timingText = `${openTimeStr} – ${closeTimeStr} (${statusText})`;
-  return { isOpen, statusText, timingText, openTimeStr, closeTimeStr };
+ const unknown={isOpen:null,statusText:'Hours unverified',timingText:'Confirm opening hours with the venue.',openTimeStr:null,closeTimeStr:null};
+ const hours=r.openTiming||r.hours||r.timing;
+ if(typeof hours!=='string')return unknown;
+ if(/^(?:open\s*)?(?:24\s*hours|24\/7)$/i.test(hours.trim()))return {isOpen:true,statusText:'Listed as open 24 hours',timingText:hours.trim(),openTimeStr:null,closeTimeStr:null};
+ const parts=hours.split(/\s*[–—-]\s*|\s+to\s+/i);if(parts.length!==2)return unknown;
+ const [openTimeStr,closeTimeStr]=parts.map(x=>x.trim()),openMin=parseTimeStr(openTimeStr),closeMin=parseTimeStr(closeTimeStr);
+ if(openMin===null||closeMin===null||openMin===closeMin)return unknown;
+ const ist=getISTDate(),now=ist.getHours()*60+ist.getMinutes();
+ const isOpen=closeMin>openMin?now>=openMin&&now<closeMin:now>=openMin||now<closeMin;
+ return {isOpen,statusText:isOpen?'Within listed hours · Closes '+closeTimeStr:'Outside listed hours · Opens '+openTimeStr,timingText:hours.trim()+' · Confirm with the venue',openTimeStr,closeTimeStr};
 }
 function formatReviewCount(count){
   const n = Number(count || 0);

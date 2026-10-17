@@ -1,6 +1,7 @@
 let detailReturnScroll=0,detailReturnRail=0;
 function openPlaceDetails(id,trigger){
  const r=activeRestaurant(id);if(!r||!isQualifiedVenue(r))return;
+ document.getElementById('passportModalBackdrop')?.remove();
  if(page!=='place')window.history?.pushState({palateoPlace:id,origin:page},'');
  detailOrigin=page==='place'?detailOrigin:page;detailRestaurantId=id;
  detailReturnScroll=window.scrollY||0;detailReturnRail=document.querySelector('.homeMapView .restaurantGrid')?.scrollLeft||0;

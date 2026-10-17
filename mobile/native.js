@@ -8,6 +8,10 @@ window.PalateoNative={getCurrentPosition:options=>Geolocation.getCurrentPosition
 App.addListener('backButton',()=>{
  const dialog=document.querySelector('dialog[open]');
  if(dialog){const cancel=new Event('cancel',{cancelable:true});if(dialog.dispatchEvent(cancel))dialog.close();return;}
+ if(document.getElementById('passportModalBackdrop')){closePalatePassportModal();return;}
+ if(document.getElementById('accountDeletionDialog')){document.querySelector('[data-action="cancel-deletion"]')?.click();return;}
+ if(document.getElementById('authModal')){const close=document.querySelector('[data-action="close-auth"]');if(close)close.click();else App.minimizeApp();return;}
+ if(typeof page!=='undefined'&&page==='place'&&typeof closePlaceDetails==='function'){closePlaceDetails();return;}
  if(typeof page!=='undefined'&&page!=='home'&&typeof go==='function'){go('home');return;}
  App.minimizeApp();
 });

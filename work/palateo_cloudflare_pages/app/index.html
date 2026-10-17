@@ -30747,46 +30747,26 @@ function getISTDate(){
   const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
   return new Date(utc + (330 * 60000));
 }
-function parseTimeStr(tStr){
-  if(!tStr) return null;
-  const m = tStr.trim().match(/(\d+)(?::(\d+))?\s*(AM|PM)?/i);
-  if(!m) return null;
-  let h = parseInt(m[1], 10);
-  const min = parseInt(m[2] || '0', 10);
-  const mer = (m[3] || '').toUpperCase();
-  if(mer === 'PM' && h < 12) h += 12;
-  if(mer === 'AM' && h === 12) h = 0;
-  return h * 60 + min;
+function parseTimeStr(value){
+ if(typeof value!=='string')return null;
+ const m=value.trim().match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)?$/i);
+ if(!m||(!m[2]&&!m[3]))return null;
+ let h=Number(m[1]);const minute=Number(m[2]||0),mer=(m[3]||'').toUpperCase();
+ if(minute>59||(mer?(h<1||h>12):h>23))return null;
+ if(mer==='PM'&&h<12)h+=12;if(mer==='AM'&&h===12)h=0;
+ return h*60+minute;
 }
 function getVenueOpenStatus(r){
-  const ist = getISTDate();
-  const currentMinutes = ist.getHours() * 60 + ist.getMinutes();
-  let openTiming = r.openTiming || r.hours || r.timing;
-  if(!openTiming){
-    const pool = [...(r.c||[]), ...(r.t||[])].map(x => String(x).toLowerCase()).join(' ');
-    if(pool.includes('cafe') || pool.includes('coffee') || pool.includes('dessert') || pool.includes('bakery')) {
-      openTiming = '11:00 AM – 11:30 PM';
-    } else {
-      openTiming = '11:00 AM – 11:30 PM';
-    }
-  }
-  const parts = openTiming.split(/[–—\-]| to /i);
-  let openTimeStr = '11:00 AM', closeTimeStr = '11:30 PM';
-  if(parts.length >= 2){
-    openTimeStr = parts[0].trim();
-    closeTimeStr = parts[1].trim();
-  }
-  const openMin = parseTimeStr(openTimeStr) ?? (11 * 60);
-  const closeMin = parseTimeStr(closeTimeStr) ?? (23 * 60 + 30);
-  let isOpen = false;
-  if(closeMin > openMin){
-    isOpen = currentMinutes >= openMin && currentMinutes < closeMin;
-  } else {
-    isOpen = currentMinutes >= openMin || currentMinutes < closeMin;
-  }
-  const statusText = isOpen ? `Open Now · Closes ${closeTimeStr}` : `Closed · Opens ${openTimeStr}`;
-  const timingText = `${openTimeStr} – ${closeTimeStr} (${statusText})`;
-  return { isOpen, statusText, timingText, openTimeStr, closeTimeStr };
+ const unknown={isOpen:null,statusText:'Hours unverified',timingText:'Confirm opening hours with the venue.',openTimeStr:null,closeTimeStr:null};
+ const hours=r.openTiming||r.hours||r.timing;
+ if(typeof hours!=='string')return unknown;
+ if(/^(?:open\s*)?(?:24\s*hours|24\/7)$/i.test(hours.trim()))return {isOpen:true,statusText:'Listed as open 24 hours',timingText:hours.trim(),openTimeStr:null,closeTimeStr:null};
+ const parts=hours.split(/\s*[–—-]\s*|\s+to\s+/i);if(parts.length!==2)return unknown;
+ const [openTimeStr,closeTimeStr]=parts.map(x=>x.trim()),openMin=parseTimeStr(openTimeStr),closeMin=parseTimeStr(closeTimeStr);
+ if(openMin===null||closeMin===null||openMin===closeMin)return unknown;
+ const ist=getISTDate(),now=ist.getHours()*60+ist.getMinutes();
+ const isOpen=closeMin>openMin?now>=openMin&&now<closeMin:now>=openMin||now<closeMin;
+ return {isOpen,statusText:isOpen?'Within listed hours · Closes '+closeTimeStr:'Outside listed hours · Opens '+openTimeStr,timingText:hours.trim()+' · Confirm with the venue',openTimeStr,closeTimeStr};
 }
 function formatReviewCount(count){
   const n = Number(count || 0);
@@ -31088,7 +31068,7 @@ function learn(r,type){
  if(type)state.feedback[r.id]=type;else delete state.feedback[r.id];
  rebuildLearning();persist();
 }
-function photo(r){const fallback='<svg class="venuePlaceholder" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V9h16v12M3 9l3-6h12l3 6M8 21v-7h8v7M3 9h18"/></svg>';const imgUrl=(r.photo&&r.photo.startsWith('https://'))?r.photo:resolveVenuePhoto(r);if(!imgUrl)return fallback;try{const url=new URL(imgUrl,location.href);if((url.protocol!=='https:'&&url.origin!==location.origin)||url.username||url.password)return fallback;return fallback+'<img src="'+esc(url.href)+'" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=\'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80\';">'}catch(e){return fallback}}
+function photo(r){const fallback='<svg class="venuePlaceholder" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V9h16v12M3 9l3-6h12l3 6M8 21v-7h8v7M3 9h18"/></svg>';const imgUrl=(r.photo&&r.photo.startsWith('https://'))?r.photo:resolveVenuePhoto(r);if(!imgUrl)return fallback;try{const url=new URL(imgUrl,location.href);if((url.protocol!=='https:'&&url.origin!==location.origin)||url.username||url.password)return fallback;return fallback+'<img src="'+esc(url.href)+'" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-venue-photo>'}catch(e){return fallback}}
 function pureVegFilterControl(){return `<button type="button" class="filterChip ${pureVegOnly?'active':''}" aria-pressed="${pureVegOnly}" aria-describedby="dietaryFilterNote" data-action="pure-veg">Pure veg restaurants</button>`}
 function dietaryFilterNote(){return `<p class="feedNote" id="dietaryFilterNote">${pureVegOnly?'Only explicitly listed vegetarian-only kitchens. Mixed and unverified kitchens are hidden.':state.answers?.diet==='veg'?'Showing listed vegetarian options. Choose Pure veg to exclude mixed kitchens.':'Your dietary preference and travel range stay applied to these results.'}</p>`}
 function togglePureVegFilter(){pureVegOnly=!pureVegOnly;homeLimit=12;selectedPinId=null;go(page,{keepScroll:true});document.querySelector('[data-action="pure-veg"]')?.focus({preventScroll:true})}
@@ -31168,6 +31148,7 @@ function renderZestSheet(r){
 let detailReturnScroll=0,detailReturnRail=0;
 function openPlaceDetails(id,trigger){
  const r=activeRestaurant(id);if(!r||!isQualifiedVenue(r))return;
+ document.getElementById('passportModalBackdrop')?.remove();
  if(page!=='place')window.history?.pushState({palateoPlace:id,origin:page},'');
  detailOrigin=page==='place'?detailOrigin:page;detailRestaurantId=id;
  detailReturnScroll=window.scrollY||0;detailReturnRail=document.querySelector('.homeMapView .restaurantGrid')?.scrollLeft||0;
@@ -31192,21 +31173,9 @@ function place(){
  const categoryEmoji=r.emoji||(r.c?.includes('Cafe')?'☕':r.c?.includes('Desserts')||r.c?.includes('Dessert')?'🍰':'🍽️');
 
  const insights=Array.isArray(r.review_insights)&&r.review_insights.length?r.review_insights:[];
- const rawDishes=(r.signatureDishes&&r.signatureDishes.length)?r.signatureDishes:(insights.length?insights.slice(0,3).map((ins,idx)=>({
-   id:r.id+'-dish-'+idx,
-   name:ins.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' '),
-   price:r.p==='under_500'?'₹56':r.p==='500_1000'?'₹180':'₹320',
-   description:`Signature crowd favourite highlighted in ${r.name} reviews`,
-   tasteHighlight:ins.toLowerCase(),
-   isVeg:!((r.dietaryOptions||[]).includes('non_veg')||(r.dietaryOptions||[]).includes('non_vegetarian'))
- })):availableCalibrationDishes().filter(d=>dishAffinity(r,d)>0).slice(0,2).map(d=>({
-   id:d.id,
-   name:d.name,
-   price:r.p==='under_500'?'₹56':r.p==='500_1000'?'₹180':'₹320',
-   description:d.description,
-   tasteHighlight:d.name.toLowerCase(),
-   isVeg:true
- })));
+ const menuDishes=Array.isArray(r.signatureDishes)?r.signatureDishes.filter(d=>d&&typeof d.name==='string'&&d.name.trim()):[];
+ const isMenu=menuDishes.length>0;
+ const rawDishes=isMenu?menuDishes:availableCalibrationDishes().filter(d=>dishAffinity(r,d)>0).slice(0,3);
 
  const aboutSummary=r.description||`${r.name} in ${r.area||r.city||cityName()}.${insights.length?' '+insights.slice(0,2).join(', '):(cuisines.length?' '+cuisines.join(', '):'')}`;
 
@@ -31237,7 +31206,7 @@ function place(){
       <div class="aboutSpotCard">
         <div class="aboutSpotHeader">
           <span class="aboutSpotCategoryBadge">${categoryEmoji} ${esc(primaryCategory)}</span>
-          <span class="aboutSpotStatusPill ${openInfo.isOpen?'isOpen':'isClosed'}">
+          <span class="aboutSpotStatusPill ${openInfo.isOpen===null?'':openInfo.isOpen?'isOpen':'isClosed'}">
             <span class="statusDot"></span> ${esc(openInfo.statusText)}
           </span>
         </div>
@@ -31258,34 +31227,34 @@ function place(){
 
         <div class="aboutSpotFooter">
           <span class="aboutSpotRating">⭐ ${Number(r.rating).toFixed(1)} <span>(${Number(r.review_count||0).toLocaleString()})</span></span>
-          <span class="aboutSpotVerified">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="#ea4335" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Google Maps Verified
-          </span>
+          <button type="button" class="aboutSpotVerified" data-rest-action="maps" data-rest-id="${id}">Open in Maps ↗</button>
         </div>
       </div>
     </section>
 
     <section class="signatureDishesSection" aria-labelledby="placeDishTitle">
-      <h2 id="placeDishTitle">Signature Dishes &amp; Palate Match</h2>
-      <p class="subtitle">Rate dishes to dynamically train your personal Palate Genome</p>
+      <h2 id="placeDishTitle">${isMenu?'Listed menu items':'Explore your taste'}</h2>
+      <p class="subtitle">${isMenu?'Confirm availability, ingredients and prices with the venue.':'Cuisine-based taste examples, not a verified menu. Rate them to update your preferences.'}</p>
 
       <div class="signatureDishesDeck">
         ${rawDishes.map(d=>{
           const ratedVal=state.dishFeedback?.[d.id];
           const isLoved=ratedVal==='love';
           const isPassed=ratedVal==='pass';
+          const diet=isMenu?(d.isVeg===true?'veg':d.isVeg===false?'nonveg':null):d.diet;
+          const dietLabel=({veg:'Vegetarian',egg:'Contains egg',nonveg:'Non-vegetarian'})[diet]||'Dietary details unverified';
           return `<div class="spotDishCard" data-dish-id="${esc(d.id)}">
             <div class="dishCardHead">
               <div class="dishTitleArea">
-                <span class="${d.isVeg?'vegDot':'nonVegDot'}" aria-label="${d.isVeg?'Vegetarian':'Non-vegetarian'}"></span>
+                <span class="${diet==='veg'?'vegDot':diet==='nonveg'?'nonVegDot':''}" role="img" aria-label="${dietLabel}"></span>
                 <h3 class="dishName">${esc(d.name)}</h3>
               </div>
-              <span class="dishPrice">${esc(d.price||'₹56')}</span>
+              <span class="dishPrice">${isMenu?esc(d.price??'Price not listed'):'Taste example'}</span>
             </div>
             <p class="dishDesc">${esc(d.description)}</p>
             <div class="dishCardActions">
               <span class="dishHighlightPill">✨ ${esc(d.tasteHighlight||d.name.toLowerCase())}</span>
-              <div class="dishVoteArea">
+              ${!isMenu?`<div class="dishVoteArea">
                 <span>Taste it?</span>
                 <button type="button" class="dishVoteBtn thumbUp ${isLoved?'active':''}" data-action="dish-rate" data-dish-id="${esc(d.id)}" data-dish-value="love" data-source="detail" aria-pressed="${isLoved}" aria-label="Love ${esc(d.name)}">
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="${isLoved?'#fbbf24':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
@@ -31293,13 +31262,13 @@ function place(){
                 <button type="button" class="dishVoteBtn thumbDown ${isPassed?'active':''}" data-action="dish-rate" data-dish-id="${esc(d.id)}" data-dish-value="pass" data-source="detail" aria-pressed="${isPassed}" aria-label="Pass on ${esc(d.name)}">
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="${isPassed?'#ef4444':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"></path></svg>
                 </button>
-              </div>
+              </div>`:''}
             </div>
           </div>`;
         }).join('')}
       </div>
 
-      <p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Tap thumbs up or thumbs down to train your Palate Genome.')}</p>
+      <p class="calibrationStatus" role="status">${esc(dishSyncStatus||(isMenu?'Menu information can change.':'Tap a selected dish rating again to undo it.'))}</p>
     </section>
 
     <section class="placeBreakdown">
@@ -31428,8 +31397,7 @@ function renderPassedPlaces(){
  return `<details class="card appleGlassCard"><summary data-passed-summary>Passed places (${passed.length})</summary><p class="feedNote">These places are hidden from recommendations. Show one again to undo its pass and update your learned tastes.</p>${passed.map(r=>`<div class="row"><span>${esc(r.name)} · ${esc(r.city||cityName())}</span><button type="button" class="btn secondary" data-rest-action="dislike" data-rest-id="${esc(r.id)}" aria-label="Undo pass for ${esc(r.name)}">Show again</button></div>`).join('')||'<p class="feedNote">No passed places.</p>'}</details>`;
 }
 function renderPassportModal(){
-  const all=ranked();
-  const visited=all.filter(r=>state.feedback[r.id]==='visited');
+  const visited=getActiveCatalog().filter(r=>state.feedback[r.id]==='visited').map(r=>rec(r));
   return `<div class="passportModalBackdrop" id="passportModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="passportModalTitle">
     <div class="passportModalCard appleGlassCard">
       <div class="passportModalHeader">
@@ -31453,7 +31421,7 @@ function renderPassportModal(){
               <h3 class="passportPlaceName">${esc(r.name)}</h3>
               <p class="passportPlaceMeta">${esc(r.area||r.city)} · ${esc(displayPrice(r))}</p>
               <div class="passportStatusRow">
-                <span class="passportOpenStatus ${openInfo.isOpen?'open':'closed'}">${openInfo.isOpen?'🟢 ':'🔴 '}${esc(openInfo.statusText)}</span>
+                <span class="passportOpenStatus ${openInfo.isOpen===null?'':openInfo.isOpen?'open':'closed'}">${openInfo.isOpen===null?'':openInfo.isOpen?'🟢 ':'🔴 '}${esc(openInfo.statusText)}</span>
               </div>
               <div class="passportPlaceActions">
                 <button type="button" class="btn primary small" data-action="open-place" data-rest-id="${esc(r.id)}">Details →</button>
@@ -31591,6 +31559,11 @@ function profile(){
       <p class="feedNote">Signing out clears your Palateo preferences and profile details from this browser. Delete your account here to remove your cloud data.</p>
     </details>
   </section>`;
+}
+
+function closePalatePassportModal(){
+ document.getElementById('passportModalBackdrop')?.remove();
+ document.querySelector('[data-action="open-passport"]')?.focus();
 }
 /* Optional Supabase integration point.
    The SQL package created for Palateo contains matching tables and RPC.
@@ -32357,7 +32330,7 @@ document.addEventListener('click',event=>{
   case 'open-place': if(d.restId)openPlaceDetails(d.restId,control); break;
   case 'close-place': closePlaceDetails(); break;
   case 'open-passport': showPalatePassportModal(); break;
-  case 'close-passport': document.getElementById('passportModalBackdrop')?.remove(); break;
+  case 'close-passport': closePalatePassportModal(); break;
   case 'set-profile-budget': if(['','under_500','500_1000','1000_2000','2000_plus'].includes(d.budget)){state.answers.budget=d.budget;persistProfileFilters();profile();toast(d.budget?'Budget set to '+price(d.budget):'Budget preference cleared');} break;
   case 'set-profile-distance': if(d.distance==='any')setProfileDistance(51); break;
   case 'dish-rate': rateDish(d.dishId,d.dishValue,d.source); break;
@@ -32402,7 +32375,7 @@ document.addEventListener('submit',event=>{
  event.preventDefault();
  if(form.dataset.authMode==='login'||form.dataset.authMode==='signup')submitAuth(form.dataset.authMode);
 });
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(document.getElementById('authModal'))closeAuth();else if(document.getElementById('passportModalBackdrop')){document.getElementById('passportModalBackdrop').remove()}else if(page==='place'){event.preventDefault();closePlaceDetails()}else if(document.getElementById('zestMapSheet')){event.preventDefault();closePlacePreview()}}});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(document.getElementById('authModal'))closeAuth();else if(document.getElementById('passportModalBackdrop')){closePalatePassportModal()}else if(page==='place'){event.preventDefault();closePlaceDetails()}else if(document.getElementById('zestMapSheet')){event.preventDefault();closePlacePreview()}}});
 document.addEventListener('click',event=>{const target=event.target instanceof Element?event.target:null,card=target?.closest('.restaurant-card');if(card&&!target.closest('button,a,details,summary,input'))openPlaceDetails(card.dataset.placeId,card.querySelector('[data-action="open-place"]'))});
 document.addEventListener('click',event=>{
 const target=event.target instanceof Element?event.target:null,button=target?.closest('[data-rest-action]');
@@ -32416,6 +32389,16 @@ if(action==='save')task=saveV5(id);
 if(action==='maps')task=mapsV5(id);
 Promise.resolve(task).catch(error=>{console.warn('Restaurant action',error);toast('This action did not sync to your account. Please try again when online.')});
 });
+
+document.addEventListener('keydown',event=>{
+ if((event.key==='Enter'||event.key===' ')&&event.target.matches('[data-action="open-passport"]')){event.preventDefault();showPalatePassportModal()}
+});
+
+document.addEventListener('error',event=>{
+ const image=event.target;if(!(image instanceof HTMLImageElement)||!image.hasAttribute('data-venue-photo'))return;
+ if(image.dataset.photoFallback){image.remove();return}
+ image.dataset.photoFallback='true';image.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80';
+},true);
 async function finishV5(){
  if(!currentUser||authRequired){requireAuthGate();return}
  if(!hasTasteAnswers()){go('home');toast('Answer every taste question to build your palate.');return}

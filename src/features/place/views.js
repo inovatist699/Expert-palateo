@@ -7,21 +7,9 @@ function place(){
  const categoryEmoji=r.emoji||(r.c?.includes('Cafe')?'☕':r.c?.includes('Desserts')||r.c?.includes('Dessert')?'🍰':'🍽️');
 
  const insights=Array.isArray(r.review_insights)&&r.review_insights.length?r.review_insights:[];
- const rawDishes=(r.signatureDishes&&r.signatureDishes.length)?r.signatureDishes:(insights.length?insights.slice(0,3).map((ins,idx)=>({
-   id:r.id+'-dish-'+idx,
-   name:ins.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' '),
-   price:r.p==='under_500'?'₹56':r.p==='500_1000'?'₹180':'₹320',
-   description:`Signature crowd favourite highlighted in ${r.name} reviews`,
-   tasteHighlight:ins.toLowerCase(),
-   isVeg:!((r.dietaryOptions||[]).includes('non_veg')||(r.dietaryOptions||[]).includes('non_vegetarian'))
- })):availableCalibrationDishes().filter(d=>dishAffinity(r,d)>0).slice(0,2).map(d=>({
-   id:d.id,
-   name:d.name,
-   price:r.p==='under_500'?'₹56':r.p==='500_1000'?'₹180':'₹320',
-   description:d.description,
-   tasteHighlight:d.name.toLowerCase(),
-   isVeg:true
- })));
+ const menuDishes=Array.isArray(r.signatureDishes)?r.signatureDishes.filter(d=>d&&typeof d.name==='string'&&d.name.trim()):[];
+ const isMenu=menuDishes.length>0;
+ const rawDishes=isMenu?menuDishes:availableCalibrationDishes().filter(d=>dishAffinity(r,d)>0).slice(0,3);
 
  const aboutSummary=r.description||`${r.name} in ${r.area||r.city||cityName()}.${insights.length?' '+insights.slice(0,2).join(', '):(cuisines.length?' '+cuisines.join(', '):'')}`;
 
@@ -52,7 +40,7 @@ function place(){
       <div class="aboutSpotCard">
         <div class="aboutSpotHeader">
           <span class="aboutSpotCategoryBadge">${categoryEmoji} ${esc(primaryCategory)}</span>
-          <span class="aboutSpotStatusPill ${openInfo.isOpen?'isOpen':'isClosed'}">
+          <span class="aboutSpotStatusPill ${openInfo.isOpen===null?'':openInfo.isOpen?'isOpen':'isClosed'}">
             <span class="statusDot"></span> ${esc(openInfo.statusText)}
           </span>
         </div>
@@ -73,34 +61,34 @@ function place(){
 
         <div class="aboutSpotFooter">
           <span class="aboutSpotRating">⭐ ${Number(r.rating).toFixed(1)} <span>(${Number(r.review_count||0).toLocaleString()})</span></span>
-          <span class="aboutSpotVerified">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="#ea4335" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> Google Maps Verified
-          </span>
+          <button type="button" class="aboutSpotVerified" data-rest-action="maps" data-rest-id="${id}">Open in Maps ↗</button>
         </div>
       </div>
     </section>
 
     <section class="signatureDishesSection" aria-labelledby="placeDishTitle">
-      <h2 id="placeDishTitle">Signature Dishes &amp; Palate Match</h2>
-      <p class="subtitle">Rate dishes to dynamically train your personal Palate Genome</p>
+      <h2 id="placeDishTitle">${isMenu?'Listed menu items':'Explore your taste'}</h2>
+      <p class="subtitle">${isMenu?'Confirm availability, ingredients and prices with the venue.':'Cuisine-based taste examples, not a verified menu. Rate them to update your preferences.'}</p>
 
       <div class="signatureDishesDeck">
         ${rawDishes.map(d=>{
           const ratedVal=state.dishFeedback?.[d.id];
           const isLoved=ratedVal==='love';
           const isPassed=ratedVal==='pass';
+          const diet=isMenu?(d.isVeg===true?'veg':d.isVeg===false?'nonveg':null):d.diet;
+          const dietLabel=({veg:'Vegetarian',egg:'Contains egg',nonveg:'Non-vegetarian'})[diet]||'Dietary details unverified';
           return `<div class="spotDishCard" data-dish-id="${esc(d.id)}">
             <div class="dishCardHead">
               <div class="dishTitleArea">
-                <span class="${d.isVeg?'vegDot':'nonVegDot'}" aria-label="${d.isVeg?'Vegetarian':'Non-vegetarian'}"></span>
+                <span class="${diet==='veg'?'vegDot':diet==='nonveg'?'nonVegDot':''}" role="img" aria-label="${dietLabel}"></span>
                 <h3 class="dishName">${esc(d.name)}</h3>
               </div>
-              <span class="dishPrice">${esc(d.price||'₹56')}</span>
+              <span class="dishPrice">${isMenu?esc(d.price??'Price not listed'):'Taste example'}</span>
             </div>
             <p class="dishDesc">${esc(d.description)}</p>
             <div class="dishCardActions">
               <span class="dishHighlightPill">✨ ${esc(d.tasteHighlight||d.name.toLowerCase())}</span>
-              <div class="dishVoteArea">
+              ${!isMenu?`<div class="dishVoteArea">
                 <span>Taste it?</span>
                 <button type="button" class="dishVoteBtn thumbUp ${isLoved?'active':''}" data-action="dish-rate" data-dish-id="${esc(d.id)}" data-dish-value="love" data-source="detail" aria-pressed="${isLoved}" aria-label="Love ${esc(d.name)}">
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="${isLoved?'#fbbf24':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
@@ -108,13 +96,13 @@ function place(){
                 <button type="button" class="dishVoteBtn thumbDown ${isPassed?'active':''}" data-action="dish-rate" data-dish-id="${esc(d.id)}" data-dish-value="pass" data-source="detail" aria-pressed="${isPassed}" aria-label="Pass on ${esc(d.name)}">
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="${isPassed?'#ef4444':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"></path></svg>
                 </button>
-              </div>
+              </div>`:''}
             </div>
           </div>`;
         }).join('')}
       </div>
 
-      <p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Tap thumbs up or thumbs down to train your Palate Genome.')}</p>
+      <p class="calibrationStatus" role="status">${esc(dishSyncStatus||(isMenu?'Menu information can change.':'Tap a selected dish rating again to undo it.'))}</p>
     </section>
 
     <section class="placeBreakdown">

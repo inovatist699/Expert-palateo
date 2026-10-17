@@ -10,6 +10,8 @@ const scripts = [
   'check-diet-distance.cjs',
   'check-taste-model.cjs',
   'check-dish-calibration.cjs',
+  'check-venue-details.cjs',
+  'check-native-navigation.cjs',
   'check-design-colors.cjs',
   'check-palo-pet.cjs',
   'check-omniroute-palo.cjs',

@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
 const root=process.argv[2]||path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const ctx=vm.createContext({state:{answers:{}},userLocation:{lat:22.3,lon:73.2}});
-vm.runInContext(read('src/features/quiz/questions.js')+'\n'+read('src/services/catalog-query.js'),ctx);
+vm.runInContext(read('src/features/quiz/questions.js')+'\n'+read('src/services/catalog-query.js')+'\n'+read('src/features/map/views.js'),ctx);
 assert.equal(vm.runInContext("questions.some(q=>['budget','distance'].includes(q.k))",ctx),false);
 for(const [distance,expected] of [['0',false],['1',true],['50',true],['any',true],[undefined,true]]){
  ctx.state.answers.distance=distance;
@@ -17,7 +17,7 @@ assert.match(view,/min="0" max="51" step="1"/);assert.match(view,/Any budget/);a
 assert.doesNotMatch(view,/retake taste quiz|reset-taste/i);
 assert.doesNotMatch(read('src/services/user-repository.js'),/Number\(a.distance\|\|5\)/);
 (async()=>{
- let resolveLocation,calls=0;ctx.currentUser={id:'owner'};ctx.cityName=()=> 'Vadodara';ctx.persist=()=>{};ctx.profile=()=>{};ctx.syncTaste=async()=>{};ctx.toast=()=>{};ctx.document={getElementById:()=>null};ctx.feedbackSyncQueue=Promise.resolve();
+ let resolveLocation,calls=0;ctx.currentUser={id:'owner'};ctx.page='profile';ctx.cityName=()=> 'Vadodara';ctx.persist=()=>{};ctx.profile=()=>{};ctx.syncTaste=async()=>{};ctx.toast=()=>{};ctx.document={getElementById:()=>null};ctx.feedbackSyncQueue=Promise.resolve();
  ctx.useMyLocation=()=>{calls++;return new Promise(resolve=>{resolveLocation=resolve})};
  const pending=vm.runInContext('setProfileDistance(5)',ctx);
  await vm.runInContext('setProfileDistance(51)',ctx);resolveLocation(true);await pending;
@@ -25,5 +25,7 @@ assert.doesNotMatch(read('src/services/user-repository.js'),/Number\(a.distance\
  ctx.useMyLocation=async()=>false;await vm.runInContext('setProfileDistance(10)',ctx);assert.equal(ctx.state.answers.distance,'any','Denied location falls back to Anywhere');
  ctx.userLocation={lat:22.3,lon:73.2};await vm.runInContext('setProfileDistance(0)',ctx);assert.equal(ctx.state.answers.distance,'0','Zero is a real optional range');
  await vm.runInContext('setProfileDistance(52)',ctx);assert.equal(ctx.state.answers.distance,'0','Invalid range is rejected');
+ ctx.userLocation=null;ctx.useMyLocation=()=>new Promise(resolve=>{resolveLocation=resolve});let rendered='';ctx.profile=()=>{rendered='profile'};ctx.go=p=>{rendered=p};
+ const navigation=vm.runInContext('setProfileDistance(3)',ctx);ctx.page='home';resolveLocation(true);await navigation;assert.equal(rendered,'home','Location must not navigate back to profile after leaving it');
  console.log('PASS: optional preferences, 0–50 km, unlimited range, denied location, invalid input and stale location requests.');
 })().catch(error=>{console.error(error);process.exitCode=1});

@@ -3,9 +3,9 @@ function travelRangeNote(){
  const value=state.answers?.distance,range=Number(value);if(value==null||value===''||!Number.isFinite(range)||range<0)return '';
  return '<p class="feedNote">'+(userLocation?'Showing places within '+range+' km in a straight line from your location. Places without coordinates are hidden.':'Allow location access using “Use my location” to apply your travel range. Currently browsing the whole city.')+'</p>';
 }
+function validCoordinate(value,max){return (typeof value==='number'||typeof value==='string'&&value.trim()!=='')&&Number.isFinite(Number(value))&&Math.abs(Number(value))<=max}
 function venueDistanceKm(r){
- const valid=(value,max)=>(typeof value==='number'||typeof value==='string'&&value.trim()!=='')&&Number.isFinite(Number(value))&&Math.abs(Number(value))<=max;
- if(!userLocation||!valid(userLocation.lat,90)||!valid(userLocation.lon,180)||!valid(r.latitude,90)||!valid(r.longitude,180))return null;
+ if(!userLocation||!validCoordinate(userLocation.lat,90)||!validCoordinate(userLocation.lon,180)||!hasCoordinates(r))return null;
  const lat=Number(r.latitude),lon=Number(r.longitude);
  const rad=x=>x*Math.PI/180,dLat=rad(lat-userLocation.lat),dLon=rad(lon-userLocation.lon);
  const a=Math.sin(dLat/2)**2+Math.cos(rad(userLocation.lat))*Math.cos(rad(lat))*Math.sin(dLon/2)**2;
@@ -24,6 +24,6 @@ async function setProfileDistance(km){
  const located=km===51||!!userLocation||await useMyLocation({changeCity:false});
  if(currentUser?.id!==owner||cityName()!==city||revision!==profileDistanceRevision)return;
  state.answers.distance=located&&km!==51?String(km):'any';persistProfileFilters();
- profile();document.getElementById('profileDistance')?.focus({preventScroll:true});
+ if(page==='profile'){profile();document.getElementById('profileDistance')?.focus({preventScroll:true})}else if(currentUser)go(page);
  if(!located)toast('Location unavailable — showing anywhere in '+cityName());
 }

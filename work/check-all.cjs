@@ -4,6 +4,7 @@ const path = require('node:path');
 const scripts = [
   'check-taste-onboarding.cjs',
   'check-profile-preferences.cjs',
+  'check-location.cjs',
   'check-waitlist.cjs',
   'check-sentry.cjs',
   'test-recommendation-quality.cjs',

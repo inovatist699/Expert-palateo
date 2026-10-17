@@ -420,16 +420,6 @@ html{scrollbar-color:#519cab #c3e7f1}
    PALATEO NEW UI SPEC: MAP, PLACE DETAILS, DISH MATCH & PROFILE PASS
    ========================================================================== */
 
-/* 1. Complete suppression of OpenFreeMap / OpenStreetMap attribution tags */
-.maplibregl-ctrl-attrib,
-.maplibregl-compact,
-.streetMapFrame .maplibregl-ctrl-attrib {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
 /* 2. Map Floating Widgets: Weather & Theme Capsule */
 .mapWeatherWidget {
   position: absolute;

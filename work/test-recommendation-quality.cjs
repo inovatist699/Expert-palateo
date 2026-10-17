@@ -155,6 +155,10 @@ globalThis.runRecommendationQualityAudit = () => {
   assert.ok(rec({...humbleTasteFit,rating:4.6,review_count:500}).score>rec({...humbleTasteFit,rating:5,review_count:1}).score,'Established positive reviews beat a single five-star rating at equal taste fit');
   const noReviews=rec({...humbleTasteFit,rating:4,review_count:0}).score;
   assert.equal(rec({...humbleTasteFit,rating:5,review_count:0}).score,noReviews,'Unsubstantiated ratings provide no quality bonus');
+  for(const priority of ['ambience','value','unique']){
+    state.answers.priority=priority;
+    assert.ok(rec({...humbleTasteFit,rating:4.6,review_count:500}).score>rec({...humbleTasteFit,rating:2,review_count:500}).score,'Reliable review quality must matter for '+priority);
+  }
   console.log('PASS: missing-evidence confidence, GPS stability, bounded proximity and review-supported quality');
   console.log('PASS: Eggetarian/all-foods options, dietary conflicts, unknown evidence and calibration isolation');
   console.log('PASS: Recommendation quality evaluation (taste fit vs popularity, conflict resilience, feedback symmetry, signal idempotency)');

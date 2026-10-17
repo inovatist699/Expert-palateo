@@ -5,6 +5,7 @@ function tasteFeatures(r){
  for(const [group,values] of Object.entries({cuisine:r.c,tag:r.t,ambience:r.a,occasion:r.o})){
   for(const value of Array.isArray(values)?values:[]){const text=String(value).trim().toLowerCase();if(text&&text.length<=60&&!['restaurant','food court','fast food','veg','vegetarian','nonveg','non-vegetarian'].includes(text))features.push(group+':'+text)}
  }
+ for(const key of Object.keys(cuisineAliases))if(cuisineFits(r,key))features.push('cuisine:'+key.toLowerCase());
  if(r.p)features.push('price:'+r.p);if(r.s)features.push('spice:'+r.s);
  return [...new Set(features)].sort().slice(0,40);
 }

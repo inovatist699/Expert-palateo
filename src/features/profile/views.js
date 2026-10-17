@@ -3,8 +3,7 @@ function renderPassedPlaces(){
  return `<details class="card appleGlassCard"><summary data-passed-summary>Passed places (${passed.length})</summary><p class="feedNote">These places are hidden from recommendations. Show one again to undo its pass and update your learned tastes.</p>${passed.map(r=>`<div class="row"><span>${esc(r.name)} · ${esc(r.city||cityName())}</span><button type="button" class="btn secondary" data-rest-action="dislike" data-rest-id="${esc(r.id)}" aria-label="Undo pass for ${esc(r.name)}">Show again</button></div>`).join('')||'<p class="feedNote">No passed places.</p>'}</details>`;
 }
 function renderPassportModal(){
-  const all=ranked();
-  const visited=all.filter(r=>state.feedback[r.id]==='visited');
+  const visited=getActiveCatalog().filter(r=>state.feedback[r.id]==='visited').map(r=>rec(r));
   return `<div class="passportModalBackdrop" id="passportModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="passportModalTitle">
     <div class="passportModalCard appleGlassCard">
       <div class="passportModalHeader">
@@ -28,7 +27,7 @@ function renderPassportModal(){
               <h3 class="passportPlaceName">${esc(r.name)}</h3>
               <p class="passportPlaceMeta">${esc(r.area||r.city)} · ${esc(displayPrice(r))}</p>
               <div class="passportStatusRow">
-                <span class="passportOpenStatus ${openInfo.isOpen?'open':'closed'}">${openInfo.isOpen?'🟢 ':'🔴 '}${esc(openInfo.statusText)}</span>
+                <span class="passportOpenStatus ${openInfo.isOpen===null?'':openInfo.isOpen?'open':'closed'}">${openInfo.isOpen===null?'':openInfo.isOpen?'🟢 ':'🔴 '}${esc(openInfo.statusText)}</span>
               </div>
               <div class="passportPlaceActions">
                 <button type="button" class="btn primary small" data-action="open-place" data-rest-id="${esc(r.id)}">Details →</button>
@@ -166,4 +165,9 @@ function profile(){
       <p class="feedNote">Signing out clears your Palateo preferences and profile details from this browser. Delete your account here to remove your cloud data.</p>
     </details>
   </section>`;
+}
+
+function closePalatePassportModal(){
+ document.getElementById('passportModalBackdrop')?.remove();
+ document.querySelector('[data-action="open-passport"]')?.focus();
 }

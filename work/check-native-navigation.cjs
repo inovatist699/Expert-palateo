@@ -1,0 +1,11 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const handlers={},calls=[];let openId=null;
+const ctx=vm.createContext({App:{addListener:(name,fn)=>handlers[name]=fn,minimizeApp:()=>calls.push('minimize')},Browser:{open:async()=>{}},Geolocation:{},createClient(){},window:{},document:{querySelector:()=>null,getElementById:id=>id===openId?{}:null,addEventListener(){}},page:'place',go:p=>calls.push(p),closePlaceDetails:()=>calls.push('place-back'),closePalatePassportModal:()=>calls.push('passport-close'),Event});
+vm.runInContext(fs.readFileSync('mobile/native.js','utf8').replace(/^import .*;\r?\n/gm,''),ctx);
+handlers.backButton();assert.deepEqual(calls,['place-back'],'Native Back must return to the details origin');
+calls.length=0;openId='passportModalBackdrop';handlers.backButton();assert.deepEqual(calls,['passport-close'],'Native Back closes Passport before navigating');
+calls.length=0;openId='accountDeletionDialog';handlers.backButton();assert.deepEqual(calls,[],'Back must not navigate behind an account-deletion dialog');
+calls.length=0;openId='authModal';handlers.backButton();assert.deepEqual(calls,['minimize'],'Required sign-in stays enforced');
+calls.length=0;openId=null;ctx.page='profile';handlers.backButton();assert.deepEqual(calls,['home']);
+calls.length=0;ctx.page='home';handlers.backButton();assert.deepEqual(calls,['minimize']);
+console.log('PASS: native Back respects details origin and Passport modal');

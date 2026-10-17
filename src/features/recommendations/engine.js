@@ -54,12 +54,9 @@ let totalWeight=preferenceFactors.reduce((sum,x)=>sum+x.weight,0),preferenceScor
 let s=55+preferenceScore*36;
 // GPS enriches a match without changing the denominator of its taste score.
 if(distanceKm!==null){const proximity=Math.max(0,1-distanceKm/(Number.isFinite(travelRange)&&travelRange>0?travelRange:10));s+=3*proximity;addFactor('Distance',0,proximity,'Nearby · '+distanceKm.toFixed(1)+' km away')}
-/* Rating and review count add a small confidence signal; they never override taste conflicts. */
-const count=Number(r.review_count),reviewCount=Number.isFinite(count)&&count>0?count:0;
-// Shrink sparse ratings toward 4 stars; 30 reviews give the observed rating half weight.
-const rating=Number(r.rating);
-if(a.priority==='food'&&Number.isFinite(rating)&&rating>0&&rating<=5)s+=(rating-4)*2*reviewCount/(reviewCount+30);
-if(reviewCount>=100)s+=1.5;else if(reviewCount>=30)s+=.75;
+/* Supported review quality is bounded and applies alongside every taste priority. */
+const count=Number(r.review_count),reviewCount=Number.isFinite(count)&&count>0?count:0,rating=Number(r.rating);
+if(Number.isFinite(rating)&&rating>0&&rating<=5)s+=Math.max(-4,Math.min(2,(rating-4)*(a.priority==='food'?3:2)*reviewCount/(reviewCount+30)));
 if(Array.isArray(r.review_insights)&&r.review_insights.length){
  const insightText=r.review_insights.join(' ').toLowerCase();
  if(a.mood==='quiet'&&/\b(peaceful|calm|cozy|serene|tranquil|quiet)\b/.test(insightText)){s+=1.5;why.push('Diners highlight peaceful ambience')}

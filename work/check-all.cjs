@@ -10,6 +10,7 @@ const scripts = [
   'test-recommendation-quality.cjs',
   'check-diet-distance.cjs',
   'check-taste-model.cjs',
+  'check-ml-ranking.cjs',
   'check-dish-calibration.cjs',
   'check-venue-details.cjs',
   'check-native-navigation.cjs',

@@ -1,18 +1,21 @@
-const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
+const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict'),crypto=require('node:crypto');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
-const built=path.join(__dirname,'palateo_cloudflare_pages');
+const built=path.resolve(__dirname,process.env.PALATEO_TEST_SURFACE==='android'?'../mobile/www':'palateo_cloudflare_pages');
 const fixture=`useAccount({id:'diet-browser',user_metadata:{palateo_legal_version:LEGAL_VERSION,palateo_privacy_consent:true}});
 state.answers={mood:'quiet',cuisine:'Gujarati',diet:'veg',budget:'under_500',spice:'mild',occasion:'family',priority:'food',distance:'any'};
 state.onboarded=true;authRequired=false;userLocation={lat:23.0225,lon:72.5714};
 const base={city:'Ahmedabad',c:['Gujarati'],t:['Restaurant'],a:['quiet'],o:['family'],p:'under_500',s:'mild',rating:4.5,review_count:90,longitude:72.5714};
 dbCatalog=[{...base,id:'pure',name:'Listed pure veg',latitude:23.0235,dietaryOptions:['pure_veg']},{...base,id:'mixed',name:'Mixed kitchen',latitude:23.0625,dietaryOptions:['vegetarian','non-vegetarian','eggs']},{...base,id:'egg',name:'Egg only',latitude:23.024,dietaryOptions:['eggetarian']}];
 getActiveCatalog=()=>dbCatalog;document.getElementById('nav').classList.remove('hide');go('discover');`;
-const html=fs.readFileSync(path.join(built,'app/index.html'),'utf8').replace(/^initV5\(\);\r?$/m,fixture);
+const original=fs.readFileSync(path.join(built,'app/index.html'),'utf8');
+let html=original.replace(/^initV5\(\);\r?$/m,fixture);
+const inlineHash=text=>crypto.createHash('sha256').update(text.match(/<script>([\s\S]*?)<\/script>/)[1].replace(/\r\n?/g,'\n')).digest('base64');
+html=html.replace('sha256-'+inlineHash(original),'sha256-'+inlineHash(html));
 (async()=>{
  const server=http.createServer((req,res)=>{
   const url=new URL(req.url,'http://localhost');if(url.pathname==='/app/'){res.setHeader('Content-Type','text/html');return res.end(html)}
   const file=path.resolve(built,'.'+url.pathname);if(!file.startsWith(built+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile())return res.writeHead(404).end();
-  res.end(fs.readFileSync(file));
+  if(file.endsWith('.js'))res.setHeader('Content-Type','text/javascript');if(file.endsWith('.css'))res.setHeader('Content-Type','text/css');res.end(fs.readFileSync(file));
  });await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));let browser;
  try{
   browser=await chromium.launch({headless:true,channel:'msedge'});const page=await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'}),errors=[];
@@ -55,6 +58,20 @@ const html=fs.readFileSync(path.join(built,'app/index.html'),'utf8').replace(/^i
   await page.keyboard.press('Escape');assert.equal(await page.locator('#passportModalBackdrop').count(),0);assert.equal(await passport.evaluate(el=>el===document.activeElement),true);
   assert.deepEqual(await page.evaluate(()=>{const img=document.createElement('img');img.setAttribute('data-venue-photo','');document.body.append(img);img.dispatchEvent(new Event('error'));const used=img.dataset.photoFallback==='true';img.dispatchEvent(new Event('error'));return [used,!img.isConnected]}),[true,true],'Photo fallback works without inline script and stops retrying');
   if(process.env.PALATEO_TEST_OUTPUT){fs.mkdirSync(process.env.PALATEO_TEST_OUTPUT,{recursive:true});await page.screenshot({path:path.join(process.env.PALATEO_TEST_OUTPUT,'pure-veg-mobile.png'),fullPage:true})}
-  assert.deepEqual(errors,[]);console.log('PASS: mobile-width dietary exclusion, pure-veg toggle, keyboard access, cuisine/sort persistence and home filter');
+  const learning=await page.evaluate(()=>{
+   const sample={city:'Ahmedabad',p:'under_500',s:'mild',o:['family'],rating:4.5,review_count:90,dietaryOptions:['pure_veg'],latitude:23.0235,longitude:72.5714};
+   state.feedback={};dbCatalog=[];pureVegOnly=false;state.dishFeedback={};
+   state.answers={...state.answers,cuisine:'Italian',cuisines:['Italian','Gujarati'],mood:'quiet',vibes:['quiet','lively'],distance:'any'};
+   const patterns=[['Italian','quiet'],['Italian','lively'],['Gujarati','quiet'],['Gujarati','lively']];
+   patterns.forEach(([c,a],i)=>{for(let copy=0;copy<3;copy++){const r={...sample,id:'train-'+i+'-'+copy,name:'Training '+i+' '+copy,c:[c],a:[a],t:[]};dbCatalog.push(r);learn(r,i===0||i===3?'like':'dislike')}dbCatalog.push({...sample,id:'candidate-'+i,name:'Candidate '+i,c:[c],a:[a],t:[]})});
+   const order=()=>ranked().filter(r=>r.id.startsWith('candidate-')).map(r=>r.id);
+   const learned=order();const training=dbCatalog.filter(r=>r.id.startsWith('train-'));training.forEach(r=>learn(r,null));
+   const reset=dbCatalog.filter(r=>r.id.startsWith('candidate-')).every(r=>tasteModelAdjustment(r)===0);
+   training.forEach(r=>learn(r,['0','3'].includes(r.id.split('-')[1])?'like':'dislike'));
+   return {learned,reset,restored:order()};
+  });
+  assert.deepEqual(learning.learned.slice(0,2).sort(),['candidate-0','candidate-3'],'Learned combinations reorder unseen venues through the real shared ranking engine');
+  assert.equal(learning.reset,true);assert.deepEqual(learning.restored,learning.learned);
+  assert.deepEqual(errors,[]);console.log('PASS: '+(process.env.PALATEO_TEST_SURFACE||'web')+' dietary exclusion, pure-veg, UI flows and learned ranking/undo on unseen venues');
  }finally{await browser?.close();server.close()}
 })().catch(e=>{console.error(e);process.exitCode=1});

@@ -33,5 +33,7 @@ assert.equal(tasteModelAdjustment(candidate),supported,'Unrelated ratings must n
 state.feedback={a:'like',b:'dislike'};
 const ordered=tasteModelAdjustment(candidate);state.feedback={b:'dislike',a:'like'};
 assert.equal(tasteModelAdjustment(candidate),ordered,'Feedback insertion order must not change recommendations');
+delete state.feedback.b;assert.equal(tasteModelAdjustment(candidate),supported,'Undoing the only pass restores one-class learning');
+state.feedback.b='dislike';assert.equal(tasteModelAdjustment(candidate),ordered,'Restoring a pass exactly restores pairwise learning');
 `,ctx);
 console.log('PASS: cold start, similarity generalisation, negative learning, bounds, no direct-feedback double count, determinism, exact undo and account reset');

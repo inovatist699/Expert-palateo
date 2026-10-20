@@ -27,7 +27,6 @@ const viewTabs=`<div class="viewSwitcher" role="group" aria-label="Choose recomm
 </div>`;
 
 const filterPills=`<div class="filterChips homeFilterChips" role="group" aria-label="Filter recommendations by category">
-${pureVegFilterControl()}
 <button type="button" class="filterChip ${homeCuisine==='all'?'active':''}" aria-pressed="${homeCuisine==='all'}" data-action="home-cuisine" data-cuisine="all">All places</button>
 <button type="button" class="filterChip ${homeCuisine==='Cafe'?'active':''}" aria-pressed="${homeCuisine==='Cafe'}" data-action="home-cuisine" data-cuisine="Cafe">Cafés</button>
 <button type="button" class="filterChip ${homeCuisine==='Dessert'?'active':''}" aria-pressed="${homeCuisine==='Dessert'}" data-action="home-cuisine" data-cuisine="Dessert">Desserts</button>

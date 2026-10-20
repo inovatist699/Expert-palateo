@@ -56,13 +56,6 @@ home=function(){
  const legend=container.querySelector('.zestMapLegend');if(legend)legend.innerHTML='<span><i style="background:#d8613d"></i>Food</span><span><i style="background:#2875bb"></i>Cafés</span><span><i style="background:#9753a8"></i>Desserts</span><span><i style="background:#28845a"></i>Regional</span>';
  const notice=container.querySelector('.mapNotice');if(notice)notice.textContent=streetPlaces.filter(hasCoordinates).length+' recommendations mapped · Select a pin to explore. Directions opens your navigation app.';
  mountStreetMap(host);
- const rail=document.querySelector('.homeMapView .restaurantGrid');
- if(rail){
-  const controls=document.createElement('div');controls.className='railControls';controls.innerHTML='<button type="button" data-rail-step="-1" aria-label="Previous places" disabled>←</button><button type="button" data-rail-step="1" aria-label="Next places">→</button>';
-  document.querySelector('.homeRecommendations>.section').append(controls);
-  const boundaries=()=>{controls.querySelector('[data-rail-step="-1"]').disabled=rail.scrollLeft<=1;controls.querySelector('[data-rail-step="1"]').disabled=rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-2};
-  rail.addEventListener('scroll',boundaries,{passive:true});requestAnimationFrame(boundaries);
- }
 };
 const navigateWithStreetMap=go;
 go=function(destination,options){if(destination!=='home')disposeStreetMap();navigateWithStreetMap(destination,options)};
@@ -73,8 +66,6 @@ function showStreetPlace(id){
  document.querySelector('.zestSheetClose')?.focus({preventScroll:true});
 }
 document.addEventListener('click',event=>{
- const step=event.target.closest('[data-rail-step]');
- if(step){const rail=document.querySelector('.homeMapView .restaurantGrid');if(rail?.firstElementChild)rail.scrollBy({left:Number(step.dataset.railStep)*(rail.firstElementChild.getBoundingClientRect().width+(parseFloat(getComputedStyle(rail).columnGap)||0)),behavior:mapMotion()?'smooth':'instant'});return}
  const control=event.target.closest('[data-action],[data-street-retry]');if(!control)return;
  if(control.hasAttribute('data-street-retry')){event.preventDefault();disposeStreetMap();home();return}
  if(!streetMap||!document.querySelector('.streetMapFrame'))return;

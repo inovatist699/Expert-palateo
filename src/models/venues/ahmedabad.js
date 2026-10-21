@@ -5627,5 +5627,2198 @@ const catalog=[
     ],
     "why": "Trusted neighborhood food house famous for golden roasted stuffed parathas served with white butter and curd.",
     "hours": "11:00 AM – 3:30 PM, 6:30 PM – 11:00 PM"
+  },
+  {
+    "id": "ahm-varitea-sbr",
+    "name": "VariTea - Tea Lounge & Cafe",
+    "area": "Sindhu Bhavan Road",
+    "city": "Ahmedabad",
+    "latitude": 23.0482,
+    "longitude": 72.502,
+    "c": [
+      "Cafe",
+      "Tea Lounge",
+      "Continental",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "rating": 4.7,
+    "review_count": 2100,
+    "t": [
+      "Tea Lounge",
+      "Specialty Brews",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "plush",
+      "peaceful",
+      "modern"
+    ],
+    "o": [
+      "friends",
+      "date",
+      "casual"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🫖",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=VariTea+Sindhu+Bhavan+Road+Ahmedabad",
+    "review_insights": [
+      "premium tea collection",
+      "fluffy pancakes",
+      "truffle fries",
+      "ambient aesthetic seating"
+    ],
+    "why": "Upscale tea lounge on SBR featuring single-estate teas, artisan continental appetizers, and plush interiors.",
+    "hours": "11:00 AM – 12:00 AM"
+  },
+  {
+    "id": "ahm-turquoise-villa-sbr",
+    "name": "Turquoise Villa Bistro & Cafe",
+    "area": "Sindhu Bhavan Road",
+    "city": "Ahmedabad",
+    "latitude": 23.0475,
+    "longitude": 72.5035,
+    "c": [
+      "Cafe",
+      "Italian",
+      "Continental",
+      "Mexican"
+    ],
+    "p": "500_1000",
+    "rating": 4.6,
+    "review_count": 1850,
+    "t": [
+      "Bistro",
+      "Artisan Coffee",
+      "Cafe",
+      "Woodfired Pizza",
+      "Late night cafe"
+    ],
+    "a": [
+      "cozy",
+      "aesthetic",
+      "vibrant"
+    ],
+    "o": [
+      "friends",
+      "date",
+      "celebration"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Turquoise+Villa+Bistro+Cafe+Sindhu+Bhavan+Ahmedabad",
+    "review_insights": [
+      "woodfired thin crust pizza",
+      "artisan hot chocolates",
+      "aesthetic outdoor patio",
+      "bustling weekend vibe"
+    ],
+    "why": "Lively SBR bistro celebrated for authentic Neapolitan pizzas, handcrafted mocktails, and leafy patio dining.",
+    "hours": "11:00 AM – 12:30 AM"
+  },
+  {
+    "id": "ahm-roastery-cultur-sbr",
+    "name": "Roastery Cultur Specialty Coffee",
+    "area": "Sindhu Bhavan Road",
+    "city": "Ahmedabad",
+    "latitude": 23.049,
+    "longitude": 72.5012,
+    "c": [
+      "Cafe",
+      "Coffee",
+      "European",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "rating": 4.8,
+    "review_count": 1600,
+    "t": [
+      "Specialty Coffee",
+      "Pour Over",
+      "Artisan Bakery",
+      "Late night cafe"
+    ],
+    "a": [
+      "minimalist",
+      "scenic",
+      "work_friendly"
+    ],
+    "o": [
+      "coffee",
+      "work",
+      "date"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Roastery+Cultur+Specialty+Coffee+SBR+Ahmedabad",
+    "review_insights": [
+      "manual pour over coffee",
+      "sourdough avocado toast",
+      "baked cheesecake",
+      "peaceful work atmosphere"
+    ],
+    "why": "Specialty third-wave coffee roastery on SBR with direct farm origins, manual pour-overs, and European bakes.",
+    "hours": "8:00 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-poetry-cheesecake-sbr",
+    "name": "Poetry by Love and Cheesecake",
+    "area": "Sindhu Bhavan Road",
+    "city": "Ahmedabad",
+    "latitude": 23.0468,
+    "longitude": 72.5042,
+    "c": [
+      "Cafe",
+      "Bakery",
+      "Desserts",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "rating": 4.7,
+    "review_count": 1420,
+    "t": [
+      "Cheesecakes",
+      "Artisan Bakery",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "chic",
+      "pastel",
+      "romantic"
+    ],
+    "o": [
+      "date",
+      "dessert",
+      "friends"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🍰",
+    "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Poetry+by+Love+and+Cheesecake+Sindhu+Bhavan+Ahmedabad",
+    "review_insights": [
+      "new york style baked cheesecake",
+      "nutella waffle",
+      "classic hot chocolate",
+      "gorgeous pastel decor"
+    ],
+    "why": "Mumbai's famous dessert boutique on SBR delivering decadent artisanal cheesecakes, savory crepes, and specialty coffee.",
+    "hours": "10:00 AM – 12:00 AM"
+  },
+  {
+    "id": "ahm-little-french-house-sbr",
+    "name": "The Little French House",
+    "area": "Sindhu Bhavan Road",
+    "city": "Ahmedabad",
+    "latitude": 23.051,
+    "longitude": 72.5005,
+    "c": [
+      "French",
+      "Cafe",
+      "Bakery",
+      "European"
+    ],
+    "p": "500_1000",
+    "rating": 4.6,
+    "review_count": 1280,
+    "t": [
+      "French Patisserie",
+      "Croissants",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "parisian",
+      "aesthetic",
+      "romantic"
+    ],
+    "o": [
+      "date",
+      "breakfast",
+      "friends"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🥐",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Little+French+House+Sindhu+Bhavan+Ahmedabad",
+    "review_insights": [
+      "buttery almond croissants",
+      "french onion tart",
+      "artisan macaroons",
+      "parisian style street cafe"
+    ],
+    "why": "Charming Parisian-inspired patisserie & cafe serving golden flaky croissants, quiches, and delicate tarts.",
+    "hours": "9:00 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-olives-oregano-sbr",
+    "name": "Olives & Oregano - Woodfired Pizzeria",
+    "area": "Sindhu Bhavan Road",
+    "city": "Ahmedabad",
+    "latitude": 23.0455,
+    "longitude": 72.505,
+    "c": [
+      "Italian",
+      "Pizza",
+      "Cafe",
+      "Pasta"
+    ],
+    "p": "500_1000",
+    "rating": 4.7,
+    "review_count": 1390,
+    "t": [
+      "Woodfired Pizza",
+      "Handcrafted Pasta",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "cozy",
+      "rustic",
+      "italian"
+    ],
+    "o": [
+      "date",
+      "friends",
+      "family"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Olives+Oregano+Sindhu+Bhavan+Ahmedabad",
+    "review_insights": [
+      "blistered sourdough crust",
+      "fresh burrata salad",
+      "truffle mushroom pizza",
+      "authentic italian herbs"
+    ],
+    "why": "Artisanal pizzeria on SBR crafting Neapolitan-style woodfired pizzas with San Marzano tomatoes and fior di latte.",
+    "hours": "12:00 PM – 11:30 PM"
+  },
+  {
+    "id": "ahm-project-cafe-sbr",
+    "name": "The Project Cafe",
+    "area": "Sindhu Bhavan Road",
+    "city": "Ahmedabad",
+    "latitude": 23.046,
+    "longitude": 72.5065,
+    "c": [
+      "Cafe",
+      "Artisan",
+      "Continental",
+      "Fusion"
+    ],
+    "p": "500_1000",
+    "rating": 4.7,
+    "review_count": 1950,
+    "t": [
+      "Art Cafe",
+      "Lifestyle",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "artistic",
+      "quirky",
+      "creative"
+    ],
+    "o": [
+      "friends",
+      "date",
+      "creatives"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🎨",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Project+Cafe+Sindhu+Bhavan+Ahmedabad",
+    "review_insights": [
+      "living art gallery cafe",
+      "gourmet mezze platter",
+      "iced mocha",
+      "creative eclectic furniture"
+    ],
+    "why": "Experiential art-concept cafe where every piece of art and decor is curated, paired with fusion global dining.",
+    "hours": "11:00 AM – 12:00 AM"
+  },
+  {
+    "id": "ahm-urban-chowk-bopal",
+    "name": "Urban Chowk (Bopal)",
+    "area": "Bopal",
+    "city": "Ahmedabad",
+    "latitude": 23.0315,
+    "longitude": 72.469,
+    "c": [
+      "Food Court",
+      "Street food",
+      "Cafe",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "rating": 4.8,
+    "review_count": 3500,
+    "t": [
+      "Food Container Park",
+      "Open Air Adda",
+      "Late night food",
+      "Midnight hangout"
+    ],
+    "a": [
+      "open_air",
+      "vibrant",
+      "youthful"
+    ],
+    "o": [
+      "friends",
+      "family",
+      "late_night"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "pure_veg"
+    ],
+    "emoji": "🎪",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Urban+Chowk+Bopal+Ahmedabad",
+    "review_insights": [
+      "vibrant night atmosphere",
+      "street food stalls under lights",
+      "jamun shots and waffles",
+      "weekend live music"
+    ],
+    "why": "Ahmedabad's flagship open-air food container park bringing curated food trucks, live acoustic sessions, and street snacks.",
+    "hours": "5:30 PM – 1:30 AM"
+  },
+  {
+    "id": "ahm-shake-maker-sobo",
+    "name": "The Shake Maker (South Bopal)",
+    "area": "South Bopal",
+    "city": "Ahmedabad",
+    "latitude": 23.0285,
+    "longitude": 72.464,
+    "c": [
+      "Beverages",
+      "Shakes",
+      "Desserts",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 920,
+    "t": [
+      "Thick Shakes",
+      "Late night desserts",
+      "Cafe",
+      "Midnight hangout"
+    ],
+    "a": [
+      "youthful",
+      "casual"
+    ],
+    "o": [
+      "friends",
+      "dessert",
+      "late_night"
+    ],
+    "s": null,
+    "dietaryOptions": [
+      "vegetarian",
+      "pure_veg"
+    ],
+    "emoji": "🥤",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Shake+Maker+South+Bopal+Ahmedabad",
+    "review_insights": [
+      "death by chocolate shake",
+      "ferrero rocher indulgence",
+      "belgian chocolate thick shake",
+      "chilled night hangout"
+    ],
+    "why": "Popular dessert and shake bar in South Bopal frequented by youngsters for decadent handcrafted thick shakes.",
+    "hours": "11:00 AM – 1:00 AM"
+  },
+  {
+    "id": "ahm-gwalia-bopal",
+    "name": "Gwalia Sweets & Cafe",
+    "area": "Bopal",
+    "city": "Ahmedabad",
+    "latitude": 23.034,
+    "longitude": 72.4715,
+    "c": [
+      "Sweets",
+      "North Indian",
+      "Street food",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "rating": 4.5,
+    "review_count": 1600,
+    "t": [
+      "Pure Veg",
+      "Chaat",
+      "Sweets",
+      "Family Restaurant"
+    ],
+    "a": [
+      "family",
+      "spacious",
+      "clean"
+    ],
+    "o": [
+      "family",
+      "breakfast",
+      "evening"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥟",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Gwalia+Sweets+Cafe+Bopal+Ahmedabad",
+    "review_insights": [
+      "crisp raj kachori",
+      "authentic bengali sweets",
+      "chole bhature",
+      "family weekend breakfast"
+    ],
+    "why": "Prominent pure-veg sweet house and casual diner on Bopal Main Road loved for Delhi-style chaat and hot sweets.",
+    "hours": "8:30 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-tea-post-bopal",
+    "name": "Tea Post - The Desi Cafe (Bopal)",
+    "area": "Bopal",
+    "city": "Ahmedabad",
+    "latitude": 23.033,
+    "longitude": 72.4675,
+    "c": [
+      "Cafe",
+      "Tea Lounge",
+      "Gujarati Snacks",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "rating": 4.5,
+    "review_count": 890,
+    "t": [
+      "Desi Chai",
+      "Maska Bun",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "casual",
+      "bustling"
+    ],
+    "o": [
+      "friends",
+      "tea_break",
+      "quick_bite"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "pure_veg"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tea+Post+Bopal+Ahmedabad",
+    "review_insights": [
+      "ginger cardamom chai",
+      "warm butter maska bun",
+      "pudina puff",
+      "neighborhood adda"
+    ],
+    "why": "Go-to tea hangout in Bopal serving steaming hot ginger chai, grilled sandwiches, and freshly baked maska buns.",
+    "hours": "7:00 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-dark-roast-prahladnagar",
+    "name": "The Dark Roast Cafe (Prahladnagar)",
+    "area": "Prahladnagar",
+    "city": "Ahmedabad",
+    "latitude": 23.0125,
+    "longitude": 72.511,
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian",
+      "Coffee"
+    ],
+    "p": "500_1000",
+    "rating": 4.7,
+    "review_count": 1820,
+    "t": [
+      "Cafe",
+      "Woodfired Pizza",
+      "Coffee Roaster",
+      "Late night cafe"
+    ],
+    "a": [
+      "rustic",
+      "trendy",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "date",
+      "coffee"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Dark+Roast+Cafe+Prahladnagar+Ahmedabad",
+    "review_insights": [
+      "specialty cortado coffee",
+      "cheesy pull-apart garlic bread",
+      "pasta alfredo",
+      "trendy youth crowd"
+    ],
+    "why": "Hip industrial-chic coffee house in Prahladnagar serving artisanal dark roasts, thin-crust pizzas, and pasta.",
+    "hours": "11:00 AM – 12:00 AM"
+  },
+  {
+    "id": "ahm-tea-villa-prahladnagar",
+    "name": "Tea Villa Cafe (Prahladnagar)",
+    "area": "Prahladnagar",
+    "city": "Ahmedabad",
+    "latitude": 23.0118,
+    "longitude": 72.5135,
+    "c": [
+      "Cafe",
+      "Tea Lounge",
+      "Waffles",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "rating": 4.6,
+    "review_count": 1450,
+    "t": [
+      "Tea Villa",
+      "Belgian Waffles",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "elegant",
+      "peaceful",
+      "family"
+    ],
+    "o": [
+      "date",
+      "friends",
+      "dessert"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🧇",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tea+Villa+Cafe+Prahladnagar+Ahmedabad",
+    "review_insights": [
+      "belgian chocolate waffle",
+      "earl grey lavender tea",
+      "crispy falafel platter",
+      "spacious comfortable seating"
+    ],
+    "why": "Spacious tea and dessert lounge near Prahladnagar Garden known for 50+ tea blends and golden Belgian waffles.",
+    "hours": "10:30 AM – 12:00 AM"
+  },
+  {
+    "id": "ahm-sandwichworkz-iim",
+    "name": "SandwichworkZ - The Classroom Cafe",
+    "area": "Vastrapur",
+    "city": "Ahmedabad",
+    "latitude": 23.032,
+    "longitude": 72.5315,
+    "c": [
+      "Cafe",
+      "Breakfast",
+      "Sandwiches",
+      "Continental"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 1920,
+    "t": [
+      "Breakfast Cafe",
+      "Gourmet Sandwiches",
+      "Pancakes",
+      "Late night cafe"
+    ],
+    "a": [
+      "nostalgic",
+      "artsy",
+      "cozy"
+    ],
+    "o": [
+      "breakfast",
+      "friends",
+      "study"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=SandwichworkZ+Classroom+Cafe+IIM+Road+Ahmedabad",
+    "review_insights": [
+      "fluffy blueberry pancakes",
+      "mumbai masala grilled sandwich",
+      "south indian filter kaapi",
+      "nostalgic chalkboards"
+    ],
+    "why": "Cult favorite IIM-road breakfast hub famous for all-day American and desi breakfasts, pancakes, and artisan bread.",
+    "hours": "8:30 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-zen-cafe-cept",
+    "name": "Zen Cafe (CEPT / University)",
+    "area": "Navrangpura",
+    "city": "Ahmedabad",
+    "latitude": 23.0385,
+    "longitude": 72.548,
+    "c": [
+      "Cafe",
+      "Artisan Coffee",
+      "Pizza",
+      "Salads"
+    ],
+    "p": "under_500",
+    "rating": 4.8,
+    "review_count": 2800,
+    "t": [
+      "Open Air Courtyard",
+      "Aesthetic Art Cafe",
+      "Thin Crust Pizza",
+      "Late night cafe"
+    ],
+    "a": [
+      "zen",
+      "open_air",
+      "bohemian",
+      "peaceful"
+    ],
+    "o": [
+      "date",
+      "conversations",
+      "reading"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🌿",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Zen+Cafe+CEPT+Kanoria+Ahmedabad",
+    "review_insights": [
+      "tranquil art gallery courtyard",
+      "blistered margherita pizza",
+      "iced pour-over coffee",
+      "open air intellectual conversations"
+    ],
+    "why": "Legendary tranquil courtyard cafe nestled inside Kanoria Arts Centre celebrated for serenity and artisan thin-crust pizza.",
+    "hours": "2:00 PM – 11:30 PM"
+  },
+  {
+    "id": "ahm-balan-dosa-kankaria",
+    "name": "Balan Dosa (Kankaria Lakefront)",
+    "area": "Kankaria",
+    "city": "Ahmedabad",
+    "latitude": 22.998,
+    "longitude": 72.6015,
+    "c": [
+      "South Indian",
+      "Street food",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 3100,
+    "t": [
+      "Butter Dosa Legend",
+      "Gwalior Dosa",
+      "Street Food Benchmark",
+      "Pure Veg"
+    ],
+    "a": [
+      "bustling",
+      "street_side",
+      "lively"
+    ],
+    "o": [
+      "family",
+      "evening",
+      "comfort"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥞",
+    "photo": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Balan+Dosa+Kankaria+Ahmedabad",
+    "review_insights": [
+      "copious amul butter dollop",
+      "famous gwalior cheese dosa",
+      "spicy garlic coconut chutney",
+      "kankaria lake night crowd"
+    ],
+    "why": "Legendary Ahmedabad street food institution famous for buttery crisp dosas smothered in rich gravies and grated cheese.",
+    "hours": "6:00 PM – 12:00 AM"
+  },
+  {
+    "id": "ahm-karnavati-dabeli-maninagar",
+    "name": "Karnavati Dabeli (Maninagar)",
+    "area": "Maninagar",
+    "city": "Ahmedabad",
+    "latitude": 22.9975,
+    "longitude": 72.6105,
+    "c": [
+      "Street food",
+      "Fast food",
+      "Dabeli"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 2200,
+    "t": [
+      "Kutchhi Dabeli",
+      "Street Legend",
+      "Pure Veg",
+      "Quick bite"
+    ],
+    "a": [
+      "quick_service",
+      "crowded"
+    ],
+    "o": [
+      "snack",
+      "quick_bite"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍔",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Karnavati+Dabeli+Maninagar+Ahmedabad",
+    "review_insights": [
+      "spicy potato masala filling",
+      "toasted masala peanuts and pomegranate",
+      "sweet date chutney",
+      "golden toasted pav"
+    ],
+    "why": "South Ahmedabad's benchmark dabeli counter serving toasted butter dabelis bursting with crunchy peanuts and sev.",
+    "hours": "10:00 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-cafe-italiano-maninagar",
+    "name": "Cafe De Italiano",
+    "area": "Maninagar",
+    "city": "Ahmedabad",
+    "latitude": 22.9995,
+    "longitude": 72.608,
+    "c": [
+      "Italian",
+      "Cafe",
+      "Pizza",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "rating": 4.6,
+    "review_count": 1350,
+    "t": [
+      "Italian Bistro",
+      "Nutella Pizza",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "cozy",
+      "trendy",
+      "warm"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+De+Italiano+Maninagar+Ahmedabad",
+    "review_insights": [
+      "signature nutella waffle pizza",
+      "creamy arrabbiata pasta",
+      "garlic cheesy loaf",
+      "vibrant youth ambiance"
+    ],
+    "why": "Popular Italian hangout in Maninagar known for artisanal thin-crust pizzas, sweet waffle pizzas, and frappes.",
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-radhe-dhokla-maninagar",
+    "name": "Radhe Dhokla & Farsan",
+    "area": "Maninagar",
+    "city": "Ahmedabad",
+    "latitude": 22.996,
+    "longitude": 72.612,
+    "c": [
+      "Gujarati",
+      "Street food",
+      "Farsan",
+      "Breakfast"
+    ],
+    "p": "under_500",
+    "rating": 4.5,
+    "review_count": 1780,
+    "t": [
+      "Live Dhokla",
+      "Khandvi",
+      "Pure Veg",
+      "Gujarati Heritage"
+    ],
+    "a": [
+      "bustling",
+      "traditional"
+    ],
+    "o": [
+      "breakfast",
+      "family",
+      "snack"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🧆",
+    "photo": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Radhe+Dhokla+Maninagar+Ahmedabad",
+    "review_insights": [
+      "steaming live nylon dhokla",
+      "melt in mouth khandvi",
+      "green mint chutney",
+      "authentic gujarati taste"
+    ],
+    "why": "Beloved breakfast joint in Maninagar serving freshly steamed live dhoklas, tempering with mustard seeds and fresh coconut.",
+    "hours": "7:00 AM – 10:30 PM"
+  },
+  {
+    "id": "ahm-honest-maninagar",
+    "name": "Honest Restaurant (Maninagar)",
+    "area": "Maninagar",
+    "city": "Ahmedabad",
+    "latitude": 22.9988,
+    "longitude": 72.609,
+    "c": [
+      "Fast food",
+      "Street food",
+      "North Indian",
+      "Chinese"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 2900,
+    "t": [
+      "Pav Bhaji Legend",
+      "Tawa Pulav",
+      "Family Dining",
+      "Pure Veg"
+    ],
+    "a": [
+      "family",
+      "lively"
+    ],
+    "o": [
+      "family",
+      "dinner",
+      "late_night"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍲",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Honest+Restaurant+Maninagar+Ahmedabad",
+    "review_insights": [
+      "original butter pav bhaji",
+      "spicy vegetable tawa pulav",
+      "crispy dosas",
+      "quick family service"
+    ],
+    "why": "Trusted branch of Ahmedabad's homegrown pav bhaji chain satisfying family dinners with rich buttery gravies.",
+    "hours": "11:00 AM – 12:00 AM"
+  },
+  {
+    "id": "ahm-under-neem-tree-shilaj",
+    "name": "Under The Neem Tree",
+    "area": "Thaltej",
+    "city": "Ahmedabad",
+    "latitude": 23.0585,
+    "longitude": 72.482,
+    "c": [
+      "Cafe",
+      "Organic",
+      "Continental",
+      "Woodfired Pizza"
+    ],
+    "p": "1000_2000",
+    "rating": 4.8,
+    "review_count": 2400,
+    "t": [
+      "Farm to Table",
+      "Lush Garden Lawn",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "rustic_luxury",
+      "garden",
+      "peaceful",
+      "romantic"
+    ],
+    "o": [
+      "date",
+      "celebration",
+      "family"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🌳",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Under+The+Neem+Tree+Shilaj+Ahmedabad",
+    "review_insights": [
+      "fairy lit neem tree courtyard",
+      "woodfired sourdough pizza",
+      "farm fresh salads",
+      "magical dinner ambience"
+    ],
+    "why": "Enchanting garden estate restaurant on Shilaj Road offering farm-to-table continental cuisine under ancient neem canopies.",
+    "hours": "12:00 PM – 11:30 PM"
+  },
+  {
+    "id": "ahm-cafe-skryf-sola",
+    "name": "Cafe Skryf - The Library Cafe",
+    "area": "Sola",
+    "city": "Ahmedabad",
+    "latitude": 23.078,
+    "longitude": 72.518,
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery",
+      "Continental"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 1150,
+    "t": [
+      "Book Cafe",
+      "Work Friendly",
+      "Specialty Brews",
+      "Late night cafe"
+    ],
+    "a": [
+      "quiet",
+      "intellectual",
+      "cozy"
+    ],
+    "o": [
+      "reading",
+      "work",
+      "coffee"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "📚",
+    "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Skryf+Library+Cafe+Sola+Ahmedabad",
+    "review_insights": [
+      "walls lined with classic books",
+      "pour over single estate coffee",
+      "fudgy brownies",
+      "peaceful reading nooks"
+    ],
+    "why": "Book lover's sanctuary near Science City featuring library shelves, artisanal brews, and quiet workstations.",
+    "hours": "10:00 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-house-of-makeba-thaltej",
+    "name": "House of Makeba (Thaltej)",
+    "area": "Thaltej",
+    "city": "Ahmedabad",
+    "latitude": 23.056,
+    "longitude": 72.5125,
+    "c": [
+      "Continental",
+      "Mexican",
+      "Italian",
+      "Cafe"
+    ],
+    "p": "500_1000",
+    "rating": 4.6,
+    "review_count": 2100,
+    "t": [
+      "Rooftop Lounge",
+      "Live Music",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "rooftop",
+      "bohemian",
+      "scenic"
+    ],
+    "o": [
+      "friends",
+      "date",
+      "celebration"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🌆",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=House+of+Makeba+Thaltej+Ahmedabad",
+    "review_insights": [
+      "rooftop skyline view",
+      "cheesy chimichanga",
+      "crafted mocktails",
+      "live acoustic nights"
+    ],
+    "why": "Stunning rooftop venue overlooking Thaltej skyline known for Mexican bowls, artisan mocktails, and live performances.",
+    "hours": "11:30 AM – 1:00 AM"
+  },
+  {
+    "id": "ahm-kathiyawadi-village-nikol",
+    "name": "Kathiyawadi Village Restaurant",
+    "area": "Nikol",
+    "city": "Ahmedabad",
+    "latitude": 23.048,
+    "longitude": 72.671,
+    "c": [
+      "Gujarati",
+      "Kathiyawadi",
+      "Traditional Thali"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 1820,
+    "t": [
+      "Kathiyawadi Feast",
+      "Pure Veg",
+      "Ringna No Olo",
+      "Family Restaurant"
+    ],
+    "a": [
+      "village_theme",
+      "rustic",
+      "family"
+    ],
+    "o": [
+      "family",
+      "comfort",
+      "reunion"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥘",
+    "photo": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kathiyawadi+Village+Restaurant+Nikol+Ahmedabad",
+    "review_insights": [
+      "smoky roasted ringna no olo",
+      "garlic sev tameta",
+      "steaming bajra rotlo with jaggery",
+      "authentic rustic courtyard"
+    ],
+    "why": "Sprawling Kathiyawadi village-themed restaurant in East Ahmedabad serving authentic wood-fired rotlos and spicy curries.",
+    "hours": "11:00 AM – 3:30 PM, 6:30 PM – 11:00 PM"
+  },
+  {
+    "id": "ahm-real-paprika-vastral",
+    "name": "Real Paprika (Vastral)",
+    "area": "Vastral",
+    "city": "Ahmedabad",
+    "latitude": 23.004,
+    "longitude": 72.658,
+    "c": [
+      "Pizza",
+      "Italian",
+      "Fast food",
+      "Buffet"
+    ],
+    "p": "under_500",
+    "rating": 4.5,
+    "review_count": 1450,
+    "t": [
+      "Unlimited Pizza Buffet",
+      "Garlic Bread",
+      "Pure Veg",
+      "Family Restaurant"
+    ],
+    "a": [
+      "casual",
+      "family"
+    ],
+    "o": [
+      "party",
+      "family",
+      "group"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Real+Paprika+Vastral+Ahmedabad",
+    "review_insights": [
+      "unlimited salad and pizza spread",
+      "fresh cheese garlic bread",
+      "brownie with ice cream",
+      "celebration hotspot"
+    ],
+    "why": "Popular unlimited pizza and salad destination in Vastral ideal for large family parties and student get-togethers.",
+    "hours": "11:00 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-gajanand-pauva-naroda",
+    "name": "Gajanand Pauva House (Naroda)",
+    "area": "Naroda",
+    "city": "Ahmedabad",
+    "latitude": 23.067,
+    "longitude": 72.655,
+    "c": [
+      "Street food",
+      "Breakfast",
+      "Fast food",
+      "Gujarati"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 2100,
+    "t": [
+      "Pauva Varieties",
+      "Street Legend",
+      "Pure Veg",
+      "Quick bite"
+    ],
+    "a": [
+      "bustling",
+      "quick_service"
+    ],
+    "o": [
+      "breakfast",
+      "snack"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥣",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Gajanand+Pauva+House+Naroda+Ahmedabad",
+    "review_insights": [
+      "cheese butter poha",
+      "spicy usal pauva",
+      "crispy sev toppings",
+      "iconic morning rush"
+    ],
+    "why": "Famous Ahmedabad street food destination celebrated for 20+ creative variations of steaming spiced pauva.",
+    "hours": "7:00 AM – 10:30 PM"
+  },
+  {
+    "id": "ahm-oswal-farsan-ashram-rd",
+    "name": "Oswal Farsan & Jalebi",
+    "area": "Ashram Road",
+    "city": "Ahmedabad",
+    "latitude": 23.031,
+    "longitude": 72.571,
+    "c": [
+      "Gujarati",
+      "Farsan",
+      "Jalebi",
+      "Breakfast"
+    ],
+    "p": "under_500",
+    "rating": 4.8,
+    "review_count": 3400,
+    "t": [
+      "Farsan Benchmark",
+      "Pure Ghee Jalebi",
+      "Vanela Gathiya",
+      "Pure Veg"
+    ],
+    "a": [
+      "heritage",
+      "bustling"
+    ],
+    "o": [
+      "breakfast",
+      "morning",
+      "takeaway"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥨",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Oswal+Farsan+Ashram+Road+Ahmedabad",
+    "review_insights": [
+      "pure ghee jalebi",
+      "thick crunchy vanela gathiya",
+      "sweet papaya sambharo",
+      "long Sunday queues"
+    ],
+    "why": "Decades-old Ashram Road culinary benchmark renowned for golden pure ghee jalebis and crisp hot fafda-gathiya.",
+    "hours": "6:30 AM – 9:00 PM"
+  },
+  {
+    "id": "ahm-das-khaman-paldi",
+    "name": "Das Khaman (Paldi)",
+    "area": "Paldi",
+    "city": "Ahmedabad",
+    "latitude": 23.0135,
+    "longitude": 72.5655,
+    "c": [
+      "Gujarati",
+      "Khaman",
+      "Street food",
+      "Breakfast"
+    ],
+    "p": "under_500",
+    "rating": 4.8,
+    "review_count": 3900,
+    "t": [
+      "Since 1922",
+      "Vati Dal Khaman",
+      "Tam Tam Khaman",
+      "Pure Veg"
+    ],
+    "a": [
+      "legendary",
+      "heritage"
+    ],
+    "o": [
+      "breakfast",
+      "snack"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🧆",
+    "photo": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Das+Khaman+Paldi+Ahmedabad",
+    "review_insights": [
+      "century old recipe",
+      "spicy tam tam khaman",
+      "green coriander sev",
+      "spongy vati dal khaman"
+    ],
+    "why": "Historic institution since 1922 credited with perfecting Ahmedabad's signature spicy Tam Tam and melt-in-mouth Vati Dal Khaman.",
+    "hours": "7:30 AM – 9:30 PM"
+  },
+  {
+    "id": "ahm-rasranjan-panchwati",
+    "name": "Rasranjan Food Corner",
+    "area": "Panchwati",
+    "city": "Ahmedabad",
+    "latitude": 23.0245,
+    "longitude": 72.556,
+    "c": [
+      "Street food",
+      "Chaat",
+      "North Indian",
+      "Sweets"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 2700,
+    "t": [
+      "Delhi Chaat",
+      "Chole Kulche",
+      "Pav Bhaji",
+      "Pure Veg"
+    ],
+    "a": [
+      "bustling",
+      "family",
+      "clean"
+    ],
+    "o": [
+      "evening",
+      "family",
+      "snack"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍲",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rasranjan+Food+Corner+Panchwati+Ahmedabad",
+    "review_insights": [
+      "spicy dahi puri",
+      "steaming chole kulche",
+      "sweet lassi in earthen matka",
+      "family evening snack spot"
+    ],
+    "why": "Panchwati's beloved pure-veg street-food and chaat hub renowned for hygienic puchkas, dahi puris, and Punjabi snacks.",
+    "hours": "9:00 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-cafe-terroir-gota",
+    "name": "Cafe Terroir",
+    "area": "Gota",
+    "city": "Ahmedabad",
+    "latitude": 23.1098,
+    "longitude": 72.5402,
+    "c": [
+      "Cafe",
+      "Continental",
+      "Coffee",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "rating": 4.6,
+    "review_count": 890,
+    "t": [
+      "Cafe",
+      "Artisan Coffee",
+      "Continental",
+      "Late night cafe"
+    ],
+    "a": [
+      "modern",
+      "cozy",
+      "aesthetic"
+    ],
+    "o": [
+      "friends",
+      "date",
+      "coffee"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Terroir+Gota+Ahmedabad",
+    "review_insights": [
+      "handcrafted cappuccino",
+      "woodfired thin crust pizza",
+      "calm indoor ambiance",
+      "warm friendly service"
+    ],
+    "why": "Chic suburban cafe in Gota serving specialty brews, artisan pastas, and freshly baked desserts in a serene space.",
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-honest-gota",
+    "name": "Honest Restaurant Gota",
+    "area": "Gota",
+    "city": "Ahmedabad",
+    "latitude": 23.107,
+    "longitude": 72.538,
+    "c": [
+      "North Indian",
+      "Fast food",
+      "Street food",
+      "Pav Bhaji"
+    ],
+    "p": "under_500",
+    "rating": 4.5,
+    "review_count": 2400,
+    "t": [
+      "Pav Bhaji",
+      "Pure Veg",
+      "Family dining",
+      "Fast food"
+    ],
+    "a": [
+      "bustling",
+      "casual",
+      "family"
+    ],
+    "o": [
+      "family",
+      "quick_bite",
+      "dinner"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍛",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Honest+Restaurant+Gota+Ahmedabad",
+    "review_insights": [
+      "signature amul butter pav bhaji",
+      "crispy tawa pulav",
+      "fast family service",
+      "iconic taste consistency"
+    ],
+    "why": "Beloved neighborhood branch of Ahmedabad's legendary Honest chain serving rich butter-fried pav bhaji and North Indian platters.",
+    "hours": "11:00 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-gwalia-motera",
+    "name": "Gwalia Sweets & Restaurant",
+    "area": "Motera",
+    "city": "Ahmedabad",
+    "latitude": 23.1022,
+    "longitude": 72.5975,
+    "c": [
+      "North Indian",
+      "Sweets",
+      "Thali",
+      "Street food"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 1780,
+    "t": [
+      "Sweets",
+      "North Indian",
+      "Pure Veg",
+      "Family dining"
+    ],
+    "a": [
+      "family",
+      "bustling",
+      "clean"
+    ],
+    "o": [
+      "family",
+      "snack",
+      "dinner"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍱",
+    "photo": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Gwalia+Sweets+Restaurant+Motera+Ahmedabad",
+    "review_insights": [
+      "unlimited executive thali",
+      "fresh desi ghee sweets",
+      "crispy raj kachori",
+      "close to narendra modi stadium"
+    ],
+    "why": "Prime pure-veg dining destination near Motera Stadium serving wholesome North Indian meals, chaat, and traditional mithai.",
+    "hours": "9:00 AM – 10:30 PM"
+  },
+  {
+    "id": "ahm-real-paprika-motera",
+    "name": "The Real Paprika (Motera)",
+    "area": "Motera",
+    "city": "Ahmedabad",
+    "latitude": 23.1005,
+    "longitude": 72.599,
+    "c": [
+      "Italian",
+      "Pizza",
+      "Fast food",
+      "Buffet"
+    ],
+    "p": "under_500",
+    "rating": 4.4,
+    "review_count": 1350,
+    "t": [
+      "Unlimited Pizza Buffet",
+      "Pure Veg",
+      "Pizza",
+      "Kids friendly"
+    ],
+    "a": [
+      "casual",
+      "lively",
+      "spacious"
+    ],
+    "o": [
+      "friends",
+      "party",
+      "family"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Real+Paprika+Motera+Ahmedabad",
+    "review_insights": [
+      "unlimited pizza meal with cold salads",
+      "garlic bread with cheese",
+      "brownie with ice cream",
+      "pocket friendly student favorite"
+    ],
+    "why": "High-value unlimited pizza and multi-course salad buffet destination in Motera popular with families and cricket fans.",
+    "hours": "11:00 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-sale-pepe-science-city",
+    "name": "Sale & Pepe - Italian Ristorante",
+    "area": "Sola",
+    "city": "Ahmedabad",
+    "latitude": 23.0825,
+    "longitude": 72.518,
+    "c": [
+      "Italian",
+      "Pizza",
+      "Pasta",
+      "Cafe",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "rating": 4.7,
+    "review_count": 1920,
+    "t": [
+      "Woodfired Pizza",
+      "Artisan Pasta",
+      "Italian",
+      "Late night cafe"
+    ],
+    "a": [
+      "warm",
+      "aesthetic",
+      "romantic"
+    ],
+    "o": [
+      "date",
+      "friends",
+      "celebration"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🍝",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sale+Pepe+Italian+Ristorante+Science+City+Road+Ahmedabad",
+    "review_insights": [
+      "authentic woodfired napoli pizza",
+      "creamy pesto gnocchi",
+      "classic tiramisu",
+      "cozy trattoria lighting"
+    ],
+    "why": "Authentic Italian trattoria on Science City Road known for artisanal hand-tossed sourdough pizzas and delicate handmade pasta.",
+    "hours": "12:00 PM – 11:30 PM"
+  },
+  {
+    "id": "ahm-makeba-science-city",
+    "name": "Makeba The Lounge Cafe (Science City)",
+    "area": "Sola",
+    "city": "Ahmedabad",
+    "latitude": 23.0785,
+    "longitude": 72.514,
+    "c": [
+      "Cafe",
+      "Continental",
+      "Mexican",
+      "Beverages"
+    ],
+    "p": "500_1000",
+    "rating": 4.6,
+    "review_count": 1640,
+    "t": [
+      "Rooftop Cafe",
+      "Lounge",
+      "Continental",
+      "Late night cafe"
+    ],
+    "a": [
+      "scenic",
+      "vibrant",
+      "ambient"
+    ],
+    "o": [
+      "friends",
+      "nightout",
+      "date"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🍹",
+    "photo": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Makeba+The+Lounge+Cafe+Science+City+Road+Ahmedabad",
+    "review_insights": [
+      "rooftop sunset view",
+      "loaded Mexican chimichanga",
+      "signature mocktail coolers",
+      "electric weekend energy"
+    ],
+    "why": "High-energy rooftop lounge cafe overlooking the Science City skyline serving Mexican street specials, mocktails, and continental bakes.",
+    "hours": "11:30 AM – 1:00 AM"
+  },
+  {
+    "id": "ahm-mocha-nikol",
+    "name": "Mocha Cafe & Bar (Nikol)",
+    "area": "Nikol",
+    "city": "Ahmedabad",
+    "latitude": 23.045,
+    "longitude": 72.668,
+    "c": [
+      "Cafe",
+      "Continental",
+      "Desserts",
+      "Beverages"
+    ],
+    "p": "500_1000",
+    "rating": 4.7,
+    "review_count": 2100,
+    "t": [
+      "Cafe",
+      "Desserts",
+      "Continental",
+      "Late night cafe"
+    ],
+    "a": [
+      "lively",
+      "aesthetic",
+      "modern"
+    ],
+    "o": [
+      "friends",
+      "celebration",
+      "date"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🍰",
+    "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mocha+Nikol+Ahmedabad",
+    "review_insights": [
+      "decadent chocolate avalanche",
+      "peri peri chicken and paneer pizza",
+      "chilled frappes",
+      "luxurious interior seating"
+    ],
+    "why": "Premium cafe flagship in East Ahmedabad delivering legendary dessert sundaes, specialty coffees, and woodfired continental platters.",
+    "hours": "11:00 AM – 12:30 AM"
+  },
+  {
+    "id": "ahm-marutinandan-nikol",
+    "name": "Shree Marutinandan Kathiyawadi (Nikol)",
+    "area": "Nikol",
+    "city": "Ahmedabad",
+    "latitude": 23.048,
+    "longitude": 72.671,
+    "c": [
+      "Kathiyawadi",
+      "Gujarati",
+      "Desi Ghee",
+      "North Indian"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 3100,
+    "t": [
+      "Kathiyawadi",
+      "Pure Veg",
+      "Desi Ghee",
+      "Family dining"
+    ],
+    "a": [
+      "traditional",
+      "rustic",
+      "family"
+    ],
+    "o": [
+      "family",
+      "lunch",
+      "dinner"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍲",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Shree+Marutinandan+Restaurant+Nikol+Ahmedabad",
+    "review_insights": [
+      "ringna no olo with bajra rotla",
+      "lasaniya bataka",
+      "white butter with jaggery",
+      "authentic rustic desi aroma"
+    ],
+    "why": "Premier Kathiyawadi feast house in Nikol renowned for coal-roasted Baingan Bharta (olo), garlic potatoes, and piping-hot buttered rotlas.",
+    "hours": "11:00 AM – 3:30 PM, 6:30 PM – 11:00 PM"
+  },
+  {
+    "id": "ahm-honest-vastral",
+    "name": "Honest Restaurant (Vastral)",
+    "area": "Vastral",
+    "city": "Ahmedabad",
+    "latitude": 23.0035,
+    "longitude": 72.6565,
+    "c": [
+      "Fast food",
+      "Pav Bhaji",
+      "North Indian",
+      "Chinese"
+    ],
+    "p": "under_500",
+    "rating": 4.5,
+    "review_count": 1820,
+    "t": [
+      "Pav Bhaji",
+      "Pure Veg",
+      "Family dining",
+      "Fast food"
+    ],
+    "a": [
+      "casual",
+      "bustling",
+      "family"
+    ],
+    "o": [
+      "family",
+      "quick_bite",
+      "dinner"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍛",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Honest+Restaurant+Vastral+Ahmedabad",
+    "review_insights": [
+      "spicy butter pav bhaji",
+      "crispy masala dosa",
+      "fresh veg hakka noodles",
+      "speedy takeaway service"
+    ],
+    "why": "Trusted Vastral family eatery serving hot butter-toasted pav bhaji, Indo-Chinese noodles, and sizzlers.",
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-chai-sutta-vastral",
+    "name": "Chai Sutta Bar (Vastral)",
+    "area": "Vastral",
+    "city": "Ahmedabad",
+    "latitude": 23.0048,
+    "longitude": 72.6542,
+    "c": [
+      "Cafe",
+      "Tea",
+      "Fast food",
+      "Snacks"
+    ],
+    "p": "under_500",
+    "rating": 4.4,
+    "review_count": 920,
+    "t": [
+      "Kulhad Chai",
+      "Cafe",
+      "Quick bite",
+      "Student hangout"
+    ],
+    "a": [
+      "lively",
+      "youthful",
+      "casual"
+    ],
+    "o": [
+      "snack",
+      "friends",
+      "tea"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Chai+Sutta+Bar+Vastral+Ahmedabad",
+    "review_insights": [
+      "fragrant chocolate kulhad tea",
+      "cheesy peri peri fries",
+      "crisp veg cheese grilled sandwich",
+      "budget friendly hangout"
+    ],
+    "why": "Youthful roadside kulhad chai and quick bite destination in Vastral popular for flavored teas and hot melted sandwiches.",
+    "hours": "9:00 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-sankalp-naroda",
+    "name": "Sankalp Restaurant Naroda",
+    "area": "Naroda",
+    "city": "Ahmedabad",
+    "latitude": 23.0715,
+    "longitude": 72.659,
+    "c": [
+      "South Indian",
+      "Dosa",
+      "Pure Veg",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 2250,
+    "t": [
+      "South Indian",
+      "Pure Veg",
+      "Crisp Dosa",
+      "Family dining"
+    ],
+    "a": [
+      "clean",
+      "family",
+      "comfortable"
+    ],
+    "o": [
+      "family",
+      "breakfast",
+      "dinner"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥞",
+    "photo": "https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sankalp+Restaurant+Naroda+Ahmedabad",
+    "review_insights": [
+      "record four foot paper dosa",
+      "piping hot drumstick sambar",
+      "coconut and tomato chutneys",
+      "consistent culinary quality"
+    ],
+    "why": "World-record holding South Indian dining powerhouse in Naroda delivering feather-crisp paper dosas and fresh coconut sambars.",
+    "hours": "11:00 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-vintage-village-naroda",
+    "name": "Vintage Village Restaurant (Dastan)",
+    "area": "Naroda",
+    "city": "Ahmedabad",
+    "latitude": 23.085,
+    "longitude": 72.682,
+    "c": [
+      "Traditional Gujarati",
+      "Kathiyawadi",
+      "Heritage",
+      "Thali"
+    ],
+    "p": "500_1000",
+    "rating": 4.7,
+    "review_count": 4800,
+    "t": [
+      "Heritage",
+      "Gujarati Thali",
+      "Pure Veg",
+      "Experiential dining"
+    ],
+    "a": [
+      "heritage",
+      "scenic",
+      "rustic"
+    ],
+    "o": [
+      "family",
+      "celebration",
+      "weekend"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🛺",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Vintage+Village+Restaurant+Dastan+Naroda+Ahmedabad",
+    "review_insights": [
+      "vintage car museum tour",
+      "unlimited rustic village thali",
+      "folk cultural dances",
+      "woodfire cooked seasonal delicacies"
+    ],
+    "why": "Famous experiential village resort and vintage car heritage museum in Naroda serving unforgettable traditional Gujarati feasts under open skies.",
+    "hours": "12:00 PM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "ahm-vishalla-paldi",
+    "name": "Vishalla Heritage Village Restaurant",
+    "area": "Paldi",
+    "city": "Ahmedabad",
+    "latitude": 23.0018,
+    "longitude": 72.5482,
+    "c": [
+      "Traditional Gujarati",
+      "Heritage",
+      "Kathiyawadi",
+      "Thali"
+    ],
+    "p": "1000_2000",
+    "rating": 4.7,
+    "review_count": 6400,
+    "t": [
+      "Heritage Thali",
+      "Pure Veg",
+      "Cultural Experience",
+      "Utensils Museum"
+    ],
+    "a": [
+      "traditional",
+      "mud_hut",
+      "lantern_lit"
+    ],
+    "o": [
+      "family",
+      "celebration",
+      "visitors"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🪔",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Vishalla+Restaurant+Vasna+Paldi+Ahmedabad",
+    "review_insights": [
+      "floor seating on leaf plates",
+      "freshly roasted bajra rotlas with makhan",
+      "vevechaar utensil museum",
+      "lantern lit village tranquility"
+    ],
+    "why": "Globally acclaimed Gujarati heritage village restaurant in Paldi/Vasna serving authentic royal thalis on leaf plates amid mud huts and folk performances.",
+    "hours": "12:00 PM – 3:00 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "ahm-toritos-paldi",
+    "name": "Toritos Mexican Street Food & Cafe",
+    "area": "Paldi",
+    "city": "Ahmedabad",
+    "latitude": 23.0135,
+    "longitude": 72.562,
+    "c": [
+      "Mexican",
+      "Cafe",
+      "Fast food",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "rating": 4.5,
+    "review_count": 1280,
+    "t": [
+      "Mexican",
+      "Tacos",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "colorful",
+      "cozy",
+      "quirky"
+    ],
+    "o": [
+      "friends",
+      "snack",
+      "casual"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🌮",
+    "photo": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Toritos+Mexican+Street+Food+Paldi+Ahmedabad",
+    "review_insights": [
+      "crisp loaded salsa nachos",
+      "cinnamon dusted churros with chocolate dip",
+      "spicy cheesy quesadilla",
+      "fun casual atmosphere"
+    ],
+    "why": "Vibrant Mexican street eatery in Paldi whipping up authentic hard-shell tacos, loaded nachos, and hot cinnamon churros.",
+    "hours": "11:30 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-kuro-bopal",
+    "name": "Kuro - Asian Bistro & Sushi",
+    "area": "Bopal",
+    "city": "Ahmedabad",
+    "latitude": 23.0335,
+    "longitude": 72.486,
+    "c": [
+      "Pan-Asian",
+      "Sushi",
+      "Dim Sum",
+      "Japanese"
+    ],
+    "p": "1000_2000",
+    "rating": 4.7,
+    "review_count": 1150,
+    "t": [
+      "Pan-Asian",
+      "Artisan Sushi",
+      "Bistro",
+      "Fine dining"
+    ],
+    "a": [
+      "luxurious",
+      "modern",
+      "chic"
+    ],
+    "o": [
+      "date",
+      "dinner",
+      "celebration"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🍣",
+    "photo": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kuro+Asian+Bistro+Bopal+Ahmedabad",
+    "review_insights": [
+      "truffle edamame dim sum",
+      "avocado crispy cream cheese roll",
+      "pad thai noodles",
+      "zen minimalist interior"
+    ],
+    "why": "Refined Pan-Asian bistro in Bopal presenting masterfully crafted sushi, crystal dim sums, and fragrant Asian bowls.",
+    "hours": "12:00 PM – 3:30 PM, 7:00 PM – 11:30 PM"
+  },
+  {
+    "id": "ahm-soul-square-bopal",
+    "name": "The Soul Square Cafe",
+    "area": "South Bopal",
+    "city": "Ahmedabad",
+    "latitude": 23.028,
+    "longitude": 72.479,
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Continental",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "rating": 4.6,
+    "review_count": 1400,
+    "t": [
+      "Cafe",
+      "Specialty Coffee",
+      "Continental",
+      "Late night cafe"
+    ],
+    "a": [
+      "green",
+      "peaceful",
+      "artistic"
+    ],
+    "o": [
+      "friends",
+      "work",
+      "date"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Soul+Square+Cafe+South+Bopal+Ahmedabad",
+    "review_insights": [
+      "lush open lawn seating",
+      "caramel sea salt frappe",
+      "sourdough grilled paninis",
+      "dog friendly garden vibe"
+    ],
+    "why": "Lush open garden cafe in South Bopal with breezy outdoor cabanas, third-wave coffee, and hearty continental comfort foods.",
+    "hours": "11:00 AM – 12:00 AM"
   }
 ];

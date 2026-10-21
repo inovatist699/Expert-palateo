@@ -12,7 +12,7 @@ vm.runInContext(`
  selectedCity='Vadodara';
  const auditedVadodara=getActiveCatalog();
  const verifiedPureIds=['vad-greenr-cafe','vad-mouj-by-mishri','vad-house-of-failures','vad-jagdish-farshan','vad-jassi-de-parathe','vad-vishal-sandwich','vad-new-alka-restaurant','vad-hot-bite','vad-kansar-thali','dno-vad-la-ville','dno-vad-kansaar','dno-vad-22nd-parallel','dno-vad-makeba','dno-vad-stellar'];
- assert.equal(auditedVadodara.length,129,'Dietary corrections must retain every existing Vadodara entry');
+ assert.equal(auditedVadodara.length,165,'Dietary corrections must retain every existing Vadodara entry');
  for(const id of verifiedPureIds){
   const records=auditedVadodara.filter(r=>r.id===id);
   assert.ok(records.length,id+' must remain in the catalogue');
@@ -23,7 +23,7 @@ vm.runInContext(`
  }
  for(const [city,count] of Object.entries(dietaryAudit.bundled_city_counts)){
   selectedCity=city;
-  assert.equal(getActiveCatalog().length,count+({Kochi:2,Goa:2,Vadodara:21,Ahmedabad:16}[city]||0),city+' must retain its complete catalogue plus reviewed additions');
+  assert.equal(getActiveCatalog().length,count+({Kochi:2,Goa:2,Vadodara:57,Ahmedabad:57}[city]||0),city+' must retain its complete catalogue plus reviewed additions');
  }
  for(const expected of dietaryAudit.source_records){
   selectedCity=expected.city;

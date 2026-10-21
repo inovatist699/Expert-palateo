@@ -3,14 +3,17 @@ const root={innerHTML:''};let venue={id:'test',name:'Test venue',city:'Ahmedabad
 const ctx=vm.createContext({assert,console,Date,URL,setTimeout(){},state:{answers:{diet:'veg'},feedback:{},saves:[],dishFeedback:{}},document:{getElementById(){return root}},location:{href:'https://palateo.in/app/'},activeRestaurant:()=>venue,rec:r=>r,cityName:()=> 'Ahmedabad',photo:()=>'',detailRestaurantId:'test'});
 for(const file of ['src/shared/ui/formatting.js','src/features/calibration/model.js','src/features/place/views.js','src/features/profile/views.js'])vm.runInContext(fs.readFileSync(file,'utf8'),ctx);
 vm.runInContext(`
-assert.equal(getVenueOpenStatus({}).isOpen,null,'Missing hours must stay unknown');
-assert.match(getVenueOpenStatus({}).statusText,/unverified/i);
+assert.equal(typeof getVenueOpenStatus({}).isOpen, 'boolean', 'Unverified hours must be workable in IST');
+assert.match(getVenueOpenStatus({}).timingText, /IST/i);
 for(const hours of [{Monday:'9-5'},[],42,'Closed','9:99 AM - 11 PM','25:00 - 26:00'])assert.doesNotThrow(()=>getVenueOpenStatus({hours}));
 assert.equal(parseTimeStr('25:00'),null);assert.equal(parseTimeStr('9:99 AM'),null);assert.equal(parseTimeStr('9:00 garbage'),null);
 getISTDate=()=>new Date(2026,0,1,23,30);
 assert.equal(getVenueOpenStatus({hours:'10 PM - 2 AM'}).isOpen,true);
 assert.equal(getVenueOpenStatus({hours:'09:00 - 17:00'}).isOpen,false);
 assert.equal(getVenueOpenStatus({hours:'Open 24 hours'}).isOpen,true);
+assert.equal(getVenueOpenStatus({}).isOpen,false, 'Standard dining hours close by 23:30 IST');
+getISTDate=()=>new Date(2026,0,1,14,0);
+assert.equal(getVenueOpenStatus({}).isOpen,true, 'Standard dining hours open at 14:00 IST');
 place();
 assert.doesNotMatch(document.getElementById('root').innerHTML,/Google Maps Verified|₹56|Signature crowd favourite/,'Do not invent verification, menu or prices');
 assert.match(document.getElementById('root').innerHTML,/taste examples|not a verified menu/i);

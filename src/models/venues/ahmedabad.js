@@ -5234,5 +5234,398 @@ const catalog=[
     ],
     "why": "Hearty Punjabi eatery delivering generous tandoori spreads and authentic Amritsari kulchas.",
     "hours": "11:30 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-urban-chowk-chandkheda",
+    "name": "Urban Chowk (Chandkheda)",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.118,
+    "longitude": 72.5855,
+    "c": [
+      "Food Court",
+      "Street food",
+      "Cafe",
+      "Desserts",
+      "Continental"
+    ],
+    "p": "under_500",
+    "rating": 4.8,
+    "review_count": 3200,
+    "t": [
+      "Food Truck Park",
+      "Open Air Container Park",
+      "Late night cafe",
+      "Midnight food court",
+      "Jamun Shots"
+    ],
+    "a": [
+      "open_air",
+      "vibrant",
+      "youthful",
+      "festival"
+    ],
+    "o": [
+      "friends",
+      "family",
+      "late_night",
+      "weekend"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "pure_veg"
+    ],
+    "emoji": "🎪",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Urban+Chowk+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "sprawling open air container park",
+      "dozens of artisanal food stalls",
+      "signature jamun shots",
+      "lively midnight crowd"
+    ],
+    "why": "Iconic open-air container food park bringing street food stalls, live music, woodfired pizzas, and midnight treats together.",
+    "hours": "5:00 PM – 1:00 AM"
+  },
+  {
+    "id": "ahm-sarvottam-chandkheda",
+    "name": "Sarvottam Restaurant & Banquet",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.111,
+    "longitude": 72.5835,
+    "c": [
+      "Gujarati",
+      "North Indian",
+      "Punjabi",
+      "Thali"
+    ],
+    "p": "500_1000",
+    "rating": 4.6,
+    "review_count": 2800,
+    "t": [
+      "Gujarati Thali",
+      "Pure Veg",
+      "Family Restaurant",
+      "Banquet"
+    ],
+    "a": [
+      "traditional",
+      "spacious",
+      "family"
+    ],
+    "o": [
+      "family",
+      "traditional",
+      "celebration"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥘",
+    "photo": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sarvottam+Restaurant+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "lavish gujarati thali feast",
+      "warm phulkas and basundi",
+      "paneer butter masala",
+      "top tier family hospitality"
+    ],
+    "why": "Longstanding North Ahmedabad vegetarian landmark serving hearty Gujarati thalis and Punjabi feasts.",
+    "hours": "11:00 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "ahm-blended-house-chandkheda",
+    "name": "The Blended House",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.1142,
+    "longitude": 72.5868,
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Beverages",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 780,
+    "t": [
+      "Specialty Coffee",
+      "Thick Shakes",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "cozy",
+      "modern"
+    ],
+    "o": [
+      "friends",
+      "casual",
+      "coffee"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Blended+House+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "thick kitkat blend",
+      "hazelnut cold brew",
+      "cheesy garlic pops",
+      "relaxed cafe ambience"
+    ],
+    "why": "Chic coffee and shake studio popular among neighborhood students for gourmet cold brews and loaded snacks.",
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-hoco-eatery-chandkheda",
+    "name": "Hoco The Eatery",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.1128,
+    "longitude": 72.5852,
+    "c": [
+      "Cafe",
+      "Fast food",
+      "Continental",
+      "Italian"
+    ],
+    "p": "under_500",
+    "rating": 4.5,
+    "review_count": 940,
+    "t": [
+      "Cafe",
+      "Woodfired Pizzas",
+      "Cheese Garlic Bread",
+      "Late night cafe"
+    ],
+    "a": [
+      "vibrant",
+      "casual"
+    ],
+    "o": [
+      "friends",
+      "youth"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hoco+The+Eatery+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "four cheese pizza",
+      "crunchy nachos with salsa",
+      "belgian chocolate shake",
+      "quick friendly service"
+    ],
+    "why": "Youthful fast-casual diner known for artisanal pizzas, cheesy baked garlic breads, and chilled beverages.",
+    "hours": "11:30 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-divine-dine-chandkheda",
+    "name": "Divine Dine Restaurant & Banquet",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.116,
+    "longitude": 72.584,
+    "c": [
+      "North Indian",
+      "Continental",
+      "Chinese",
+      "Tandoori"
+    ],
+    "p": "500_1000",
+    "rating": 4.5,
+    "review_count": 1520,
+    "t": [
+      "Multi-Cuisine",
+      "Sizzlers",
+      "Family Dining",
+      "Pure Veg"
+    ],
+    "a": [
+      "elegant",
+      "family",
+      "comfortable"
+    ],
+    "o": [
+      "family",
+      "anniversary",
+      "gathering"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍽️",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Divine+Dine+Restaurant+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "sizzling paneer platters",
+      "paneer angara gravy",
+      "crisp veg spring rolls",
+      "peaceful dining room"
+    ],
+    "why": "Refined pure-veg dining destination offering multi-cuisine sizzlers, creamy tandoori curries, and banquet dining.",
+    "hours": "11:00 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "ahm-swad-gathiya-chandkheda",
+    "name": "Swad Gathiya Rath",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.1102,
+    "longitude": 72.5828,
+    "c": [
+      "Street food",
+      "Gujarati",
+      "Breakfast",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 2100,
+    "t": [
+      "Vanela Gathiya",
+      "Jalebi",
+      "Breakfast Benchmark",
+      "Street food"
+    ],
+    "a": [
+      "authentic",
+      "bustling",
+      "street_side"
+    ],
+    "o": [
+      "breakfast",
+      "morning",
+      "comfort"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥨",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Swad+Gathiya+Rath+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "freshly fried vanela gathiya",
+      "crisp hot golden jalebis",
+      "tangy papaya sambharo",
+      "authentic ahmedabad morning"
+    ],
+    "why": "Iconic morning breakfast institution where locals gather for steaming hot vanela gathiya and crisp saffron jalebis.",
+    "hours": "6:30 AM – 1:00 PM, 4:30 PM – 9:00 PM"
+  },
+  {
+    "id": "ahm-little-bites-chandkheda",
+    "name": "Little Bites Night Cafe",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.1172,
+    "longitude": 72.588,
+    "c": [
+      "Cafe",
+      "Street food",
+      "Fast food",
+      "Beverages"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 890,
+    "t": [
+      "Late night cafe",
+      "Midnight Maggi",
+      "Chai Adda",
+      "Youth Hub"
+    ],
+    "a": [
+      "open_air",
+      "night_buzz",
+      "casual"
+    ],
+    "o": [
+      "friends",
+      "late_night",
+      "quick_bite"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🌙",
+    "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Little+Bites+Cafe+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "late night cheese blast maggi",
+      "hot kulhad tea",
+      "chilli cheese toast",
+      "midnight catch ups"
+    ],
+    "why": "Popular after-hours roadside hangout serving piping hot kulhad chai, cheese blast Maggi, and night snacks.",
+    "hours": "4:00 PM – 2:00 AM"
+  },
+  {
+    "id": "ahm-jalaram-parotha-chandkheda",
+    "name": "Shree Jalaram Parotha House",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.1135,
+    "longitude": 72.5818,
+    "c": [
+      "North Indian",
+      "Gujarati",
+      "Comfort Food",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "rating": 4.5,
+    "review_count": 1400,
+    "t": [
+      "Stuffed Parothas",
+      "Sev Tameta",
+      "Deshi Makhan",
+      "Pure Veg"
+    ],
+    "a": [
+      "homely",
+      "casual",
+      "family"
+    ],
+    "o": [
+      "family",
+      "lunch",
+      "dinner"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🫓",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Shree+Jalaram+Parotha+House+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "butter laden aloo parathas",
+      "creamy curd and garlic chutney",
+      "homestyle sev tameta",
+      "budget friendly comfort feast"
+    ],
+    "why": "Trusted neighborhood food house famous for golden roasted stuffed parathas served with white butter and curd.",
+    "hours": "11:00 AM – 3:30 PM, 6:30 PM – 11:00 PM"
   }
 ];

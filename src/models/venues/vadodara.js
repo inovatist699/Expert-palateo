@@ -556,7 +556,8 @@ const vadodaraCatalog=[
     ],
     "s": null,
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🍰",
     "photo": "https://lh3.googleusercontent.com/grass-cs/AABkmLdUMJUIkQqkTLX2gZ0rKCywRNL6JqOI5nPMmLL2-2olMazxs2-RJ4WeHui-8PzQIiGY0SNW30C5vA79JI8Nf8TX9e-SMqEMUbob5wA8JiOIndOfVgUxQEWz4WTiWLUirivkH1goYTTsLhq2=w800-h500-k-no",
@@ -604,7 +605,8 @@ const vadodaraCatalog=[
     ],
     "s": null,
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "☕",
     "photo": "https://lh3.googleusercontent.com/grass-cs/ACvplmPiuRmPJy6V5w88e_h8jtuA-oeHpmQSUXGOrwkIHMnv49LcBL3BxnbzwNcRld7ZB6wG5JRMcWuDw0LQEBF8lEWj-vLNrnVeU6lIrOmMl4T7nNn6ROIeMkTOfl1oWAjG5GxW-geMlA=w800-h500-k-no",
@@ -735,7 +737,8 @@ const vadodaraCatalog=[
     ],
     "s": null,
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥗",
     "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnCwDzwblzUdXt8_jv6iLaW3cVmVACvL6AkXQ4TfwiCg5EUGTfqkiBej6gpST52u2DW1taN9jramwuGBExn8N9C6-ok6eVV9UpIKIdW_BR1rE-j66CMVblot7WmJqOl-rSz2wA8ceyZv7yt=w800-h500-k-no",
@@ -1135,7 +1138,8 @@ const vadodaraCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🍬",
     "photo": "https://lh3.googleusercontent.com/grass-cs/AABkmLcAoWRAnS22YJV5wd0591k6ZQN4iDFGsc8AjpS6yNYCNN3sNaoOg3CpP9h-ovJfgiKEQQEN_883PZ8chVfbnkRsPlfNDU4yrIt_VH06eYQoJt5OJNnA8ql_M_O0SSakwNnAAlN_o-3hNMN2=w800-h500-k-no",
@@ -1629,7 +1633,8 @@ const vadodaraCatalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🫓",
     "photo": "https://lh3.googleusercontent.com/grass-cs/ACvplmMGo52BwSGk-IUZKTPLKTyS4f5f_hlQ-IEqRcOnwsgortKftOAYLwp6s3yqiDOVzYKpLMqOlq3Eu-OyJ3PBEgflGSGiYKsATn_nfQNz4qNUK1NukfagVyDLkleiojV8lcR2RFyEsTTHXqgn=w800-h500-k-no",
@@ -1674,7 +1679,8 @@ const vadodaraCatalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥪",
     "photo": "https://lh3.googleusercontent.com/grass-cs/ACvplmPbk8xpQF7s0r_DcV1YoDbuCFrrbhkSlGDx0Qz0TKc77K3aoWVq1J1f0KifaMJg7cIwMDeDLL31nwRwHwoj5XZAIZZz8Nce5_CLPSEIoVC8PRLVKapYc3AlkqTQG8EFOi8tr9ek_Ge1qrZU=w800-h500-k-no",
@@ -2493,7 +2499,8 @@ const vadodaraCatalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🍛",
     "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
@@ -3137,7 +3144,8 @@ const vadodaraCatalog=[
     "s": "mild",
     "dietaryOptions": [
       "vegetarian",
-      "jain"
+      "jain",
+      "pure_veg"
     ],
     "emoji": "🥨",
     "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80",
@@ -3651,7 +3659,8 @@ const vadodaraCatalog=[
     "s": "medium",
     "dietaryOptions": [
       "vegetarian",
-      "jain"
+      "jain",
+      "pure_veg"
     ],
     "emoji": "🍛",
     "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80",
@@ -3696,7 +3705,8 @@ const vadodaraCatalog=[
     "s": "medium",
     "dietaryOptions": [
       "vegetarian",
-      "jain"
+      "jain",
+      "pure_veg"
     ],
     "emoji": "🥪",
     "photo": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&auto=format&fit=crop&q=80",

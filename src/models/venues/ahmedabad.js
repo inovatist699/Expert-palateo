@@ -4860,5 +4860,379 @@ const catalog=[
       "caramel frappe",
       "spacious work tables"
     ]
+  },
+  {
+    "id": "ahm-el-cibo-chandkheda",
+    "name": "El Cibo Restro & Cafe",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.1132,
+    "longitude": 72.5841,
+    "c": [
+      "Cafe",
+      "Continental",
+      "Italian",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "rating": 4.6,
+    "review_count": 850,
+    "t": [
+      "Cafe",
+      "Woodfired Pizza",
+      "Artisan Shakes",
+      "Late night cafe"
+    ],
+    "a": [
+      "cozy",
+      "trendy"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=El+Cibo+Restro+Cafe+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "cozy couple seating",
+      "gourmet thin crust pizzas",
+      "thick hazelnut frappe",
+      "lively evening hangout"
+    ],
+    "why": "Popular New CG Road hangout celebrated for wood-fired pizzas, artisan shakes, and relaxed seating.",
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-charpai-chandkheda",
+    "name": "Charpai Restro & Cafe",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.1154,
+    "longitude": 72.5872,
+    "c": [
+      "Cafe",
+      "Fusion",
+      "Street food",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "rating": 4.5,
+    "review_count": 920,
+    "t": [
+      "Cafe",
+      "Charpai Theme",
+      "Late night cafe",
+      "Midnight hangout"
+    ],
+    "a": [
+      "rustic",
+      "casual"
+    ],
+    "o": [
+      "friends",
+      "late_night"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian",
+      "pure_veg"
+    ],
+    "emoji": "🪑",
+    "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Charpai+Restro+Cafe+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "traditional charpai seating",
+      "late night chai and snacks",
+      "tandoori maggi",
+      "student favorite"
+    ],
+    "why": "Quirky rustic-themed cafe serving tandoori bites and late-night hot tea on open-air charpais.",
+    "hours": "12:00 PM – 1:00 AM"
+  },
+  {
+    "id": "ahm-bunch-cafe-chandkheda",
+    "name": "The Bunch Cafe & Foodery",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.1115,
+    "longitude": 72.586,
+    "c": [
+      "Cafe",
+      "Italian",
+      "Continental",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "rating": 4.7,
+    "review_count": 1100,
+    "t": [
+      "Cafe",
+      "Gourmet Burgers",
+      "Pesto Pasta",
+      "Late night cafe"
+    ],
+    "a": [
+      "aesthetic",
+      "vibrant"
+    ],
+    "o": [
+      "friends",
+      "date"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🍔",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Bunch+Cafe+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "creamy pesto pasta",
+      "crispy loaded fries",
+      "specialty brew bar",
+      "modern minimalist decor"
+    ],
+    "why": "Trendy youthful cafe on New CG Road known for gourmet sliders, hand-crafted pasta, and artisan coffees.",
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "ahm-cafe-temptt-chandkheda",
+    "name": "Cafe Temptt (Cafe TT)",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.1098,
+    "longitude": 72.5895,
+    "c": [
+      "Cafe",
+      "Rooftop",
+      "Italian",
+      "Continental"
+    ],
+    "p": "under_500",
+    "rating": 4.4,
+    "review_count": 1250,
+    "t": [
+      "Cafe",
+      "Rooftop Lounge",
+      "Live Screening",
+      "Late night cafe"
+    ],
+    "a": [
+      "open_air",
+      "lively"
+    ],
+    "o": [
+      "friends",
+      "youth"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "✨",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Temptt+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "open air terrace breeze",
+      "mocktails and peri peri fries",
+      "match screenings",
+      "breezy nighttime vibe"
+    ],
+    "why": "Breezy rooftop venue favored by college crowds for open-air seating, live screenings, and late-night bites.",
+    "hours": "12:00 PM – 12:00 AM"
+  },
+  {
+    "id": "ahm-mirch-masala-chandkheda",
+    "name": "Mirch Masala",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.114,
+    "longitude": 72.583,
+    "c": [
+      "North Indian",
+      "Mughlai",
+      "Punjabi",
+      "Tandoori"
+    ],
+    "p": "500_1000",
+    "rating": 4.6,
+    "review_count": 2400,
+    "t": [
+      "Bollywood Theme",
+      "Butter Chicken",
+      "Dal Makhani",
+      "Family Restaurant"
+    ],
+    "a": [
+      "retro",
+      "quirky",
+      "family"
+    ],
+    "o": [
+      "family",
+      "celebration"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "vegetarian_options"
+    ],
+    "emoji": "🍛",
+    "photo": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mirch+Masala+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "retro bollywood posters",
+      "rich makhani gravy",
+      "garlic naan and kebabs",
+      "nostalgic dhaba ambiance"
+    ],
+    "why": "Iconic Bollywood-themed family dining hallmark serving robust tandoori curries and North Indian staples.",
+    "hours": "11:30 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-aranyani-chandkheda",
+    "name": "Aranyani Restaurant",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.1165,
+    "longitude": 72.5815,
+    "c": [
+      "North Indian",
+      "Gujarati",
+      "Chinese",
+      "Fast food"
+    ],
+    "p": "500_1000",
+    "rating": 4.5,
+    "review_count": 1650,
+    "t": [
+      "Pure Veg",
+      "Family Dining",
+      "Sizzlers",
+      "Paneer Lababdar"
+    ],
+    "a": [
+      "spacious",
+      "family"
+    ],
+    "o": [
+      "family",
+      "reunion"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍲",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Aranyani+Restaurant+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "pure vegetarian feast",
+      "paneer butter masala",
+      "crunchy spring rolls",
+      "great family hospitality"
+    ],
+    "why": "Dependable pure-vegetarian multi-cuisine dining destination popular with North Ahmedabad families.",
+    "hours": "11:00 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-rajwadi-handi-chandkheda",
+    "name": "Rajwadi Handi",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.112,
+    "longitude": 72.5805,
+    "c": [
+      "Gujarati",
+      "Kathiyawadi",
+      "North Indian"
+    ],
+    "p": "under_500",
+    "rating": 4.4,
+    "review_count": 1400,
+    "t": [
+      "Kathiyawadi Handi",
+      "Sev Tameta",
+      "Bajra Rotla",
+      "Traditional"
+    ],
+    "a": [
+      "rustic",
+      "traditional"
+    ],
+    "o": [
+      "family",
+      "comfort"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥘",
+    "photo": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rajwadi+Handi+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "steaming bajra no rotlo",
+      "spicy garlic lasaniya bataka",
+      "kathiyawadi handi dal",
+      "authentic deshi ghee"
+    ],
+    "why": "Authentic Kathiyawadi dining hub specializing in earthen handi preparations and deshi ghee rotlas.",
+    "hours": "11:00 AM – 11:00 PM"
+  },
+  {
+    "id": "ahm-eat-punjab-chandkheda",
+    "name": "Eat Punjab",
+    "area": "Chandkheda",
+    "city": "Ahmedabad",
+    "latitude": 23.1145,
+    "longitude": 72.585,
+    "c": [
+      "Punjabi",
+      "North Indian",
+      "Tandoori"
+    ],
+    "p": "500_1000",
+    "rating": 4.5,
+    "review_count": 1800,
+    "t": [
+      "Dhaba Style",
+      "Amritsari Kulcha",
+      "Paneer Tikka",
+      "Family Feast"
+    ],
+    "a": [
+      "warm",
+      "vibrant"
+    ],
+    "o": [
+      "family",
+      "group"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🫓",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Eat+Punjab+Chandkheda+Ahmedabad",
+    "review_insights": [
+      "crisp stuffed amritsari kulchas",
+      "rich dal makhani",
+      "smoky paneer tandoori tikka",
+      "generous portions"
+    ],
+    "why": "Hearty Punjabi eatery delivering generous tandoori spreads and authentic Amritsari kulchas.",
+    "hours": "11:30 AM – 11:30 PM"
   }
 ];

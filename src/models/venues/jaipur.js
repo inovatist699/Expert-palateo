@@ -121,7 +121,8 @@ const jaipurCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🍯",
     "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
@@ -166,7 +167,8 @@ const jaipurCatalog=[
     ],
     "s": "hot",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥟",
     "photo": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=800&q=80",

@@ -1,0 +1,894 @@
+{
+  "checked_at": "2026-10-21",
+  "researcher": "Antigravity desktop app with Codex source verification",
+  "reviewer": "Codex: branch evidence reviewed before applying",
+  "bundled_city_counts": {
+    "Ahmedabad": 111,
+    "Vadodara": 108,
+    "Mumbai": 89,
+    "Delhi NCR": 86,
+    "Bengaluru": 24,
+    "Hyderabad": 22,
+    "Chennai": 19,
+    "Kolkata": 15,
+    "Pune": 85,
+    "Jaipur": 15,
+    "Kochi": 14,
+    "Goa": 15,
+    "Chandigarh": 14
+  },
+  "source_records": [
+    {
+      "id": "r1",
+      "name": "Agashiye",
+      "city": "Ahmedabad",
+      "area": "Old City",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.zomato.com/ahmedabad/agashiye-the-house-of-mg-lal-darwaja/info"
+      ],
+      "evidence": "Vegetarian-only listing at The House of MG, Lal Darwaja; includes the existing Old City alias."
+    },
+    {
+      "id": "ahm-agashiye",
+      "name": "Agashiye at The House of MG",
+      "city": "Ahmedabad",
+      "area": "Lal Darwaja / Old City",
+      "before": [
+        "vegetarian",
+        "jain"
+      ],
+      "sources": [
+        "https://www.zomato.com/ahmedabad/agashiye-the-house-of-mg-lal-darwaja/info"
+      ],
+      "evidence": "Vegetarian-only listing at The House of MG, Lal Darwaja; includes the existing Old City alias."
+    },
+    {
+      "id": "r4",
+      "name": "650 — The Global Kitchen",
+      "city": "Ahmedabad",
+      "area": "Ahmedabad",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/ahmedabad/satellite/650-the-global-kitchen-54701/dineout"
+      ],
+      "evidence": "Pure-veg amenity for 650 at Shreekunj Mandapam, Manekbaug, Ambavadi."
+    },
+    {
+      "id": "r10",
+      "name": "Rajwadu",
+      "city": "Ahmedabad",
+      "area": "Jivraj Park",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/ahmedabad/vejalpur/rajwadu-758894/dineout"
+      ],
+      "evidence": "Pure-veg amenity for Rajwadu near Ambaji Temple, Malav Talav, Jivraj Park/Vejalpur."
+    },
+    {
+      "id": "r11",
+      "name": "Jassi De Parathe",
+      "city": "Ahmedabad",
+      "area": "Prahlad Nagar",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/ahmedabad/prahlad-nagar/jassi-de-parathe-prahladnagar-927194/dineout"
+      ],
+      "evidence": "Pure-veg amenity at Safal Pegasus, Prahlad Nagar."
+    },
+    {
+      "id": "r13",
+      "name": "Vishala",
+      "city": "Ahmedabad",
+      "area": "Vasna",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.zomato.com/ahmedabad/vishalla-vasna"
+      ],
+      "evidence": "Vegetarian-only listing opposite APMC Market, Vasna; includes the existing Vishala spelling."
+    },
+    {
+      "id": "ahm-vishalla",
+      "name": "Vishalla",
+      "city": "Ahmedabad",
+      "area": "Vasna",
+      "before": [
+        "vegetarian",
+        "jain"
+      ],
+      "sources": [
+        "https://www.zomato.com/ahmedabad/vishalla-vasna"
+      ],
+      "evidence": "Vegetarian-only listing opposite APMC Market, Vasna; includes the existing Vishala spelling."
+    },
+    {
+      "id": "r23",
+      "name": "Swati Snacks",
+      "city": "Ahmedabad",
+      "area": "Ellisbridge",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swatisnacks.com/"
+      ],
+      "evidence": "Operator describes a vegetarian restaurant and lists the Ahmedabad Law Garden and Mumbai Tardeo branches."
+    },
+    {
+      "id": "mum-swati-snacks",
+      "name": "Swati Snacks",
+      "city": "Mumbai",
+      "area": "Tardeo",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swatisnacks.com/"
+      ],
+      "evidence": "Operator describes a vegetarian restaurant and lists the Ahmedabad Law Garden and Mumbai Tardeo branches."
+    },
+    {
+      "id": "r61",
+      "name": "Atithi Dining Hall",
+      "city": "Ahmedabad",
+      "area": "Bodakdev",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/ahmedabad/bodakdev/atithi-80853/dineout"
+      ],
+      "evidence": "Pure-veg amenity at Mohini, Judges Bungalow Road, Bodakdev."
+    },
+    {
+      "id": "mum-soam",
+      "name": "Soam",
+      "city": "Mumbai",
+      "area": "Chowpatty",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/mumbai/chowpatty/soam-537121/dineout"
+      ],
+      "evidence": "Pure-veg amenity at the Chowpatty restaurant."
+    },
+    {
+      "id": "mum-cafe-madras",
+      "name": "Cafe Madras",
+      "city": "Mumbai",
+      "area": "Matunga",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.zomato.com/cs/mumbai/cafe-madras-matunga-east"
+      ],
+      "evidence": "Vegetarian-only listing at 38 B Circle House, Kings Circle, Matunga East."
+    },
+    {
+      "id": "mum-ram-ashraya",
+      "name": "Ram Ashraya",
+      "city": "Mumbai",
+      "area": "Matunga East",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/mumbai/matunga-east/ramashraya-since-1939-35691/dineout"
+      ],
+      "evidence": "Pure-veg amenity at Bhandarkar Road, Matunga East."
+    },
+    {
+      "id": "mum-cafe-mysore",
+      "name": "Cafe Mysore",
+      "city": "Mumbai",
+      "area": "Matunga / Kings Circle",
+      "before": [
+        "vegetarian",
+        "jain"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/mumbai/matunga-east/cafe-mysore-15368/dineout"
+      ],
+      "evidence": "Pure-veg amenity at 461 Bhaudaji Road, opposite Kings Circle Garden."
+    },
+    {
+      "id": "mum-manis-lunch-home",
+      "name": "Mani’s Lunch Home",
+      "city": "Mumbai",
+      "area": "Matunga East",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.district.in/dining/mumbai/manis-lunch-home-since-1937-matunga-east"
+      ],
+      "evidence": "Vegetarian-only facility at 153 C Mahskar Building, Matunga East."
+    },
+    {
+      "id": "mum-pancham-puriwala",
+      "name": "Pancham Puriwala",
+      "city": "Mumbai",
+      "area": "Fort / CSMT",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/mumbai/fort/pancham-puriwala-514139/dineout"
+      ],
+      "evidence": "Pure-veg amenity at Bhatia Dharamshala, Perin Nariman Street, Fort."
+    },
+    {
+      "id": "blr-vidyarthi-bhavan",
+      "name": "Vidyarthi Bhavan",
+      "city": "Bengaluru",
+      "area": "Gandhi Bazaar",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.vidyarthibhavan.in/"
+      ],
+      "evidence": "Operator explicitly identifies its heritage South Indian vegetarian restaurant in Basavanagudi."
+    },
+    {
+      "id": "blr-mtr",
+      "name": "Mavalli Tiffin Room (MTR)",
+      "city": "Bengaluru",
+      "area": "Lalbagh",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.zomato.com/bangalore/mavalli-tiffin-room-mtr-basavanagudi-bangalore/info"
+      ],
+      "evidence": "Vegetarian-only listing at 14 Mavalli, Lalbagh Road; both existing aliases describe this branch."
+    },
+    {
+      "id": "blr-mtr-1924",
+      "name": "MTR 1924 (Mavalli Tiffin Room)",
+      "city": "Bengaluru",
+      "area": "Lalbagh Road",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.zomato.com/bangalore/mavalli-tiffin-room-mtr-basavanagudi-bangalore/info"
+      ],
+      "evidence": "Vegetarian-only listing at 14 Mavalli, Lalbagh Road; both existing aliases describe this branch."
+    },
+    {
+      "id": "blr-ctr",
+      "name": "CTR - Shri Sagar",
+      "city": "Bengaluru",
+      "area": "Malleshwaram",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/bangalore/malleshwaram/ctr-399535/dineout"
+      ],
+      "evidence": "Pure-veg amenity at CTR, Malleshwaram; both existing aliases describe this restaurant."
+    },
+    {
+      "id": "blr-ctr-shri-sagar",
+      "name": "CTR (Central Tiffin Room / Shri Sagar)",
+      "city": "Bengaluru",
+      "area": "Malleshwaram",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/bangalore/malleshwaram/ctr-399535/dineout"
+      ],
+      "evidence": "Pure-veg amenity at CTR, Malleshwaram; both existing aliases describe this restaurant."
+    },
+    {
+      "id": "blr-brahmins-coffee-bar",
+      "name": "Brahmins' Coffee Bar",
+      "city": "Bengaluru",
+      "area": "Shankarapuram, Basavanagudi",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/bangalore/basavanagudi/brahmin-s-coffee-bar-111261/dineout"
+      ],
+      "evidence": "Pure-veg amenity at Ranga Rao Road, Shankarapura/Basavanagudi."
+    },
+    {
+      "id": "blr-taaza-thindi",
+      "name": "Taaza Thindi",
+      "city": "Bengaluru",
+      "area": "Jayanagar 4th T Block",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.zomato.com/bangalore/taaza-thindi-jayanagar/info"
+      ],
+      "evidence": "Vegetarian-only listing at 1004, 26th Main, 4th T Block, Jayanagar."
+    },
+    {
+      "id": "del-carnatic-cafe",
+      "name": "Carnatic Cafe",
+      "city": "Delhi NCR",
+      "area": "Greater Kailash 2",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.zomato.com/ncr/carnatic-cafe-greater-kailash-gk-2-new-delhi"
+      ],
+      "evidence": "Vegetarian-only listing at 21 M Block Market, Greater Kailash 2."
+    },
+    {
+      "id": "del-burma-burma",
+      "name": "Burma Burma",
+      "city": "Delhi NCR",
+      "area": "Cyber Hub, Gurugram",
+      "before": [
+        "vegetarian",
+        "vegan_options"
+      ],
+      "sources": [
+        "https://www.dlfcyberhub.com/shopdetails-4"
+      ],
+      "evidence": "The venue operator DLF CyberHub explicitly identifies its Burma Burma tenant as vegetarian-only."
+    },
+    {
+      "id": "kol-kc-das",
+      "name": "K.C. Das",
+      "city": "Kolkata",
+      "area": "Esplanade",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.district.in/dining/kolkata/k-c-das-esplanade"
+      ],
+      "evidence": "Vegetarian-only facility at 11A Esplanade East."
+    },
+    {
+      "id": "pun-shabree",
+      "name": "Shabree",
+      "city": "Pune",
+      "area": "FC Road",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/pune/f-c-road/shabree-943452/dineout"
+      ],
+      "evidence": "Pure-veg amenity behind Tukaram Paduka Temple on FC Road."
+    },
+    {
+      "id": "pun-sukanta",
+      "name": "Sukanta Thali",
+      "city": "Pune",
+      "area": "Deccan Gymkhana",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/pune/prabhat-road/sukanta-pure-veg-indian-thali-22150/dineout"
+      ],
+      "evidence": "Pure-veg amenity at 636 Pulachi Wadi, Deccan Gymkhana."
+    },
+    {
+      "id": "jpr-lmb",
+      "name": "Laxmi Mishthan Bhandar (LMB)",
+      "city": "Jaipur",
+      "area": "Johari Bazar",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/jaipur/pink-city/laxmi-misthan-bhandar-1033812/dineout"
+      ],
+      "evidence": "Pure-veg amenity at 98-99 Johari Bazar, Jaipur."
+    },
+    {
+      "id": "jpr-rawat",
+      "name": "Rawat Mishthan Bhandar",
+      "city": "Jaipur",
+      "area": "Station Road",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/jaipur/sindhi-camp/rawat-misthan-bhandar-55887/dineout"
+      ],
+      "evidence": "Pure-veg amenity opposite Polovictory Cinema on Station Road, Sindhi Camp."
+    },
+    {
+      "id": "chd-sindhi-sweets",
+      "name": "Sindhi Sweets",
+      "city": "Chandigarh",
+      "area": "Sector 17",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/chandigarh/sector-17/sindhi-sweets-39978/dineout"
+      ],
+      "evidence": "Pure-veg amenity at SCO 108-109, Sector 17C."
+    },
+    {
+      "id": "r3",
+      "name": "Under The Neem Trees",
+      "city": "Ahmedabad",
+      "area": "Bodakdev",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.undertheneemtrees.com/"
+      ],
+      "evidence": "Operator explicitly identifies the Bodakdev estate as entirely pure vegetarian; both existing aliases match."
+    },
+    {
+      "id": "ahm-under-the-neem-tree",
+      "name": "Under The Neem Tree",
+      "city": "Ahmedabad",
+      "area": "Bodakdev",
+      "before": [
+        "vegetarian",
+        "jain"
+      ],
+      "sources": [
+        "https://www.undertheneemtrees.com/"
+      ],
+      "evidence": "Operator explicitly identifies the Bodakdev estate as entirely pure vegetarian; both existing aliases match."
+    },
+    {
+      "id": "r19",
+      "name": "Gordhan Thal",
+      "city": "Ahmedabad",
+      "area": "Bodakdev",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.zomato.com/ahmedabad/gordhan-thaal-satellite"
+      ],
+      "evidence": "Vegetarian-only listing at Ground Floor, Sapath Complex, SG Highway, matching the Bodakdev/Shapath Tower venue."
+    },
+    {
+      "id": "r32",
+      "name": "Gopi Dining Hall",
+      "city": "Ahmedabad",
+      "area": "Ellisbridge",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.zomato.com/ahmedabad/gopi-dining-hall-ellis-bridge/info"
+      ],
+      "evidence": "Vegetarian-only listing at Avdhesh House, Ellis Bridge."
+    },
+    {
+      "id": "r52",
+      "name": "Oswal Farsan",
+      "city": "Ahmedabad",
+      "area": "Ashram Road",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/ahmedabad/ashram-road/oshwal-63143/dineout"
+      ],
+      "evidence": "Pure-veg amenity at 14 Ajanta Commercial Center, Ashram Road, matching the existing Oswal spelling."
+    },
+    {
+      "id": "mum-amar-juice",
+      "name": "Amar Juice Centre",
+      "city": "Mumbai",
+      "area": "Juhu",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/mumbai/juhu/amar-fast-food-juice-centre-69551/dineout"
+      ],
+      "evidence": "Pure-veg amenity at 3 Gulmohar Road, beside Cooper Hospital, Juhu."
+    },
+    {
+      "id": "mum-prakash-shakahari",
+      "name": "Prakash Shakahari Upahaar Kendra",
+      "city": "Mumbai",
+      "area": "Dadar West",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/mumbai/dadar-west/prakash-shakahari-upahar-kendra-846141/dineout"
+      ],
+      "evidence": "Pure-veg amenity at 9/10 Horizon Building, Gokhale Road North, Dadar West."
+    },
+    {
+      "id": "mum-dakshinayan",
+      "name": "Dakshinayan",
+      "city": "Mumbai",
+      "area": "Juhu",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.zomato.com/mumbai/dakshinayan-juhu/info"
+      ],
+      "evidence": "Vegetarian-only listing on Gandhigram Road, near ISKCON Temple, Juhu."
+    },
+    {
+      "id": "del-saravana-bhavan",
+      "name": "Saravana Bhavan",
+      "city": "Delhi NCR",
+      "area": "Connaught Place",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.zomato.com/ncr/saravana-bhavan-connaught-place-new-delhi/info"
+      ],
+      "evidence": "Vegetarian-only listing at P-13 Connaught Circle, matching the source address."
+    },
+    {
+      "id": "hyd-tatva",
+      "name": "Tatva",
+      "city": "Hyderabad",
+      "area": "Jubilee Hills / Road No. 36",
+      "before": [
+        "vegetarian",
+        "jain"
+      ],
+      "sources": [
+        "https://www.zomato.com/hyderabad/tatva-jubilee-hills"
+      ],
+      "evidence": "The target venue is explicitly tagged Pure Veg under its dining highlights; address matches SL Jubilee, Road 36."
+    },
+    {
+      "id": "chn-rayars",
+      "name": "Rayar’s Mess",
+      "city": "Chennai",
+      "area": "Mylapore",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/chennai/mylapore/rayar-s-mess-133829/dineout"
+      ],
+      "evidence": "Pure-veg amenity at new number 31 Arundale Street, Mylapore; both existing aliases match."
+    },
+    {
+      "id": "chn-rayars-mess",
+      "name": "Rayar's Mess",
+      "city": "Chennai",
+      "area": "Mylapore / Arundale Street",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/chennai/mylapore/rayar-s-mess-133829/dineout"
+      ],
+      "evidence": "Pure-veg amenity at new number 31 Arundale Street, Mylapore; both existing aliases match."
+    },
+    {
+      "id": "chn-ratna-cafe",
+      "name": "Ratna Cafe",
+      "city": "Chennai",
+      "area": "Triplicane",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/chennai/triplicane/ratna-cafe-848198/dineout"
+      ],
+      "evidence": "Pure-veg amenity at 255 High Road, Triplicane."
+    },
+    {
+      "id": "chn-grand-sweets",
+      "name": "Grand Sweets & Snacks",
+      "city": "Chennai",
+      "area": "Adyar",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.district.in/dining/chennai/the-grand-sweets-and-snacks-adyar"
+      ],
+      "evidence": "Vegetarian-only facility at 24 Second Main Road, Gandhi Nagar, Adyar."
+    },
+    {
+      "id": "chn-sangeetha-veg",
+      "name": "Sangeetha Veg Restaurant",
+      "city": "Chennai",
+      "area": "RA Puram / Mylapore",
+      "before": [
+        "vegetarian",
+        "jain"
+      ],
+      "sources": [
+        "https://www.sangeethaveg.com/post/how-jain-meals-at-sangeetha-veg-restaurant-are-transforming-chennai-s-food-scene"
+      ],
+      "evidence": "Operator identifies its vegetarian restaurant and RA Puram branch; its Chennai location page confirms both RA Puram addresses."
+    },
+    {
+      "id": "pun-bedekar",
+      "name": "Bedekar Tea Stall",
+      "city": "Pune",
+      "area": "Narayan Peth",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/pune/narayan-peth/bedekar-misal-64313/dineout"
+      ],
+      "evidence": "Pure-veg amenity at Munjabacha Bol, Narayan Peth."
+    },
+    {
+      "id": "pun-chaitanya-paranthas",
+      "name": "Chaitanya Paranthas",
+      "city": "Pune",
+      "area": "FC Road",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.district.in/dining/pune/chaitanya-paranthas-fc-road"
+      ],
+      "evidence": "Vegetarian-only facility at Tukaram Paduka Chowk, FC Road."
+    },
+    {
+      "id": "pun-durvankur",
+      "name": "Durvankur Dining Hall",
+      "city": "Pune",
+      "area": "Sadashiv Peth",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/pune/sadashiv-peth/durvankur-18077/dineout"
+      ],
+      "evidence": "Pure-veg amenity at 1166 New Sadashiv Peth."
+    },
+    {
+      "id": "pun-shreyas",
+      "name": "Shreyas",
+      "city": "Pune",
+      "area": "Deccan Gymkhana",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/pune/deccan-gymkhana/shreyas-632442/dineout"
+      ],
+      "evidence": "Pure-veg amenity at Hotel Shreyas, 1242 B Apte Road, Deccan Gymkhana."
+    },
+    {
+      "id": "pun-roopali",
+      "name": "Roopali Restaurant",
+      "city": "Pune",
+      "area": "FC Road",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.district.in/dining/pune/roopali-restaurant-fc-road"
+      ],
+      "evidence": "Vegetarian-only facility at 1227 FC Road, opposite British Library."
+    },
+    {
+      "id": "pun-wadeshwar",
+      "name": "Wadeshwar",
+      "city": "Pune",
+      "area": "FC Road",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.swiggy.com/restaurants/pune/deccan-gymkhana/wadeshwar-13909/dineout"
+      ],
+      "evidence": "Pure-veg amenity at FC Road, Deccan Gymkhana."
+    },
+    {
+      "id": "pun-badshahi",
+      "name": "Badshahi Boarding House",
+      "city": "Pune",
+      "area": "Tilak Road",
+      "before": [
+        "vegetarian"
+      ],
+      "sources": [
+        "https://www.district.in/dining/pune/badshahi-boarding-house-tilak-road"
+      ],
+      "evidence": "Vegetarian-only facility at plot 1648 Tilak Road."
+    }
+  ],
+  "database_records": [
+    {
+      "id": "df798a5d-8f41-4bcb-9a80-61174d602ec9",
+      "external_provider": "palateo_demo",
+      "external_place_id": "r1",
+      "name": "Agashiye",
+      "city": "Ahmedabad",
+      "area": "Old City",
+      "address": "Old City, Ahmedabad",
+      "dietary_options": [],
+      "tags": [
+        "Traditional",
+        "Heritage",
+        "Thali"
+      ],
+      "rating": "4.6",
+      "sources": [
+        "https://www.zomato.com/ahmedabad/agashiye-the-house-of-mg-lal-darwaja/info"
+      ],
+      "evidence": "Vegetarian-only listing at The House of MG, Lal Darwaja; includes the existing Old City alias."
+    },
+    {
+      "id": "f6a9ae02-5651-4eaf-a958-3a1dc44699ca",
+      "external_provider": "palateo_demo",
+      "external_place_id": "r3",
+      "name": "Under The Neem Trees",
+      "city": "Ahmedabad",
+      "area": "Bodakdev",
+      "address": "Bodakdev, Ahmedabad",
+      "dietary_options": [],
+      "tags": [
+        "Outdoor",
+        "Relaxed",
+        "Popular"
+      ],
+      "rating": "4.5",
+      "sources": [
+        "https://www.undertheneemtrees.com/"
+      ],
+      "evidence": "Operator explicitly identifies the Bodakdev estate as entirely pure vegetarian; both existing aliases match."
+    },
+    {
+      "id": "d84a2405-3d0e-42bb-b41d-b0b3d2496938",
+      "external_provider": "palateo_demo",
+      "external_place_id": "r4",
+      "name": "650 — The Global Kitchen",
+      "city": "Ahmedabad",
+      "area": "Ahmedabad",
+      "address": "Ahmedabad",
+      "dietary_options": [],
+      "tags": [
+        "Global",
+        "Casual",
+        "Friends"
+      ],
+      "rating": "4.4",
+      "sources": [
+        "https://www.swiggy.com/restaurants/ahmedabad/satellite/650-the-global-kitchen-54701/dineout"
+      ],
+      "evidence": "Pure-veg amenity for 650 at Shreekunj Mandapam, Manekbaug, Ambavadi."
+    },
+    {
+      "id": "d3d1c74b-cfdc-43cc-b82a-4851fc81f52a",
+      "external_provider": "palateo_demo",
+      "external_place_id": "r10",
+      "name": "Rajwadu",
+      "city": "Ahmedabad",
+      "area": "Jivraj Park",
+      "address": "Jivraj Park, Ahmedabad",
+      "dietary_options": [],
+      "tags": [
+        "Traditional",
+        "Family",
+        "Experience"
+      ],
+      "rating": "4.4",
+      "sources": [
+        "https://www.swiggy.com/restaurants/ahmedabad/vejalpur/rajwadu-758894/dineout"
+      ],
+      "evidence": "Pure-veg amenity for Rajwadu near Ambaji Temple, Malav Talav, Jivraj Park/Vejalpur."
+    },
+    {
+      "id": "a18d5124-d825-42a5-8ad5-cad86d5b08b0",
+      "external_provider": "palateo_demo",
+      "external_place_id": "r11",
+      "name": "Jassi De Parathe",
+      "city": "Ahmedabad",
+      "area": "Prahlad Nagar",
+      "address": "Prahlad Nagar, Ahmedabad",
+      "dietary_options": [],
+      "tags": [
+        "Punjabi",
+        "Value",
+        "Comfort"
+      ],
+      "rating": "4.4",
+      "sources": [
+        "https://www.swiggy.com/restaurants/ahmedabad/prahlad-nagar/jassi-de-parathe-prahladnagar-927194/dineout"
+      ],
+      "evidence": "Pure-veg amenity at Safal Pegasus, Prahlad Nagar."
+    },
+    {
+      "id": "47e438cc-720d-4ada-bff3-08f3b137b84f",
+      "external_provider": "openstreetmap",
+      "external_place_id": "node/8548483880",
+      "name": "Swati Snacks",
+      "city": "Ahmedabad",
+      "area": "Ahmedabad",
+      "address": null,
+      "dietary_options": [],
+      "tags": [
+        "Restaurant"
+      ],
+      "rating": null,
+      "sources": [
+        "https://www.swatisnacks.com/"
+      ],
+      "evidence": "Operator describes a vegetarian restaurant and lists the Ahmedabad Law Garden and Mumbai Tardeo branches."
+    },
+    {
+      "id": "a1fab5a9-0f35-439c-b2d3-055dcf614d28",
+      "external_provider": "openstreetmap",
+      "external_place_id": "node/4445025289",
+      "name": "Atithi Dining Hall",
+      "city": "Ahmedabad",
+      "area": "Ahmedabad",
+      "address": null,
+      "dietary_options": [],
+      "tags": [
+        "Restaurant"
+      ],
+      "rating": null,
+      "sources": [
+        "https://www.swiggy.com/restaurants/ahmedabad/bodakdev/atithi-80853/dineout"
+      ],
+      "evidence": "Pure-veg amenity at Mohini, Judges Bungalow Road, Bodakdev."
+    },
+    {
+      "id": "f6de0d88-8d85-4d9e-81e8-480c2b1bee32",
+      "external_provider": "openstreetmap",
+      "external_place_id": "node/440339381",
+      "name": "Vishala",
+      "city": "Ahmedabad",
+      "area": "Ahmedabad",
+      "address": null,
+      "dietary_options": [],
+      "tags": [
+        "Restaurant"
+      ],
+      "rating": null,
+      "sources": [
+        "https://www.zomato.com/ahmedabad/vishalla-vasna"
+      ],
+      "evidence": "Vegetarian-only listing opposite APMC Market, Vasna; includes the existing Vishala spelling."
+    },
+    {
+      "id": "95604f83-1ecc-4795-ac13-00a35b19c8be",
+      "external_provider": "openstreetmap",
+      "external_place_id": "node/9123477265",
+      "name": "Gordhan Thal",
+      "city": "Ahmedabad",
+      "area": "Ahmedabad",
+      "address": "Shapath Tower Ground Floor Sarkhej Gandhi Nagar Highway, Near State Bank Of India, Thaltej, Ahmedabad, 380054",
+      "dietary_options": [
+        "veg"
+      ],
+      "tags": [
+        "Restaurant"
+      ],
+      "rating": null,
+      "sources": [
+        "https://www.zomato.com/ahmedabad/gordhan-thaal-satellite"
+      ],
+      "evidence": "Vegetarian-only listing at Ground Floor, Sapath Complex, SG Highway, matching the Bodakdev/Shapath Tower venue."
+    }
+  ]
+}

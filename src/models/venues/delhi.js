@@ -213,7 +213,8 @@ const delhiCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥞",
     "photo": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80",
@@ -303,7 +304,8 @@ const delhiCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥥",
     "photo": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80",
@@ -1934,7 +1936,8 @@ const delhiCatalog=[
     "s": "medium",
     "dietaryOptions": [
       "vegetarian",
-      "vegan_options"
+      "vegan_options",
+      "pure_veg"
     ],
     "emoji": "🍜",
     "photo": "https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=800&q=80",

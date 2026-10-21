@@ -215,7 +215,8 @@ const chandigarhCatalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥟",
     "photo": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=800&q=80",

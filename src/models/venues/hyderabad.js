@@ -950,7 +950,8 @@ const hyderabadCatalog=[
     "s": "mild",
     "dietaryOptions": [
       "vegetarian",
-      "jain"
+      "jain",
+      "pure_veg"
     ],
     "emoji": "✨",
     "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",

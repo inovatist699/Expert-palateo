@@ -258,7 +258,8 @@ const bengaluruCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥞",
     "photo": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80",
@@ -303,7 +304,8 @@ const bengaluruCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🧈",
     "photo": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80",
@@ -439,7 +441,8 @@ const bengaluruCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥘",
     "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
@@ -615,7 +618,8 @@ const bengaluruCatalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥞",
     "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&auto=format&fit=crop&q=80",
@@ -657,7 +661,8 @@ const bengaluruCatalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "⚪",
     "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&auto=format&fit=crop&q=80",
@@ -699,7 +704,8 @@ const bengaluruCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🍛",
     "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&auto=format&fit=crop&q=80",
@@ -1168,7 +1174,8 @@ const bengaluruCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥈",
     "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80",

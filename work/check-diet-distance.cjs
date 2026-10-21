@@ -8,6 +8,19 @@ vm.runInContext(`
  useAccount({id:'diet-distance',user_metadata:{palateo_legal_version:LEGAL_VERSION,palateo_privacy_consent:true}});
  state.answers={mood:'quiet',cuisine:'Gujarati',diet:'veg',budget:'under_500',spice:'mild',occasion:'family',priority:'food',distance:'any'};
  state.onboarded=true;authRequired=false;
+ selectedCity='Vadodara';
+ const auditedVadodara=getActiveCatalog();
+ const verifiedPureIds=['vad-greenr-cafe','vad-mouj-by-mishri','vad-house-of-failures','vad-jagdish-farshan','vad-jassi-de-parathe','vad-vishal-sandwich','vad-new-alka-restaurant','vad-hot-bite','vad-kansar-thali','dno-vad-la-ville','dno-vad-kansaar','dno-vad-22nd-parallel','dno-vad-makeba','dno-vad-stellar'];
+ assert.equal(auditedVadodara.length,108,'Dietary corrections must retain every existing Vadodara entry');
+ for(const id of verifiedPureIds){
+  const records=auditedVadodara.filter(r=>r.id===id);
+  assert.ok(records.length,id+' must remain in the catalogue');
+  assert.ok(records.every(isPureVegRestaurant),id+' needs verified pure-veg evidence');
+ }
+ for(const id of ['vad-cafe-fitoor','vad-the-brewery','vad-raju-omelet','vad-jay-mahakali-usal','vad-jassi-de-paranthe']){
+  assert.equal(isPureVegRestaurant(auditedVadodara.find(r=>r.id===id)),false,id+' must not gain an unsupported pure-veg label');
+ }
+ selectedCity='Ahmedabad';
  const base={city:'Ahmedabad',c:['Gujarati'],t:['Restaurant'],a:['quiet'],o:['family'],p:'under_500',s:'mild',rating:4.5,review_count:90,latitude:23.0225,longitude:72.5714};
  const pure={...base,id:'pure',name:'Listed pure veg',dietaryOptions:['pure_veg']};
  const veg={...base,id:'veg',name:'Veg options',dietaryOptions:['vegetarian_options']};

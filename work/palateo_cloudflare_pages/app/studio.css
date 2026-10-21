@@ -50,7 +50,7 @@
 .studioApp .homeRecommendations{position:relative;margin-top:-12px;padding:18px 12px 4px!important;border-radius:28px 28px 0 0;background:linear-gradient(180deg,#142429,#111d20 65%,#0f181b);border-top:1px solid #8ca8ae7a;z-index:12;overflow:hidden}
 .studioApp .homeRecommendations:before{content:"";position:absolute;top:6px;left:calc(50% - 18px);width:36px;height:3px;border-radius:3px;background:#7291987a}
 .studioApp .homeRecommendations>.section{display:flex!important;flex-direction:row!important;align-items:center!important;gap:8px!important;margin:0 0 8px!important}
-.studioApp .railControls,.studioApp .homeMoreAction{display:none!important}
+.studioApp .homeMoreAction{display:none!important}
 .studioApp .homeMapView .restaurantGrid{display:flex!important;align-items:start;gap:12px!important;margin:0 -12px!important;padding:3px 12px 18px!important;scroll-padding-inline:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
 .studioApp .homeMapView .restaurantGrid .studioCard{flex:0 0 312px!important;min-width:312px!important;width:312px;scroll-snap-align:start}
 .studioApp .restaurantGrid .studioCard{position:relative;isolation:isolate;display:block!important;padding:0!important;margin:0!important;overflow:hidden!important;border-radius:22px!important;border:1px solid #aac7cd80!important;background:linear-gradient(155deg,#25444a,#172f34)!important;color:#eef8fb!important;box-shadow:inset 0 1px 0 #ffffff40,0 0 13px #ffc64f26,0 7px 18px #0003!important;min-width:0;box-sizing:border-box}
@@ -270,9 +270,13 @@
 .studioApp .studioLocate{background:linear-gradient(#23454b,#173338);border-color:#86a8ae88;color:#dceff2;box-shadow:inset 0 1px #e5faf012}
 .studioApp .studioBrowseRow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 6px;min-height:36px}
 .studioApp .studioBrowseRow h2{margin:0;font-size:11px;font-weight:500;color:#cfdbd5;letter-spacing:.02em}
-.studioApp .studioBrowseRow .railControls{display:flex!important;gap:7px;margin-left:auto}
-.studioApp .studioBrowseRow .railControls button{display:grid;place-items:center;width:42px;height:36px;min-height:36px;padding:0;border:1px solid #aac7bd66;background:linear-gradient(#2a4b50,#19383e);color:#f9dfa2;box-shadow:inset 0 1px #effff712;border-radius:12px;font-size:18px}
-.studioApp .studioBrowseRow .railControls button:disabled{background:#10292e;border-color:#6c888d55;color:#91a8ab;opacity:.6;cursor:default}
+.studioApp .pureVegToggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;white-space:nowrap}
+.studioApp .studioBrowseRow .pureVegToggle{margin-left:auto;padding:6px 10px;border:1px solid #aac7bd66;border-radius:12px;background:#19383e;color:#e1f2df;font-size:12px}
+.studioApp .pureVegSwitch{display:block;width:32px;height:20px;padding:2px;box-sizing:border-box;border:1px solid #8ba69f;border-radius:12px;background:#10292e}
+.studioApp .pureVegSwitch:before{content:"";display:block;width:14px;height:14px;border-radius:50%;background:#cfdbd5}
+.studioApp .pureVegToggle[aria-pressed=true] .pureVegSwitch{background:#b9e3ad;border-color:#b9e3ad}
+.studioApp .pureVegToggle[aria-pressed=true] .pureVegSwitch:before{transform:translateX(12px);background:#153c24}
+.studioApp .pureVegToggle:focus-visible{outline:2px solid #f9dfa2;outline-offset:3px}
 .studioApp .homeMapToolbar .filterChip[data-cuisine=all]{display:flex}
 .studioApp .restaurantGrid .studioCard{background:linear-gradient(145deg,#204249,#102a30 60%,#10262b)!important;border-color:#d6d2a878!important;box-shadow:inset 0 1px #edf8d82b,0 0 15px #ffc64f20,0 8px 22px #0004!important}
 .studioApp .studioCardMedia:after{background:linear-gradient(#05161942,transparent 38%,#0e272de8)}
@@ -294,7 +298,6 @@
  .studioApp .homeMapView .restaurantGrid{flex:1;min-height:0;height:auto!important;padding-bottom:8px!important}
  .studioApp[data-page=home]>.paloContainer{top:72px;bottom:auto;left:12px;right:auto}
 }
-@media(min-width:840px){.studioApp .studioBrowseRow .railControls{display:none!important}}
 @media(max-height:740px) and (max-width:839px){.studioApp .streetMapFrame .zestMapControls{top:59px!important;gap:5px}.studioApp .streetMapFrame .zestMapControls .zestMapBtn{width:38px;height:38px;min-height:38px;padding:6px}}
 @media(max-height:600px) and (max-width:839px){
  .studioApp[data-page=home] .app{height:auto;overflow:visible;padding-bottom:100px}

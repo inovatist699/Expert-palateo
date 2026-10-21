@@ -13,9 +13,9 @@ const studioMapHome=home;
 home=function(){
  studioMapHome();
  const screen=document.querySelector('.home-screen');if(!screen)return;
- const sheet=screen.querySelector('.homeRecommendations'),header=sheet?.querySelector('.section'),controls=header?.querySelector('.railControls');
+ const sheet=screen.querySelector('.homeRecommendations'),header=sheet?.querySelector('.section');
  if(header)header.innerHTML=studioCity()+`<span class="studioSpotCount">${ranked().length} spots</span><button class="studioSearch" type="button" data-studio-search aria-label="Search restaurants">${studioIcon('search')}</button>`;
- if(header){const browsing=document.createElement('div');browsing.className='studioBrowseRow';browsing.innerHTML=`<h2>${sheet.querySelectorAll('.studioCard').length} places to explore</h2>`;if(controls)browsing.append(controls);header.after(browsing)}
+ if(header){const browsing=document.createElement('div');browsing.className='studioBrowseRow';browsing.innerHTML=`<h2>${sheet.querySelectorAll('.studioCard').length} places to explore</h2>${pureVegFilterControl()}`;header.after(browsing)}
  const filters=screen.querySelector('.homeFilterChips'),toolbar=screen.querySelector('.homeMapToolbar');
  if(filters&&toolbar){filters.insertAdjacentHTML('afterbegin',`${studioPaloToggle()}<button type="button" class="filterChip" data-action="navigate" data-page="ask">${studioIcon('spark')} Ask Pal-O <span class="studioBadge">Beta</span></button><button type="button" class="filterChip" data-action="navigate" data-page="social">${studioIcon('friends')} Friends <span class="studioBadge">Soon</span></button>`);toolbar.replaceChildren(filters)}
  sheet?.querySelector('.homeEstimateNote')?.remove();

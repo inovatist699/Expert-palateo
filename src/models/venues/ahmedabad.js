@@ -28,7 +28,8 @@ const catalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥘",
     "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T9wqi3rfyGpdqOJfZE_RSjyOdYE1wfI8g75w-vGlli1aQ3ep5WawTBuP7GgsL8o4_8IaVW4NXDXV2iD72xfZ8Pnl95Ys6nTp8Rc0RHQTanqortFFqkEUFmW6QURE6xJr3DGZx8KA=w800-h500-k-no",
@@ -114,7 +115,8 @@ const catalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🌳",
     "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RkgMAhKvpgrUP4D99tz7ghVp6r-xzz2nD96MyYzhdYIM6v-T4FQp2ZhuJ2_h9eWqIXyp5ORjsXiTYjwC9JoQlfY2ZowZmvUm8MFHSUkgJ6twELeeDP2AVx_wrpwWu_Yl4_1Ygr=w800-h500-k-no",
@@ -157,7 +159,8 @@ const catalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🌎",
     "photo": "https://lh3.googleusercontent.com/grass-cs/AABkmLdj-WkkJsBUO_gEQnHiEmdKmU9lji_yNXBTIoA2c2WNyNNf8STZykh3sugHWU3LcSejf7FvkTzXBLHNpReEIevYBLwAjTDS6fRrny5GNt7tAxZnn_wiUCU-lZRgmt1PBhNla3s=w800-h500-k-no",
@@ -417,7 +420,8 @@ const catalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🏡",
     "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnGgRMVTx2qhhwhxieXrXoWGVBH_G9UBgG0A6gvenuNggcLNr-kD3ZG9z5h4qRoXoDV82YFfyS6UPcRKgjjyIlMLDUsm6Jfv8Dc5jJX6GsPHwM2aPY3ikSXUTb2RyKimtnNKhD1AFR9jfPF=w800-h500-k-no",
@@ -459,7 +463,8 @@ const catalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🫓",
     "photo": "https://lh3.googleusercontent.com/grass-cs/AABkmLekibzWvU6h2ZWfIR8GpZYHem7b6oFpP-j_Q_lZ_b6I5koV66DZIB1LKg8NOYQ0dKejfDSX3UU5yf4bUKtdhbv4qkiV_PZbFp6Bw4Lc2PrQ70rWMhBtFVqeRNL7wj7ZQ2izYx4=w800-h500-k-no",
@@ -543,7 +548,8 @@ const catalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥘",
     "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Ryrn1dP2WX_lADTsLY2TOBwEzehmFrdCSUFgvCDN3pNlQUk1PCbHYNy2kqIEz4quGqjCT1byk2qhchKGJLvZgmAEXZLHJjR1gswgtybgg4VmqZHzGob-Yn1h8m7QHeccBUHOgHuw=w800-h500-k-no",
@@ -804,7 +810,8 @@ const catalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥘",
     "photo": "https://lh3.googleusercontent.com/grass-cs/AABkmLdAlv19hO6MMZRRxYCyS9f-dFnMLqT3fBk0ZOEfe0NROdJSZBRsI8QCzf49wMZH8IuDNgGH80fHmIerNGjw4BK-URHad0OWr1FIv1Gr170jXe7vbHY73GCpYR4FhX56N2SGUurm=w800-h500-k-no",
@@ -976,7 +983,8 @@ const catalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥟",
     "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TjzL2OkDfBRA5OZL-1xttAfMvbAUgBCC4bMCpW1gKjJkdwuYMxcdL66knDrG8dLTvRO5-TCnK_X5ZmCNxUcZybOYvUZWavyg0KGeg6wkNGt5fQxNH31Cn9EcW3P8YxMi9hBqlm=w800-h500-k-no",
@@ -1370,7 +1378,8 @@ const catalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🍲",
     "photo": "https://lh3.googleusercontent.com/grass-cs/ACvplmOPyqvSuIW-6s6IMZY1Y3w65FCqlNxeiBw7fskl6bYjlZRai1NXtYv8lgEcrP2l8bVqxRj0tf0o8F7Z3iN5DeomO9AeiSGKbFoVDNFFp-rLalEywdmMvCB5mWjwegaS2563K4EIR4-dfSZc=w800-h500-k-no",
@@ -2259,7 +2268,8 @@ const catalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥨",
     "photo": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=800&q=80",
@@ -2648,7 +2658,8 @@ const catalog=[
     ],
     "s": "medium",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🍲",
     "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
@@ -3407,7 +3418,8 @@ const catalog=[
     "s": "mild",
     "dietaryOptions": [
       "vegetarian",
-      "jain"
+      "jain",
+      "pure_veg"
     ],
     "emoji": "🏮",
     "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80",
@@ -3577,7 +3589,8 @@ const catalog=[
     "s": "mild",
     "dietaryOptions": [
       "vegetarian",
-      "jain"
+      "jain",
+      "pure_veg"
     ],
     "emoji": "🏛️",
     "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80",
@@ -3620,7 +3633,8 @@ const catalog=[
     "s": "mild",
     "dietaryOptions": [
       "vegetarian",
-      "jain"
+      "jain",
+      "pure_veg"
     ],
     "emoji": "🌳",
     "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",

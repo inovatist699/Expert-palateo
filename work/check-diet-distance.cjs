@@ -1,8 +1,9 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const html=fs.readFileSync(path.join(__dirname,'palateo_cloudflare_pages/app/index.html'),'utf8');
 const script=html.match(/<script>([\s\S]*?)<\/script>/)[1].replace(/\r\n?/g,'\n');
+const dietaryAudit=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/OTHER_CITIES_DIETARY_AUDIT_2026-10-21.json'),'utf8'));
 const nodes=new Map(),node=id=>{if(!nodes.has(id))nodes.set(id,{innerHTML:'',classList:{add(){},remove(){},toggle(){}},setAttribute(){},removeAttribute(){},focus(){},remove(){}});return nodes.get(id)};
-const context=vm.createContext({assert,console,URL,setTimeout:()=>0,clearTimeout(){},window:{scrollTo(){}},navigator:{},location:{href:'https://palateo.in/app/'},localStorage:{getItem:()=>null,setItem(){}},document:{getElementById:node,querySelectorAll:()=>[],addEventListener(){},body:{insertAdjacentHTML(){}}}});
+const context=vm.createContext({assert,dietaryAudit,console,URL,setTimeout:()=>0,clearTimeout(){},window:{scrollTo(){}},navigator:{},location:{href:'https://palateo.in/app/'},localStorage:{getItem:()=>null,setItem(){}},document:{getElementById:node,querySelectorAll:()=>[],addEventListener(){},body:{insertAdjacentHTML(){}}}});
 vm.runInContext(script.replace(/initV5\(\);\s*$/,''),context);
 vm.runInContext(`
  useAccount({id:'diet-distance',user_metadata:{palateo_legal_version:LEGAL_VERSION,palateo_privacy_consent:true}});
@@ -19,6 +20,21 @@ vm.runInContext(`
  }
  for(const id of ['vad-cafe-fitoor','vad-the-brewery','vad-raju-omelet','vad-jay-mahakali-usal','vad-jassi-de-paranthe']){
   assert.equal(isPureVegRestaurant(auditedVadodara.find(r=>r.id===id)),false,id+' must not gain an unsupported pure-veg label');
+ }
+ for(const [city,count] of Object.entries(dietaryAudit.bundled_city_counts)){
+  selectedCity=city;
+  assert.equal(getActiveCatalog().length,count,city+' must retain its complete catalogue');
+ }
+ for(const expected of dietaryAudit.source_records){
+  selectedCity=expected.city;
+  const restaurant=getActiveCatalog().find(r=>r.id===expected.id&&r.name===expected.name&&r.area===expected.area);
+  assert.ok(restaurant,expected.id+' must remain in its audited branch');
+  assert.ok(isPureVegRestaurant(restaurant),expected.id+' must appear in Pure veg');
+ }
+ for(const [city,id] of [['Mumbai','mum-bombay-canteen'],['Delhi NCR','del-andhra-bhavan'],['Bengaluru','blr-meghana'],['Hyderabad','hyd-paradise'],['Chennai','chn-buhari'],['Kolkata','kol-peter-cat'],['Pune','pun-george'],['Jaipur','jpr-handi'],['Kochi','koc-kashi-art'],['Goa','goa-gunpowder'],['Chandigarh','chd-pal-dhaba']]){
+  selectedCity=city;
+  const restaurant=getActiveCatalog().find(r=>r.id===id);assert.ok(restaurant,id+' must remain in the catalogue');
+  assert.equal(isPureVegRestaurant(restaurant),false,id+' must remain outside Pure veg');
  }
  selectedCity='Ahmedabad';
  const base={city:'Ahmedabad',c:['Gujarati'],t:['Restaurant'],a:['quiet'],o:['family'],p:'under_500',s:'mild',rating:4.5,review_count:90,latitude:23.0225,longitude:72.5714};

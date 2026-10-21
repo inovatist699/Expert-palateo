@@ -167,7 +167,8 @@ const chennaiCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "☕",
     "photo": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80",
@@ -438,7 +439,8 @@ const chennaiCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🍬",
     "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
@@ -566,7 +568,8 @@ const chennaiCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🥣",
     "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&auto=format&fit=crop&q=80",
@@ -608,7 +611,8 @@ const chennaiCatalog=[
     ],
     "s": "mild",
     "dietaryOptions": [
-      "vegetarian"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🍲",
     "photo": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&auto=format&fit=crop&q=80",
@@ -778,7 +782,8 @@ const chennaiCatalog=[
     "s": "mild",
     "dietaryOptions": [
       "vegetarian",
-      "jain"
+      "jain",
+      "pure_veg"
     ],
     "emoji": "🍛",
     "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80",

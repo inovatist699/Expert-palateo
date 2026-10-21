@@ -59,7 +59,8 @@ const vadodaraCatalog=[
     "rating": 4.8,
     "review_count": 602,
     "t": [
-      "Cafe"
+      "Cafe",
+      "Late night dessert cafe"
     ],
     "a": [
       "lively"
@@ -77,7 +78,8 @@ const vadodaraCatalog=[
       "french waffles",
       "hot chocolate",
       "casual hangout"
-    ]
+    ],
+    "hours": "11:00 AM – 11:30 PM"
   },
   {
     "id": "vad-golden-point",
@@ -388,7 +390,8 @@ const vadodaraCatalog=[
     "rating": 4.9,
     "review_count": 24,
     "t": [
-      "Cafe"
+      "Cafe",
+      "Late night cafe"
     ],
     "a": [
       "cozy"
@@ -405,7 +408,8 @@ const vadodaraCatalog=[
       "kooky desserts",
       "youth crowd",
       "sweet treats"
-    ]
+    ],
+    "hours": "11:00 AM – 12:00 AM"
   },
   {
     "id": "vad-chacks",
@@ -1350,7 +1354,8 @@ const vadodaraCatalog=[
     "t": [
       "Cafe",
       "Desserts",
-      "Live music"
+      "Live music",
+      "Late night cafe"
     ],
     "a": [
       "lively",
@@ -1372,7 +1377,8 @@ const vadodaraCatalog=[
       "thick gourmet shakes",
       "acoustic live music nights",
       "vibrant youth hangout"
-    ]
+    ],
+    "hours": "11:00 AM – 11:30 PM"
   },
   {
     "id": "vad-mahakali-sev-usal",
@@ -4107,7 +4113,8 @@ const vadodaraCatalog=[
     "review_count": 1120,
     "t": [
       "Dessert",
-      "Cafe"
+      "Cafe",
+      "Late night chocolate cafe"
     ],
     "a": [
       "cozy",
@@ -4127,7 +4134,8 @@ const vadodaraCatalog=[
       "fondue platter",
       "thick hot chocolate",
       "live music nights"
-    ]
+    ],
+    "hours": "11:00 AM – 12:00 AM"
   },
   {
     "id": "vad-koa-cafe-manjalpur",

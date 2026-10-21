@@ -1,5 +1,5 @@
 const delhiCatalog=[
-{
+  {
     "id": "del-indian-accent",
     "name": "Indian Accent",
     "area": "Lodhi Road",
@@ -45,7 +45,7 @@ const delhiCatalog=[
     ],
     "why": "India’s highest rated culinary export, marrying nostalgia with global haute cuisine."
   },
-{
+  {
     "id": "del-bukhara",
     "name": "Bukhara",
     "area": "Chanakyapuri",
@@ -91,7 +91,7 @@ const delhiCatalog=[
     ],
     "why": "The world’s most famous Indian clay oven restaurant, unchanged since 1978."
   },
-{
+  {
     "id": "del-fig-maple",
     "name": "Fig & Maple",
     "area": "Greater Kailash 2",
@@ -136,7 +136,7 @@ const delhiCatalog=[
     ],
     "why": "Lush rooftop cafe celebrated for ethical local produce and playful presentation."
   },
-{
+  {
     "id": "del-leos-pizza",
     "name": "Leo’s Artisan Pizza",
     "area": "Vasant Vihar",
@@ -181,7 +181,7 @@ const delhiCatalog=[
     ],
     "why": "Delhi’s gold standard for true Naples-style leopard-spotted woodfired pizza."
   },
-{
+  {
     "id": "del-carnatic-cafe",
     "name": "Carnatic Cafe",
     "area": "Greater Kailash 2",
@@ -227,7 +227,7 @@ const delhiCatalog=[
     ],
     "why": "Beloved Karnataka comfort food haven serving ghee-laden fluffy benne dosas."
   },
-{
+  {
     "id": "del-karims",
     "name": "Karim’s",
     "area": "Jama Masjid, Old Delhi",
@@ -272,7 +272,7 @@ const delhiCatalog=[
     ],
     "why": "Historic culinary institution operating beside Jama Masjid since 1913, preserving royal Mughal recipes."
   },
-{
+  {
     "id": "del-saravana-bhavan",
     "name": "Saravana Bhavan",
     "area": "Connaught Place",
@@ -318,7 +318,7 @@ const delhiCatalog=[
     ],
     "why": "The gold standard for authentic Chennai-style vegetarian tiffins in the heart of Delhi."
   },
-{
+  {
     "id": "del-big-chill",
     "name": "The Big Chill Cafe",
     "area": "Khan Market",
@@ -364,7 +364,7 @@ const delhiCatalog=[
     ],
     "why": "Delhi’s quintessential Italian cafe cult, beloved for hearty baked pastas and legendary cheesecakes."
   },
-{
+  {
     "id": "del-gulati",
     "name": "Gulati Restaurant",
     "area": "Pandara Road",
@@ -410,7 +410,7 @@ const delhiCatalog=[
     ],
     "why": "The high temple of classic Delhi butter chicken, drawing hungry crowds till late into the night."
   },
-{
+  {
     "id": "del-aslam",
     "name": "Aslam Chicken",
     "area": "Jama Masjid, Old Delhi",
@@ -454,7 +454,7 @@ const delhiCatalog=[
     ],
     "why": "Old Delhi street phenomenon where charcoal-grilled chicken is bathed in bowls of melted butter."
   },
-{
+  {
     "id": "del-natraj",
     "name": "Natraj Dahi Bhalla Corner",
     "area": "Chandni Chowk",
@@ -499,7 +499,7 @@ const delhiCatalog=[
     ],
     "why": "Historic street stall serving just two iconic dishes: velvety dahi bhalla and golden aloo tikki."
   },
-{
+  {
     "id": "del-andhra-bhavan",
     "name": "Andhra Bhavan Canteen",
     "area": "Feroze Shah Road",
@@ -545,7 +545,7 @@ const delhiCatalog=[
     ],
     "why": "Government canteen transformed into Delhi’s favorite temple for fiery Andhra feasts and Sunday biryani."
   },
-{
+  {
     "id": "del-moti-mahal",
     "name": "Moti Mahal",
     "area": "Daryaganj",
@@ -592,7 +592,7 @@ const delhiCatalog=[
     ],
     "why": "The legendary 1947 birthplace of modern Indian cuisine, where Butter Chicken and Dal Makhani were invented."
   },
-{
+  {
     "id": "del-kake-da-hotel",
     "name": "Kake Da Hotel",
     "area": "Connaught Place",
@@ -638,7 +638,7 @@ const delhiCatalog=[
     ],
     "why": "Connaught Place’s historic 1931 Punjabi institution renowned for slow-cooked Dahi Meat and robust curries."
   },
-{
+  {
     "id": "del-sita-ram",
     "name": "Sita Ram Diwan Chand",
     "area": "Paharganj",
@@ -684,7 +684,7 @@ const delhiCatalog=[
     ],
     "why": "Delhi’s undisputed Chole Bhature capital in Paharganj, serving golden paneer-stuffed bhaturas since the 1950s."
   },
-{
+  {
     "id": "del-wengers",
     "name": "Wenger’s",
     "area": "Connaught Place",
@@ -706,7 +706,8 @@ const delhiCatalog=[
       "1926 Swiss Bakery",
       "Shammi Kebab Patty",
       "Chocolate Eclair",
-      "CP Classic"
+      "CP Classic",
+      "Late night dessert cafe"
     ],
     "a": [
       "historic",
@@ -730,9 +731,10 @@ const delhiCatalog=[
       "classic chocolate mousse and fruit tarts",
       "quintessential connaught place nostalgia"
     ],
-    "why": "Delhi’s oldest Swiss patisserie (1926) in Connaught Place, famous for artisanal pastries and savory patties."
+    "why": "Delhi’s oldest Swiss patisserie (1926) in Connaught Place, famous for artisanal pastries and savory patties.",
+    "hours": "11:00 AM – 11:30 PM"
   },
-{
+  {
     "id": "del-al-jawahar",
     "name": "Al Jawahar",
     "area": "Jama Masjid, Old Delhi",
@@ -778,7 +780,7 @@ const delhiCatalog=[
     ],
     "why": "Jama Masjid culinary institution inaugurated by Jawaharlal Nehru, renowned for rich Mutton Korma and Nihari."
   },
-{
+  {
     "id": "del-kuremal",
     "name": "Kuremal Mohan Lal Kulfi Vale",
     "area": "Chawri Bazar, Old Delhi",
@@ -824,7 +826,7 @@ const delhiCatalog=[
     ],
     "why": "Centenary Old Delhi master kulfi maker (1906) celebrated for hollowed-out whole fruits stuffed with creamy kulfi."
   },
-{
+  {
     "id": "del-rajinder",
     "name": "Rajinder Da Dhaba",
     "area": "Safdarjung Enclave",
@@ -871,7 +873,7 @@ const delhiCatalog=[
     ],
     "why": "South Delhi’s open-air meat carnival famous for melt-in-mouth Galouti kebabs and butter-soaked chicken curry."
   },
-{
+  {
     "id": "del-cha-bar",
     "name": "Cha Bar",
     "area": "Connaught Place",
@@ -919,7 +921,7 @@ const delhiCatalog=[
     ],
     "why": "Tranquil literary haven inside Oxford Bookstore offering over 150 single-estate teas and baked treats."
   },
-{
+  {
     "id": "del-ama-cafe",
     "name": "AMA Cafe",
     "area": "Majnu Ka Tilla",
@@ -941,7 +943,9 @@ const delhiCatalog=[
       "Little Tibet Gem",
       "Himalayan Breakfast",
       "Mud Cake",
-      "Student Vibe"
+      "Student Vibe",
+      "Late night student cafe",
+      "Evening Himalayan cafe"
     ],
     "a": [
       "cozy",
@@ -964,9 +968,10 @@ const delhiCatalog=[
       "decadent chocolate mud cake and specialty brews",
       "heart of little tibet settlement"
     ],
-    "why": "Iconic Himalayan lodge-style cafe tucked inside Majnu Ka Tilla, revered for breakfast spreads and artisan coffee."
+    "why": "Iconic Himalayan lodge-style cafe tucked inside Majnu Ka Tilla, revered for breakfast spreads and artisan coffee.",
+    "hours": "8:00 AM – 11:30 PM"
   },
-{
+  {
     "id": "del-olive-mehrauli",
     "name": "Olive Bar & Kitchen",
     "area": "Mehrauli",
@@ -1013,7 +1018,7 @@ const delhiCatalog=[
     ],
     "why": "Delhi’s most enchanting fine-dining courtyard, set in a heritage haveli under a magnificent banyan tree."
   },
-{
+  {
     "id": "del-cafe-lota",
     "name": "Cafe Lota",
     "area": "Pragati Maidan",
@@ -1061,7 +1066,7 @@ const delhiCatalog=[
     ],
     "why": "Artisan cafe at the National Crafts Museum reimagining forgotten regional Indian home recipes in a serene garden."
   },
-{
+  {
     "id": "del-diggin",
     "name": "Diggin",
     "area": "Chanakyapuri",
@@ -1083,7 +1088,9 @@ const delhiCatalog=[
       "Fairy Tale Garden",
       "Brick Archways",
       "Baked Cannelloni",
-      "Romantic Vibe"
+      "Romantic Vibe",
+      "Late night Italian cafe",
+      "Evening fairy light cafe"
     ],
     "a": [
       "romantic",
@@ -1106,9 +1113,10 @@ const delhiCatalog=[
       "belgian chocolate shakes",
       "delhi most photographed cafe garden"
     ],
-    "why": "Picturesque European trattoria enveloped in climbing ivy and fairy lights, serving rustic Italian classics."
+    "why": "Picturesque European trattoria enveloped in climbing ivy and fairy lights, serving rustic Italian classics.",
+    "hours": "11:30 AM – 11:30 PM"
   },
-{
+  {
     "id": "del-paranthe-wali-gali",
     "name": "Pt. Gaya Prasad Shiv Charan Parantha",
     "area": "Chandni Chowk",
@@ -1155,7 +1163,7 @@ const delhiCatalog=[
     ],
     "why": "Living 1872 culinary relic in Paranthe Wali Gali frying stuffed parathas in pure desi ghee."
   },
-{
+  {
     "id": "del-old-famous-jalebi",
     "name": "Old Famous Jalebi Wala",
     "area": "Chandni Chowk",
@@ -1202,7 +1210,7 @@ const delhiCatalog=[
     ],
     "why": "Centenary dessert counter (1884) at Dariba Kalan corner, frying thick, syrup-soaked jalebis in pure desi ghee."
   },
-{
+  {
     "id": "del-chaina-ram",
     "name": "Chaina Ram Sindhi Confectioners",
     "area": "Chandni Chowk",
@@ -1249,7 +1257,7 @@ const delhiCatalog=[
     ],
     "why": "Old Delhi’s revered 1901 confectionery beside Fatehpuri Mosque, renowned worldwide for Karachi Halwa and Ghevar."
   },
-{
+  {
     "id": "del-gianis",
     "name": "Giani’s di Hatti",
     "area": "Chandni Chowk",
@@ -1295,7 +1303,7 @@ const delhiCatalog=[
     ],
     "why": "Historic Fatehpuri dessert stop famous across Delhi since 1956 for rich Rabri Falooda and winter Gajar Halwa."
   },
-{
+  {
     "id": "del-qureshi",
     "name": "Qureshi Kabab Corner",
     "area": "Jama Masjid, Old Delhi",
@@ -1340,7 +1348,7 @@ const delhiCatalog=[
     ],
     "why": "Jama Masjid’s legendary kebab masters grilling succulent butter-basted seekh kebabs over live charcoal since generations."
   },
-{
+  {
     "id": "del-united-coffee-house",
     "name": "United Coffee House",
     "area": "Connaught Place",
@@ -1388,7 +1396,7 @@ const delhiCatalog=[
     ],
     "why": "Regal 1942 Connaught Place institution with soaring Victorian chandeliers, renowned for table-side vacuum Cona coffee."
   },
-{
+  {
     "id": "del-kwality",
     "name": "Kwality Restaurant",
     "area": "Connaught Place",
@@ -1436,7 +1444,7 @@ const delhiCatalog=[
     ],
     "why": "Historic 1940 CP restaurant in the Regal Building credited with popularizing Chole Bhature in upscale dining."
   },
-{
+  {
     "id": "del-jain-chawal-wale",
     "name": "Jain Chawal Wale",
     "area": "Connaught Place",
@@ -1481,7 +1489,7 @@ const delhiCatalog=[
     ],
     "why": "Connaught Place’s legendary 24/7 food counter, serving steaming plates of rich Rajma Chawal and Kadhi Chawal."
   },
-{
+  {
     "id": "del-prabhu-chaat",
     "name": "Prabhu Chaat Bhandar (UPSC Chaat)",
     "area": "Shahjahan Road",
@@ -1526,7 +1534,7 @@ const delhiCatalog=[
     ],
     "why": "Delhi’s famous UPSC Chaat stall on Shahjahan Road, frying golden dal-stuffed Aloo Tikkis in pure desi ghee since 1935."
   },
-{
+  {
     "id": "del-khan-chacha",
     "name": "Khan Chacha",
     "area": "Khan Market",
@@ -1572,7 +1580,7 @@ const delhiCatalog=[
     ],
     "why": "Khan Market’s legendary roll pioneer founded by Haji Banda Hasan in 1972, celebrated for tender charcoal-grilled rolls."
   },
-{
+  {
     "id": "del-town-hall",
     "name": "Town Hall",
     "area": "Khan Market",
@@ -1619,7 +1627,7 @@ const delhiCatalog=[
     ],
     "why": "Khan Market’s premier contemporary Pan-Asian hotspot, revered for masterfully crafted sushi by Chef Augusto Cabrera."
   },
-{
+  {
     "id": "del-sodabottleopenerwala",
     "name": "SodaBottleOpenerWala",
     "area": "Khan Market",
@@ -1667,7 +1675,7 @@ const delhiCatalog=[
     ],
     "why": "Vibrant, whimsical tribute to dying Bombay Irani cafes serving rich Berry Pulao and authentic Dhansak."
   },
-{
+  {
     "id": "del-baba-nagpal",
     "name": "Baba Nagpal Corner",
     "area": "Lajpat Nagar 4",
@@ -1712,7 +1720,7 @@ const delhiCatalog=[
     ],
     "why": "South Delhi’s beloved Chole Bhature heavyweight in Lajpat Nagar, famous for aromatic dark chole and fluffy bhaturas."
   },
-{
+  {
     "id": "del-dolma-aunty",
     "name": "Dolma Aunty Momos",
     "area": "Lajpat Nagar 2",
@@ -1758,7 +1766,7 @@ const delhiCatalog=[
     ],
     "why": "Delhi’s pioneer street momo stall, introducing Tibetan steamed momos to Central Market back in 1994."
   },
-{
+  {
     "id": "del-chache-di-hatti",
     "name": "Chache Di Hatti",
     "area": "Kamla Nagar",
@@ -1804,7 +1812,7 @@ const delhiCatalog=[
     ],
     "why": "Delhi University’s sacred breakfast institution since 1953, famous for herb-flecked aloo-stuffed bhaturas."
   },
-{
+  {
     "id": "del-ricos",
     "name": "Ricos",
     "area": "Hudson Lane",
@@ -1851,7 +1859,7 @@ const delhiCatalog=[
     ],
     "why": "The premier European student cafe in Hudson Lane, known for giant burgers, creamy pastas, and bookish charm."
   },
-{
+  {
     "id": "del-comorin",
     "name": "Comorin",
     "area": "Golf Course Road, Gurugram",
@@ -1900,7 +1908,7 @@ const delhiCatalog=[
     ],
     "why": "Award-winning modern Indian comfort diner in Two Horizon Center celebrating forgotten regional delicacies."
   },
-{
+  {
     "id": "del-burma-burma",
     "name": "Burma Burma",
     "area": "Cyber Hub, Gurugram",
@@ -1950,7 +1958,7 @@ const delhiCatalog=[
     ],
     "why": "Cyber Hub’s celebrated vegetarian restaurant and tearoom showcasing authentic Burmese culinary heritage and Khow Suey."
   },
-{
+  {
     "id": "del-cyber-hub-social",
     "name": "Cyber Hub Social",
     "area": "Cyber Hub, Gurugram",
@@ -1998,7 +2006,7 @@ const delhiCatalog=[
     ],
     "why": "Gurugram’s flagship high-energy collaborative workspace and evening pub in the beating center of Cyber Hub."
   },
-{
+  {
     "id": "del-roots-cafe",
     "name": "Roots - Cafe in the Park",
     "area": "Sector 29, Gurugram",
@@ -2046,7 +2054,7 @@ const delhiCatalog=[
     ],
     "why": "Serene open-air cafe in Rajiv Gandhi Energy Park serving wholesome breakfast dishes surrounded by green trees."
   },
-{
+  {
     "id": "del-daryaganj",
     "name": "Daryaganj - By The Inventors of Butter Chicken",
     "area": "Aerocity",
@@ -2094,7 +2102,7 @@ const delhiCatalog=[
     ],
     "why": "Revival restaurant by Kundan Lal Jaggi’s descendants preserving the authentic 1947 butter chicken recipe."
   },
-{
+  {
     "id": "del-yeti-himalayan",
     "name": "Yeti - The Himalayan Kitchen",
     "area": "Hauz Khas Village",
@@ -2142,7 +2150,7 @@ const delhiCatalog=[
     ],
     "why": "Beloved Himalayan haven in Hauz Khas Village serving soulful Tibetan, Nepalese, and Bhutanese delicacies."
   },
-{
+  {
     "id": "del-coast-cafe",
     "name": "Coast Cafe",
     "area": "Hauz Khas Village",
@@ -2191,7 +2199,7 @@ const delhiCatalog=[
     ],
     "why": "Airy coastal cafe nestled above Ogaan boutique in Hauz Khas, famed for fluffy appams and delicate Kerala stews."
   },
-{
+  {
     "id": "del-haveli-dharampura",
     "name": "Lakhori - Haveli Dharampura",
     "area": "Old Delhi",
@@ -2239,7 +2247,7 @@ const delhiCatalog=[
     ],
     "why": "UNESCO-awarded 19th-century Mughal haveli offering royal Shahjahanabad cuisine and breathtaking Old Delhi rooftop views."
   },
-{
+  {
     "id": "del-bittoo-tikki",
     "name": "Bittoo Tikki Wala (BTW Flagship)",
     "area": "Pitampura",
@@ -2284,7 +2292,7 @@ const delhiCatalog=[
     ],
     "why": "North Delhi’s chaat empire, famous for shatteringly crisp double-fried Aloo Tikkis and rich Dahi Bhallas."
   },
-{
+  {
     "id": "del-paul-bakery",
     "name": "Paul",
     "area": "Ambience Mall, Gurugram",
@@ -2331,7 +2339,7 @@ const delhiCatalog=[
     ],
     "why": "Renowned 1889 French bakery in Ambience Mall serving authentic viennoiserie, gourmet quiches, and Parisian coffee."
   },
-{
+  {
     "id": "del-moti-mahal",
     "name": "Moti Mahal",
     "area": "Daryaganj",
@@ -2374,7 +2382,7 @@ const delhiCatalog=[
     ],
     "why": "The historic 1947 birthplace of Butter Chicken, Dal Makhani, and Tandoori Chicken in Daryaganj."
   },
-{
+  {
     "id": "del-gulati",
     "name": "Gulati Restaurant",
     "area": "Pandara Road Market",
@@ -2416,7 +2424,7 @@ const delhiCatalog=[
     ],
     "why": "Pandara Road's reigning Mughlai powerhouse renowned for its silky butter chicken and midnight dining buzz."
   },
-{
+  {
     "id": "del-havemore",
     "name": "Havemore",
     "area": "Pandara Road Market",
@@ -2459,7 +2467,7 @@ const delhiCatalog=[
     ],
     "why": "Legendary Pandara Road culinary landmark celebrated for tangy butter chicken and charred tandoori specialties."
   },
-{
+  {
     "id": "del-roshan-di-kulfi",
     "name": "Roshan Di Kulfi",
     "area": "Karol Bagh",
@@ -2501,7 +2509,7 @@ const delhiCatalog=[
     ],
     "why": "Iconic 1958 Karol Bagh destination famed for saffron-pistachio kulfi falooda and fluffy chole bhature."
   },
-{
+  {
     "id": "del-sita-ram-diwan-chand",
     "name": "Sita Ram Diwan Chand",
     "area": "Paharganj",
@@ -2543,7 +2551,7 @@ const delhiCatalog=[
     ],
     "why": "Paharganj's legendary breakfast institution celebrated across India for paneer-stuffed bhaturas and dark spiced chole."
   },
-{
+  {
     "id": "del-aslam-chicken",
     "name": "Aslam Chicken",
     "area": "Jama Masjid / Matia Mahal",
@@ -2585,7 +2593,7 @@ const delhiCatalog=[
     ],
     "why": "Viral Old Delhi sensation famed for charcoal-grilled chicken submerged in melted butter and spiced yogurt."
   },
-{
+  {
     "id": "del-kake-da-hotel",
     "name": "Kake Da Hotel",
     "area": "Connaught Place / Outer Circle",
@@ -2629,7 +2637,7 @@ const delhiCatalog=[
     ],
     "why": "Historic 1931 Connaught Place dhabba famous for rich desi-ghee curries and slow-simmered keema."
   },
-{
+  {
     "id": "del-minar",
     "name": "Minar",
     "area": "Connaught Place / M Block",
@@ -2672,7 +2680,7 @@ const delhiCatalog=[
     ],
     "why": "Vintage Connaught Place Mughlai dining room renowned for balanced rogan josh and classic Murgh Makhani."
   },
-{
+  {
     "id": "del-al-jawahar",
     "name": "Al Jawahar",
     "area": "Jama Masjid / Gate 1",
@@ -2714,7 +2722,7 @@ const delhiCatalog=[
     ],
     "why": "Legendary 1948 Jama Masjid institution famed for velvety slow-simmered Mutton Nihari and fluffy Khameeri rotis."
   },
-{
+  {
     "id": "del-wengers-deli",
     "name": "Wenger's Deli",
     "area": "Connaught Place / A Block",
@@ -2757,7 +2765,7 @@ const delhiCatalog=[
     ],
     "why": "Connaught Place bakery counter by the historic 1926 Wenger's serving pressed paninis and Belgian waffles."
   },
-{
+  {
     "id": "del-rajinder-da-dhaba",
     "name": "Rajinder Da Dhaba",
     "area": "Safdarjung Enclave",
@@ -2800,7 +2808,7 @@ const delhiCatalog=[
     ],
     "why": "Safdarjung's bustling open-air meat hub famed for mutton galouti rolls and car-bonnet dining."
   },
-{
+  {
     "id": "del-saravana-bhavan-cp",
     "name": "Saravana Bhavan",
     "area": "Janpath / Connaught Place",
@@ -2843,7 +2851,7 @@ const delhiCatalog=[
     ],
     "why": "Janpath institution delivering gold-standard South Indian ghee roasts, sambar idlis, and piping filter coffee."
   },
-{
+  {
     "id": "del-natraj-dahi-bhalla",
     "name": "Natraj Dahi Bhalle Corner",
     "area": "Chandni Chowk",
@@ -2885,7 +2893,7 @@ const delhiCatalog=[
     ],
     "why": "Chandni Chowk landmark dishing out cloud-soft dahi bhallas and griddled aloo tikkis since 1940."
   },
-{
+  {
     "id": "del-kuremal-kulfi",
     "name": "Kuremal Mohan Lal Kulfi Wale",
     "area": "Chawri Bazar / Sitaram Bazar",
@@ -2927,7 +2935,7 @@ const delhiCatalog=[
     ],
     "why": "Century-old 1906 Old Delhi master of stuffed real-fruit kulfis including whole mango and spiced jamun."
   },
-{
+  {
     "id": "del-cool-point",
     "name": "Cool Point",
     "area": "Jama Masjid / Matia Mahal",
@@ -2969,7 +2977,7 @@ const delhiCatalog=[
     ],
     "why": "Jama Masjid dessert royalty renowned for golden syrup-soaked Shahi Tukda blanketed in reduced rabdi."
   },
-{
+  {
     "id": "del-big-chill",
     "name": "The Big Chill Cafe",
     "area": "Khan Market",
@@ -3012,7 +3020,7 @@ const delhiCatalog=[
     ],
     "why": "Delhi's beloved Khan Market Italian institution adored for cheesy baked pastas and world-class Banoffee pie."
   },
-{
+  {
     "id": "del-olive-bar-kitchen",
     "name": "Olive Bar & Kitchen",
     "area": "Mehrauli",
@@ -3055,7 +3063,7 @@ const delhiCatalog=[
     ],
     "why": "Mehrauli's iconic white-gravel Mediterranean courtyard beneath a banyan tree near the Qutub Minar."
   },
-{
+  {
     "id": "del-indian-accent",
     "name": "Indian Accent",
     "area": "The Lodhi / Lodhi Road",
@@ -3099,7 +3107,7 @@ const delhiCatalog=[
     ],
     "why": "India's globally celebrated gastronomic flagship at The Lodhi pioneering progressive Indian tasting menus."
   },
-{
+  {
     "id": "del-cafe-lota",
     "name": "Cafe Lota",
     "area": "Pragati Maidan / National Crafts Museum",
@@ -3142,7 +3150,7 @@ const delhiCatalog=[
     ],
     "why": "Serene bamboo-canopied crafts museum cafe reimagining diverse regional Indian tribal and heritage recipes."
   },
-{
+  {
     "id": "del-carnatic-cafe",
     "name": "Carnatic Cafe",
     "area": "Greater Kailash 2 / GK2",
@@ -3185,7 +3193,7 @@ const delhiCatalog=[
     ],
     "why": "GK2 South Indian specialty cafe famous for buttery, crispy Bangalore-style Malleshwaram dosas."
   },
-{
+  {
     "id": "del-diggin",
     "name": "Diggin",
     "area": "Chanakyapuri / Santushti",
@@ -3205,7 +3213,9 @@ const delhiCatalog=[
       "brick arches and ivy",
       "artisan ravioli",
       "jalapeno poppers",
-      "chanakyapuri romantic"
+      "chanakyapuri romantic",
+      "Late night Italian cafe",
+      "Evening fairy light cafe"
     ],
     "a": [
       "quiet"
@@ -3226,9 +3236,10 @@ const delhiCatalog=[
       "crisp stone-baked pizzas, creamy aglio e olio, and comforting shakes",
       "one of the prettiest and most photogenic cafe settings in the entire capital"
     ],
-    "why": "Ivy-clad European cottage cafe in Chanakyapuri renowned for stone-baked pizzas and romantic fairy-lit patios."
+    "why": "Ivy-clad European cottage cafe in Chanakyapuri renowned for stone-baked pizzas and romantic fairy-lit patios.",
+    "hours": "11:30 AM – 11:30 PM"
   },
-{
+  {
     "id": "del-jung-bahadur-kachori",
     "name": "Jung Bahadur Kachori Wala",
     "area": "Chandni Chowk / Maliwara",
@@ -3269,7 +3280,7 @@ const delhiCatalog=[
     ],
     "why": "Old Delhi 1971 street legend serving crackling urad-dal kachoris swimming in fiery hing-spiced aloo gravy."
   },
-{
+  {
     "id": "del-laxman-fast-food",
     "name": "Laxman Fast Food",
     "area": "Qutab Institutional Area",
@@ -3312,7 +3323,7 @@ const delhiCatalog=[
     ],
     "why": "Cult South Delhi roadside dhabba in Qutab area famed for butter-soaked keema paranthas and midnight chai."
   },
-{
+  {
     "id": "del-shankar-market-rajma",
     "name": "Shankar Market Rajma Chawal Corner",
     "area": "Connaught Place / Shankar Market",
@@ -3354,7 +3365,7 @@ const delhiCatalog=[
     ],
     "why": "Historic Shankar Market lunch counter serving Delhi's ultimate comfort plates of velvety Rajma Chawal."
   },
-{
+  {
     "id": "del-ama-cafe",
     "name": "AMA Cafe",
     "area": "Majnu Ka Tilla (MKT)",
@@ -3374,7 +3385,9 @@ const delhiCatalog=[
       "fluffy pancakes",
       "cinnamon rolls",
       "mud cake",
-      "himalayan breakfast"
+      "himalayan breakfast",
+      "Late night student cafe",
+      "Evening Himalayan cafe"
     ],
     "a": [
       "lively"
@@ -3395,9 +3408,10 @@ const delhiCatalog=[
       "sensational fluffy american pancakes, warm cinnamon rolls, and rich chocolate mud cake",
       "peaceful sanctuary buzzing with travellers, monks, and students"
     ],
-    "why": "Majnu Ka Tilla's iconic Tibetan cafe beloved for all-day Himalayan breakfasts, fluffy pancakes, and fresh pastries."
+    "why": "Majnu Ka Tilla's iconic Tibetan cafe beloved for all-day Himalayan breakfasts, fluffy pancakes, and fresh pastries.",
+    "hours": "8:00 AM – 11:30 PM"
   },
-{
+  {
     "id": "del-tom-uncles-maggi",
     "name": "Tom Uncle's Maggi Point",
     "area": "North Campus / Maurice Nagar",
@@ -3439,7 +3453,7 @@ const delhiCatalog=[
     ],
     "why": "North Campus institution operating since 1978 serving 50+ varieties of spiced butter and cheese Maggi."
   },
-{
+  {
     "id": "del-qds-restaurant",
     "name": "QD's Restaurant",
     "area": "Hudson Lane / GTB Nagar",
@@ -3481,7 +3495,7 @@ const delhiCatalog=[
     ],
     "why": "Hudson Lane student powerhouse famed as the original creator of Delhi's charred Tandoori Momos."
   },
-{
+  {
     "id": "del-byd-cafe",
     "name": "Big Yellow Door (BYD)",
     "area": "Hudson Lane / GTB Nagar",
@@ -3524,7 +3538,7 @@ const delhiCatalog=[
     ],
     "why": "Beloved Hudson Lane student cafe known for its crooked yellow doorway, cheese bomb burgers, and baked nachos."
   },
-{
+  {
     "id": "del-momos-point",
     "name": "Momos Point",
     "area": "Kamla Nagar",
@@ -3567,7 +3581,7 @@ const delhiCatalog=[
     ],
     "why": "Kamla Nagar staple serving authentic juicy steamed and pan-fried Tibetan momos since the 1990s."
   },
-{
+  {
     "id": "del-sudama-tea",
     "name": "Sudama Tea Stall & Student Adda",
     "area": "North Campus / Delhi School of Economics",
@@ -3608,7 +3622,7 @@ const delhiCatalog=[
     ],
     "why": "Legendary DU North Campus tea adda outside D-School where students gather for fragrant kulhad chai and discussions."
   },
-{
+  {
     "id": "del-privee-club",
     "name": "Priveé Nightclub",
     "area": "Shangri-La's Eros Hotel / Connaught Place",
@@ -3651,7 +3665,7 @@ const delhiCatalog=[
     ],
     "why": "Delhi's premier luxury mega-club at Shangri-La Eros featuring massive LED staging, top EDM DJs, and VIP nightlife."
   },
-{
+  {
     "id": "del-soho-club",
     "name": "Soho-Delhi",
     "area": "The Ashok Hotel / Chanakyapuri",
@@ -3694,7 +3708,7 @@ const delhiCatalog=[
     ],
     "why": "Super-luxury Chanakyapuri nightclub inside The Ashok Hotel hosting international touring DJs and elite dance parties."
   },
-{
+  {
     "id": "del-playboy-club",
     "name": "Playboy Club New Delhi",
     "area": "Samrat Hotel / Chanakyapuri",
@@ -3737,7 +3751,7 @@ const delhiCatalog=[
     ],
     "why": "High-voltage Chanakyapuri nightclub at Samrat Hotel featuring cavernous sound, VIP lounges, and luxury clubbing."
   },
-{
+  {
     "id": "del-toy-room",
     "name": "Toy Room Delhi",
     "area": "Aloft Hotel / Aerocity",
@@ -3780,7 +3794,7 @@ const delhiCatalog=[
     ],
     "why": "Aerocity's high-energy hip-hop and commercial dance club featuring mascot Frank the Bear and luxury party tables."
   },
-{
+  {
     "id": "del-dear-donna",
     "name": "Dear Donna",
     "area": "Qutub Institutional Area",
@@ -3823,7 +3837,7 @@ const delhiCatalog=[
     ],
     "why": "South Delhi's stylish glasshouse lounge turning into a high-octane dance club on weekends with craft cocktails."
   },
-{
+  {
     "id": "del-diablo",
     "name": "Diablo",
     "area": "Mehrauli",
@@ -3866,7 +3880,7 @@ const delhiCatalog=[
     ],
     "why": "Mehrauli's dramatic gothic party lounge celebrated for theatrical cocktails, striking architecture, and weekend DJ sets."
   },
-{
+  {
     "id": "del-bo-tai",
     "name": "Bo-Tai",
     "area": "Mehrauli",
@@ -3909,7 +3923,7 @@ const delhiCatalog=[
     ],
     "why": "High-energy Mehrauli rooftop destination offering modern Thai gastronomy, craft mixology, and illuminated Qutub views."
   },
-{
+  {
     "id": "del-kitty-su",
     "name": "Kitty Su New Delhi",
     "area": "The Lalit / Barakhamba Road",
@@ -3952,7 +3966,7 @@ const delhiCatalog=[
     ],
     "why": "World-renowned multi-room nightclub at The Lalit featuring Void Acoustics sound and global EDM heavyweights."
   },
-{
+  {
     "id": "del-summer-house",
     "name": "Summer House Cafe",
     "area": "Aurobindo Market / Hauz Khas",
@@ -3995,7 +4009,7 @@ const delhiCatalog=[
     ],
     "why": "Iconic Aurobindo Market rooftop party house celebrated for live gigs, electric dance terraces, and cultural history."
   },
-{
+  {
     "id": "del-cyber-hub-social",
     "name": "Cyber Hub Social",
     "area": "DLF Cyber Hub / Gurugram",

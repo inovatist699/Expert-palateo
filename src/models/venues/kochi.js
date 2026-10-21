@@ -1,5 +1,5 @@
 const kochiCatalog=[
-{
+  {
     "id": "koc-kashi-art",
     "name": "Kashi Art Cafe",
     "area": "Fort Kochi",
@@ -20,7 +20,9 @@ const kochiCatalog=[
     "t": [
       "Bohemian Art Gallery",
       "Chocolate Cake",
-      "Heritage"
+      "Heritage",
+      "Late night art cafe",
+      "Night dessert & coffee"
     ],
     "a": [
       "quiet",
@@ -43,9 +45,10 @@ const kochiCatalog=[
       "cold press juices",
       "historic fort kochi calmness"
     ],
-    "why": "Art gallery courtyard cafe synonymous with Fort Kochi’s slow bohemian lifestyle."
+    "why": "Art gallery courtyard cafe synonymous with Fort Kochi’s slow bohemian lifestyle.",
+    "hours": "8:30 AM – 11:30 PM"
   },
-{
+  {
     "id": "koc-grand-pavilion",
     "name": "Grand Pavilion",
     "area": "MG Road",
@@ -91,7 +94,7 @@ const kochiCatalog=[
     ],
     "why": "Kochi’s definitive institution for spiced Karimeen Pollichathu and lace appams."
   },
-{
+  {
     "id": "koc-paragon",
     "name": "Paragon Restaurant",
     "area": "Lulu Mall & Ernakulam",
@@ -137,7 +140,7 @@ const kochiCatalog=[
     ],
     "why": "World-renowned culinary jewel of Kerala celebrated internationally for legendary Malabar biryani."
   },
-{
+  {
     "id": "koc-dhe-puttu",
     "name": "Dhe Puttu",
     "area": "Edappally",
@@ -183,7 +186,7 @@ const kochiCatalog=[
     ],
     "why": "Unique culinary concept celebrating Kerala’s indigenous steamed rice cake (puttu) with rich regional gravies."
   },
-{
+  {
     "id": "koc-kayees",
     "name": "Kayees Rahmathulla Hotel",
     "area": "Mattancherry",
@@ -228,7 +231,7 @@ const kochiCatalog=[
     ],
     "why": "Legendary 1948 port joint in Mattancherry revered as the holy grail of authentic Kochi mutton biryani."
   },
-{
+  {
     "id": "koc-brunton",
     "name": "Brunton Boatyard - History Restaurant",
     "area": "Fort Kochi",
@@ -275,7 +278,7 @@ const kochiCatalog=[
     ],
     "why": "Heritage fine dining venue on Kochi harbour celebrating the cuisines of 32 cultures that shaped Cochin."
   },
-{
+  {
     "id": "koc-dal-roti",
     "name": "Dal Roti",
     "area": "Fort Kochi",
@@ -321,7 +324,7 @@ const kochiCatalog=[
     ],
     "why": "Cult Fort Kochi hideaway famed for gigantic gourmet kathi rolls and comforting homestyle curries."
   },
-{
+  {
     "id": "koc-french-toast",
     "name": "French Toast",
     "area": "Panampilly Nagar",
@@ -367,7 +370,7 @@ const kochiCatalog=[
     ],
     "why": "Chic bakery and breakfast cafe serving artisanal European bakes and golden brioche toasts."
   },
-{
+  {
     "id": "koc-fusion-bay",
     "name": "Fusion Bay",
     "area": "Fort Kochi",
@@ -413,7 +416,7 @@ const kochiCatalog=[
     ],
     "why": "Intimate Fort Kochi seafood secret celebrated for explosive coastal coconut spices and fresh catches."
   },
-{
+  {
     "id": "koc-pepper-house",
     "name": "Pepper House Cafe",
     "area": "Fort Kochi",
@@ -433,7 +436,8 @@ const kochiCatalog=[
     "t": [
       "Historic Dutch Warehouse",
       "Waterfront Lawn",
-      "Art Library"
+      "Art Library",
+      "Late night waterfront cafe"
     ],
     "a": [
       "quiet",
@@ -456,9 +460,10 @@ const kochiCatalog=[
       "refreshing passion fruit iced tea and carrot cake",
       "unmatched calm historic heritage vibe"
     ],
-    "why": "Historic waterfront Dutch spice warehouse converted into an art library cafe right beside the harbour waves."
+    "why": "Historic waterfront Dutch spice warehouse converted into an art library cafe right beside the harbour waves.",
+    "hours": "9:30 AM – 11:30 PM"
   },
-{
+  {
     "id": "koc-paragon",
     "name": "Paragon Restaurant",
     "area": "Lulu / Marine Drive",
@@ -501,7 +506,7 @@ const kochiCatalog=[
     ],
     "why": "Legendary Malabar culinary empire revered globally for fragrant Malabar Dum Biryani and coconut Fish Mango Curry."
   },
-{
+  {
     "id": "koc-grand-hotel",
     "name": "Grand Hotel Restaurant",
     "area": "MG Road",
@@ -544,7 +549,7 @@ const kochiCatalog=[
     ],
     "why": "Historic MG Road institution famous for banana-leaf wrapped Karimeen Pollichathu and traditional Kerala meals."
   },
-{
+  {
     "id": "koc-dhe-puttu",
     "name": "Dhe Puttu",
     "area": "Edappally / NH Bypass",
@@ -587,7 +592,7 @@ const kochiCatalog=[
     ],
     "why": "Popular Edappally destination showcasing Kerala's steamed Puttu in sweet and fiery savory variations."
   },
-{
+  {
     "id": "koc-kashi-art-cafe",
     "name": "Kashi Art Cafe",
     "area": "Fort Kochi / Burgher Street",
@@ -607,7 +612,9 @@ const kochiCatalog=[
       "signature chocolate cake",
       "fresh cold pressed juices",
       "poached eggs",
-      "sculpture courtyard"
+      "sculpture courtyard",
+      "Late night art cafe",
+      "Night dessert & coffee"
     ],
     "a": [
       "quiet"
@@ -628,9 +635,10 @@ const kochiCatalog=[
       "their legendary warm chocolate cake with molten fudge is celebrated worldwide",
       "fresh artisanal sourdough breakfasts and organic coffees in the heart of historic Fort Kochi"
     ],
-    "why": "Historic Fort Kochi bohemian sanctuary combining contemporary art galleries with legendary molten chocolate cake."
+    "why": "Historic Fort Kochi bohemian sanctuary combining contemporary art galleries with legendary molten chocolate cake.",
+    "hours": "8:30 AM – 11:30 PM"
   },
-{
+  {
     "id": "koc-fort-harbour",
     "name": "Fort Harbour Restaurant",
     "area": "Fort Kochi / Tower Road",
@@ -690,7 +698,9 @@ const kochiCatalog=[
     "review_count": 1650,
     "t": [
       "Cafe",
-      "Dessert"
+      "Dessert",
+      "Late night cafe",
+      "Midnight chocolate lounge"
     ],
     "a": [
       "modern",
@@ -710,7 +720,8 @@ const kochiCatalog=[
       "chicken melt sandwich",
       "chilled mocha frappe",
       "infopark crowd hub"
-    ]
+    ],
+    "hours": "11:00 AM – 11:30 PM"
   },
   {
     "id": "koc-cafe-17-edappally",
@@ -730,7 +741,8 @@ const kochiCatalog=[
     "rating": 4.6,
     "review_count": 1120,
     "t": [
-      "Cafe"
+      "Cafe",
+      "Late night bistro & cafe"
     ],
     "a": [
       "cozy",
@@ -750,9 +762,10 @@ const kochiCatalog=[
       "creamy carbonara pasta",
       "filter coffee cold brew",
       "comfortable corner booths"
-    ]
+    ],
+    "hours": "11:00 AM – 11:30 PM"
   },
-{
+  {
     "id": "koc-brindhavan-palarivattom",
     "name": "Brindhavan Veg Restaurant",
     "area": "Palarivattom",
@@ -761,9 +774,9 @@ const kochiCatalog=[
     "longitude": 76.30704643,
     "address": "32/2352-A-16, Near Kalavath Tower, Civil Line Road, Palarivattom, Kochi",
     "c": [
-        "South Indian",
-        "North Indian",
-        "Indo-Chinese"
+      "South Indian",
+      "North Indian",
+      "Indo-Chinese"
     ],
     "p": "under_500",
     "displayPrice": "₹300 for two",
@@ -771,13 +784,13 @@ const kochiCatalog=[
     "review_count": 773,
     "ratingSource": "District",
     "t": [
-        "Restaurant"
+      "Restaurant"
     ],
     "a": [],
     "o": [],
     "dietaryOptions": [
-        "vegetarian",
-        "pure_veg"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🍽️",
     "maps": "https://www.google.com/maps/search/?api=1&query=10.00322957,76.30704643",
@@ -785,11 +798,11 @@ const kochiCatalog=[
     "source_url": "https://www.district.in/dining/kochi/brindhavan-veg-restaurant-palarivattom",
     "source_updated_at": "2026-10-21",
     "dietary_sources": [
-        "https://brindhavan.in/",
-        "https://brindhavan.in/contact-us/"
+      "https://brindhavan.in/",
+      "https://brindhavan.in/contact-us/"
     ]
-},
-{
+  },
+  {
     "id": "koc-gokul-oottupura-kadavanthra",
     "name": "Gokul Oottupura",
     "area": "Kadavanthra",
@@ -798,8 +811,8 @@ const kochiCatalog=[
     "longitude": 76.299254559,
     "address": "54/3177, 37/434 A, Near Akshya Hospital, Kaloor - Kadavanthara Road, Kadavanthra, Kochi",
     "c": [
-        "South Indian",
-        "Kerala"
+      "South Indian",
+      "Kerala"
     ],
     "p": "under_500",
     "displayPrice": "₹300 for two",
@@ -807,13 +820,13 @@ const kochiCatalog=[
     "review_count": 218,
     "ratingSource": "District",
     "t": [
-        "Restaurant"
+      "Restaurant"
     ],
     "a": [],
     "o": [],
     "dietaryOptions": [
-        "vegetarian",
-        "pure_veg"
+      "vegetarian",
+      "pure_veg"
     ],
     "emoji": "🍽️",
     "maps": "https://www.google.com/maps/search/?api=1&query=9.9693096059,76.299254559",
@@ -821,8 +834,8 @@ const kochiCatalog=[
     "source_url": "https://www.district.in/dining/kochi/gokul-oottupura-kadavanthra",
     "source_updated_at": "2026-10-21",
     "dietary_sources": [
-        "https://gokuloottupura.in/pure-veg-dining-in-kochi-why-gokul-oottupura-leads-the-way/",
-        "https://gokuloottupura.in/outlets/"
+      "https://gokuloottupura.in/pure-veg-dining-in-kochi-why-gokul-oottupura-leads-the-way/",
+      "https://gokuloottupura.in/outlets/"
     ]
-}
+  }
 ];

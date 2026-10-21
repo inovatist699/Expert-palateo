@@ -142,8 +142,7 @@ async function mountStreetMap(host){
  try{
   await loadMapLibrary();if(!host.isConnected||document.getElementById('streetMap')!==host)return;
   const c=cityCenters[cityName()]||cityCenters.Ahmedabad;
-  const currentStyle=googleMapStyles[currentGoogleMapStyle]||googleMapStyles.roadmap;
-  streetMap=new maplibregl.Map({container:host,style:currentStyle,center:[c[1],c[0]],zoom:12.5,pitch:0,attributionControl:{compact:true},maxPitch:0,dragRotate:false,touchPitch:false,antialias:true,scrollZoom:false,cooperativeGestures:true,renderWorldCopies:false});
+  streetMap=new maplibregl.Map({container:host,style:googleMapStyles.roadmap,center:[c[1],c[0]],zoom:12.5,pitch:0,attributionControl:{compact:true},maxPitch:0,dragRotate:false,touchPitch:false,antialias:true,scrollZoom:false,cooperativeGestures:true,renderWorldCopies:false});
   streetMapCity=cityName();streetMap.addControl(new maplibregl.ScaleControl({maxWidth:90,unit:'metric'}),'bottom-left');
   const map=streetMap;
   const timeout=setTimeout(()=>{if(streetMap===map&&!map.loaded())mapUnavailable()},15000);
@@ -157,13 +156,6 @@ home=function(){
  const host=document.getElementById('streetMap');
  if(!host){disposeStreetMap();return}
  const container=document.getElementById('zestMapContainer');container.classList.add('streetMapFrame');
- if(!container.querySelector('.mapStyleToggle')){
-  container.insertAdjacentHTML('beforeend',`<div class="mapStyleToggle" role="group" aria-label="Google Map Style">
-    <button type="button" class="mapStyleChip ${currentGoogleMapStyle==='roadmap'?'active':''}" data-action="set-map-style" data-style="roadmap" title="Google Roadmap style">Map</button>
-    <button type="button" class="mapStyleChip ${currentGoogleMapStyle==='satellite'?'active':''}" data-action="set-map-style" data-style="satellite" title="Google Satellite imagery">Satellite</button>
-    <button type="button" class="mapStyleChip ${currentGoogleMapStyle==='terrain'?'active':''}" data-action="set-map-style" data-style="terrain" title="Google Terrain view">Terrain</button>
-  </div>`);
- }
  const legend=container.querySelector('.zestMapLegend');if(legend)legend.innerHTML='<span><i style="background:#d8613d"></i>Food</span><span><i style="background:#2875bb"></i>Cafés</span><span><i style="background:#9753a8"></i>Desserts</span><span><i style="background:#28845a"></i>Regional</span>';
  const notice=container.querySelector('.mapNotice');if(notice)notice.textContent=streetPlaces.filter(hasCoordinates).length+' recommendations mapped · Select a pin to explore. Directions opens Google Maps.';
  mountStreetMap(host);
@@ -181,19 +173,6 @@ document.addEventListener('click',event=>{
  if(control.hasAttribute('data-street-retry')){event.preventDefault();disposeStreetMap();home();return}
  if(!streetMap||!document.querySelector('.streetMapFrame'))return;
  const action=control.dataset.action;
- if(action==='set-map-style'||action==='switch-map-style'){
-  event.preventDefault();event.stopImmediatePropagation();
-  const target=control.dataset.style||(currentGoogleMapStyle==='roadmap'?'satellite':currentGoogleMapStyle==='satellite'?'terrain':'roadmap');
-  if(googleMapStyles[target]&&target!==currentGoogleMapStyle){
-   currentGoogleMapStyle=target;
-   document.querySelectorAll('[data-action="set-map-style"]').forEach(b=>b.classList.toggle('active',b.dataset.style===target));
-   if(streetMap){
-    streetMap.setStyle(googleMapStyles[target]);
-    streetMap.once('styledata',()=>{updateStreetMarkers()});
-   }
-  }
-  return;
- }
  if(!['select-pin','close-pin','zoom-in','zoom-out','zoom-reset'].includes(action))return;
  event.preventDefault();event.stopImmediatePropagation();
  if(action==='select-pin'){placePreviewOrigin='select-pin';showStreetPlace(control.dataset.restId)}

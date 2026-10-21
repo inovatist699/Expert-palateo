@@ -88,3 +88,36 @@ function titleCase(str){
   if(!str) return '';
   return String(str).split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
 }
+function isLateNightCafe(r){
+  if(!r) return false;
+  const pool = [...(r.c || []), ...(r.t || [])].map(x => String(x).toLowerCase());
+  const isCafeLike = pool.some(x =>
+    x.includes('cafe') || x.includes('coffee') || x.includes('chai') ||
+    x.includes('tea') || x.includes('bakery') || x.includes('dessert') ||
+    x.includes('ice cream') || x.includes('kulfi') || x.includes('falooda') ||
+    x.includes('bistro') || x.includes('beverage') || x.includes('shakes') ||
+    x.includes('lounge') || x.includes('diner') || x.includes('bakes') ||
+    x.includes('snack') || x.includes('patisserie')
+  );
+  if(!isCafeLike) return false;
+
+  const corpus = [
+    ...pool,
+    ...(r.review_insights || []),
+    r.why || '',
+    r.hours || r.openTiming || '',
+    r.name || '',
+    r.area || ''
+  ].join(' ').toLowerCase();
+
+  if (/late\s*night|midnight|night\s*owl|open\s*late|after\s*hours|post[- ]midnight|wee\s*hours|24\s*hours|24\/7|night\s*market|night\s*dessert|night\s*buzz|night\s*hub|nightlife|night\s*out|night\s*food|night\s*stall|night\s*hangout|evening\s*hangout|night\s*cafe|night\s*tea|night\s*icon/i.test(corpus)) {
+    return true;
+  }
+
+  const hoursStr = String(r.hours || r.openTiming || '').toLowerCase();
+  if (/(?:11:30\s*pm|11:45\s*pm|12(?::\d{2})?\s*(?:am|midnight)|[1-5](?::\d{2})?\s*am|24\s*hours)/i.test(hoursStr)) {
+    return true;
+  }
+
+  return false;
+}

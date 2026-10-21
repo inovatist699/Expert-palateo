@@ -752,5 +752,80 @@ const goaCatalog=[
       "lemon drizzle cake",
       "peaceful south goa sanctuary"
     ]
-  }
+  },
+{
+    "id": "goa-navtara-panaji",
+    "name": "Navtara Veg Restaurant",
+    "area": "Panaji / Municipal Market",
+    "city": "Goa",
+    "latitude": 15.4994768,
+    "longitude": 73.8231022,
+    "address": "Ground Floor, Municipal Market Area, Tiswadi, Panaji, Goa",
+    "c": [
+        "North Indian",
+        "South Indian",
+        "Indo-Chinese",
+        "Goan"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹1000 for two",
+    "rating": 4,
+    "review_count": 1022,
+    "ratingSource": "District",
+    "t": [
+        "Restaurant"
+    ],
+    "a": [],
+    "o": [],
+    "dietaryOptions": [
+        "vegetarian",
+        "pure_veg"
+    ],
+    "emoji": "🍽️",
+    "maps": "https://www.google.com/maps/search/?api=1&query=15.4994768,73.8231022",
+    "description": "Vegetarian-only restaurant in Panaji / Municipal Market.",
+    "source_url": "https://www.district.in/dining/goa/navtara-veg-restaurant-panaji",
+    "source_updated_at": "2026-10-21",
+    "dietary_sources": [
+        "https://navtara.in/",
+        "https://navtara.in/about-us/"
+    ]
+},
+{
+    "id": "goa-cafe-tato-patto",
+    "name": "Cafe Tato - Since 1913",
+    "area": "Patto / Panaji",
+    "city": "Goa",
+    "latitude": 15.493886,
+    "longitude": 73.8358837,
+    "address": "1/280/1, Plot 8, Shop G9, Gera Imperium, EDC Complex, Panaji, Goa",
+    "c": [
+        "North Indian",
+        "South Indian",
+        "Goan",
+        "Street Food"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹600 for two",
+    "rating": 4.1,
+    "review_count": 190,
+    "ratingSource": "District",
+    "t": [
+        "Restaurant"
+    ],
+    "a": [],
+    "o": [],
+    "dietaryOptions": [
+        "vegetarian",
+        "pure_veg"
+    ],
+    "emoji": "🍽️",
+    "maps": "https://www.google.com/maps/search/?api=1&query=15.493886,73.8358837",
+    "description": "Vegetarian-only restaurant in Patto / Panaji.",
+    "source_url": "https://www.district.in/dining/goa/cafe-tato-since-1913-panaji",
+    "source_updated_at": "2026-10-21",
+    "dietary_sources": [
+        "https://www.swiggy.com/restaurants/central-goa/panjim/cafe-tato-483519/dineout"
+    ]
+}
 ];

@@ -751,5 +751,78 @@ const kochiCatalog=[
       "filter coffee cold brew",
       "comfortable corner booths"
     ]
-  }
+  },
+{
+    "id": "koc-brindhavan-palarivattom",
+    "name": "Brindhavan Veg Restaurant",
+    "area": "Palarivattom",
+    "city": "Kochi",
+    "latitude": 10.00322957,
+    "longitude": 76.30704643,
+    "address": "32/2352-A-16, Near Kalavath Tower, Civil Line Road, Palarivattom, Kochi",
+    "c": [
+        "South Indian",
+        "North Indian",
+        "Indo-Chinese"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹300 for two",
+    "rating": 4.3,
+    "review_count": 773,
+    "ratingSource": "District",
+    "t": [
+        "Restaurant"
+    ],
+    "a": [],
+    "o": [],
+    "dietaryOptions": [
+        "vegetarian",
+        "pure_veg"
+    ],
+    "emoji": "🍽️",
+    "maps": "https://www.google.com/maps/search/?api=1&query=10.00322957,76.30704643",
+    "description": "Vegetarian-only restaurant in Palarivattom.",
+    "source_url": "https://www.district.in/dining/kochi/brindhavan-veg-restaurant-palarivattom",
+    "source_updated_at": "2026-10-21",
+    "dietary_sources": [
+        "https://brindhavan.in/",
+        "https://brindhavan.in/contact-us/"
+    ]
+},
+{
+    "id": "koc-gokul-oottupura-kadavanthra",
+    "name": "Gokul Oottupura",
+    "area": "Kadavanthra",
+    "city": "Kochi",
+    "latitude": 9.9693096059,
+    "longitude": 76.299254559,
+    "address": "54/3177, 37/434 A, Near Akshya Hospital, Kaloor - Kadavanthara Road, Kadavanthra, Kochi",
+    "c": [
+        "South Indian",
+        "Kerala"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹300 for two",
+    "rating": 4,
+    "review_count": 218,
+    "ratingSource": "District",
+    "t": [
+        "Restaurant"
+    ],
+    "a": [],
+    "o": [],
+    "dietaryOptions": [
+        "vegetarian",
+        "pure_veg"
+    ],
+    "emoji": "🍽️",
+    "maps": "https://www.google.com/maps/search/?api=1&query=9.9693096059,76.299254559",
+    "description": "Vegetarian-only restaurant in Kadavanthra.",
+    "source_url": "https://www.district.in/dining/kochi/gokul-oottupura-kadavanthra",
+    "source_updated_at": "2026-10-21",
+    "dietary_sources": [
+        "https://gokuloottupura.in/pure-veg-dining-in-kochi-why-gokul-oottupura-leads-the-way/",
+        "https://gokuloottupura.in/outlets/"
+    ]
+}
 ];

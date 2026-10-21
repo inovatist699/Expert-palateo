@@ -23,7 +23,7 @@ vm.runInContext(`
  }
  for(const [city,count] of Object.entries(dietaryAudit.bundled_city_counts)){
   selectedCity=city;
-  assert.equal(getActiveCatalog().length,count,city+' must retain its complete catalogue');
+  assert.equal(getActiveCatalog().length,count+(['Kochi','Goa'].includes(city)?2:0),city+' must retain its complete catalogue plus reviewed additions');
  }
  for(const expected of dietaryAudit.source_records){
   selectedCity=expected.city;
@@ -36,6 +36,12 @@ vm.runInContext(`
   const restaurant=getActiveCatalog().find(r=>r.id===id);assert.ok(restaurant,id+' must remain in the catalogue');
   assert.equal(isPureVegRestaurant(restaurant),false,id+' must remain outside Pure veg');
  }
+ for(const [city,ids] of [['Kochi',['koc-brindhavan-palarivattom','koc-gokul-oottupura-kadavanthra']],['Goa',['goa-navtara-panaji','goa-cafe-tato-patto']]]){
+  selectedCity=city;pureVegOnly=true;
+  assert.deepEqual(ranked().map(r=>r.id).sort(),ids.slice().sort(),city+' must show its two verified pure-veg branches');
+  for(const id of ids){const r=getActiveCatalog().find(r=>r.id===id);assert.ok(hasCoordinates(r),id+' needs a verified map position');assert.equal(r.ratingSource,'District');}
+ }
+ pureVegOnly=false;
  selectedCity='Ahmedabad';
  const base={city:'Ahmedabad',c:['Gujarati'],t:['Restaurant'],a:['quiet'],o:['family'],p:'under_500',s:'mild',rating:4.5,review_count:90,latitude:23.0225,longitude:72.5714};
  const pure={...base,id:'pure',name:'Listed pure veg',dietaryOptions:['pure_veg']};

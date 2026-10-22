@@ -60,7 +60,7 @@ html=html.replace('sha256-'+inlineHash(original),'sha256-'+inlineHash(html));
   assert.ok(await page.locator('#aboutSpotHeading').isVisible(),'Current details layout opens without obsolete patches');
   assert.ok(await page.locator('.spotStickyActionBar [data-rest-action="visited"]').isVisible());
   assert.ok(await page.locator('.spotStickyActionBar [data-rest-action="maps"]').isVisible());
-  assert.match(await page.locator('.aboutSpotStatusPill').textContent(),/(Open Now|Closed|Hours)/);
+  assert.match(await page.locator('.aboutSpotStatusPill').textContent(),/Hours unverified/,'Missing hours remain unknown in venue details');
   assert.match(await page.locator('.signatureDishesSection').textContent(),/not a verified menu/);
   const dish=page.locator('.dishVoteBtn.thumbUp').first(),dishId=await dish.getAttribute('data-dish-id');
   await dish.click();assert.equal(await page.evaluate(id=>state.dishFeedback[id],dishId),'love','Details dish votes must teach the learning engine');

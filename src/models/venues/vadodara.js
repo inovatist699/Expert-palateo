@@ -59,7 +59,8 @@ const vadodaraCatalog=[
     "rating": 4.8,
     "review_count": 602,
     "t": [
-      "Cafe"
+      "Cafe",
+      "Late night dessert cafe"
     ],
     "a": [
       "lively"
@@ -77,7 +78,8 @@ const vadodaraCatalog=[
       "french waffles",
       "hot chocolate",
       "casual hangout"
-    ]
+    ],
+    "hours": "11:00 AM – 11:30 PM"
   },
   {
     "id": "vad-golden-point",
@@ -388,7 +390,8 @@ const vadodaraCatalog=[
     "rating": 4.9,
     "review_count": 24,
     "t": [
-      "Cafe"
+      "Cafe",
+      "Late night cafe"
     ],
     "a": [
       "cozy"
@@ -405,7 +408,8 @@ const vadodaraCatalog=[
       "kooky desserts",
       "youth crowd",
       "sweet treats"
-    ]
+    ],
+    "hours": "11:00 AM – 12:00 AM"
   },
   {
     "id": "vad-chacks",
@@ -790,7 +794,7 @@ const vadodaraCatalog=[
   {
     "id": "vad-black-fox-cafe",
     "name": "Black Fox Cafe",
-    "area": "Gokul Nagar",
+    "area": "Sevasi",
     "city": "Vadodara",
     "latitude": 22.3015,
     "longitude": 73.1389,
@@ -905,7 +909,7 @@ const vadodaraCatalog=[
   {
     "id": "vad-finca-restro-cafe",
     "name": "Finca Restro-Cafe",
-    "area": "Gokul Nagar",
+    "area": "Sevasi",
     "city": "Vadodara",
     "latitude": 22.3034,
     "longitude": 73.1398,
@@ -1350,7 +1354,8 @@ const vadodaraCatalog=[
     "t": [
       "Cafe",
       "Desserts",
-      "Live music"
+      "Live music",
+      "Late night cafe"
     ],
     "a": [
       "lively",
@@ -1372,7 +1377,8 @@ const vadodaraCatalog=[
       "thick gourmet shakes",
       "acoustic live music nights",
       "vibrant youth hangout"
-    ]
+    ],
+    "hours": "11:00 AM – 11:30 PM"
   },
   {
     "id": "vad-mahakali-sev-usal",
@@ -4107,7 +4113,8 @@ const vadodaraCatalog=[
     "review_count": 1120,
     "t": [
       "Dessert",
-      "Cafe"
+      "Cafe",
+      "Late night chocolate cafe"
     ],
     "a": [
       "cozy",
@@ -4127,7 +4134,8 @@ const vadodaraCatalog=[
       "fondue platter",
       "thick hot chocolate",
       "live music nights"
-    ]
+    ],
+    "hours": "11:00 AM – 12:00 AM"
   },
   {
     "id": "vad-koa-cafe-manjalpur",
@@ -4453,5 +4461,3073 @@ const vadodaraCatalog=[
       "kitkat shake",
       "weekend chilling"
     ]
+  },
+  {
+    "id": "vad-7-monks-gotri",
+    "name": "7 Monk's Cafe",
+    "area": "Gotri",
+    "city": "Vadodara",
+    "latitude": 22.3168,
+    "longitude": 73.1485,
+    "address": "Near Kunal Char Rasta, Gotri Road, Vadodara 390021",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Fast food",
+      "Italian"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹200–400",
+    "rating": 4.6,
+    "review_count": 720,
+    "t": [
+      "Cafe",
+      "Coffee",
+      "Pasta",
+      "Late night cafe"
+    ],
+    "a": [
+      "cozy",
+      "youthful"
+    ],
+    "o": [
+      "friends",
+      "casual"
+    ],
+    "s": null,
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=7+Monks+Cafe+Gotri+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options"
+    ],
+    "review_insights": [
+      "signature iced cold coffee",
+      "cheesy baked pasta",
+      "chilled evening vibe",
+      "student hangout"
+    ],
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-flavors-lab-gotri",
+    "name": "The Flavors Lab",
+    "area": "Gotri",
+    "city": "Vadodara",
+    "latitude": 22.3182,
+    "longitude": 73.144,
+    "address": "Gotri Main Road, Opposite Yash Complex, Gotri, Vadodara 390021",
+    "c": [
+      "Continental",
+      "Modern Indian",
+      "Cafe",
+      "Mexican"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹400–700",
+    "rating": 4.7,
+    "review_count": 1100,
+    "t": [
+      "Experimental Cuisine",
+      "Artisan Mocktails",
+      "Fine Dine",
+      "Family Dining"
+    ],
+    "a": [
+      "chic",
+      "modern"
+    ],
+    "o": [
+      "date",
+      "family"
+    ],
+    "s": "mild",
+    "emoji": "🍸",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Flavors+Lab+Gotri+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "fusion sliders",
+      "crafted smoking mocktails",
+      "modern plated desserts",
+      "aesthetic date night"
+    ],
+    "hours": "12:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-sasumaa-gotri",
+    "name": "Sasumaa Gujarati Thali",
+    "area": "Gotri",
+    "city": "Vadodara",
+    "latitude": 22.3145,
+    "longitude": 73.1512,
+    "address": "Near Harinagar Char Rasta, Gotri Road, Vadodara 390021",
+    "c": [
+      "Gujarati",
+      "Traditional",
+      "Thali"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹350–550",
+    "rating": 4.6,
+    "review_count": 2100,
+    "t": [
+      "Unlimited Gujarati Thali",
+      "Khaman Dhokla",
+      "Pure Veg",
+      "Family Legend"
+    ],
+    "a": [
+      "traditional",
+      "family"
+    ],
+    "o": [
+      "family",
+      "traditional"
+    ],
+    "s": "mild",
+    "emoji": "🥘",
+    "photo": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sasumaa+Gujarati+Thali+Gotri+Vadodara",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "unlimited royal silver thali",
+      "fresh hot phulkas",
+      "authentic gujarati dal and kadhi",
+      "impeccable hospitality"
+    ],
+    "hours": "11:00 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-madras-bhavan-gotri",
+    "name": "Madras Bhavan",
+    "area": "Gotri",
+    "city": "Vadodara",
+    "latitude": 22.321,
+    "longitude": 73.1425,
+    "address": "Gotri-Sevasi Canal Road, Gotri, Vadodara 390021",
+    "c": [
+      "South Indian",
+      "Breakfast",
+      "Cafe"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹150–350",
+    "rating": 4.7,
+    "review_count": 1890,
+    "t": [
+      "Filter Coffee",
+      "Ghee Roast Dosa",
+      "Garden Seating",
+      "Traditional"
+    ],
+    "a": [
+      "peaceful",
+      "garden",
+      "family"
+    ],
+    "o": [
+      "breakfast",
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Madras+Bhavan+Gotri+Vadodara",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "crispy paper ghee roast",
+      "authentic brass dabara filter coffee",
+      "steaming button idlis",
+      "tranquil garden morning"
+    ],
+    "hours": "7:30 AM – 11:00 PM"
+  },
+  {
+    "id": "vad-koa-cafe-sevasi",
+    "name": "KOA Cafe & Lounge",
+    "area": "Sevasi",
+    "city": "Vadodara",
+    "latitude": 22.3225,
+    "longitude": 73.1165,
+    "address": "Broadway Signature, Sevasi-Bhayli Canal Ring Road, Sevasi, Vadodara 391101",
+    "c": [
+      "Cafe",
+      "Italian",
+      "Continental",
+      "Coffee",
+      "Bakery"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹400–800",
+    "rating": 4.8,
+    "review_count": 2300,
+    "t": [
+      "Cafe",
+      "Rooftop & Lawn",
+      "Live Weekend Music",
+      "Sourdough Pizza",
+      "Late night cafe"
+    ],
+    "a": [
+      "open_air",
+      "aesthetic",
+      "trendy"
+    ],
+    "o": [
+      "date",
+      "friends",
+      "weekend"
+    ],
+    "s": "mild",
+    "emoji": "🌿",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=KOA+Cafe+Sevasi+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "artisan sourdough pizza",
+      "live acoustic weekends",
+      "stunning garden rooftop",
+      "signature specialty brew"
+    ],
+    "hours": "11:00 AM – 12:00 AM"
+  },
+  {
+    "id": "vad-brew-element-sevasi",
+    "name": "The Brew Element Cafe",
+    "area": "Sevasi",
+    "city": "Vadodara",
+    "latitude": 22.326,
+    "longitude": 73.113,
+    "address": "Ankodiya Road, Sevasi, Vadodara 391101",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹250–500",
+    "rating": 4.7,
+    "review_count": 850,
+    "t": [
+      "Specialty Roastery",
+      "Pet Friendly",
+      "Cheesecakes",
+      "Late night cafe"
+    ],
+    "a": [
+      "cozy",
+      "relaxed",
+      "pet_friendly"
+    ],
+    "o": [
+      "coffee",
+      "work",
+      "friends"
+    ],
+    "s": null,
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Brew+Element+Cafe+Sevasi+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options"
+    ],
+    "review_insights": [
+      "manual pour over coffee",
+      "blueberry baked cheesecake",
+      "pet friendly courtyard",
+      "quiet work space"
+    ],
+    "hours": "10:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-birgitta-sevasi",
+    "name": "Birgitta Cafe & Bistro",
+    "area": "Sevasi",
+    "city": "Vadodara",
+    "latitude": 22.3205,
+    "longitude": 73.118,
+    "address": "TP 02, Sevasi-Bhayli Main Road, Sevasi, Vadodara 391101",
+    "c": [
+      "Cafe",
+      "European",
+      "Continental",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹350–650",
+    "rating": 4.6,
+    "review_count": 910,
+    "t": [
+      "Aesthetic European Cafe",
+      "Tiramisu",
+      "Artisan Coffee",
+      "Late night cafe"
+    ],
+    "a": [
+      "chic",
+      "aesthetic",
+      "romantic"
+    ],
+    "o": [
+      "date",
+      "friends"
+    ],
+    "s": "mild",
+    "emoji": "🍰",
+    "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Birgitta+Cafe+Sevasi+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "classic italian tiramisu",
+      "truffle pasta",
+      "aesthetic pastel interiors",
+      "handcrafted mocktails"
+    ],
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-flavor-harbor-sevasi",
+    "name": "Flavor Harbor Multicuisine Restaurant",
+    "area": "Sevasi",
+    "city": "Vadodara",
+    "latitude": 22.324,
+    "longitude": 73.115,
+    "address": "Gotri-Sevasi Main Road, Sevasi, Vadodara 391101",
+    "c": [
+      "North Indian",
+      "Continental",
+      "Tandoori",
+      "Chinese"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹450–750",
+    "rating": 4.6,
+    "review_count": 1650,
+    "t": [
+      "Multi-Cuisine Fine Dine",
+      "Sizzling Platters",
+      "Family Celebrations",
+      "Banquet"
+    ],
+    "a": [
+      "grand",
+      "spacious",
+      "family"
+    ],
+    "o": [
+      "family",
+      "anniversary",
+      "celebration"
+    ],
+    "s": "medium",
+    "emoji": "🍽️",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Flavor+Harbor+Sevasi+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "paneer lababdar sizzler",
+      "crunchy lotus stem",
+      "grand family banquet hall",
+      "warm attentive service"
+    ],
+    "hours": "11:30 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-cafe-appetito-bhayli",
+    "name": "Cafe Appetito Skydeck",
+    "area": "Bhayli",
+    "city": "Vadodara",
+    "latitude": 22.289,
+    "longitude": 73.1265,
+    "address": "Vasna-Bhayli Main Road, Bhayli, Vadodara 391410",
+    "c": [
+      "Cafe",
+      "Italian",
+      "Fast food",
+      "Shakes"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹250–500",
+    "rating": 4.6,
+    "review_count": 1420,
+    "t": [
+      "Skydeck Rooftop",
+      "Woodfired Pizzas",
+      "Late night cafe",
+      "Youth Hub"
+    ],
+    "a": [
+      "rooftop",
+      "panoramic",
+      "lively"
+    ],
+    "o": [
+      "friends",
+      "evening",
+      "date"
+    ],
+    "s": "medium",
+    "emoji": "🌆",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+Appetito+Skydeck+Bhayli+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "skyline sunset terrace",
+      "four cheese pizza",
+      "thick chocolate mud shake",
+      "romantic evening breeze"
+    ],
+    "hours": "11:00 AM – 12:00 AM"
+  },
+  {
+    "id": "vad-pizzaiiolo-bhayli",
+    "name": "Pizzaiiolo - The Wood Fired Pizza & Cafe",
+    "area": "Bhayli",
+    "city": "Vadodara",
+    "latitude": 22.2865,
+    "longitude": 73.1245,
+    "address": "Vasna-Bhayli Main Road, Opposite Nilamber Palms, Bhayli, Vadodara 391410",
+    "c": [
+      "Italian",
+      "Pizza",
+      "Cafe",
+      "Pasta"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹350–700",
+    "rating": 4.8,
+    "review_count": 1680,
+    "t": [
+      "Authentic Woodfired Pizza",
+      "Hand-tossed Crust",
+      "Gelato & Coffee",
+      "Late night cafe"
+    ],
+    "a": [
+      "cozy",
+      "rustic",
+      "italian"
+    ],
+    "o": [
+      "date",
+      "friends",
+      "family"
+    ],
+    "s": "mild",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pizzaiiolo+Wood+Fired+Pizza+Bhayli+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "authentic neapolitan style pizza",
+      "blistered sourdough crust",
+      "fresh burrata salad",
+      "creamy pesto gnocchi"
+    ],
+    "hours": "12:00 PM – 11:30 PM"
+  },
+  {
+    "id": "vad-pind-balluchi-bhayli",
+    "name": "Pind Balluchi",
+    "area": "Bhayli",
+    "city": "Vadodara",
+    "latitude": 22.2912,
+    "longitude": 73.128,
+    "address": "The Emperor Mall, Vasna-Bhayli Road, Bhayli, Vadodara 391410",
+    "c": [
+      "North Indian",
+      "Mughlai",
+      "Punjabi",
+      "Tandoori"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹450–800",
+    "rating": 4.5,
+    "review_count": 2200,
+    "t": [
+      "Village Themed",
+      "Dal Makhani",
+      "Dhabha Style Kulchas",
+      "Family Dining"
+    ],
+    "a": [
+      "punjabi_village",
+      "family",
+      "warm"
+    ],
+    "o": [
+      "family",
+      "celebration"
+    ],
+    "s": "spicy",
+    "emoji": "🥘",
+    "photo": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pind+Balluchi+Bhayli+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "rustic punjabi village decor",
+      "slow cooked dal balluchi",
+      "fluffy garlic naan",
+      "clay oven kebabs"
+    ],
+    "hours": "11:30 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-cocco-n-curry-bhayli",
+    "name": "Cocco n Curry",
+    "area": "Bhayli",
+    "city": "Vadodara",
+    "latitude": 22.2845,
+    "longitude": 73.123,
+    "address": "Near TP 1, Bhayli Road, Vadodara 391410",
+    "c": [
+      "North Indian",
+      "Coastal",
+      "Mughlai",
+      "Chinese"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹400–700",
+    "rating": 4.5,
+    "review_count": 980,
+    "t": [
+      "Rich Curries",
+      "Dum Biryani",
+      "Family Feast",
+      "Comfort Food"
+    ],
+    "a": [
+      "pleasant",
+      "family"
+    ],
+    "o": [
+      "family",
+      "comfort"
+    ],
+    "s": "medium",
+    "emoji": "🍛",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cocco+n+Curry+Bhayli+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "creamy coconut curries",
+      "aromatic dum biryani",
+      "crispy butter garlic naan",
+      "relaxing family dinner"
+    ],
+    "hours": "11:30 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-rock-soul-bhayli",
+    "name": "Rock Soul Cafe",
+    "area": "Bhayli",
+    "city": "Vadodara",
+    "latitude": 22.2875,
+    "longitude": 73.1255,
+    "address": "Vasna-Bhayli Main Road, Bhayli, Vadodara 391410",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Coffee",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹200–450",
+    "rating": 4.6,
+    "review_count": 870,
+    "t": [
+      "Cafe",
+      "Live Music",
+      "Gourmet Burgers",
+      "Late night cafe"
+    ],
+    "a": [
+      "energetic",
+      "rock_vibes"
+    ],
+    "o": [
+      "friends",
+      "evening"
+    ],
+    "s": "medium",
+    "emoji": "🎸",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rock+Soul+Cafe+Bhayli+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "rock music ambience",
+      "juicy loaded burger",
+      "chilled iced brew",
+      "late night conversations"
+    ],
+    "hours": "11:00 AM – 12:00 AM"
+  },
+  {
+    "id": "vad-commune-x-gotri",
+    "name": "Commune X",
+    "area": "Gotri",
+    "city": "Vadodara",
+    "latitude": 22.3175,
+    "longitude": 73.1465,
+    "address": "Near Bansal Mall, Gotri-Vasna Road, Gotri, Vadodara 390021",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Bakery",
+      "Artisan"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹350–650",
+    "rating": 4.8,
+    "review_count": 850,
+    "t": [
+      "Experiential Cafe",
+      "Art & Sourdough",
+      "Specialty Coffee",
+      "Late night cafe"
+    ],
+    "a": [
+      "creative",
+      "aesthetic",
+      "peaceful"
+    ],
+    "o": [
+      "date",
+      "friends",
+      "work",
+      "coffee"
+    ],
+    "s": "mild",
+    "emoji": "🎨",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Commune+X+Gotri+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "specialty pour-over coffee",
+      "fresh sourdough tartines",
+      "artistic creative vibe",
+      "quiet courtyard"
+    ],
+    "hours": "10:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-dillys-kitchen-gotri",
+    "name": "Dilly's Veg Kitchen",
+    "area": "Gotri",
+    "city": "Vadodara",
+    "latitude": 22.3155,
+    "longitude": 73.1495,
+    "address": "Gotri Road, Near Harinagar Char Rasta, Vadodara 390021",
+    "c": [
+      "North Indian",
+      "Chinese",
+      "Continental",
+      "Pure Veg"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹400–700",
+    "rating": 4.6,
+    "review_count": 1300,
+    "t": [
+      "Pure Veg",
+      "Family Dining",
+      "Paneer Peshawari",
+      "Comfort Food"
+    ],
+    "a": [
+      "cozy",
+      "family"
+    ],
+    "o": [
+      "family",
+      "dinner"
+    ],
+    "s": "medium",
+    "emoji": "🍲",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Dillys+Veg+Kitchen+Gotri+Vadodara",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "rich paneer gravies",
+      "dum biryani with raita",
+      "crispy spring rolls",
+      "spotless family setup"
+    ],
+    "hours": "11:30 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-shree-sai-pavbhaji-gotri",
+    "name": "Shree Sai Pav Bhaji & Pulav",
+    "area": "Gotri",
+    "city": "Vadodara",
+    "latitude": 22.3138,
+    "longitude": 73.1472,
+    "address": "Near Nilamber Circle, Gotri Road, Vadodara 390021",
+    "c": [
+      "Street food",
+      "Fast food",
+      "Pav Bhaji"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹150–300",
+    "rating": 4.7,
+    "review_count": 2400,
+    "t": [
+      "Amul Butter Pav Bhaji",
+      "Tawa Pulav",
+      "Street Legend",
+      "Late night food"
+    ],
+    "a": [
+      "buzzing",
+      "street_side",
+      "casual"
+    ],
+    "o": [
+      "evening",
+      "friends",
+      "comfort"
+    ],
+    "s": "spicy",
+    "emoji": "🥘",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Shree+Sai+Pav+Bhaji+Gotri+Vadodara",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "generous amul butter dollop",
+      "spicy roasted tawa pulav",
+      "soft toasted pav",
+      "crowded evening benchmark"
+    ],
+    "hours": "5:30 PM – 11:30 PM"
+  },
+  {
+    "id": "vad-tasus-cafe-gotri",
+    "name": "Tasu's Cafe",
+    "area": "Gotri",
+    "city": "Vadodara",
+    "latitude": 22.316,
+    "longitude": 73.145,
+    "address": "Labh Icon, Gotri-Vasna Road, Gotri, Vadodara 390021",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Fast food",
+      "Coffee"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹200–400",
+    "rating": 4.6,
+    "review_count": 650,
+    "t": [
+      "Cafe",
+      "Club Sandwiches",
+      "Cold Coffee",
+      "Late night cafe"
+    ],
+    "a": [
+      "warm",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "quick_bite"
+    ],
+    "s": "mild",
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tasus+Cafe+Gotri+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options"
+    ],
+    "review_insights": [
+      "triple layer club sandwich",
+      "thick iced cappuccino",
+      "french fries with cheese dip",
+      "peaceful seating"
+    ],
+    "hours": "11:00 AM – 11:00 PM"
+  },
+  {
+    "id": "vad-artistry-cafe-sevasi",
+    "name": "Artistry Cafe",
+    "area": "Sevasi",
+    "city": "Vadodara",
+    "latitude": 22.3215,
+    "longitude": 73.1172,
+    "address": "Sevasi-Bhayli Main Road, Sevasi, Vadodara 391101",
+    "c": [
+      "Cafe",
+      "Italian",
+      "Continental",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹350–650",
+    "rating": 4.7,
+    "review_count": 1100,
+    "t": [
+      "Cafe",
+      "Artisan Hot Chocolate",
+      "Gourmet Pasta",
+      "Late night cafe"
+    ],
+    "a": [
+      "aesthetic",
+      "chic",
+      "romantic"
+    ],
+    "o": [
+      "date",
+      "friends",
+      "evening"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Artistry+Cafe+Sevasi+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "decadent thick hot chocolate",
+      "creamy pesto gnocchi",
+      "pastel aesthetic photography spots",
+      "romantic evening lighting"
+    ],
+    "hours": "11:30 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-sanskruti-sevasi",
+    "name": "Sanskruti Cafe & Restaurant",
+    "area": "Sevasi",
+    "city": "Vadodara",
+    "latitude": 22.325,
+    "longitude": 73.119,
+    "address": "Gotri-Sevasi Road, Laxmipura, Sevasi, Vadodara 391101",
+    "c": [
+      "North Indian",
+      "Cafe",
+      "Gujarati",
+      "Tandoori"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹400–700",
+    "rating": 4.5,
+    "review_count": 1450,
+    "t": [
+      "Garden Seating",
+      "Multi-Cuisine",
+      "Family Dining",
+      "Sizzlers"
+    ],
+    "a": [
+      "garden",
+      "family",
+      "peaceful"
+    ],
+    "o": [
+      "family",
+      "gathering",
+      "dinner"
+    ],
+    "s": "medium",
+    "emoji": "🌿",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sanskruti+Cafe+Restaurant+Sevasi+Vadodara",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "alfresco lawn dinner",
+      "paneer tikka sizzler",
+      "crisp tandoori rotis",
+      "lush green surroundings"
+    ],
+    "hours": "11:00 AM – 3:30 PM, 6:30 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-brew-raga-bhayli",
+    "name": "Brew Raga Cafe",
+    "area": "Bhayli",
+    "city": "Vadodara",
+    "latitude": 22.2882,
+    "longitude": 73.124,
+    "address": "Vasna-Bhayli Main Road, Opposite Nilamber Palms, Bhayli, Vadodara 391410",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Coffee",
+      "Fast food"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹350–700",
+    "rating": 4.8,
+    "review_count": 1750,
+    "t": [
+      "Open Sky Rooftop",
+      "Pickleball Court",
+      "Artisan Brews",
+      "Late night cafe"
+    ],
+    "a": [
+      "rooftop",
+      "active",
+      "youthful",
+      "scenic"
+    ],
+    "o": [
+      "friends",
+      "sports",
+      "evening",
+      "date"
+    ],
+    "s": "mild",
+    "emoji": "🎾",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Brew+Raga+Cafe+Bhayli+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "rooftop pickleball games",
+      "sunset skyline view",
+      "vanilla cold foam brew",
+      "crispy woodfired pizza"
+    ],
+    "why": "Iconic lifestyle venue combining rooftop pickleball courts with artisanal espresso, sourdough pizzas, and evening breezes.",
+    "hours": "7:00 AM – 12:00 AM"
+  },
+  {
+    "id": "vad-caffein-cafe-bhayli",
+    "name": "Caffein Cafe",
+    "area": "Bhayli",
+    "city": "Vadodara",
+    "latitude": 22.2905,
+    "longitude": 73.1275,
+    "address": "Near Vasna Jakatnaka, Vasna-Bhayli Road, Bhayli, Vadodara 391410",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Desserts",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹200–450",
+    "rating": 4.7,
+    "review_count": 1950,
+    "t": [
+      "Board Games & Books",
+      "KitKat Shake",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "cozy",
+      "intellectual",
+      "patio"
+    ],
+    "o": [
+      "friends",
+      "study",
+      "casual"
+    ],
+    "s": "mild",
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Caffein+Cafe+Bhayli+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options"
+    ],
+    "review_insights": [
+      "classic kitkat thick shake",
+      "board games and cozy bookshelf",
+      "outdoor leafy patio",
+      "comforting toasted sandwiches"
+    ],
+    "why": "Longstanding community favorite known for outdoor garden seating, board games, and legendary chocolate shakes.",
+    "hours": "11:00 AM – 12:00 AM"
+  },
+  {
+    "id": "vad-season-7-bhayli",
+    "name": "The Season 7 Restaurant & Cafe",
+    "area": "Bhayli",
+    "city": "Vadodara",
+    "latitude": 22.2858,
+    "longitude": 73.122,
+    "address": "Near Nilamber Triumph, Vasna-Bhayli Road, Bhayli, Vadodara 391410",
+    "c": [
+      "Continental",
+      "North Indian",
+      "Italian",
+      "Cafe"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹400–750",
+    "rating": 4.6,
+    "review_count": 1200,
+    "t": [
+      "Fine Dining",
+      "Sizzling Platters",
+      "Artisan Mocktails",
+      "Family Dining"
+    ],
+    "a": [
+      "plush",
+      "family",
+      "elegant"
+    ],
+    "o": [
+      "family",
+      "date",
+      "celebration"
+    ],
+    "s": "medium",
+    "emoji": "🍽️",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Season+7+Restaurant+Bhayli+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "paneer tikka sizzler",
+      "baked cheese cannelloni",
+      "ambient mood lighting",
+      "warm courteous service"
+    ],
+    "hours": "11:30 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-ready-platter-bhayli",
+    "name": "Ready Platter Restro Cafe",
+    "area": "Bhayli",
+    "city": "Vadodara",
+    "latitude": 22.2895,
+    "longitude": 73.125,
+    "address": "Vasna-Bhayli Main Road, Bhayli, Vadodara 391410",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Mexican",
+      "Fast food"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹300–600",
+    "rating": 4.6,
+    "review_count": 980,
+    "t": [
+      "Party Platter",
+      "Garden Cafe",
+      "Woodfired Pizzas",
+      "Late night cafe"
+    ],
+    "a": [
+      "garden",
+      "vibrant",
+      "celebration"
+    ],
+    "o": [
+      "party",
+      "friends",
+      "family"
+    ],
+    "s": "medium",
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ready+Platter+Cafe+Bhayli+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "review_insights": [
+      "sharing loaded platter",
+      "woodfired paneer pizza",
+      "chilled kiwi cooler",
+      "lawn party seating"
+    ],
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-goodies-bakery-fatehgunj",
+    "name": "Goodies Bakery & Cafe",
+    "area": "Fatehgunj",
+    "city": "Vadodara",
+    "latitude": 22.321,
+    "longitude": 73.1895,
+    "address": "Near Natraj Cinema, Fatehgunj, Vadodara 390002",
+    "c": [
+      "Bakery",
+      "Cafe",
+      "Desserts",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹150–350",
+    "rating": 4.7,
+    "review_count": 2800,
+    "t": [
+      "Student Adda",
+      "Chicken Puff",
+      "Chocochip Pastry",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "nostalgic",
+      "youthful",
+      "bustling"
+    ],
+    "o": [
+      "friends",
+      "snack",
+      "student"
+    ],
+    "s": "mild",
+    "emoji": "🧁",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Goodies+Bakery+Fatehgunj+Vadodara",
+    "dietaryOptions": [
+      "vegetarian_options"
+    ],
+    "review_insights": [
+      "famous chicken and veg puffs",
+      "dutch truffle cake",
+      "student nostalgia",
+      "quick evening snack"
+    ],
+    "hours": "9:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-kalyani-cafe-fatehgunj",
+    "name": "Kalyani Cafe",
+    "area": "Fatehgunj",
+    "city": "Vadodara",
+    "latitude": 22.3225,
+    "longitude": 73.188,
+    "address": "Fatehgunj Main Road, Opp. Rosary School, Vadodara 390002",
+    "c": [
+      "South Indian",
+      "Breakfast",
+      "Cafe"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹100–250",
+    "rating": 4.6,
+    "review_count": 2100,
+    "t": [
+      "Crispy Masala Dosa",
+      "Filter Coffee",
+      "Pure Veg",
+      "Breakfast Benchmark"
+    ],
+    "a": [
+      "quick_service",
+      "traditional",
+      "bustling"
+    ],
+    "o": [
+      "breakfast",
+      "student",
+      "quick_bite"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kalyani+Cafe+Fatehgunj+Vadodara",
+    "review_insights": [
+      "golden butter masala dosa",
+      "hot filter coffee in dabara",
+      "crisp medu vada",
+      "college student breakfast staple"
+    ],
+    "hours": "7:00 AM – 10:30 PM"
+  },
+  {
+    "id": "vad-chocolate-room-fatehgunj",
+    "name": "The Chocolate Room (Fatehgunj)",
+    "area": "Fatehgunj",
+    "city": "Vadodara",
+    "latitude": 22.3218,
+    "longitude": 73.187,
+    "address": "Near Seven Seas Mall, Fatehgunj, Vadodara 390002",
+    "c": [
+      "Cafe",
+      "Desserts",
+      "Continental",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹250–500",
+    "rating": 4.6,
+    "review_count": 1650,
+    "t": [
+      "Chocolate Fondue",
+      "Cafe",
+      "Waffles",
+      "Late night cafe"
+    ],
+    "a": [
+      "cozy",
+      "chocolaty",
+      "youthful"
+    ],
+    "o": [
+      "friends",
+      "date",
+      "dessert"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🍫",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Chocolate+Room+Fatehgunj+Vadodara",
+    "review_insights": [
+      "sizzling chocolate brownie",
+      "thick hot chocolate",
+      "kitkat waffle",
+      "cozy couple corner"
+    ],
+    "hours": "11:00 AM – 12:00 AM"
+  },
+  {
+    "id": "vad-modern-fast-food-fatehgunj",
+    "name": "Modern Fast Food",
+    "area": "Fatehgunj",
+    "city": "Vadodara",
+    "latitude": 22.3208,
+    "longitude": 73.1902,
+    "address": "Fatehgunj Char Rasta, Vadodara 390002",
+    "c": [
+      "Fast food",
+      "Sandwiches",
+      "Burgers",
+      "Chinese"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹150–300",
+    "rating": 4.5,
+    "review_count": 1900,
+    "t": [
+      "Cheese Grill Sandwich",
+      "Frankie",
+      "Student Legend",
+      "Late night food"
+    ],
+    "a": [
+      "lively",
+      "street_style"
+    ],
+    "o": [
+      "friends",
+      "late_night",
+      "snack"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Modern+Fast+Food+Fatehgunj+Vadodara",
+    "review_insights": [
+      "triple cheese grilled sandwich",
+      "spicy schezwan frankie",
+      "cold coco drink",
+      "famous university hangout"
+    ],
+    "hours": "11:00 AM – 12:30 AM"
+  },
+  {
+    "id": "vad-that-place-op-road",
+    "name": "That Place",
+    "area": "Alkapuri",
+    "city": "Vadodara",
+    "latitude": 22.3085,
+    "longitude": 73.172,
+    "address": "33 Sampatrao Colony, Alkapuri / Old Padra Road, Vadodara 390007",
+    "c": [
+      "European",
+      "Cafe",
+      "Continental",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹500–900",
+    "rating": 4.7,
+    "review_count": 2100,
+    "t": [
+      "Fine Dine Bistro",
+      "Woodfired Pizza",
+      "Artisan Desserts",
+      "Late night cafe"
+    ],
+    "a": [
+      "bungalow",
+      "aesthetic",
+      "romantic",
+      "peaceful"
+    ],
+    "o": [
+      "date",
+      "celebration",
+      "gourmet"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options"
+    ],
+    "emoji": "🍷",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=That+Place+Alkapuri+Old+Padra+Road+Vadodara",
+    "review_insights": [
+      "heritage bungalow garden",
+      "herb crusted fish",
+      "creamy risottos",
+      "signature mud pie"
+    ],
+    "why": "Vadodara's benchmark European bistro set in a tranquil Alkapuri bungalow courtyard, famous for artisan risottos and steaks.",
+    "hours": "12:00 PM – 11:30 PM"
+  },
+  {
+    "id": "vad-curries-more-op-road",
+    "name": "Curries & More",
+    "area": "Akota",
+    "city": "Vadodara",
+    "latitude": 22.2985,
+    "longitude": 73.165,
+    "address": "Near Reliance Mega Mall, Old Padra Road, Vadodara 390015",
+    "c": [
+      "North Indian",
+      "Mughlai",
+      "Biryani",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹450–800",
+    "rating": 4.6,
+    "review_count": 1850,
+    "t": [
+      "Fine Dine",
+      "Dum Biryani",
+      "Makhani Gravies",
+      "Family Restaurant"
+    ],
+    "a": [
+      "plush",
+      "family",
+      "warm"
+    ],
+    "o": [
+      "family",
+      "dinner",
+      "celebration"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options"
+    ],
+    "emoji": "🍛",
+    "photo": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Curries+More+Old+Padra+Road+Vadodara",
+    "review_insights": [
+      "succulent butter chicken",
+      "paneer lababdar",
+      "fluffy garlic naan",
+      "classy family ambiance"
+    ],
+    "hours": "11:30 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-little-italy-akota",
+    "name": "Little Italy (Akota)",
+    "area": "Akota",
+    "city": "Vadodara",
+    "latitude": 22.296,
+    "longitude": 73.174,
+    "address": "Productivity Road, Akota, Vadodara 390020",
+    "c": [
+      "Italian",
+      "Pizza",
+      "Pasta",
+      "Fine Dining"
+    ],
+    "p": "1000_2000",
+    "displayPrice": "₹800–1400",
+    "rating": 4.7,
+    "review_count": 2200,
+    "t": [
+      "Pure Veg Italian",
+      "Woodfired Pizza",
+      "Tiramisu",
+      "Fine Dining"
+    ],
+    "a": [
+      "fine_dining",
+      "elegant",
+      "italian"
+    ],
+    "o": [
+      "family",
+      "date",
+      "anniversary"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍕",
+    "photo": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Little+Italy+Akota+Vadodara",
+    "review_insights": [
+      "authentic woodfired pizza",
+      "creamy pesto pasta",
+      "eggless classic tiramisu",
+      "sophisticated fine dining"
+    ],
+    "why": "Baroda's premier pure-veg authentic Italian fine dining restaurant serving handcrafted pastas and wood-fired Neapolitan pizzas.",
+    "hours": "12:00 PM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-canara-coffee-akota",
+    "name": "Canara Coffee House",
+    "area": "Akota",
+    "city": "Vadodara",
+    "latitude": 22.299,
+    "longitude": 73.181,
+    "address": "Dandia Bazar / Near Akota Bridge, Vadodara 390001",
+    "c": [
+      "South Indian",
+      "Breakfast",
+      "Cafe",
+      "Heritage"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹80–200",
+    "rating": 4.8,
+    "review_count": 3200,
+    "t": [
+      "Since 1950s",
+      "Upma Dosa",
+      "Filter Coffee Legend",
+      "Pure Veg"
+    ],
+    "a": [
+      "heritage",
+      "nostalgic",
+      "bustling"
+    ],
+    "o": [
+      "breakfast",
+      "morning",
+      "heritage"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Canara+Coffee+House+Dandia+Bazar+Vadodara",
+    "review_insights": [
+      "legendary poona misal",
+      "piping hot filter coffee",
+      "crispy paper dosa",
+      "decades of cultural memory"
+    ],
+    "why": "Historic 70-year-old South Indian coffee house where generations of Barodians gather for Poona Misal and brass filter coffee.",
+    "hours": "7:00 AM – 1:00 PM, 4:00 PM – 8:30 PM"
+  },
+  {
+    "id": "vad-mahakali-sev-usal-karelibaug",
+    "name": "Mahakali Sev Usal",
+    "area": "Karelibaug",
+    "city": "Vadodara",
+    "latitude": 22.3265,
+    "longitude": 73.201,
+    "address": "Karelibaug Main Road, Near Anand Flats, Vadodara 390018",
+    "c": [
+      "Street food",
+      "Gujarati",
+      "Spicy"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹70–180",
+    "rating": 4.8,
+    "review_count": 4200,
+    "t": [
+      "Sev Usal Benchmark",
+      "Fiery Tari",
+      "Baroda Cultural Icon",
+      "Pure Veg"
+    ],
+    "a": [
+      "bustling",
+      "street_legend",
+      "spicy"
+    ],
+    "o": [
+      "comfort",
+      "street_food",
+      "breakfast"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍲",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mahakali+Sev+Usal+Karelibaug+Vadodara",
+    "review_insights": [
+      "spicy bubbling green pea usal",
+      "crunchy sev and soft pav",
+      "extra tari bowl",
+      "unmissable vadodara icon"
+    ],
+    "why": "The undisputed soul of Vadodara street food: steaming spicy ragda served with crunchy sev, soft butter buns, and extra fiery tari.",
+    "hours": "7:30 AM – 9:30 PM"
+  },
+  {
+    "id": "vad-pyarelal-kachori-karelibaug",
+    "name": "Pyarelal Ni Famous Kachori",
+    "area": "Karelibaug",
+    "city": "Vadodara",
+    "latitude": 22.325,
+    "longitude": 73.2025,
+    "address": "Near Bahucharaji Temple, Karelibaug, Vadodara 390018",
+    "c": [
+      "Street food",
+      "Kachori",
+      "Chaat",
+      "Snacks"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹50–120",
+    "rating": 4.7,
+    "review_count": 2600,
+    "t": [
+      "Dal Kachori",
+      "Street Legend",
+      "Sweet & Tangy Chutney",
+      "Pure Veg"
+    ],
+    "a": [
+      "street_side",
+      "bustling"
+    ],
+    "o": [
+      "snack",
+      "quick_bite"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥟",
+    "photo": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pyarelal+Kachori+Karelibaug+Vadodara",
+    "review_insights": [
+      "crisp flaky moong dal kachori",
+      "tangy tamarind chutney",
+      "fresh sev topping",
+      "evening snack queue"
+    ],
+    "hours": "8:00 AM – 8:30 PM"
+  },
+  {
+    "id": "vad-duliram-peda-karelibaug",
+    "name": "Duliram Na Peda",
+    "area": "Karelibaug",
+    "city": "Vadodara",
+    "latitude": 22.324,
+    "longitude": 73.1995,
+    "address": "Near Amrapali Complex, Karelibaug, Vadodara 390018",
+    "c": [
+      "Sweets",
+      "Gujarati",
+      "Heritage"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹150–400",
+    "rating": 4.9,
+    "review_count": 3800,
+    "t": [
+      "Since 1850s",
+      "Peda Legend",
+      "Pure Mawa",
+      "Pure Veg"
+    ],
+    "a": [
+      "heritage",
+      "traditional"
+    ],
+    "o": [
+      "celebration",
+      "gifting",
+      "sweets"
+    ],
+    "s": null,
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍬",
+    "photo": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Duliram+Na+Peda+Karelibaug+Vadodara",
+    "review_insights": [
+      "legendary rich mawa peda",
+      "melt-in-mouth texture",
+      "unaltered heritage taste",
+      "century old institution"
+    ],
+    "why": "Centuries-old Baroda heritage sweetmaker famous across Gujarat for caramel-hued slow-cooked mawa pedas.",
+    "hours": "8:00 AM – 9:00 PM"
+  },
+  {
+    "id": "vad-sizzling-salsa-vip-road",
+    "name": "Sizzling Salsa (VIP Road)",
+    "area": "Karelibaug",
+    "city": "Vadodara",
+    "latitude": 22.331,
+    "longitude": 73.208,
+    "address": "VIP Road, Near Bright Day School, Karelibaug, Vadodara 390018",
+    "c": [
+      "Continental",
+      "Mexican",
+      "Italian",
+      "Sizzlers"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹400–750",
+    "rating": 4.6,
+    "review_count": 1700,
+    "t": [
+      "Sizzler Specialists",
+      "Mexican Hot Pot",
+      "Family Dining",
+      "Pure Veg"
+    ],
+    "a": [
+      "modern",
+      "family",
+      "lively"
+    ],
+    "o": [
+      "family",
+      "celebration",
+      "weekend"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥘",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sizzling+Salsa+VIP+Road+Karelibaug+Vadodara",
+    "review_insights": [
+      "smoking paneer sizzler",
+      "mexican hot pot cheese gravy",
+      "garlic herb bread",
+      "attentive service"
+    ],
+    "hours": "11:30 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-campus-cafe-waghodia",
+    "name": "The Campus Cafe & Bites",
+    "area": "Waghodia Road",
+    "city": "Vadodara",
+    "latitude": 22.285,
+    "longitude": 73.235,
+    "address": "Waghodia Main Road, Near Parul Campus, Vadodara 390019",
+    "c": [
+      "Cafe",
+      "Fast food",
+      "Coffee",
+      "Beverages"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹150–350",
+    "rating": 4.6,
+    "review_count": 890,
+    "t": [
+      "Student Adda",
+      "Cold Coffee",
+      "Burgers",
+      "Late night cafe"
+    ],
+    "a": [
+      "youthful",
+      "casual",
+      "open"
+    ],
+    "o": [
+      "friends",
+      "student",
+      "quick_bite"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Campus+Cafe+Waghodia+Road+Vadodara",
+    "review_insights": [
+      "frosty cold coffee",
+      "peri peri potato wedges",
+      "juicy veg cheese burger",
+      "relaxed student hub"
+    ],
+    "hours": "10:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-chai-sutta-waghodia",
+    "name": "Chai Sutta Bar (Waghodia Road)",
+    "area": "Waghodia Road",
+    "city": "Vadodara",
+    "latitude": 22.2865,
+    "longitude": 73.232,
+    "address": "Waghodia Road, Near Vaikunth Char Rasta, Vadodara 390019",
+    "c": [
+      "Cafe",
+      "Tea Lounge",
+      "Fast food",
+      "Snacks"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹100–200",
+    "rating": 4.5,
+    "review_count": 1100,
+    "t": [
+      "Kulhad Chai",
+      "Chocolate Chai",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "casual",
+      "bustling"
+    ],
+    "o": [
+      "friends",
+      "tea_break"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Chai+Sutta+Bar+Waghodia+Road+Vadodara",
+    "review_insights": [
+      "steaming kulhad tea",
+      "chocolate tea flavor",
+      "crispy garlic toast",
+      "lively evening crowd"
+    ],
+    "hours": "9:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-honest-waghodia",
+    "name": "Honest Restaurant (Waghodia Road)",
+    "area": "Waghodia Road",
+    "city": "Vadodara",
+    "latitude": 22.2895,
+    "longitude": 73.228,
+    "address": "Opposite Uma Bhavan, Waghodia Road, Vadodara 390019",
+    "c": [
+      "Fast food",
+      "Street food",
+      "North Indian",
+      "Chinese"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹200–450",
+    "rating": 4.5,
+    "review_count": 1650,
+    "t": [
+      "Pav Bhaji",
+      "Tawa Pulav",
+      "Family Dining",
+      "Pure Veg"
+    ],
+    "a": [
+      "family",
+      "casual"
+    ],
+    "o": [
+      "family",
+      "dinner"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍲",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Honest+Restaurant+Waghodia+Road+Vadodara",
+    "review_insights": [
+      "butter rich pav bhaji",
+      "steaming veg tawa pulav",
+      "crispy butter masala dosa",
+      "dependable quality"
+    ],
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-grand-thakar-manjalpur",
+    "name": "The Grand Thakar (Manjalpur)",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.274,
+    "longitude": 73.193,
+    "address": "Manjalpur Main Road, Near Eva Mall, Vadodara 390011",
+    "c": [
+      "Gujarati",
+      "Kathiyawadi",
+      "North Indian",
+      "Thali"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹400–700",
+    "rating": 4.6,
+    "review_count": 2400,
+    "t": [
+      "Royal Gujarati Thali",
+      "Family Restaurant",
+      "Pure Veg",
+      "Banquet"
+    ],
+    "a": [
+      "grand",
+      "family",
+      "traditional"
+    ],
+    "o": [
+      "family",
+      "celebration",
+      "gathering"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥘",
+    "photo": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Grand+Thakar+Manjalpur+Vadodara",
+    "review_insights": [
+      "elaborate gujarati silver thali",
+      "fresh hot rotlis",
+      "sweet basundi and farsan",
+      "impeccable family dining"
+    ],
+    "why": "South Baroda's premier Gujarati dining hallmark delivering lavish royal thalis and festive hospitality.",
+    "hours": "11:00 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-masala-ministry-manjalpur",
+    "name": "Masala Ministry (Manjalpur)",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.276,
+    "longitude": 73.1955,
+    "address": "Near Tulsidham Char Rasta, Manjalpur, Vadodara 390011",
+    "c": [
+      "Modern Indian",
+      "Continental",
+      "Sizzlers",
+      "Chinese"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹400–750",
+    "rating": 4.5,
+    "review_count": 1350,
+    "t": [
+      "Fusion Sizzlers",
+      "Modern Gravies",
+      "Family Restaurant",
+      "Pure Veg"
+    ],
+    "a": [
+      "modern",
+      "family",
+      "chic"
+    ],
+    "o": [
+      "family",
+      "party",
+      "anniversary"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍽️",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Masala+Ministry+Manjalpur+Vadodara",
+    "review_insights": [
+      "smoking paneer sizzler",
+      "cheese butter masala",
+      "crispy wontons",
+      "elegant dining space"
+    ],
+    "hours": "11:30 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-banyan-cafe-sama",
+    "name": "The Banyan Cafe & Bistro",
+    "area": "Sama-Savli Road",
+    "city": "Vadodara",
+    "latitude": 22.342,
+    "longitude": 73.196,
+    "address": "Sama-Savli Main Road, Opp. Abacus, Vadodara 390024",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Coffee",
+      "Italian"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹350–650",
+    "rating": 4.7,
+    "review_count": 1200,
+    "t": [
+      "Garden Bistro",
+      "Specialty Coffee",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "garden",
+      "breezy",
+      "cozy"
+    ],
+    "o": [
+      "friends",
+      "date",
+      "coffee"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🌿",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Banyan+Cafe+Sama+Savli+Vadodara",
+    "review_insights": [
+      "under the banyan tree seating",
+      "handcrafted woodfired pizza",
+      "iced hazelnut latte",
+      "tranquil evening breeze"
+    ],
+    "why": "Peaceful garden cafe in North Vadodara offering artisanal coffees, woodfired pizzas, and garden tranquility.",
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-honest-sama-lake",
+    "name": "Honest Restaurant (Sama Lake)",
+    "area": "Sama-Savli Road",
+    "city": "Vadodara",
+    "latitude": 22.338,
+    "longitude": 73.194,
+    "address": "Near Sama Lakefront, Vadodara 390024",
+    "c": [
+      "Fast food",
+      "Street food",
+      "South Indian",
+      "Chinese"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹200–400",
+    "rating": 4.6,
+    "review_count": 2100,
+    "t": [
+      "Lake View",
+      "Pav Bhaji",
+      "Pure Veg",
+      "Family Restaurant"
+    ],
+    "a": [
+      "lively",
+      "lake_breeze",
+      "family"
+    ],
+    "o": [
+      "family",
+      "evening",
+      "dinner"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍲",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Honest+Restaurant+Sama+Lake+Vadodara",
+    "review_insights": [
+      "buttery pav bhaji by the lake",
+      "spicy tawa pulav",
+      "evening breeze stroll",
+      "dependable taste"
+    ],
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-rajwadi-chhani",
+    "name": "Rajwadi Dining Hall (Chhani)",
+    "area": "Chhani",
+    "city": "Vadodara",
+    "latitude": 22.355,
+    "longitude": 73.185,
+    "address": "Chhani Main Road, Vadodara 391740",
+    "c": [
+      "Gujarati",
+      "Kathiyawadi",
+      "Traditional Thali"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹250–450",
+    "rating": 4.5,
+    "review_count": 1400,
+    "t": [
+      "Kathiyawadi Thali",
+      "Bajra Rotlo",
+      "Sev Tameta",
+      "Pure Veg"
+    ],
+    "a": [
+      "traditional",
+      "rustic",
+      "family"
+    ],
+    "o": [
+      "family",
+      "lunch",
+      "dinner"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥘",
+    "photo": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rajwadi+Dining+Hall+Chhani+Vadodara",
+    "review_insights": [
+      "spicy garlic sev tameta",
+      "unlimited bajra rotlas with makhan",
+      "homestyle chaas",
+      "authentic village feel"
+    ],
+    "hours": "11:00 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-motnath-food-park-harni",
+    "name": "Motnath Food Court & Lake Adda",
+    "area": "Harni",
+    "city": "Vadodara",
+    "latitude": 22.335,
+    "longitude": 73.225,
+    "address": "Motnath Mahadev Lakefront, Harni, Vadodara 390022",
+    "c": [
+      "Food Court",
+      "Street food",
+      "Desserts",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹100–300",
+    "rating": 4.6,
+    "review_count": 1850,
+    "t": [
+      "Lakefront Food Park",
+      "Chaat Stalls",
+      "Late night food",
+      "Youth Adda"
+    ],
+    "a": [
+      "open_air",
+      "lake_view",
+      "bustling"
+    ],
+    "o": [
+      "friends",
+      "evening",
+      "quick_bite"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "pure_veg"
+    ],
+    "emoji": "🌊",
+    "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Motnath+Lake+Food+Court+Harni+Vadodara",
+    "review_insights": [
+      "lakefront evening food stalls",
+      "spicy dabeli and pani puri",
+      "chilled falooda cups",
+      "pleasant evening walk"
+    ],
+    "hours": "4:30 PM – 11:30 PM"
+  },
+  {
+    "id": "vad-skydine-harni",
+    "name": "Sky Dine Rooftop Cafe (Airport Circle)",
+    "area": "Harni",
+    "city": "Vadodara",
+    "latitude": 22.3315,
+    "longitude": 73.221,
+    "address": "Airport Circle, Harni Road, Vadodara 390022",
+    "c": [
+      "Cafe",
+      "Continental",
+      "North Indian",
+      "Mocktails"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹350–700",
+    "rating": 4.5,
+    "review_count": 1150,
+    "t": [
+      "Rooftop Cafe",
+      "Airport View",
+      "Cafe",
+      "Late night cafe"
+    ],
+    "a": [
+      "rooftop",
+      "panoramic",
+      "romantic"
+    ],
+    "o": [
+      "date",
+      "friends",
+      "evening"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "✈️",
+    "photo": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sky+Dine+Rooftop+Cafe+Airport+Circle+Vadodara",
+    "review_insights": [
+      "view of landing planes",
+      "cheesy garlic pizza",
+      "refreshing blue curacao mocktail",
+      "breezy rooftop evening"
+    ],
+    "hours": "12:00 PM – 11:30 PM"
+  },
+  {
+    "id": "vad-payal-sweets-mandvi",
+    "name": "Payal Sweets & Snacks (Mandvi)",
+    "area": "Mandvi",
+    "city": "Vadodara",
+    "latitude": 22.3025,
+    "longitude": 73.2085,
+    "address": "Near Mandvi Gate, Old City, Vadodara 390001",
+    "c": [
+      "Gujarati",
+      "Farsan",
+      "Sweets",
+      "Breakfast"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹80–200",
+    "rating": 4.7,
+    "review_count": 2900,
+    "t": [
+      "Live Khaman",
+      "Fafda Jalebi",
+      "Heritage",
+      "Pure Veg"
+    ],
+    "a": [
+      "heritage",
+      "bustling"
+    ],
+    "o": [
+      "breakfast",
+      "takeaway"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥟",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Payal+Sweets+Mandvi+Vadodara",
+    "review_insights": [
+      "spongy nylon khaman",
+      "crisp hot fafda with papaya sambharo",
+      "pure ghee mohanthal",
+      "old city morning landmark"
+    ],
+    "hours": "7:00 AM – 9:30 PM"
+  },
+  {
+    "id": "vad-lala-kaka-kachori-raopura",
+    "name": "Lala Kaka Ni Famous Lilva Kachori",
+    "area": "Raopura",
+    "city": "Vadodara",
+    "latitude": 22.304,
+    "longitude": 73.201,
+    "address": "Tower Road, Raopura, Vadodara 390001",
+    "c": [
+      "Street food",
+      "Gujarati",
+      "Breakfast",
+      "Snacks"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹50–120",
+    "rating": 4.8,
+    "review_count": 3100,
+    "t": [
+      "Since 1940s",
+      "Lilva Kachori Benchmark",
+      "Heritage",
+      "Pure Veg"
+    ],
+    "a": [
+      "historic",
+      "street_side"
+    ],
+    "o": [
+      "snack",
+      "quick_bite"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥟",
+    "photo": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Lala+Kaka+Kachori+Raopura+Vadodara",
+    "review_insights": [
+      "seasonal fresh lilva kachori",
+      "crispy outer crust",
+      "green chilli dip",
+      "unmatched royal heritage recipe"
+    ],
+    "why": "Historic 80-year-old Old City counter famous for legendary crisp Lilva Kachoris stuffed with tender fresh green pigeon peas.",
+    "hours": "8:30 AM – 8:30 PM"
+  },
+  {
+    "id": "vad-shanker-dabeli-mandvi",
+    "name": "Shanker Dabeli (Mandvi)",
+    "area": "Mandvi",
+    "city": "Vadodara",
+    "latitude": 22.3015,
+    "longitude": 73.207,
+    "address": "Near Mandvi Clock Tower, Vadodara 390001",
+    "c": [
+      "Street food",
+      "Dabeli",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹40–90",
+    "rating": 4.7,
+    "review_count": 2700,
+    "t": [
+      "Butter Dabeli",
+      "Old City Legend",
+      "Pure Veg",
+      "Quick bite"
+    ],
+    "a": [
+      "street_side",
+      "bustling"
+    ],
+    "o": [
+      "snack",
+      "quick_bite"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍔",
+    "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Shanker+Dabeli+Mandvi+Vadodara",
+    "review_insights": [
+      "amul butter toasted dabeli",
+      "spicy garlic chutney",
+      "fresh pomegranate and crunchy sev",
+      "pocket friendly icon"
+    ],
+    "hours": "11:00 AM – 10:30 PM"
+  },
+  {
+    "id": "vad-sankalp-nizampura",
+    "name": "Sankalp Restaurant Nizampura",
+    "area": "Nizampura",
+    "city": "Vadodara",
+    "latitude": 22.335,
+    "longitude": 73.178,
+    "address": "Near Nizampura Bus Stop, Nizampura, Vadodara 390002",
+    "c": [
+      "South Indian",
+      "Dosa",
+      "Pure Veg"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹200–450",
+    "rating": 4.6,
+    "review_count": 2100,
+    "t": [
+      "South Indian",
+      "Pure Veg",
+      "Family dining"
+    ],
+    "a": [
+      "clean",
+      "family",
+      "comfortable"
+    ],
+    "o": [
+      "family",
+      "breakfast",
+      "dinner"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🥞",
+    "photo": "https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sankalp+Restaurant+Nizampura+Vadodara",
+    "review_insights": [
+      "crisp mysore masala dosa",
+      "steaming hot rasam and sambar",
+      "quick service",
+      "air conditioned comfort"
+    ],
+    "hours": "11:00 AM – 11:00 PM"
+  },
+  {
+    "id": "vad-tea-post-nizampura",
+    "name": "Tea Post Cafe (Nizampura)",
+    "area": "Nizampura",
+    "city": "Vadodara",
+    "latitude": 22.333,
+    "longitude": 73.181,
+    "address": "Main Road, Nizampura, Vadodara 390002",
+    "c": [
+      "Cafe",
+      "Tea",
+      "Snacks",
+      "Gujarati snacks"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹60–180",
+    "rating": 4.5,
+    "review_count": 980,
+    "t": [
+      "Chai Lounge",
+      "Snacks",
+      "Quick bite",
+      "Cafe"
+    ],
+    "a": [
+      "cozy",
+      "casual",
+      "lively"
+    ],
+    "o": [
+      "snack",
+      "friends",
+      "tea"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🫖",
+    "photo": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tea+Post+Nizampura+Vadodara",
+    "review_insights": [
+      "ginger pudina masala chai",
+      "cheese butter handvo",
+      "crispy puff and maska bun",
+      "popular gathering spot"
+    ],
+    "hours": "8:00 AM – 11:00 PM"
+  },
+  {
+    "id": "vad-saffron-akota",
+    "name": "Saffron Restaurant (Akota)",
+    "area": "Akota",
+    "city": "Vadodara",
+    "latitude": 22.298,
+    "longitude": 73.1685,
+    "address": "Akota Main Road, Near Productivity Council, Akota, Vadodara 390020",
+    "c": [
+      "North Indian",
+      "Barbecue",
+      "Buffet",
+      "Sizzlers"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹450–850",
+    "rating": 4.6,
+    "review_count": 2850,
+    "t": [
+      "Pure Veg",
+      "Buffet",
+      "North Indian",
+      "Family dining"
+    ],
+    "a": [
+      "plush",
+      "family",
+      "warm"
+    ],
+    "o": [
+      "family",
+      "celebration",
+      "dinner"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍢",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Saffron+Restaurant+Akota+Vadodara",
+    "review_insights": [
+      "live barbecue table starters",
+      "unlimited buffet spread",
+      "paneer tikka and dal makhani",
+      "celebration favorite"
+    ],
+    "hours": "12:00 PM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-22nd-parallel-akota",
+    "name": "22nd Parallel South Indian (Akota)",
+    "area": "Akota",
+    "city": "Vadodara",
+    "latitude": 22.2995,
+    "longitude": 73.171,
+    "address": "Opposite Akota Stadium, Akota, Vadodara 390020",
+    "c": [
+      "South Indian",
+      "Filter Coffee",
+      "Chettinad",
+      "Pure Veg"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹250–500",
+    "rating": 4.7,
+    "review_count": 3200,
+    "t": [
+      "Pure Veg",
+      "South Indian",
+      "Filter Coffee",
+      "Heritage"
+    ],
+    "a": [
+      "aesthetic",
+      "traditional",
+      "calm"
+    ],
+    "o": [
+      "family",
+      "breakfast",
+      "dinner"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=22nd+Parallel+Akota+Vadodara",
+    "review_insights": [
+      "authentic filter kaapi",
+      "ghee roast podi dosa",
+      "malabar appam with stew",
+      "serene South Indian decor"
+    ],
+    "hours": "11:00 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-honest-chhani",
+    "name": "Honest Restaurant Chhani",
+    "area": "Chhani",
+    "city": "Vadodara",
+    "latitude": 22.355,
+    "longitude": 73.189,
+    "address": "Chhani Jakat Naka, Chhani, Vadodara 391740",
+    "c": [
+      "Fast food",
+      "Pav Bhaji",
+      "North Indian",
+      "Pure Veg"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹150–350",
+    "rating": 4.5,
+    "review_count": 1650,
+    "t": [
+      "Pav Bhaji",
+      "Pure Veg",
+      "Family dining",
+      "Fast food"
+    ],
+    "a": [
+      "casual",
+      "bustling",
+      "family"
+    ],
+    "o": [
+      "family",
+      "quick_bite",
+      "dinner"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍛",
+    "photo": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Honest+Restaurant+Chhani+Vadodara",
+    "review_insights": [
+      "spicy butter pav bhaji",
+      "crispy butter pulav",
+      "speedy family service",
+      "highway junction favorite"
+    ],
+    "hours": "11:00 AM – 11:00 PM"
+  },
+  {
+    "id": "vad-subway-chhani",
+    "name": "Subway & Cafe Chhani Canal Road",
+    "area": "Chhani",
+    "city": "Vadodara",
+    "latitude": 22.351,
+    "longitude": 73.185,
+    "address": "Canal Road, Near TP 13, Chhani, Vadodara 391740",
+    "c": [
+      "Cafe",
+      "Sandwiches",
+      "Healthy",
+      "Beverages"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹180–400",
+    "rating": 4.4,
+    "review_count": 820,
+    "t": [
+      "Sub Sandwiches",
+      "Healthy",
+      "Cafe",
+      "Quick bite"
+    ],
+    "a": [
+      "clean",
+      "modern",
+      "casual"
+    ],
+    "o": [
+      "lunch",
+      "quick_bite",
+      "health"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🥪",
+    "photo": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Subway+Chhani+Canal+Road+Vadodara",
+    "review_insights": [
+      "freshly baked multigrain subs",
+      "customizable protein fillings",
+      "chilled ice teas",
+      "quick grab and go"
+    ],
+    "hours": "10:00 AM – 11:00 PM"
+  },
+  {
+    "id": "vad-grand-thakar-harni",
+    "name": "The Grand Thakar (Harni)",
+    "area": "Harni",
+    "city": "Vadodara",
+    "latitude": 22.331,
+    "longitude": 73.221,
+    "address": "Airport Road, Near Harni Lake, Harni, Vadodara 390022",
+    "c": [
+      "Gujarati Thali",
+      "North Indian",
+      "Pure Veg"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹300–550",
+    "rating": 4.7,
+    "review_count": 2400,
+    "t": [
+      "Gujarati Thali",
+      "Pure Veg",
+      "Heritage",
+      "Family dining"
+    ],
+    "a": [
+      "family",
+      "luxurious",
+      "traditional"
+    ],
+    "o": [
+      "family",
+      "lunch",
+      "celebration"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍱",
+    "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Grand+Thakar+Harni+Vadodara",
+    "review_insights": [
+      "unlimited royal Gujarati thali",
+      "fresh hot puran poli",
+      "creamy paneer butter masala",
+      "near airport location"
+    ],
+    "hours": "11:15 AM – 3:30 PM, 7:00 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-brewberrys-harni",
+    "name": "Brewberrys Cafe (Harni)",
+    "area": "Harni",
+    "city": "Vadodara",
+    "latitude": 22.334,
+    "longitude": 73.224,
+    "address": "Near Harni Police Station, Airport Road, Harni, Vadodara 390022",
+    "c": [
+      "Cafe",
+      "Coffee",
+      "Continental",
+      "Desserts"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹200–450",
+    "rating": 4.5,
+    "review_count": 1100,
+    "t": [
+      "Cafe",
+      "Coffee",
+      "Continental",
+      "Late night cafe"
+    ],
+    "a": [
+      "cozy",
+      "youthful",
+      "casual"
+    ],
+    "o": [
+      "friends",
+      "coffee",
+      "date"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Brewberrys+Cafe+Harni+Vadodara",
+    "review_insights": [
+      "chilled hazelnut cold coffee",
+      "crisp barbecue paneer pizza",
+      "nutella waffle",
+      "peaceful lake road vibe"
+    ],
+    "hours": "11:00 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-canara-coffee-subhanpura",
+    "name": "Canara Coffee House (Subhanpura)",
+    "area": "Gorwa",
+    "city": "Vadodara",
+    "latitude": 22.325,
+    "longitude": 73.155,
+    "address": "Subhanpura High Street, Near Gorwa, Vadodara 390023",
+    "c": [
+      "South Indian",
+      "Filter Coffee",
+      "Heritage breakfast",
+      "Pure Veg"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹50–180",
+    "rating": 4.7,
+    "review_count": 2900,
+    "t": [
+      "Filter Coffee",
+      "Pure Veg",
+      "Morning Breakfast",
+      "Legendary"
+    ],
+    "a": [
+      "vintage",
+      "bustling",
+      "nostalgic"
+    ],
+    "o": [
+      "breakfast",
+      "tea",
+      "quick_bite"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Canara+Coffee+House+Subhanpura+Vadodara",
+    "review_insights": [
+      "steaming hot tumbler filter coffee",
+      "crispy medu vada with coconut chutney",
+      "fluffy upma",
+      "legendary heritage breakfast"
+    ],
+    "hours": "7:00 AM – 9:00 PM"
+  },
+  {
+    "id": "vad-jassi-parathe-subhanpura",
+    "name": "Jassi De Parathe (Subhanpura)",
+    "area": "Gorwa",
+    "city": "Vadodara",
+    "latitude": 22.3275,
+    "longitude": 73.158,
+    "address": "Gorwa-Subhanpura Road, Vadodara 390023",
+    "c": [
+      "Punjabi",
+      "North Indian",
+      "Parathas",
+      "Lassi"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹150–350",
+    "rating": 4.6,
+    "review_count": 2150,
+    "t": [
+      "Punjabi Parathas",
+      "Pure Veg",
+      "Lassi",
+      "Comfort Food"
+    ],
+    "a": [
+      "rustic",
+      "dhaba_style",
+      "family"
+    ],
+    "o": [
+      "family",
+      "lunch",
+      "dinner"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🫓",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Jassi+De+Parathe+Subhanpura+Vadodara",
+    "review_insights": [
+      "butter topped aloo cheese paratha",
+      "tall brass glass sweet lassi",
+      "chole bhature",
+      "wholesome Punjabi warmth"
+    ],
+    "hours": "11:00 AM – 11:00 PM"
+  },
+  {
+    "id": "vad-kathiyawadi-khadki-waghodia",
+    "name": "Shree Kathiyawadi Khadki",
+    "area": "Waghodia Road",
+    "city": "Vadodara",
+    "latitude": 22.295,
+    "longitude": 73.238,
+    "address": "Waghodia Cross Roads, Waghodia Road, Vadodara 390019",
+    "c": [
+      "Kathiyawadi",
+      "Gujarati",
+      "Desi Ghee",
+      "Pure Veg"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹150–350",
+    "rating": 4.6,
+    "review_count": 1850,
+    "t": [
+      "Kathiyawadi",
+      "Pure Veg",
+      "Desi Ghee",
+      "Family dining"
+    ],
+    "a": [
+      "rustic",
+      "traditional",
+      "family"
+    ],
+    "o": [
+      "family",
+      "dinner",
+      "lunch"
+    ],
+    "s": "spicy",
+    "dietaryOptions": [
+      "pure_veg",
+      "vegetarian"
+    ],
+    "emoji": "🍲",
+    "photo": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Shree+Kathiyawadi+Khadki+Waghodia+Road+Vadodara",
+    "review_insights": [
+      "smoky baingan bharta olo",
+      "hot crispy bajra rotla with gud and makhan",
+      "garlic potato curry",
+      "unlimited buttermilk"
+    ],
+    "hours": "11:00 AM – 3:30 PM, 6:30 PM – 11:00 PM"
+  },
+  {
+    "id": "vad-mexican-tapas-manjalpur",
+    "name": "The Mexican Tapas Cafe",
+    "area": "Manjalpur",
+    "city": "Vadodara",
+    "latitude": 22.268,
+    "longitude": 73.195,
+    "address": "Near Manjalpur Sports Complex, Manjalpur, Vadodara 390011",
+    "c": [
+      "Mexican",
+      "Cafe",
+      "Continental",
+      "Fast food"
+    ],
+    "p": "under_500",
+    "displayPrice": "₹200–450",
+    "rating": 4.6,
+    "review_count": 1280,
+    "t": [
+      "Mexican",
+      "Cafe",
+      "Nachos",
+      "Late night cafe"
+    ],
+    "a": [
+      "vibrant",
+      "cozy",
+      "trendy"
+    ],
+    "o": [
+      "friends",
+      "hangout",
+      "snack"
+    ],
+    "s": "medium",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🌮",
+    "photo": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Mexican+Tapas+Cafe+Manjalpur+Vadodara",
+    "review_insights": [
+      "molten cheese nachos",
+      "crispy paneer chimichanga",
+      "chilled mojitos",
+      "fun cozy hangout decor"
+    ],
+    "hours": "11:30 AM – 11:30 PM"
+  },
+  {
+    "id": "vad-cafe-de-como-tandalja",
+    "name": "Cafe De Como (Sun Pharma Road)",
+    "area": "Tandalja",
+    "city": "Vadodara",
+    "latitude": 22.285,
+    "longitude": 73.148,
+    "address": "Sun Pharma Road, Near Tandalja, Vadodara 390012",
+    "c": [
+      "Cafe",
+      "Continental",
+      "Coffee",
+      "Desserts"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹350–700",
+    "rating": 4.7,
+    "review_count": 1420,
+    "t": [
+      "Artisan Cafe",
+      "Specialty Brews",
+      "Continental",
+      "Late night cafe"
+    ],
+    "a": [
+      "aesthetic",
+      "lush",
+      "serene"
+    ],
+    "o": [
+      "date",
+      "friends",
+      "coffee"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "☕",
+    "photo": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe+De+Como+Sun+Pharma+Road+Vadodara",
+    "review_insights": [
+      "cortado and iced latte",
+      "truffle mushroom woodfired pizza",
+      "lotus biscoff cheesecake",
+      "peaceful glasshouse design"
+    ],
+    "hours": "11:00 AM – 12:00 AM"
+  },
+  {
+    "id": "vad-terra-cafe-vasna",
+    "name": "Terra Art Cafe & Bistro",
+    "area": "Vasna-Bhayli Road",
+    "city": "Vadodara",
+    "latitude": 22.291,
+    "longitude": 73.142,
+    "address": "Vasna-Bhayli Main Road, Vadodara 391410",
+    "c": [
+      "Cafe",
+      "European",
+      "Artisan Bakery",
+      "Continental"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹400–800",
+    "rating": 4.8,
+    "review_count": 1650,
+    "t": [
+      "Art Cafe",
+      "European Bakery",
+      "Specialty Coffee",
+      "Late night cafe"
+    ],
+    "a": [
+      "artistic",
+      "botanical",
+      "peaceful"
+    ],
+    "o": [
+      "date",
+      "celebration",
+      "coffee"
+    ],
+    "s": "mild",
+    "dietaryOptions": [
+      "vegetarian_options",
+      "vegetarian"
+    ],
+    "emoji": "🎨",
+    "photo": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Terra+Art+Cafe+Vasna+Bhayli+Road+Vadodara",
+    "review_insights": [
+      "hand-poured pour over coffees",
+      "artisan sourdough toasties",
+      "belgian chocolate ganache tart",
+      "green botanical garden"
+    ],
+    "hours": "11:00 AM – 12:00 AM"
   }
 ];

@@ -1,5 +1,5 @@
 const hyderabadCatalog=[
-{
+  {
     "id": "hyd-roastery",
     "name": "Roastery Coffee House",
     "area": "Banjara Hills",
@@ -19,7 +19,8 @@ const hyderabadCatalog=[
     "t": [
       "Bungalow Cafe",
       "Specialty Roaster",
-      "Garden"
+      "Garden",
+      "Late night coffee lounge"
     ],
     "a": [
       "cozy",
@@ -42,9 +43,10 @@ const hyderabadCatalog=[
       "jalapeno cheese balls",
       "quaint ambience"
     ],
-    "why": "Beautiful heritage villa converted into Hyderabad’s finest specialty coffee sanctuary."
+    "why": "Beautiful heritage villa converted into Hyderabad’s finest specialty coffee sanctuary.",
+    "hours": "8:00 AM – 11:30 PM"
   },
-{
+  {
     "id": "hyd-olive-bistro",
     "name": "Olive Bistro & Bar",
     "area": "Jubilee Hills",
@@ -89,7 +91,7 @@ const hyderabadCatalog=[
     ],
     "why": "Idyllic cliffside Mediterranean bistro overlooking Durgam Cheruvu lake."
   },
-{
+  {
     "id": "hyd-bawarchi",
     "name": "Bawarchi",
     "area": "RTC X Roads",
@@ -134,7 +136,7 @@ const hyderabadCatalog=[
     ],
     "why": "The holy grail of authentic slow-cooked dum biryani in the heart of Hyderabad."
   },
-{
+  {
     "id": "hyd-paradise",
     "name": "Paradise Biryani",
     "area": "Secunderabad",
@@ -180,7 +182,7 @@ const hyderabadCatalog=[
     ],
     "why": "The world-renowned 1953 landmark that put Hyderabadi Dum Biryani on the global map."
   },
-{
+  {
     "id": "hyd-shadab",
     "name": "Hotel Shadab",
     "area": "Charminar",
@@ -225,7 +227,7 @@ const hyderabadCatalog=[
     ],
     "why": "Historic Old City culinary gem near Charminar famous for mutton paya, haleem, and authentic dum biryani."
   },
-{
+  {
     "id": "hyd-niloufer",
     "name": "Cafe Niloufer",
     "area": "Lakdikapul",
@@ -245,7 +247,9 @@ const hyderabadCatalog=[
     "t": [
       "1978 Legend",
       "Irani Chai",
-      "Osmania Biscuits"
+      "Osmania Biscuits",
+      "Late night Irani chai",
+      "Midnight Osmania biscuits"
     ],
     "a": [
       "casual",
@@ -268,9 +272,10 @@ const hyderabadCatalog=[
       "fluffy bun maska with jam",
       "beloved hyderabadi morning tradition"
     ],
-    "why": "Hyderabad’s premier tea institution perfecting royal Irani chai and melt-in-mouth Osmania biscuits since 1978."
+    "why": "Hyderabad’s premier tea institution perfecting royal Irani chai and melt-in-mouth Osmania biscuits since 1978.",
+    "hours": "4:00 AM – 1:00 AM"
   },
-{
+  {
     "id": "hyd-chutneys",
     "name": "Chutneys",
     "area": "Banjara Hills",
@@ -315,7 +320,7 @@ const hyderabadCatalog=[
     ],
     "why": "Beloved South Indian vegetarian staple famous for its carousel of 7 freshly ground gourmet chutneys."
   },
-{
+  {
     "id": "hyd-jewel-nizam",
     "name": "Jewel of Nizam - The Minar",
     "area": "Gandipet",
@@ -361,7 +366,7 @@ const hyderabadCatalog=[
     ],
     "why": "Palatial restaurant perched atop a 100-foot minaret serving authentic royal Nizami feast dishes."
   },
-{
+  {
     "id": "hyd-shah-ghouse",
     "name": "Shah Ghouse Hotel",
     "area": "Tolichowki",
@@ -406,7 +411,7 @@ const hyderabadCatalog=[
     ],
     "why": "Hyderabad’s go-to late night haunt for rich mutton biryani, spicy kebabs, and creamy shahi tukda."
   },
-{
+  {
     "id": "hyd-concu",
     "name": "Conçu",
     "area": "Jubilee Hills",
@@ -427,7 +432,9 @@ const hyderabadCatalog=[
     "t": [
       "French Patisserie",
       "Artisan Choux",
-      "Tiramisu"
+      "Tiramisu",
+      "Late night dessert cafe",
+      "Midnight patisserie"
     ],
     "a": [
       "cozy",
@@ -450,9 +457,10 @@ const hyderabadCatalog=[
       "chic minimalist garden courtyard",
       "specialty espresso"
     ],
-    "why": "Hyderabad’s premier European patisserie crafting Michelin-grade entremets and French desserts."
+    "why": "Hyderabad’s premier European patisserie crafting Michelin-grade entremets and French desserts.",
+    "hours": "10:00 AM – 11:30 PM"
   },
-{
+  {
     "id": "hyd-paradise-flagship",
     "name": "Paradise Biryani (Secunderabad Flagship)",
     "area": "MG Road, Secunderabad",
@@ -495,7 +503,7 @@ const hyderabadCatalog=[
     ],
     "why": "The legendary 1953 Secunderabad flagship that made Hyderabadi Mutton Dum Biryani a global icon."
   },
-{
+  {
     "id": "hyd-bawarchi",
     "name": "Bawarchi",
     "area": "RTC X Roads / Chikkadpally",
@@ -537,7 +545,7 @@ const hyderabadCatalog=[
     ],
     "why": "RTC X Roads cult biryani epicenter celebrated by locals for intensely flavorful and spicy mutton dum biryani."
   },
-{
+  {
     "id": "hyd-cafe-bahar",
     "name": "Cafe Bahar",
     "area": "Hyderguda / Basheerbagh",
@@ -579,7 +587,7 @@ const hyderabadCatalog=[
     ],
     "why": "Hyderguda institution famed for ghee-laden special biryani, seasonal mutton haleem, and morning Irani chai."
   },
-{
+  {
     "id": "hyd-hotel-shadab",
     "name": "Hotel Shadab",
     "area": "Ghansi Bazaar / Madina Circle",
@@ -621,7 +629,7 @@ const hyderabadCatalog=[
     ],
     "why": "Old City landmark near Madina Circle famous for 6am Paya Nihari breakfasts and authentic Hyderabadi mutton dum biryani."
   },
-{
+  {
     "id": "hyd-shah-ghouse",
     "name": "Shah Ghouse Cafe & Restaurant",
     "area": "Tolichowki / Charminar",
@@ -663,7 +671,7 @@ const hyderabadCatalog=[
     ],
     "why": "Tolichowki's late-night meat palace famed for award-winning mutton haleem and midnight biryani feasts."
   },
-{
+  {
     "id": "hyd-pista-house",
     "name": "Pista House",
     "area": "Charminar / Shalibanda",
@@ -706,7 +714,7 @@ const hyderabadCatalog=[
     ],
     "why": "World-renowned Charminar institution that secured Geographical Indication (GI) status for Hyderabadi Haleem."
   },
-{
+  {
     "id": "hyd-nimrah-cafe",
     "name": "Nimrah Cafe & Bakery",
     "area": "Charminar",
@@ -727,7 +735,9 @@ const hyderabadCatalog=[
       "warm osmania biscuits",
       "tie biscuit",
       "chand biscuit",
-      "morning prayer view"
+      "morning prayer view",
+      "Late night cafe",
+      "Midnight Charminar chai"
     ],
     "a": [
       "bustling"
@@ -747,9 +757,10 @@ const hyderabadCatalog=[
       "freshly baked buttery salty-sweet Osmania biscuits that dissolve on the tongue",
       "one of the most atmospheric and iconic breakfast locations on the planet"
     ],
-    "why": "Legendary tea stall facing the Charminar serving warm buttery Osmania biscuits and creamy Irani chai."
+    "why": "Legendary tea stall facing the Charminar serving warm buttery Osmania biscuits and creamy Irani chai.",
+    "hours": "4:00 AM – 12:00 AM"
   },
-{
+  {
     "id": "hyd-ram-ki-bandi",
     "name": "Ram Ki Bandi",
     "area": "Nampally / Mozamjahi Market",
@@ -791,7 +802,7 @@ const hyderabadCatalog=[
     ],
     "why": "Cult 3am midnight food cart in Nampally famed for butter-drenched cheese dosas and spicy tawa idlis."
   },
-{
+  {
     "id": "hyd-chutneys",
     "name": "Chutneys",
     "area": "Banjara Hills / Road No. 3",
@@ -834,7 +845,7 @@ const hyderabadCatalog=[
     ],
     "why": "Banjara Hills South Indian institution renowned for six signature dipping chutneys and butter-topped Babai idlis."
   },
-{
+  {
     "id": "hyd-govind-dosa",
     "name": "Govind Dosa",
     "area": "Gulzar Houz / Old City",
@@ -875,7 +886,7 @@ const hyderabadCatalog=[
     ],
     "why": "Old City street food cart at Gulzar Houz famous for crispy butter-soaked dosas and spicy podi tawa idlis."
   },
-{
+  {
     "id": "hyd-rayalaseema-ruchulu",
     "name": "Rayalaseema Ruchulu",
     "area": "Jubilee Hills / Road No. 36",
@@ -918,7 +929,7 @@ const hyderabadCatalog=[
     ],
     "why": "Jubilee Hills destination showcasing the fiery regional flavors of Rayalaseema, including Ragi Mudda and Natu Kodi."
   },
-{
+  {
     "id": "hyd-tatva",
     "name": "Tatva",
     "area": "Jubilee Hills / Road No. 36",
@@ -982,7 +993,8 @@ const hyderabadCatalog=[
     "review_count": 2800,
     "t": [
       "Cafe",
-      "Coffee"
+      "Coffee",
+      "Late night coffee lounge"
     ],
     "a": [
       "vintage",
@@ -1002,7 +1014,8 @@ const hyderabadCatalog=[
       "onion rings platter",
       "cascara spritzer",
       "shady courtyard seating"
-    ]
+    ],
+    "hours": "8:00 AM – 11:30 PM"
   },
   {
     "id": "hyd-autumn-leaf-gachibowli",
@@ -1023,7 +1036,8 @@ const hyderabadCatalog=[
     "review_count": 3100,
     "t": [
       "Cafe",
-      "Garden"
+      "Garden",
+      "Late night garden cafe"
     ],
     "a": [
       "lush",
@@ -1043,7 +1057,8 @@ const hyderabadCatalog=[
       "grilled chicken stroganoff",
       "walnut brownie with gelato",
       "peaceful work sanctuary"
-    ]
+    ],
+    "hours": "11:00 AM – 11:30 PM"
   },
   {
     "id": "hyd-concu-sainikpuri",
@@ -1064,7 +1079,9 @@ const hyderabadCatalog=[
     "review_count": 1950,
     "t": [
       "Bakery",
-      "Dessert"
+      "Dessert",
+      "Late night dessert cafe",
+      "Midnight patisserie"
     ],
     "a": [
       "elegant",
@@ -1084,6 +1101,7 @@ const hyderabadCatalog=[
       "french macarons",
       "single estate espresso",
       "serene green patio"
-    ]
+    ],
+    "hours": "10:00 AM – 11:30 PM"
   }
 ];

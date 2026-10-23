@@ -63,6 +63,8 @@
 .studioApp .studioPhotoTop{position:absolute;top:8px;left:8px;right:8px;display:flex;align-items:start;justify-content:space-between;gap:5px;z-index:2;pointer-events:none}
 .studioApp .studioPhotoTop button{pointer-events:auto}
 .studioApp .studioStatus{border:1px solid #adc8cd50;background:#14272be6;color:#d5e7eb;font-size:9px;border-radius:9px;padding:4px 6px;white-space:nowrap;line-height:1.1}
+.studioApp .studioStatus.isOpen{border-color:#17604d;background:#0e382de6;color:#34d399;font-weight:700}
+.studioApp .studioStatus.isClosed{border-color:#6b262c;background:#3b181be6;color:#f87171;font-weight:700}
 .studioApp .studioPhotoControls{display:flex;gap:6px}
 .studioApp .studioPhotoControls button{display:grid;place-items:center;position:static!important;width:30px!important;height:30px!important;min-height:30px!important;border-radius:50%!important;background:#14272be0!important;border:1px solid #c3e7f144!important;color:#eef8fb!important;margin:0;padding:6px;box-shadow:none}
 .studioApp .studioPhotoControls button:first-child{color:#52a4ff!important}

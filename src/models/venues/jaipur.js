@@ -1,5 +1,5 @@
 const jaipurCatalog=[
-{
+  {
     "id": "jpr-bar-palladio",
     "name": "Bar Palladio",
     "area": "Narain Niwas Palace",
@@ -44,7 +44,7 @@ const jaipurCatalog=[
     ],
     "why": "A breathtaking blue jewel box combining Italian aperitivo culture with Rajputana grandeur."
   },
-{
+  {
     "id": "jpr-tapri-central",
     "name": "Tapri Central",
     "area": "C-Scheme",
@@ -89,7 +89,7 @@ const jaipurCatalog=[
     ],
     "why": "Cult rooftop tea room celebrating India’s street chai ritual with panoramic park views."
   },
-{
+  {
     "id": "jpr-lmb",
     "name": "Laxmi Mishthan Bhandar (LMB)",
     "area": "Johari Bazar",
@@ -135,7 +135,7 @@ const jaipurCatalog=[
     ],
     "why": "Historic confectioners in Johari Bazar operating since 1727, famed for inventing honeycomb Paneer Ghewar."
   },
-{
+  {
     "id": "jpr-rawat",
     "name": "Rawat Mishthan Bhandar",
     "area": "Station Road",
@@ -181,7 +181,7 @@ const jaipurCatalog=[
     ],
     "why": "India’s ultimate temple for onion kachoris, frying thousands of golden crispy Pyaz Kachoris daily."
   },
-{
+  {
     "id": "jpr-1135-ad",
     "name": "1135 AD",
     "area": "Amer Fort",
@@ -227,7 +227,7 @@ const jaipurCatalog=[
     ],
     "why": "Palatial Rajput dining located inside the majestic ramparts of Amer Fort with pure silver dining sets."
   },
-{
+  {
     "id": "jpr-handi",
     "name": "Handi Restaurant",
     "area": "MI Road",
@@ -272,7 +272,7 @@ const jaipurCatalog=[
     ],
     "why": "MI Road landmark famed for its signature slow-simmered Handi Meat cooked in clay pots."
   },
-{
+  {
     "id": "jpr-spice-court",
     "name": "Spice Court",
     "area": "Civil Lines",
@@ -318,7 +318,7 @@ const jaipurCatalog=[
     ],
     "why": "Tranquil courtyard in Civil Lines celebrated for authentic hunting-style Junglee Maas and Keema Baati."
   },
-{
+  {
     "id": "jpr-gulab-ji",
     "name": "Gulab Ji Chai Wale",
     "area": "MI Road",
@@ -363,7 +363,7 @@ const jaipurCatalog=[
     ],
     "why": "Beloved Jaipur morning landmark where ministers, students and travellers gather for legendary kulhad chai."
   },
-{
+  {
     "id": "jpr-chokhi-dhani",
     "name": "Chokhi Dhani",
     "area": "Tonk Road",
@@ -408,7 +408,7 @@ const jaipurCatalog=[
     ],
     "why": "Sprawling ethnic village resort delivering royal Rajasthani hospitality and authentic Dal Baati Churma."
   },
-{
+  {
     "id": "jpr-anokhi",
     "name": "Anokhi Cafe",
     "area": "C-Scheme",
@@ -454,7 +454,7 @@ const jaipurCatalog=[
     ],
     "why": "Peaceful organic sanctuary serving seasonal farm produce, wholesome quiches and artisanal cakes."
   },
-{
+  {
     "id": "jai-rawat-mishthan",
     "name": "Rawat Mishthan Bhandar",
     "area": "Sindhi Camp / Station Road",
@@ -496,7 +496,7 @@ const jaipurCatalog=[
     ],
     "why": "Jaipur's world-famous snack institution celebrated for flaky spiced Pyaaz Kachoris and sweet Mawa Kachoris."
   },
-{
+  {
     "id": "jai-lmb-johari-bazar",
     "name": "Laxmi Mishthan Bhandar (LMB)",
     "area": "Johari Bazar / Old Pink City",
@@ -539,7 +539,7 @@ const jaipurCatalog=[
     ],
     "why": "Historic 1727 Johari Bazar sweet and dining palace famed for Paneer Ghewar and royal Rajasthani thalis."
   },
-{
+  {
     "id": "jai-niros",
     "name": "Niros",
     "area": "MI Road",
@@ -582,7 +582,7 @@ const jaipurCatalog=[
     ],
     "why": "Historic 1949 MI Road culinary institution celebrated for fiery Mathania-chilli Laal Maas and royal non-veg fare."
   },
-{
+  {
     "id": "jai-1135-ad",
     "name": "1135 AD",
     "area": "Amer Fort",
@@ -625,7 +625,7 @@ const jaipurCatalog=[
     ],
     "why": "Regal Rajput fine dining inside the palace walls of Amer Fort serving royal Junglee Maas on pure silver tableware."
   },
-{
+  {
     "id": "jai-pandit-kulfi",
     "name": "Pandit Kulfi",
     "area": "Hawa Mahal / Badi Chaupar",
@@ -686,7 +686,9 @@ const jaipurCatalog=[
     "review_count": 1890,
     "t": [
       "Cafe",
-      "Dessert"
+      "Dessert",
+      "Late night chocolate cafe",
+      "Midnight dessert cafe"
     ],
     "a": [
       "colorful",
@@ -706,7 +708,8 @@ const jaipurCatalog=[
       "nutella pizza slice",
       "creamy white sauce pasta",
       "quirky pop art walls"
-    ]
+    ],
+    "hours": "11:00 AM – 11:30 PM"
   },
   {
     "id": "jai-curious-life-vaishali",

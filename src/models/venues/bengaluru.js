@@ -1,5 +1,5 @@
 const bengaluruCatalog=[
-{
+  {
     "id": "blr-toit",
     "name": "Toit Brewpub",
     "area": "Indiranagar",
@@ -44,7 +44,7 @@ const bengaluruCatalog=[
     ],
     "why": "Bangalore’s quintessential craft beer institution that ignited the city’s pub culture."
   },
-{
+  {
     "id": "blr-nagarjuna",
     "name": "Nagarjuna",
     "area": "Residency Road",
@@ -90,7 +90,7 @@ const bengaluruCatalog=[
     ],
     "why": "Legendary fiery Andhra feasts served on fresh plantain leaves with fragrant ghee."
   },
-{
+  {
     "id": "blr-permit-room",
     "name": "The Permit Room",
     "area": "MG Road",
@@ -136,7 +136,7 @@ const bengaluruCatalog=[
     ],
     "why": "Clever contemporary South Indian bar serving spiced cocktails and gourmet regional bites."
   },
-{
+  {
     "id": "blr-maverick-farmer",
     "name": "Maverick & Farmer Coffee",
     "area": "Ulsoor Lake",
@@ -181,7 +181,7 @@ const bengaluruCatalog=[
     ],
     "why": "Innovative artisanal coffee roaster overlooking the tranquil waters of Ulsoor Lake."
   },
-{
+  {
     "id": "blr-corner-house",
     "name": "Corner House Ice Cream",
     "area": "Koramangala",
@@ -201,7 +201,9 @@ const bengaluruCatalog=[
     "t": [
       "DBC",
       "Death By Chocolate",
-      "Cult Legend"
+      "Cult Legend",
+      "Late night dessert cafe",
+      "Midnight DBC"
     ],
     "a": [
       "casual",
@@ -224,9 +226,10 @@ const bengaluruCatalog=[
       "warm brownie sundae",
       "unmatched local cult love"
     ],
-    "why": "Bangalore’s dessert religion famous for the cult favorite Death By Chocolate sundae."
+    "why": "Bangalore’s dessert religion famous for the cult favorite Death By Chocolate sundae.",
+    "hours": "11:00 AM – 12:00 AM"
   },
-{
+  {
     "id": "blr-vidyarthi-bhavan",
     "name": "Vidyarthi Bhavan",
     "area": "Gandhi Bazaar",
@@ -272,7 +275,7 @@ const bengaluruCatalog=[
     ],
     "why": "1943 cultural heritage icon where generations gather for thick golden benne masala dosas."
   },
-{
+  {
     "id": "blr-ctr",
     "name": "CTR - Shri Sagar",
     "area": "Malleshwaram",
@@ -318,7 +321,7 @@ const bengaluruCatalog=[
     ],
     "why": "Malleshwaram’s legendary breakfast temple famed across India for its crunchy golden butter dosas."
   },
-{
+  {
     "id": "blr-truffles",
     "name": "Truffles",
     "area": "Koramangala",
@@ -339,7 +342,9 @@ const bengaluruCatalog=[
     "t": [
       "All American Burger",
       "Ferrero Shake",
-      "Student Cult"
+      "Student Cult",
+      "Late night cafe",
+      "Midnight burgers & shakes"
     ],
     "a": [
       "lively",
@@ -361,9 +366,10 @@ const bengaluruCatalog=[
       "ferrero rocher milkshake",
       "buzzing student hangout"
     ],
-    "why": "Bangalore’s beloved burger headquarters offering giant burgers and thick indulgent shakes."
+    "why": "Bangalore’s beloved burger headquarters offering giant burgers and thick indulgent shakes.",
+    "hours": "11:00 AM – 12:30 AM"
   },
-{
+  {
     "id": "blr-meghana",
     "name": "Meghana Foods",
     "area": "Koramangala",
@@ -409,7 +415,7 @@ const bengaluruCatalog=[
     ],
     "why": "Bangalore’s most popular biryani house, serving fragrant spiced rice loaded with fiery Andhra flavours."
   },
-{
+  {
     "id": "blr-mtr",
     "name": "Mavalli Tiffin Room (MTR)",
     "area": "Lalbagh",
@@ -455,7 +461,7 @@ const bengaluruCatalog=[
     ],
     "why": "Centenary institution near Lalbagh that invented the rava idli and defined Karnataka vegetarian feasts."
   },
-{
+  {
     "id": "blr-karavalli",
     "name": "Karavalli",
     "area": "Residency Road",
@@ -502,7 +508,7 @@ const bengaluruCatalog=[
     ],
     "why": "Celebrated fine dining courtyard devoted to authentic coastal home cooking from Goa to Kerala."
   },
-{
+  {
     "id": "blr-airlines",
     "name": "Airlines Hotel",
     "area": "Lavelle Road",
@@ -547,7 +553,7 @@ const bengaluruCatalog=[
     ],
     "why": "Historic open-air drive-in under spreading banyan trees where Bangalore meets over filter coffee."
   },
-{
+  {
     "id": "blr-vidyarthi-bhavan",
     "name": "Vidyarthi Bhavan",
     "area": "Gandhi Bazaar, Basavanagudi",
@@ -589,7 +595,7 @@ const bengaluruCatalog=[
     ],
     "why": "Historic 1943 Basavanagudi institution famed for thick golden masala dosas and plate-juggling waiters."
   },
-{
+  {
     "id": "blr-ctr-shri-sagar",
     "name": "CTR (Central Tiffin Room / Shri Sagar)",
     "area": "Malleshwaram",
@@ -631,7 +637,7 @@ const bengaluruCatalog=[
     ],
     "why": "Malleshwaram's legendary breakfast temple celebrated globally for its shattering crispy Benne Masala Dosa."
   },
-{
+  {
     "id": "blr-brahmins-coffee-bar",
     "name": "Brahmins' Coffee Bar",
     "area": "Shankarapuram, Basavanagudi",
@@ -674,7 +680,7 @@ const bengaluruCatalog=[
     ],
     "why": "Iconic 1965 Basavanagudi corner known for cloud-soft idlis, crunchy vadas, and legendary watery coconut chutney."
   },
-{
+  {
     "id": "blr-taaza-thindi",
     "name": "Taaza Thindi",
     "area": "Jayanagar 4th T Block",
@@ -717,7 +723,7 @@ const bengaluruCatalog=[
     ],
     "why": "Jayanagar breakfast sensation revered for clinical hygiene, sublime Chow Chow Bath, and crisp dosas."
   },
-{
+  {
     "id": "blr-veena-stores",
     "name": "Veena Stores",
     "area": "Malleshwaram",
@@ -759,7 +765,7 @@ const bengaluruCatalog=[
     ],
     "why": "Legendary Malleshwaram pavement counter serving idli-vada submerged in fragrant mint coconut chutney since 1977."
   },
-{
+  {
     "id": "blr-meghana-foods",
     "name": "Meghana Foods",
     "area": "Koramangala 5th Block",
@@ -802,7 +808,7 @@ const bengaluruCatalog=[
     ],
     "why": "Bangalore's ultimate cult Andhra biryani destination famous for fiery boneless chicken biryani and Andhra chilli chicken."
   },
-{
+  {
     "id": "blr-nagarjuna",
     "name": "Nagarjuna",
     "area": "Residency Road",
@@ -845,7 +851,7 @@ const bengaluruCatalog=[
     ],
     "why": "Residency Road landmark serving lavish Andhra banana-leaf meals with gunpowder ghee and spicy mutton sukka."
   },
-{
+  {
     "id": "blr-shivaji-military-hotel",
     "name": "Shivaji Military Hotel",
     "area": "Banashankari 2nd Stage",
@@ -887,7 +893,7 @@ const bengaluruCatalog=[
     ],
     "why": "Centennial 1924 military hotel famed for wood-fired mutton Donne Biryani served in eco-friendly leaf cups."
   },
-{
+  {
     "id": "blr-toit",
     "name": "Toit Brewpub",
     "area": "Indiranagar / 100ft Road",
@@ -930,7 +936,7 @@ const bengaluruCatalog=[
     ],
     "why": "Indiranagar's iconic microbrewery that defined Bangalore's craft beer culture with fresh brews and wood-fired pizza."
   },
-{
+  {
     "id": "blr-windmills-craftworks",
     "name": "Windmills Craftworks",
     "area": "Whitefield",
@@ -973,7 +979,7 @@ const bengaluruCatalog=[
     ],
     "why": "Luxurious Whitefield brewpub combining world-class craft beer, live jazz theater, and gourmet international cuisine."
   },
-{
+  {
     "id": "blr-truffles",
     "name": "Truffles",
     "area": "St. Marks Road / Koramangala",
@@ -993,7 +999,9 @@ const bengaluruCatalog=[
       "all american cheese burger",
       "ferrero rocher thick shake",
       "peri peri chicken steak",
-      "youth icon"
+      "youth icon",
+      "Late night cafe",
+      "Midnight burgers & shakes"
     ],
     "a": [
       "bustling"
@@ -1014,9 +1022,10 @@ const bengaluruCatalog=[
       "massive juicy chicken and tenderloin burgers packed with melted cheese and crisp lettuce",
       "unbeatable value for students and young professionals craving hearty comfort food"
     ],
-    "why": "Bangalore's beloved burger institution famous for monster handcrafted burgers and decadent thick shakes."
+    "why": "Bangalore's beloved burger institution famous for monster handcrafted burgers and decadent thick shakes.",
+    "hours": "11:00 AM – 12:30 AM"
   },
-{
+  {
     "id": "blr-corner-house",
     "name": "Corner House Ice Cream",
     "area": "Residency Road / Indiranagar",
@@ -1035,7 +1044,9 @@ const bengaluruCatalog=[
       "hot chocolate fudge",
       "trilogy sundae",
       "apple pie with vanilla",
-      "bangalore emotion"
+      "bangalore emotion",
+      "Late night dessert cafe",
+      "Midnight DBC"
     ],
     "a": [
       "bustling"
@@ -1055,9 +1066,10 @@ const bengaluruCatalog=[
       "the legendary Death by Chocolate (DBC) with warm cake, vanilla scoops, peanuts, cherries, and hot fudge",
       "unmatched consistency and nostalgia that has delighted families for forty years"
     ],
-    "why": "Legendary Bangalore dessert brand celebrated for the iconic 'Death By Chocolate' (DBC) sundae."
+    "why": "Legendary Bangalore dessert brand celebrated for the iconic 'Death By Chocolate' (DBC) sundae.",
+    "hours": "11:00 AM – 12:00 AM"
   },
-{
+  {
     "id": "blr-koshys",
     "name": "Koshy's",
     "area": "St. Marks Road",
@@ -1100,7 +1112,7 @@ const bengaluruCatalog=[
     ],
     "why": "Historic 1940 intellectual sanctuary on St. Marks Road famous for Sunday appam with stew and vintage charm."
   },
-{
+  {
     "id": "blr-karavalli",
     "name": "Karavalli",
     "area": "The Gateway Hotel / Residency Road",
@@ -1144,7 +1156,7 @@ const bengaluruCatalog=[
     ],
     "why": "Legendary coastal fine dining sanctuary at The Gateway Hotel preserving indigenous recipes from the South West coast."
   },
-{
+  {
     "id": "blr-mtr-1924",
     "name": "MTR 1924 (Mavalli Tiffin Room)",
     "area": "Lalbagh Road",
@@ -1206,7 +1218,8 @@ const bengaluruCatalog=[
     "review_count": 1450,
     "t": [
       "Cafe",
-      "Coffee"
+      "Coffee",
+      "Late night cafe"
     ],
     "a": [
       "modern",
@@ -1226,7 +1239,8 @@ const bengaluruCatalog=[
       "blueberry muffin",
       "work friendly wifi",
       "peaceful tech park courtyard"
-    ]
+    ],
+    "hours": "11:00 AM – 11:30 PM"
   },
   {
     "id": "blr-glens-whitefield",
@@ -1248,7 +1262,8 @@ const bengaluruCatalog=[
     "review_count": 3200,
     "t": [
       "Bakery",
-      "Cafe"
+      "Cafe",
+      "Late night bakery cafe"
     ],
     "a": [
       "vintage",
@@ -1268,7 +1283,8 @@ const bengaluruCatalog=[
       "thin crust sourdough pizza",
       "citrus cooler",
       "vintage red brick porch"
-    ]
+    ],
+    "hours": "10:00 AM – 11:30 PM"
   },
   {
     "id": "blr-dialogues-hsr",
@@ -1289,7 +1305,8 @@ const bengaluruCatalog=[
     "review_count": 1850,
     "t": [
       "Cafe",
-      "Co-working"
+      "Co-working",
+      "Late night boardgame cafe"
     ],
     "a": [
       "boardgames",
@@ -1310,7 +1327,8 @@ const bengaluruCatalog=[
       "french press coffee",
       "chilli cheese toasties",
       "open community terrace"
-    ]
+    ],
+    "hours": "10:00 AM – 11:30 PM"
   },
   {
     "id": "blr-druid-garden-yelahanka",

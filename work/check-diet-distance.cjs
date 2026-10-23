@@ -12,7 +12,7 @@ vm.runInContext(`
  selectedCity='Vadodara';
  const auditedVadodara=getActiveCatalog();
  const verifiedPureIds=['vad-greenr-cafe','vad-mouj-by-mishri','vad-house-of-failures','vad-jagdish-farshan','vad-jassi-de-parathe','vad-vishal-sandwich','vad-new-alka-restaurant','vad-hot-bite','vad-kansar-thali','dno-vad-la-ville','dno-vad-kansaar','dno-vad-22nd-parallel','dno-vad-makeba','dno-vad-stellar'];
- assert.equal(auditedVadodara.length,108,'Dietary corrections must retain every existing Vadodara entry');
+ assert.equal(auditedVadodara.length,165,'Dietary corrections must retain every existing Vadodara entry');
  for(const id of verifiedPureIds){
   const records=auditedVadodara.filter(r=>r.id===id);
   assert.ok(records.length,id+' must remain in the catalogue');
@@ -23,7 +23,7 @@ vm.runInContext(`
  }
  for(const [city,count] of Object.entries(dietaryAudit.bundled_city_counts)){
   selectedCity=city;
-  assert.equal(getActiveCatalog().length,count,city+' must retain its complete catalogue');
+  assert.equal(getActiveCatalog().length,count+({Kochi:2,Goa:2,Vadodara:57,Ahmedabad:57}[city]||0),city+' must retain its complete catalogue plus reviewed additions');
  }
  for(const expected of dietaryAudit.source_records){
   selectedCity=expected.city;
@@ -36,6 +36,12 @@ vm.runInContext(`
   const restaurant=getActiveCatalog().find(r=>r.id===id);assert.ok(restaurant,id+' must remain in the catalogue');
   assert.equal(isPureVegRestaurant(restaurant),false,id+' must remain outside Pure veg');
  }
+ for(const [city,ids] of [['Kochi',['koc-brindhavan-palarivattom','koc-gokul-oottupura-kadavanthra']],['Goa',['goa-navtara-panaji','goa-cafe-tato-patto']]]){
+  selectedCity=city;pureVegOnly=true;
+  assert.deepEqual(ranked().map(r=>r.id).sort(),ids.slice().sort(),city+' must show its two verified pure-veg branches');
+  for(const id of ids){const r=getActiveCatalog().find(r=>r.id===id);assert.ok(hasCoordinates(r),id+' needs a verified map position');assert.equal(r.ratingSource,'District');}
+ }
+ pureVegOnly=false;
  selectedCity='Ahmedabad';
  const base={city:'Ahmedabad',c:['Gujarati'],t:['Restaurant'],a:['quiet'],o:['family'],p:'under_500',s:'mild',rating:4.5,review_count:90,latitude:23.0225,longitude:72.5714};
  const pure={...base,id:'pure',name:'Listed pure veg',dietaryOptions:['pure_veg']};

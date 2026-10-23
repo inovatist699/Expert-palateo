@@ -1,5 +1,5 @@
 const kolkataCatalog=[
-{
+  {
     "id": "kol-peter-cat",
     "name": "Peter Cat",
     "area": "Park Street",
@@ -45,7 +45,7 @@ const kolkataCatalog=[
     ],
     "why": "The undisputed king of Park Street dining, famous for the legendary Iranian Chelo Kebab."
   },
-{
+  {
     "id": "kol-6-ballygunge",
     "name": "6 Ballygunge Place",
     "area": "Ballygunge",
@@ -91,7 +91,7 @@ const kolkataCatalog=[
     ],
     "why": "Colonial mansion serving authentic Zamindari Bengali delicacies like Daab Chingri."
   },
-{
+  {
     "id": "kol-flurys",
     "name": "Flurys",
     "area": "Park Street",
@@ -112,7 +112,9 @@ const kolkataCatalog=[
     "t": [
       "1927 Heritage",
       "English Breakfast",
-      "Rum Balls"
+      "Rum Balls",
+      "Late night tearoom & cafe",
+      "Park Street night icon"
     ],
     "a": [
       "traditional",
@@ -135,9 +137,10 @@ const kolkataCatalog=[
       "creamy chicken patties",
       "1927 historic tearoom"
     ],
-    "why": "Historic tearoom on Park Street serving European confectioneries since 1927."
+    "why": "Historic tearoom on Park Street serving European confectioneries since 1927.",
+    "hours": "7:30 AM – 11:30 PM"
   },
-{
+  {
     "id": "kol-arsalan",
     "name": "Arsalan",
     "area": "Park Circus",
@@ -182,7 +185,7 @@ const kolkataCatalog=[
     ],
     "why": "The undisputed titan of Kolkata Mughlai biryani, pairing long-grain basmati with melt-in-mouth potato."
   },
-{
+  {
     "id": "kol-mocambo",
     "name": "Mocambo",
     "area": "Park Street",
@@ -228,7 +231,7 @@ const kolkataCatalog=[
     ],
     "why": "Legendary 1956 Park Street Continental restaurant famous for baked Devilled Crab and retro European charm."
   },
-{
+  {
     "id": "kol-kusum",
     "name": "Kusum Rolls",
     "area": "Park Street",
@@ -274,7 +277,7 @@ const kolkataCatalog=[
     ],
     "why": "The definitive street food counter on Park Street where Kolkata’s flaky kathi roll was perfected."
   },
-{
+  {
     "id": "kol-bhojohori",
     "name": "Bhojohori Manna",
     "area": "Hindustan Road",
@@ -320,7 +323,7 @@ const kolkataCatalog=[
     ],
     "why": "Beloved Bengali chain preserving heirloom homestyle fish curries named after the legendary Manna Dey song."
   },
-{
+  {
     "id": "kol-kc-das",
     "name": "K.C. Das",
     "area": "Esplanade",
@@ -366,7 +369,7 @@ const kolkataCatalog=[
     ],
     "why": "The historic confectioners whose ancestor Nobin Chandra Das created the spongy Rossogolla in 1868."
   },
-{
+  {
     "id": "kol-olypub",
     "name": "Olypub",
     "area": "Park Street",
@@ -410,7 +413,7 @@ const kolkataCatalog=[
     ],
     "why": "Iconic 1947 Park Street watering hole where generations of Kolkata poets, artists and students meet."
   },
-{
+  {
     "id": "kol-shiraz",
     "name": "Shiraz Golden Restaurant",
     "area": "Mullick Bazar",
@@ -455,7 +458,7 @@ const kolkataCatalog=[
     ],
     "why": "Kolkata Mughlai stalwart famous for its white cashew-yogurt Mutton Rezala and Awadhi biryani."
   },
-{
+  {
     "id": "kol-peter-cat",
     "name": "Peter Cat",
     "area": "Park Street",
@@ -498,7 +501,7 @@ const kolkataCatalog=[
     ],
     "why": "Park Street's crowning institution since 1975 famed for its signature Iranian Chelo Kebab with butter rice and egg."
   },
-{
+  {
     "id": "kol-mocambo",
     "name": "Mocambo",
     "area": "Park Street",
@@ -541,7 +544,7 @@ const kolkataCatalog=[
     ],
     "why": "Historic 1953 Park Street continental landmark famous for baked Devilled Crab and Chicken a la Kiev."
   },
-{
+  {
     "id": "kol-flurys",
     "name": "Flurys",
     "area": "Park Street",
@@ -561,7 +564,9 @@ const kolkataCatalog=[
       "english breakfast",
       "legendary rum balls",
       "chicken patties",
-      "heritage park street window"
+      "heritage park street window",
+      "Late night tearoom & cafe",
+      "Park Street night icon"
     ],
     "a": [
       "bustling"
@@ -582,9 +587,10 @@ const kolkataCatalog=[
       "boozy decadent chocolate rum balls and flaky hot chicken patties",
       "full traditional English breakfast with sausages, grilled tomato, baked beans, and darjeeling tea"
     ],
-    "why": "Historic 1927 European tearoom on Park Street synonymous with Darjeeling tea, flaky patties, and rich rum balls."
+    "why": "Historic 1927 European tearoom on Park Street synonymous with Darjeeling tea, flaky patties, and rich rum balls.",
+    "hours": "7:30 AM – 11:30 PM"
   },
-{
+  {
     "id": "kol-arsalan",
     "name": "Arsalan",
     "area": "Park Circus 7 Point",
@@ -626,7 +632,7 @@ const kolkataCatalog=[
     ],
     "why": "Park Circus flagship hailed as the gold standard of authentic Kolkata Biryani with fragrant rice and braised potato."
   },
-{
+  {
     "id": "kol-nizams",
     "name": "Nizam's",
     "area": "New Market / Hogg Market",
@@ -668,7 +674,7 @@ const kolkataCatalog=[
     ],
     "why": "Historic 1932 New Market institution celebrated worldwide as the inventor of the Kolkata Kathi Roll."
   },
-{
+  {
     "id": "kol-aminia",
     "name": "Aminia",
     "area": "New Market / Esplanade",
@@ -710,7 +716,7 @@ const kolkataCatalog=[
     ],
     "why": "Centennial 1929 Esplanade landmark renowned for its fragrant Kolkata biryani and delicate white Mutton Rezala."
   },
-{
+  {
     "id": "kol-kusum-rolls",
     "name": "Kusum Rolls",
     "area": "Park Street",
@@ -752,7 +758,7 @@ const kolkataCatalog=[
     ],
     "why": "Park Street's reigning street roll counter famous for flaky laccha parathas rolled with juicy spiced fillings."
   },
-{
+  {
     "id": "kol-bhojohori-manna",
     "name": "Bhojohori Manna",
     "area": "Gariahat / Hindustan Park",
@@ -795,7 +801,7 @@ const kolkataCatalog=[
     ],
     "why": "Gariahat Bengali institution celebrated for heirloom homestyle fish curries, Ilish Paturi, and Kosha Mangsho."
   },
-{
+  {
     "id": "kol-6-ballygunge-place",
     "name": "6 Ballygunge Place",
     "area": "Ballygunge",
@@ -857,7 +863,9 @@ const kolkataCatalog=[
     "review_count": 2450,
     "t": [
       "Cafe",
-      "Bistro"
+      "Bistro",
+      "Late night bistro & cafe",
+      "Evening hangout"
     ],
     "a": [
       "chic",
@@ -878,7 +886,8 @@ const kolkataCatalog=[
       "grilled chicken steak",
       "peach iced tea",
       "vibrant it-hub evening"
-    ]
+    ],
+    "hours": "12:00 PM – 11:30 PM"
   },
   {
     "id": "kol-coffee-bond-newtown",

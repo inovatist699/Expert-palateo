@@ -22,62 +22,16 @@ function parseTimeStr(value){
  return h*60+minute;
 }
 function getVenueOpenStatus(r){
-  let hours = r && (r.openTiming || r.hours || r.timing);
-  let openTimeStr = null, closeTimeStr = null;
-  let isVerified = false;
-
-  if (typeof hours === 'string' && hours.trim()) {
-    const trimmed = hours.trim();
-    if (/^(?:open\s*)?(?:24\s*hours|24\/7)$/i.test(trimmed)) {
-      return {
-        isOpen: true,
-        statusText: 'Listed as open 24 hours',
-        timingText: trimmed + ' · Confirmed with venue',
-        openTimeStr: '12:00 AM',
-        closeTimeStr: '11:59 PM',
-        isVerified: true
-      };
-    }
-    const parts = trimmed.split(/\s*[–—-]\s*|\s+to\s+/i);
-    if (parts.length === 2) {
-      const [oStr, cStr] = parts.map(x => x.trim());
-      const oMin = parseTimeStr(oStr), cMin = parseTimeStr(cStr);
-      if (oMin !== null && cMin !== null && oMin !== cMin) {
-        openTimeStr = oStr;
-        closeTimeStr = cStr;
-        isVerified = true;
-      }
-    }
-  }
-
-  // When hours are unverified or missing, make workable using IST standard dining timings
-  if (!openTimeStr || !closeTimeStr) {
-    const pool = [...(r?.c || []), ...(r?.t || [])].map(x => String(x).toLowerCase()).join(' ');
-    const isCafe = pool.includes('cafe') || pool.includes('coffee') || pool.includes('dessert') || pool.includes('bakery') || pool.includes('tea');
-    openTimeStr = isCafe ? '10:00 AM' : '11:00 AM';
-    closeTimeStr = isCafe ? '11:00 PM' : '11:30 PM';
-    isVerified = false;
-  }
-
-  const openMin = parseTimeStr(openTimeStr);
-  const closeMin = parseTimeStr(closeTimeStr);
-  const ist = getISTDate();
-  const now = ist.getHours() * 60 + ist.getMinutes();
-  const isOpen = closeMin > openMin ? (now >= openMin && now < closeMin) : (now >= openMin || now < closeMin);
-
-  const statusText = isOpen ? `Open Now · Closes ${closeTimeStr}` : `Closed · Opens ${openTimeStr}`;
-  const timingText = isVerified
-    ? `${openTimeStr} – ${closeTimeStr} · Confirm with venue`
-    : `${openTimeStr} – ${closeTimeStr} (IST) · Standard hours · Confirm with venue`;
-
-  return {
-    isOpen,
-    statusText,
-    timingText,
-    openTimeStr,
-    closeTimeStr,
-    isVerified
-  };
+ const unknown={isOpen:null,statusText:'Hours unverified',timingText:'Confirm opening hours with the venue.',openTimeStr:null,closeTimeStr:null};
+ const hours=r?.openTiming||r?.hours||r?.timing;
+ if(typeof hours!=='string')return unknown;
+ if(/^(?:open\s*)?(?:24\s*hours|24\/7)$/i.test(hours.trim()))return {isOpen:true,statusText:'Listed as open 24 hours',timingText:hours.trim(),openTimeStr:null,closeTimeStr:null};
+ const parts=hours.split(/\s*[–—-]\s*|\s+to\s+/i);if(parts.length!==2)return unknown;
+ const [openTimeStr,closeTimeStr]=parts.map(x=>x.trim()),openMin=parseTimeStr(openTimeStr),closeMin=parseTimeStr(closeTimeStr);
+ if(openMin===null||closeMin===null||openMin===closeMin)return unknown;
+ const ist=getISTDate(),now=ist.getHours()*60+ist.getMinutes();
+ const isOpen=closeMin>openMin?now>=openMin&&now<closeMin:now>=openMin||now<closeMin;
+ return {isOpen,statusText:isOpen?'Within listed hours · Closes '+closeTimeStr:'Outside listed hours · Opens '+openTimeStr,timingText:hours.trim()+' · Confirm with the venue',openTimeStr,closeTimeStr};
 }
 function formatReviewCount(count){
   const n = Number(count || 0);

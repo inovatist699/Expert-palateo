@@ -2,6 +2,9 @@
   "name": "palateo-workspace",
   "private": true,
   "scripts": {
+    "dev": "node scripts/preview.cjs",
+    "start": "node scripts/preview.cjs",
+    "test:preview": "node --test scripts/preview.test.cjs",
     "build": "node scripts/build.cjs",
     "web:build": "node scripts/build.cjs",
     "web:check": "npm run check",

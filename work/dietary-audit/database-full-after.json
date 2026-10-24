@@ -1,0 +1,3906 @@
+[
+  {
+    "id": "74f21bd3-9868-41b2-8b86-052b3dc531dc",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r2",
+    "name": "Rungg Premium Dining",
+    "city": "Ahmedabad",
+    "area": "Satellite",
+    "address": "Satellite, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Premium",
+      "Experience",
+      "Date night"
+    ],
+    "rating": "4.8"
+  },
+  {
+    "id": "520b8024-1662-4901-9499-d529e8573cbe",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r8",
+    "name": "Maaidah — The Table Spread",
+    "city": "Ahmedabad",
+    "area": "Ellisbridge",
+    "address": "Ellisbridge, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Modern",
+      "Table spread",
+      "Friends"
+    ],
+    "rating": "4.7"
+  },
+  {
+    "id": "a5b6e383-69c0-44f4-bafc-a41229a6837c",
+    "external_provider": "palateo-curated",
+    "external_place_id": "zom-ahm-chapter-four",
+    "name": "The Chapter Four",
+    "city": "Ahmedabad",
+    "area": "Sola",
+    "address": "Sola, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": "4.6"
+  },
+  {
+    "id": "c1876a60-2d70-48fa-8d66-8aaf651fa461",
+    "external_provider": "palateo-curated",
+    "external_place_id": "zom-ahm-roastery-cultur",
+    "name": "Roastery Cultur - The Coffee Company",
+    "city": "Ahmedabad",
+    "area": "Bodakdev",
+    "address": "Bodakdev, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": "4.6"
+  },
+  {
+    "id": "df798a5d-8f41-4bcb-9a80-61174d602ec9",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r1",
+    "name": "Agashiye",
+    "city": "Ahmedabad",
+    "area": "Old City",
+    "address": "Old City, Ahmedabad",
+    "dietary_options": [
+      "pure_veg"
+    ],
+    "tags": [
+      "Traditional",
+      "Heritage",
+      "Thali"
+    ],
+    "rating": "4.6"
+  },
+  {
+    "id": "1dc96c7a-b994-40fa-a0f1-564afcd7e2a4",
+    "external_provider": "palateo-curated",
+    "external_place_id": "zom-ahm-tapa-toro",
+    "name": "Tapa Toro",
+    "city": "Ahmedabad",
+    "area": "Bodakdev",
+    "address": "Bodakdev, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": "4.5"
+  },
+  {
+    "id": "7da2d860-8043-4731-b46d-efb00c73b54e",
+    "external_provider": "palateo-curated",
+    "external_place_id": "zom-ahm-afro-house",
+    "name": "Afro House",
+    "city": "Ahmedabad",
+    "area": "Thaltej",
+    "address": "Thaltej, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": "4.5"
+  },
+  {
+    "id": "925674ec-b535-4348-982c-5fa601394b1e",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r7",
+    "name": "Karma Cafe",
+    "city": "Ahmedabad",
+    "area": "Navrangpura",
+    "address": "Navrangpura, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Value",
+      "Cafe",
+      "Casual"
+    ],
+    "rating": "4.5"
+  },
+  {
+    "id": "c910c142-a605-400f-8f81-0e9406a6f6c4",
+    "external_provider": "palateo-curated",
+    "external_place_id": "zom-ahm-mad-house",
+    "name": "The Mad House Café",
+    "city": "Ahmedabad",
+    "area": "Gulbai Tekra",
+    "address": "Gulbai Tekra, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": "4.5"
+  },
+  {
+    "id": "eb821ee1-7c8b-4ae0-b4dd-9c39c02738c7",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r9",
+    "name": "Sazzy Sizzlers",
+    "city": "Ahmedabad",
+    "area": "Thaltej",
+    "address": "Thaltej, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Sizzlers",
+      "Lively",
+      "Friends"
+    ],
+    "rating": "4.5"
+  },
+  {
+    "id": "f6a9ae02-5651-4eaf-a958-3a1dc44699ca",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r3",
+    "name": "Under The Neem Trees",
+    "city": "Ahmedabad",
+    "area": "Bodakdev",
+    "address": "Bodakdev, Ahmedabad",
+    "dietary_options": [
+      "pure_veg"
+    ],
+    "tags": [
+      "Outdoor",
+      "Relaxed",
+      "Popular"
+    ],
+    "rating": "4.5"
+  },
+  {
+    "id": "808029c3-ab28-4132-bf4e-5ce8ea34da62",
+    "external_provider": "palateo-curated",
+    "external_place_id": "zom-ahm-leafy-lion",
+    "name": "Leafy Lion",
+    "city": "Ahmedabad",
+    "area": "Navrangpura",
+    "address": "Navrangpura, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": "4.4"
+  },
+  {
+    "id": "a18d5124-d825-42a5-8ad5-cad86d5b08b0",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r11",
+    "name": "Jassi De Parathe",
+    "city": "Ahmedabad",
+    "area": "Prahlad Nagar",
+    "address": "Prahlad Nagar, Ahmedabad",
+    "dietary_options": [
+      "pure_veg"
+    ],
+    "tags": [
+      "Punjabi",
+      "Value",
+      "Comfort"
+    ],
+    "rating": "4.4"
+  },
+  {
+    "id": "afe4ac45-824e-4ed7-8dfa-e4c9a03cac17",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r5",
+    "name": "Koffee Stories Cafe",
+    "city": "Ahmedabad",
+    "area": "Navrangpura",
+    "address": "Navrangpura, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Coffee",
+      "Cozy",
+      "Work"
+    ],
+    "rating": "4.4"
+  },
+  {
+    "id": "d3d1c74b-cfdc-43cc-b82a-4851fc81f52a",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r10",
+    "name": "Rajwadu",
+    "city": "Ahmedabad",
+    "area": "Jivraj Park",
+    "address": "Jivraj Park, Ahmedabad",
+    "dietary_options": [
+      "pure_veg"
+    ],
+    "tags": [
+      "Traditional",
+      "Family",
+      "Experience"
+    ],
+    "rating": "4.4"
+  },
+  {
+    "id": "d84a2405-3d0e-42bb-b41d-b0b3d2496938",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r4",
+    "name": "650 — The Global Kitchen",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Ahmedabad",
+    "dietary_options": [
+      "pure_veg"
+    ],
+    "tags": [
+      "Global",
+      "Casual",
+      "Friends"
+    ],
+    "rating": "4.4"
+  },
+  {
+    "id": "688b71f2-7ece-4229-9a90-61d9e70ba336",
+    "external_provider": "palateo-curated",
+    "external_place_id": "dno-ahm-dakshinayan",
+    "name": "Dakshinayan",
+    "city": "Ahmedabad",
+    "area": "Satellite",
+    "address": "Satellite, Ahmedabad",
+    "dietary_options": [
+      "vegetarian"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": "4.3"
+  },
+  {
+    "id": "7a47e8ec-909b-49cd-b0aa-6656a1b3bccc",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r6",
+    "name": "Zen Cafe",
+    "city": "Ahmedabad",
+    "area": "Navrangpura",
+    "address": "Navrangpura, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Cafe",
+      "Calm",
+      "Casual"
+    ],
+    "rating": "4.3"
+  },
+  {
+    "id": "a8dfecb5-69ab-4ccc-80cc-faa0f2cf6575",
+    "external_provider": "palateo_demo",
+    "external_place_id": "r12",
+    "name": "Patang Re-Evolve",
+    "city": "Ahmedabad",
+    "area": "Ellisbridge",
+    "address": "Ellisbridge, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "View",
+      "Premium",
+      "Special"
+    ],
+    "rating": "4.2"
+  },
+  {
+    "id": "026e955c-9748-42b8-b270-92be16e645a5",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/2376626693",
+    "name": "Black Salt",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "043105f3-28ad-415f-973f-149176d0ab14",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/7137331982",
+    "name": "The Cafe Date",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "0473d873-fb87-4d40-979d-22a3214ddbbc",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4369863491",
+    "name": "Subway",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "048b1767-5465-4a07-9e3a-e18c1e0bb6fc",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5197470721",
+    "name": "Havmor restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "05621b94-59c7-4a60-9053-b6c8a9a7c14a",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3293763762",
+    "name": "Shreeji krupa vadapav",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "060c1730-9998-4033-89d8-2c6b837e390a",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3306683254",
+    "name": "Naeeka",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "07656f07-29ec-45f5-8214-0d5db479c4c9",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1135236974",
+    "name": "Aadhya Cafe",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food",
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "07da63da-3d20-4731-bde2-f0ffea698a8b",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9006994317",
+    "name": "La Milano Pizzeria Prahladnagar",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "GF7-8 Opp Prahladnagar Garden, Ahmedabad, 380015",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "09603032-0447-4546-8821-ef90643a4d54",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/13041581330",
+    "name": "McDonald's",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "097bf084-8503-4cf8-a158-3f0c26e71222",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/2211694435",
+    "name": "Food Temple",
+    "city": "Ahmedabad",
+    "area": "GST Crossing",
+    "address": "GST Crossing, 382480",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "09e29954-fdd8-4fe9-9484-4a97fd45f3be",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10750415881",
+    "name": "Choco drama",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "09ffb8dd-885e-453e-9e96-9241fc13fbd7",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14068572211",
+    "name": "Domino's",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "0a5f7d77-51c1-462e-b162-138c3240730b",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4292039993",
+    "name": "Gruh laxmi spices",
+    "city": "Ahmedabad region",
+    "area": "SH 41",
+    "address": "SH 41",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "0d1d10c0-a217-475a-9220-1c69e819c299",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10959725324",
+    "name": "Gwalia Sweets Private Limited",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "0e850ab4-a14d-4467-97c8-e23720b69be6",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/13446377303",
+    "name": "Open air food market",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "0ebf151b-3f37-4e97-9858-d9752ba6cd3c",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14096330672",
+    "name": "Nescafe",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "14aaf883-654b-4122-b081-9a4c305dac5d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14068572213",
+    "name": "The Poutinerie",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1656de50-0592-4502-bbde-705756f84b0d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/1964926897",
+    "name": "Havmor Restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "17a9cc9f-e07b-4b5b-917c-bc54fd5a19e4",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/1561520723",
+    "name": "Amul",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "18144539-7a4e-4d16-aff4-ad8540c9c4f0",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4797415998",
+    "name": "Subway",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "18f8abfb-166a-4036-b708-d243d86a3fbe",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14068572207",
+    "name": "Tim Hortons",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1a4a99e0-c70f-48fb-a349-d1072d415693",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10750415885",
+    "name": "leela sandwich",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1aa89859-521a-43a8-85ac-47ecc0447720",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4305633595",
+    "name": "Jay bhavani vadapav",
+    "city": "Ahmedabad region",
+    "area": "Ahmedabad Mehsana Highway",
+    "address": "Ahmedabad -Mehsana highway",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1cad9a38-cfc6-4dcf-8048-a0d7eca09218",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4721512587",
+    "name": "Apun Ka Adda",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1d513026-f9c4-45ab-a3be-f95a3b610493",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5527659737",
+    "name": "Takshshila Food Court",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1f41728f-e054-4db8-b366-b940369698af",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10959605481",
+    "name": "Ramdev Farsan",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "208b547d-e93e-453b-a30d-1366cff1f78a",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5029238558",
+    "name": "The Cafe Baraco",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "34 memnagar, ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "21dd0e01-7bfa-4a10-9e6a-08262d9ed456",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4479107496",
+    "name": "Food point Restaurant",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "22e05c5c-335f-46b2-9a0b-1fa0c84209c6",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/6183928288",
+    "name": "Chicken biryani",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2322aa20-3cb2-4ed4-9d62-d90dc6a9ca71",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1486398672",
+    "name": "NFSU Cafeteria",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "232a69ee-f31b-4eee-b23a-9e3c7831840b",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4797416004",
+    "name": "Fullfills Ahmedabad",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "G2 Yash Aqua Vijay Cross Road, Navarangpura, Ahmedabad, 380009",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "23c1fdf5-27c3-4b8b-8f41-4c544801a320",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5546134536",
+    "name": "Samrasi - Premium Bhojnalaya",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "247dd458-27ec-40ee-943e-052c08a2365a",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12590599051",
+    "name": "The dark roast",
+    "city": "Ahmedabad, Prahladnagar",
+    "area": "Ahmedabad, Prahladnagar",
+    "address": "Service road - Sarkhej Gandhinagar Highway, Ahmedabad, Prahladnagar, 380015",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "25052d78-59df-4931-be48-589981824ef5",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4637012137",
+    "name": "Gayatri",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "253f9578-85fc-4106-b51d-db722cb13bcf",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9002228814",
+    "name": "Sambar Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "27347b58-4463-4255-ae81-2500939fb119",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4477740673",
+    "name": "Shreeeji Milk Palace",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "283ee154-d956-4e60-bee4-ad3549e4a21a",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4292013895",
+    "name": "MD masala",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2912564c-6050-4566-9e27-5580412cdc9b",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12731411380",
+    "name": "Rasam Thal",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2b188d8e-a7b9-4a6f-bc59-d58268e90200",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1432594587",
+    "name": "Juice Centre",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2befdc71-d936-4f1d-bc99-e3abfc15ec58",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4721520831",
+    "name": "Yash Farsan",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2cc033ad-a7b3-421b-97bd-ba1ee9f9b893",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/6088126794",
+    "name": "Vrindavan",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2d21567b-b40e-49f8-ba99-a7cfab8843e4",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10128943740",
+    "name": "inHungr",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Shop No-21 Siddhi Vinayak Residency, Near St. Mary's School, Nava Naroda, Ahmedabad, 382345",
+    "dietary_options": [],
+    "tags": [
+      "Food court"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2d35db40-7de6-48cd-9a1a-5aba56b82fd7",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14068572219",
+    "name": "Wagh Bakri Tea World",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2fd744c9-bbf2-40d0-9139-518f571c5972",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/13041668531",
+    "name": "Burger King",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "30ae3a4d-2dee-420f-b5f7-14ec941dfdd4",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9123574763",
+    "name": "Deva's Coffee Bar",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food",
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3279626d-b0c5-468e-852e-2ae4d725f3ca",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1009015696",
+    "name": "Smt. Manekba Swadhyay Khand",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Food court"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3283fea0-475a-40cd-88a8-1af36deea1af",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9078990286",
+    "name": "Crush Culture Cafe Bar",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "106, Naroda business hub, NR. New D-Mart, Naroda-dehgam road Hanspura, Ahmedabad, 382330",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3307f485-65dc-47a3-b42d-df58990e972d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/1313805181",
+    "name": "Upper Crust Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Aarohi Complex Vijay Cross Roads, Ahmedabad, 380009",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "33bde78b-f51b-4013-80cd-e5f9ba2f96e7",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9878358235",
+    "name": "The House of Khaman",
+    "city": "Ahmedabad",
+    "area": "Navrangpura",
+    "address": "Navrangpura",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "33e053c3-05f4-4dcf-88e1-0619ed8a8ca9",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4199023906",
+    "name": "McDonald's",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "34432f1f-1827-407c-a67a-ddcefa32ff24",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/11792825426",
+    "name": "Dinchuiliu Vidhani Kitchen",
+    "city": "Ahmedabad",
+    "area": "Gujarat",
+    "address": "117 B-Ward, Kubernagar",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3455e515-ecf3-44de-bc0d-392740e129b6",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4534049990",
+    "name": "Cooking Culture",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "363bc4a2-3959-4507-9a2f-a33e05c93315",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3294081761",
+    "name": "Asharfilal Kulfi",
+    "city": "Ahmedabad",
+    "area": "120 Feet Ring Road",
+    "address": "120 Feet Ring Road",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "36ab19a2-2f3d-49c6-a76d-a0500b87dfda",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3241011933",
+    "name": "Barbeque Nation",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "377aeb2c-55a9-4acb-ad42-acab5d54c298",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14090334447",
+    "name": "Gujarat Hotel (Gujarat Dhaba) ગુજરાત હોટલ\nગુજરાત ઢાબા",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3a1655b2-1167-45d9-b996-b34f96d3302b",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9318813907",
+    "name": "Puffiza",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3a1c6df6-efde-488b-9b13-f0590d99ee8d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/6649963089",
+    "name": "cabana lounge",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "0 behind bogarosa, rajpath club, bodakdev., ahmedabad, 380054",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3b695a78-a9bc-45a5-aa25-1dc85366c71a",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/367198356",
+    "name": "Upper crust cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3c707cda-610b-4fcb-8798-dff64558ba4d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12827753536",
+    "name": "Sri Udupi",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3d01e98d-abe5-49dc-8d89-7c08df0592a7",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12778806546",
+    "name": "Pizza Hut",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3ebbc79e-ac6d-4667-97c6-6e98e79bbe6e",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/6113416289",
+    "name": "Khetlaapa Tea Shop",
+    "city": "Gandhinagar",
+    "area": "Gandhinagar",
+    "address": "Sargasan Crossroad, Gandhinagar, 382421",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "40c53f96-9885-4729-853c-6c6877fc89fb",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1211760600",
+    "name": "Camilo Coffee",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "42a23255-e0ab-47bf-9fa8-2f22c315f79e",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4797416005",
+    "name": "quinches",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4367540f-ef41-4609-89d5-9c2e73df9919",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/13434133836",
+    "name": "Kettl Cafe Sarkhej-Sanand Rd.",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Survery No. 478 Inside Nayara Energy Fuel Pump, Sarkhej-Sanand Rd, Near Telav, Ahmedabad, 382210",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "43c063e5-18f9-4d9f-be87-0852e4c14d72",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/11563630520",
+    "name": "Dosawala",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "447d4005-7910-4254-a4bf-d275258a3866",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10225625719",
+    "name": "Authentic cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "45205592-8c8f-4912-9aa4-4095c5f3c4e4",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4478346292",
+    "name": "Sabri Kathiyavadi,panjabi",
+    "city": "Ahmedabad",
+    "area": "Dmart Road / Nikol Naroda Road",
+    "address": "Dmart road / nikol naroda road",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "45521184-cc76-488f-a9f3-0326191fd9b6",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/85209894",
+    "name": "Patang - The Revolving Restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Nehru Bridge, Ahmedabad, 380009",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "462dad0c-82f6-4e80-b383-8ecc968728b7",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9660433812",
+    "name": "Plumeria Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "47e438cc-720d-4ada-bff3-08f3b137b84f",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/8548483880",
+    "name": "Swati Snacks",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [
+      "pure_veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4aa573e9-7b33-46ef-b26a-69bc6de2f7f2",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5329590125",
+    "name": "Unlocked",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4aac3ce7-24b2-49a2-85ed-72f2144fb978",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9345872082",
+    "name": "Skyz Restaurant and Banquet",
+    "city": "Ahmedabad",
+    "area": "100 Ft. Road, Prahaladnagar",
+    "address": "3rd floor 100 ft. Road, Prahaladnagar",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4ae9f59a-2bdd-4c08-bc82-c266edcf5c8a",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5164984218",
+    "name": "Management Mess",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Food court"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4ce59a4b-5481-4b2b-98c0-b473573321dc",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/404227760",
+    "name": "MG Science Canteen",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4ceb2a6d-50fe-4330-bae7-d79481431f7c",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/2908966984",
+    "name": "Real Paprika",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Nehrunagar, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4df0581b-97fc-4d44-9669-468a11206b15",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4312193691",
+    "name": "Pooja fastfood",
+    "city": "Ahmedabad region",
+    "area": "Siddheshwari Society Road",
+    "address": "Siddheshwari Society Road",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4e9ad8b4-4a14-4f9d-9727-cdc9b950c4d3",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9009771427",
+    "name": "McDonald's",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "A-04 A-05 100 Ft. Road, Ahmedabad, 380015",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4ff6d393-6767-49f2-b3b6-2bcab2c4b995",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/13911496601",
+    "name": "The fountain hotel",
+    "city": "Ahmedabad",
+    "area": "Mansarowar Road",
+    "address": "Mansarowar road, 382470",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "52fbb291-eb11-4461-83bb-ef738a94f9a2",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4358562889",
+    "name": "Spoons n straws",
+    "city": "Ahmedabad",
+    "area": "NH8",
+    "address": "NH8",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "53f469af-694e-45d8-9e29-eefdd4b14d03",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1552022342",
+    "name": "Lollo Rosso, Shantigram",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "577425b0-92c2-4c37-a393-c3d46c625877",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9996701486",
+    "name": "The House of Makeba (Bhat)",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "304, 3rd Floor Xperia Sardar Patel Ring Road, Ahmedabad, 382424",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "58576b42-b261-41ae-a178-dbea0313bfc4",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4633783690",
+    "name": "Tandoorworkz",
+    "city": "Ahmedabad",
+    "area": "Chimanlal Girdharlal Road",
+    "address": "Gf-7 Chimanlal Girdharlal Road, 380006",
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5916112a-ca25-418b-b0d1-b7d2a01721ce",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4585364197",
+    "name": "HANDI HOTEL",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "597bbcd9-da4b-4dc9-96e9-05d3d58d1b81",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/754019040",
+    "name": "Prince Bhaji Pav",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "59d5ea56-951d-491d-861f-1e96758a515c",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4595604995",
+    "name": "Little Italy",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5b432335-68c9-4398-8959-b8213e075bca",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9009705206",
+    "name": "McDonald's",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "SN 1 Sardar Patel Ring Road, Ahmedabad, 380058",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5cc0119c-51d9-4d00-808f-6fe23fa3ca94",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/1313805176",
+    "name": "Cafe Souq",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5cc535f9-4e35-45a6-b019-e592ad4bedcd",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1375690863",
+    "name": "site",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5cca0168-3fbd-406e-aede-e30c88d80956",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/1973440767",
+    "name": "Natural Ice Cream",
+    "city": "Ahmedabad",
+    "area": "Law Garden Road",
+    "address": "Law Garden Road, 380009",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5d68a7a2-4563-4659-9cc8-670ec807558b",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/11259129233",
+    "name": "BLUEBERRY RESTAURANT & BANQUET",
+    "city": "Ahmedabad",
+    "area": "Gujarat",
+    "address": "1 Aarth Business Center, Ring Road, opp. Torrent Sub-Station, Nikol, Ahmedabad, 382350",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5d9553ca-5b07-4f20-b71b-075bca010e1a",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3306683246",
+    "name": "Ghandi Cold Drink House",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5da6f6a4-441a-4bc7-9995-61eeb7629b9f",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14051232491",
+    "name": "Brahmani tea & Parlour",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5e4eef49-94a4-468e-bee2-31b98883c340",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/13465290621",
+    "name": "Domino's",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5f9644e6-3cd1-4ded-bcff-25cb3682bc28",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14065592760",
+    "name": "Wagh Bakri Tea Lounge",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "600de824-af22-44a7-a92c-3f94d5a383a2",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1432594583",
+    "name": "K ++",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "60f234a6-df9b-4749-879f-c58f763b4165",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5164984325",
+    "name": "F1 Pharma Canteen",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Food court"
+    ],
+    "rating": null
+  },
+  {
+    "id": "64169003-9fd9-4344-9c0c-17787c4e97aa",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14090328557",
+    "name": "Kansar Garden Restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "66de6d20-feb8-4b84-b8b8-fb5418617d32",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9296316189",
+    "name": "Gajanand Pauva House",
+    "city": "Ahmedabad",
+    "area": "Sargam Marg, Nehru Park Cir, Mahavir Nagar Society, Vastrapur, Ahmedabad, Gujarat 380015",
+    "address": "Himalaya Arcade B Sargam Marg, Nehru Park Cir, Mahavir Nagar society, Vastrapur, Ahmedabad, Gujarat 380015",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6905c4ac-3547-46e7-88a4-ff48fcd9db03",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3306683255",
+    "name": "Nishat",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "690b1c0c-7e50-4143-bde3-153a5b8151a0",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4303548193",
+    "name": "Sattadhar bhojnalay",
+    "city": "Ahmedabad region",
+    "area": "Ahmedabad Palnpur Road",
+    "address": "ahmedabad palnpur road",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6964f704-8519-4a1d-9270-cb0e834078f0",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3426621651",
+    "name": "Jasuben Pizza",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "698626e7-ae46-48e9-8eb4-361d43e9ded4",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4723369307",
+    "name": "Green Leaf Restaurant",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "69c76805-0522-43bf-8dd4-28c3283c365e",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1432594581",
+    "name": "NesCafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "69cf2aa4-fc80-4a92-bcd1-63b57af13dc2",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/451500298",
+    "name": "kAKA Ni Bhaji pav",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6b4dc266-7dfa-4936-8ed7-edeb04bfddce",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4637012138",
+    "name": "Royal Pride",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6bc31449-8313-492e-ad5b-d39d00b5d53d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/11986210790",
+    "name": "HL Frankie",
+    "city": "Ahmedabad",
+    "area": "Safal Parisar Road",
+    "address": "Safal Parisar Road",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6c214d15-6dce-4ffa-afb5-a9578734aaa4",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4481077289",
+    "name": "Food Court sec.16",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6c259b73-29b2-4259-a07e-edaf10bf07c7",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4483404102",
+    "name": "Kabir Restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6efd00c6-d482-433d-8674-347986db2e0c",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9348528050",
+    "name": "The Waffling Station",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Ground Floor, Vaibhav Flats, H.L Commerce College Rd, Navrangpara, Ahmedabad, 380009",
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6f510c88-f864-4f01-9f22-6a9584a5fb62",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4636987374",
+    "name": "Annapurna",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "701bcca0-4af5-4901-9f04-2ee172bfa989",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/8998662168",
+    "name": "Diwan Bhel Pakodi Center",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Shivalay Apartment 2, Ahmedabad, 380015",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "730da11e-d30a-468a-a0e8-25e2a7f3f11e",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1274878131",
+    "name": "Mahavir",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "751bbb2a-a652-474d-b4e3-3b79153ad997",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/13041668532",
+    "name": "Taco Bell",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "756ded9f-944d-4a54-aeae-3d7528a46115",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/11724303079",
+    "name": "1944 The Hocco Kitchen",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "76074186-d65d-4c15-9f1e-29231d636b18",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4380552160",
+    "name": "Bhojnalaya - Unodri Bhavan",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "76183918-c481-40a2-93bd-52043501ac56",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/11773753701",
+    "name": "The Gyan Café",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "769444c1-51ca-4a0c-bf6c-d40724694daa",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/1313805177",
+    "name": "Chocolate Room",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "77079d83-3644-4572-a8d0-093d3ae21bec",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/8972208043",
+    "name": "Babadeepsingh Restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "4,5,6, Nadroda Business Hub opp. Satva Green Party Plot, Nr. Ring Road Circle Hanspura, Naroda - Dahegam Road, Ahmedabad, 382330",
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "782f5744-26d6-453f-b537-1cbf22b24668",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1135183115",
+    "name": "Student Mess (Jaiswal + Mohani)",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Food court"
+    ],
+    "rating": null
+  },
+  {
+    "id": "78af99aa-0237-44ff-9845-4e0ff5842295",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/8490717173",
+    "name": "Hocco Eatery",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "SoBo Centre 200ft. Gala Gymkhana Road, Ahmedabad",
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "79087e59-fee9-4e22-b81c-b866b2147620",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5403772221",
+    "name": "Hotel Emerland",
+    "city": "Ahmedabad",
+    "area": "Kotar Pur Airport Road",
+    "address": "Kotar pur-airport road",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "792ece8f-5c0a-431e-ba3b-85bb569570e2",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5276640722",
+    "name": "Seva Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "799e9ce2-2b5f-4fa2-8f98-e0c85bc68d22",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5177688241",
+    "name": "Hotel Purohit Por",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "79aebcec-eb63-4017-b3b4-7bcfd0bfffc3",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/8847682612",
+    "name": "Bean Box Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "7db2dbb4-a1c0-442a-965b-73383085b822",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14068010751",
+    "name": "Tea Post",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "82705399-bdf4-40b5-9540-1e048497b1bc",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3776238979",
+    "name": "purohit",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "82f4a0cb-2e35-42ee-9a9e-b23334d579fb",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3500459658",
+    "name": "MAHARAJ Food Corner",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "847b452c-b8fe-48bd-a765-4a97a5235542",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4479025200",
+    "name": "Food point 51 hotels",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "84b14f2f-736e-4f5f-89ad-423521bedc5f",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5154580839",
+    "name": "Bansari Traditional",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "859777ae-56bf-4c7a-8d39-59cff82ae758",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1260747555",
+    "name": "Curry Tree",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "861ff293-0837-4853-9d22-7fe6e0362d52",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4358562689",
+    "name": "Domino's",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "86ecf98d-9191-4cff-9496-ccbdbfd285a5",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5496066223",
+    "name": "Sanmani Restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "884f7781-6c93-4c15-9be7-5c83239f5e38",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9806747712",
+    "name": "McDonald's",
+    "city": "Gandhinagar",
+    "area": "Gandhinagar",
+    "address": "Gandhinagar Bypass Road, Gandhinagar, 382421",
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "89d55fcd-d11a-44ad-bfd0-22cb3cfc78a7",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4199023903",
+    "name": "Cafe Coffee Day",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8a16cbfe-8c45-42c9-92a4-90a3f4789fd5",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/993060289",
+    "name": "Vibes9 V9 Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Sardar Patel Ring Road, Ahmedabad, 380059",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8b1c1b14-9f49-4d91-a56d-3f1481c5103b",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3293792062",
+    "name": "McDonald's",
+    "city": "Ahmedabad",
+    "area": "120 Feet Ring Road",
+    "address": "120 Feet Ring Road",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8bda1d39-c685-43ce-b858-f76686c7a76d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/8152270626",
+    "name": "fiftyeight sixtyeight - 5868",
+    "city": "Adalaj",
+    "area": "Adalaj",
+    "address": "Shivam 2 Trimandir - Dadanagar Rd, Adalaj, 382421",
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8d872ebd-f419-462a-b237-056f3732aafc",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1202571602",
+    "name": "Bhojanshala",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Food court"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8db89e9b-2eab-441f-8001-eece005896e6",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10959699945",
+    "name": "La Pino's Pizza.",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8f52417a-fa71-408a-80ef-2e5942b06364",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10959718509",
+    "name": "La Milano Pizzeria.",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8f6f07c3-1997-4b45-8d91-2398dde3ef35",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/538946980",
+    "name": "Law Canteen(F2)",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8fcabe05-836e-41f2-a92e-9c9e7badf4a7",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10959715013",
+    "name": "Dangee Dums",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "90891c05-7878-4961-bb61-ea689c56032e",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4723369292",
+    "name": "Tulsi Restaurant",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "928b65f3-7aaf-417f-a41e-9e292c3371db",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10959671658",
+    "name": "Tandoor & Tadka",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "947ecdb5-d1ce-4ce8-9ae6-51f4babc26ed",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12770326645",
+    "name": "Honest Restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "94f6daaa-f3ee-4b7b-9038-46bd6c863601",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3776238974",
+    "name": "havmor",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "95124d46-0334-4be4-a285-b0cc135f9a2a",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/366459078",
+    "name": "@Mango",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "95604f83-1ecc-4795-ac13-00a35b19c8be",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9123477265",
+    "name": "Gordhan Thal",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Shapath Tower Ground Floor Sarkhej Gandhi Nagar Highway, Near State Bank Of India, Thaltej, Ahmedabad, 380054",
+    "dietary_options": [
+      "veg",
+      "pure_veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "95eb618c-a762-441f-afac-81c7cd5c52b6",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14144313016",
+    "name": "Gulabo and Co.",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Drive-in Road, Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "96261ce4-048a-4872-8c4a-aaa1cfd3a0c6",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12809739186",
+    "name": "Timtim",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "96dd3640-4a01-4069-909b-67814fd4039e",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1370788552",
+    "name": "Highrise mess",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "96e36b76-11b0-4b79-975f-4d3885c6e2ae",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4199023905",
+    "name": "Subway",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "974f412d-216e-4aa6-b24f-ab9de6432cf8",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5340470022",
+    "name": "Cafe udipi richi",
+    "city": "Ahmedabad",
+    "area": "Chimanlal Girdharlal Road",
+    "address": "Chimanlal Girdharlal Road",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "974f89c9-9962-43d9-b107-2bb2b36d4e26",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3776238973",
+    "name": "waah",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "988a1486-a3a8-40b6-ae23-a0ee1f59006a",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/1313805178",
+    "name": "Barrista, Vijay 4 Roads",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "9b6b1f45-427b-4aad-ae31-16aa8e09d9e9",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/374253745",
+    "name": "havmore",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "9b9108d8-6ccb-4967-bbe7-08a0c61184eb",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5407346983",
+    "name": "In-Garden Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "9e5b3d61-c13d-46bf-887c-f60128dc457c",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/632066507",
+    "name": "Mangaldas Ni Haveli",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a0582f0b-9a7d-445d-a586-e56d33d8ae22",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10959628584",
+    "name": "Monginis Cake shop",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a0b6133d-f51b-41eb-957c-16a1b285e24e",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10959661519",
+    "name": "The Belgian Waffle",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a1fab5a9-0f35-439c-b2d3-055dcf614d28",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4445025289",
+    "name": "Atithi Dining Hall",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [
+      "pure_veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a3dd806a-e7f0-4a63-8773-3a6e349e12da",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14067832703",
+    "name": "Girish",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a6bfe8cd-a15d-44a3-9c56-73edd9bf135d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14068572222",
+    "name": "KFC",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a71b4c43-6c4e-4b17-9170-ea6165eb6a9c",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1135220070",
+    "name": "Just Chill Cafe",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food",
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a812650c-bf82-4304-908b-f52b2d5febec",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4368272090",
+    "name": "McDonald's",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a81952d6-ba2b-4afb-b53f-6b27af428e5d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12827631579",
+    "name": "Prakash Bhojnalaya",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a8ed387f-549e-4895-b13e-b4532f86c647",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9116794693",
+    "name": "Dadu Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Ahmedabad, 382350",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a9496eec-f3cd-4131-8bad-a4a82542d5ce",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14022544458",
+    "name": "ChaiG Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "10 Ganesh Meredian, Ahmedabad, 380060",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a96e8dbd-57f7-4363-b2aa-583fbac05f78",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/8998662169",
+    "name": "Jagdish Chaat Pakodi Center",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "GF-5 Nandanvan 3, Ahmedabad, 380015",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "aa5ff1a9-e961-460f-b750-1479228107f5",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1087307157",
+    "name": "Kamla Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "aaa00387-087c-4304-96cb-d62f3cf86941",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/374253742",
+    "name": "chocolate room",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ac533f26-c41d-49b4-ab98-24f74d5f4a05",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1540063342",
+    "name": "ChaiG Cafe and restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant",
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ace1f09e-4b72-446b-977d-e62e83507b17",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/451514771",
+    "name": "Kathiyawadi",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Nikol-Nava Naroda road, ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ad0fc2f8-dd51-444c-b149-ad1b36284f07",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/366466142",
+    "name": "Premvati",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Food court"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ad673479-a79d-424c-bbd0-f469adc15b2e",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/8847682611",
+    "name": "Deshi Chulha Non-veg",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "af64990e-57b7-466c-9acb-e66a9025b0a1",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5527662483",
+    "name": "Jai Jalaram Parontha House",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "affa77cf-5e2f-4874-834c-cdca7516cd41",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/693611738",
+    "name": "Old Mess IIT Gandhinagar",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Food court"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b054b647-4f3b-442c-9fd6-a06845c19ebb",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/6183937086",
+    "name": "K.G.N. Chinese Fry Centre",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b0e29869-fe8b-4a40-8d4d-d1277fa03101",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4721512586",
+    "name": "Kutchi King",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b15a23f1-1b5e-4468-a2b0-42b2e1790793",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12732749099",
+    "name": "Banna's Tea Stall",
+    "city": "Gandhinagar",
+    "area": "Gandhinagar",
+    "address": "Gandhinagar, 382421",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b20f880a-1c20-495a-9242-2caa90bf9011",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9310325493",
+    "name": "Purohit Chavana and Sweet Mart",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b2336e45-c47b-4d02-9b9f-238cb07f38b7",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/2679948361",
+    "name": "Ken's Koffee Plus Plus",
+    "city": "Gandhinagar",
+    "area": "Gandhinagar",
+    "address": "148-A NH8C, Gandhinagar, 382009",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b2a3fa07-9e79-4a89-a4df-d9871aeec668",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4726558401",
+    "name": "Bikaner",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Food court"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b2fbd9c6-1bb6-42ba-b124-e9c201dafe24",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12848354132",
+    "name": "Shriji Bombay Vada Pav",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b3fae9e6-c630-4d6f-a739-2788aa0d7e3d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9806747713",
+    "name": "Shiva's Cafe",
+    "city": "Gandhinagar",
+    "area": "Gandhinagar",
+    "address": "Shop no.5 , Ground Floor Gandhinagar Bypass Road, Gandhinagar, 382421",
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b4f9d9d8-8f81-44de-adb8-625fffa7f3e6",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4721512569",
+    "name": "Shmbhu's cafe",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b5b95d05-d0f0-4c10-b9d7-8c58228ffbb1",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3204975264",
+    "name": "Gol Limbda Bhajiya and Nashta House",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Ahmedabad, 380001",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b5cd0564-c9c1-4a4a-aa7d-28fa83ac002d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12726457258",
+    "name": "Urban Dosa House",
+    "city": "Gandhinagar",
+    "area": "Gandhinagar",
+    "address": "Gandhinagar, 382421",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b60844eb-04cb-4c14-9895-78ed5c2df5ee",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/6113416290",
+    "name": "7 Colours Pan Parlor",
+    "city": "Gandhinagar",
+    "area": "Gandhinagar",
+    "address": "Sarthak Mall, Kh-Road, Gandhinagar, 382421",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b63dcde2-0154-47de-9f3b-03c229cbe2e9",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4718583250",
+    "name": "Upper Crest",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b6557b70-163e-4746-a0c5-a6f834af32cb",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12065744903",
+    "name": "Hotel Sarvottam",
+    "city": "Sanand",
+    "area": "AAhmedabad",
+    "address": "Sanand Sarkhej Road, Gibpura, sanand, 382110",
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b9d3691c-1801-43cf-bf1c-210528db21db",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9292073779",
+    "name": "Starbucks",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "380054",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b9dfb1e8-5a69-47b8-aa0f-be9b4d79f5ac",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/11539673209",
+    "name": "Sakha Surti Locho & Rasawala Khaman",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ba27b2da-e823-4d2b-8578-54862207bb6b",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9296318313",
+    "name": "Jay Mataji Fast Food",
+    "city": "Ahmedabad",
+    "area": "Sargam Marg, Nehru Park Cir, Mahavir Nagar Society, Vastrapur, Ahmedabad, Gujarat 380015",
+    "address": "Himalaya Arcade B Sargam Marg, Nehru Park Cir, Mahavir Nagar society, Vastrapur, Ahmedabad, Gujarat 380015",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "be4a20a4-416b-41fb-96c6-5d89f106d849",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9292073782",
+    "name": "mocha",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Ground Floor 6-9, 380054",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "be547d43-a296-4cf0-8004-7dc0c735c60c",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/997945841",
+    "name": "Anticlock Canteen",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "bea4f647-7eb4-434a-aff7-d8acb16e363c",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12726457252",
+    "name": "Starbucks",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "bf3c4585-310c-43e8-981a-f7995f015542",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/49406390",
+    "name": "Canteen",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "bf850f17-2d19-4a31-a2ac-05bcb1832f58",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4685354589",
+    "name": "nilam snacks",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "bfe7787a-716b-4231-8664-6e73eb6dcc38",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4704651212",
+    "name": "Tan-man bhaji pav",
+    "city": "Ahmedabad",
+    "area": "Tanman Chokdi",
+    "address": "tanman chokdi, 382418",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c004b1ef-6ff8-41e3-a6c7-1194a114bc0d",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/973444844",
+    "name": "Honest Khoda",
+    "city": "Khoda",
+    "area": "Khoda",
+    "address": "Sanand-Viramgam Highway, Khoda, 382110",
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c02e6a62-66e7-4ec8-8202-91138dddb56f",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/12809748225",
+    "name": "Sambhar Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c6ead5a9-d94f-460d-97da-88e636e967f6",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4481532989",
+    "name": "AFC Garden Restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c9acfcf1-cd97-44bb-b6bc-64313aa9157b",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/1343052725",
+    "name": "Cafeteria",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ca35f9a8-26ea-4387-a955-1c64fc1083d1",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4199023904",
+    "name": "Honest",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "cbe94376-a871-437f-a88b-839b0e085822",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9806747714",
+    "name": "Upper Deck",
+    "city": "Gandhinagar",
+    "area": "Gandhinagar",
+    "address": "Gandhinagar Bypass Road, Gandhinagar, 382421",
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ce58b597-a2a2-4b7c-aa00-a4b1d5dec595",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/8460962736",
+    "name": "quickshef",
+    "city": "Gandhinagar",
+    "area": "Gandhinagar",
+    "address": "G-4 pethapur, gandhinagar, 382610",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "cf63069e-bd86-495e-9e03-bad892e37730",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/11419836108",
+    "name": "Scoop N Munch",
+    "city": "Gandhinagar",
+    "area": "Gandhinagar",
+    "address": "B116, Shaligram Lakeview S P Ring Road, Gandhinagar, 382470",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d02ff143-4584-49c1-870c-2c9da61e2fa2",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3776238977",
+    "name": "choice",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d439d99c-1e95-446c-9678-4a630784f0d6",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/13041668533",
+    "name": "KFC",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d480cde3-8b11-44cb-bfd8-6be7d41c1d53",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4326501193",
+    "name": "TGB",
+    "city": "Ahmedabad",
+    "area": "Ashram Road",
+    "address": "Ashram Road",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d4eb4520-fb23-40d4-b27a-b6eda0fdc6da",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4810670481",
+    "name": "Nishra Restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d6e19b36-146a-4888-85ef-1e82f9af0920",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/573008944",
+    "name": "Parth Flavour",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Ashram Road, Ahmedabad, 380013",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d75d34af-1e02-4cee-adad-f241ee4fbf7c",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3459655264",
+    "name": "Canteen",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d7dce8fb-6a34-4e60-b9de-6192bdc3fa91",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5527662869",
+    "name": "Udipi Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d8307984-a329-4955-bf4a-daa06e159087",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3776238978",
+    "name": "chocolate room",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d83aa113-afbd-4b0c-9ab0-7bd07bb2977f",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/1180002417",
+    "name": "Praful Dairy Parlour",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d85548fa-72b2-47fa-bac2-14c9e43ed5ad",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/1429887846",
+    "name": "Chai Gate!!!",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d8814785-4bb3-45d5-9a72-634ece2d5877",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9005464434",
+    "name": "Domino's",
+    "city": "Ahmedabad",
+    "area": "Shyamal",
+    "address": "132 Ft. Ring Road, Shyamal, Ahmedabad, 380015",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d8b36b09-75ae-454c-a98f-a06cb7a6d457",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4358562690",
+    "name": "TGB",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d8e297f3-a288-43c4-a72d-caaa956873ac",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4510519793",
+    "name": "arbi",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d9a90901-c519-4483-8d25-5bb2a3ad9769",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/2377178378",
+    "name": "Green House Restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Opposite Sidi Saiyad Jali, Ahmedabad, 380001",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d9b6834a-cb2b-4937-90f7-1140bfc96d67",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4199023907",
+    "name": "Havmor",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "daa921a0-d8d0-4e7e-802a-30472b3d6d33",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4303553216",
+    "name": "Hotel Musafir",
+    "city": "Ahmedabad region",
+    "area": "Ahmedabad",
+    "address": "Ahmedabad",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "dab66a6c-a31d-448a-898a-1f17fdf87be8",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3306683251",
+    "name": "Lucky Tea Shop",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "dbc2b874-e80c-487f-9ee4-d4039abda53a",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5753441521",
+    "name": "Jalaram Parotha house",
+    "city": "Ahmedabad",
+    "area": "Ambli Bopal Road",
+    "address": "Ambli Bopal Road",
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e10eb8c2-2fb0-47e0-bf07-9cc1051e5dd1",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/6831009179",
+    "name": "Himalaya Bakery",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e3f4cd48-ea16-466a-a3cf-5f5e9f12a015",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4422047292",
+    "name": "Kaka fast food",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e59c56cd-fbab-47ae-8510-82129d2b4cba",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/11575789971",
+    "name": "Stallions Cafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "Science City Bhadaj Road, Ahmedabad, 380060",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e5ed2010-b3e8-44e3-b82b-e458886c8b88",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4422082966",
+    "name": "Kaka ni bhajipav",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad outskirts",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e7fa4fe9-0189-4cc5-bdac-d79e78202725",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3306683257",
+    "name": "Paramount",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e83328a8-34b7-43ac-93ae-ee88ab2407c9",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9809086195",
+    "name": "The Grill Street",
+    "city": "Ahemedabad",
+    "area": "Ahemedabad",
+    "address": "Dev Arc Commercial Complex, 106, Iskcon Cross Rd, Near iscon cross road, Ramdev Nagar,, Ahemedabad, 380015",
+    "dietary_options": [
+      "veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e8c95df8-9795-465c-a964-da65d7e79804",
+    "external_provider": "openstreetmap",
+    "external_place_id": "way/80831910",
+    "name": "Students Mess",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e906ebb8-1fe5-478f-b216-9c595e4ef30b",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4292013893",
+    "name": "JANTA ice cream",
+    "city": "Ahmedabad region",
+    "area": "Sh 41",
+    "address": "sh 41",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "eac14c2d-5193-4f6c-93c4-cdf52064f8ac",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/8039346176",
+    "name": "Coffee Stand-CG Road",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": "1 Swastik Cross Road /Swastik Society Road / Swastik X Road, Ahmedabad, 380009",
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "eb3e9690-d72d-4c8e-af85-d23a700edad9",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/1313805179",
+    "name": "Cafe Coffee Day",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ecf071af-314e-43a9-a126-1c2087da2484",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4301914793",
+    "name": "lucky tea center",
+    "city": "Ahmedabad region",
+    "area": "Siddheshwari Society Road",
+    "address": "Siddheshwari Society Road",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ed11a34f-9076-4acd-a010-69882409be61",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/5140818187",
+    "name": "Iscon Ghantiya",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ee0be353-e8b5-4b28-b84a-09cb0ab2b81b",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9287451026",
+    "name": "Shreeji Krupa Bombay Vadapav",
+    "city": "Ahmedabad",
+    "area": "Sargam Marg, Nehru Park Cir, Mahavir Nagar Society, Vastrapur, Ahmedabad, Gujarat 380015",
+    "address": "Himalaya Arcade B Sargam Marg, Nehru Park Cir, Mahavir Nagar society, Vastrapur, Ahmedabad, Gujarat 380015",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f097879f-05b3-4c7b-8b45-92258f14d85c",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4319362053",
+    "name": "Nescafe",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f0a29075-e6a9-4c6e-a742-b86e0c497312",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/13041668534",
+    "name": "Shri Maruti Nandan",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f108ea73-db17-4747-979d-1005506b3feb",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4722413220",
+    "name": "Jay Bhole",
+    "city": "Ahmedabad region",
+    "area": "Near Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f1ba5739-9af7-4e0a-9754-b05185d8befa",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10177917536",
+    "name": "Gwalia Sweets",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f2871871-6e09-4802-b86d-4999ccccf3dc",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/2477174077",
+    "name": "Vrundavan Restaurant;AKHBAR NAGAR CIRCLE",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f3ceebeb-6620-4359-945e-74570870761e",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/1779118412",
+    "name": "Dinner Bell",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f58d6d7a-59cc-4d4f-b9a0-f13d45131188",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/14067660558",
+    "name": "Chandravilas Restaurant",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f6de0d88-8d85-4d9e-81e8-480c2b1bee32",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/440339381",
+    "name": "Vishala",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [
+      "pure_veg"
+    ],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f77b81ff-89a3-41b0-8719-508d08a41ecc",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/3242226330",
+    "name": "Cafe Coffee Day",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f996026a-436c-4fe5-8092-7f11b1b2e272",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/695666626",
+    "name": "McDonald's",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "faeedcdb-c6c7-4242-8d2d-1e6787134fa8",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/10959640143",
+    "name": "Subway.",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Restaurant"
+    ],
+    "rating": null
+  },
+  {
+    "id": "fd2ba994-e1fb-4743-8c34-876d7c9c30ba",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4422101589",
+    "name": "Kaka fastfood",
+    "city": "Ahmedabad",
+    "area": "Sardar Patel Ring Road",
+    "address": "Sardar Patel Ring Road",
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "fd3efcb6-384a-4c13-8045-e4bb15d0cb29",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/9951265800",
+    "name": "Bhookh Lagi Hai?",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Fast food"
+    ],
+    "rating": null
+  },
+  {
+    "id": "fe5e7300-55b3-45ca-81f2-141c041f9298",
+    "external_provider": "openstreetmap",
+    "external_place_id": "node/4797416006",
+    "name": "uno pizza",
+    "city": "Ahmedabad",
+    "area": "Ahmedabad",
+    "address": null,
+    "dietary_options": [],
+    "tags": [
+      "Cafe"
+    ],
+    "rating": null
+  }
+]

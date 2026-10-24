@@ -9,7 +9,7 @@ function place(){
  const insights=Array.isArray(r.review_insights)&&r.review_insights.length?r.review_insights:[];
  const menuDishes=Array.isArray(r.signatureDishes)?r.signatureDishes.filter(d=>d&&typeof d.name==='string'&&d.name.trim()):[];
  const isMenu=menuDishes.length>0;
- const rawDishes=isMenu?menuDishes:availableCalibrationDishes().filter(d=>dishAffinity(r,d)>0).slice(0,3);
+ const rawDishes=isMenu?menuDishes:venueCalibratedDishes(r).slice(0,3);
 
  const aboutSummary=r.description||`${r.name} in ${r.area||r.city||cityName()}.${insights.length?' '+insights.slice(0,2).join(', '):(cuisines.length?' '+cuisines.join(', '):'')}`;
 
@@ -77,17 +77,20 @@ function place(){
           const isPassed=ratedVal==='pass';
           const diet=isMenu?(d.isVeg===true?'veg':d.isVeg===false?'nonveg':null):d.diet;
           const dietLabel=({veg:'Vegetarian',egg:'Contains egg',nonveg:'Non-vegetarian'})[diet]||'Dietary details unverified';
+          const matchScore=dishSensoryMatchScore(d,r);
+          const whyNote=dishSensoryWhy(d,r);
           return `<div class="spotDishCard" data-dish-id="${esc(d.id)}">
             <div class="dishCardHead">
               <div class="dishTitleArea">
                 <span class="${diet==='veg'?'vegDot':diet==='nonveg'?'nonVegDot':''}" role="img" aria-label="${dietLabel}"></span>
                 <h3 class="dishName">${esc(d.name)}</h3>
               </div>
-              <span class="dishPrice">${isMenu?esc(d.price??'Price not listed'):'Taste example'}</span>
+              <div class="dishPriceGroup"><span class="dishPalateMatchBadge">ϟ ${matchScore}% Palate Fit</span><span class="dishPrice">${isMenu?esc(d.price??'Price not listed'):'Taste example'}</span></div>
             </div>
             <p class="dishDesc">${esc(d.description)}</p>
+            <p class="dishSensoryWhyNote">🔬 ${esc(whyNote)}</p>
             <div class="dishCardActions">
-              <span class="dishHighlightPill">✨ ${esc(d.tasteHighlight||d.name.toLowerCase())}</span>
+              <div class="dishBadgesCluster"><span class="dishHighlightPill">✨ ${esc(d.tasteHighlight||d.name.toLowerCase())}</span>${d.sensoryFocus?`<span class="dishSensoryFocusTag">${esc(d.sensoryFocus)}</span>`:''}</div>
               ${!isMenu?`<div class="dishVoteArea">
                 <span>Taste it?</span>
                 <button type="button" class="dishVoteBtn thumbUp ${isLoved?'active':''}" data-action="dish-rate" data-dish-id="${esc(d.id)}" data-dish-value="love" data-source="detail" aria-pressed="${isLoved}" aria-label="Love ${esc(d.name)}">

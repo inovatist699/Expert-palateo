@@ -1270,3 +1270,371 @@ html{scrollbar-color:#519cab #c3e7f1}
 .prefInteractiveGroup .studioHint,.prefInteractiveGroup .spiceMeterEnds{color:#c2d4d6}
 .prefInteractiveGroup label{display:block;font-size:12px}
 .prefInteractiveGroup .linkBtn{color:#ffcb4d}
+
+/* Scientific Dish Calibration & Palate Matching */
+.calibrationSensoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(45, 212, 191, 0.12);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  color: #2dd4bf;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 750;
+  margin: 6px 0;
+}
+.calibrationSensoryTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 10px;
+}
+.calibrationSensoryTags .sensoryTag {
+  font-size: 10.5px;
+  padding: 2px 7px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #c7ded9;
+  border-radius: 5px;
+}
+.calibratedGenomeSummary {
+  background: linear-gradient(135deg, #162c30 0%, #102124 100%);
+  border: 1px solid #294a50;
+  border-radius: 14px;
+  padding: 14px;
+  margin: 14px 0;
+}
+.genomeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fbbf24;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.genomeHeader small {
+  color: #8dafa8;
+  font-size: 10px;
+  font-weight: 600;
+}
+.genomeMeters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+}
+.genomeMeterItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 11px;
+  color: #d1e3df;
+}
+.genomeMeterItem b {
+  font-size: 11px;
+  color: #fbbf24;
+  align-self: flex-end;
+  margin-top: -16px;
+}
+.miniBar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.miniBar i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #2dd4bf, #fbbf24);
+  border-radius: 99px;
+}
+
+/* In-Card Calibrated Dishes */
+.cardCalibratedDishesRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 4px;
+  padding-top: 6px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+.cardDishLabel {
+  font-size: 10.5px;
+  font-weight: 750;
+  color: #8dafa8;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.cardDishPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e5ede9;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+.cardDishPill:hover {
+  background: rgba(251, 191, 36, 0.1);
+  border-color: rgba(251, 191, 36, 0.4);
+  color: #fbbf24;
+}
+.cardDishMatch {
+  font-size: 10px;
+  color: #2dd4bf;
+  font-weight: 800;
+}
+
+/* Explore Your Taste Venue Dishes */
+.dishPriceGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+}
+.dishPalateMatchBadge {
+  font-size: 11px;
+  font-weight: 800;
+  background: rgba(45, 212, 191, 0.15);
+  color: #2dd4bf;
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  padding: 2px 7px;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.dishSensoryWhyNote {
+  font-size: 11.5px;
+  color: #8dafa8;
+  margin: 4px 0 10px;
+  line-height: 1.4;
+  font-style: italic;
+}
+.dishBadgesCluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.dishSensoryFocusTag {
+  font-size: 10px;
+  color: #a7cbc3;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2px 7px;
+  border-radius: 5px;
+}
+
+/* Collaborative Taste Twin AI Styles */
+.collaborativeSummaryCard {
+  background: linear-gradient(135deg, #18363a 0%, #0d2226 100%);
+  border: 1px solid #28545b;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 16px;
+  color: #e6f1ef;
+}
+.collaborativeSummaryTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.personaBadge {
+  font-size: 11px;
+  font-weight: 800;
+  color: #fbbf24;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.consensusPill {
+  font-size: 11px;
+  font-weight: 800;
+  color: #2dd4bf;
+  background: rgba(45, 212, 191, 0.12);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  padding: 2px 7px;
+  border-radius: 6px;
+}
+.collaborativeSummaryCard h3 {
+  font-size: 18px;
+  font-weight: 850;
+  color: #f3fdf9;
+  margin: 0 0 6px;
+}
+.collaborativeSummaryCard p {
+  font-size: 12.5px;
+  color: #9dbdb7;
+  line-height: 1.45;
+  margin: 0 0 12px;
+}
+.collaborativePredictedPills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.predLabel {
+  font-size: 11px;
+  font-weight: 750;
+  color: #fbbf24;
+}
+.predictedPill {
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e5ede9;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.predictedPill small {
+  color: #8dafa8;
+  font-size: 9.5px;
+}
+.twinConcordancePill {
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  color: #2dd4bf;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin: 6px 0;
+  display: inline-block;
+}
+
+/* Collaborative Profile Card in Palate Studio */
+.collaborativeProfileCard {
+  margin-top: 18px;
+  padding: 16px;
+  background: linear-gradient(135deg, #152d31 0%, #0c1e21 100%);
+  border: 1px solid #28545b;
+  border-radius: 18px;
+}
+.collabCardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.collabBadge {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #fbbf24;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.collabCardHead h3 {
+  font-size: 17px;
+  font-weight: 850;
+  color: #f3fdf9;
+  margin: 0;
+}
+.collabScoreBadge {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #2dd4bf;
+  background: rgba(45, 212, 191, 0.15);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.collabSummary {
+  font-size: 12.5px;
+  color: #9dbdb7;
+  line-height: 1.45;
+  margin: 0 0 14px;
+}
+.collabTwinList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.collabTwinItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+.collabAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2dd4bf, #0b593f);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+.collabTwinMeta {
+  flex: 1;
+  min-width: 0;
+}
+.collabTwinTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+.collabTwinTitle strong {
+  font-size: 12.5px;
+  color: #f0fdf4;
+}
+.twinMatchVal {
+  font-size: 11px;
+  font-weight: 750;
+  color: #fbbf24;
+}
+.collabTwinReason {
+  font-size: 11px;
+  color: #8dafa8;
+  margin: 2px 0 0;
+  line-height: 1.3;
+}
+.collabPredictionsBox {
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.collabPredHeading {
+  display: block;
+  font-size: 11px;
+  font-weight: 750;
+  color: #fbbf24;
+  margin-bottom: 6px;
+}
+.collabPredPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.collabPredPill {
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e5ede9;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.collabPredPill small {
+  color: #8dafa8;
+  font-size: 9.5px;
+}

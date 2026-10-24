@@ -1,0 +1,8 @@
+{
+  "response": {
+    "sendMessage": {
+      "recipientId": "cbd7810d-efa5-413e-9986-703ebd7c094d",
+      "content": "Please begin web verification now and save results incrementally. No further repository architecture exploration is needed: snapshots contain all candidate identities. Existing baseline is 509 non-Vadodara bundled records, 180 generic vegetarian candidates, zero explicit pure labels, and 272 other-city DB rows. Use search_web then open evidence pages. Prioritize well-known matching branches, but require actual explicit vegetarian-only evidence. DB full snapshot with tags is also available as work/dietary-audit/database-full-before.json if needed. Do not spend time inspecting launch scripts or Git. Review all 12 cities, honestly recording zero verified cases where evidence is missing."
+    }
+  }
+}

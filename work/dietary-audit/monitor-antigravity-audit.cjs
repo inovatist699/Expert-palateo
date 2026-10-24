@@ -1,0 +1,11 @@
+const fs = require('node:fs');
+const assert = require('node:assert/strict');
+const { execFileSync } = require('node:child_process');
+const root = 'C:/Users/Aayush/Documents/ChatGPT/Palateo/work/dietary-audit/';
+const id = JSON.parse(fs.readFileSync(root + 'antigravity-launch.json', 'utf8').replace(/^\uFEFF/, '')).response.newConversation.conversationId;
+assert.match(id, /^[0-9a-f-]{36}$/);
+if (fs.existsSync(root + 'antigravity-review-request.json')) process.exit(0);
+const command = 'call "C:/Users/Aayush/.gemini/antigravity/bin/agentapi.bat" send-message ' + id + ' "The coordinator has opened provider pages through the working browser tool and saved readable page bodies at work/dietary-audit/provider-pages-reviewed.json. Use these if your direct page fetch is blocked; distinguish coordinator-collected pages from pages you opened. Zomato /info sometimes preserves explicit Vegetarian only where District omits it. Save your current evidence now. Then check remaining plausible generic-vegetarian candidates especially Pune (Bedekar, Kata Kirr, Chaitanya Paranthas, Durvankur, Shreyas, Roopali, Wadeshwar, Badshahi, Mathura Pure Veg, Rama Krishna Lonavala), Chennai (Rayars Mess, Ratna Cafe, Grand Sweets Adyar, Sangeetha RA Puram), Mumbai (Dakshinayan Juhu, Amar Juice Centre, Aaswad), Bengaluru Veena Stores and Airlines Hotel, and Jaipur Tapri Central. Do not label mismatched branches or closed old Annalakshmi/Saravana branches. Do not change source or DB."';
+const output = execFileSync('cmd.exe', ['/d', '/s', '/c', command], { encoding: 'utf8', windowsHide: true, windowsVerbatimArguments: true });
+JSON.parse(output);
+fs.writeFileSync(root + 'antigravity-review-request.json', output);

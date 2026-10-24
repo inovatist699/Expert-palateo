@@ -34,6 +34,11 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"></meta-data>
         </provider>
+
+        <!-- Truecaller SDK Client ID -->
+        <meta-data
+            android:name="com.truecaller.android.sdk.ClientId"
+            android:value="@string/truecaller_client_id" />
     </application>
 
     <!-- Permissions -->

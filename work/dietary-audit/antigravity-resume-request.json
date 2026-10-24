@@ -1,0 +1,8 @@
+{
+  "response": {
+    "sendMessage": {
+      "recipientId": "cbd7810d-efa5-413e-9986-703ebd7c094d",
+      "content": "The telemetry hook path was repaired to ./telemetry_hook_bundle.js and remains enabled. Retry reading work/dietary-audit/antigravity-task.md and complete the requested audit. Do not disable hooks, bypass sandbox, alter source or database records, or change settings. Save evidence incrementally and report any remaining blocker."
+    }
+  }
+}

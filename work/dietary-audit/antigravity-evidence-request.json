@@ -1,0 +1,8 @@
+{
+  "response": {
+    "sendMessage": {
+      "recipientId": "cbd7810d-efa5-413e-9986-703ebd7c094d",
+      "content": "Please save the evidence JSON now, then continue any remaining verification. Resolved direct source URLs from your research are available in work/dietary-audit/resolved-links.json and work/dietary-audit/research-index.json. Search summaries are leads: open provider or operator pages and confirm the target restaurant has an explicit pure-veg or vegetarian-only claim. Ignore unrelated Pure Veg brands in footer/recommendation links. Some District pages omit that facility, so do not claim that page confirms it. Record uncertain branch mismatches honestly. Keep your sources direct and state whether pages were actually opened."
+    }
+  }
+}

@@ -54,6 +54,7 @@ document.addEventListener('click',event=>{
   case 'close-auth': closeAuth(); break;
   case 'legal-decline': signOutV5(); break;
   case 'auth-mode': if(d.authMode==='login'||d.authMode==='signup')showAuth(d.authMode); break;
+  case 'truecaller-verify': handleTruecallerAuth(); break;
   case 'auth-email': if(['recovery','signup'].includes(d.emailType))sendAuthEmail(d.emailType); break;
  }
 });

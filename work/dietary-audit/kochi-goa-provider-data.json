@@ -1,0 +1,506 @@
+[
+  {
+    "id": "koc-brindhavan-palarivattom",
+    "city": "Kochi",
+    "area": "Palarivattom",
+    "url": "https://www.district.in/dining/kochi/brindhavan-veg-restaurant-palarivattom",
+    "restaurant": {
+      "@type": "Restaurant",
+      "name": "Brindhavan Veg Restaurant",
+      "url": "https://www.district.in/dining/kochi/brindhavan-veg-restaurant-palarivattom",
+      "image": [
+        "https://b.zmtcdn.com/data/pictures/6/95126/a986bd8cba55b87c38c33ad1e0ce768a.jpg",
+        "https://b.zmtcdn.com/data/pictures/6/95126/10400b11faab97ac6e42514b750dd5f1.jpg",
+        "https://b.zmtcdn.com/data/pictures/6/95126/964a7bc0e0ce2f655f66b1f664220611.jpg",
+        "https://b.zmtcdn.com/data/pictures/6/95126/9defe4df9a0e267630dbbecd4d6c2e56.jpg",
+        "https://b.zmtcdn.com/data/pictures/6/95126/c7c3d0692e8ed00b8ef52a21194ddc28.jpg",
+        "https://b.zmtcdn.com/data/brand_creatives/logos/644beac623474cba620fe9fb527ee631_1772007281.png"
+      ],
+      "servesCuisine": [
+        "South Indian",
+        "North Indian",
+        "Indo-Chinese"
+      ],
+      "priceRange": "₹300 for two",
+      "currenciesAccepted": "INR",
+      "telephone": "+919037882898, +914842342239",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "32/2352-A-16, Near Kalavath Tower, Civil Line Road, Palarivattom, Kochi",
+        "addressLocality": "Kochi",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.00322957,
+        "longitude": 76.30704643
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.3,
+        "ratingCount": 773,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday"
+          ],
+          "opens": "10:30",
+          "closes": "21:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday"
+          ],
+          "opens": "10:30",
+          "closes": "21:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Wednesday"
+          ],
+          "opens": "10:30",
+          "closes": "21:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Thursday"
+          ],
+          "opens": "10:30",
+          "closes": "21:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Friday"
+          ],
+          "opens": "10:30",
+          "closes": "21:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday"
+          ],
+          "opens": "10:30",
+          "closes": "21:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Sunday"
+          ],
+          "opens": "10:30",
+          "closes": "21:30"
+        }
+      ],
+      "hasMap": "https://maps.google.com/?q=Brindhavan+Veg+Restaurant+Palarivattom+Kochi",
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "url": "https://www.district.in/dining/kochi/brindhavan-veg-restaurant-palarivattom/book",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform",
+            "http://schema.org/IOSPlatform",
+            "http://schema.org/AndroidPlatform"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": "koc-gokul-oottupura-kadavanthra",
+    "city": "Kochi",
+    "area": "Kadavanthra",
+    "url": "https://www.district.in/dining/kochi/gokul-oottupura-kadavanthra",
+    "restaurant": {
+      "@type": "Restaurant",
+      "name": "Gokul Oottupura",
+      "url": "https://www.district.in/dining/kochi/gokul-oottupura-kadavanthra",
+      "image": [
+        "https://b.zmtcdn.com/data/pictures/1/900171/89094944096a2cc71e56eb9b7bf83463.jpg",
+        "https://b.zmtcdn.com/data/pictures/1/900171/a59fc38052ce2f2d90aaab3eb8907fc5.jpg",
+        "https://b.zmtcdn.com/data/pictures/1/900171/0775516bb6daeb78185c206817ca4226.jpg",
+        "https://b.zmtcdn.com/data/pictures/1/900171/93b0f2148223f965a1549d05521ff84d.jpg",
+        "https://b.zmtcdn.com/data/pictures/1/900171/d3dbcd54493ee991fe477f734132799a_featured_v3.jpg",
+        "https://b.zmtcdn.com/data/brand_creatives/logos/d78cacb4cb49d84e50340c7c279f2d1c_1598075399.png"
+      ],
+      "servesCuisine": [
+        "South Indian",
+        "Kerala"
+      ],
+      "priceRange": "₹300 for two",
+      "currenciesAccepted": "INR",
+      "telephone": "+914842203841",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "54/3177, 37/434 A, Near Akshya Hospital, Kaloor - Kadavanthara Road, Kadavanthra, Kochi",
+        "addressLocality": "Kochi",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 9.9693096059,
+        "longitude": 76.299254559
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4,
+        "ratingCount": 218,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday"
+          ],
+          "opens": "07:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday"
+          ],
+          "opens": "07:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Wednesday"
+          ],
+          "opens": "07:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Thursday"
+          ],
+          "opens": "07:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Friday"
+          ],
+          "opens": "07:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday"
+          ],
+          "opens": "07:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Sunday"
+          ],
+          "opens": "07:00",
+          "closes": "23:00"
+        }
+      ],
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Standard parking",
+          "value": true
+        }
+      ],
+      "hasMap": "https://maps.google.com/?q=Gokul+Oottupura+Kadavanthra+Kochi",
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "url": "https://www.district.in/dining/kochi/gokul-oottupura-kadavanthra/book",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform",
+            "http://schema.org/IOSPlatform",
+            "http://schema.org/AndroidPlatform"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": "goa-navtara-panaji",
+    "city": "Goa",
+    "area": "Panaji / Municipal Market",
+    "url": "https://www.district.in/dining/goa/navtara-veg-restaurant-panaji",
+    "restaurant": {
+      "@type": "Restaurant",
+      "name": "Navtara Veg Restaurant",
+      "url": "https://www.district.in/dining/goa/navtara-veg-restaurant-panaji",
+      "image": [
+        "https://b.zmtcdn.com/data/pictures/4/130864/dbf1f37ac5b6ef642e41fde0e07f7ec9.jpeg",
+        "https://b.zmtcdn.com/data/pictures/4/130864/07adb5f1731e611dd86441475c451e75.jpg",
+        "https://b.zmtcdn.com/data/pictures/4/130864/9e5e25da774ef6bd7c75a859b1150058.jpg",
+        "https://b.zmtcdn.com/data/pictures/4/130864/1467e5ba3c28b221c539f14c3c950a16.jpg",
+        "https://b.zmtcdn.com/data/pictures/4/130864/d008f70ef89e379015c925cebc8a036f.jpg",
+        "https://b.zmtcdn.com/data/brand_creatives/logos/822ab265db356d223663a0651551c8e1_1774416611.png"
+      ],
+      "servesCuisine": [
+        "North Indian",
+        "South Indian",
+        "Indo-Chinese",
+        "Goan"
+      ],
+      "priceRange": "₹1000 for two",
+      "currenciesAccepted": "INR",
+      "telephone": "+919226077621",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ground Floor, Municipal Market Area, Tiswadi, Panaji, Goa",
+        "addressLocality": "Goa",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 15.4994768,
+        "longitude": 73.8231022
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4,
+        "ratingCount": 1022,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday"
+          ],
+          "opens": "07:00",
+          "closes": "22:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday"
+          ],
+          "opens": "07:00",
+          "closes": "22:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Wednesday"
+          ],
+          "opens": "07:00",
+          "closes": "22:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Thursday"
+          ],
+          "opens": "07:00",
+          "closes": "22:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Friday"
+          ],
+          "opens": "07:00",
+          "closes": "22:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday"
+          ],
+          "opens": "07:00",
+          "closes": "22:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Sunday"
+          ],
+          "opens": "07:00",
+          "closes": "22:30"
+        }
+      ],
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Standard parking",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Kid-friendly",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Stags allowed",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Wi-Fi available",
+          "value": true
+        }
+      ],
+      "hasMap": "https://maps.google.com/?q=Navtara+Veg+Restaurant+Panaji+Goa",
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "url": "https://www.district.in/dining/goa/navtara-veg-restaurant-panaji/book",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform",
+            "http://schema.org/IOSPlatform",
+            "http://schema.org/AndroidPlatform"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": "goa-cafe-tato-patto",
+    "city": "Goa",
+    "area": "Patto / Panaji",
+    "url": "https://www.district.in/dining/goa/cafe-tato-since-1913-panaji",
+    "restaurant": {
+      "@type": "Restaurant",
+      "name": "Cafe Tato - Since 1913",
+      "url": "https://www.district.in/dining/goa/cafe-tato-since-1913-panaji",
+      "image": [
+        "https://b.zmtcdn.com/data/pictures/8/130768/9fd8e044de9c7d5ce26ebde8dad058f2.jpeg",
+        "https://b.zmtcdn.com/data/pictures/8/130768/10e7f2de109c52c373512a53a302da84.jpg",
+        "https://b.zmtcdn.com/data/pictures/chains/8/130768/de68510c82bae4ec0609c581f351a44a.jpg",
+        "https://b.zmtcdn.com/data/pictures/8/130768/8079200920a1e2deff16cecf4fb161c9.jpg",
+        "https://b.zmtcdn.com/data/pictures/8/130768/9937b77c614515d63beff82a2eda7db9_featured_v3.jpg"
+      ],
+      "servesCuisine": [
+        "North Indian",
+        "South Indian",
+        "Goan",
+        "Street Food"
+      ],
+      "priceRange": "₹600 for two",
+      "currenciesAccepted": "INR",
+      "telephone": "+918010282947",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1/280/1, Plot 8, Shop G9, Gera Imperium, EDC Complex, Panaji, Goa",
+        "addressLocality": "Goa",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 15.493886,
+        "longitude": 73.8358837
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.1,
+        "ratingCount": 190,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday"
+          ],
+          "opens": "08:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday"
+          ],
+          "opens": "08:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Wednesday"
+          ],
+          "opens": "08:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Thursday"
+          ],
+          "opens": "08:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "21:00"
+        }
+      ],
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Work friendly",
+          "value": true
+        }
+      ],
+      "hasMap": "https://maps.google.com/?q=Cafe+Tato+-+Since+1913+Panaji+Goa",
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "url": "https://www.district.in/dining/goa/cafe-tato-since-1913-panaji/book",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform",
+            "http://schema.org/IOSPlatform",
+            "http://schema.org/AndroidPlatform"
+          ]
+        }
+      }
+    }
+  }
+]

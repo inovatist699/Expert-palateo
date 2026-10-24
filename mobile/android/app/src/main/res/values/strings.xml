@@ -4,4 +4,5 @@
     <string name="title_activity_main">Palateo</string>
     <string name="package_name">in.palateo.app</string>
     <string name="custom_url_scheme">in.palateo.app</string>
+    <string name="truecaller_client_id">palateo_android_client_id</string>
 </resources>

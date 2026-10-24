@@ -13,7 +13,7 @@ function drawDiscover(query){
  const needle=(query??document.getElementById('q')?.value??discoverQuery).trim().toLowerCase();
  let matches=ranked().filter(r=>(!needle||[r.name,r.area,...(r.c||[]),...(r.review_insights||[])].join(' ').toLowerCase().includes(needle))&&(discoverCuisine==='all'||(discoverCuisine==='rated'?r.rating>=4.8:discoverCuisine==='Late night cafe'?isLateNightCafe(r):(r.c||[]).some(c=>c.toLowerCase().includes(discoverCuisine.toLowerCase())))));
  const sort=document.getElementById('discoverSort')?.value;
- if(sort==='rating')matches.sort((a,b)=>b.rating-a.rating||b.score-a.score);
+ if(sort==='rating')matches.sort((a,b)=>b.rating-a.rating||compareRecommendations(a,b));
  if(sort==='distance')matches.sort((a,b)=>(a.distanceKm??Infinity)-(b.distanceKm??Infinity)||compareRecommendations(a,b));
  if(sort==='name')matches.sort((a,b)=>a.name.localeCompare(b.name));
  document.getElementById('resultCount').textContent=matches.length+' places · Matches are estimates';

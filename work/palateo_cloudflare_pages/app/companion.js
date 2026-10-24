@@ -756,7 +756,7 @@
       return !tokens.length||Array.from(cuisines).some(c=>(r.c||[]).some(actual=>String(actual).toLowerCase().replace(/[^a-z]/g,'')===c.toLowerCase().replace(/[^a-z]/g,'')))||tokens.some(t=>evidence.includes(t));
     });
     // Diversify close-scoring options by cuisine and area, while keeping taste fit primary.
-    const selected=[],pool=[...candidates];while(pool.length&&selected.length<30){pool.sort((a,b)=>{const score=r=>r.score-selected.reduce((n,x)=>n+(x.area===r.area?1.5:0)+((x.c||[])[0]===(r.c||[])[0]?1.5:0),0);return score(b)-score(a)});selected.push(pool.shift())}return selected;
+    const selected=[],pool=[...candidates];while(pool.length&&selected.length<30){pool.sort((a,b)=>{const score=r=>(r.rankScore??r.score)-selected.reduce((n,x)=>n+(x.area===r.area?1.5:0)+((x.c||[])[0]===(r.c||[])[0]?1.5:0),0);return score(b)-score(a)});selected.push(pool.shift())}return selected;
   }
   function renderConversationResults(){
     const all=conversationCandidates(),start=conversation.offset%Math.max(1,all.length),matches=all.slice(start,start+3);conversation.results=matches;

@@ -28,6 +28,10 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
   assert.ok(pluginJava.includes('implements TcOAuthCallback'), 'Plugin must implement TcOAuthCallback');
   assert.ok(pluginJava.includes('generateCodeVerifier'), 'Plugin must support PKCE code verifier');
   assert.ok(pluginJava.includes('generateCodeChallenge'), 'Plugin must support PKCE code challenge');
+  assert.match(pluginJava, /activeState.equals\(data.getState\(\)\)/, 'OAuth state must match');
+  assert.match(pluginJava, /TcSdk.initAsync/);
+  assert.match(stringsXml, /truecaller_enabled">false/);
+  assert.doesNotMatch(stringsXml, /palateo_android_client_id/);
 
   const mainActivity = read('mobile/android/app/src/main/java/in/palateo/app/MainActivity.java');
   assert.ok(mainActivity.includes('registerPlugin(TruecallerPlugin.class)'), 'MainActivity must register TruecallerPlugin.class');

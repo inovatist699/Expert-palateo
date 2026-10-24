@@ -1,5 +1,6 @@
 const assert = require('node:assert/strict');
 const http = require('node:http');
+const { gzipSync } = require('node:zlib');
 
 async function run() {
   console.log('=== Checking Better Auth & Railway Backend Service ===');
@@ -7,7 +8,39 @@ async function run() {
   // Dynamically import ESM backend server in test mode
   const { default: app, startServer } = await import('../server/index.js');
   assert.ok(app, 'Express backend app must be exported');
+  app.post('/_test/body-parser', (req, res) => res.json(req.body));
   await startServer(3000);
+
+  // GHSA-27r3-jxmh-p828: trailing compressed bytes must not crash the shared API.
+  for (const [type, payload] of [
+    ['application/json', '{"diet":"veg"}'],
+    ['application/x-www-form-urlencoded', 'diet=veg']
+  ]) {
+    for (const trailing of [Buffer.alloc(0), Buffer.concat([Buffer.from([0]), Buffer.alloc(100 * 1024, 0x58)])]) {
+      const body = Buffer.concat([gzipSync(payload), trailing]);
+      const parsed = await new Promise((resolve, reject) => {
+        const request = http.request({
+          host: '127.0.0.1', port: 3000, path: '/_test/body-parser', method: 'POST',
+          headers: { 'Content-Type': type, 'Content-Encoding': 'gzip', 'Content-Length': body.length }
+        }, response => {
+          let data = '';
+          response.setEncoding('utf8');
+          response.on('data', chunk => { data += chunk; });
+          response.on('error', reject);
+          response.on('end', () => resolve({ status: response.statusCode, data }));
+        });
+        request.on('error', reject);
+        request.setTimeout(5000, () => request.destroy(new Error('Compressed request timed out')));
+        request.end(body);
+      });
+      assert.equal(parsed.status, 200);
+      assert.deepEqual(JSON.parse(parsed.data), { diet: 'veg' });
+      // The vulnerable decoder can emit its uncaught error after the response.
+      await new Promise(resolve => setTimeout(resolve, 200));
+      assert.equal((await fetch('http://127.0.0.1:3000/health')).status, 200);
+    }
+  }
+  console.log('PASS: JSON and form compressed bodies preserve data and survive trailing bytes');
 
   // Probe server over loopback
   const res = await fetch('http://localhost:3000/health');

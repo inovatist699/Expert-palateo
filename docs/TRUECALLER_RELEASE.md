@@ -1,4 +1,4 @@
-# Truecaller security release — 25 October 2026
+# Truecaller security release â€” 25 October 2026
 
 The previous integration accepted mock/test codes as verified identities, skipped provider verification and created random tokens that were not accepted by the real authentication service. The deployed application has no registered Truecaller client configuration or session integration. This release disables that incomplete sign-in flow and keeps email authentication available.
 

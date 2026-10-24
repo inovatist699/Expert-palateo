@@ -45,6 +45,8 @@ public class TruecallerPlugin extends Plugin implements TcOAuthCallback {
         try {
             AppCompatActivity activity = getActivity();
             if (activity == null) return;
+            // The placeholder is not a registered OAuth application.
+            if ("palateo_android_client_id".equals(activity.getString(R.string.truecaller_client_id))) return;
 
             TcSdkOptions tcSdkOptions = new TcSdkOptions.Builder(activity, this)
                     .buttonColor(Color.parseColor("#1a2f33"))

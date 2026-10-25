@@ -56,7 +56,7 @@ public class TruecallerPlugin extends Plugin implements TcOAuthCallback {
             activeCodeVerifier = generateCodeVerifier();
             activeState = generateCodeVerifier();
             TcSdk.getInstance().setOAuthState(activeState);
-            TcSdk.getInstance().setOAuthScopes(new String[]{"profile", "phone", "openid"});
+            TcSdk.getInstance().setOAuthScopes(new String[]{"phone", "openid"});
             TcSdk.getInstance().setCodeChallenge(generateCodeChallenge(activeCodeVerifier));
             getActivity().runOnUiThread(() -> {
                 try {

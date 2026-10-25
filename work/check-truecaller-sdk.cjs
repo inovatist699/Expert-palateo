@@ -30,6 +30,7 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
   assert.ok(pluginJava.includes('generateCodeChallenge'), 'Plugin must support PKCE code challenge');
   assert.match(pluginJava, /activeState.equals\(data.getState\(\)\)/, 'OAuth state must match');
   assert.match(pluginJava, /TcSdk.initAsync/);
+  assert.match(pluginJava, /setOAuthScopes\(new String\[\]\{"phone", "openid"\}\)/, 'Only approved identity and phone scopes');
   assert.match(stringsXml, /truecaller_enabled">false/);
   assert.doesNotMatch(stringsXml, /palateo_android_client_id/);
 

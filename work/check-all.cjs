@@ -21,6 +21,7 @@ const scripts = [
   'check-better-auth-railway.cjs',
   'check-truecaller-sdk.cjs',
   'check-truecaller-auth.cjs',
+  'check-truecaller-state.cjs',
   'check-release.cjs'
 ];
 

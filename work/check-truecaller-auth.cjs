@@ -20,8 +20,9 @@ global.fetch = async (url, options) => {
  if(url.endsWith('/v1/token'))return response(tokenResponse);
  if(url.endsWith('/v1/userinfo'))return response(profile);
  if(url.endsWith('/v1/default'))return response({userId:'verified-provider-user',phoneNumbers:['919876543210'],onlineIdentities:{email:'do-not-link@example.com'}});
- if(url.endsWith('/rpc/truecaller_flow')){
-  assert.ok(options.headers.apikey);const {operation,input}=JSON.parse(options.body);
+ if(url.endsWith('/functions/v1/truecaller-flows')){
+  assert.match(options.headers.Authorization,/^Bearer /);assert.equal(options.headers.apikey,undefined);
+  const {operation,input}=JSON.parse(options.body);
   if(operation==='attempt')return response({allowed:true});
   if(operation==='start'){flows.set(input.id,{...input,status:'waiting'});return response({created:true})}
   const item=flows.get(input.id);
@@ -52,7 +53,6 @@ function verifyJwt(result, publicKey) {
  const {privateKey,publicKey}=crypto.generateKeyPairSync('rsa',{modulusLength:2048});
  process.env.TRUECALLER_IDENTITY_PRIVATE_KEY=Buffer.from(privateKey.export({type:'pkcs8',format:'pem'})).toString('base64');
  process.env.TRUECALLER_ANDROID_ENABLED='true';
- process.env.SUPABASE_SECRET_KEY='server-only-test-key';
  tokenResponse={token_type:'Bearer',access_token:'provider-access-token'};
  profile={sub:'truecaller-user',phone_number:'919876543210',phone_number_verified:true};
  verifyJwt(await invoke(body),publicKey);
@@ -73,7 +73,7 @@ function verifyJwt(result, publicKey) {
  const goodToken=tokenResponse;tokenResponse={token_type:'Bearer',access_token:'bad\r\nheader'};
  assert.equal((await invoke(body)).code,502);tokenResponse=goodToken;
  assert.equal((await invoke({nonce},'/?action=web-start')).code,503);
- Object.assign(process.env,{TRUECALLER_WEB_ENABLED:'true',TRUECALLER_WEB_PHONE_ONLY_CONFIRMED:'true',TRUECALLER_WEB_PARTNER_KEY:'registered-web-key',TRUECALLER_WEB_CALLBACK_SECRET:'s'.repeat(43),SUPABASE_SECRET_KEY:'server-only-test-key'});
+ Object.assign(process.env,{TRUECALLER_WEB_ENABLED:'true',TRUECALLER_WEB_PHONE_ONLY_CONFIRMED:'true',TRUECALLER_WEB_PARTNER_KEY:'registered-web-key',TRUECALLER_WEB_CALLBACK_SECRET:'s'.repeat(43)});
  const started=await invoke({nonce},'/?action=web-start');assert.equal(started.code,200);
  const flow={...started.data,nonce};delete flow.partnerKey;
  assert.equal((await invoke(flow,'/?action=web-poll')).code,202);

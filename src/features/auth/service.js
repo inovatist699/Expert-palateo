@@ -75,7 +75,7 @@ useAccount(null);state.backendConnected=false;persist();updateMode();requireAuth
 async function truecallerRequest(body,action=''){
  const response=await fetch('https://palateo.in/api/truecaller'+(body?(action?'?action='+action:''):'?action=config'),{
   method:body?'POST':'GET',headers:body?{'Content-Type':'application/json'}:{},
-  ...(body?{body:JSON.stringify(body)}:{}),cache:'no-store',signal:AbortSignal.timeout(12000)
+  ...(body?{body:JSON.stringify(body)}:{}),cache:'no-store',signal:AbortSignal.timeout(30000)
  });
  const result=await response.json();
  if(!response.ok)throw new Error(result.error||'Truecaller is unavailable. Use email sign-in.');

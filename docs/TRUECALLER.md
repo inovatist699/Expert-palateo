@@ -30,9 +30,15 @@ Before activation:
    atomic and single-use. Expired state is removed on subsequent flow creation
    or completion. Bearer tokens are encrypted at rest with AES-256-GCM.
 2. Store a dedicated RSA private key (2048+ bits, PKCS8 PEM encoded as base64) as
-   `TRUECALLER_IDENTITY_PRIVATE_KEY`, and a Supabase backend secret as
-   `SUPABASE_SECRET_KEY`, exclusively in the canonical backend's secret store.
-   Keep both out of the frontend, repository, release artifacts and logs.
+   `TRUECALLER_IDENTITY_PRIVATE_KEY` exclusively in the canonical backend's secret
+   store. Deploy `supabase/functions/truecaller-flows` with gateway JWT verification
+   disabled **for this function only**: the handler verifies its own pinned RS256
+   assertion, issuer, audience, exact request-body hash and 20-second expiry before
+   forwarding the one fixed state RPC. Its public JWK must match the backend key.
+   The Supabase service key remains in the function's managed environment; never
+   copy it into Vercel, local files, frontend bundles or release artifacts.
+   Assertions can repeat within their short lifetime; the SQL transitions are
+   idempotent and completion remains single-use. They are not application sessions.
    Preserve the signing key across deployments; rotation requires overlapping
    published public keys until existing proofs expire and discovery caches refresh.
 3. Register a Supabase **custom OIDC** provider with identifier

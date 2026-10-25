@@ -51,14 +51,17 @@ function webEnabled(key) {
     process.env.TRUECALLER_WEB_PHONE_ONLY_CONFIRMED === 'true' &&
     text(process.env.TRUECALLER_WEB_PARTNER_KEY, /^[A-Za-z0-9_-]{8,256}$/) &&
     text(process.env.TRUECALLER_WEB_CALLBACK_SECRET, /^[A-Za-z0-9_-]{43,128}$/) &&
-    !!process.env.SUPABASE_SECRET_KEY;
+    !!process.env.TRUECALLER_IDENTITY_PRIVATE_KEY;
 }
 async function flow(action, values) {
-  // Fixed canonical database. This secret stays server-side; clients cannot call the flow RPC.
-  return jsonRequest('https://ntuaqcnbhqtbhbnnobmm.supabase.co/rest/v1/rpc/truecaller_flow', {
-    method: 'POST', headers: { apikey: process.env.SUPABASE_SECRET_KEY,
-      'Content-Type': 'application/json' },
-    body: JSON.stringify({ operation: action, input: values })
+  const body = JSON.stringify({ operation: action, input: values }), now = Math.floor(Date.now() / 1000);
+  const key = signingKey(), jwk = crypto.createPublicKey(key).export({ format: 'jwk' });
+  const encoded = [{ alg: 'RS256', kid: digest(jwk.n).slice(0, 24) }, {
+    iss: ISSUER, aud: 'palateo-truecaller-flow', iat: now, exp: now + 20, bodyHash: digest(body)
+  }].map(value => Buffer.from(JSON.stringify(value)).toString('base64url')).join('.');
+  const assertion = encoded + '.' + crypto.sign('RSA-SHA256', Buffer.from(encoded), key).toString('base64url');
+  return jsonRequest('https://ntuaqcnbhqtbhbnnobmm.supabase.co/functions/v1/truecaller-flows', {
+    method: 'POST', headers: { Authorization: 'Bearer ' + assertion, 'Content-Type': 'application/json' }, body
   });
 }
 function sourceHash(req, key) {
@@ -140,7 +143,7 @@ module.exports = async function handler(req, res) {
       const jwk = crypto.createPublicKey(key).export({ format: 'jwk' });
       return res.status(200).json({ keys: [{ ...jwk, kid: digest(jwk.n).slice(0, 24), use: 'sig', alg: 'RS256' }] });
     }
-    const enabled = process.env.TRUECALLER_ANDROID_ENABLED === 'true' && !!key && !!process.env.SUPABASE_SECRET_KEY;
+    const enabled = process.env.TRUECALLER_ANDROID_ENABLED === 'true' && !!key;
     if (req.method === 'GET' && action === 'config') return res.status(200).json({ android: enabled, web: webEnabled(key),
       linking: process.env.TRUECALLER_LINKING_ENABLED === 'true', provider: PROVIDER });
     if (req.method !== 'POST') { res.setHeader('Allow', 'GET, POST, OPTIONS'); return res.status(405).json({ error: 'Method not allowed' }); }

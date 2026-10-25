@@ -2,10 +2,10 @@ name: Android builds
 
 on:
   pull_request:
-    paths: ['src/**', 'config/**', 'scripts/build*.cjs', 'package.json', 'mobile/**', 'server/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/mobile.yml', '.gitmodules']
+    paths: ['src/**', 'config/**', 'scripts/build*.cjs', 'package.json', 'mobile/**', 'server/**', 'supabase/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/mobile.yml', '.gitmodules']
   push:
     branches: [main]
-    paths: ['src/**', 'config/**', 'scripts/build*.cjs', 'package.json', 'mobile/**', 'server/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/mobile.yml', '.gitmodules']
+    paths: ['src/**', 'config/**', 'scripts/build*.cjs', 'package.json', 'mobile/**', 'server/**', 'supabase/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/mobile.yml', '.gitmodules']
   workflow_dispatch:
     inputs:
       signed:

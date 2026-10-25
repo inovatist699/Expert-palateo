@@ -2,10 +2,10 @@ name: Web checks
 
 on:
   pull_request:
-    paths: ['src/**', 'config/**', 'scripts/build.cjs', 'package.json', 'server/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/web.yml', '.gitmodules']
+    paths: ['src/**', 'config/**', 'scripts/build.cjs', 'package.json', 'server/**', 'supabase/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/web.yml', '.gitmodules']
   push:
     branches: [main]
-    paths: ['src/**', 'config/**', 'scripts/build.cjs', 'package.json', 'server/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/web.yml', '.gitmodules']
+    paths: ['src/**', 'config/**', 'scripts/build.cjs', 'package.json', 'server/**', 'supabase/**', 'work/check-*.cjs', 'work/test-*.cjs', '.github/workflows/web.yml', '.gitmodules']
   workflow_dispatch:
 
 permissions:

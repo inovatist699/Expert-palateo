@@ -193,6 +193,7 @@ function profile(){
       <p class="feedNote">For a copy or correction of your data, account deletion, consent withdrawal, or a privacy complaint, contact Aayush Mittal at palateo.com@gmail.com from your registered email. We may verify account ownership. Never send your password.</p>
       <div class="privacyActions">
         <button class="btn secondary" type="button" data-action="revoke-ai">Withdraw live AI permission</button>
+        ${currentUser?.identities?.some(identity=>identity.provider==='custom:palateo-truecaller')?'':'<button class="btn truecallerBtn" type="button" data-action="truecaller-verify" hidden>Link Truecaller to this account</button><p id="truecallerStatus" role="status"></p>'}
         <button class="btn" type="button" data-action="delete-account">Delete my account</button>
         <a href="/support/">Help and support</a>
         <a href="mailto:palateo.com@gmail.com?subject=Palateo%20privacy%20request">Send a privacy request</a>

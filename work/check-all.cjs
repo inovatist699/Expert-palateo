@@ -20,6 +20,7 @@ const scripts = [
   'check-omniroute-palo.cjs',
   'check-better-auth-railway.cjs',
   'check-truecaller-sdk.cjs',
+  'check-truecaller-auth.cjs',
   'check-release.cjs'
 ];
 

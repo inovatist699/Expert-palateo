@@ -72,6 +72,68 @@ const {error}=await supabaseClient.auth.signOut();if(error)throw error;
 useAccount(null);state.backendConnected=false;persist();updateMode();requireAuthGate('You’ve signed out. Sign in again to use Palateo.');
 }catch(error){console.warn('sign out',error);toast('Could not reach Palateo right now. Try signing out again.')}
 }
-async function verifyWithTruecaller(){
- throw new Error('Truecaller sign-in is unavailable. Please sign in with email.');
+async function truecallerRequest(body,action=''){
+ const response=await fetch('https://palateo.in/api/truecaller'+(body?(action?'?action='+action:''):'?action=config'),{
+  method:body?'POST':'GET',headers:body?{'Content-Type':'application/json'}:{},
+  ...(body?{body:JSON.stringify(body)}:{}),cache:'no-store',signal:AbortSignal.timeout(12000)
+ });
+ const result=await response.json();
+ if(!response.ok)throw new Error(result.error||'Truecaller is unavailable. Use email sign-in.');
+ return result;
+}
+async function refreshTruecallerButtons(){
+ const buttons=Array.from(document.querySelectorAll('[data-action="truecaller-verify"]'));
+ if(!buttons.length||isRailwayActive())return;
+ try{
+  const config=await truecallerRequest();
+  const available=(!currentUser||config.linking===true)&&(window.PalateoNative?.truecaller?config.android===true:config.web===true&&/Android/i.test(navigator.userAgent));
+  for(const button of buttons)if(button.isConnected)button.hidden=!available;
+  const help=document.querySelector('[data-truecaller-help]');if(help)help.hidden=!available;
+ }catch{/* Email remains available when optional verification cannot be reached. */}
+}
+async function verifyWithTruecaller({link=false,reauthenticate=false}={}){
+ if(isRailwayActive())throw new Error('Truecaller requires Palateo’s shared account service. Use email sign-in.');
+ const config=await truecallerRequest(),native=window.PalateoNative?.truecaller;
+ if(native?config.android!==true:config.web!==true||!/Android/i.test(navigator.userAgent))throw new Error('Truecaller sign-in is unavailable here. Please sign in with email.');
+ const owner=currentUser?.id;
+ if(link&&!owner)throw new Error('Sign in to your existing account before linking Truecaller.');
+ if(link&&config.linking!==true)throw new Error('Truecaller account linking is not available yet.');
+ const bytes=crypto.getRandomValues(new Uint8Array(32));
+ const nonce=btoa(String.fromCharCode(...bytes)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+ let result;
+ if(native){
+  await native.prepare();
+  if(!await native.isAvailable())throw new Error('Install or open Truecaller on this Android device, or use email sign-in.');
+  const verification=await native.verifyMobile();
+  result=await truecallerRequest({authorizationCode:verification.authorizationCode,codeVerifier:verification.codeVerifier,nonce});
+ }else{
+  const flow=await truecallerRequest({nonce},'web-start');
+  const query=new URLSearchParams({type:'btmsheet',requestNonce:flow.requestId,partnerKey:flow.partnerKey,
+   partnerName:'Palateo',lang:'en',privacyUrl:'https://palateo.in/privacy/',termsUrl:'https://palateo.in/terms/',
+   loginPrefix:'continue',loginSuffix:'signin',ctaPrefix:'continuewith',skipOption:'useanothermethod',ttl:'60000'});
+  window.location.href='truecallersdk://truesdk/web_verify?'+query;
+  for(let attempt=0;attempt<20;attempt++){
+   await new Promise(resolve=>setTimeout(resolve,3000));
+   if(currentUser?.id!==owner)throw new Error('Account changed. Please start verification again.');
+   result=await truecallerRequest({requestId:flow.requestId,completionSecret:flow.completionSecret,nonce},'web-poll');
+   if(result.status!=='waiting')break;
+  }
+  if(result?.status==='waiting')throw new Error('Truecaller verification timed out. Try again or use email sign-in.');
+ }
+ if(currentUser?.id!==owner)throw new Error('Account changed. Please start verification again.');
+ if(result.provider!=='custom:palateo-truecaller'||typeof result.idToken!=='string')throw new Error('Truecaller returned an invalid verification response.');
+ const client=getSupabaseClient(),credentials={provider:result.provider,token:result.idToken,nonce};
+ const {data,error}=link?await client.auth.linkIdentity(credentials):await client.auth.signInWithIdToken(credentials);
+ if(error)throw error;
+ if(!data?.session||!data.user?.id)throw new Error('Truecaller did not return an active Palateo session. Use email sign-in.');
+ if((link||reauthenticate)&&data.user.id!==owner){
+  await client.auth.signOut({scope:'local'});useAccount(null);
+  throw new Error('Truecaller belongs to a different account. Sign in again to continue.');
+ }
+ useAccount(data.user);
+ if(reauthenticate)return data.user;
+ if(!hasLegalConsent(currentUser)){updateMode();requireLegalConsent();return data.user}
+ closeAuth();await initV5();
+ toast(link?'Truecaller linked to this account.':'Signed in with Truecaller.');
+ return data.user;
 }

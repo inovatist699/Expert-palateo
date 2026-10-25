@@ -32,7 +32,7 @@ finally{authBusy=false;const currentButton=document.getElementById('authSubmit')
 }
 async function handleTruecallerAuth(){
 if(authBusy)return;
-const status=document.getElementById('authStatus'),tcBtn=document.querySelector('[data-action="truecaller-verify"]');
+const status=document.getElementById('authStatus')||document.getElementById('truecallerStatus'),tcBtn=document.querySelector('[data-action="truecaller-verify"]');
 if(status){
  status.dataset.kind='loading';
  status.textContent='Verifying mobile with Truecaller…';
@@ -40,9 +40,9 @@ if(status){
 if(tcBtn)tcBtn.disabled=true;
 authBusy=true;
 try{
- await verifyWithTruecaller();
+ await verifyWithTruecaller({link:!!currentUser});
 }catch(error){
- const currentStatus=document.getElementById('authStatus');
+ const currentStatus=document.getElementById('authStatus')||document.getElementById('truecallerStatus');
  if(currentStatus){
   currentStatus.dataset.kind='error';
   currentStatus.textContent=authErrorMessage(error);

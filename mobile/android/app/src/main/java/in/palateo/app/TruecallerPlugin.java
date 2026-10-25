@@ -23,18 +23,30 @@ public class TruecallerPlugin extends Plugin implements TcOAuthCallback {
     private String activeCodeVerifier;
     private String activeState;
     private volatile boolean initialized;
+    private PluginCall prepareCall;
 
-    @Override
-    public void load() {
-        // Enable only after provider approval, real session integration and device testing.
-        if (!getContext().getResources().getBoolean(R.bool.truecaller_enabled)) return;
-        TcSdk.clear();
-        TcSdk.initAsync(new TcSdkOptions.Builder(getActivity(), this)
-                .sdkOptions(TcSdkOptions.OPTION_VERIFY_ONLY_TC_USERS).build());
+    @PluginMethod
+    public void prepare(PluginCall call) {
+        if (initialized) { call.resolve(); return; }
+        if (prepareCall != null) { call.reject("Truecaller is starting. Try again.", "BUSY"); return; }
+        prepareCall = call;
+        getActivity().runOnUiThread(() -> {
+            try {
+                TcSdk.clear();
+                TcSdk.initAsync(new TcSdkOptions.Builder(getActivity(), this)
+                        .sdkOptions(TcSdkOptions.OPTION_VERIFY_ONLY_TC_USERS).build());
+            } catch (RuntimeException error) { prepareCall = null; call.reject("Truecaller is unavailable.", "NOT_AVAILABLE"); }
+        });
+        getActivity().getWindow().getDecorView().postDelayed(() -> {
+            if (prepareCall == call) { prepareCall = null; call.reject("Truecaller did not start. Use email sign-in.", "NOT_AVAILABLE"); }
+        }, 15000);
     }
 
     @Override
-    public void onSdkReady() { initialized = true; }
+    public void onSdkReady() {
+        initialized = true;
+        if (prepareCall != null) { prepareCall.resolve(); prepareCall = null; }
+    }
 
     @PluginMethod
     public void isUsable(PluginCall call) {
@@ -53,6 +65,9 @@ public class TruecallerPlugin extends Plugin implements TcOAuthCallback {
         try {
             if (!TcSdk.getInstance().isOAuthFlowUsable()) { call.reject("Truecaller is unavailable.", "NOT_AVAILABLE"); return; }
             activeCall = call;
+            getActivity().getWindow().getDecorView().postDelayed(() -> {
+                if (activeCall == call) rejectActive("Truecaller verification timed out. Try again or use email sign-in.");
+            }, 90000);
             activeCodeVerifier = generateCodeVerifier();
             activeState = generateCodeVerifier();
             TcSdk.getInstance().setOAuthState(activeState);
@@ -93,6 +108,13 @@ public class TruecallerPlugin extends Plugin implements TcOAuthCallback {
     }
 
     private void clearActive() { activeCall = null; activeCodeVerifier = null; activeState = null; }
+
+    @Override
+    protected void handleOnDestroy() {
+        rejectActive("Verification was interrupted. Please try again.");
+        if (prepareCall != null) { prepareCall.reject("Verification was interrupted."); prepareCall = null; }
+        initialized = false;
+    }
 
     private static String generateCodeVerifier() {
         byte[] bytes = new byte[32];

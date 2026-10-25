@@ -19,6 +19,7 @@ document.querySelectorAll('.nav button').forEach(x=>{x.classList.remove('active'
 const activeNav=document.getElementById('n-'+(p==='place'?detailOrigin:p));
 activeNav?.classList.add('active');activeNav?.setAttribute('aria-current','page');
 if(p==='ask'&&typeof ask==='function')ask();else ({home,discover,social,saved,profile,place}[p]||home)();
+if(p==='profile')refreshTruecallerButtons();
 if(keepScroll){
  if(p==='discover'&&previousSort){document.getElementById('discoverSort').value=previousSort;drawDiscover()}
  if(railPosition){

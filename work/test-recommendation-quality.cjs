@@ -159,6 +159,35 @@ globalThis.runRecommendationQualityAudit = () => {
     state.answers.priority=priority;
     assert.ok(rec({...humbleTasteFit,rating:4.6,review_count:500}).score>rec({...humbleTasteFit,rating:2,review_count:500}).score,'Reliable review quality must matter for '+priority);
   }
+  state.answers={spice:'mild'};
+  const spiceScore=spice=>rec({...humbleTasteFit,s:spice}).score;
+  assert.ok(spiceScore('mild')>spiceScore('medium'),'Exact spice fit beats adjacent heat');
+  assert.ok(spiceScore('medium')>spiceScore('hot'),'Adjacent heat beats the opposite extreme');
+  state.answers.spice='hot';
+  assert.ok(spiceScore('medium')>spiceScore('mild'),'Spice distance works in both directions');
+  state.answers.spice='depends';
+  assert.equal(spiceScore('mild'),spiceScore('hot'),'Flexible spice preference adds no heat bias');
+  state.answers={cuisines:['Gujarati'],vibes:['quiet']};
+  const favoritesOnly=rec(humbleTasteFit).score;
+  state.answers.cuisine='Gujarati';state.answers.mood='quiet';
+  assert.equal(rec(humbleTasteFit).score,favoritesOnly,'Multi-select preferences work without legacy primary fields');
+  state.answers={diet:'veg'};
+  const pizza={id:'pizza-test',c:['Italian'],t:['pizza']},pasta={id:'pasta-test',c:['Italian'],t:['pasta']};
+  state.dishFeedback={'wood-fired-pizza':'love','arrabbiata-pasta':'pass'};
+  assert.ok(dishAdjustment(pizza)>0&&dishAdjustment(pasta)<0,'Specific dish evidence outweighs opposite feedback elsewhere in the cuisine');
+  state.dishFeedback={'wood-fired-pizza':'love'};
+  assert.ok(dishAdjustment(pizza)>2*dishAdjustment(pasta),'Cuisine-only inference must be substantially weaker than specific dish evidence');
+  state.dishFeedback={};
+  assert.equal(dishAdjustment(pizza),0,'Removing dish feedback restores a neutral adjustment');
+  state.answers={mood:'quiet',cuisine:'Italian',priority:'unique'};
+  const reviewed={...humbleTasteFit,c:['Italian'],review_insights:[]};
+  const reviewBaseline=rec(reviewed).score;
+  for(const prose of ['Not quiet; the Italian dishes were terrible.','Historic but disappointing; no authentic flavours.','Quiet Italian restaurant with historic character.']){
+    const result=rec({...reviewed,review_insights:[prose]});
+    assert.equal(result.score,reviewBaseline,'Unstructured review keywords must not invent positive sentiment');
+    assert.ok(!result.why.some(reason=>reason.startsWith('Diners ')),'No unsupported diner-praise explanation');
+  }
+  console.log('PASS: graduated spice fit, multi-select preferences and specific dish evidence');
   console.log('PASS: missing-evidence confidence, GPS stability, bounded proximity and review-supported quality');
   console.log('PASS: Eggetarian/all-foods options, dietary conflicts, unknown evidence and calibration isolation');
   console.log('PASS: Recommendation quality evaluation (taste fit vs popularity, conflict resilience, feedback symmetry, signal idempotency)');

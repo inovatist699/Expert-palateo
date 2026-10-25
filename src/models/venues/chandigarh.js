@@ -1,5 +1,5 @@
 const chandigarhCatalog=[
-{
+  {
     "id": "chd-backpackers",
     "name": "Backpackers Cafe",
     "area": "Sector 9",
@@ -45,7 +45,7 @@ const chandigarhCatalog=[
     ],
     "why": "Chandigarh’s favorite traveler-inspired bistro renowned for hearty all-day breakfast plates."
   },
-{
+  {
     "id": "chd-virgin-courtyard",
     "name": "Virgin Courtyard",
     "area": "Sector 7",
@@ -90,7 +90,7 @@ const chandigarhCatalog=[
     ],
     "why": "A tranquil Mediterranean courtyard in Sector 7 pairing rustic Italian dishes with fine wines."
   },
-{
+  {
     "id": "chd-pal-dhaba",
     "name": "Pal Dhaba",
     "area": "Sector 28",
@@ -136,7 +136,7 @@ const chandigarhCatalog=[
     ],
     "why": "Chandigarh’s legendary highway dhaba institution in Sector 28 famed for hearty North Indian feasts."
   },
-{
+  {
     "id": "chd-nik-bakers",
     "name": "Nik Baker’s",
     "area": "Sector 9",
@@ -157,7 +157,8 @@ const chandigarhCatalog=[
     "t": [
       "Australian Chef",
       "Red Velvet Cake",
-      "Gourmet Pastries"
+      "Gourmet Pastries",
+      "Late night dessert cafe"
     ],
     "a": [
       "cozy",
@@ -180,9 +181,10 @@ const chandigarhCatalog=[
       "giant gourmet bagel and chicken sandwiches",
       "founded by australian-trained chef nikesh"
     ],
-    "why": "Chandigarh’s flagship patisserie and cafe brand celebrated across North India for world-class cakes."
+    "why": "Chandigarh’s flagship patisserie and cafe brand celebrated across North India for world-class cakes.",
+    "hours": "8:00 AM – 12:00 AM"
   },
-{
+  {
     "id": "chd-sindhi-sweets",
     "name": "Sindhi Sweets",
     "area": "Sector 17",
@@ -229,7 +231,7 @@ const chandigarhCatalog=[
     ],
     "why": "Historic family favorite in Sector 17 piazza serving giant Chole Bhature and traditional desi ghee sweets."
   },
-{
+  {
     "id": "chd-swagath",
     "name": "Swagath Restaurant & Bar",
     "area": "Sector 26",
@@ -276,7 +278,7 @@ const chandigarhCatalog=[
     ],
     "why": "Premier seafood destination in the City Beautiful bringing coastal Mangalorean flavours to Madhya Marg."
   },
-{
+  {
     "id": "chd-ovenfresh",
     "name": "Ovenfresh",
     "area": "Sector 26",
@@ -297,7 +299,8 @@ const chandigarhCatalog=[
     "t": [
       "Deep Dish Pizza",
       "Pot Pies",
-      "Artisan Cafe"
+      "Artisan Cafe",
+      "Late night cafe"
     ],
     "a": [
       "lively",
@@ -320,9 +323,10 @@ const chandigarhCatalog=[
       "giant grilled panini sandwiches",
       "rich chocolate walnut brownies"
     ],
-    "why": "Beloved Sector 26 bakery and bistro famous for comforting pot pies and cheesy deep-dish pizzas."
+    "why": "Beloved Sector 26 bakery and bistro famous for comforting pot pies and cheesy deep-dish pizzas.",
+    "hours": "10:00 AM – 11:30 PM"
   },
-{
+  {
     "id": "chd-garg-chaat",
     "name": "Garg Chaat",
     "area": "Sector 23",
@@ -367,7 +371,7 @@ const chandigarhCatalog=[
     ],
     "why": "Chandigarh’s most celebrated street chaat corner famous for 5 flavours of gol gappe pani."
   },
-{
+  {
     "id": "chd-brooklyn",
     "name": "Brooklyn Central",
     "area": "Elante Mall",
@@ -388,7 +392,8 @@ const chandigarhCatalog=[
     "t": [
       "NY Diner Style",
       "Gourmet Burgers",
-      "Craft Shakes"
+      "Craft Shakes",
+      "Late night diner & cafe"
     ],
     "a": [
       "modern",
@@ -411,9 +416,10 @@ const chandigarhCatalog=[
       "buttermilk fried chicken with waffles",
       "decadent chocolate peanut butter milkshakes"
     ],
-    "why": "Stylish New York loft-inspired diner in Elante Mall serving monster burgers and craft cocktails."
+    "why": "Stylish New York loft-inspired diner in Elante Mall serving monster burgers and craft cocktails.",
+    "hours": "11:00 AM – 1:00 AM"
   },
-{
+  {
     "id": "chd-baba-chicken",
     "name": "Baba Chicken",
     "area": "Sector 35",
@@ -458,7 +464,7 @@ const chandigarhCatalog=[
     ],
     "why": "Punjab’s viral culinary sensation celebrated for its unique, rich and velvety Butter Cream Chicken."
   },
-{
+  {
     "id": "chd-pal-dhaba",
     "name": "Pal Dhaba",
     "area": "Sector 28 D",
@@ -501,7 +507,7 @@ const chandigarhCatalog=[
     ],
     "why": "Historic 1968 Sector 28 Punjabi dhabba renowned across the state for rich desi-ghee mutton curry."
   },
-{
+  {
     "id": "chd-swagath",
     "name": "Swagath Restaurant & Bar",
     "area": "Sector 26",
@@ -544,7 +550,7 @@ const chandigarhCatalog=[
     ],
     "why": "Sector 26 dining staple serving pristine Mangalorean coastal seafood and authentic tandoori preparations."
   },
-{
+  {
     "id": "chd-sindhi-sweets",
     "name": "Sindhi Sweets",
     "area": "Sector 17 C",
@@ -586,7 +592,7 @@ const chandigarhCatalog=[
     ],
     "why": "Iconic Sector 17 plaza institution serving gold-standard Punjabi Chole Bhature and artisanal sweets since 1976."
   },
-{
+  {
     "id": "chd-nik-bakers",
     "name": "Nik Baker's",
     "area": "Sector 9 D",
@@ -629,7 +635,7 @@ const chandigarhCatalog=[
     ],
     "why": "Sector 9 European cafe and patisserie created by Chef Nik famed for gourmet bagels, pastries, and artisanal shakes."
   },
-{
+  {
     "id": "chd-garg-chaat",
     "name": "Garg Chaat",
     "area": "Sector 23 D",
@@ -729,7 +735,9 @@ const chandigarhCatalog=[
     "review_count": 1100,
     "t": [
       "Cafe",
-      "Coffee"
+      "Coffee",
+      "Late night cafe",
+      "Night owl coffee"
     ],
     "a": [
       "relaxing",
@@ -749,7 +757,8 @@ const chandigarhCatalog=[
       "blueberry cream cheese bagel",
       "quiet garden view",
       "date night favourite"
-    ]
+    ],
+    "hours": "10:00 AM – 12:00 AM"
   },
   {
     "id": "chd-uncle-jacks-zirakpur",

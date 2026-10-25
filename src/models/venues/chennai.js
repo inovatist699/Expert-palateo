@@ -1,5 +1,5 @@
 const chennaiCatalog=[
-{
+  {
     "id": "chn-dakshin",
     "name": "Dakshin",
     "area": "Alwarpet",
@@ -45,7 +45,7 @@ const chennaiCatalog=[
     ],
     "why": "Crown jewel of South Indian fine dining, serenaded by live Carnatic classical music."
   },
-{
+  {
     "id": "chn-amethyst",
     "name": "Amethyst - Wild Garden Cafe",
     "area": "Royapettah",
@@ -90,7 +90,7 @@ const chennaiCatalog=[
     ],
     "why": "Restored colonial bungalow hidden inside an enchanted tropical garden."
   },
-{
+  {
     "id": "chn-murugan",
     "name": "Murugan Idli Shop",
     "area": "T. Nagar",
@@ -135,7 +135,7 @@ const chennaiCatalog=[
     ],
     "why": "World-famous Madurai-origin idli brand celebrated for velvety idlis and spiced gunpowder ghee."
   },
-{
+  {
     "id": "chn-rayars",
     "name": "Rayar’s Mess",
     "area": "Mylapore",
@@ -181,7 +181,7 @@ const chennaiCatalog=[
     ],
     "why": "Hidden 1935 Mylapore institution where foodies queue up in narrow alleys for piping hot vadas and filter kaapi."
   },
-{
+  {
     "id": "chn-buhari",
     "name": "Buhari Hotel",
     "area": "Mount Road",
@@ -226,7 +226,7 @@ const chennaiCatalog=[
     ],
     "why": "The historic hotel where Chicken 65 was invented in 1965, serving classic Tamil Nadu biryani."
   },
-{
+  {
     "id": "chn-annalakshmi",
     "name": "Annalakshmi Restaurant",
     "area": "Egmore",
@@ -271,7 +271,7 @@ const chennaiCatalog=[
     ],
     "why": "Spiritual culinary haven offering sattvic vegetarian thalis cooked by volunteers in temple grandeur."
   },
-{
+  {
     "id": "chn-sandys",
     "name": "Sandy’s Chocolate Laboratory",
     "area": "Nungambakkam",
@@ -291,7 +291,9 @@ const chennaiCatalog=[
     "t": [
       "Chocolate Laboratory",
       "Nutella Tart",
-      "Quirky Bakes"
+      "Quirky Bakes",
+      "Late night dessert cafe",
+      "Midnight chocolate craving"
     ],
     "a": [
       "lively",
@@ -314,9 +316,10 @@ const chennaiCatalog=[
       "rich nutella sea salt tart",
       "dream destination for chocolate lovers"
     ],
-    "why": "Chennai’s legendary dessert playground celebrated for scientific decadence and monster chocolate cakes."
+    "why": "Chennai’s legendary dessert playground celebrated for scientific decadence and monster chocolate cakes.",
+    "hours": "11:00 AM – 12:00 AM"
   },
-{
+  {
     "id": "chn-writers",
     "name": "Writer’s Cafe",
     "area": "Gopalapuram",
@@ -362,7 +365,7 @@ const chennaiCatalog=[
     ],
     "why": "Philanthropic book cafe partnering with Higginbothams, supporting burn survivors with artisan bakes."
   },
-{
+  {
     "id": "chn-ponnusamy",
     "name": "Ponnusamy Hotel",
     "area": "Royapettah",
@@ -407,7 +410,7 @@ const chennaiCatalog=[
     ],
     "why": "Decades-old Chettinad institution revered for fiery black pepper chicken and spicy crab roasts."
   },
-{
+  {
     "id": "chn-grand-sweets",
     "name": "Grand Sweets & Snacks",
     "area": "Adyar",
@@ -453,7 +456,7 @@ const chennaiCatalog=[
     ],
     "why": "Chennai’s sweetest landmark since 1982, famous for ghee Mysore Pak and handmade crunchy savoury snacks."
   },
-{
+  {
     "id": "chn-murugan-idli-shop",
     "name": "Murugan Idli Shop",
     "area": "T. Nagar / GN Chetty Road",
@@ -495,7 +498,7 @@ const chennaiCatalog=[
     ],
     "why": "T. Nagar's legendary breakfast temple celebrated for melt-in-mouth idlis and ghee-soaked Podi Idlis."
   },
-{
+  {
     "id": "chn-saravana-bhavan-mylapore",
     "name": "Saravana Bhavan (Mylapore Flagship)",
     "area": "Mylapore / Near Kapaleeshwarar",
@@ -538,7 +541,7 @@ const chennaiCatalog=[
     ],
     "why": "Mylapore heritage flagship delivering the quintessential Chennai temple-town breakfast and frothy filter kaapi."
   },
-{
+  {
     "id": "chn-rayars-mess",
     "name": "Rayar's Mess",
     "area": "Mylapore / Arundale Street",
@@ -581,7 +584,7 @@ const chennaiCatalog=[
     ],
     "why": "Heritage 1935 Mylapore hidden mess revered for piping hot medu vadas fresh from the kadai and melting Ven Pongal."
   },
-{
+  {
     "id": "chn-ratna-cafe",
     "name": "Ratna Cafe",
     "area": "Triplicane",
@@ -624,7 +627,7 @@ const chennaiCatalog=[
     ],
     "why": "Legendary 1948 Triplicane institution famous for idlis drowned in endless buckets of signature sweet-tangy sambar."
   },
-{
+  {
     "id": "chn-annalakshmi",
     "name": "Annalakshmi Restaurant",
     "area": "Egmore / Mount Road",
@@ -667,7 +670,7 @@ const chennaiCatalog=[
     ],
     "why": "Egmore cultural institution offering serene sattvic vegetarian fine dining amidst temple-carved architecture."
   },
-{
+  {
     "id": "chn-buhari",
     "name": "Buhari Hotel",
     "area": "Anna Salai / Mount Road",
@@ -709,7 +712,7 @@ const chennaiCatalog=[
     ],
     "why": "Historic 1951 Anna Salai institution celebrated worldwide as the birthplace of Chicken 65."
   },
-{
+  {
     "id": "chn-junior-kuppanna",
     "name": "Junior Kuppanna",
     "area": "T. Nagar / Cathedral Road",
@@ -751,7 +754,7 @@ const chennaiCatalog=[
     ],
     "why": "Premier destination for authentic Kongu Nadu cuisine featuring tiny-grain Seeraga Samba mutton biryani."
   },
-{
+  {
     "id": "chn-sangeetha-veg",
     "name": "Sangeetha Veg Restaurant",
     "area": "RA Puram / Mylapore",
@@ -795,7 +798,7 @@ const chennaiCatalog=[
     ],
     "why": "Chennai vegetarian staple revered for cooling curd vadais, crispy ghee roasts, and dependable home-style meals."
   },
-{
+  {
     "id": "chn-amethyst-cafe",
     "name": "Amethyst Cafe (Wild Garden Cafe)",
     "area": "Royapettah / Whites Road",
@@ -858,7 +861,9 @@ const chennaiCatalog=[
     "review_count": 2200,
     "t": [
       "Cafe",
-      "Books"
+      "Books",
+      "Late night cafe",
+      "Evening reader hub"
     ],
     "a": [
       "cozy",
@@ -879,7 +884,8 @@ const chennaiCatalog=[
       "hot chocolate with marshmallows",
       "book browsing aisles",
       "inclusive social kitchen"
-    ]
+    ],
+    "hours": "9:30 AM – 11:30 PM"
   },
   {
     "id": "che-sandys-velachery",
@@ -900,7 +906,9 @@ const chennaiCatalog=[
     "review_count": 1750,
     "t": [
       "Dessert",
-      "Cafe"
+      "Cafe",
+      "Late night dessert cafe",
+      "Midnight chocolate craving"
     ],
     "a": [
       "quirky",
@@ -920,7 +928,8 @@ const chennaiCatalog=[
       "chocolate syringe brownie",
       "truffle pasta",
       "fun dessert experiments"
-    ]
+    ],
+    "hours": "11:00 AM – 12:00 AM"
   },
   {
     "id": "che-that-madras-place-annanagar",

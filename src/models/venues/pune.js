@@ -1,5 +1,5 @@
 const puneCatalog=[
-{
+  {
     "id": "pun-malaka-spice",
     "name": "Malaka Spice",
     "area": "Koregaon Park",
@@ -45,7 +45,7 @@ const puneCatalog=[
     ],
     "why": "Koregaon Park institution serving vibrant street food from Vietnam, Thailand and Bali."
   },
-{
+  {
     "id": "pun-german-bakery",
     "name": "German Bakery",
     "area": "Koregaon Park",
@@ -91,7 +91,7 @@ const puneCatalog=[
     ],
     "why": "Bohemian Koregaon Park landmark famed for German pastries and backpacker warmth."
   },
-{
+  {
     "id": "pun-le-plaisir",
     "name": "Le Plaisir",
     "area": "Prabhat Road",
@@ -137,7 +137,7 @@ const puneCatalog=[
     ],
     "why": "Highest-rated French bistro in Pune serving authentic Parisian pastries and savory crepes."
   },
-{
+  {
     "id": "pun-vaishali",
     "name": "Vaishali",
     "area": "FC Road",
@@ -182,7 +182,7 @@ const puneCatalog=[
     ],
     "why": "The cultural epicenter of Pune college life on FC Road since 1949, world famous for SPDP and filter coffee."
   },
-{
+  {
     "id": "pun-kayani",
     "name": "Kayani Bakery",
     "area": "Camp",
@@ -227,7 +227,7 @@ const puneCatalog=[
     ],
     "why": "World-renowned 1955 Parsi bakery where visitors to Pune pack boxes of iconic Shrewsbury biscuits."
   },
-{
+  {
     "id": "pun-shabree",
     "name": "Shabree",
     "area": "FC Road",
@@ -273,7 +273,7 @@ const puneCatalog=[
     ],
     "why": "Pune’s definitive destination for authentic multi-course Maharashtrian vegetarian thalis."
   },
-{
+  {
     "id": "pun-goodluck",
     "name": "Goodluck Cafe",
     "area": "Deccan Gymkhana",
@@ -320,7 +320,7 @@ const puneCatalog=[
     ],
     "why": "Heritage 1935 Irani cafe at the mouth of FC Road legendary for bun maska, Irani chai, and keema pav."
   },
-{
+  {
     "id": "pun-george",
     "name": "George Restaurant",
     "area": "Camp",
@@ -365,7 +365,7 @@ const puneCatalog=[
     ],
     "why": "Decades-old East Street restaurant famed for fragrant Mughlai biryanis and silky Iranian caramel custard."
   },
-{
+  {
     "id": "pun-vohuman",
     "name": "Vohuman Cafe",
     "area": "Dhole Patil Road",
@@ -410,7 +410,7 @@ const puneCatalog=[
     ],
     "why": "Pune’s quintessential morning ritual famous for gooey double cheese omelettes and thick buttery toasts."
   },
-{
+  {
     "id": "pun-bedekar",
     "name": "Bedekar Tea Stall",
     "area": "Narayan Peth",
@@ -456,7 +456,7 @@ const puneCatalog=[
     ],
     "why": "The birthplace of authentic Puneri Misal where spiced kat is poured over poha and crunchy sev."
   },
-{
+  {
     "id": "pun-marzorin",
     "name": "Marz-O-Rin",
     "area": "Camp",
@@ -503,7 +503,7 @@ const puneCatalog=[
     ],
     "why": "Historic 1965 cafe on MG Road beloved across Pune for crustless chutney sandwiches and vintage balcony seating."
   },
-{
+  {
     "id": "pun-kata-kirr",
     "name": "Kata Kirr",
     "area": "Prabhat Road",
@@ -548,7 +548,7 @@ const puneCatalog=[
     ],
     "why": "Pune’s most famous temple of fiery Misal Pav, renowned for its blazing red rassa and crunchy sev."
   },
-{
+  {
     "id": "pun-sujata-mastani",
     "name": "Sujata Mastani",
     "area": "Sadashiv Peth",
@@ -595,7 +595,7 @@ const puneCatalog=[
     ],
     "why": "Pune’s indigenous dessert royalty since 1968, pioneering the rich milk-shake-plus-ice-cream “Mastani” drink."
   },
-{
+  {
     "id": "pun-chaitanya-paranthas",
     "name": "Chaitanya Paranthas",
     "area": "FC Road",
@@ -641,7 +641,7 @@ const puneCatalog=[
     ],
     "why": "FC Road’s high-energy paratha joint offering over 50 stuffed varieties loaded with fresh butter and curd."
   },
-{
+  {
     "id": "pun-chitale-bandhu",
     "name": "Chitale Bandhu Mithaiwale",
     "area": "Bajirao Road",
@@ -687,7 +687,7 @@ const puneCatalog=[
     ],
     "why": "The pride of Pune since 1950, celebrated globally for crisp spiral Bakarwadis and rich Alphonso Mango Barfi."
   },
-{
+  {
     "id": "pun-paasha",
     "name": "Paasha",
     "area": "Senapati Bapat Road",
@@ -735,7 +735,7 @@ const puneCatalog=[
     ],
     "why": "Pune’s crowning rooftop fine dining experience atop JW Marriott, celebrated for Awadhi kebabs and starlit views."
   },
-{
+  {
     "id": "pun-blue-tokai",
     "name": "Blue Tokai Coffee Roasters",
     "area": "Koregaon Park",
@@ -782,7 +782,7 @@ const puneCatalog=[
     ],
     "why": "Premier specialty coffee sanctuary in a lush Koregaon Park bungalow, roasting single-estate Indian beans."
   },
-{
+  {
     "id": "pun-irani-cafe",
     "name": "Irani Cafe",
     "area": "Kalyani Nagar",
@@ -831,7 +831,7 @@ const puneCatalog=[
     ],
     "why": "Modern revival of the classic Irani cafe culture, serving hot Irani chai, bun maska, and spicy keema pav."
   },
-{
+  {
     "id": "pun-sante-spa",
     "name": "Sante Spa Cuisine",
     "area": "Koregaon Park",
@@ -880,7 +880,7 @@ const puneCatalog=[
     ],
     "why": "Zen courtyard dining in Koregaon Park devoted to organic, spa-inspired nutrition and artisanal clean eating."
   },
-{
+  {
     "id": "pun-arthurs-theme",
     "name": "Arthur’s Theme",
     "area": "Koregaon Park",
@@ -928,7 +928,7 @@ const puneCatalog=[
     ],
     "why": "Longstanding European bistro institution in Koregaon Park famed for cheese fondues and historical character-named dishes."
   },
-{
+  {
     "id": "pun-cafe-paashh",
     "name": "Cafe Paashh",
     "area": "Kalyani Nagar",
@@ -975,7 +975,7 @@ const puneCatalog=[
     ],
     "why": "Sustainable organic villa and rooftop greenhouse cafe in Kalyani Nagar celebrating artisanal vegetarian cuisine."
   },
-{
+  {
     "id": "pun-jj-garden",
     "name": "JJ Garden Vada Pav",
     "area": "Camp",
@@ -1020,7 +1020,7 @@ const puneCatalog=[
     ],
     "why": "Camp’s legendary 1972 street landmark serving colossal crispy Vada Pav with fiery homemade thecha."
   },
-{
+  {
     "id": "pun-vaidya-upahar",
     "name": "Vaidya Upahar Gruha",
     "area": "Budhwar Peth",
@@ -1066,7 +1066,7 @@ const puneCatalog=[
     ],
     "why": "Pune’s oldest operational misal house (1910), famous for its unique green chili and ginger rassa broth."
   },
-{
+  {
     "id": "pun-durvankur",
     "name": "Durvankur Dining Hall",
     "area": "Sadashiv Peth",
@@ -1113,7 +1113,7 @@ const puneCatalog=[
     ],
     "why": "Sadashiv Peth’s high temple of unlimited Maharashtrian thalis, famous for Sunday puran polis and festival modaks."
   },
-{
+  {
     "id": "pun-shreyas",
     "name": "Shreyas",
     "area": "Deccan Gymkhana",
@@ -1160,7 +1160,7 @@ const puneCatalog=[
     ],
     "why": "Apte Road institution serving pure Puneri Brahmin vegetarian feasts, famed for crispy Alu Vadi and Varan Bhaat."
   },
-{
+  {
     "id": "pun-sukanta",
     "name": "Sukanta Thali",
     "area": "Deccan Gymkhana",
@@ -1207,7 +1207,7 @@ const puneCatalog=[
     ],
     "why": "Deccan Gymkhana’s lavish unlimited Rajasthani-Gujarati thali destination celebrated for live jalebi-rabdi."
   },
-{
+  {
     "id": "pun-roopali",
     "name": "Roopali Restaurant",
     "area": "FC Road",
@@ -1254,7 +1254,7 @@ const puneCatalog=[
     ],
     "why": "FC Road’s beloved intellectual hub since decades, legendary for brass-dabarah filter coffee and crispy medu vadas."
   },
-{
+  {
     "id": "pun-wadeshwar",
     "name": "Wadeshwar",
     "area": "FC Road",
@@ -1301,7 +1301,7 @@ const puneCatalog=[
     ],
     "why": "Pune’s modern tiffin empire on FC Road, famous across the city for pure ghee podi idlis and appams."
   },
-{
+  {
     "id": "pun-camp-burger",
     "name": "Burger (Camp / East Street)",
     "area": "Camp",
@@ -1348,7 +1348,7 @@ const puneCatalog=[
     ],
     "why": "Pune’s cult burger institution in Camp, drawing generations for mammoth, juicy burgers and crinkle-cut fries."
   },
-{
+  {
     "id": "pun-maratha-samrat",
     "name": "Maratha Samrat",
     "area": "Kothrud",
@@ -1395,7 +1395,7 @@ const puneCatalog=[
     ],
     "why": "Kothrud’s crowned king of authentic Kolhapuri non-veg thalis, revered for Tambda-Pandhra Rassa and Mutton Sukka."
   },
-{
+  {
     "id": "pun-surves",
     "name": "Surve’s Pure Non Veg",
     "area": "FC Road",
@@ -1441,7 +1441,7 @@ const puneCatalog=[
     ],
     "why": "FC Road’s dedicated non-veg temple serving unapologetically spicy Kolhapuri thalis with unlimited rassa."
   },
-{
+  {
     "id": "pun-aware-maratha",
     "name": "Aware Maratha Khanawal",
     "area": "Sadashiv Peth",
@@ -1487,7 +1487,7 @@ const puneCatalog=[
     ],
     "why": "Century-old military khanawal (1901) in Sadashiv Peth cooking rustic black masala mutton in heritage copper pots."
   },
-{
+  {
     "id": "pun-fish-curry-rice",
     "name": "Fish Curry Rice",
     "area": "Law College Road",
@@ -1535,7 +1535,7 @@ const puneCatalog=[
     ],
     "why": "Law College Road’s seafood sanctuary renowned for crisp rawa-fried coastal fish and fiery Malwani curries."
   },
-{
+  {
     "id": "pun-nisarg",
     "name": "Nisarg Seafood",
     "area": "Erandwane",
@@ -1583,7 +1583,7 @@ const puneCatalog=[
     ],
     "why": "Erandwane’s coastal institution serving colossal mud crabs in butter garlic and authentic Mangalorean curries."
   },
-{
+  {
     "id": "pun-toit-pune",
     "name": "Toit Pune",
     "area": "Kalyani Nagar",
@@ -1630,7 +1630,7 @@ const puneCatalog=[
     ],
     "why": "Sprawling open-air garden brewery in Kalyani Nagar famous for artisanal craft beers and sourdough pizzas."
   },
-{
+  {
     "id": "pun-effingut",
     "name": "Effingut Brewerkz",
     "area": "Koregaon Park",
@@ -1677,7 +1677,7 @@ const puneCatalog=[
     ],
     "why": "Pune’s beloved craft beer pioneer in Koregaon Park celebrated for artisanal cider and cozy pub pub vibes."
   },
-{
+  {
     "id": "pun-the-daily",
     "name": "The Daily All Day",
     "area": "Koregaon Park",
@@ -1724,7 +1724,7 @@ const puneCatalog=[
     ],
     "why": "Koregaon Park’s chic alfresco bistro known for sun-kissed brunches, truffle fries, and master mixology."
   },
-{
+  {
     "id": "pun-pimlico",
     "name": "Pimlico",
     "area": "Koregaon Park",
@@ -1746,7 +1746,8 @@ const puneCatalog=[
       "Floral Aesthetic Cafe",
       "Thick Hot Chocolate",
       "Thin Crust Pizza",
-      "Instagram Landmark"
+      "Instagram Landmark",
+      "Late night floral cafe"
     ],
     "a": [
       "romantic",
@@ -1769,9 +1770,10 @@ const puneCatalog=[
       "hand-stretched thin crust pizzas and pastas",
       "aesthetic photo-friendly cafe on lane 6"
     ],
-    "why": "Whimsical floral-canopied cafe in Koregaon Park famed for velvety hot chocolate and romantic aesthetics."
+    "why": "Whimsical floral-canopied cafe in Koregaon Park famed for velvety hot chocolate and romantic aesthetics.",
+    "hours": "11:00 AM – 11:30 PM"
   },
-{
+  {
     "id": "pun-dorabjee",
     "name": "Dorabjee & Sons",
     "area": "Camp",
@@ -1818,7 +1820,7 @@ const puneCatalog=[
     ],
     "why": "Pune’s oldest surviving restaurant (1878), serving slow-cooked Mutton Dhansak and Arbi Gosht over charcoal."
   },
-{
+  {
     "id": "pun-budhani-bros",
     "name": "Budhani Bros Waferwala",
     "area": "Camp",
@@ -1864,7 +1866,7 @@ const puneCatalog=[
     ],
     "why": "Camp’s legendary 1955 wafer house, frying paper-thin golden potato chips and dry fruit chiwda for generations."
   },
-{
+  {
     "id": "pun-khasbag-misal",
     "name": "Khasbag Misal",
     "area": "Tilak Road",
@@ -1910,7 +1912,7 @@ const puneCatalog=[
     ],
     "why": "Tilak Road’s fiery Kolhapuri-style misal destination, known for its intense red tari and crunchy farsan."
   },
-{
+  {
     "id": "pun-badshahi",
     "name": "Badshahi Boarding House",
     "area": "Tilak Road",
@@ -1957,7 +1959,7 @@ const puneCatalog=[
     ],
     "why": "Historic 1935 boarding house opposite SP College serving authentic homestyle Maharashtrian meals with hot phulkas."
   },
-{
+  {
     "id": "pun-ukiyo",
     "name": "Ukiyo",
     "area": "Yerawada",
@@ -2006,7 +2008,7 @@ const puneCatalog=[
     ],
     "why": "Ultra-luxury modern Japanese fine dining at The Ritz-Carlton featuring robata grills and master sushi art."
   },
-{
+  {
     "id": "pun-aasmana",
     "name": "Aasmana",
     "area": "Yerawada",
@@ -2054,7 +2056,7 @@ const puneCatalog=[
     ],
     "why": "Stunning 18th-floor rooftop lounge at The Ritz-Carlton with panoramic golf course views and royal Indian cuisine."
   },
-{
+  {
     "id": "pun-baan-tao",
     "name": "Baan Tao",
     "area": "Kalyani Nagar",
@@ -2103,7 +2105,7 @@ const puneCatalog=[
     ],
     "why": "Hyatt Pune’s award-winning Pan-Asian pavilion enveloped in serene waterfalls, celebrated for exquisite dim sum and Thai curries."
   },
-{
+  {
     "id": "pun-fc-chaat",
     "name": "FC Road Chaat Corner",
     "area": "Shivajinagar",
@@ -2149,7 +2151,7 @@ const puneCatalog=[
     ],
     "why": "Shivajinagar’s bustling street corner that has fueled Pune student banter with crispy pani puri and sukha bhel."
   },
-{
+  {
     "id": "pun-doolally",
     "name": "Doolally on Tap",
     "area": "NIBM / Corinthians",
@@ -2195,7 +2197,7 @@ const puneCatalog=[
     ],
     "why": "India’s pioneer craft microbrewery (2009) at Corinthians Resort, renowned for mango cider and pet-friendly lawns."
   },
-{
+  {
     "id": "pun-terttulia",
     "name": "Terttulia",
     "area": "Koregaon Park",
@@ -2242,7 +2244,7 @@ const puneCatalog=[
     ],
     "why": "Koregaon Park’s beloved European bistro on Lane 5 famous for fruity sangrias, artisan pizzas, and breezy charm."
   },
-{
+  {
     "id": "pun-gawade-gola",
     "name": "Gawade Gola",
     "area": "Narayan Peth",
@@ -2288,7 +2290,7 @@ const puneCatalog=[
     ],
     "why": "Narayan Peth’s century-loved ice gola destination, famed for crushed ice globes crowned with thick rabdi and dry fruits."
   },
-{
+  {
     "id": "pun-ramnath-misal",
     "name": "Ramnath Misal",
     "area": "Tilak Road",
@@ -2334,7 +2336,7 @@ const puneCatalog=[
     ],
     "why": "Sadashiv Peth’s haven for true spice enthusiasts, dishing out intensely spicy Kolhapuri-style misal on Tilak Road."
   },
-{
+  {
     "id": "pun-sujata-mastani",
     "name": "Sujata Mastani",
     "area": "Sadashiv Peth",
@@ -2376,7 +2378,7 @@ const puneCatalog=[
     ],
     "why": "The original 1968 creator of Pune's signature Mastani dessert featuring reduced fruit shake topped with ice cream."
   },
-{
+  {
     "id": "pun-bedekar-misal",
     "name": "Bedekar Tea Stall",
     "area": "Narayan Peth",
@@ -2418,7 +2420,7 @@ const puneCatalog=[
     ],
     "why": "Heritage 1948 Narayan Peth misal stall celebrated for classic Puneri-style misal served with sliced bread."
   },
-{
+  {
     "id": "pun-kata-kirr",
     "name": "Kata Kirr",
     "area": "Karve Nagar",
@@ -2460,7 +2462,7 @@ const puneCatalog=[
     ],
     "why": "Karve Nagar spice destination famed for tongue-scorching Kolhapuri rassa misal and cooling fresh buttermilk."
   },
-{
+  {
     "id": "pun-george-restaurant",
     "name": "George Restaurant",
     "area": "Camp / East Street",
@@ -2503,7 +2505,7 @@ const puneCatalog=[
     ],
     "why": "Historic 1936 Camp institution renowned for aromatic dum biryanis, reshmi kebabs, and caramel custard."
   },
-{
+  {
     "id": "pun-blue-nile",
     "name": "Blue Nile",
     "area": "Camp / Bund Garden Road",
@@ -2546,7 +2548,7 @@ const puneCatalog=[
     ],
     "why": "Camp institution celebrated for authentic Persian Chelo Kebabs served over buttered saffron rice."
   },
-{
+  {
     "id": "pun-kayani-bakery",
     "name": "Kayani Bakery",
     "area": "Camp / East Street",
@@ -2588,7 +2590,7 @@ const puneCatalog=[
     ],
     "why": "Iconic 1955 Camp bakehouse celebrated worldwide for buttery Shrewsbury biscuits and rich mawa cakes."
   },
-{
+  {
     "id": "pun-marz-o-rin",
     "name": "Marz-O-Rin",
     "area": "Camp / MG Road",
@@ -2631,7 +2633,7 @@ const puneCatalog=[
     ],
     "why": "Historic 1944 MG Road colonial balcony cafe loved for green chutney sandwiches and frothy cold coffee."
   },
-{
+  {
     "id": "pun-chitale-bandhu",
     "name": "Chitale Bandhu Mithaiwale",
     "area": "Bajirao Road / Deccan",
@@ -2673,7 +2675,7 @@ const puneCatalog=[
     ],
     "why": "Pune's world-famous confectionery empire on Bajirao Road synonymous with spicy-sweet Bakarwadi and Amba Barfi."
   },
-{
+  {
     "id": "pun-kalyan-bhel",
     "name": "Kalyan Bhel",
     "area": "Law College Road",
@@ -2716,7 +2718,7 @@ const puneCatalog=[
     ],
     "why": "Law College Road's premier chaat haven celebrated for sprout-loaded Puneri Matki Bhel and tangy Oli Bhel."
   },
-{
+  {
     "id": "pun-vaishali",
     "name": "Vaishali",
     "area": "FC Road",
@@ -2759,7 +2761,7 @@ const puneCatalog=[
     ],
     "why": "Pune's iconic 1949 cultural landmark on FC Road celebrated for inventing SPDP and its legendary Mysore masala dosa."
   },
-{
+  {
     "id": "pun-cafe-goodluck",
     "name": "Cafe Goodluck",
     "area": "FC Road / Deccan",
@@ -2779,7 +2781,9 @@ const puneCatalog=[
       "bun maska chai",
       "mutton keema pav",
       "brun maska",
-      "deccan heritage corner"
+      "deccan heritage corner",
+      "Late night Irani cafe",
+      "Midnight bun maska chai"
     ],
     "a": [
       "bustling"
@@ -2800,9 +2804,10 @@ const puneCatalog=[
       "crusty brun maska dipped in sweet milky irani chai and spicy minced keema pav",
       "vintage marble tables with constant energetic banter from morning till night"
     ],
-    "why": "Historic 1935 Irani cafe anchoring Goodluck Chowk famous for keema pav, brun maska, and sweet Irani chai."
+    "why": "Historic 1935 Irani cafe anchoring Goodluck Chowk famous for keema pav, brun maska, and sweet Irani chai.",
+    "hours": "7:00 AM – 12:00 AM"
   },
-{
+  {
     "id": "pun-le-plaisir",
     "name": "Le Plaisir",
     "area": "Deccan Gymkhana / Prabhat Road",
@@ -2845,7 +2850,7 @@ const puneCatalog=[
     ],
     "why": "Premier European bistro on Prabhat Road celebrated for artisanal crepes, pastas, and exquisite French patisserie."
   },
-{
+  {
     "id": "pun-sante-spa",
     "name": "Sante Spa Cuisine",
     "area": "Koregaon Park / Lane 1",
@@ -2889,7 +2894,7 @@ const puneCatalog=[
     ],
     "why": "Serene Koregaon Park villa offering holistic organic dining, ancient-grain pizzas, and nutrient-dense wellness plates."
   },
-{
+  {
     "id": "pun-malaka-spice",
     "name": "Malaka Spice",
     "area": "Koregaon Park / Lane 5",
@@ -2932,7 +2937,7 @@ const puneCatalog=[
     ],
     "why": "Koregaon Park's legendary art-filled garden restaurant serving authentic Southeast Asian street culinary classics."
   },
-{
+  {
     "id": "pun-arthurs-theme",
     "name": "Arthur's Theme",
     "area": "Koregaon Park / Lane 6",
@@ -2975,7 +2980,7 @@ const puneCatalog=[
     ],
     "why": "Romantic European dining room in Koregaon Park known for classic French steaks, fondues, and Continental wine pairings."
   },
-{
+  {
     "id": "pun-prems",
     "name": "Prem's",
     "area": "Koregaon Park / North Main Road",
@@ -3018,7 +3023,7 @@ const puneCatalog=[
     ],
     "why": "Cherished open-air leafy garden sanctuary in Koregaon Park popular for laid-back weekend lunches and tandoori grills."
   },
-{
+  {
     "id": "pun-german-bakery",
     "name": "German Bakery",
     "area": "Koregaon Park / North Main Road",
@@ -3061,7 +3066,7 @@ const puneCatalog=[
     ],
     "why": "Legendary bohemian open-air cafe in Koregaon Park famed for frozen lemon iced tea and warm apple strudel."
   },
-{
+  {
     "id": "pun-vohuman-cafe",
     "name": "Vohuman Cafe",
     "area": "Dhole Patil Road / Near Station",
@@ -3104,7 +3109,7 @@ const puneCatalog=[
     ],
     "why": "Legendary breakfast institution near Pune Station famed for molten cheese omelettes and warm bun maska."
   },
-{
+  {
     "id": "pun-irani-cafe",
     "name": "Irani Cafe",
     "area": "Prabhat Road / Viman Nagar",
@@ -3147,7 +3152,7 @@ const puneCatalog=[
     ],
     "why": "Modern revival of heritage Irani cafe culture celebrated for spicy keema ghotala, bun omelettes, and mawa cakes."
   },
-{
+  {
     "id": "pun-abc-pohe",
     "name": "Appa Balwant Chowk Pohe (Amrut Tulya)",
     "area": "Appa Balwant Chowk (ABC)",
@@ -3189,7 +3194,7 @@ const puneCatalog=[
     ],
     "why": "Historic Appa Balwant Chowk breakfast ritual dishing out authentic Puneri Kande Pohe with fresh coconut."
   },
-{
+  {
     "id": "pun-tiranga-bhuvan",
     "name": "Tiranga Bhuvan",
     "area": "Kothrud / Paud Road",
@@ -3231,7 +3236,7 @@ const puneCatalog=[
     ],
     "why": "Kothrud non-vegetarian sanctuary revered for fiery Kolhapuri mutton thalis and comforting Pandhra rassa."
   },
-{
+  {
     "id": "pun-sps-biryani",
     "name": "SP's Biryani House",
     "area": "Sadashiv Peth / Tilak Road",
@@ -3273,7 +3278,7 @@ const puneCatalog=[
     ],
     "why": "Tilak Road institution famed for pure-ghee Sajuk Tupatli Biryani and rustic Gavran country chicken preparations."
   },
-{
+  {
     "id": "pun-mathura-pure-veg",
     "name": "Mathura Pure Veg",
     "area": "JM Road",
@@ -3316,7 +3321,7 @@ const puneCatalog=[
     ],
     "why": "JM Road vegetarian favorite serving classic Maharashtrian multigrain Thalipeeth, Kothimbir Vadi, and Pithla Bhakri."
   },
-{
+  {
     "id": "pun-cafe-paashh",
     "name": "Cafe Paashh",
     "area": "Kalyani Nagar",
@@ -3360,7 +3365,7 @@ const puneCatalog=[
     ],
     "why": "Kalyani Nagar rooftop greenhouse villa pioneering conscious farm-to-table organic vegetarian gastronomy."
   },
-{
+  {
     "id": "pun-mad-momos",
     "name": "Burger Craft & Mad Momos",
     "area": "Salunke Vihar / Wanowrie",
@@ -3402,7 +3407,7 @@ const puneCatalog=[
     ],
     "why": "Salunke Vihar street hangout loved for juicy handcrafted smash burgers and authentic Darjeeling steamed momos."
   },
-{
+  {
     "id": "pun-flavours-sandwich",
     "name": "Flavours Street Sandwiches",
     "area": "BMCC Road / Deccan",
@@ -3444,7 +3449,7 @@ const puneCatalog=[
     ],
     "why": "BMCC Road cult student fast-food institution famous for decadent chocolate cheese toasties and grilled sandwiches."
   },
-{
+  {
     "id": "pun-supreme-sandwich",
     "name": "Supreme Corner Fast Food",
     "area": "FC Road",
@@ -3486,7 +3491,7 @@ const puneCatalog=[
     ],
     "why": "FC Road's decades-old street sandwich corner celebrated for triple-decker grilled sandwiches and thick lassis."
   },
-{
+  {
     "id": "pun-ganesh-bhel",
     "name": "Ganesh Bhel & Chaat Hub",
     "area": "Ganeshkhind / Karve Road",
@@ -3529,7 +3534,7 @@ const puneCatalog=[
     ],
     "why": "Pune chaat pioneer renowned for sprouted Matki Bhel, crispy Sev Batata Puri, and refreshing Dahi Puris."
   },
-{
+  {
     "id": "pun-hite-bar",
     "name": "Hite Bar & Fast Food",
     "area": "Camp / East Street",
@@ -3571,7 +3576,7 @@ const puneCatalog=[
     ],
     "why": "Camp's beloved fast-food counter famous for monster chicken burgers and hearty rolls."
   },
-{
+  {
     "id": "pun-falahaar",
     "name": "Falahaar & Fast Food",
     "area": "Karve Road / Kothrud",
@@ -3614,7 +3619,7 @@ const puneCatalog=[
     ],
     "why": "Popular Kothrud quick-bite hangout famous for viral Jamun Shots, Sabudana Khichdi, and fresh fruit creams."
   },
-{
+  {
     "id": "pun-high-spirits",
     "name": "High Spirits Cafe",
     "area": "Koregaon Park / North Main Road",
@@ -3657,7 +3662,7 @@ const puneCatalog=[
     ],
     "why": "Pune's legendary nightlife institution in Koregaon Park famous for live indie gigs, Sunday cookouts, and electric dance parties."
   },
-{
+  {
     "id": "pun-mi-a-mi",
     "name": "Mi A Mi Nightclub",
     "area": "JW Marriott / Senapati Bapat Road",
@@ -3700,7 +3705,7 @@ const puneCatalog=[
     ],
     "why": "JW Marriott's underground 5-star superclub featuring massive dance floors, laser light shows, and international EDM nights."
   },
-{
+  {
     "id": "pun-waters-club",
     "name": "Waters Bar & Kitchen",
     "area": "Koregaon Park / River Road",
@@ -3743,7 +3748,7 @@ const puneCatalog=[
     ],
     "why": "Koregaon Park's stunning open-air riverside dance club celebrated for pulsating light shows and weekend club nights."
   },
-{
+  {
     "id": "pun-house-of-medici",
     "name": "The House of Medici",
     "area": "The Westin / Koregaon Park",
@@ -3786,7 +3791,7 @@ const puneCatalog=[
     ],
     "why": "The Westin's opulent equestrian-themed luxury nightclub featuring India's longest horseshoe bar and elite weekend clubbing."
   },
-{
+  {
     "id": "pun-cult-house",
     "name": "Cult House & Cult Terra",
     "area": "Magarpatta / Hadapsar",
@@ -3829,7 +3834,7 @@ const puneCatalog=[
     ],
     "why": "East Pune's colossal superclub and open-air deck in Magarpatta famed for stadium-grade sound and massive party nights."
   },
-{
+  {
     "id": "pun-elephant-co",
     "name": "Elephant & Co. (Eco)",
     "area": "Kalyani Nagar / Baner",
@@ -3872,7 +3877,7 @@ const puneCatalog=[
     ],
     "why": "Kalyani Nagar's high-energy neighborhood party pub beloved for craft cocktails, weekend DJ sets, and vibrant crowds."
   },
-{
+  {
     "id": "pun-di-mora",
     "name": "Di Mora Sky Lounge & Club",
     "area": "Koregaon Park / North Main Road",
@@ -3914,7 +3919,7 @@ const puneCatalog=[
     ],
     "why": "High-altitude Koregaon Park rooftop dance club offering panoramic treetop views, craft cocktails, and pulsating beats."
   },
-{
+  {
     "id": "pun-2bhk-key-club",
     "name": "2BHK Diner & Key Club",
     "area": "The Mills / Bund Garden Road",
@@ -3957,7 +3962,7 @@ const puneCatalog=[
     ],
     "why": "The Mills' premier nightlife institution featuring baroque chandeliers, celebrity crowds, and high-voltage dance weekends."
   },
-{
+  {
     "id": "pun-1bhk-baner",
     "name": "1 BHK Superbar",
     "area": "Baner",
@@ -4000,7 +4005,7 @@ const puneCatalog=[
     ],
     "why": "West Pune's reigning Baner party superbar famed for sprawling dance floors, energetic DJ nights, and craft cocktails."
   },
-{
+  {
     "id": "pun-effingut-kp",
     "name": "Effingut Brewerkz",
     "area": "Koregaon Park / Lane 6",

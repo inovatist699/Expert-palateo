@@ -30,3 +30,26 @@ try{if(mode==='signup')await signUpV5(name,phone,email,password,readLegalConsent
 catch(error){const currentStatus=document.getElementById('authStatus');if(currentStatus){currentStatus.dataset.kind='error';currentStatus.textContent=authErrorMessage(error)}}
 finally{authBusy=false;const currentButton=document.getElementById('authSubmit');if(currentButton)currentButton.disabled=false}
 }
+async function handleTruecallerAuth(){
+if(authBusy)return;
+const status=document.getElementById('authStatus'),tcBtn=document.querySelector('[data-action="truecaller-verify"]');
+if(status){
+ status.dataset.kind='loading';
+ status.textContent='Verifying mobile with Truecaller…';
+}
+if(tcBtn)tcBtn.disabled=true;
+authBusy=true;
+try{
+ await verifyWithTruecaller();
+}catch(error){
+ const currentStatus=document.getElementById('authStatus');
+ if(currentStatus){
+  currentStatus.dataset.kind='error';
+  currentStatus.textContent=authErrorMessage(error);
+ }
+}finally{
+ authBusy=false;
+ const currentTcBtn=document.querySelector('[data-action="truecaller-verify"]');
+ if(currentTcBtn)currentTcBtn.disabled=false;
+}
+}

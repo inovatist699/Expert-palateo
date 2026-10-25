@@ -1,5 +1,5 @@
 const goaCatalog=[
-{
+  {
     "id": "goa-gunpowder",
     "name": "Gunpowder",
     "area": "Assagao",
@@ -45,7 +45,7 @@ const goaCatalog=[
     ],
     "why": "A tranquil Portuguese mansion courtyard in Assagao serving fiery peninsular home-cooking."
   },
-{
+  {
     "id": "goa-burger-factory",
     "name": "Burger Factory",
     "area": "Anjuna",
@@ -65,7 +65,9 @@ const goaCatalog=[
     "t": [
       "Gourmet Burgers",
       "Craft Beer",
-      "Beach Vibe"
+      "Beach Vibe",
+      "Late night cafe",
+      "Midnight gourmet burgers"
     ],
     "a": [
       "casual",
@@ -88,9 +90,10 @@ const goaCatalog=[
       "passion fruit coolers",
       "relaxed bohemian beach vibe"
     ],
-    "why": "Goa’s cult burger haven producing thick gourmet patties on toasted artisanal brioche."
+    "why": "Goa’s cult burger haven producing thick gourmet patties on toasted artisanal brioche.",
+    "hours": "12:00 PM – 12:00 AM"
   },
-{
+  {
     "id": "goa-olive-bar",
     "name": "Olive Bar & Kitchen",
     "area": "Vagator",
@@ -135,7 +138,7 @@ const goaCatalog=[
     ],
     "why": "Cliff-perched white-walled sanctuary overlooking the crashing waves of Vagator beach."
   },
-{
+  {
     "id": "goa-fishermans-wharf",
     "name": "The Fisherman’s Wharf",
     "area": "Cavelossim",
@@ -181,7 +184,7 @@ const goaCatalog=[
     ],
     "why": "Scenic riverside institution in South Goa celebrated for fresh local seafood and riverside breezes."
   },
-{
+  {
     "id": "goa-vinayak",
     "name": "Vinayak Family Restaurant",
     "area": "Assagao",
@@ -227,7 +230,7 @@ const goaCatalog=[
     ],
     "why": "The gold standard for authentic local Goan fish thalis overlooking the serene paddy fields of Assagao."
   },
-{
+  {
     "id": "goa-mums-kitchen",
     "name": "Mum’s Kitchen",
     "area": "Panaji",
@@ -273,7 +276,7 @@ const goaCatalog=[
     ],
     "why": "UNESCO-recognized culinary project in Panaji dedicated to rescuing endangered heirloom Goan home recipes."
   },
-{
+  {
     "id": "goa-martins-corner",
     "name": "Martin’s Corner",
     "area": "Betalbatim",
@@ -319,7 +322,7 @@ const goaCatalog=[
     ],
     "why": "Legendary South Goa culinary icon famous across India for succulent seafood platters and warm Goan spirit."
   },
-{
+  {
     "id": "goa-antares",
     "name": "Antares Restaurant & Beach Club",
     "area": "Vagator",
@@ -365,7 +368,7 @@ const goaCatalog=[
     ],
     "why": "Spectacular cliff-edge beach club by MasterChef Sarah Todd combining Australian BBQ with Goan coastal spices."
   },
-{
+  {
     "id": "goa-infantaria",
     "name": "Infantaria Cafe",
     "area": "Calangute",
@@ -386,7 +389,9 @@ const goaCatalog=[
     "t": [
       "1980 Beach Bakery",
       "Goan Pork Sausages",
-      "Fresh Croissants"
+      "Fresh Croissants",
+      "Late night bakery cafe",
+      "Calangute night hangout"
     ],
     "a": [
       "casual",
@@ -409,9 +414,10 @@ const goaCatalog=[
       "traditional bebinca and serradura desserts",
       "bustling morning energy on calangute road"
     ],
-    "why": "Calangute’s landmark morning institution since 1980, beloved for hearty breakfast plates and fresh pastries."
+    "why": "Calangute’s landmark morning institution since 1980, beloved for hearty breakfast plates and fresh pastries.",
+    "hours": "7:30 AM – 11:30 PM"
   },
-{
+  {
     "id": "goa-pousada",
     "name": "Pousada by the Beach",
     "area": "Calangute",
@@ -457,7 +463,7 @@ const goaCatalog=[
     ],
     "why": "Serene beachfront sanctuary in Calangute providing unhurried barefoot dining away from crowded shacks."
   },
-{
+  {
     "id": "goa-fishermans-wharf",
     "name": "The Fisherman's Wharf",
     "area": "Cavelossim / Panaji",
@@ -500,7 +506,7 @@ const goaCatalog=[
     ],
     "why": "Picturesque Sal River deck in South Goa celebrated for authentic coconut prawn curries and live Goan music."
   },
-{
+  {
     "id": "goa-martins-corner",
     "name": "Martin's Corner",
     "area": "Betalbatim / South Goa",
@@ -543,7 +549,7 @@ const goaCatalog=[
     ],
     "why": "Legendary Betalbatim culinary institution famed for spicy Kingfish Recheado and Crab Xec Xec."
   },
-{
+  {
     "id": "goa-gunpowder",
     "name": "Gunpowder",
     "area": "Assagao",
@@ -586,7 +592,7 @@ const goaCatalog=[
     ],
     "why": "Assagao's celebrated garden bungalow restaurant showcasing fiery coastal South Indian culinary treasures."
   },
-{
+  {
     "id": "goa-vinayak",
     "name": "Vinayak Family Restaurant",
     "area": "Assagao",
@@ -628,7 +634,7 @@ const goaCatalog=[
     ],
     "why": "Assagao's beloved fish thali benchmark serving crisp rawa-fried fresh catch overlooking lush green fields."
   },
-{
+  {
     "id": "goa-mums-kitchen",
     "name": "Mum's Kitchen",
     "area": "Panaji / Miramar",
@@ -690,7 +696,8 @@ const goaCatalog=[
     "review_count": 2400,
     "t": [
       "Bakery",
-      "Goan"
+      "Goan",
+      "Late night patisserie & cafe"
     ],
     "a": [
       "heritage",
@@ -710,7 +717,8 @@ const goaCatalog=[
       "mushroom samosa puff",
       "traditional baath cake",
       "authentic local stop"
-    ]
+    ],
+    "hours": "9:00 AM – 11:30 PM"
   },
   {
     "id": "goa-carpe-diem-margao",
@@ -731,7 +739,9 @@ const goaCatalog=[
     "review_count": 980,
     "t": [
       "Cafe",
-      "Art"
+      "Art",
+      "Late night cafe",
+      "Evening art cafe"
     ],
     "a": [
       "art-gallery",
@@ -751,6 +761,82 @@ const goaCatalog=[
       "fresh waffles with honey",
       "lemon drizzle cake",
       "peaceful south goa sanctuary"
+    ],
+    "hours": "10:00 AM – 11:30 PM"
+  },
+  {
+    "id": "goa-navtara-panaji",
+    "name": "Navtara Veg Restaurant",
+    "area": "Panaji / Municipal Market",
+    "city": "Goa",
+    "latitude": 15.4994768,
+    "longitude": 73.8231022,
+    "address": "Ground Floor, Municipal Market Area, Tiswadi, Panaji, Goa",
+    "c": [
+      "North Indian",
+      "South Indian",
+      "Indo-Chinese",
+      "Goan"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹1000 for two",
+    "rating": 4,
+    "review_count": 1022,
+    "ratingSource": "District",
+    "t": [
+      "Restaurant"
+    ],
+    "a": [],
+    "o": [],
+    "dietaryOptions": [
+      "vegetarian",
+      "pure_veg"
+    ],
+    "emoji": "🍽️",
+    "maps": "https://www.google.com/maps/search/?api=1&query=15.4994768,73.8231022",
+    "description": "Vegetarian-only restaurant in Panaji / Municipal Market.",
+    "source_url": "https://www.district.in/dining/goa/navtara-veg-restaurant-panaji",
+    "source_updated_at": "2026-10-21",
+    "dietary_sources": [
+      "https://navtara.in/",
+      "https://navtara.in/about-us/"
+    ]
+  },
+  {
+    "id": "goa-cafe-tato-patto",
+    "name": "Cafe Tato - Since 1913",
+    "area": "Patto / Panaji",
+    "city": "Goa",
+    "latitude": 15.493886,
+    "longitude": 73.8358837,
+    "address": "1/280/1, Plot 8, Shop G9, Gera Imperium, EDC Complex, Panaji, Goa",
+    "c": [
+      "North Indian",
+      "South Indian",
+      "Goan",
+      "Street Food"
+    ],
+    "p": "500_1000",
+    "displayPrice": "₹600 for two",
+    "rating": 4.1,
+    "review_count": 190,
+    "ratingSource": "District",
+    "t": [
+      "Restaurant"
+    ],
+    "a": [],
+    "o": [],
+    "dietaryOptions": [
+      "vegetarian",
+      "pure_veg"
+    ],
+    "emoji": "🍽️",
+    "maps": "https://www.google.com/maps/search/?api=1&query=15.493886,73.8358837",
+    "description": "Vegetarian-only restaurant in Patto / Panaji.",
+    "source_url": "https://www.district.in/dining/goa/cafe-tato-since-1913-panaji",
+    "source_updated_at": "2026-10-21",
+    "dietary_sources": [
+      "https://www.swiggy.com/restaurants/central-goa/panjim/cafe-tato-483519/dineout"
     ]
   }
 ];

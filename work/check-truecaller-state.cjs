@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
-const {transformSync}=require('../mobile/node_modules/esbuild');
+const {stripTypeScriptTypes}=require('node:module');
 const pair=crypto.generateKeyPairSync('rsa',{modulusLength:2048}),publicKey=pair.publicKey.export({format:'jwk'});
 const hash=value=>crypto.createHash('sha256').update(value).digest('hex');
 publicKey.kid=hash(publicKey.n).slice(0,24);
@@ -13,7 +13,9 @@ const context=vm.createContext({exports:{},module:{exports:{}},require:name=>{as
   assert.equal(options.headers.Authorization,'Bearer managed-server-secret');assert.equal(options.redirect,'error');
   return new Response(JSON.stringify(upstreamFailure?{privateDiagnostic:'must-not-leak'}:{allowed:true}),{status:upstreamFailure?500:200})}
 });
-vm.runInContext(transformSync(source,{loader:'ts',format:'cjs',target:'es2022'}).code,context);
+const importedKey="import publicKey from './public-key.json' with { type: 'json' };";
+assert.ok(source.startsWith(importedKey));
+vm.runInContext(stripTypeScriptTypes(source).replace(importedKey,"const publicKey=require('./public-key.json');"),context);
 function request(body,claims={},header={}){
  const now=Math.floor(Date.now()/1000);
  const encoded=[{alg:'RS256',kid:publicKey.kid,...header},{iss:'https://palateo.in/api/truecaller',aud:'palateo-truecaller-flow',iat:now,exp:now+20,bodyHash:hash(body),...claims}]

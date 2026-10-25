@@ -28,6 +28,9 @@ assert.equal(tasteModelAdjustment({id:'generic',c:['Restaurant'],t:['Restaurant'
 assert.deepEqual(tasteFeatures({c:['Restaurant'],t:['Restaurant','Food court']}),[]);
 assert.ok(tasteFeatures({...italian,t:['pizza']}).includes('tag:pizza'),'Keep meaningful food tags');
 const supported=tasteModelAdjustment(candidate);
+assert.equal(tasteModelAdjustment({id:'price-only',c:['Japanese'],a:['formal'],p:italian.p,s:italian.s}),0,'Shared price and spice alone must not imply shared taste');
+const fitted=getTasteModel();
+assert.equal(tasteModelAdjustment(candidate,{weights:fitted.weights,samples:[...fitted.samples,{features:['price:'+italian.p,'spice:'+italian.s]}]}),supported,'Shared price and spice alone must not inflate confidence');
 state.feedback.b='like';
 assert.equal(tasteModelAdjustment(candidate),supported,'Unrelated ratings must not inflate confidence in this recommendation');
 state.feedback={a:'like',b:'dislike'};

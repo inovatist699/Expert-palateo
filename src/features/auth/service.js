@@ -72,3 +72,6 @@ const {error}=await supabaseClient.auth.signOut();if(error)throw error;
 useAccount(null);state.backendConnected=false;persist();updateMode();requireAuthGate('You’ve signed out. Sign in again to use Palateo.');
 }catch(error){console.warn('sign out',error);toast('Could not reach Palateo right now. Try signing out again.')}
 }
+async function verifyWithTruecaller(){
+ throw new Error('Truecaller sign-in is unavailable. Please sign in with email.');
+}

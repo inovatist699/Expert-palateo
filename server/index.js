@@ -10,6 +10,7 @@ import catalogRouter from './routes/catalog.js';
 import waitlistRouter from './routes/waitlist.js';
 import paloRouter from './routes/palo.js';
 import searchRouter from './routes/search.js';
+import truecallerRouter from './routes/truecaller.js';
 
 dotenv.config();
 
@@ -45,6 +46,10 @@ app.get('/health', async (req, res) => {
     timestamp: new Date().toISOString()
   });
 });
+
+// Truecaller Mobile Verification API
+app.use('/api/auth/truecaller', express.json(), truecallerRouter);
+app.use('/api/user/truecaller', express.json(), truecallerRouter);
 
 // IMPORTANT (Better Auth): Mount Better Auth handler BEFORE any JSON body parser
 // In Express v5, wildcard parameters require the splat syntax (*splat)

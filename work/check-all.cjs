@@ -11,6 +11,7 @@ const scripts = [
   'check-diet-distance.cjs',
   'check-taste-model.cjs',
   'check-ml-ranking.cjs',
+  'check-ranking-precision.cjs',
   'check-dish-calibration.cjs',
   'check-venue-details.cjs',
   'check-native-navigation.cjs',
@@ -18,6 +19,7 @@ const scripts = [
   'check-palo-pet.cjs',
   'check-omniroute-palo.cjs',
   'check-better-auth-railway.cjs',
+  'check-truecaller-sdk.cjs',
   'check-release.cjs'
 ];
 

@@ -102,6 +102,7 @@
     "legal/delete-account/index.html": "delete-account/index.html",
     "pages/support/index.html": "support/index.html",
     "shared/ui/studio-screens.js": "app/studio-screens.js",
-    "styles/studio.css": "app/studio.css"
+    "styles/studio.css": "app/studio.css",
+    "server/api/truecaller.js": "api/truecaller.js"
   }
 }

@@ -1,0 +1,84 @@
+{
+  "reviewed_at": "2026-10-21",
+  "catalogue_counts": {
+    "Kochi": {
+      "before": 14,
+      "after": 16,
+      "pure_veg": 2
+    },
+    "Goa": {
+      "before": 15,
+      "after": 17,
+      "pure_veg": 2
+    }
+  },
+  "added_records": [
+    {
+      "id": "koc-brindhavan-palarivattom",
+      "name": "Brindhavan Veg Restaurant",
+      "city": "Kochi",
+      "area": "Palarivattom",
+      "address": "32/2352-A-16, Near Kalavath Tower, Civil Line Road, Palarivattom, Kochi",
+      "latitude": 10.00322957,
+      "longitude": 76.30704643,
+      "rating": 4.3,
+      "review_count": 773,
+      "displayPrice": "₹300 for two",
+      "metadata_source": "https://www.district.in/dining/kochi/brindhavan-veg-restaurant-palarivattom",
+      "dietary_sources": [
+        "https://brindhavan.in/",
+        "https://brindhavan.in/contact-us/"
+      ]
+    },
+    {
+      "id": "koc-gokul-oottupura-kadavanthra",
+      "name": "Gokul Oottupura",
+      "city": "Kochi",
+      "area": "Kadavanthra",
+      "address": "54/3177, 37/434 A, Near Akshya Hospital, Kaloor - Kadavanthara Road, Kadavanthra, Kochi",
+      "latitude": 9.9693096059,
+      "longitude": 76.299254559,
+      "rating": 4,
+      "review_count": 218,
+      "displayPrice": "₹300 for two",
+      "metadata_source": "https://www.district.in/dining/kochi/gokul-oottupura-kadavanthra",
+      "dietary_sources": [
+        "https://gokuloottupura.in/pure-veg-dining-in-kochi-why-gokul-oottupura-leads-the-way/",
+        "https://gokuloottupura.in/outlets/"
+      ]
+    },
+    {
+      "id": "goa-navtara-panaji",
+      "name": "Navtara Veg Restaurant",
+      "city": "Goa",
+      "area": "Panaji / Municipal Market",
+      "address": "Ground Floor, Municipal Market Area, Tiswadi, Panaji, Goa",
+      "latitude": 15.4994768,
+      "longitude": 73.8231022,
+      "rating": 4,
+      "review_count": 1022,
+      "displayPrice": "₹1000 for two",
+      "metadata_source": "https://www.district.in/dining/goa/navtara-veg-restaurant-panaji",
+      "dietary_sources": [
+        "https://navtara.in/",
+        "https://navtara.in/about-us/"
+      ]
+    },
+    {
+      "id": "goa-cafe-tato-patto",
+      "name": "Cafe Tato - Since 1913",
+      "city": "Goa",
+      "area": "Patto / Panaji",
+      "address": "1/280/1, Plot 8, Shop G9, Gera Imperium, EDC Complex, Panaji, Goa",
+      "latitude": 15.493886,
+      "longitude": 73.8358837,
+      "rating": 4.1,
+      "review_count": 190,
+      "displayPrice": "₹600 for two",
+      "metadata_source": "https://www.district.in/dining/goa/cafe-tato-since-1913-panaji",
+      "dietary_sources": [
+        "https://www.swiggy.com/restaurants/central-goa/panjim/cafe-tato-483519/dineout"
+      ]
+    }
+  ]
+}

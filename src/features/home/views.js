@@ -9,6 +9,7 @@ if(homeCuisine!=='all'){
     if(homeCuisine==='Saved') return state.saves.includes(r.id);
     const pool=[...(r.c||[]),...(r.t||[])].map(x=>String(x).toLowerCase());
     if(homeCuisine==='Cafe')return pool.some(x=>x.includes('cafe')||x.includes('coffee'));
+    if(homeCuisine==='Late night cafe')return isLateNightCafe(r);
     if(homeCuisine==='Dessert')return pool.some(x=>x.includes('dessert')||x.includes('ice cream')||x.includes('gelato')||x.includes('kulfi')||x.includes('bakery')||x.includes('sweet'));
     if(homeCuisine==='Gujarati')return pool.some(x=>x.includes('gujarati')||x.includes('thali')||x.includes('kathiyawadi'));
     if(homeCuisine==='Italian')return pool.some(x=>x.includes('italian')||x.includes('pizza')||x.includes('pasta'));
@@ -29,6 +30,7 @@ const viewTabs=`<div class="viewSwitcher" role="group" aria-label="Choose recomm
 const filterPills=`<div class="filterChips homeFilterChips" role="group" aria-label="Filter recommendations by category">
 <button type="button" class="filterChip ${homeCuisine==='all'?'active':''}" aria-pressed="${homeCuisine==='all'}" data-action="home-cuisine" data-cuisine="all">All places</button>
 <button type="button" class="filterChip ${homeCuisine==='Cafe'?'active':''}" aria-pressed="${homeCuisine==='Cafe'}" data-action="home-cuisine" data-cuisine="Cafe">Cafés</button>
+<button type="button" class="filterChip ${homeCuisine==='Late night cafe'?'active':''}" aria-pressed="${homeCuisine==='Late night cafe'}" data-action="home-cuisine" data-cuisine="Late night cafe">Late night cafés</button>
 <button type="button" class="filterChip ${homeCuisine==='Dessert'?'active':''}" aria-pressed="${homeCuisine==='Dessert'}" data-action="home-cuisine" data-cuisine="Dessert">Desserts</button>
 <button type="button" class="filterChip ${homeCuisine==='Gujarati'?'active':''}" aria-pressed="${homeCuisine==='Gujarati'}" data-action="home-cuisine" data-cuisine="Gujarati">Regional</button>
 <button type="button" class="filterChip ${homeCuisine==='Italian'?'active':''}" aria-pressed="${homeCuisine==='Italian'}" data-action="home-cuisine" data-cuisine="Italian">Italian</button>

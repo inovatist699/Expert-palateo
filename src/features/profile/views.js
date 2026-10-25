@@ -1,3 +1,39 @@
+function renderCollaborativeTasteCard(){
+ if(typeof depictCollaborativeTaste!=='function')return '';
+ const dep=depictCollaborativeTaste();
+ const twins=dep.allTwins.slice(0,3);
+ return `<div class="card appleGlassCard collaborativeProfileCard">
+   <div class="collabCardHead">
+     <div>
+       <span class="collabBadge">👥 COLLABORATIVE TASTE AI</span>
+       <h3>${esc(dep.personaTitle)}</h3>
+       <p class="collabSummary">${esc(dep.communitySummary)}</p>
+     </div>
+     <span class="collabScoreBadge">ϟ ${dep.consensusScore}% Consensus</span>
+   </div>
+   <div class="collabTwinList">
+     ${twins.map(t=>`<div class="collabTwinItem">
+       <span class="collabAvatar">${esc(t.avatar)}</span>
+       <div class="collabTwinMeta">
+         <div class="collabTwinTitle">
+           <strong>${esc(t.name)}</strong>
+           <span class="twinMatchVal">ϟ ${t.dynamicMatch}% Twin</span>
+         </div>
+         <p class="collabTwinReason">${esc(t.twinReason)}</p>
+       </div>
+     </div>`).join('')}
+   </div>
+   ${dep.predictedLoves.length?`
+     <div class="collabPredictionsBox">
+       <span class="collabPredHeading">Predicted from your taste twins:</span>
+       <div class="collabPredPills">
+         ${dep.predictedLoves.map(p=>`<span class="collabPredPill">★ ${esc(p.name)} <small>(loved by ${p.twins[0]})</small></span>`).join('')}
+       </div>
+     </div>
+   `:''}
+ </div>`;
+}
+
 function renderPassedPlaces(){
  const passed=Object.entries(state.feedback||{}).filter(([,value])=>value==='dislike').map(([id])=>activeRestaurant(id)).filter(Boolean);
  return `<details class="card appleGlassCard"><summary data-passed-summary>Passed places (${passed.length})</summary><p class="feedNote">These places are hidden from recommendations. Show one again to undo its pass and update your learned tastes.</p>${passed.map(r=>`<div class="row"><span>${esc(r.name)} · ${esc(r.city||cityName())}</span><button type="button" class="btn secondary" data-rest-action="dislike" data-rest-id="${esc(r.id)}" aria-label="Undo pass for ${esc(r.name)}">Show again</button></div>`).join('')||'<p class="feedNote">No passed places.</p>'}</details>`;
@@ -145,6 +181,7 @@ function profile(){
           ${Object.entries(ai.signals||{}).sort((x,y)=>y[1]-x[1]).slice(0,8).map(x=>`<div class="row"><strong>${esc(x[0])}</strong><span>${x[1]>0?'+':''}${Number(x[1]).toFixed(1)}</span></div>`).join('')||'<p class="feedNote">Rate a few places to start building your taste profile.</p>'}
         </details>
         <p class="feedNote">Taste matches are estimated from your sensory preferences, dish feedback, and verified receipts.</p>
+        ${renderCollaborativeTasteCard()}
 
 
     <!-- 6. Quick Dish Calibration Deck (From TasteStudioScreen.kt) -->

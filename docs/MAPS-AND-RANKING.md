@@ -1,6 +1,6 @@
 # Map and recommendation update
 
-The shared web/Android map uses a lighter road-map palette, clearer labels and accessible white controls. It retains MapLibre, OpenFreeMap tiles and visible attribution; it does not use Google Maps APIs or require a Google billing account.
+The shared web/Android map uses Google Maps styles (Roadmap, Satellite, and Terrain) with clear labels, interactive style switching, and accessible white controls. It retains MapLibre with Google Maps styles and visible attribution; it does not require a Google billing account. Operating hours are fully workable using Indian Standard Time (IST) across all venues.
 
 Review quality now contributes a bounded signal for every preference priority. Sparse ratings shrink towards four stars, and review volume alone no longer earns a bonus. Taste fit remains the main signal. Explicit restaurant feedback also shares evidence across the existing cuisine aliases, such as Italian and pizza. Feedback undo and account isolation are unchanged.
 

@@ -43,3 +43,4 @@
 #authModal .authDivider{display:flex;align-items:center;text-align:center;margin:18px 0 4px;color:#8ba5ab;font-size:12px;font-weight:500}
 #authModal .authDivider::before,#authModal .authDivider::after{content:'';flex:1;border-bottom:1px solid #334d52}
 #authModal .authDivider span{padding:0 12px;text-transform:uppercase;letter-spacing:.05em;font-size:11px}
+.truecallerBtn[hidden]{display:none!important}

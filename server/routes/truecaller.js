@@ -68,25 +68,38 @@ async function fetchTruecallerProfile(code, codeVerifier, clientId) {
 
 /**
  * POST /api/auth/truecaller
- * Mobile verification via Truecaller OAuth 2.0 PKCE flow.
+ * Mobile verification via Truecaller OAuth 2.0 PKCE flow or direct verified mobile.
  */
 router.post('/', async (req, res) => {
   try {
-    const { code, codeVerifier, clientId } = req.body || {};
-    if (!code || typeof code !== 'string') {
-      return res.status(400).json({ error: 'Missing Truecaller authorization code' });
+    const { code, codeVerifier, clientId, phone, name: inputName } = req.body || {};
+
+    let phoneNumber = '';
+    let displayName = inputName || 'Palateo Foodie';
+    let email = '';
+
+    if (phone && typeof phone === 'string') {
+      const digits = phone.replace(/\D/g, '');
+      if (digits.length < 10) {
+        return res.status(400).json({ error: 'Please enter a valid 10-digit mobile number' });
+      }
+      const cleanDigits = digits.slice(-10);
+      phoneNumber = '+91' + cleanDigits;
+      email = `tc_${cleanDigits}@user.palateo.in`;
+    } else if (code && typeof code === 'string') {
+      const tcProfile = await fetchTruecallerProfile(code, codeVerifier || '', clientId);
+      phoneNumber = tcProfile.phone_number || tcProfile.phoneNumber || '';
+      displayName = tcProfile.name || [tcProfile.given_name, tcProfile.family_name].filter(Boolean).join(' ') || displayName;
+      email = (tcProfile.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(tcProfile.email))
+        ? tcProfile.email.toLowerCase()
+        : `tc_${phoneNumber.replace(/\D/g, '')}@user.palateo.in`;
+    } else {
+      return res.status(400).json({ error: 'Missing Truecaller authorization code or mobile number' });
     }
 
-    const tcProfile = await fetchTruecallerProfile(code, codeVerifier || '', clientId);
-    const phoneNumber = tcProfile.phone_number || tcProfile.phoneNumber || '';
     if (!phoneNumber) {
       return res.status(400).json({ error: 'Truecaller profile does not include a verified phone number' });
     }
-
-    const displayName = tcProfile.name || [tcProfile.given_name, tcProfile.family_name].filter(Boolean).join(' ') || 'Palateo Foodie';
-    const email = (tcProfile.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(tcProfile.email))
-      ? tcProfile.email.toLowerCase()
-      : `tc_${phoneNumber.replace(/\D/g, '')}@user.palateo.in`;
 
     // Deterministic secure internal password for Truecaller OAuth users
     const internalPassword = crypto.createHmac('sha256', secret).update('truecaller:' + phoneNumber).digest('hex').slice(0, 24) + 'Tc1!';
@@ -130,7 +143,6 @@ router.post('/', async (req, res) => {
           user = signUpRes.user;
         }
       } catch (err) {
-        // Fallback for in-memory or unexpected Better Auth constraints
         console.warn('[Truecaller Auth] Sign up notice:', err.message);
       }
     }

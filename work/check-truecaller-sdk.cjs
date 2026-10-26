@@ -130,7 +130,7 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
     logEvent: async () => {},
     updateMode: () => {},
     closeAuth: () => {},
-    document: { getElementById: () => ({ classList: { remove: () => {} } }) },
+    document: { getElementById: () => ({ classList: { remove: () => {} }, remove: () => {} }) },
     toast: () => {},
     go: () => {},
     onboard: () => {}

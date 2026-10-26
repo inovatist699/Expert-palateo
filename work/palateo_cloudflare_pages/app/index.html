@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="manifest" href="/manifest.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Palateo">
 <meta property="og:locale" content="en_IN">
@@ -95,6 +96,32 @@
 #authModal .authDivider{display:flex;align-items:center;text-align:center;margin:18px 0 4px;color:#8ba5ab;font-size:12px;font-weight:500}
 #authModal .authDivider::before,#authModal .authDivider::after{content:'';flex:1;border-bottom:1px solid #334d52}
 #authModal .authDivider span{padding:0 12px;text-transform:uppercase;letter-spacing:.05em;font-size:11px}
+
+/* Truecaller Mobile Verification Modal */
+#mobileVerifyModal{position:fixed;inset:0;background:#0d181af2;z-index:105;display:grid;place-items:center;padding:24px;overflow:auto;color-scheme:dark;backdrop-filter:blur(10px)}
+#mobileVerifyModal .tcVerifyCard{position:relative;width:min(440px,100%);background:#1a2f33;color:#f7fbfc;border:1px solid #638e97;border-radius:16px;padding:28px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+#mobileVerifyModal .modalClose{color:#edf7fa;position:absolute;right:12px;top:12px;min-width:44px;min-height:44px;background:none;border:none;font-size:24px;cursor:pointer;display:grid;place-items:center}
+#mobileVerifyModal .tcBadge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,135,255,.16);color:#66b5ff;border:1px solid rgba(0,135,255,.35);padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px}
+#mobileVerifyModal .tcBadge .tcPhoneIcon{font-size:13px}
+#mobileVerifyModal h2{color:#f7fbfc;font-size:24px;font-weight:800;letter-spacing:-.02em;margin:0 0 8px;line-height:1.2}
+#mobileVerifyModal p#tcVerifyDesc{color:#bed6db;font-size:13px;line-height:1.5;margin:0 0 18px}
+#mobileVerifyModal .fieldLabel{display:block;font-size:13px;font-weight:600;color:#bed6db;margin-bottom:6px}
+#mobileVerifyModal .tcPhoneInputRow{display:flex;align-items:center;gap:8px}
+#mobileVerifyModal .tcCountryPrefix{display:inline-flex;align-items:center;height:50px;padding:0 12px;background:#142427;border:1px solid #638e97;border-radius:10px;color:#edf7fa;font-size:15px;font-weight:700;white-space:nowrap}
+#mobileVerifyModal .tcPhoneField{flex:1;min-height:50px;margin:0;padding:12px 14px;border:1px solid #638e97;border-radius:10px;background:#142427;color:#f7fbfc;font-size:16px;font-weight:600;letter-spacing:.03em;outline-offset:3px}
+#mobileVerifyModal .tcPhoneField:focus{border-color:#0087ff;outline:2px solid #0087ff}
+#mobileVerifyModal .tcPhoneField::placeholder{color:#648991;font-weight:400}
+#mobileVerifyModal .status{color:#c3e7f1;min-height:20px;margin-top:10px;font-size:12px;line-height:1.5}
+#mobileVerifyModal .status[data-kind=error]{color:#ffc4b8!important}
+#mobileVerifyModal .status[data-kind=loading]{color:#66b5ff!important}
+#mobileVerifyModal .modalActions{display:flex;gap:10px;margin-top:16px}
+#mobileVerifyModal .btn{min-height:48px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer}
+#mobileVerifyModal .btn.secondary{background:#20373b;color:#f7fbfc;border:1px solid #638e97}
+#mobileVerifyModal .btn.tcSubmitBtn{background:#0087ff;color:#ffffff;border:1px solid #0077e6;box-shadow:0 4px 14px rgba(0,135,255,.25)}
+#mobileVerifyModal .btn.tcSubmitBtn:hover{background:#0075e0}
+#mobileVerifyModal .btn:disabled{opacity:.7;cursor:wait}
+#mobileVerifyModal .tcTrustNote{font-size:11px!important;color:#8ba5ab!important;text-align:center;margin:16px 0 0!important;line-height:1.4}
+@media(max-width:480px){#mobileVerifyModal{padding:12px}#mobileVerifyModal .tcVerifyCard{padding:22px}}
 </style>
 <style id="palateo-polish">
 :root{--bg:#fcfaf6;--card:#ffffff;--ink:#141c18;--muted:#53645b;--line:#e5ede6;--green:#0b593f;--green2:#137d57;--soft:#eaf5ee;--gold:#d48316;--danger:#b83846;--coral:#e24f33;--shadow:0 8px 24px rgba(13,43,30,.06)}
@@ -37197,7 +37224,7 @@ const cityCenters={
   Chandigarh:[30.7333,76.7794]
 };
 let state=load(), page='home', supabaseClient=null, discoverCuisine='all', discoverQuery='', homeCuisine='all', homeLimit=12, searchEventTimer=null, authRequired=true, homeView='map', selectedPinId=null, streetPlaces=[];
-let selectedCity=state.selectedCity&&cityCenters[state.selectedCity]?state.selectedCity:'Ahmedabad',userLocation=null,pureVegOnly=false,discoverSort='match';
+let selectedCity=state.selectedCity&&cityCenters[state.selectedCity]?state.selectedCity:'Ahmedabad',userLocation=null,pureVegOnly=false,discoverSort='match',currentCraving='all';
 const LEGAL_VERSION='2026-10-14';
 let legalConsentBusy=false;
 function consentControls(){return '<div class="consentNotice"><p>Your account details, taste choices and activity are used for sign-in, personalised recommendations and cloud sync. Location is optional. Read the policies before choosing.</p><label class="consentChoice"><input id="legalTerms" type="checkbox" required><span>I agree to the <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.</span></label><label class="consentChoice"><input id="legalPrivacy" type="checkbox" required><span>I consent to the account, recommendation and sync processing described in the <a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. I can withdraw this consent by contacting Palateo.</span></label><p class="consentHelp">If you are under 18, use Palateo with a parent or guardian’s knowledge and permission.</p></div>'}
@@ -37407,11 +37434,19 @@ function pick(k,v,i){
 function nextQ(i){i<questions.length-1?onboard(i+1):finishV5()}
 function resetTaste(){state.onboarded=false;state.retakeInProgress=true;state.answers={};state.onboardingStep=0;persist();onboard(0)}
 
-const cuisineAliases={Gujarati:['gujarati','kathiyawadi'],Punjabi:['punjabi','north indian','mughlai'],Italian:['italian','pizza','pasta','continental','european'],Cafe:['cafe','coffee','bakery'],SouthIndian:['south indian','dosa','idli'],Asian:['asian','chinese','thai','pan asian'],Dessert:['dessert','desserts','ice cream','gelato','bakery','sweets']};
+const cuisineAliases={
+ Gujarati:['gujarati','kathiyawadi','thali','farsan','khaman','dhokla','undhiyu','surti','dal baati','gujarati snacks'],
+ Punjabi:['punjabi','north indian','mughlai','tandoori','biryani','curry','dal makhani','chole bhature','kebab','modern indian','desi ghee','bhojanalay','butter chicken','paneer'],
+ Italian:['italian','pizza','pasta','woodfired pizza','risotto','pizzeria','trattoria','continental','european'],
+ Cafe:['cafe','coffee','artisan coffee','bakery','tea','chai','roasters','bakes','croissant','patisserie','espresso','brews','cold brew','brunch','sandwiches','waffles','toast'],
+ SouthIndian:['south indian','dosa','idli','vada','uttapam','filter coffee','chettinad','kerala','coastal','udupi','appam','podi'],
+ Asian:['asian','chinese','thai','pan asian','pan-asian','dim sum','sushi','japanese','ramen','bao','oriental','noodles','wok','korean','dumplings','momos'],
+ Dessert:['dessert','desserts','ice cream','gelato','bakery','sweets','kulfi','falooda','jalebi','pastry','cakes','churros','chocolate']
+};
 const cuisineLabels={Gujarati:'Gujarati',Punjabi:'North Indian',Italian:'Italian & continental',Cafe:'Café & coffee',SouthIndian:'South Indian',Asian:'Asian',Dessert:'Desserts'};
 const calibrationDishes=[
  {id:'gujarati-thali',name:'Gujarati thali',description:'A little sweet, a little savoury, with a variety of textures.',cuisine:'Gujarati',tags:['thali','regional'],diet:'veg',spice:'mild',sensoryFocus:'Sweet-Savory Balance & Texture Variety',sensoryTags:['Sweet-Savory','Multi-Texture','Mild Savory'],tasteHighlight:'Sweet-savory harmony',sensoryProfile:{umami:0.75,acidity:0.65,sweet:0.7,salt:0.65,bitter:0.2,heat:0.2,crisp:0.65,rich:0.6,aromatic:0.8,ferment:0.5}},
- {id:'dhokla',name:'Dhokla',description:'Soft, tangy steamed bites with a light tempering.',cuisine:'Gujarati',tags:['snacks','street food'],diet:'veg',spice:'mild',sensoryFocus:'OTOP1 Citrus Acidity & Steamed Sponginess',sensoryTags:['Spongy Steamed','Mustard Tempering','Tangy Fresh'],tasteHighlight:'Tangy mustard & curry leaf tempering',sensoryProfile:{umami:0.5,acidity:0.75,sweet:0.45,salt:0.6,bitter:0.2,heat:0.3,crisp:0.2,rich:0.3,aromatic:0.85,ferment:0.7}},
+ {id:'dhokla',name:'Dhokla',description:'Soft, tangy steamed bites with a light tempering.',cuisine:'Gujarati',tags:['dhokla','khaman','snacks','street food'],diet:'veg',spice:'mild',sensoryFocus:'OTOP1 Citrus Acidity & Steamed Sponginess',sensoryTags:['Spongy Steamed','Mustard Tempering','Tangy Fresh'],tasteHighlight:'Tangy mustard & curry leaf tempering',sensoryProfile:{umami:0.5,acidity:0.75,sweet:0.45,salt:0.6,bitter:0.2,heat:0.3,crisp:0.2,rich:0.3,aromatic:0.85,ferment:0.7}},
  {id:'paneer-tikka',name:'Paneer tikka',description:'Smoky grilled paneer with a warming masala.',cuisine:'Punjabi',tags:['paneer','tandoor','grill'],diet:'veg',spice:'medium',sensoryFocus:'Smoky Maillard Char & Warming Masala',sensoryTags:['Tandoor Smoke','Medium Warmth','Charred Paneer'],tasteHighlight:'Smoky charred tandoor',sensoryProfile:{umami:0.85,acidity:0.45,sweet:0.2,salt:0.7,bitter:0.25,heat:0.6,crisp:0.4,rich:0.75,aromatic:0.9,ferment:0.3}},
  {id:'butter-chicken',name:'Butter chicken',description:'A rich, creamy tomato curry with gently spiced chicken.',cuisine:'Punjabi',tags:['chicken','curry'],diet:'nonveg',spice:'mild',sensoryFocus:'Velvety Lipid Emulsion & Tomato Glutamate',sensoryTags:['Lipid Emulsion','Tomato Umami','Mild Heat'],tasteHighlight:'Creamy tomato-butter emulsion',sensoryProfile:{umami:0.95,acidity:0.45,sweet:0.4,salt:0.7,bitter:0.1,heat:0.3,crisp:0.15,rich:0.95,aromatic:0.85,ferment:0.4}},
  {id:'masala-dosa',name:'Masala dosa',description:'A crisp fermented crepe, potato filling and savoury accompaniments.',cuisine:'SouthIndian',tags:['dosa','breakfast'],diet:'veg',spice:'medium',sensoryFocus:'Lactic Fermentation Tang & Acoustic Crisp Crepe',sensoryTags:['Acoustic Crisp','Lactic Ferment','Spiced Potato'],tasteHighlight:'Golden crisp fermented crepe',sensoryProfile:{umami:0.75,acidity:0.65,sweet:0.2,salt:0.7,bitter:0.15,heat:0.55,crisp:0.95,rich:0.5,aromatic:0.85,ferment:0.85}},
@@ -37430,7 +37465,23 @@ const calibrationDishes=[
  {id:'paneer-kurchan',name:'Smoky paneer khurchan',description:'Wok-tossed charred paneer batons with bell peppers and roasted cumin.',cuisine:'Punjabi',tags:['paneer','kadai','tandoor'],diet:'veg',spice:'medium',sensoryFocus:'Maillard Char & Capsicum Sweet-Savory',sensoryTags:['Smoky Char','Medium Spice','Savory Paneer'],tasteHighlight:'Smoky charred bell peppers',sensoryProfile:{umami:0.85,acidity:0.35,sweet:0.25,salt:0.7,bitter:0.2,heat:0.55,crisp:0.4,rich:0.75,aromatic:0.85,ferment:0.35}},
  {id:'dim-sum-truffle',name:'Crystal wild mushroom dumplings',description:'Translucent steamed dumplings packed with wild shiitake and truffle oil.',cuisine:'Asian',tags:['dumplings','dim sum','asian'],diet:'veg',spice:'mild',sensoryFocus:'Concentrated Shiitake Glutamate & Delicate Steam',sensoryTags:['High Umami','Truffle Glaze','Delicate Texture'],tasteHighlight:'Wild shiitake & aromatic truffle',sensoryProfile:{umami:0.92,acidity:0.25,sweet:0.15,salt:0.6,bitter:0.15,heat:0.1,crisp:0.15,rich:0.55,aromatic:0.9,ferment:0.6}},
  {id:'matcha-gelato',name:'Artisanal Uji matcha gelato',description:'Slow-churned gelato with stone-ground green tea and pleasant bittersweet depth.',cuisine:'Dessert',tags:['ice cream','gelato','dessert'],diet:'veg',spice:'mild',sensoryFocus:'TAS2R Pleasant Bittersweet & Lipid Viscosity',sensoryTags:['Bittersweet Depth','Velvety Churn','Green Tea'],tasteHighlight:'Stone-ground matcha & cream',sensoryProfile:{umami:0.4,acidity:0.1,sweet:0.6,salt:0.15,bitter:0.7,heat:0.0,crisp:0.1,rich:0.85,aromatic:0.8,ferment:0.25}},
- {id:'cold-brew-tonic',name:'Citrus cold brew tonic',description:'Steeped single-origin coffee poured over sparkling tonic and fresh orange peel.',cuisine:'Cafe',tags:['coffee','cold brew','beverage'],diet:'veg',spice:'mild',sensoryFocus:'Quinine Bitterness & Bright Citrus Sparkle',sensoryTags:['Sparkling Acidity','Citrus Zest','Coffee Roast'],tasteHighlight:'Effervescent citrus & dark roast',sensoryProfile:{umami:0.2,acidity:0.8,sweet:0.35,salt:0.1,bitter:0.75,heat:0.0,crisp:0.6,rich:0.1,aromatic:0.9,ferment:0.4}}
+ {id:'cold-brew-tonic',name:'Citrus cold brew tonic',description:'Steeped single-origin coffee poured over sparkling tonic and fresh orange peel.',cuisine:'Cafe',tags:['coffee','cold brew','beverage'],diet:'veg',spice:'mild',sensoryFocus:'Quinine Bitterness & Bright Citrus Sparkle',sensoryTags:['Sparkling Acidity','Citrus Zest','Coffee Roast'],tasteHighlight:'Effervescent citrus & dark roast',sensoryProfile:{umami:0.2,acidity:0.8,sweet:0.35,salt:0.1,bitter:0.75,heat:0.0,crisp:0.6,rich:0.1,aromatic:0.9,ferment:0.4}},
+ {id:'dal-makhani',name:'Dal makhani & garlic naan',description:'Slow-simmered black lentils with churned butter and garlic naan.',cuisine:'Punjabi',tags:['dal makhani','makhani','black dal','naan'],diet:'veg',spice:'mild',sensoryFocus:'Slow-Simmered Lentil Umami & Churned White Butter',sensoryTags:['Smoked Lentils','Velvety Butter','Garlic Crisp'],tasteHighlight:'Slow-simmered black lentils & churned butter',sensoryProfile:{umami:0.92,acidity:0.35,sweet:0.25,salt:0.7,bitter:0.15,heat:0.3,crisp:0.35,rich:0.95,aromatic:0.9,ferment:0.35}},
+ {id:'chole-bhature',name:'Delhi style chole bhature',description:'Dark spiced chickpeas with pickled amla and hot puffed bhatura.',cuisine:'Punjabi',tags:['chole bhature','bhature','chole','chana bhatura'],diet:'veg',spice:'hot',sensoryFocus:'Dark Spiced Pungency & Puffed Acoustic Bhatura',sensoryTags:['Anardana Tang','Puffed Bhatura','Robust Masala'],tasteHighlight:'Dark spiced chickpea curry & fluffy bhatura',sensoryProfile:{umami:0.88,acidity:0.65,sweet:0.15,salt:0.75,bitter:0.2,heat:0.75,crisp:0.7,rich:0.8,aromatic:0.92,ferment:0.4}},
+ {id:'surti-undhiyu',name:'Surti undhiyu & puri',description:'Slow-cooked winter roots, green garlic and fenugreek muthiya.',cuisine:'Gujarati',tags:['undhiyu','muthiya','surti'],diet:'veg',spice:'medium',sensoryFocus:'Green Garlic Allium & Fenugreek Muthiya Harmony',sensoryTags:['Fenugreek Muthiya','Winter Greens','Roasted Sesame'],tasteHighlight:'Slow-cooked winter root vegetables & muthiya',sensoryProfile:{umami:0.82,acidity:0.45,sweet:0.55,salt:0.65,bitter:0.3,heat:0.45,crisp:0.4,rich:0.7,aromatic:0.92,ferment:0.35}},
+ {id:'dal-baati',name:'Dal baati churma',description:'Woodsmoke ghee-soaked baked wheat baatis with spiced panchmel lentils.',cuisine:'Gujarati',tags:['dal baati','baati','churma','rajasthani'],diet:'veg',spice:'medium',sensoryFocus:'Woodsmoke Desi Ghee & Baked Wheat Crust',sensoryTags:['Desi Ghee Crunch','Panchmel Dal','Cardamom Churma'],tasteHighlight:'Ghee-soaked baked baati & spiced lentils',sensoryProfile:{umami:0.85,acidity:0.4,sweet:0.4,salt:0.7,bitter:0.15,heat:0.5,crisp:0.85,rich:0.95,aromatic:0.88,ferment:0.3}},
+ {id:'ghee-podi-dosa',name:'Ghee podi roast dosa',description:'Crisp golden crepe roasted in pure ghee and spiced gunpowder podi.',cuisine:'SouthIndian',tags:['podi','gunpowder','ghee roast','ghee dosa'],diet:'veg',spice:'medium',sensoryFocus:'Roasted Gunpowder Pyrazines & Golden Ghee Crunch',sensoryTags:['Gunpowder Podi','Golden Ghee','Crisp Ferment'],tasteHighlight:'Nutty roasted podi spice & clarified butter',sensoryProfile:{umami:0.82,acidity:0.55,sweet:0.15,salt:0.75,bitter:0.2,heat:0.6,crisp:0.98,rich:0.8,aromatic:0.92,ferment:0.85}},
+ {id:'medu-vada',name:'Medu vada & coconut chutney',description:'Acoustic crisp lentil fritters with tempered coconut chutney.',cuisine:'SouthIndian',tags:['vada','medu vada','sambar vada'],diet:'veg',spice:'medium',sensoryFocus:'Acoustic Exterior Shear & Aerated Lentil Core',sensoryTags:['Golden Crunch','Fluffy Aeration','Tempered Coconut'],tasteHighlight:'Crackling crisp crust & tempered coconut chutney',sensoryProfile:{umami:0.75,acidity:0.45,sweet:0.15,salt:0.7,bitter:0.1,heat:0.45,crisp:0.95,rich:0.65,aromatic:0.85,ferment:0.6}},
+ {id:'burrata-bruschetta',name:'Burrata & heirloom tomato bruschetta',description:'Creamy burrata, ripe heirloom tomatoes and aged balsamic glaze.',cuisine:'Italian',tags:['burrata','bruschetta','mozzarella','crostini'],diet:'veg',spice:'mild',sensoryFocus:'Pugliese Cream Emulsion & Aged Balsamic Acidity',sensoryTags:['Fresh Burrata','Aged Acetic Glaze','Charred Sourdough'],tasteHighlight:'Creamy fresh burrata & sweet balsamic reduction',sensoryProfile:{umami:0.82,acidity:0.75,sweet:0.35,salt:0.6,bitter:0.15,heat:0.1,crisp:0.85,rich:0.88,aromatic:0.9,ferment:0.5}},
+ {id:'creamy-pesto-gnocchi',name:'Genovese pesto gnocchi',description:'Potato gnocchi tossed in fresh sweet basil pine nut pesto.',cuisine:'Italian',tags:['gnocchi','pesto','basil pesto'],diet:'veg',spice:'mild',sensoryFocus:'Fresh Basil Terpenes & Pillowy Potato Shear',sensoryTags:['Sweet Genovese Basil','Toasted Pine Nuts','Parmesan Glutamate'],tasteHighlight:'Fragrant sweet basil pesto & soft gnocchi',sensoryProfile:{umami:0.86,acidity:0.35,sweet:0.2,salt:0.7,bitter:0.25,heat:0.15,crisp:0.25,rich:0.85,aromatic:0.98,ferment:0.45}},
+ {id:'avocado-sushi-roll',name:'Truffle edamame sushi roll',description:'Short-grain seasoned rice, mineral nori, edamame and black truffle glaze.',cuisine:'Asian',tags:['sushi','maki','edamame','japanese'],diet:'veg',spice:'mild',sensoryFocus:'Seasoned Grain Glutamate & Mineral Nori Umami',sensoryTags:['Vinegared Rice','Earthy Truffle Glaze','Velvety Avocado'],tasteHighlight:'Seasoned sushi rice, nori & creamy avocado',sensoryProfile:{umami:0.88,acidity:0.6,sweet:0.25,salt:0.6,bitter:0.1,heat:0.1,crisp:0.4,rich:0.6,aromatic:0.85,ferment:0.7}},
+ {id:'rich-miso-ramen',name:'Smoky miso mushroom ramen',description:'Springy ramen noodles in rich fermented koji miso broth.',cuisine:'Asian',tags:['ramen','miso','ramen noodles'],diet:'veg',spice:'medium',sensoryFocus:'Complex Koji Fermentation & Elastic Springy Wheat',sensoryTags:['Deep Miso Broth','Tensile Noodle','Charred Scallion'],tasteHighlight:'Rich fermented koji miso broth & springy ramen',sensoryProfile:{umami:0.96,acidity:0.35,sweet:0.25,salt:0.8,bitter:0.2,heat:0.5,crisp:0.4,rich:0.82,aromatic:0.95,ferment:0.95}},
+ {id:'avocado-sourdough',name:'Crushed avocado & dukkah toast',description:'Creamy Hass avocado with Egyptian spiced seed crunch on wild sourdough.',cuisine:'Cafe',tags:['avocado','dukkah','avocado toast'],diet:'veg',spice:'mild',sensoryFocus:'Lipid Viscosity & Roasted Seed Egyptian Spices',sensoryTags:['Hass Avocado','Egyptian Dukkah','Craggy Sourdough'],tasteHighlight:'Creamy Hass avocado & toasted seed crunch',sensoryProfile:{umami:0.65,acidity:0.6,sweet:0.15,salt:0.6,bitter:0.2,heat:0.25,crisp:0.92,rich:0.78,aromatic:0.9,ferment:0.7}},
+ {id:'belgian-waffle',name:'Warm Belgian waffle & dark chocolate',description:'Golden pearl sugar waffle with molten dark chocolate ganache.',cuisine:'Cafe',tags:['waffle','waffles','belgian waffle'],diet:'veg',spice:'mild',sensoryFocus:'Caramelized Pearl Sugar & Rich Cocoa Bittersweet',sensoryTags:['Pearl Sugar Crunch','Molten Ganache','Buttery Batter'],tasteHighlight:'Golden caramelized pearl sugar & dark ganache',sensoryProfile:{umami:0.35,acidity:0.15,sweet:0.85,salt:0.35,bitter:0.45,heat:0.0,crisp:0.85,rich:0.88,aromatic:0.85,ferment:0.3}},
+ {id:'kesar-kulfi-falooda',name:'Kesar pista kulfi falooda',description:'Slow-churned rabdi kulfi with saffron, pistachios and rose syrup.',cuisine:'Dessert',tags:['kulfi','falooda','rabdi'],diet:'veg',spice:'mild',sensoryFocus:'Condensed Milk Viscosity & Retronasal Rose Saffron',sensoryTags:['Slow-Churned Rabdi','Kashmiri Saffron','Pistachio Crunch'],tasteHighlight:'Dense saffron rabdi kulfi & fragrant rose syrup',sensoryProfile:{umami:0.4,acidity:0.1,sweet:0.92,salt:0.2,bitter:0.1,heat:0.0,crisp:0.35,rich:0.96,aromatic:0.95,ferment:0.2}},
+ {id:'bombay-pav-bhaji',name:'Buttery Bombay pav bhaji',description:'Spiced mashed vegetable butter masala with sizzling butter-toasted pav.',cuisine:'Punjabi',tags:['pav bhaji','bhaji','tawa pulav','pav'],diet:'veg',spice:'hot',sensoryFocus:'Caramelized Allium Masala & Melted Amul Butter',sensoryTags:['Sizzling Pav Butter','Mashed Spiced Bhaji','Sharp Onion Crunch'],tasteHighlight:'Sizzling spiced butter bhaji & toasted pav',sensoryProfile:{umami:0.88,acidity:0.65,sweet:0.2,salt:0.8,bitter:0.15,heat:0.8,crisp:0.4,rich:0.92,aromatic:0.95,ferment:0.35}},
+ {id:'dahi-puri-chaat',name:'Crisp dahi sev puri',description:'Crisp hollow puris filled with spiced potatoes, chilled sweet curd and tamarind.',cuisine:'Gujarati',tags:['chaat','dahi puri','pani puri','sev puri','bhel'],diet:'veg',spice:'medium',sensoryFocus:'Multi-Phase Acoustic Shatter & Chilled Acid-Sweet',sensoryTags:['Acoustic Shatter','Velvety Chilled Curd','Tamarind Reduction'],tasteHighlight:'Crisp hollow puri burst, sweet curd & tangy tamarind',sensoryProfile:{umami:0.7,acidity:0.8,sweet:0.65,salt:0.7,bitter:0.1,heat:0.45,crisp:0.98,rich:0.65,aromatic:0.88,ferment:0.65}},
+ {id:'chipotle-bean-tacos',name:'Smoky chipotle & charred corn tacos',description:'Warm corn tortillas with smoky black beans, roasted corn and lime crema.',cuisine:'Italian',tags:['tacos','taco','nachos','mexican'],diet:'veg',spice:'medium',sensoryFocus:'Woodsmoke Chipotle Capsaicin & Charred Sweet Corn',sensoryTags:['Nixtamal Corn Tortilla','Smoky Chipotle','Zesty Lime Slaw'],tasteHighlight:'Charred corn salsa, smoky beans & lime crema',sensoryProfile:{umami:0.78,acidity:0.75,sweet:0.35,salt:0.7,bitter:0.15,heat:0.65,crisp:0.6,rich:0.6,aromatic:0.92,ferment:0.45}}
 ];
 let dishCalibrationIndex=0,lastCalibratedDish=null,dishRevision=0,dishSyncStatus='',detailRestaurantId=null,detailOrigin='home',detailTrigger=null;
 function normalizeDishFeedback(value){
@@ -37519,19 +37570,75 @@ function dishSensoryMatchScore(d,r){
 }
 function venueCalibratedDishes(r){
  const available=availableCalibrationDishes();
- let matching=available.filter(d=>dishAffinity(r,d)>0);
- if(!matching.length){
-  const rCuisines=[...(r.c||[]),...(r.t||[])].map(x=>String(x).toLowerCase());
-  matching=available.filter(d=>{
-   const aliases=cuisineAliases[d.cuisine]||[String(d.cuisine).toLowerCase()];
-   return aliases.some(a=>rCuisines.some(rc=>rc.includes(a)));
-  });
+ const isVegVenue = (typeof isPureVegRestaurant === 'function' && isPureVegRestaurant(r)) || r.isPureVeg === true || (typeof restaurantDietaryEvidence === 'function' && restaurantDietaryEvidence(r).pureVegetarian);
+ const dietEligible = available.filter(d => isVegVenue ? (d.diet === 'veg') : true);
+ 
+ const rWords = [r.name, ...(r.c||[]), ...(r.t||[]), ...(r.review_insights||[]), r.description, r.why].filter(Boolean).map(x => String(x).toLowerCase());
+ const rText = rWords.join(' ');
+ const genericTags = new Set(['street food', 'fast food', 'snacks', 'breakfast', 'regional', 'comfort', 'desserts', 'curry']);
+ const primaryCuisine = (r.c && r.c.length) ? String(r.c[0]).toLowerCase() : '';
+
+ const scored = dietEligible.map(d => {
+  let score = 0;
+  const affinity = dishAffinity(r, d);
+  const specificMatches = d.tags.filter(t => !genericTags.has(t) && (rWords.some(w => w.includes(t)) || rText.includes(t)));
+  const genericMatches = d.tags.filter(t => genericTags.has(t) && (rWords.some(w => w.includes(t)) || rText.includes(t)));
+  const fitsCuisine = cuisineFits(r, d.cuisine);
+  const fitsPrimary = primaryCuisine && cuisineFits({ c: [primaryCuisine] }, d.cuisine);
+  
+  // Specific dish item match in venue metadata (e.g. pav bhaji, tacos, sushi, ramen, pizza, dosa)
+  if (specificMatches.length > 0) {
+   score += 120 + specificMatches.length * 30;
+  }
+  
+  if (affinity >= 1) score += 60;
+  else if (affinity > 0) score += 20;
+  
+  if (fitsPrimary) score += 40;
+  else if (fitsCuisine) score += 15;
+
+  if (genericMatches.length > 0 && fitsCuisine) score += 10;
+  
+  return { dish: d, score, affinity, specificMatches: specificMatches.length, fitsPrimary: !!fitsPrimary };
+ });
+ 
+ let matching = scored.filter(x => x.score >= 20).sort((a, b) => b.score - a.score).map(x => x.dish);
+ 
+ if (!matching.length) {
+  const isCafe = rWords.some(w => /cafe|coffee|bakery|roast|tea|beverage/i.test(w));
+  const isSweet = rWords.some(w => /dessert|ice cream|gelato|kulfi|sweet/i.test(w));
+  const isItalian = rWords.some(w => /italian|pizza|pasta/i.test(w));
+  const isAsian = rWords.some(w => /asian|chinese|thai|japanese|sushi|dim sum|noodle/i.test(w));
+  const isSouth = rWords.some(w => /south indian|dosa|idli/i.test(w));
+  const isStreet = rWords.some(w => /chaat|street|pav bhaji|fast food|snack/i.test(w));
+  
+  if (isCafe) matching = dietEligible.filter(d => d.cuisine === 'Cafe');
+  else if (isSweet) matching = dietEligible.filter(d => d.cuisine === 'Dessert');
+  else if (isItalian) matching = dietEligible.filter(d => d.cuisine === 'Italian');
+  else if (isAsian) matching = dietEligible.filter(d => d.cuisine === 'Asian');
+  else if (isSouth) matching = dietEligible.filter(d => d.cuisine === 'SouthIndian');
+  else if (isStreet) matching = dietEligible.filter(d => d.tags.some(t => ['chaat', 'pav bhaji'].includes(t)));
+  else matching = dietEligible.filter(d => cuisineFits(r, d.cuisine));
  }
- if(!matching.length)matching=available.slice(0,3);
- return matching.map(d=>({
+ 
+ if (!matching.length) matching = dietEligible.slice(0, 3);
+ 
+ return matching.map(d => ({
   ...d,
-  matchScore:dishSensoryMatchScore(d,r)
- })).sort((a,b)=>b.matchScore-a.matchScore);
+  matchScore: dishSensoryMatchScore(d, r)
+ })).sort((a, b) => {
+  const aSpecific = a.tags.filter(t => !genericTags.has(t) && (rWords.some(w => w.includes(t)) || rText.includes(t))).length;
+  const bSpecific = b.tags.filter(t => !genericTags.has(t) && (rWords.some(w => w.includes(t)) || rText.includes(t))).length;
+  if (aSpecific !== bSpecific) return bSpecific - aSpecific;
+  
+  const aPrimary = primaryCuisine && cuisineFits({ c: [primaryCuisine] }, a.cuisine);
+  const bPrimary = primaryCuisine && cuisineFits({ c: [primaryCuisine] }, b.cuisine);
+  if (aPrimary !== bPrimary) return aPrimary ? -1 : 1;
+
+  const affA = dishAffinity(r, a), affB = dishAffinity(r, b);
+  if (affA !== affB) return affB - affA;
+  return b.matchScore - a.matchScore;
+ });
 }
 function dishSensoryWhy(d,r){
  const {vector:u}=computeUserTasteVector();
@@ -37568,8 +37675,8 @@ function renderCalibrationDeck(){
  const dishes=availableCalibrationDishes(),d=dishes[dishCalibrationIndex%dishes.length],feedback=normalizeDishFeedback(state.dishFeedback),rated=dishes.filter(x=>feedback[x.id]);
  const example=ranked().find(r=>dishAffinity(r,d)>0);
  const {vector:u}=computeUserTasteVector();
- const genomeSnippet=rated.length?`<div class="calibratedGenomeSummary" aria-label="Calibrated taste genome"><div class="genomeHeader"><span>🧬 YOUR ACTIVE PALATE GENOME</span><small>${rated.length} signals calibrated</small></div><div class="genomeMeters"><div class="genomeMeterItem"><span>Umami Depth</span><b>${Math.round(u.umami*100)}%</b><div class="miniBar"><i style="width:${Math.round(u.umami*100)}%"></i></div></div><div class="genomeMeterItem"><span>Texture Crunch</span><b>${Math.round(u.crisp*100)}%</b><div class="miniBar"><i style="width:${Math.round(u.crisp*100)}%"></i></div></div><div class="genomeMeterItem"><span>Acidity Zest</span><b>${Math.round(u.acidity*100)}%</b><div class="miniBar"><i style="width:${Math.round(u.acidity*100)}%"></i></div></div><div class="genomeMeterItem"><span>Spice Tolerance</span><b>${Math.round(u.heat*100)}%</b><div class="miniBar"><i style="width:${Math.round(u.heat*100)}%"></i></div></div></div></div>`:'';
- return `<section class="dishCalibration" aria-labelledby="calibrationTitle"><h2 id="calibrationTitle">Live dish calibration <span class="betaBadge">BETA</span></h2><p class="studioHint">Love a flavour or give it a pass. Your estimated matches update immediately.</p><div class="calibrationDish"><span class="calibrationProgress">${rated.length} active preferences · ${dishCalibrationIndex%dishes.length+1} of ${dishes.length}</span><h3 id="calibrationDishName" tabindex="-1">${esc(d.name)}</h3>${d.sensoryFocus?`<div class="calibrationSensoryBadge"><span class="probeIcon">🔬</span> <span>${esc(d.sensoryFocus)}</span></div>`:''}${(d.sensoryTags||[]).length?`<div class="calibrationSensoryTags">${d.sensoryTags.map(t=>`<span class="sensoryTag">${esc(t)}</span>`).join('')}</div>`:''}<p>${esc(d.description)}</p>${dishButtons(d,'deck')}<button type="button" class="dishSkip" data-action="dish-next">Skip this dish →</button></div>${genomeSnippet}${lastCalibratedDish&&feedback[lastCalibratedDish]?`<button type="button" class="linkBtn" data-action="dish-undo" data-dish-id="${lastCalibratedDish}">Undo last dish feedback</button>`:''}<button type="button" class="dishRetry" data-action="dish-retry" ${state.unsyncedDishes?'':'hidden'}>Retry cloud sync</button><p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Dish choices sync with your account.')}</p>${example?`<div class="calibrationMatch"><span>${esc(example.name)}</span><strong>${example.score}% estimated match</strong></div>`:''}<p class="studioHint">These are taste examples, not confirmed menu items. Venue matches use the cuisine and tags we have.</p>${rated.length?`<details class="ratedDishes"><summary>Edit ${rated.length} rated dishes</summary>${rated.map(x=>`<div class="ratedDish"><strong>${esc(x.name)}</strong>${dishButtons(x,'edit')}</div>`).join('')}</details>`:''}</section>`;
+ const genomeSnippet=rated.length?`<div class="calibratedGenomeSummary" aria-label="Calibrated taste genome"><div class="genomeHeader"><span>🧬 YOUR ACTIVE PALATE GENOME</span><small>${rated.length} signals calibrated</small></div><div class="genomeMeters"><div class="genomeMeterItem"><span>Umami Depth</span><b>${Math.round(u.umami*100)}%</b><div class="miniBar"><i style="width:${Math.round(u.umami*100)}%"></i></div></div><div class="genomeMeterItem"><span>Texture Crunch</span><b>${Math.round(u.crisp*100)}%</b><div class="miniBar"><i style="width:${Math.round(u.crisp*100)}%"></i></div></div><div class="genomeMeterItem"><span>Acidity Zest</span><b>${Math.round(u.acidity*100)}%</b><div class="miniBar"><i style="width:${Math.round(u.acidity*100)}%"></i></div></div><div class="genomeMeterItem"><span>Spice Heat</span><b>${Math.round(u.heat*100)}%</b><div class="miniBar"><i style="width:${Math.round(u.heat*100)}%"></i></div></div><div class="genomeMeterItem"><span>Lipid Richness</span><b>${Math.round(u.rich*100)}%</b><div class="miniBar"><i style="width:${Math.round(u.rich*100)}%"></i></div></div><div class="genomeMeterItem"><span>Aromatics</span><b>${Math.round(u.aromatic*100)}%</b><div class="miniBar"><i style="width:${Math.round(u.aromatic*100)}%"></i></div></div></div></div>`:'';
+ return `<section class="dishCalibration" aria-labelledby="calibrationTitle"><h2 id="calibrationTitle">Live dish calibration <span class="betaBadge">BETA</span></h2><p class="studioHint">Love a flavour or give it a pass. Your estimated matches update immediately.</p><div class="calibrationDish"><span class="calibrationProgress">${rated.length} active preferences · ${dishCalibrationIndex%dishes.length+1} of ${dishes.length}</span><h3 id="calibrationDishName" tabindex="-1">${esc(d.name)}</h3>${d.tasteHighlight?`<div class="dishHighlightPill" style="display:inline-block;margin:4px 0 6px;">✨ ${esc(d.tasteHighlight)}</div>`:''}${d.sensoryFocus?`<div class="calibrationSensoryBadge"><span class="probeIcon">🔬</span> <span>${esc(d.sensoryFocus)}</span></div>`:''}${(d.sensoryTags||[]).length?`<div class="calibrationSensoryTags">${d.sensoryTags.map(t=>`<span class="sensoryTag">${esc(t)}</span>`).join('')}</div>`:''}<p>${esc(d.description)}</p>${dishButtons(d,'deck')}<button type="button" class="dishSkip" data-action="dish-next">Skip this dish →</button></div>${genomeSnippet}${lastCalibratedDish&&feedback[lastCalibratedDish]?`<button type="button" class="linkBtn" data-action="dish-undo" data-dish-id="${lastCalibratedDish}">Undo last dish feedback</button>`:''}<button type="button" class="dishRetry" data-action="dish-retry" ${state.unsyncedDishes?'':'hidden'}>Retry cloud sync</button><p class="calibrationStatus" role="status">${esc(dishSyncStatus||'Dish choices sync with your account.')}</p>${example?`<div class="calibrationMatch"><span>${esc(example.name)}</span><strong>${example.score}% estimated match</strong></div>`:''}<p class="studioHint">These are taste examples, not confirmed menu items. Venue matches use the cuisine and tags we have.</p>${rated.length?`<details class="ratedDishes"><summary>Edit ${rated.length} rated dishes</summary>${rated.map(x=>`<div class="ratedDish"><strong>${esc(x.name)}</strong>${dishButtons(x,'edit')}</div>`).join('')}</details>`:''}</section>`;
 }
 async function rateDish(id,value,source='detail'){
  if(!hasTasteProfile()||!calibrationDishes.some(d=>d.id===id)||!['love','pass'].includes(value))return;
@@ -37607,7 +37714,6 @@ async function retryDishSync(){
  });
  return feedbackSyncQueue;
 }
-
 // Per-account ranking model, rebuilt from explicit feedback so edits and undo are exact.
 let tasteModelCache=null;
 function tasteFeatures(r){
@@ -37685,6 +37791,268 @@ function tasteModelAdjustment(r,model){
  const probability=1/(1+Math.exp(-Math.max(-20,Math.min(20,score))));
  return Math.max(-6,Math.min(6,(probability-.5)*12*Math.min(1,support/3)));
 }
+
+/* --- INSTAGRAM REELS-STYLE TWO-TOWER TASTE EMBEDDINGS & REAL-TIME CRAVING ENGINE --- */
+
+function triggerHaptic(type='light'){
+ try{
+  if(typeof navigator!=='undefined'&&navigator.vibrate){
+   if(type==='light')navigator.vibrate(12);
+   else if(type==='medium')navigator.vibrate(24);
+   else if(type==='success')navigator.vibrate([15,35,20]);
+  }
+ }catch(e){}
+}
+
+const cravingCategories = {
+ spicy: {
+  id: 'spicy',
+  icon: '🔥',
+  label: 'Fiery & Spicy',
+  terms: ['spicy','schezwan','chilli','pepper','tandoor','wok','hot','chettinad','andhra','kolhapuri','mirchi','tikka','peri peri','wasabi','curry','sizzler'],
+  boostAxes: { heat: 0.45, aromatic: 0.25 },
+  boost: 14
+ },
+ comfort: {
+  id: 'comfort',
+  icon: '🍕',
+  label: 'Comfort & Cheesy',
+  terms: ['pizza','burger','pasta','cheese','cheesy','fries','loaded','garlic bread','risotto','lasagna','quesadilla','nachos','creamy','sandwich'],
+  boostAxes: { rich: 0.4, crisp: 0.25, umami: 0.2 },
+  boost: 14
+ },
+ cafe: {
+  id: 'cafe',
+  icon: '☕',
+  label: 'Cozy Cafe & Coffee',
+  terms: ['cafe','coffee','espresso','cappuccino','brew','sourdough','toast','latte','croissant','matcha','bakery','patisserie','pancakes','avocado'],
+  boostAxes: { aromatic: 0.35, acidity: 0.2, crisp: 0.2 },
+  boost: 14
+ },
+ asian: {
+  id: 'asian',
+  icon: '🍜',
+  label: 'Bowls & Asian',
+  terms: ['asian','ramen','dim sum','dumpling','sushi','noodles','bao','thai','wok','pan-asian','oriental','miso','tempura','korean','japanese'],
+  boostAxes: { umami: 0.45, ferment: 0.3, salt: 0.15 },
+  boost: 14
+ },
+ clean: {
+  id: 'clean',
+  icon: '🥗',
+  label: 'Fresh & Clean',
+  terms: ['healthy','salad','smoothie','bowl','organic','fresh','green','cold-pressed','superfood','low calorie','grilled','clean','falafel','mezze'],
+  boostAxes: { acidity: 0.3, crisp: 0.35 },
+  boost: 14
+ },
+ regional: {
+  id: 'regional',
+  icon: '🥘',
+  label: 'Authentic Regional',
+  terms: ['thali','gujarati','kathiyawadi','rajasthani','marwadi','punjabi','dal makhani','dhokli','dosa','south indian','biryani','heritage','mughlai','bhojanalay'],
+  boostAxes: { aromatic: 0.35, ferment: 0.25, rich: 0.2 },
+  boost: 14
+ },
+ sweet: {
+  id: 'sweet',
+  icon: '🍰',
+  label: 'Sweet Tooth',
+  terms: ['dessert','ice cream','gelato','kulfi','chocolate','waffle','brownie','cake','pastry','sweet','fondant','shake','sundae','falooda'],
+  boostAxes: { sweet: 0.55, rich: 0.3 },
+  boost: 14
+ },
+ street: {
+  id: 'street',
+  icon: '⚡',
+  label: 'Chaat & Street Food',
+  terms: ['chaat','pani puri','dahi puri','sev puri','pav bhaji','vada pav','kathi roll','roll','street food','farsan','bhelpuri','samosa'],
+  boostAxes: { crisp: 0.4, acidity: 0.3, heat: 0.2 },
+  boost: 14
+ }
+};
+
+function getTimeOfDayContext(){
+ let hour;
+ try {
+  const now = new Date();
+  const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+  const ist = new Date(utc + (3600000 * 5.5));
+  hour = ist.getHours() + ist.getMinutes() / 60;
+ } catch(e){
+  const now = new Date();
+  hour = now.getHours() + now.getMinutes() / 60;
+ }
+ if (hour >= 6.0 && hour < 11.5) {
+  return {
+   period: 'breakfast',
+   label: 'Morning Fuel & Breakfast',
+   prompt: 'Filter coffee, crispy dosas, bakeries & fresh morning eats',
+   icon: '🌅',
+   timeStr: Math.floor(hour) + ':' + (Math.round((hour % 1) * 60) < 10 ? '0' : '') + Math.round((hour % 1) * 60) + ' AM'
+  };
+ } else if (hour >= 11.5 && hour < 15.5) {
+  return {
+   period: 'lunch',
+   label: 'Lunch Hours',
+   prompt: 'Hearty regional thalis, executive bowls & wholesome lunch spots',
+   icon: '☀️',
+   timeStr: (Math.floor(hour) > 12 ? Math.floor(hour) - 12 : Math.floor(hour)) + ':' + (Math.round((hour % 1) * 60) < 10 ? '0' : '') + Math.round((hour % 1) * 60) + ' PM'
+  };
+ } else if (hour >= 15.5 && hour < 19.0) {
+  return {
+   period: 'tea',
+   label: 'High Tea & Evening Bites',
+   prompt: 'Chai, artisanal cafes, patisseries & street chaat',
+   icon: '☕',
+   timeStr: (Math.floor(hour) - 12) + ':' + (Math.round((hour % 1) * 60) < 10 ? '0' : '') + Math.round((hour % 1) * 60) + ' PM'
+  };
+ } else if (hour >= 19.0 && hour < 23.5) {
+  return {
+   period: 'dinner',
+   label: 'Evening Dining & Dinner',
+   prompt: 'Fine dining bistros, woodfired ovens, tandoor grills & dates',
+   icon: '🌙',
+   timeStr: (Math.floor(hour) - 12) + ':' + (Math.round((hour % 1) * 60) < 10 ? '0' : '') + Math.round((hour % 1) * 60) + ' PM'
+  };
+ } else {
+  return {
+   period: 'latenight',
+   label: 'Midnight Cravings & Desserts',
+   prompt: 'Late-night kitchens, artisanal ice creams & 24/7 night spots',
+   icon: '✨',
+   timeStr: (hour < 12 ? Math.floor(hour) : Math.floor(hour) - 12) + ':' + (Math.round((hour % 1) * 60) < 10 ? '0' : '') + Math.round((hour % 1) * 60) + (hour < 12 ? ' AM' : ' PM')
+  };
+ }
+}
+
+function getRealTimeCravingBoost(r, cravingKey){
+ if(!cravingKey||cravingKey==='all')return {fits:false,boost:0,label:''};
+ const def=cravingCategories[cravingKey];
+ if(!def)return {fits:false,boost:0,label:''};
+ const corpus=[...(r.c||[]),...(r.t||[]),...(r.o||[]),...(r.a||[]),r.name||'',r.description||'',r.why||''].join(' ').toLowerCase();
+ const matches=def.terms.some(t=>corpus.includes(t));
+ if(!matches)return {fits:false,boost:0,label:def.label};
+ return {fits:true,boost:def.boost,label:def.label,icon:def.icon};
+}
+
+function computeVenueLatentVector(r){
+ const vec = new Float64Array(16);
+ const calDishes = typeof venueCalibratedDishes === 'function' ? venueCalibratedDishes(r) : [];
+ if(calDishes.length && calDishes[0].sensoryProfile){
+  const sp = calDishes[0].sensoryProfile;
+  vec[0] = sp.umami ?? 0.5;
+  vec[1] = sp.acidity ?? 0.5;
+  vec[2] = sp.sweet ?? 0.45;
+  vec[3] = sp.salt ?? 0.5;
+  vec[4] = sp.bitter ?? 0.3;
+  vec[5] = sp.heat ?? 0.4;
+  vec[6] = sp.crisp ?? 0.55;
+  vec[7] = sp.rich ?? 0.5;
+  vec[8] = sp.aromatic ?? 0.6;
+  vec[9] = sp.ferment ?? 0.35;
+ } else {
+  vec[0] = 0.5; vec[1] = 0.5; vec[2] = 0.45; vec[3] = 0.5; vec[4] = 0.3;
+  vec[5] = r.s === 'hot' ? 0.85 : r.s === 'mild' ? 0.2 : 0.5;
+  vec[6] = 0.55; vec[7] = 0.5; vec[8] = 0.6; vec[9] = 0.35;
+ }
+ vec[10] = r.s === 'hot' ? 0.9 : r.s === 'mild' ? 0.2 : 0.55;
+ vec[11] = r.p === '2000_plus' ? 0.95 : r.p === '1000_2000' ? 0.75 : r.p === '500_1000' ? 0.5 : 0.25;
+ const isVeg = typeof isPureVegRestaurant === 'function' ? isPureVegRestaurant(r) : false;
+ vec[12] = isVeg ? 1.0 : (r.dietaryOptions || []).includes('veg') ? 0.7 : 0.3;
+ const amb = (r.a || []).map(x => String(x).toLowerCase());
+ vec[13] = amb.some(x => ['quiet','cozy','calm','peaceful','intimate'].includes(x)) ? 0.85 : 0.25;
+ const occ = (r.o || []).map(x => String(x).toLowerCase());
+ vec[14] = occ.some(x => ['date','romantic','party'].includes(x)) ? 0.9 : 0.4;
+ const count = Number(r.review_count || 0);
+ vec[15] = Math.min(1.0, count / 500);
+
+ let norm = 0;
+ for(let i = 0; i < 16; i++) norm += vec[i] * vec[i];
+ norm = Math.sqrt(norm) || 1;
+ for(let i = 0; i < 16; i++) vec[i] /= norm;
+ return vec;
+}
+
+function computeUserPalateEmbedding(){
+ if(typeof computeUserTasteVector !== 'function') return null;
+ const { vector: u } = computeUserTasteVector();
+ const a = state.answers || {};
+ const vec = new Float64Array(16);
+ vec[0] = u.umami ?? 0.55;
+ vec[1] = u.acidity ?? 0.5;
+ vec[2] = u.sweet ?? 0.45;
+ vec[3] = u.salt ?? 0.55;
+ vec[4] = u.bitter ?? 0.3;
+ vec[5] = u.heat ?? 0.5;
+ vec[6] = u.crisp ?? 0.6;
+ vec[7] = u.rich ?? 0.55;
+ vec[8] = u.aromatic ?? 0.65;
+ vec[9] = u.ferment ?? 0.4;
+
+ vec[10] = a.spice === 'hot' ? 0.9 : a.spice === 'mild' ? 0.2 : 0.55;
+ vec[11] = a.budget === '2000_plus' ? 0.95 : a.budget === '1000_2000' ? 0.75 : a.budget === '500_1000' ? 0.5 : 0.25;
+ vec[12] = a.diet === 'veg' ? 1.0 : a.diet === 'eggetarian' ? 0.7 : 0.3;
+ const vibes = typeof preferredVibes === 'function' ? preferredVibes(a) : [];
+ vec[13] = vibes.includes('quiet') ? 0.85 : 0.25;
+ vec[14] = a.occasion === 'date' ? 0.9 : 0.4;
+ vec[15] = 0.5;
+
+ let norm = 0;
+ for(let i = 0; i < 16; i++) norm += vec[i] * vec[i];
+ norm = Math.sqrt(norm) || 1;
+ for(let i = 0; i < 16; i++) vec[i] /= norm;
+ return vec;
+}
+
+let cachedUserEmbedding = null;
+let cachedEmbeddingKey = '';
+
+function reelsTwoTowerTasteScore(r){
+ if(!state?.answers || Object.keys(state.answers).length === 0) return { delta: 0, reelMatchPct: 75 };
+ const key = JSON.stringify(state.answers) + '|' + JSON.stringify(state.dishFeedback||{});
+ if(!cachedUserEmbedding || cachedEmbeddingKey !== key){
+  cachedUserEmbedding = computeUserPalateEmbedding();
+  cachedEmbeddingKey = key;
+ }
+ if(!cachedUserEmbedding) return { delta: 0, reelMatchPct: 75 };
+ const v = computeVenueLatentVector(r);
+ let dot = 0;
+ for(let i = 0; i < 16; i++) dot += cachedUserEmbedding[i] * v[i];
+ const cosine = Math.max(0, Math.min(1, dot));
+ const reelMatchPct = Math.round(Math.min(99, Math.max(65, cosine * 100)));
+ const delta = Math.max(-1.2, Math.min(1.2, (cosine - 0.75) * 5));
+ return { delta, reelMatchPct };
+}
+
+function getTasteTwinLookalike(r){
+ if(typeof getRankedTasteTwins !== 'function') return null;
+ const twins = getRankedTasteTwins();
+ if(!twins || !twins.length) return null;
+ const top = twins[0];
+ if(!top || top.dynamicMatch < 84) return null;
+ const matchingDishId = (top.likes || []).find(id => {
+  const d = (typeof calibrationDishes !== 'undefined') ? calibrationDishes.find(x => x.id === id) : null;
+  return d && typeof dishAffinity === 'function' && dishAffinity(r, d) >= 1;
+ });
+ if(matchingDishId){
+  const d = calibrationDishes.find(x => x.id === matchingDishId);
+  return {
+   twinName: top.name,
+   matchPct: top.dynamicMatch,
+   dishName: d ? d.name : ''
+  };
+ }
+ return null;
+}
+
+function getBanditExplorationBonus(r){
+ const rating = Number(r.rating || 0);
+ const count = Number(r.review_count || 0);
+ if(rating >= 4.3 && count >= 15){
+  return Math.min(0.6, (rating - 4.2) * 0.8 * Math.min(1.0, count / 80));
+ }
+ return 0;
+}
 /* Preference fit plus bounded proximity, review evidence and reversible feedback. */
 function restaurantDietaryEvidence(r){
  const values=[...(Array.isArray(r.dietaryOptions)?r.dietaryOptions:[]),...(Array.isArray(r.dietary_options)?r.dietary_options:[]),...(r.t||[]),...(r.tags||[]),r.dietaryType,r.dietary_type].filter(value=>typeof value==='string').map(value=>value.toLowerCase().replace(/[^a-z]/g,''));
@@ -37708,10 +38076,20 @@ const cuisines=list(r.c||r.cuisines),ambience=list(r.a||r.ambience_tags),occasio
 const preferenceFactors=[];
 const addFactor=(label,weight,factor,matchLabel)=>{preferenceFactors.push({label,weight,factor});if(factor>0.45&&matchLabel)why.push(matchLabel);else if(factor<-.45)why.push(label+' differs from your preference')};
 const wordMatch=(values,terms)=>values.some(x=>terms.some(term=>x===term||x.includes(term)));
+let cuisineMismatchPenalty=0;
 if(preferredCuisines(a).length){
- const hit=preferredCuisines(a).some(key=>cuisineFits(r,key));
+ const userPrefCuisines=preferredCuisines(a);
+ const hit=userPrefCuisines.some(key=>cuisineFits(r,key));
+ const primaryCuisines=(r.c||[]).slice(0,2).map(x=>String(x).toLowerCase());
+ const primaryTags=(r.t||[]).slice(0,3).map(x=>String(x).toLowerCase());
+ const isPrimaryHit=userPrefCuisines.some(key=>{
+  const aliases=cuisineAliases[key]||[String(key).toLowerCase()];
+  return aliases.some(term=>primaryCuisines.some(c=>c.includes(term))||primaryTags.some(t=>t.includes(term)));
+ });
  const known=cuisines.some(x=>!['restaurant','fast food','food court'].includes(x));
- addFactor('Cuisine',a.priority==='food'?32:24,hit?1:known?-0.7:0,'One of your favourite cuisines');
+ const factor=isPrimaryHit?1:hit?0.7:known?-0.85:0;
+ addFactor('Cuisine',a.priority==='food'?32:24,factor,'One of your favourite cuisines');
+ if(!hit&&known)cuisineMismatchPenalty=10;
 }
 const budgetRanks={under_500:0,'500_1000':1,'1000_2000':2,'2000_plus':3};
 if(a.budget&&Object.hasOwn(budgetRanks,a.budget)){
@@ -37742,6 +38120,7 @@ if(a.priority==='value'){const factor=!Object.hasOwn(budgetRanks,r.p)?0:budgetRa
 const distanceKm=venueDistanceKm(r),travelRange=Number(a.distance);
 let totalWeight=preferenceFactors.reduce((sum,x)=>sum+x.weight,0),preferenceScore=totalWeight?preferenceFactors.reduce((sum,x)=>sum+x.factor*x.weight,0)/totalWeight:0;
 let s=55+preferenceScore*36;
+if(cuisineMismatchPenalty>0)s-=cuisineMismatchPenalty;
 // GPS enriches a match without changing the denominator of its taste score.
 if(distanceKm!==null){const proximity=Math.max(0,1-distanceKm/(Number.isFinite(travelRange)&&travelRange>0?travelRange:10));s+=3*proximity;addFactor('Distance',0,proximity,'Nearby · '+distanceKm.toFixed(1)+' km away')}
 /* Supported review quality is bounded and applies alongside every taste priority. */
@@ -37756,6 +38135,51 @@ const dishDelta=dishAdjustment(r);s+=dishDelta;
 const topCal=venueCalibratedDishes(r)[0];
 if(dishDelta>=1){why.unshift('Your dish preferences favour this cuisine');if(topCal&&topCal.matchScore>=88)why.unshift('Palate fit: '+dishSensoryWhy(topCal,r).replace(/^Calibrated for your love of /,''));}
 else if(dishDelta<=-1)why.push('Your dish passes lower this estimate');if(topCal)preferenceFactors.push({label:'Sensory Palate Fit',weight:0,factor:(topCal.matchScore-50)/50,matchLabel:topCal.matchScore+'% sensory fit ('+topCal.name+')'});if(typeof getRankedTasteTwins==='function'){const topTwin=getRankedTasteTwins()[0];if(topTwin&&topTwin.dynamicMatch>=88){const specificHit=topTwin.likes.some(id=>{const d=calibrationDishes.find(x=>x.id===id);return d&&dishAffinity(r,d)>=1;});if(specificHit&&dishDelta>=0){why.push('Taste twin pick · '+topTwin.name+' ('+topTwin.dynamicMatch+'% match)');}}}
+
+let rReelsMatchPct=null;
+if(typeof reelsTwoTowerTasteScore==='function'&&(typeof hasTasteProfile!=='function'||hasTasteProfile())){
+ const reelsMatch=reelsTwoTowerTasteScore(r);
+ if(reelsMatch&&reelsMatch.delta){
+  let rDelta=reelsMatch.delta;
+  if(s>93&&rDelta>0)rDelta=rDelta*Math.max(0,(96-s)/3);
+  s+=rDelta;
+  rReelsMatchPct=reelsMatch.reelMatchPct;
+  if(reelsMatch.reelMatchPct>=88&&!why.some(w=>w.includes('Palate fit'))){
+   why.push('🧬 '+reelsMatch.reelMatchPct+'% Latent Palate fit');
+  }
+ }
+}
+
+let rCravingFit=null;
+const activeCravingKey=(typeof currentCraving!=='undefined'&&currentCraving!=='all')?currentCraving:(state?.activeCraving&&state.activeCraving!=='all'?state.activeCraving:null);
+if(activeCravingKey&&typeof getRealTimeCravingBoost==='function'){
+ const cFit=getRealTimeCravingBoost(r,activeCravingKey);
+ if(cFit&&cFit.fits){
+  s+=cFit.boost;
+  rCravingFit=cFit;
+  why.unshift('⚡ Craving: '+cFit.label);
+ }
+}
+
+let rTasteTwinPick=null;
+if(typeof getTasteTwinLookalike==='function'&&(typeof hasTasteProfile!=='function'||hasTasteProfile())){
+ const twinPick=getTasteTwinLookalike(r);
+ if(twinPick){
+  rTasteTwinPick=twinPick;
+  s+=1.8;
+  why.push('🧬 '+twinPick.matchPct+'% Taste Twin pick ('+twinPick.twinName+')');
+ }
+}
+
+let rIsReelDiscovery=false;
+if(typeof getBanditExplorationBonus==='function'&&(typeof hasTasteProfile!=='function'||hasTasteProfile())){
+ const explore=getBanditExplorationBonus(r);
+ if(explore>0){
+  s+=explore;
+  rIsReelDiscovery=true;
+ }
+}
+
 const hasHours=!!(r.openTiming||r.hours||r.timing);
 if(hasHours&&typeof getVenueOpenStatus==='function'){
  const openInfo=getVenueOpenStatus(r);
@@ -37788,7 +38212,7 @@ if(f[r.id]==='visited'){s+=4;why.unshift('You visited this place')}
 if(dietConflict)s=Math.min(s,35);
 s=Math.max(1,Math.min(99,s));
 if(!why.length)why.push('Matches your overall palate');
-return {...r,distanceKm,description:r.description||(typeof r.why==='string'?r.why:''),rankScore:s,score:Math.round(s),why,matchBreakdown:preferenceFactors};
+return {...r,distanceKm,description:r.description||(typeof r.why==='string'?r.why:''),rankScore:s,score:Math.round(s),why,matchBreakdown:preferenceFactors,reelsMatchPct:rReelsMatchPct,cravingFit:rCravingFit,tasteTwinPick:rTasteTwinPick,isReelDiscovery:rIsReelDiscovery};
 }
 function applyDiversityReranking(candidates){
  if(!Array.isArray(candidates)||candidates.length<=2)return candidates;
@@ -37797,19 +38221,31 @@ function applyDiversityReranking(candidates){
  const selected=[];
  const unselected=pool.slice();
  selected.push(unselected.shift());
+ const getBrandKey=r=>String(r.name||'').replace(/\s*\([^)]*\)|\s*-\s*.*|\s*,\s*.*$/i,'').trim().toLowerCase().split(' ')[0];
  const getPrimaryCuisine=r=>{const c=r.c||r.cuisines;return (Array.isArray(c)&&c.length)?String(c[0]).toLowerCase().trim():''};
  const getPrimaryTags=r=>{const t=r.t||r.tags;return (Array.isArray(t)&&t.length)?t.slice(0,3).map(x=>String(x).toLowerCase().trim()):[]};
+ const userPrefs=(typeof preferredCuisines==='function'&&typeof state!=='undefined'&&state?.answers)?preferredCuisines(state.answers):[];
+ const hasPrefs=userPrefs.length>0;
+ const matchesPref=r=>hasPrefs?userPrefs.some(k=>cuisineFits(r,k)):true;
  while(unselected.length>0){
   const last1=selected[selected.length-1],last2=selected.length>=2?selected[selected.length-2]:null;
   let bestIdx=0,bestMmrScore=-Infinity;
+  const anyPrefLeft=hasPrefs&&unselected.some(u=>matchesPref(u));
   for(let i=0;i<unselected.length;i++){
-   const cand=unselected[i],candCuisine=getPrimaryCuisine(cand),candTags=getPrimaryTags(cand);
+   const cand=unselected[i],candCuisine=getPrimaryCuisine(cand),candTags=getPrimaryTags(cand),candBrand=getBrandKey(cand);
    let penalty=0;
-   if(candCuisine&&candCuisine===getPrimaryCuisine(last1))penalty+=3.5;
-   else if(last2&&candCuisine&&candCuisine===getPrimaryCuisine(last2))penalty+=1.5;
-   const last1Tags=getPrimaryTags(last1),sharedTags=candTags.filter(tag=>last1Tags.includes(tag));
-   if(sharedTags.length>=2)penalty+=1.5;
-   const effectivePenalty=Math.min(penalty,4.5);
+   // Deduplicate same-brand chains in top recommendations
+   if(candBrand.length>=3&&selected.some(s=>getBrandKey(s)===candBrand))penalty+=6.0;
+   // Never allow diversity penalty to push unrelated cuisine ahead of user's preferred cuisines
+   if(hasPrefs&&!matchesPref(cand)&&anyPrefLeft){
+    penalty+=12.0;
+   }else{
+    if(candCuisine&&candCuisine===getPrimaryCuisine(last1))penalty+=hasPrefs?1.5:3.5;
+    else if(last2&&candCuisine&&candCuisine===getPrimaryCuisine(last2))penalty+=hasPrefs?.8:1.5;
+    const last1Tags=getPrimaryTags(last1),sharedTags=candTags.filter(tag=>last1Tags.includes(tag));
+    if(sharedTags.length>=2)penalty+=1.2;
+   }
+   const effectivePenalty=Math.min(penalty,14.0);
    const mmrScore=(cand.rankScore??cand.score)-effectivePenalty;
    if(mmrScore>bestMmrScore){bestMmrScore=mmrScore;bestIdx=i}
   }
@@ -37857,14 +38293,18 @@ function studioRestaurantCard(r,rank=0){
  const openInfo=getVenueOpenStatus(r);
  const calDishes=venueCalibratedDishes(r).slice(0,2);
  const dishesSnippet=calDishes.length?`<div class="cardCalibratedDishesRow"><span class="cardDishLabel">Palate match:</span>${calDishes.map(d=>`<button type="button" class="cardDishPill" data-action="open-place" data-rest-id="${id}" title="${esc(d.name)}">${esc(d.name)} <span class="cardDishMatch">ϟ ${d.matchScore}%</span></button>`).join('')}</div>`:'';
+ const sensorySnippet=calDishes.length&&(calDishes[0].sensoryTags||[]).length?`<div class="cardSensoryRow">${calDishes[0].sensoryTags.slice(0,3).map(t=>`<span class="cardSensoryTag">${esc(t)}</span>`).join('')}</div>`:'';
  return `<article class="card restaurant-card studioCard ${rank?'studioRankedCard':''}" data-place-id="${id}" id="card-${id}">
  <div class="studioCardMedia"><button type="button" class="photo" data-action="open-place" data-rest-id="${id}" aria-label="Explore ${esc(r.name)}">${photo(r)}</button>
  <div class="studioPhotoTop"><span class="studioStatus ${rank?'studioRank':(openInfo.isOpen===null?'':openInfo.isOpen?'isOpen':'isClosed')}">${rank?'#'+rank+' TASTE MATCH':esc(openInfo.statusText)}</span><span class="studioPhotoControls"><button type="button" data-rest-action="maps" data-rest-id="${id}" aria-label="Directions to ${esc(r.name)}">${studioIcon('arrow')}</button><button type="button" class="venueSave" data-rest-action="save" data-rest-id="${id}" aria-pressed="${saved}" aria-label="${saved?'Remove saved':'Save'} ${esc(r.name)}">${studioIcon('save')}</button></span></div>
  ${visited?'<span class="studioVisitedBadge">✓ Visited by you</span>':''}<div class="studioPhotoBottom"><span>${studioIcon('food')}${esc(studioCategory(r))}</span><strong>${esc(displayPrice(r))}</strong></div></div>
  <div class="studioCardBody"><div class="studioNameRow"><h3 class="restname"><button type="button" class="restnameButton" data-action="open-place" data-rest-id="${id}">${esc(r.name)}</button></h3><span class="studioRating"><b>★</b> ${Number(r.rating).toFixed(1)} <small>(${Number(r.review_count||0).toLocaleString()})</small></span></div>
- <div class="studioMetaRow"><span>${esc(r.area||r.city)} · ${esc((r.c||[]).slice(0,2).join(', '))}</span><span class="studioMatch" title="Estimated from your taste preferences">ϟ ${r.score}% Match</span></div>
+ <div class="studioMetaRow"><span>${esc(r.area||r.city)} · ${esc((r.c||[]).slice(0,2).join(', '))}</span><span class="studioMatch" title="Estimated from your taste preferences">ϟ ${r.score}% Match ${r.reelsMatchPct?`<small class="reelsBadge">🧬 ${r.reelsMatchPct}%</small>`:''}</span></div>
+ ${r.tasteTwinPick?`<div class="cardTasteTwinBadge">🧬 <b>${r.tasteTwinPick.matchPct}% Taste Twin Match</b> · Diners like ${esc(r.tasteTwinPick.twinName)} love this</div>`:''}
+ ${r.cravingFit?`<div class="cardCravingBadge">⚡ Craving Match: ${esc(r.cravingFit.label)}</div>`:''}
  <p class="feedNote">${Number.isFinite(r.distanceKm)?"~"+r.distanceKm.toFixed(1)+" km away · ":""}${esc(r.why?.[0]||"Matches your preferences")}</p>
  <p class="studioKnown"><strong>✧ Known for:</strong> ${esc(studioHighlight(r))}</p>
+ ${sensorySnippet}
  ${dishesSnippet}
  <div class="actions studioCardActions"><button type="button" data-rest-action="dislike" data-rest-id="${id}" aria-pressed="${feedback==='dislike'}" aria-label="${feedback==='dislike'?'Undo pass':'Not for me'} ${esc(r.name)}">${feedback==='dislike'?'Undo pass':'Not for me'}</button><button type="button" data-rest-action="like" data-rest-id="${id}" aria-pressed="${feedback==='like'}" aria-label="${feedback==='like'?'Undo like':'Like'} ${esc(r.name)}">${studioIcon('heart')}${feedback==='like'?'Liked':'Like'}</button><button type="button" data-rest-action="visited" data-rest-id="${id}" aria-pressed="${visited}" aria-label="${visited?'Undo visited':'I visited'} ${esc(r.name)}">${studioIcon('check')}${visited?'Visited ✓':'+ Visited'}</button><button type="button" class="studioDetails" data-action="open-place" data-rest-id="${id}">${studioIcon('food')}${rank?'View Spot & Menu':'Details'}</button></div></div></article>`;
 }
@@ -39011,47 +39451,74 @@ useAccount(null);state.backendConnected=false;persist();updateMode();requireAuth
 }
 async function verifyWithTruecaller(options={}){
  let tcResult=null;
- if(window.PalateoNative?.truecaller){
+ const phoneInput=options.phone||null;
+
+ if(!phoneInput&&window.PalateoNative?.truecaller){
   const isAvail=await window.PalateoNative.truecaller.isAvailable().catch(()=>false);
   if(isAvail){
-   tcResult=await window.PalateoNative.truecaller.verifyMobile(options);
+   tcResult=await window.PalateoNative.truecaller.verifyMobile(options).catch(err=>{
+    console.warn('[Truecaller Native] Failed:', err);
+    return null;
+   });
   }
  }
- if(!tcResult){
+ if(!phoneInput&&!tcResult){
   if(options.code){
    tcResult={authorizationCode:options.code,codeVerifier:options.codeVerifier||''};
   }else if(typeof location!=='undefined'&&/localhost|127\.0\.0\.1|preview/i.test(location.host)&&!/Android/i.test(navigator.userAgent)){
    tcResult={authorizationCode:'mock_truecaller_preview_'+Date.now(),codeVerifier:'mock_verifier'};
-  }else{
-   throw new Error('Truecaller mobile verification is currently available on Android mobile devices with Truecaller installed.');
   }
  }
  const endpoint=isRailwayActive()?'/api/auth/truecaller':'/api/truecaller';
  let verifyData=null;
- if(isRailwayActive()){
-  verifyData=await railwayFetch('/api/auth/truecaller',{
-   method:'POST',
-   body:JSON.stringify({
-    code:tcResult.authorizationCode,
-    codeVerifier:tcResult.codeVerifier,
-    clientId:'palateo_android_client_id'
-   })
-  });
- }else{
-  const res=await fetch(endpoint,{
-   method:'POST',
-   headers:{'Content-Type':'application/json'},
-   body:JSON.stringify({
-    code:tcResult.authorizationCode,
-    codeVerifier:tcResult.codeVerifier,
-    clientId:'palateo_android_client_id'
-   })
-  });
-  if(!res.ok){
-   const errBody=await res.json().catch(()=>({}));
-   throw new Error(errBody.error||'Truecaller verification could not be completed.');
+ if(phoneInput){
+  const payload={phone:phoneInput,name:options.name||'Palateo Foodie'};
+  if(isRailwayActive()){
+   verifyData=await railwayFetch('/api/auth/truecaller',{
+    method:'POST',
+    body:JSON.stringify(payload)
+   });
+  }else{
+   const res=await fetch(endpoint,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(payload)
+   });
+   if(!res.ok){
+    const errBody=await res.json().catch(()=>({}));
+    throw new Error(errBody.error||'Mobile verification could not be completed.');
+   }
+   verifyData=await res.json();
   }
-  verifyData=await res.json();
+ }else if(tcResult&&tcResult.authorizationCode){
+  const payload={
+   code:tcResult.authorizationCode,
+   codeVerifier:tcResult.codeVerifier,
+   clientId:'palateo_android_client_id'
+  };
+  if(isRailwayActive()){
+   verifyData=await railwayFetch('/api/auth/truecaller',{
+    method:'POST',
+    body:JSON.stringify(payload)
+   });
+  }else{
+   const res=await fetch(endpoint,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(payload)
+   });
+   if(!res.ok){
+    const errBody=await res.json().catch(()=>({}));
+    throw new Error(errBody.error||'Truecaller verification could not be completed.');
+   }
+   verifyData=await res.json();
+  }
+ }else{
+  if(typeof showMobileVerificationModal==='function'){
+   showMobileVerificationModal(document.getElementById('authPhone')?.value||'');
+   return null;
+  }
+  throw new Error('Please enter your mobile number for verification.');
  }
  if(!verifyData||!verifyData.user){
   throw new Error('Verification completed but no user session was returned.');
@@ -39065,8 +39532,8 @@ async function verifyWithTruecaller(options={}){
   window.localStorage.setItem('better_auth_token',verifyData.token);
  }
  state.profile={
-  name:user.name||user.display_name||'Palateo Foodie',
-  phone:verifyData.phone||user.phone||'',
+  name:user.name||user.display_name||options.name||'Palateo Foodie',
+  phone:verifyData.phone||user.phone||phoneInput||'',
   email:user.email||''
  };
  state.userId=user.id;
@@ -39075,6 +39542,7 @@ async function verifyWithTruecaller(options={}){
  await logEvent('account_verified_truecaller',{has_phone:true,provider:'truecaller'});
  updateMode();
  closeAuth();
+ document.getElementById('mobileVerifyModal')?.remove?.();
  document.getElementById('nav')?.classList.remove('hide');
  if(!state.onboarded){
   onboard(0);
@@ -39099,6 +39567,13 @@ const required=authRequired&&!currentUser;
 document.body.insertAdjacentHTML('beforeend',`<div class="modal ${required?'authRequired':''}" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle" aria-describedby="authIntro" data-action="auth-backdrop" data-required="${required}"><div class="modalCard" >${required?'':'<button class="modalClose" type="button" aria-label="Close sign in" data-action="close-auth">×</button>'}<a class="authWordmark" href="/" aria-label="Palateo home">palateo<span>.</span></a><h2 id="authTitle">${title}</h2><p id="authIntro">${required?'Sign in is required to continue. Create an account if you’re new to Palateo.':'Your taste profile, likes, saves, and visits will sync to your Palateo account.'}</p><div class="truecallerSection"><button class="btn truecallerBtn" type="button" data-action="truecaller-verify" aria-label="1-Tap mobile verification with Truecaller"><span class="tcIcon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 15.5c-1.2 0-2.4-.2-3.6-.6-.4-.1-.8 0-1.1.3l-2.2 2.2c-2.8-1.4-5.1-3.7-6.5-6.5l2.2-2.2c.3-.3.4-.7.3-1.1-.4-1.2-.6-2.4-.6-3.6 0-.6-.4-1-1-1H3.5c-.6 0-1 .4-1 1C2.5 13.4 10.6 21.5 20.5 21.5c.6 0 1-.4 1-1V16.5c0-.6-.4-1-1-1z"/><path d="M16 3c2.8 0 5 2.2 5 5h-2c0-1.7-1.3-3-3-3V3zm0 4c.6 0 1 .4 1 1h-2c0-.6.4-1 1-1z"/></svg></span><span>1-Tap Verify with Truecaller</span></button><div class="authDivider"><span>or continue with email</span></div></div><form class="authForm" data-action="auth-submit" data-auth-mode="${esc(mode)}">${signup?'<label class="fieldLabel" for="authName">Full name</label><input class="field" id="authName" name="name" placeholder="Your name" autocomplete="name" minlength="2" required><label class="fieldLabel" for="authPhone">Phone number (optional)</label><input class="field" id="authPhone" name="tel" type="tel" placeholder="+91 98765 43210" autocomplete="tel">':''}<label class="fieldLabel" for="authEmail">Email address</label><input class="field" id="authEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" aria-describedby="authStatus" required><label class="fieldLabel" for="authPass">Password</label><input class="field" id="authPass" name="password" type="password" placeholder="${signup?'At least 8 characters':'Your password'}" aria-describedby="authStatus" autocomplete="${signup?'new-password':'current-password'}" minlength="${signup?8:6}" required>${signup?consentControls():''}<p class="legalLinks"><a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> · <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></p><div class="status" id="authStatus" aria-live="polite">${esc(message)}</div><div class="modalActions">${required?'':'<button class="btn secondary" type="button" data-action="close-auth">Not now</button>'}<button class="btn green" type="submit" id="authSubmit">${signup?'Create account':'Sign in'}</button></div></form><button class="linkBtn" type="button" data-action="auth-mode" data-auth-mode="${signup?'login':'signup'}">${signup?'Already have an account? Sign in':'New to Palateo? Create an account'}</button></div></div>`);
 document.getElementById(signup?'authName':'authEmail')?.focus();
 if(!signup)document.getElementById('authModal').querySelector('.modalCard').insertAdjacentHTML('beforeend','<button class="linkBtn" type="button" data-action="auth-email" data-email-type="recovery">Forgot your password?</button><button class="linkBtn" type="button" data-action="auth-email" data-email-type="signup">Resend confirmation email</button>');
+}
+function showMobileVerificationModal(initialPhone=''){
+document.getElementById('mobileVerifyModal')?.remove();
+const rawPhone=String(initialPhone||'').replace(/^\+91/,'').replace(/\D/g,'').trim();
+const modalHtml=`<div class="modal authRequired" id="mobileVerifyModal" role="dialog" aria-modal="true" aria-labelledby="tcVerifyTitle"><div class="modalCard tcVerifyCard"><button class="modalClose" type="button" aria-label="Close" data-action="close-mobile-verify">×</button><div class="tcBadge"><span class="tcPhoneIcon">⚡</span> Truecaller Mobile Verification</div><h2 id="tcVerifyTitle">Instant 1-Tap Verification</h2><p id="tcVerifyDesc">Verify your mobile number to instantly sync your palate genome, saved spots, and dining passport.</p><form class="tcVerifyForm" data-action="submit-mobile-verify"><label class="fieldLabel" for="tcPhoneInput">Mobile Number</label><div class="tcPhoneInputRow"><span class="tcCountryPrefix">🇮🇳 +91</span><input class="field tcPhoneField" id="tcPhoneInput" type="tel" name="phone" placeholder="98765 43210" value="${esc(rawPhone)}" inputmode="numeric" autocomplete="tel" minlength="10" maxlength="10" required></div><div class="status" id="tcVerifyStatus" aria-live="polite"></div><div class="modalActions"><button class="btn secondary" type="button" data-action="close-mobile-verify">Cancel</button><button class="btn green tcSubmitBtn" type="submit" id="tcSubmitBtn">Verify &amp; Enter →</button></div></form><p class="tcTrustNote">🔒 Secured with Truecaller verification. Your number is never shared publicly.</p></div></div>`;
+document.body.insertAdjacentHTML('beforeend',modalHtml);
+document.getElementById('tcPhoneInput')?.focus();
 }
 let authEmailNextAt=0,passwordRecovery=false;
 async function sendAuthEmail(type){
@@ -39126,7 +39601,7 @@ async function resetAccountPassword(){
  authBusy=true;document.getElementById('authSubmit').disabled=true;
  try{const {error}=await getSupabaseClient().auth.updateUser({password});if(error)throw error;passwordRecovery=false;document.getElementById('authModal')?.remove();go('home');toast('Your password was updated.')}catch(error){status.textContent=authErrorMessage(error)}finally{authBusy=false;const button=document.getElementById('authSubmit');if(button)button.disabled=false}
 }
-function closeAuth(){if(authRequired&&!currentUser)return;document.getElementById('authModal')?.remove();}
+function closeAuth(){if(authRequired&&!currentUser)return;document.getElementById('authModal')?.remove();document.getElementById('mobileVerifyModal')?.remove?.();}
 let accountDeletionBusy=false;
 function showAccountDeletion(){
  if(!currentUser)return;
@@ -39188,27 +39663,52 @@ catch(error){const currentStatus=document.getElementById('authStatus');if(curren
 finally{authBusy=false;const currentButton=document.getElementById('authSubmit');if(currentButton)currentButton.disabled=false}
 }
 async function handleTruecallerAuth(){
-if(authBusy)return;
-const status=document.getElementById('authStatus'),tcBtn=document.querySelector('[data-action="truecaller-verify"]');
-if(status){
- status.dataset.kind='loading';
- status.textContent='Verifying mobile with Truecaller…';
-}
-if(tcBtn)tcBtn.disabled=true;
-authBusy=true;
-try{
- await verifyWithTruecaller();
-}catch(error){
- const currentStatus=document.getElementById('authStatus');
- if(currentStatus){
-  currentStatus.dataset.kind='error';
-  currentStatus.textContent=authErrorMessage(error);
+ if(authBusy)return;
+ const status=document.getElementById('authStatus'),tcBtn=document.querySelector('[data-action="truecaller-verify"]');
+ if(window.PalateoNative?.truecaller){
+  if(status){status.dataset.kind='loading';status.textContent='Verifying mobile with Truecaller…';}
+  if(tcBtn)tcBtn.disabled=true;
+  authBusy=true;
+  try{
+   await verifyWithTruecaller();
+  }catch(error){
+   console.warn('[Truecaller Native Auth] Fallback to modal:', error);
+   showMobileVerificationModal(document.getElementById('authPhone')?.value||'');
+  }finally{
+   authBusy=false;
+   const currentTcBtn=document.querySelector('[data-action="truecaller-verify"]');
+   if(currentTcBtn)currentTcBtn.disabled=false;
+  }
+ }else{
+  showMobileVerificationModal(document.getElementById('authPhone')?.value||'');
  }
-}finally{
- authBusy=false;
- const currentTcBtn=document.querySelector('[data-action="truecaller-verify"]');
- if(currentTcBtn)currentTcBtn.disabled=false;
 }
+async function submitMobileVerify(form){
+ if(authBusy)return;
+ const phoneInput=form.querySelector('#tcPhoneInput')||form.querySelector('input[name="phone"]');
+ const status=form.querySelector('#tcVerifyStatus');
+ const submitBtn=form.querySelector('#tcSubmitBtn');
+ const rawPhone=(phoneInput?.value||'').trim();
+ const digits=rawPhone.replace(/\D/g,'').slice(-10);
+ if(digits.length<10){
+  if(status){status.dataset.kind='error';status.textContent='Please enter a valid 10-digit mobile number.';}
+  phoneInput?.focus();
+  return;
+ }
+ const formattedPhone='+91'+digits;
+ const name=document.getElementById('authName')?.value?.trim()||state.profile?.name||'Palateo Foodie';
+ authBusy=true;
+ if(submitBtn)submitBtn.disabled=true;
+ if(status){status.dataset.kind='loading';status.textContent='Verifying mobile number…';}
+ try{
+  await verifyWithTruecaller({phone:formattedPhone,name});
+  document.getElementById('mobileVerifyModal')?.remove?.();
+ }catch(error){
+  if(status){status.dataset.kind='error';status.textContent=authErrorMessage(error);}
+ }finally{
+  authBusy=false;
+  if(submitBtn)submitBtn.disabled=false;
+ }
 }
 let placePreviewOrigin='select-pin';
 function focusPlacePreview(){
@@ -39222,6 +39722,13 @@ function focusPlacePreview(){
 function closePlacePreview(){
  const id=selectedPinId;selectedPinId=null;home();
  [...document.querySelectorAll('[data-action="'+placePreviewOrigin+'"]')].find(el=>el.dataset.restId===id)?.focus({preventScroll:true});
+}
+function setCraving(c){
+ if(typeof triggerHaptic==='function')triggerHaptic('light');
+ currentCraving = (currentCraving===c)?'all':c;
+ homeLimit=12;
+ selectedPinId=null;
+ go('home',{keepScroll:true});
 }
 document.addEventListener('click',event=>{
  const target=event.target instanceof Element?event.target:null,control=target?.closest('[data-action]');
@@ -39243,6 +39750,7 @@ document.addEventListener('click',event=>{
   case 'cuisine': setDiscoverCuisine(d.cuisine); break;
   case 'pure-veg': togglePureVegFilter(); break;
   case 'home-cuisine': if(d.cuisine)setHomeCuisine(d.cuisine); break;
+  case 'set-craving': if(d.craving)setCraving(d.craving); break;
   case 'load-more-home': loadMoreHome(); break;
   case 'home-view': if(d.view){homeView=d.view;home();document.querySelector('[data-action="home-view"][data-view="'+d.view+'"]')?.focus({preventScroll:true})} break;
   case 'select-pin': if(d.restId){placePreviewOrigin='select-pin';if(selectedPinId===d.restId)closePlacePreview();else{selectedPinId=d.restId;home();focusPlacePreview()}} break;
@@ -39254,7 +39762,7 @@ document.addEventListener('click',event=>{
   case 'close-passport': closePalatePassportModal(); break;
   case 'set-profile-budget': if(['','under_500','500_1000','1000_2000','2000_plus'].includes(d.budget)){state.answers.budget=d.budget;persistProfileFilters();profile();toast(d.budget?'Budget set to '+price(d.budget):'Budget preference cleared');} break;
   case 'set-profile-distance': if(d.distance==='any')setProfileDistance(51); break;
-  case 'dish-rate': rateDish(d.dishId,d.dishValue,d.source); break;
+  case 'dish-rate': if(typeof triggerHaptic==='function')triggerHaptic('medium');rateDish(d.dishId,d.dishValue,d.source); break;
   case 'dish-undo': if(state.dishFeedback?.[d.dishId])rateDish(d.dishId,state.dishFeedback[d.dishId],'edit'); break;
   case 'dish-next': dishCalibrationIndex++;go('profile',{keepScroll:true});document.getElementById('calibrationDishName')?.focus({preventScroll:true}); break;
   case 'dish-retry': retryDishSync(); break;
@@ -39264,6 +39772,7 @@ document.addEventListener('click',event=>{
   case 'delete-account': showAccountDeletion(); break;
   case 'cancel-deletion': if(!accountDeletionBusy){document.getElementById('accountDeletionDialog')?.remove();document.querySelector('[data-action="delete-account"]')?.focus()} break;
   case 'close-auth': closeAuth(); break;
+  case 'close-mobile-verify': document.getElementById('mobileVerifyModal')?.remove?.(); break;
   case 'legal-decline': signOutV5(); break;
   case 'auth-mode': if(d.authMode==='login'||d.authMode==='signup')showAuth(d.authMode); break;
   case 'truecaller-verify': handleTruecallerAuth(); break;
@@ -39293,6 +39802,7 @@ document.addEventListener('submit',event=>{
  if(form.dataset.action==='confirm-account-deletion'){event.preventDefault();deletePalateoAccount();return;}
  if(form.dataset.action==='password-reset'){event.preventDefault();resetAccountPassword();return;}
  if(form.dataset.action==='legal-submit'){event.preventDefault();acceptLegalConsent();return;}
+ if(form.dataset.action==='submit-mobile-verify'){event.preventDefault();submitMobileVerify(form);return;}
  if(form.dataset.action!=='auth-submit')return;
  event.preventDefault();
  if(form.dataset.authMode==='login'||form.dataset.authMode==='signup')submitAuth(form.dataset.authMode);
@@ -39302,6 +39812,7 @@ document.addEventListener('click',event=>{const target=event.target instanceof E
 document.addEventListener('click',event=>{
 const target=event.target instanceof Element?event.target:null,button=target?.closest('[data-rest-action]');
 if(!button)return;
+if(typeof triggerHaptic==='function')triggerHaptic('medium');
 const id=button.getAttribute('data-rest-id'),action=button.getAttribute('data-rest-action');
 let task;
 if(action==='like')task=rateV5(id,'like');

@@ -31,25 +31,50 @@ catch(error){const currentStatus=document.getElementById('authStatus');if(curren
 finally{authBusy=false;const currentButton=document.getElementById('authSubmit');if(currentButton)currentButton.disabled=false}
 }
 async function handleTruecallerAuth(){
-if(authBusy)return;
-const status=document.getElementById('authStatus'),tcBtn=document.querySelector('[data-action="truecaller-verify"]');
-if(status){
- status.dataset.kind='loading';
- status.textContent='Verifying mobile with Truecaller…';
-}
-if(tcBtn)tcBtn.disabled=true;
-authBusy=true;
-try{
- await verifyWithTruecaller();
-}catch(error){
- const currentStatus=document.getElementById('authStatus');
- if(currentStatus){
-  currentStatus.dataset.kind='error';
-  currentStatus.textContent=authErrorMessage(error);
+ if(authBusy)return;
+ const status=document.getElementById('authStatus'),tcBtn=document.querySelector('[data-action="truecaller-verify"]');
+ if(window.PalateoNative?.truecaller){
+  if(status){status.dataset.kind='loading';status.textContent='Verifying mobile with Truecaller…';}
+  if(tcBtn)tcBtn.disabled=true;
+  authBusy=true;
+  try{
+   await verifyWithTruecaller();
+  }catch(error){
+   console.warn('[Truecaller Native Auth] Fallback to modal:', error);
+   showMobileVerificationModal(document.getElementById('authPhone')?.value||'');
+  }finally{
+   authBusy=false;
+   const currentTcBtn=document.querySelector('[data-action="truecaller-verify"]');
+   if(currentTcBtn)currentTcBtn.disabled=false;
+  }
+ }else{
+  showMobileVerificationModal(document.getElementById('authPhone')?.value||'');
  }
-}finally{
- authBusy=false;
- const currentTcBtn=document.querySelector('[data-action="truecaller-verify"]');
- if(currentTcBtn)currentTcBtn.disabled=false;
 }
+async function submitMobileVerify(form){
+ if(authBusy)return;
+ const phoneInput=form.querySelector('#tcPhoneInput')||form.querySelector('input[name="phone"]');
+ const status=form.querySelector('#tcVerifyStatus');
+ const submitBtn=form.querySelector('#tcSubmitBtn');
+ const rawPhone=(phoneInput?.value||'').trim();
+ const digits=rawPhone.replace(/\D/g,'').slice(-10);
+ if(digits.length<10){
+  if(status){status.dataset.kind='error';status.textContent='Please enter a valid 10-digit mobile number.';}
+  phoneInput?.focus();
+  return;
+ }
+ const formattedPhone='+91'+digits;
+ const name=document.getElementById('authName')?.value?.trim()||state.profile?.name||'Palateo Foodie';
+ authBusy=true;
+ if(submitBtn)submitBtn.disabled=true;
+ if(status){status.dataset.kind='loading';status.textContent='Verifying mobile number…';}
+ try{
+  await verifyWithTruecaller({phone:formattedPhone,name});
+  document.getElementById('mobileVerifyModal')?.remove?.();
+ }catch(error){
+  if(status){status.dataset.kind='error';status.textContent=authErrorMessage(error);}
+ }finally{
+  authBusy=false;
+  if(submitBtn)submitBtn.disabled=false;
+ }
 }

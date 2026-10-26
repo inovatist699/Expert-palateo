@@ -74,47 +74,74 @@ useAccount(null);state.backendConnected=false;persist();updateMode();requireAuth
 }
 async function verifyWithTruecaller(options={}){
  let tcResult=null;
- if(window.PalateoNative?.truecaller){
+ const phoneInput=options.phone||null;
+
+ if(!phoneInput&&window.PalateoNative?.truecaller){
   const isAvail=await window.PalateoNative.truecaller.isAvailable().catch(()=>false);
   if(isAvail){
-   tcResult=await window.PalateoNative.truecaller.verifyMobile(options);
+   tcResult=await window.PalateoNative.truecaller.verifyMobile(options).catch(err=>{
+    console.warn('[Truecaller Native] Failed:', err);
+    return null;
+   });
   }
  }
- if(!tcResult){
+ if(!phoneInput&&!tcResult){
   if(options.code){
    tcResult={authorizationCode:options.code,codeVerifier:options.codeVerifier||''};
   }else if(typeof location!=='undefined'&&/localhost|127\.0\.0\.1|preview/i.test(location.host)&&!/Android/i.test(navigator.userAgent)){
    tcResult={authorizationCode:'mock_truecaller_preview_'+Date.now(),codeVerifier:'mock_verifier'};
-  }else{
-   throw new Error('Truecaller mobile verification is currently available on Android mobile devices with Truecaller installed.');
   }
  }
  const endpoint=isRailwayActive()?'/api/auth/truecaller':'/api/truecaller';
  let verifyData=null;
- if(isRailwayActive()){
-  verifyData=await railwayFetch('/api/auth/truecaller',{
-   method:'POST',
-   body:JSON.stringify({
-    code:tcResult.authorizationCode,
-    codeVerifier:tcResult.codeVerifier,
-    clientId:'palateo_android_client_id'
-   })
-  });
- }else{
-  const res=await fetch(endpoint,{
-   method:'POST',
-   headers:{'Content-Type':'application/json'},
-   body:JSON.stringify({
-    code:tcResult.authorizationCode,
-    codeVerifier:tcResult.codeVerifier,
-    clientId:'palateo_android_client_id'
-   })
-  });
-  if(!res.ok){
-   const errBody=await res.json().catch(()=>({}));
-   throw new Error(errBody.error||'Truecaller verification could not be completed.');
+ if(phoneInput){
+  const payload={phone:phoneInput,name:options.name||'Palateo Foodie'};
+  if(isRailwayActive()){
+   verifyData=await railwayFetch('/api/auth/truecaller',{
+    method:'POST',
+    body:JSON.stringify(payload)
+   });
+  }else{
+   const res=await fetch(endpoint,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(payload)
+   });
+   if(!res.ok){
+    const errBody=await res.json().catch(()=>({}));
+    throw new Error(errBody.error||'Mobile verification could not be completed.');
+   }
+   verifyData=await res.json();
   }
-  verifyData=await res.json();
+ }else if(tcResult&&tcResult.authorizationCode){
+  const payload={
+   code:tcResult.authorizationCode,
+   codeVerifier:tcResult.codeVerifier,
+   clientId:'palateo_android_client_id'
+  };
+  if(isRailwayActive()){
+   verifyData=await railwayFetch('/api/auth/truecaller',{
+    method:'POST',
+    body:JSON.stringify(payload)
+   });
+  }else{
+   const res=await fetch(endpoint,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(payload)
+   });
+   if(!res.ok){
+    const errBody=await res.json().catch(()=>({}));
+    throw new Error(errBody.error||'Truecaller verification could not be completed.');
+   }
+   verifyData=await res.json();
+  }
+ }else{
+  if(typeof showMobileVerificationModal==='function'){
+   showMobileVerificationModal(document.getElementById('authPhone')?.value||'');
+   return null;
+  }
+  throw new Error('Please enter your mobile number for verification.');
  }
  if(!verifyData||!verifyData.user){
   throw new Error('Verification completed but no user session was returned.');
@@ -128,8 +155,8 @@ async function verifyWithTruecaller(options={}){
   window.localStorage.setItem('better_auth_token',verifyData.token);
  }
  state.profile={
-  name:user.name||user.display_name||'Palateo Foodie',
-  phone:verifyData.phone||user.phone||'',
+  name:user.name||user.display_name||options.name||'Palateo Foodie',
+  phone:verifyData.phone||user.phone||phoneInput||'',
   email:user.email||''
  };
  state.userId=user.id;
@@ -138,6 +165,7 @@ async function verifyWithTruecaller(options={}){
  await logEvent('account_verified_truecaller',{has_phone:true,provider:'truecaller'});
  updateMode();
  closeAuth();
+ document.getElementById('mobileVerifyModal')?.remove?.();
  document.getElementById('nav')?.classList.remove('hide');
  if(!state.onboarded){
   onboard(0);

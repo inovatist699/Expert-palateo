@@ -43,3 +43,29 @@
 #authModal .authDivider{display:flex;align-items:center;text-align:center;margin:18px 0 4px;color:#8ba5ab;font-size:12px;font-weight:500}
 #authModal .authDivider::before,#authModal .authDivider::after{content:'';flex:1;border-bottom:1px solid #334d52}
 #authModal .authDivider span{padding:0 12px;text-transform:uppercase;letter-spacing:.05em;font-size:11px}
+
+/* Truecaller Mobile Verification Modal */
+#mobileVerifyModal{position:fixed;inset:0;background:#0d181af2;z-index:105;display:grid;place-items:center;padding:24px;overflow:auto;color-scheme:dark;backdrop-filter:blur(10px)}
+#mobileVerifyModal .tcVerifyCard{position:relative;width:min(440px,100%);background:#1a2f33;color:#f7fbfc;border:1px solid #638e97;border-radius:16px;padding:28px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+#mobileVerifyModal .modalClose{color:#edf7fa;position:absolute;right:12px;top:12px;min-width:44px;min-height:44px;background:none;border:none;font-size:24px;cursor:pointer;display:grid;place-items:center}
+#mobileVerifyModal .tcBadge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,135,255,.16);color:#66b5ff;border:1px solid rgba(0,135,255,.35);padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px}
+#mobileVerifyModal .tcBadge .tcPhoneIcon{font-size:13px}
+#mobileVerifyModal h2{color:#f7fbfc;font-size:24px;font-weight:800;letter-spacing:-.02em;margin:0 0 8px;line-height:1.2}
+#mobileVerifyModal p#tcVerifyDesc{color:#bed6db;font-size:13px;line-height:1.5;margin:0 0 18px}
+#mobileVerifyModal .fieldLabel{display:block;font-size:13px;font-weight:600;color:#bed6db;margin-bottom:6px}
+#mobileVerifyModal .tcPhoneInputRow{display:flex;align-items:center;gap:8px}
+#mobileVerifyModal .tcCountryPrefix{display:inline-flex;align-items:center;height:50px;padding:0 12px;background:#142427;border:1px solid #638e97;border-radius:10px;color:#edf7fa;font-size:15px;font-weight:700;white-space:nowrap}
+#mobileVerifyModal .tcPhoneField{flex:1;min-height:50px;margin:0;padding:12px 14px;border:1px solid #638e97;border-radius:10px;background:#142427;color:#f7fbfc;font-size:16px;font-weight:600;letter-spacing:.03em;outline-offset:3px}
+#mobileVerifyModal .tcPhoneField:focus{border-color:#0087ff;outline:2px solid #0087ff}
+#mobileVerifyModal .tcPhoneField::placeholder{color:#648991;font-weight:400}
+#mobileVerifyModal .status{color:#c3e7f1;min-height:20px;margin-top:10px;font-size:12px;line-height:1.5}
+#mobileVerifyModal .status[data-kind=error]{color:#ffc4b8!important}
+#mobileVerifyModal .status[data-kind=loading]{color:#66b5ff!important}
+#mobileVerifyModal .modalActions{display:flex;gap:10px;margin-top:16px}
+#mobileVerifyModal .btn{min-height:48px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer}
+#mobileVerifyModal .btn.secondary{background:#20373b;color:#f7fbfc;border:1px solid #638e97}
+#mobileVerifyModal .btn.tcSubmitBtn{background:#0087ff;color:#ffffff;border:1px solid #0077e6;box-shadow:0 4px 14px rgba(0,135,255,.25)}
+#mobileVerifyModal .btn.tcSubmitBtn:hover{background:#0075e0}
+#mobileVerifyModal .btn:disabled{opacity:.7;cursor:wait}
+#mobileVerifyModal .tcTrustNote{font-size:11px!important;color:#8ba5ab!important;text-align:center;margin:16px 0 0!important;line-height:1.4}
+@media(max-width:480px){#mobileVerifyModal{padding:12px}#mobileVerifyModal .tcVerifyCard{padding:22px}}

@@ -24,4 +24,4 @@ async function resetAccountPassword(){
  authBusy=true;document.getElementById('authSubmit').disabled=true;
  try{const {error}=await getSupabaseClient().auth.updateUser({password});if(error)throw error;passwordRecovery=false;document.getElementById('authModal')?.remove();go('home');toast('Your password was updated.')}catch(error){status.textContent=authErrorMessage(error)}finally{authBusy=false;const button=document.getElementById('authSubmit');if(button)button.disabled=false}
 }
-function closeAuth(){if(authRequired&&!currentUser)return;document.getElementById('authModal')?.remove();}
+function closeAuth(){if(authRequired&&!currentUser)return;document.getElementById('authModal')?.remove();document.getElementById('mobileVerifyModal')?.remove?.();}

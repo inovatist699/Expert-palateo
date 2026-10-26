@@ -1,0 +1,5 @@
+{
+  "name": "Palateo",
+  "description": "Personalized restaurant recommendations. Run npm run dev and open /app/; edit the canonical src/ files.",
+  "requestFramePermissions": []
+}

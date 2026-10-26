@@ -3,7 +3,12 @@ const crypto = require('node:crypto');
 const ISSUER = 'https://palateo.in/api/truecaller';
 const PROVIDER = 'custom:palateo-truecaller';
 const AUDIENCE = 'palateo-truecaller';
-const ANDROID_CLIENT = 'qnjkaprmmd59o3aembxue5mzrproqqjjeixlkil_as4';
+const DEFAULT_ANDROID_CLIENT = 'qnjkaprmmd59o3aembxue5mzrproqqjjeixlkil_as4';
+function androidClient() {
+  const value = process.env.TRUECALLER_ANDROID_CLIENT_ID || DEFAULT_ANDROID_CLIENT;
+  if (!/^[A-Za-z0-9_-]{8,256}$/.test(value)) throw Error('Invalid Android client configuration');
+  return value;
+}
 const ORIGINS = new Set(['capacitor://localhost', 'https://localhost', 'https://palateo.in', 'https://www.palateo.in']);
 const unavailable = { code: 'TRUECALLER_UNAVAILABLE', error: 'Truecaller sign-in is unavailable. Please sign in with email.' };
 const digest = value => crypto.createHash('sha256').update(value).digest('hex');
@@ -145,7 +150,7 @@ module.exports = async function handler(req, res) {
     }
     const enabled = process.env.TRUECALLER_ANDROID_ENABLED === 'true' && !!key;
     if (req.method === 'GET' && action === 'config') return res.status(200).json({ android: enabled, web: webEnabled(key),
-      linking: process.env.TRUECALLER_LINKING_ENABLED === 'true', provider: PROVIDER });
+      androidClientId: androidClient(), linking: process.env.TRUECALLER_LINKING_ENABLED === 'true', provider: PROVIDER });
     if (req.method !== 'POST') { res.setHeader('Allow', 'GET, POST, OPTIONS'); return res.status(405).json({ error: 'Method not allowed' }); }
     if (!enabled && !webEnabled(key)) return res.status(503).json(unavailable);
     if (!/^application\/json(?:;|$)/i.test(req.headers['content-type'] || '')) fail(415, 'TRUECALLER_INVALID_REQUEST');
@@ -163,7 +168,7 @@ module.exports = async function handler(req, res) {
     if (!attempt?.allowed) fail(429, 'TRUECALLER_TRY_LATER');
     const token = await jsonRequest('https://oauth-account-noneu.truecaller.com/v1/token', {
       method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({ grant_type: 'authorization_code', client_id: ANDROID_CLIENT,
+      body: new URLSearchParams({ grant_type: 'authorization_code', client_id: androidClient(),
         code: body.authorizationCode, code_verifier: body.codeVerifier }).toString()
     });
     if (token.token_type?.toLowerCase() !== 'bearer' || !text(token.access_token, /^[\x21-\x7e]{8,4096}$/)) fail(502, 'TRUECALLER_INVALID_IDENTITY');

@@ -39041,7 +39041,8 @@ async function verifyWithTruecaller({link=false,reauthenticate=false}={}){
  const nonce=btoa(String.fromCharCode(...bytes)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
  let result;
  if(native){
-  await native.prepare();
+  const prepared=await native.prepare();
+  if(!prepared?.clientId||prepared.clientId!==config.androidClientId)throw new Error('This app version is not configured for Truecaller. Update Palateo or use email sign-in.');
   if(!await native.isAvailable())throw new Error('Install or open Truecaller on this Android device, or use email sign-in.');
   const verification=await native.verifyMobile();
   result=await truecallerRequest({authorizationCode:verification.authorizationCode,codeVerifier:verification.codeVerifier,nonce});

@@ -27,7 +27,7 @@ public class TruecallerPlugin extends Plugin implements TcOAuthCallback {
 
     @PluginMethod
     public void prepare(PluginCall call) {
-        if (initialized) { call.resolve(); return; }
+        if (initialized) { call.resolve(configuration()); return; }
         if (prepareCall != null) { call.reject("Truecaller is starting. Try again.", "BUSY"); return; }
         prepareCall = call;
         getActivity().runOnUiThread(() -> {
@@ -45,7 +45,13 @@ public class TruecallerPlugin extends Plugin implements TcOAuthCallback {
     @Override
     public void onSdkReady() {
         initialized = true;
-        if (prepareCall != null) { prepareCall.resolve(); prepareCall = null; }
+        if (prepareCall != null) { prepareCall.resolve(configuration()); prepareCall = null; }
+    }
+
+    private JSObject configuration() {
+        JSObject result = new JSObject();
+        result.put("clientId", getContext().getString(R.string.truecaller_client_id));
+        return result;
     }
 
     @PluginMethod

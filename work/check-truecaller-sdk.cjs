@@ -15,7 +15,7 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
   assert.ok(buildGradle.includes('com.truecaller.android.sdk:truecaller-sdk:3.3.0'), 'Must include Truecaller SDK dependency in app/build.gradle');
 
   const stringsXml = read('mobile/android/app/src/main/res/values/strings.xml');
-  assert.ok(stringsXml.includes('truecaller_client_id'), 'strings.xml must define truecaller_client_id');
+  assert.match(buildGradle, /resValue "string", "truecaller_client_id", truecallerClientId/, 'Client ID must be generated from the release configuration');
 
   const manifestXml = read('mobile/android/app/src/main/AndroidManifest.xml');
   assert.ok(manifestXml.includes('com.truecaller.android.sdk.ClientId'), 'AndroidManifest.xml must declare com.truecaller.android.sdk.ClientId meta-data');

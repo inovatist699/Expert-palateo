@@ -111,3 +111,33 @@ Official references: [Supabase custom providers](https://supabase.com/docs/guide
 [Truecaller Android backend exchange](https://docs.truecaller.com/truecaller-sdk/android/latest-oauth-sdk-3.3.0/integration-steps/integrating-with-your-backend/fetching-user-token),
 [mobile web registration](https://docs.truecaller.com/truecaller-sdk/mobile-websites/generating-app-key),
 [mobile web callback](https://docs.truecaller.com/truecaller-sdk/mobile-websites/integrating-with-your-mobile-website/fetch-user-profile).
+
+## Play signing configuration
+
+The Truecaller Android credential is tied to `in.palateo.app` and its signing
+certificate SHA-1. Register the **Play app signing** certificate shown in Play
+Console → App integrity for Play installs, not merely the upload certificate used
+for the direct APK. Verify current SDK registration instructions in the provider
+console. If the client ID changes, set `TRUECALLER_ANDROID_CLIENT_ID` in the
+`mobile-release` GitHub environment variables and the canonical backend
+configuration to that same public client ID. The existing registered client ID
+remains the default for direct builds. Only server configuration selects the
+exchange client; request bodies cannot override it. The native app checks that
+its embedded ID matches the backend before requesting authorization. A mismatch
+keeps email available instead of starting a broken login.
+
+A single backend client configuration supports one credential at a time. Do not
+switch it for Play while expecting older direct APKs with another client ID to
+continue Truecaller sign-in. Verify provider support for registering both signing
+certificates against one credential, or plan a separately reviewed allowlisted
+multi-client implementation. Keep activation off until a Play internal-track
+install completes real verification, refresh, linking and deletion.
+
+### Observed hosted state — 26 October 2026
+
+The canonical Supabase project has the private Truecaller state tables and active
+`truecaller-flows` function. Its custom OAuth provider table is empty: provider
+registration and live interoperability are still pending. Existing PR #22 native
+and web checks passed on `ace98ad`; this is compilation/regression evidence only.
+The current production deployment is `dpl_D6jdsqyxLoyVxNcWQxfAd8nkMH73` (build 54).
+No activation flags were changed during this readiness work.

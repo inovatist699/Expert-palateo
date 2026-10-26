@@ -60,6 +60,11 @@ function verifyJwt(result, publicKey) {
  assert.equal(new URLSearchParams(tokenRequest.options.body).get('client_id'),'qnjkaprmmd59o3aembxue5mzrproqqjjeixlkil_as4');
  assert.equal(new URLSearchParams(tokenRequest.options.body).get('code_verifier'),verifier);
  assert.equal(requests.find(request=>request.url.endsWith('/v1/userinfo')).options.headers.Authorization,'Bearer provider-access-token');
+ process.env.TRUECALLER_ANDROID_CLIENT_ID='play-signing-client-id';
+ requests=[]; verifyJwt(await invoke(body),publicKey);
+ assert.equal(new URLSearchParams(requests.find(r=>r.url.endsWith('/v1/token')).options.body).get('client_id'),'play-signing-client-id');
+ assert.equal((await invoke(null,'/?action=config',undefined,'GET')).data.androidClientId,'play-signing-client-id');
+ delete process.env.TRUECALLER_ANDROID_CLIENT_ID;
  const jwks=await invoke(null,'/?action=jwks',undefined,'GET');
  assert.equal(jwks.data.keys[0].kty,'RSA');assert.equal(jwks.data.keys[0].d,undefined);
  assert.equal((await invoke(null,'/?action=discovery',undefined,'GET')).data.issuer,'https://palateo.in/api/truecaller');
@@ -92,12 +97,15 @@ function verifyJwt(result, publicKey) {
  let signIns=0,links=0,consent=0;
  const user={id:'existing-account',identities:[]};
  const context=vm.createContext({isRailwayActive:()=>false,crypto:crypto.webcrypto,Uint8Array,btoa:value=>Buffer.from(value,'binary').toString('base64'),AbortSignal,
-  window:{PalateoNative:{truecaller:{prepare:async()=>{},isAvailable:async()=>true,verifyMobile:async()=>({authorizationCode:body.authorizationCode,codeVerifier:verifier})}}},
-  fetch:async(url,options)=>response(options?.body?{provider:'custom:palateo-truecaller',idToken:'signed-identity-proof'}:{android:true,linking:true}),
+  window:{PalateoNative:{truecaller:{prepare:async()=>({clientId:"registered-client-id"}),isAvailable:async()=>true,verifyMobile:async()=>({authorizationCode:body.authorizationCode,codeVerifier:verifier})}}},
+  fetch:async(url,options)=>response(options?.body?{provider:'custom:palateo-truecaller',idToken:'signed-identity-proof'}:{android:true,linking:true,androidClientId:"registered-client-id"}),
   getSupabaseClient:()=>({auth:{signInWithIdToken:async credentials=>{signIns++;assert.equal(credentials.token,'signed-identity-proof');assert.equal(credentials.nonce.length,43);return {data:{user,session:{user}}}},linkIdentity:async()=>{links++;return {data:{user,session:{user}}}}}}),
   useAccount:u=>{context.currentUser=u},currentUser:null,hasLegalConsent:()=>false,updateMode:()=>{},requireLegalConsent:()=>{consent++}
  });
  vm.runInContext(source,context);await context.verifyWithTruecaller();assert.equal(signIns,1);assert.equal(consent,1);
  await context.verifyWithTruecaller({link:true});assert.equal(links,1);assert.equal(signIns,1);
+ context.window.PalateoNative.truecaller.prepare=async()=>({clientId:'wrong-certificate-client'});
+ await assert.rejects(()=>context.verifyWithTruecaller(),/not configured/);
+ assert.equal(signIns,1);assert.equal(links,1);
  console.log('PASS: real-code exchange, verified identity, signed nonce-bound proof, callback authentication, durable consume and canonical session/explicit linking contracts');
 })().catch(error=>{console.error(error);process.exitCode=1}).finally(()=>{global.fetch=originalFetch;for(const key of Object.keys(process.env))if(!(key in savedEnv))delete process.env[key];Object.assign(process.env,savedEnv)});

@@ -16,7 +16,7 @@ on:
         description: New store build number, greater than previously uploaded versions
         type: string
         required: true
-        default: '1'
+
 
 permissions:
   contents: read
@@ -60,6 +60,7 @@ jobs:
     environment: ${{ inputs.signed && 'mobile-release' || 'mobile-ci' }}
     env:
       PALATEO_BUILD_NUMBER: ${{ inputs.build_number || github.run_number }}
+      TRUECALLER_ANDROID_CLIENT_ID: ${{ vars.TRUECALLER_ANDROID_CLIENT_ID }}
       PALATEO_SIGN_RELEASE: ${{ inputs.signed && 'true' || 'false' }}
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
@@ -74,6 +75,9 @@ jobs:
         shell: bash
         run: |
           [[ "$PALATEO_BUILD_NUMBER" =~ ^[1-9][0-9]{0,9}$ ]] && (( PALATEO_BUILD_NUMBER <= 2100000000 ))
+          if [[ "$PALATEO_SIGN_RELEASE" == "true" ]]; then
+            (( PALATEO_BUILD_NUMBER > 54 )) || { echo "Build number must exceed published build 54; check Play Console for newer uploads."; exit 1; }
+          fi
       - run: npm --prefix mobile ci
       - name: Bundle web assets and sync Android
         working-directory: mobile
@@ -104,7 +108,16 @@ jobs:
           printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$ANDROID_KEYSTORE_PATH"
           cd mobile/android
           bash gradlew --no-daemon lintRelease assembleRelease bundleRelease
-          jarsigner -verify app/build/outputs/bundle/release/app-release.aab
+          jarsigner -verify app/build/outputs/bundle/release/app-release.aab > "$RUNNER_TEMP/aab-verification.txt"
+          cat "$RUNNER_TEMP/aab-verification.txt"
+          grep -q 'jar verified' "$RUNNER_TEMP/aab-verification.txt"
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --verbose --print-certs app/build/outputs/apk/release/app-release.apk
+          {
+            echo "commit=$GITHUB_SHA"
+            echo "versionCode=$PALATEO_BUILD_NUMBER"
+            echo "applicationId=in.palateo.app"
+            sha256sum app/build/outputs/bundle/release/app-release.aab app/build/outputs/apk/release/app-release.apk
+          } > app/build/outputs/release-evidence.txt
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: palateo-android-${{ inputs.signed && 'signed' || 'test' }}-${{ github.run_number }}
@@ -115,3 +128,4 @@ jobs:
             mobile/android/app/build/outputs/apk/release/*.apk
             mobile/android/app/build/outputs/bundle/release/*.aab
             mobile/android/app/build/reports/lint-results-release.html
+            mobile/android/app/build/outputs/release-evidence.txt

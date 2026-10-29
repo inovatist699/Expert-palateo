@@ -10,6 +10,7 @@ window.supabase={createClient};
 window.PalateoNative={
   getCurrentPosition:options=>Geolocation.getCurrentPosition(options),
   truecaller:{
+    prepare:()=>TruecallerAuth.prepare(),
     isAvailable:async()=>{
       try{
         if(!TruecallerAuth)return false;

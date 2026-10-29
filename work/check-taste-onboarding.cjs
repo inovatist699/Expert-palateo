@@ -58,7 +58,7 @@ globalThis.runChecks=async()=>{
  const a=answers();taste={cuisines:{primary:a.cuisine},spice_level:a.spice,budget:a.budget,ambience:{primary:a.mood},occasions:{primary:a.occasion},priorities:{primary:a.priority,dietary_preference:a.diet},max_distance_km:Number(a.distance)};
  useAccount(null);assert.equal(ranked().length,0);
  useAccount(user('new-user'));await loadCloudState();assert.equal(hasTasteProfile(),true,'complete cloud profile restores on return');
- useAccount(user('another-user'));assert.equal(hasTasteProfile(),false,'account switch clears old taste');
+ currentCraving='comfort';useAccount(user('another-user'));assert.equal(currentCraving,'all','account switch clears previous craving');assert.equal(hasTasteProfile(),false,'account switch clears old taste');
  taste=null;await loadCloudState();assert.equal(ranked().length,0);
  taste={cuisines:{primary:a.cuisine},spice_level:a.spice,budget:a.budget,ambience:{primary:a.mood},occasions:{primary:a.occasion},priorities:{primary:a.priority,dietary_preference:a.diet},max_distance_km:2};
  let release;pending=new Promise(resolve=>release=resolve);const loading=loadCloudState();

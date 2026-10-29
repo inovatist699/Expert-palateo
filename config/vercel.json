@@ -1,4 +1,7 @@
 {
+  "rewrites": [
+    {"source":"/api/truecaller/.well-known/openid-configuration","destination":"/api/truecaller?action=discovery"}
+  ],
   "redirects": [
     {
       "source": "/app",

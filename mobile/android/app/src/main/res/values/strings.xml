@@ -4,6 +4,4 @@
     <string name="title_activity_main">Palateo</string>
     <string name="package_name">in.palateo.app</string>
     <string name="custom_url_scheme">in.palateo.app</string>
-    <string name="truecaller_client_id">qnjkaprmmd59o3aembxue5mzrproqqjjeixlkil_as4</string>
-    <bool name="truecaller_enabled">false</bool>
 </resources>

@@ -4,7 +4,14 @@ def releaseBuildNumber = System.getenv('PALATEO_BUILD_NUMBER') ?: '1'
 if (!(releaseBuildNumber ==~ /[1-9][0-9]{0,9}/) || releaseBuildNumber.toLong() > 2100000000L) {
     throw new GradleException('PALATEO_BUILD_NUMBER must be an integer from 1 to 2100000000')
 }
+def truecallerClientId = System.getenv('TRUECALLER_ANDROID_CLIENT_ID') ?: 'qnjkaprmmd59o3aembxue5mzrproqqjjeixlkil_as4'
+if (!(truecallerClientId ==~ /[A-Za-z0-9_-]{8,256}/)) {
+    throw new GradleException('Invalid TRUECALLER_ANDROID_CLIENT_ID')
+}
 def signRelease = System.getenv('PALATEO_SIGN_RELEASE') == 'true'
+if (signRelease && releaseBuildNumber.toLong() <= 54L) {
+    throw new GradleException('Signed release build must be newer than published build 54; also check Play Console for newer uploads')
+}
 if (signRelease) {
     ['ANDROID_KEYSTORE_PATH', 'ANDROID_STORE_PASSWORD', 'ANDROID_KEY_ALIAS', 'ANDROID_KEY_PASSWORD'].each {
         if (!System.getenv(it)) throw new GradleException("Missing signing variable: ${it}")
@@ -20,6 +27,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode releaseBuildNumber.toInteger()
         versionName "1.0"
+        resValue "string", "truecaller_client_id", truecallerClientId
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.

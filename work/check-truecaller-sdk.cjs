@@ -15,7 +15,7 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
   assert.ok(buildGradle.includes('com.truecaller.android.sdk:truecaller-sdk:3.3.0'), 'Must include Truecaller SDK dependency in app/build.gradle');
 
   const stringsXml = read('mobile/android/app/src/main/res/values/strings.xml');
-  assert.ok(stringsXml.includes('truecaller_client_id'), 'strings.xml must define truecaller_client_id');
+  assert.match(buildGradle, /resValue "string", "truecaller_client_id", truecallerClientId/, 'Client ID must be generated from the release configuration');
 
   const manifestXml = read('mobile/android/app/src/main/AndroidManifest.xml');
   assert.ok(manifestXml.includes('com.truecaller.android.sdk.ClientId'), 'AndroidManifest.xml must declare com.truecaller.android.sdk.ClientId meta-data');
@@ -31,7 +31,8 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
   assert.match(pluginJava, /activeState.equals\(data.getState\(\)\)/, 'OAuth state must match');
   assert.match(pluginJava, /TcSdk.initAsync/);
   assert.match(pluginJava, /setOAuthScopes\(new String\[\]\{"phone", "openid"\}\)/, 'Only approved identity and phone scopes');
-  assert.match(stringsXml, /truecaller_enabled">false/);
+  assert.match(pluginJava, /void prepare\(PluginCall call\)/, 'SDK initializes only after the shared backend availability check');
+  assert.match(pluginJava, /activeCall == call/,'Timeout must not reject a newer request');
   assert.doesNotMatch(stringsXml, /palateo_android_client_id/);
 
   const mainActivity = read('mobile/android/app/src/main/java/in/palateo/app/MainActivity.java');
@@ -108,13 +109,13 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
     assert.equal((await fetch('http://127.0.0.1:'+server.address().port+'/health')).status,200);
   } finally { await new Promise(resolve=>server.close(resolve)); }
 
-  const context = vm.createContext({});
+  const context = vm.createContext({isRailwayActive:()=>false,fetch:async()=>({ok:true,json:async()=>({android:false,web:false})}),AbortSignal,window:{}});
   vm.runInContext(authService, context);
   await assert.rejects(()=>context.verifyWithTruecaller({phone:'+919876543210'}),/email/i);
-  assert.doesNotMatch(authViews, /data-action="truecaller-verify"/, 'Sign-in must not advertise unavailable verification');
+  assert.match(authViews, /data-action="truecaller-verify" hidden/, 'Sign-in must not advertise unavailable verification');
   assert.match(authViews, /id="authEmail"/);
   assert.match(authViews, /id="authPass"/);
-  console.log('PASS: Truecaller fails closed on both backends in every environment; no fake users, tokens, profile writes or client sign-in');
+  console.log('PASS: disabled Truecaller fails closed on both backends in every environment; no fabricated identities or sessions');
   process.exit(0);
 })().catch(err => {
   console.error('FAILED check-truecaller-sdk:', err);

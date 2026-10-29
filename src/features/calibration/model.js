@@ -1,8 +1,16 @@
-const cuisineAliases={Gujarati:['gujarati','kathiyawadi'],Punjabi:['punjabi','north indian','mughlai'],Italian:['italian','pizza','pasta','continental','european'],Cafe:['cafe','coffee','bakery'],SouthIndian:['south indian','dosa','idli'],Asian:['asian','chinese','thai','pan asian'],Dessert:['dessert','desserts','ice cream','gelato','bakery','sweets']};
+const cuisineAliases={
+ Gujarati:['gujarati','kathiyawadi','thali','farsan','khaman','dhokla','undhiyu','surti','dal baati','gujarati snacks'],
+ Punjabi:['punjabi','north indian','mughlai','tandoori','biryani','curry','dal makhani','chole bhature','kebab','modern indian','desi ghee','bhojanalay','butter chicken','paneer'],
+ Italian:['italian','pizza','pasta','woodfired pizza','risotto','pizzeria','trattoria','continental','european'],
+ Cafe:['cafe','coffee','artisan coffee','bakery','tea','chai','roasters','bakes','croissant','patisserie','espresso','brews','cold brew','brunch','sandwiches','waffles','toast'],
+ SouthIndian:['south indian','dosa','idli','vada','uttapam','filter coffee','chettinad','kerala','coastal','udupi','appam','podi'],
+ Asian:['asian','chinese','thai','pan asian','pan-asian','dim sum','sushi','japanese','ramen','bao','oriental','noodles','wok','korean','dumplings','momos'],
+ Dessert:['dessert','desserts','ice cream','gelato','bakery','sweets','kulfi','falooda','jalebi','pastry','cakes','churros','chocolate']
+};
 const cuisineLabels={Gujarati:'Gujarati',Punjabi:'North Indian',Italian:'Italian & continental',Cafe:'Café & coffee',SouthIndian:'South Indian',Asian:'Asian',Dessert:'Desserts'};
 const calibrationDishes=[
  {id:'gujarati-thali',name:'Gujarati thali',description:'A little sweet, a little savoury, with a variety of textures.',cuisine:'Gujarati',tags:['thali','regional'],diet:'veg',spice:'mild',sensoryFocus:'Sweet-Savory Balance & Texture Variety',sensoryTags:['Sweet-Savory','Multi-Texture','Mild Savory'],tasteHighlight:'Sweet-savory harmony',sensoryProfile:{umami:0.75,acidity:0.65,sweet:0.7,salt:0.65,bitter:0.2,heat:0.2,crisp:0.65,rich:0.6,aromatic:0.8,ferment:0.5}},
- {id:'dhokla',name:'Dhokla',description:'Soft, tangy steamed bites with a light tempering.',cuisine:'Gujarati',tags:['snacks','street food'],diet:'veg',spice:'mild',sensoryFocus:'OTOP1 Citrus Acidity & Steamed Sponginess',sensoryTags:['Spongy Steamed','Mustard Tempering','Tangy Fresh'],tasteHighlight:'Tangy mustard & curry leaf tempering',sensoryProfile:{umami:0.5,acidity:0.75,sweet:0.45,salt:0.6,bitter:0.2,heat:0.3,crisp:0.2,rich:0.3,aromatic:0.85,ferment:0.7}},
+ {id:'dhokla',name:'Dhokla',description:'Soft, tangy steamed bites with a light tempering.',cuisine:'Gujarati',tags:['dhokla','khaman','snacks','street food'],diet:'veg',spice:'mild',sensoryFocus:'OTOP1 Citrus Acidity & Steamed Sponginess',sensoryTags:['Spongy Steamed','Mustard Tempering','Tangy Fresh'],tasteHighlight:'Tangy mustard & curry leaf tempering',sensoryProfile:{umami:0.5,acidity:0.75,sweet:0.45,salt:0.6,bitter:0.2,heat:0.3,crisp:0.2,rich:0.3,aromatic:0.85,ferment:0.7}},
  {id:'paneer-tikka',name:'Paneer tikka',description:'Smoky grilled paneer with a warming masala.',cuisine:'Punjabi',tags:['paneer','tandoor','grill'],diet:'veg',spice:'medium',sensoryFocus:'Smoky Maillard Char & Warming Masala',sensoryTags:['Tandoor Smoke','Medium Warmth','Charred Paneer'],tasteHighlight:'Smoky charred tandoor',sensoryProfile:{umami:0.85,acidity:0.45,sweet:0.2,salt:0.7,bitter:0.25,heat:0.6,crisp:0.4,rich:0.75,aromatic:0.9,ferment:0.3}},
  {id:'butter-chicken',name:'Butter chicken',description:'A rich, creamy tomato curry with gently spiced chicken.',cuisine:'Punjabi',tags:['chicken','curry'],diet:'nonveg',spice:'mild',sensoryFocus:'Velvety Lipid Emulsion & Tomato Glutamate',sensoryTags:['Lipid Emulsion','Tomato Umami','Mild Heat'],tasteHighlight:'Creamy tomato-butter emulsion',sensoryProfile:{umami:0.95,acidity:0.45,sweet:0.4,salt:0.7,bitter:0.1,heat:0.3,crisp:0.15,rich:0.95,aromatic:0.85,ferment:0.4}},
  {id:'masala-dosa',name:'Masala dosa',description:'A crisp fermented crepe, potato filling and savoury accompaniments.',cuisine:'SouthIndian',tags:['dosa','breakfast'],diet:'veg',spice:'medium',sensoryFocus:'Lactic Fermentation Tang & Acoustic Crisp Crepe',sensoryTags:['Acoustic Crisp','Lactic Ferment','Spiced Potato'],tasteHighlight:'Golden crisp fermented crepe',sensoryProfile:{umami:0.75,acidity:0.65,sweet:0.2,salt:0.7,bitter:0.15,heat:0.55,crisp:0.95,rich:0.5,aromatic:0.85,ferment:0.85}},
@@ -21,7 +29,23 @@ const calibrationDishes=[
  {id:'paneer-kurchan',name:'Smoky paneer khurchan',description:'Wok-tossed charred paneer batons with bell peppers and roasted cumin.',cuisine:'Punjabi',tags:['paneer','kadai','tandoor'],diet:'veg',spice:'medium',sensoryFocus:'Maillard Char & Capsicum Sweet-Savory',sensoryTags:['Smoky Char','Medium Spice','Savory Paneer'],tasteHighlight:'Smoky charred bell peppers',sensoryProfile:{umami:0.85,acidity:0.35,sweet:0.25,salt:0.7,bitter:0.2,heat:0.55,crisp:0.4,rich:0.75,aromatic:0.85,ferment:0.35}},
  {id:'dim-sum-truffle',name:'Crystal wild mushroom dumplings',description:'Translucent steamed dumplings packed with wild shiitake and truffle oil.',cuisine:'Asian',tags:['dumplings','dim sum','asian'],diet:'veg',spice:'mild',sensoryFocus:'Concentrated Shiitake Glutamate & Delicate Steam',sensoryTags:['High Umami','Truffle Glaze','Delicate Texture'],tasteHighlight:'Wild shiitake & aromatic truffle',sensoryProfile:{umami:0.92,acidity:0.25,sweet:0.15,salt:0.6,bitter:0.15,heat:0.1,crisp:0.15,rich:0.55,aromatic:0.9,ferment:0.6}},
  {id:'matcha-gelato',name:'Artisanal Uji matcha gelato',description:'Slow-churned gelato with stone-ground green tea and pleasant bittersweet depth.',cuisine:'Dessert',tags:['ice cream','gelato','dessert'],diet:'veg',spice:'mild',sensoryFocus:'TAS2R Pleasant Bittersweet & Lipid Viscosity',sensoryTags:['Bittersweet Depth','Velvety Churn','Green Tea'],tasteHighlight:'Stone-ground matcha & cream',sensoryProfile:{umami:0.4,acidity:0.1,sweet:0.6,salt:0.15,bitter:0.7,heat:0.0,crisp:0.1,rich:0.85,aromatic:0.8,ferment:0.25}},
- {id:'cold-brew-tonic',name:'Citrus cold brew tonic',description:'Steeped single-origin coffee poured over sparkling tonic and fresh orange peel.',cuisine:'Cafe',tags:['coffee','cold brew','beverage'],diet:'veg',spice:'mild',sensoryFocus:'Quinine Bitterness & Bright Citrus Sparkle',sensoryTags:['Sparkling Acidity','Citrus Zest','Coffee Roast'],tasteHighlight:'Effervescent citrus & dark roast',sensoryProfile:{umami:0.2,acidity:0.8,sweet:0.35,salt:0.1,bitter:0.75,heat:0.0,crisp:0.6,rich:0.1,aromatic:0.9,ferment:0.4}}
+ {id:'cold-brew-tonic',name:'Citrus cold brew tonic',description:'Steeped single-origin coffee poured over sparkling tonic and fresh orange peel.',cuisine:'Cafe',tags:['coffee','cold brew','beverage'],diet:'veg',spice:'mild',sensoryFocus:'Quinine Bitterness & Bright Citrus Sparkle',sensoryTags:['Sparkling Acidity','Citrus Zest','Coffee Roast'],tasteHighlight:'Effervescent citrus & dark roast',sensoryProfile:{umami:0.2,acidity:0.8,sweet:0.35,salt:0.1,bitter:0.75,heat:0.0,crisp:0.6,rich:0.1,aromatic:0.9,ferment:0.4}},
+ {id:'dal-makhani',name:'Dal makhani & garlic naan',description:'Slow-simmered black lentils with churned butter and garlic naan.',cuisine:'Punjabi',tags:['dal makhani','makhani','black dal','naan'],diet:'veg',spice:'mild',sensoryFocus:'Slow-Simmered Lentil Umami & Churned White Butter',sensoryTags:['Smoked Lentils','Velvety Butter','Garlic Crisp'],tasteHighlight:'Slow-simmered black lentils & churned butter',sensoryProfile:{umami:0.92,acidity:0.35,sweet:0.25,salt:0.7,bitter:0.15,heat:0.3,crisp:0.35,rich:0.95,aromatic:0.9,ferment:0.35}},
+ {id:'chole-bhature',name:'Delhi style chole bhature',description:'Dark spiced chickpeas with pickled amla and hot puffed bhatura.',cuisine:'Punjabi',tags:['chole bhature','bhature','chole','chana bhatura'],diet:'veg',spice:'hot',sensoryFocus:'Dark Spiced Pungency & Puffed Acoustic Bhatura',sensoryTags:['Anardana Tang','Puffed Bhatura','Robust Masala'],tasteHighlight:'Dark spiced chickpea curry & fluffy bhatura',sensoryProfile:{umami:0.88,acidity:0.65,sweet:0.15,salt:0.75,bitter:0.2,heat:0.75,crisp:0.7,rich:0.8,aromatic:0.92,ferment:0.4}},
+ {id:'surti-undhiyu',name:'Surti undhiyu & puri',description:'Slow-cooked winter roots, green garlic and fenugreek muthiya.',cuisine:'Gujarati',tags:['undhiyu','muthiya','surti'],diet:'veg',spice:'medium',sensoryFocus:'Green Garlic Allium & Fenugreek Muthiya Harmony',sensoryTags:['Fenugreek Muthiya','Winter Greens','Roasted Sesame'],tasteHighlight:'Slow-cooked winter root vegetables & muthiya',sensoryProfile:{umami:0.82,acidity:0.45,sweet:0.55,salt:0.65,bitter:0.3,heat:0.45,crisp:0.4,rich:0.7,aromatic:0.92,ferment:0.35}},
+ {id:'dal-baati',name:'Dal baati churma',description:'Woodsmoke ghee-soaked baked wheat baatis with spiced panchmel lentils.',cuisine:'Gujarati',tags:['dal baati','baati','churma','rajasthani'],diet:'veg',spice:'medium',sensoryFocus:'Woodsmoke Desi Ghee & Baked Wheat Crust',sensoryTags:['Desi Ghee Crunch','Panchmel Dal','Cardamom Churma'],tasteHighlight:'Ghee-soaked baked baati & spiced lentils',sensoryProfile:{umami:0.85,acidity:0.4,sweet:0.4,salt:0.7,bitter:0.15,heat:0.5,crisp:0.85,rich:0.95,aromatic:0.88,ferment:0.3}},
+ {id:'ghee-podi-dosa',name:'Ghee podi roast dosa',description:'Crisp golden crepe roasted in pure ghee and spiced gunpowder podi.',cuisine:'SouthIndian',tags:['podi','gunpowder','ghee roast','ghee dosa'],diet:'veg',spice:'medium',sensoryFocus:'Roasted Gunpowder Pyrazines & Golden Ghee Crunch',sensoryTags:['Gunpowder Podi','Golden Ghee','Crisp Ferment'],tasteHighlight:'Nutty roasted podi spice & clarified butter',sensoryProfile:{umami:0.82,acidity:0.55,sweet:0.15,salt:0.75,bitter:0.2,heat:0.6,crisp:0.98,rich:0.8,aromatic:0.92,ferment:0.85}},
+ {id:'medu-vada',name:'Medu vada & coconut chutney',description:'Acoustic crisp lentil fritters with tempered coconut chutney.',cuisine:'SouthIndian',tags:['vada','medu vada','sambar vada'],diet:'veg',spice:'medium',sensoryFocus:'Acoustic Exterior Shear & Aerated Lentil Core',sensoryTags:['Golden Crunch','Fluffy Aeration','Tempered Coconut'],tasteHighlight:'Crackling crisp crust & tempered coconut chutney',sensoryProfile:{umami:0.75,acidity:0.45,sweet:0.15,salt:0.7,bitter:0.1,heat:0.45,crisp:0.95,rich:0.65,aromatic:0.85,ferment:0.6}},
+ {id:'burrata-bruschetta',name:'Burrata & heirloom tomato bruschetta',description:'Creamy burrata, ripe heirloom tomatoes and aged balsamic glaze.',cuisine:'Italian',tags:['burrata','bruschetta','mozzarella','crostini'],diet:'veg',spice:'mild',sensoryFocus:'Pugliese Cream Emulsion & Aged Balsamic Acidity',sensoryTags:['Fresh Burrata','Aged Acetic Glaze','Charred Sourdough'],tasteHighlight:'Creamy fresh burrata & sweet balsamic reduction',sensoryProfile:{umami:0.82,acidity:0.75,sweet:0.35,salt:0.6,bitter:0.15,heat:0.1,crisp:0.85,rich:0.88,aromatic:0.9,ferment:0.5}},
+ {id:'creamy-pesto-gnocchi',name:'Genovese pesto gnocchi',description:'Potato gnocchi tossed in fresh sweet basil pine nut pesto.',cuisine:'Italian',tags:['gnocchi','pesto','basil pesto'],diet:'veg',spice:'mild',sensoryFocus:'Fresh Basil Terpenes & Pillowy Potato Shear',sensoryTags:['Sweet Genovese Basil','Toasted Pine Nuts','Parmesan Glutamate'],tasteHighlight:'Fragrant sweet basil pesto & soft gnocchi',sensoryProfile:{umami:0.86,acidity:0.35,sweet:0.2,salt:0.7,bitter:0.25,heat:0.15,crisp:0.25,rich:0.85,aromatic:0.98,ferment:0.45}},
+ {id:'avocado-sushi-roll',name:'Truffle edamame sushi roll',description:'Short-grain seasoned rice, mineral nori, edamame and black truffle glaze.',cuisine:'Asian',tags:['sushi','maki','edamame','japanese'],diet:'veg',spice:'mild',sensoryFocus:'Seasoned Grain Glutamate & Mineral Nori Umami',sensoryTags:['Vinegared Rice','Earthy Truffle Glaze','Velvety Avocado'],tasteHighlight:'Seasoned sushi rice, nori & creamy avocado',sensoryProfile:{umami:0.88,acidity:0.6,sweet:0.25,salt:0.6,bitter:0.1,heat:0.1,crisp:0.4,rich:0.6,aromatic:0.85,ferment:0.7}},
+ {id:'rich-miso-ramen',name:'Smoky miso mushroom ramen',description:'Springy ramen noodles in rich fermented koji miso broth.',cuisine:'Asian',tags:['ramen','miso','ramen noodles'],diet:'veg',spice:'medium',sensoryFocus:'Complex Koji Fermentation & Elastic Springy Wheat',sensoryTags:['Deep Miso Broth','Tensile Noodle','Charred Scallion'],tasteHighlight:'Rich fermented koji miso broth & springy ramen',sensoryProfile:{umami:0.96,acidity:0.35,sweet:0.25,salt:0.8,bitter:0.2,heat:0.5,crisp:0.4,rich:0.82,aromatic:0.95,ferment:0.95}},
+ {id:'avocado-sourdough',name:'Crushed avocado & dukkah toast',description:'Creamy Hass avocado with Egyptian spiced seed crunch on wild sourdough.',cuisine:'Cafe',tags:['avocado','dukkah','avocado toast'],diet:'veg',spice:'mild',sensoryFocus:'Lipid Viscosity & Roasted Seed Egyptian Spices',sensoryTags:['Hass Avocado','Egyptian Dukkah','Craggy Sourdough'],tasteHighlight:'Creamy Hass avocado & toasted seed crunch',sensoryProfile:{umami:0.65,acidity:0.6,sweet:0.15,salt:0.6,bitter:0.2,heat:0.25,crisp:0.92,rich:0.78,aromatic:0.9,ferment:0.7}},
+ {id:'belgian-waffle',name:'Warm Belgian waffle & dark chocolate',description:'Golden pearl sugar waffle with molten dark chocolate ganache.',cuisine:'Cafe',tags:['waffle','waffles','belgian waffle'],diet:'veg',spice:'mild',sensoryFocus:'Caramelized Pearl Sugar & Rich Cocoa Bittersweet',sensoryTags:['Pearl Sugar Crunch','Molten Ganache','Buttery Batter'],tasteHighlight:'Golden caramelized pearl sugar & dark ganache',sensoryProfile:{umami:0.35,acidity:0.15,sweet:0.85,salt:0.35,bitter:0.45,heat:0.0,crisp:0.85,rich:0.88,aromatic:0.85,ferment:0.3}},
+ {id:'kesar-kulfi-falooda',name:'Kesar pista kulfi falooda',description:'Slow-churned rabdi kulfi with saffron, pistachios and rose syrup.',cuisine:'Dessert',tags:['kulfi','falooda','rabdi'],diet:'veg',spice:'mild',sensoryFocus:'Condensed Milk Viscosity & Retronasal Rose Saffron',sensoryTags:['Slow-Churned Rabdi','Kashmiri Saffron','Pistachio Crunch'],tasteHighlight:'Dense saffron rabdi kulfi & fragrant rose syrup',sensoryProfile:{umami:0.4,acidity:0.1,sweet:0.92,salt:0.2,bitter:0.1,heat:0.0,crisp:0.35,rich:0.96,aromatic:0.95,ferment:0.2}},
+ {id:'bombay-pav-bhaji',name:'Buttery Bombay pav bhaji',description:'Spiced mashed vegetable butter masala with sizzling butter-toasted pav.',cuisine:'Punjabi',tags:['pav bhaji','bhaji','tawa pulav','pav'],diet:'veg',spice:'hot',sensoryFocus:'Caramelized Allium Masala & Melted Amul Butter',sensoryTags:['Sizzling Pav Butter','Mashed Spiced Bhaji','Sharp Onion Crunch'],tasteHighlight:'Sizzling spiced butter bhaji & toasted pav',sensoryProfile:{umami:0.88,acidity:0.65,sweet:0.2,salt:0.8,bitter:0.15,heat:0.8,crisp:0.4,rich:0.92,aromatic:0.95,ferment:0.35}},
+ {id:'dahi-puri-chaat',name:'Crisp dahi sev puri',description:'Crisp hollow puris filled with spiced potatoes, chilled sweet curd and tamarind.',cuisine:'Gujarati',tags:['chaat','dahi puri','pani puri','sev puri','bhel'],diet:'veg',spice:'medium',sensoryFocus:'Multi-Phase Acoustic Shatter & Chilled Acid-Sweet',sensoryTags:['Acoustic Shatter','Velvety Chilled Curd','Tamarind Reduction'],tasteHighlight:'Crisp hollow puri burst, sweet curd & tangy tamarind',sensoryProfile:{umami:0.7,acidity:0.8,sweet:0.65,salt:0.7,bitter:0.1,heat:0.45,crisp:0.98,rich:0.65,aromatic:0.88,ferment:0.65}},
+ {id:'chipotle-bean-tacos',name:'Smoky chipotle & charred corn tacos',description:'Warm corn tortillas with smoky black beans, roasted corn and lime crema.',cuisine:'Italian',tags:['tacos','taco','nachos','mexican'],diet:'veg',spice:'medium',sensoryFocus:'Woodsmoke Chipotle Capsaicin & Charred Sweet Corn',sensoryTags:['Nixtamal Corn Tortilla','Smoky Chipotle','Zesty Lime Slaw'],tasteHighlight:'Charred corn salsa, smoky beans & lime crema',sensoryProfile:{umami:0.78,acidity:0.75,sweet:0.35,salt:0.7,bitter:0.15,heat:0.65,crisp:0.6,rich:0.6,aromatic:0.92,ferment:0.45}}
 ];
 let dishCalibrationIndex=0,lastCalibratedDish=null,dishRevision=0,dishSyncStatus='',detailRestaurantId=null,detailOrigin='home',detailTrigger=null;
 function normalizeDishFeedback(value){
@@ -110,19 +134,75 @@ function dishSensoryMatchScore(d,r){
 }
 function venueCalibratedDishes(r){
  const available=availableCalibrationDishes();
- let matching=available.filter(d=>dishAffinity(r,d)>0);
- if(!matching.length){
-  const rCuisines=[...(r.c||[]),...(r.t||[])].map(x=>String(x).toLowerCase());
-  matching=available.filter(d=>{
-   const aliases=cuisineAliases[d.cuisine]||[String(d.cuisine).toLowerCase()];
-   return aliases.some(a=>rCuisines.some(rc=>rc.includes(a)));
-  });
+ const isVegVenue = (typeof isPureVegRestaurant === 'function' && isPureVegRestaurant(r)) || r.isPureVeg === true || (typeof restaurantDietaryEvidence === 'function' && restaurantDietaryEvidence(r).pureVegetarian);
+ const dietEligible = available.filter(d => isVegVenue ? (d.diet === 'veg') : true);
+
+ const rWords = [r.name, ...(r.c||[]), ...(r.t||[]), ...(r.review_insights||[]), r.description, r.why].filter(Boolean).map(x => String(x).toLowerCase());
+ const rText = rWords.join(' ');
+ const genericTags = new Set(['street food', 'fast food', 'snacks', 'breakfast', 'regional', 'comfort', 'desserts', 'curry']);
+ const primaryCuisine = (r.c && r.c.length) ? String(r.c[0]).toLowerCase() : '';
+
+ const scored = dietEligible.map(d => {
+  let score = 0;
+  const affinity = dishAffinity(r, d);
+  const specificMatches = d.tags.filter(t => !genericTags.has(t) && (rWords.some(w => w.includes(t)) || rText.includes(t)));
+  const genericMatches = d.tags.filter(t => genericTags.has(t) && (rWords.some(w => w.includes(t)) || rText.includes(t)));
+  const fitsCuisine = cuisineFits(r, d.cuisine);
+  const fitsPrimary = primaryCuisine && cuisineFits({ c: [primaryCuisine] }, d.cuisine);
+
+  // Specific dish item match in venue metadata (e.g. pav bhaji, tacos, sushi, ramen, pizza, dosa)
+  if (specificMatches.length > 0) {
+   score += 120 + specificMatches.length * 30;
+  }
+
+  if (affinity >= 1) score += 60;
+  else if (affinity > 0) score += 20;
+
+  if (fitsPrimary) score += 40;
+  else if (fitsCuisine) score += 15;
+
+  if (genericMatches.length > 0 && fitsCuisine) score += 10;
+
+  return { dish: d, score, affinity, specificMatches: specificMatches.length, fitsPrimary: !!fitsPrimary };
+ });
+
+ let matching = scored.filter(x => x.score >= 20).sort((a, b) => b.score - a.score).map(x => x.dish);
+
+ if (!matching.length) {
+  const isCafe = rWords.some(w => /cafe|coffee|bakery|roast|tea|beverage/i.test(w));
+  const isSweet = rWords.some(w => /dessert|ice cream|gelato|kulfi|sweet/i.test(w));
+  const isItalian = rWords.some(w => /italian|pizza|pasta/i.test(w));
+  const isAsian = rWords.some(w => /asian|chinese|thai|japanese|sushi|dim sum|noodle/i.test(w));
+  const isSouth = rWords.some(w => /south indian|dosa|idli/i.test(w));
+  const isStreet = rWords.some(w => /chaat|street|pav bhaji|fast food|snack/i.test(w));
+
+  if (isCafe) matching = dietEligible.filter(d => d.cuisine === 'Cafe');
+  else if (isSweet) matching = dietEligible.filter(d => d.cuisine === 'Dessert');
+  else if (isItalian) matching = dietEligible.filter(d => d.cuisine === 'Italian');
+  else if (isAsian) matching = dietEligible.filter(d => d.cuisine === 'Asian');
+  else if (isSouth) matching = dietEligible.filter(d => d.cuisine === 'SouthIndian');
+  else if (isStreet) matching = dietEligible.filter(d => d.tags.some(t => ['chaat', 'pav bhaji'].includes(t)));
+  else matching = dietEligible.filter(d => cuisineFits(r, d.cuisine));
  }
- if(!matching.length)matching=available.slice(0,3);
- return matching.map(d=>({
+
+ if (!matching.length) matching = dietEligible.slice(0, 3);
+
+ return matching.map(d => ({
   ...d,
-  matchScore:dishSensoryMatchScore(d,r)
- })).sort((a,b)=>b.matchScore-a.matchScore);
+  matchScore: dishSensoryMatchScore(d, r)
+ })).sort((a, b) => {
+  const aSpecific = a.tags.filter(t => !genericTags.has(t) && (rWords.some(w => w.includes(t)) || rText.includes(t))).length;
+  const bSpecific = b.tags.filter(t => !genericTags.has(t) && (rWords.some(w => w.includes(t)) || rText.includes(t))).length;
+  if (aSpecific !== bSpecific) return bSpecific - aSpecific;
+
+  const aPrimary = primaryCuisine && cuisineFits({ c: [primaryCuisine] }, a.cuisine);
+  const bPrimary = primaryCuisine && cuisineFits({ c: [primaryCuisine] }, b.cuisine);
+  if (aPrimary !== bPrimary) return aPrimary ? -1 : 1;
+
+  const affA = dishAffinity(r, a), affB = dishAffinity(r, b);
+  if (affA !== affB) return affB - affA;
+  return b.matchScore - a.matchScore;
+ });
 }
 function dishSensoryWhy(d,r){
  const {vector:u}=computeUserTasteVector();

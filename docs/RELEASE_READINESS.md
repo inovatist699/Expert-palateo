@@ -1,6 +1,15 @@
-# Release readiness — 15 October 2026
+# Release readiness — 26 October 2026
 
-Status: Android release artifacts built and signed; **not cleared for public launch or store submission**. The owner approved `in.palateo.app` and deferred iOS on 15 October 2026. The active CI workflow builds Android only. Android version 1.0/build 7 has a verified signed AAB and universal release APK from successful CI run 38650305041. APK v2/v3 signatures match the locally generated upload certificate.
+Status: **not yet cleared for Play submission or Truecaller activation**. The current
+public website and manual Android download are version 1.0/build 54, released on
+25 October 2026 from main `1604a8d`. The newer Truecaller candidate is based on PR
+#22 and has not been released. The earlier build-7 evidence below is historical.
+
+Remaining external gates: Truecaller approval and Play signing-certificate
+registration, hosted Supabase custom provider (currently absent), real Android
+verification, existing upload signing credentials, and Play Console access/forms.
+Use a build number above 54 and above every existing Play upload. API 36 is
+already configured. Successful CI is not evidence of physical-device behavior.
 
 ## Implemented
 
@@ -17,7 +26,7 @@ Status: Android release artifacts built and signed; **not cleared for public lau
 ## Required before submission
 
 1. Test the signed APK on real Android devices: fresh install, returning login, password recovery, quiz, saved places, Love/Pass/undo, denied location, network loss, foreground/background, keyboard/safe areas, screen reader, and deletion. Browser tests and successful compilation do not certify these native behaviors. iOS checks are deferred.
-2. The Android API 36 AAB and universal APK are signed and verified. For future signed CI exports, configure the four Android secrets documented in `mobile/README.md`. Keep the upload key backed up securely and confirm it matches the package's registered upload certificate before uploading.
+2. The published build-54 artifacts are separate from this unreleased candidate. Produce and verify a newly signed Android API 36 AAB and APK for the final candidate. For future signed CI exports, configure the four Android secrets documented in `mobile/README.md`. Keep the upload key backed up securely and confirm it matches the package's registered upload certificate before uploading.
 3. Deploy the frontend and API candidate to staging, then verify the full hosted flow. Public URLs must serve this release: `https://palateo.in/privacy/`, `/support/`, `/delete-account/`. Configure the hosted Palo API's authenticated, network-reachable gateway. The local OmniRoute process is not production hosting.
 4. Verify production secrets, database backups/restore and auth email delivery. If a previous backend deployment seeded the published demonstration account, rotate its credential or remove that account after confirming ownership. Removal of seed code does not change an existing account.
 5. Audit venue data and image rights. The catalogue currently contains snapshot/illustrative information; remove or clearly label any samples and unverified social activity before public launch. Verify every city/store claim against available data.
@@ -45,7 +54,7 @@ Suggested category: Food & Drink. Confirm the final rating using each store's qu
 
 | Data | Purpose / handling to verify |
 | --- | --- |
-| Name, email, optional phone, account ID | Account functionality; linked to account; Supabase or configured Better Auth backend |
+| Name, email, optional phone, verified Truecaller phone (when enabled), account ID | Account functionality; linked to account; Supabase or configured Better Auth backend; Truecaller verification when enabled |
 | Taste choices, ratings, saves, follows, account events | Functionality and personalization; linked to account |
 | Palo text and preference context | Optional live AI provider processing after permission; device memory up to 25 episodes/30 days |
 | Location | Optional foreground city selection on device; inspect map-provider requests and final build before declaring collection status |

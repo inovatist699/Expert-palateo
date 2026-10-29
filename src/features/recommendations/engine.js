@@ -21,10 +21,20 @@ const cuisines=list(r.c||r.cuisines),ambience=list(r.a||r.ambience_tags),occasio
 const preferenceFactors=[];
 const addFactor=(label,weight,factor,matchLabel)=>{preferenceFactors.push({label,weight,factor});if(factor>0.45&&matchLabel)why.push(matchLabel);else if(factor<-.45)why.push(label+' differs from your preference')};
 const wordMatch=(values,terms)=>values.some(x=>terms.some(term=>x===term||x.includes(term)));
+let cuisineMismatchPenalty=0;
 if(preferredCuisines(a).length){
- const hit=preferredCuisines(a).some(key=>cuisineFits(r,key));
+ const userPrefCuisines=preferredCuisines(a);
+ const hit=userPrefCuisines.some(key=>cuisineFits(r,key));
+ const primaryCuisines=(r.c||[]).slice(0,2).map(x=>String(x).toLowerCase());
+ const primaryTags=(r.t||[]).slice(0,3).map(x=>String(x).toLowerCase());
+ const isPrimaryHit=userPrefCuisines.some(key=>{
+  const aliases=cuisineAliases[key]||[String(key).toLowerCase()];
+  return aliases.some(term=>primaryCuisines.some(c=>c.includes(term))||primaryTags.some(t=>t.includes(term)));
+ });
  const known=cuisines.some(x=>!['restaurant','fast food','food court'].includes(x));
- addFactor('Cuisine',a.priority==='food'?32:24,hit?1:known?-0.7:0,'One of your favourite cuisines');
+ const factor=isPrimaryHit?1:hit?0.7:known?-0.85:0;
+ addFactor('Cuisine',a.priority==='food'?32:24,factor,'One of your favourite cuisines');
+ if(!hit&&known)cuisineMismatchPenalty=10;
 }
 const budgetRanks={under_500:0,'500_1000':1,'1000_2000':2,'2000_plus':3};
 if(a.budget&&Object.hasOwn(budgetRanks,a.budget)){
@@ -55,6 +65,7 @@ if(a.priority==='value'){const factor=!Object.hasOwn(budgetRanks,r.p)?0:budgetRa
 const distanceKm=venueDistanceKm(r),travelRange=Number(a.distance);
 let totalWeight=preferenceFactors.reduce((sum,x)=>sum+x.weight,0),preferenceScore=totalWeight?preferenceFactors.reduce((sum,x)=>sum+x.factor*x.weight,0)/totalWeight:0;
 let s=55+preferenceScore*36;
+if(cuisineMismatchPenalty>0)s-=cuisineMismatchPenalty;
 // GPS enriches a match without changing the denominator of its taste score.
 if(distanceKm!==null){const proximity=Math.max(0,1-distanceKm/(Number.isFinite(travelRange)&&travelRange>0?travelRange:10));s+=3*proximity;addFactor('Distance',0,proximity,'Nearby · '+distanceKm.toFixed(1)+' km away')}
 /* Supported review quality is bounded and applies alongside every taste priority. */
@@ -69,6 +80,51 @@ const dishDelta=dishAdjustment(r);s+=dishDelta;
 const topCal=venueCalibratedDishes(r)[0];
 if(dishDelta>=1){why.unshift('Your dish preferences favour this cuisine');if(topCal&&topCal.matchScore>=88)why.unshift('Palate fit: '+dishSensoryWhy(topCal,r).replace(/^Calibrated for your love of /,''));}
 else if(dishDelta<=-1)why.push('Your dish passes lower this estimate');if(topCal)preferenceFactors.push({label:'Sensory Palate Fit',weight:0,factor:(topCal.matchScore-50)/50,matchLabel:topCal.matchScore+'% sensory fit ('+topCal.name+')'});if(typeof getRankedTasteTwins==='function'){const topTwin=getRankedTasteTwins()[0];if(topTwin&&topTwin.dynamicMatch>=88){const specificHit=topTwin.likes.some(id=>{const d=calibrationDishes.find(x=>x.id===id);return d&&dishAffinity(r,d)>=1;});if(specificHit&&dishDelta>=0){why.push('Taste twin pick · '+topTwin.name+' ('+topTwin.dynamicMatch+'% match)');}}}
+
+let rReelsMatchPct=null;
+if(typeof reelsTwoTowerTasteScore==='function'&&(typeof hasTasteProfile!=='function'||hasTasteProfile())){
+ const reelsMatch=reelsTwoTowerTasteScore(r);
+ if(reelsMatch&&reelsMatch.delta){
+  let rDelta=reelsMatch.delta;
+  if(s>93&&rDelta>0)rDelta=rDelta*Math.max(0,(96-s)/3);
+  s+=rDelta;
+  rReelsMatchPct=reelsMatch.reelMatchPct;
+  if(reelsMatch.reelMatchPct>=88&&!why.some(w=>w.includes('Palate fit'))){
+   why.push('🧬 '+reelsMatch.reelMatchPct+'% Latent Palate fit');
+  }
+ }
+}
+
+let rCravingFit=null;
+const activeCravingKey=(typeof currentCraving!=='undefined'&&currentCraving!=='all')?currentCraving:(state?.activeCraving&&state.activeCraving!=='all'?state.activeCraving:null);
+if(activeCravingKey&&typeof getRealTimeCravingBoost==='function'){
+ const cFit=getRealTimeCravingBoost(r,activeCravingKey);
+ if(cFit&&cFit.fits){
+  s+=cFit.boost;
+  rCravingFit=cFit;
+  why.unshift('⚡ Craving: '+cFit.label);
+ }
+}
+
+let rTasteTwinPick=null;
+if(typeof getTasteTwinLookalike==='function'&&(typeof hasTasteProfile!=='function'||hasTasteProfile())){
+ const twinPick=getTasteTwinLookalike(r);
+ if(twinPick){
+  rTasteTwinPick=twinPick;
+  s+=1.8;
+  why.push('🧬 '+twinPick.matchPct+'% Taste Twin pick ('+twinPick.twinName+')');
+ }
+}
+
+let rIsReelDiscovery=false;
+if(typeof getBanditExplorationBonus==='function'&&(typeof hasTasteProfile!=='function'||hasTasteProfile())){
+ const explore=getBanditExplorationBonus(r);
+ if(explore>0){
+  s+=explore;
+  rIsReelDiscovery=true;
+ }
+}
+
 const hasHours=!!(r.openTiming||r.hours||r.timing);
 if(hasHours&&typeof getVenueOpenStatus==='function'){
  const openInfo=getVenueOpenStatus(r);
@@ -101,7 +157,7 @@ if(f[r.id]==='visited'){s+=4;why.unshift('You visited this place')}
 if(dietConflict)s=Math.min(s,35);
 s=Math.max(1,Math.min(99,s));
 if(!why.length)why.push('Matches your overall palate');
-return {...r,distanceKm,description:r.description||(typeof r.why==='string'?r.why:''),rankScore:s,score:Math.round(s),why,matchBreakdown:preferenceFactors};
+return {...r,distanceKm,description:r.description||(typeof r.why==='string'?r.why:''),rankScore:s,score:Math.round(s),why,matchBreakdown:preferenceFactors,reelsMatchPct:rReelsMatchPct,cravingFit:rCravingFit,tasteTwinPick:rTasteTwinPick,isReelDiscovery:rIsReelDiscovery};
 }
 function applyDiversityReranking(candidates){
  if(!Array.isArray(candidates)||candidates.length<=2)return candidates;
@@ -110,19 +166,31 @@ function applyDiversityReranking(candidates){
  const selected=[];
  const unselected=pool.slice();
  selected.push(unselected.shift());
+ const getBrandKey=r=>String(r.name||'').replace(/\s*\([^)]*\)|\s*-\s*.*|\s*,\s*.*$/i,'').trim().toLowerCase().split(' ')[0];
  const getPrimaryCuisine=r=>{const c=r.c||r.cuisines;return (Array.isArray(c)&&c.length)?String(c[0]).toLowerCase().trim():''};
  const getPrimaryTags=r=>{const t=r.t||r.tags;return (Array.isArray(t)&&t.length)?t.slice(0,3).map(x=>String(x).toLowerCase().trim()):[]};
+ const userPrefs=(typeof preferredCuisines==='function'&&typeof state!=='undefined'&&state?.answers)?preferredCuisines(state.answers):[];
+ const hasPrefs=userPrefs.length>0;
+ const matchesPref=r=>hasPrefs?userPrefs.some(k=>cuisineFits(r,k)):true;
  while(unselected.length>0){
   const last1=selected[selected.length-1],last2=selected.length>=2?selected[selected.length-2]:null;
   let bestIdx=0,bestMmrScore=-Infinity;
+  const anyPrefLeft=hasPrefs&&unselected.some(u=>matchesPref(u));
   for(let i=0;i<unselected.length;i++){
-   const cand=unselected[i],candCuisine=getPrimaryCuisine(cand),candTags=getPrimaryTags(cand);
+   const cand=unselected[i],candCuisine=getPrimaryCuisine(cand),candTags=getPrimaryTags(cand),candBrand=getBrandKey(cand);
    let penalty=0;
-   if(candCuisine&&candCuisine===getPrimaryCuisine(last1))penalty+=3.5;
-   else if(last2&&candCuisine&&candCuisine===getPrimaryCuisine(last2))penalty+=1.5;
-   const last1Tags=getPrimaryTags(last1),sharedTags=candTags.filter(tag=>last1Tags.includes(tag));
-   if(sharedTags.length>=2)penalty+=1.5;
-   const effectivePenalty=Math.min(penalty,4.5);
+   // Deduplicate same-brand chains in top recommendations
+   if(candBrand.length>=3&&selected.some(s=>getBrandKey(s)===candBrand))penalty+=6.0;
+   // Never allow diversity penalty to push unrelated cuisine ahead of user's preferred cuisines
+   if(hasPrefs&&!matchesPref(cand)&&anyPrefLeft){
+    penalty+=12.0;
+   }else{
+    if(candCuisine&&candCuisine===getPrimaryCuisine(last1))penalty+=hasPrefs?1.5:3.5;
+    else if(last2&&candCuisine&&candCuisine===getPrimaryCuisine(last2))penalty+=hasPrefs?.8:1.5;
+    const last1Tags=getPrimaryTags(last1),sharedTags=candTags.filter(tag=>last1Tags.includes(tag));
+    if(sharedTags.length>=2)penalty+=1.2;
+   }
+   const effectivePenalty=Math.min(penalty,14.0);
    const mmrScore=(cand.rankScore??cand.score)-effectivePenalty;
    if(mmrScore>bestMmrScore){bestMmrScore=mmrScore;bestIdx=i}
   }

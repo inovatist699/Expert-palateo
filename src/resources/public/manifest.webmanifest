@@ -1,0 +1,58 @@
+{
+  "id": "in.palateo.app",
+  "name": "Palateo: Food & Restaurant Discovery",
+  "short_name": "Palateo",
+  "description": "Discover restaurants, cafés, and hidden culinary gems across Indian metropolitan cities shaped by your taste genome.",
+  "start_url": "/app/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0c393b",
+  "theme_color": "#0c393b",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["food", "lifestyle", "navigation"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "For You Matches",
+      "short_name": "Matches",
+      "description": "Real-time personalized restaurant matches",
+      "url": "/app/",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Palate Studio",
+      "short_name": "Palate",
+      "description": "Live taste calibration and sensory genome",
+      "url": "/app/?page=profile",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Saved Places",
+      "short_name": "Saved",
+      "description": "Your saved restaurants and personal dining map",
+      "url": "/app/?page=saved",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}

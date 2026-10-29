@@ -34,7 +34,13 @@ Keep the keystore and passwords backed up securely. Local files in `mobile/signi
 
 After review and merge, open Actions → Android builds → Run workflow, choose `main`, enable `signed`, and enter a positive build number higher than any prior Play upload (maximum 2100000000). Signed runs produce a release APK and AAB. Marketing version is currently 1.0. Signing files are removed after the signing step on disposable hosted runners. No workflow publishes to Play Console.
 
-The release AAB from successful CI run 38650305041 was signed locally as version 1.0, build 7. Google's bundletool generated a universal release APK from that same bundle. AAB verification passed; APK v2/v3 signatures passed and matched the upload certificate. Physical-device and Play internal-track testing remain pending.
+The latest recorded public release is version 1.0, build 54 (25 October 2026).
+Signed builds now reject version codes at or below 54; also check Play Console
+for any newer uploaded codes before choosing the next one. Signed CI verifies
+both AAB and APK signatures and retains the source commit, version code and
+artifact SHA-256 hashes in `release-evidence.txt`. It still requires the existing
+upload keystore; do not replace the signing identity to bypass missing secrets.
+For Play-specific Truecaller credentials, see `docs/TRUECALLER.md`.
 
 ## Android launch checks
 

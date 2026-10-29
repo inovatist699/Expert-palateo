@@ -323,3 +323,24 @@
 .studioApp .streetMapFrame .zestMapControls{display:flex;flex-direction:column;gap:1px;border:1px solid #dadce0;border-radius:10px;box-shadow:0 2px 8px #3c404333;overflow:hidden;background:#fff}
 .studioApp .streetMapFrame .zestMapBtn{min-width:44px;min-height:44px;border:0;border-radius:0;background:#fff;color:#3c4043;box-shadow:none}
 .studioApp .streetMapFrame .zestMapBtn:hover{background:#f1f3f4}.studioApp .streetMapFrame .zestMapBtn:focus-visible{outline:3px solid #1a73e8;outline-offset:-3px}
+
+/* Keep the taste quiz readable when the dark studio theme is active. */
+.studioApp .onboarding-screen .studioChoices .choice{background:#20373b;color:#f7fbfc;border-color:#638e97}
+.studioApp .onboarding-screen .studioChoices .choice:hover{background:#294950;color:#f7fbfc;border-color:#ffc64f}
+.studioApp .onboarding-screen .studioChoices .choice.active{background:#ffc64f!important;color:#20373b!important;border-color:#ffc64f!important}
+.studioApp .onboarding-screen .choice small{color:inherit}
+.studioApp .onboarding-screen .tasteStep span:last-child{color:#bed6db}
+.studioApp .onboarding-screen .progress{background:#45646a}
+.studioApp .onboarding-screen .progress i{background:#ffc64f}
+.studioApp .app:has(.onboarding-screen){height:auto;overflow:visible;padding:0 16px;box-sizing:border-box}
+
+/* Browser toolbar changes must not resize the map while results are scrolled.
+   The sheet owns vertical scrolling; the card rail only scrolls horizontally. */
+@media(min-height:601px) and (max-width:839px){
+ .studioApp[data-page=home]:has(.homeMapView){height:100svh;overflow:hidden;overscroll-behavior-y:none}
+ .studioApp[data-page=home] .app:has(.homeMapView){height:100svh;min-height:0;padding:0;overflow:hidden}
+ .studioApp .homeMapView{height:calc(100svh - 92px - env(safe-area-inset-bottom));min-height:0;overflow:hidden}
+ .studioApp .homeMapView .streetMapFrame{flex:0 0 36%;min-height:160px}
+ .studioApp .homeMapView .homeRecommendations{flex:1;min-height:0;height:auto;overflow-y:auto;overscroll-behavior-y:contain;display:block;padding-bottom:16px!important}
+ .studioApp .homeMapView .restaurantGrid{flex:none;height:auto!important;overflow-y:hidden!important;align-items:stretch}
+}

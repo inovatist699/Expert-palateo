@@ -33,5 +33,8 @@ const root=path.resolve(__dirname,'..'),read=file=>fs.readFileSync(path.join(roo
  await palo({method:'OPTIONS',headers:{origin:'capacitor://localhost'}},res);assert.equal(code,204);assert.equal(headers['Access-Control-Allow-Origin'],'capacitor://localhost');
  headers={};await palo({method:'OPTIONS',headers:{origin:'https://untrusted.example'}},res);assert.equal(code,405);assert.equal(headers['Access-Control-Allow-Origin'],undefined);
  for(const page of ['legal/delete-account/index.html','pages/support/index.html'])assert.ok(read('src/'+page).includes('palateo.com@gmail.com'));
+ const downloads=read('src/pages/downloads/index.html');
+ for(const link of ['Palateo-release.apk','Palateo-release.aab','release.json','SHA256SUMS.txt','RELEASE_NOTES.md'])assert.ok(downloads.includes('href=\"'+link+'\"'));
+ assert.equal(JSON.parse(read('src/app/manifest.json')).publicFiles['pages/downloads/index.html'],'downloads/index.html');
  console.log('PASS: production configuration, no seeded credentials, native config, deletion, consent/revocation blocks AI traffic, exact native CORS');
 })().catch(error=>{console.error(error);process.exit(1)});

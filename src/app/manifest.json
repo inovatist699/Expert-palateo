@@ -90,6 +90,8 @@
     "resources/public/og-image.png": "og-image.png",
     "resources/public/robots.txt": "robots.txt",
     "resources/public/sitemap.xml": "sitemap.xml",
+    "resources/public/manifest.webmanifest": "manifest.webmanifest",
+    "resources/public/icon-192.png": "icon-192.png",
     "resources/public/vendor/sentry-11.4.0.min.js": "vendor/sentry-11.4.0.min.js",
     "shared/ui/discovery-experience.js": "app/discovery-experience.js",
     "features/companion/controller.js": "app/companion.js",
@@ -103,6 +105,7 @@
     "pages/support/index.html": "support/index.html",
     "shared/ui/studio-screens.js": "app/studio-screens.js",
     "styles/studio.css": "app/studio.css",
-    "server/api/truecaller.js": "api/truecaller.js"
+    "server/api/truecaller.js": "api/truecaller.js",
+    "pages/downloads/index.html": "downloads/index.html"
   }
 }

@@ -11,6 +11,13 @@ function closePlacePreview(){
  const id=selectedPinId;selectedPinId=null;home();
  [...document.querySelectorAll('[data-action="'+placePreviewOrigin+'"]')].find(el=>el.dataset.restId===id)?.focus({preventScroll:true});
 }
+function setCraving(c){
+ if(typeof triggerHaptic==='function')triggerHaptic('light');
+ currentCraving = (currentCraving===c)?'all':c;
+ homeLimit=12;
+ selectedPinId=null;
+ go('home',{keepScroll:true});
+}
 document.addEventListener('click',event=>{
  const target=event.target instanceof Element?event.target:null,control=target?.closest('[data-action]');
  if(!target)return;
@@ -31,6 +38,7 @@ document.addEventListener('click',event=>{
   case 'cuisine': setDiscoverCuisine(d.cuisine); break;
   case 'pure-veg': togglePureVegFilter(); break;
   case 'home-cuisine': if(d.cuisine)setHomeCuisine(d.cuisine); break;
+  case 'set-craving': if(d.craving)setCraving(d.craving); break;
   case 'load-more-home': loadMoreHome(); break;
   case 'home-view': if(d.view){homeView=d.view;home();document.querySelector('[data-action="home-view"][data-view="'+d.view+'"]')?.focus({preventScroll:true})} break;
   case 'select-pin': if(d.restId){placePreviewOrigin='select-pin';if(selectedPinId===d.restId)closePlacePreview();else{selectedPinId=d.restId;home();focusPlacePreview()}} break;
@@ -42,7 +50,7 @@ document.addEventListener('click',event=>{
   case 'close-passport': closePalatePassportModal(); break;
   case 'set-profile-budget': if(['','under_500','500_1000','1000_2000','2000_plus'].includes(d.budget)){state.answers.budget=d.budget;persistProfileFilters();profile();toast(d.budget?'Budget set to '+price(d.budget):'Budget preference cleared');} break;
   case 'set-profile-distance': if(d.distance==='any')setProfileDistance(51); break;
-  case 'dish-rate': rateDish(d.dishId,d.dishValue,d.source); break;
+  case 'dish-rate': if(typeof triggerHaptic==='function')triggerHaptic('medium');rateDish(d.dishId,d.dishValue,d.source); break;
   case 'dish-undo': if(state.dishFeedback?.[d.dishId])rateDish(d.dishId,state.dishFeedback[d.dishId],'edit'); break;
   case 'dish-next': dishCalibrationIndex++;go('profile',{keepScroll:true});document.getElementById('calibrationDishName')?.focus({preventScroll:true}); break;
   case 'dish-retry': retryDishSync(); break;
@@ -90,6 +98,7 @@ document.addEventListener('click',event=>{const target=event.target instanceof E
 document.addEventListener('click',event=>{
 const target=event.target instanceof Element?event.target:null,button=target?.closest('[data-rest-action]');
 if(!button)return;
+if(typeof triggerHaptic==='function')triggerHaptic('medium');
 const id=button.getAttribute('data-rest-id'),action=button.getAttribute('data-rest-action');
 let task;
 if(action==='like')task=rateV5(id,'like');

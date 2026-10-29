@@ -141,3 +141,15 @@ registration and live interoperability are still pending. Existing PR #22 native
 and web checks passed on `ace98ad`; this is compilation/regression evidence only.
 The current production deployment is `dpl_D6jdsqyxLoyVxNcWQxfAd8nkMH73` (build 54).
 No activation flags were changed during this readiness work.
+
+### Coordinated release preparation — 29 October 2026
+
+The safe authentication implementation is reconciled with the Reels/craving/PWA
+source from `9c82bb0` and the mobile layout fixes from `de6f543`. The downloads
+index is now source-controlled and points to stable signed artifact filenames;
+release packaging must include the matching APK, AAB, checksums, notes and JSON.
+
+Truecaller remains disabled. Hosted custom-provider registration, phone-only web
+registration and real device login/session/linking remain unverified. The Vercel
+containment rule must remain active until these gates pass; publishing this code
+does not certify or activate the provider. Email authentication remains available.

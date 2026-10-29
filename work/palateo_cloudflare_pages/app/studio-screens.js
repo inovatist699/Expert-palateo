@@ -9,16 +9,73 @@ function studioSetPaloVisible(visible){
  try{localStorage.setItem('palateo-palo-visible',String(visible))}catch{}
  document.querySelectorAll('[data-studio-palo-toggle]').forEach(button=>button.setAttribute('aria-checked',String(visible)));
 }
+
+function renderRealtimeCravingBar(){
+ const ctx = typeof getTimeOfDayContext === 'function' ? getTimeOfDayContext() : { icon: '🍽️', label: 'Dining Time', timeStr: '' };
+ const active = typeof currentCraving !== 'undefined' ? currentCraving : 'all';
+ const cravings = (typeof cravingCategories !== 'undefined') ? Object.values(cravingCategories) : [];
+ return `<div class="realtimeCravingSection" aria-label="Real-time craving tuning">
+ <div class="daypartContextRow">
+  <span class="daypartPill"><span class="daypartIcon">${ctx.icon}</span> <b>${esc(ctx.label)}</b> · <small>${esc(ctx.timeStr)}</small></span>
+  <span class="cravingSub">${esc(ctx.prompt||'What are you craving right now?')}</span>
+ </div>
+ <div class="cravingChipsCarousel" role="group" aria-label="What do you want to eat right now?">
+  <button type="button" class="cravingChip ${active==='all'?'active':''}" data-action="set-craving" data-craving="all" aria-pressed="${active==='all'}">
+   <span>✨</span> <b>All Cravings</b>
+  </button>
+  ${cravings.map(c=>`<button type="button" class="cravingChip ${active===c.id?'active':''}" data-action="set-craving" data-craving="${esc(c.id)}" aria-pressed="${active===c.id}">
+   <span>${c.icon}</span> <b>${esc(c.label)}</b>
+  </button>`).join('')}
+ </div>
+ ${active!=='all'?`<div class="activeCravingNotice"><span>⚡ Prioritizing <b>${esc(cravingCategories[active]?.label||active)}</b></span><button type="button" class="clearCravingBtn" data-action="set-craving" data-craving="all" aria-label="Reset craving filter">✕ Reset</button></div>`:''}
+</div>`;
+}
+
+let studioMapHeight=220;
+let studioMapHidden=false;
+function studioApplyMapLayout(screen=document.querySelector('.homeMapView')){
+ if(!screen)return;
+ screen.style.setProperty('--studio-map-height',studioMapHeight+'px');
+ screen.classList.toggle('studioMapHidden',studioMapHidden);
+ const toggle=screen.querySelector('[data-studio-map-toggle]');
+ if(toggle){toggle.textContent=studioMapHidden?'Show map':'Hide map';toggle.setAttribute('aria-expanded',String(!studioMapHidden))}
+ const slider=screen.querySelector('[data-studio-map-height]');
+ if(slider){slider.disabled=studioMapHidden;slider.value=studioMapHeight}
+ // The map canvas needs to be measured again after changing its container.
+ requestAnimationFrame(()=>{if(typeof streetMap!=='undefined')streetMap?.resize()});
+}
+document.addEventListener('input',event=>{
+ if(!event.target.matches('[data-studio-map-height]'))return;
+ studioMapHeight=Math.max(220,Math.min(420,Number(event.target.value)||220));
+ studioApplyMapLayout();
+});
+document.addEventListener('click',event=>{
+ if(!(event.target instanceof Element)||!event.target.closest('[data-studio-map-toggle]'))return;
+ studioMapHidden=!studioMapHidden;studioApplyMapLayout();
+});
 const studioMapHome=home;
 home=function(){
  studioMapHome();
  const screen=document.querySelector('.home-screen');if(!screen)return;
  const sheet=screen.querySelector('.homeRecommendations'),header=sheet?.querySelector('.section');
  if(header)header.innerHTML=studioCity()+`<span class="studioSpotCount">${ranked().length} spots</span><button class="studioSearch" type="button" data-studio-search aria-label="Search restaurants">${studioIcon('search')}</button>`;
- if(header){const browsing=document.createElement('div');browsing.className='studioBrowseRow';browsing.innerHTML=`<h2>${sheet.querySelectorAll('.studioCard').length} places to explore</h2>${pureVegFilterControl()}`;header.after(browsing)}
+ if(header){
+  const browsing=document.createElement('div');
+  browsing.className='studioBrowseRow';
+  browsing.innerHTML=`<h2>${sheet.querySelectorAll('.studioCard').length} places to explore</h2>${pureVegFilterControl()}`;
+  header.after(browsing);
+  const cravingNode=document.createElement('div');
+  cravingNode.innerHTML=renderRealtimeCravingBar();
+  browsing.after(cravingNode.firstElementChild);
+ }
  const filters=screen.querySelector('.homeFilterChips'),toolbar=screen.querySelector('.homeMapToolbar');
  if(filters&&toolbar){filters.insertAdjacentHTML('afterbegin',`${studioPaloToggle()}<button type="button" class="filterChip" data-action="navigate" data-page="ask">${studioIcon('spark')} Ask Pal-O <span class="studioBadge">Beta</span></button><button type="button" class="filterChip" data-action="navigate" data-page="social">${studioIcon('friends')} Friends <span class="studioBadge">Soon</span></button>`);toolbar.replaceChildren(filters)}
  sheet?.querySelector('.homeEstimateNote')?.remove();
+ if(screen.classList.contains('homeMapView')){
+  const controls=document.createElement('div');controls.className='studioMapSizing';
+  controls.innerHTML='<label for="studioMapHeight">Map size</label><input id="studioMapHeight" data-studio-map-height type="range" min="220" max="420" step="20" value="'+studioMapHeight+'"><button type="button" data-studio-map-toggle aria-expanded="'+!studioMapHidden+'">Hide map</button>';
+  screen.querySelector('.streetMapFrame')?.after(controls);studioApplyMapLayout(screen);
+ }
 };
 
 function ask(){
@@ -88,6 +145,3 @@ go=function(destination,options){
 };
 document.getElementById('nav').innerHTML=studioNav.map(([key,icon,label])=>`<button type="button" data-action="navigate" data-page="${key}" id="n-${key}" aria-label="${label}${key==='social'?' — coming soon':key==='ask'?' — beta':''}"><b>${studioIcon(icon)}</b><span>${label}</span>${key==='social'||key==='ask'?`<small class="studioNavBadge">${key==='social'?'Coming soon':'Beta'}</small>`:''}</button>`).join('');
 document.body.classList.add('studioApp');
-studioSetPaloVisible(studioPaloVisible);
-document.getElementById('paloMinimizeBtn')?.click();
-if(currentUser&&hasLegalConsent(currentUser)&&hasTasteProfile())go(page);

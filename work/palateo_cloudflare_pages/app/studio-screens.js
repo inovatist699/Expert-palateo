@@ -31,6 +31,7 @@ function renderRealtimeCravingBar(){
 </div>`;
 }
 
+studioSetPaloVisible(studioPaloVisible);
 let studioMapHeight=220;
 let studioMapHidden=false;
 function studioApplyMapLayout(screen=document.querySelector('.homeMapView')){

@@ -15,7 +15,9 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   });await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));let browser;
   try{
    browser=await chromium.launch({headless:true,channel:'msedge'});const page=await browser.newPage({viewport:{width:390,height:844}});
+   await page.addInitScript(()=>localStorage.setItem('palateo-palo-visible','false'));
    await page.goto('http://127.0.0.1:'+server.address().port+'/app/');
+   assert.equal(await page.locator('body').getAttribute('data-palo-visible'),'false',surface+': saved companion visibility applies on startup');
    const button=page.locator('[data-action="truecaller-verify"]');await button.waitFor({state:'attached'});
    assert.equal(await button.isVisible(),false,surface+': disabled Truecaller must stay hidden despite button display styles');
    assert.equal(await page.locator('#authEmail').isVisible(),true);

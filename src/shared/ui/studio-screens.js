@@ -9,6 +9,28 @@ function studioSetPaloVisible(visible){
  try{localStorage.setItem('palateo-palo-visible',String(visible))}catch{}
  document.querySelectorAll('[data-studio-palo-toggle]').forEach(button=>button.setAttribute('aria-checked',String(visible)));
 }
+let studioMapHeight=220;
+let studioMapHidden=false;
+function studioApplyMapLayout(screen=document.querySelector('.homeMapView')){
+ if(!screen)return;
+ screen.style.setProperty('--studio-map-height',studioMapHeight+'px');
+ screen.classList.toggle('studioMapHidden',studioMapHidden);
+ const toggle=screen.querySelector('[data-studio-map-toggle]');
+ if(toggle){toggle.textContent=studioMapHidden?'Show map':'Hide map';toggle.setAttribute('aria-expanded',String(!studioMapHidden))}
+ const slider=screen.querySelector('[data-studio-map-height]');
+ if(slider){slider.disabled=studioMapHidden;slider.value=studioMapHeight}
+ // The map canvas needs to be measured again after changing its container.
+ requestAnimationFrame(()=>{if(typeof streetMap!=='undefined')streetMap?.resize()});
+}
+document.addEventListener('input',event=>{
+ if(!event.target.matches('[data-studio-map-height]'))return;
+ studioMapHeight=Math.max(220,Math.min(420,Number(event.target.value)||220));
+ studioApplyMapLayout();
+});
+document.addEventListener('click',event=>{
+ if(!(event.target instanceof Element)||!event.target.closest('[data-studio-map-toggle]'))return;
+ studioMapHidden=!studioMapHidden;studioApplyMapLayout();
+});
 const studioMapHome=home;
 home=function(){
  studioMapHome();
@@ -19,6 +41,11 @@ home=function(){
  const filters=screen.querySelector('.homeFilterChips'),toolbar=screen.querySelector('.homeMapToolbar');
  if(filters&&toolbar){filters.insertAdjacentHTML('afterbegin',`${studioPaloToggle()}<button type="button" class="filterChip" data-action="navigate" data-page="ask">${studioIcon('spark')} Ask Pal-O <span class="studioBadge">Beta</span></button><button type="button" class="filterChip" data-action="navigate" data-page="social">${studioIcon('friends')} Friends <span class="studioBadge">Soon</span></button>`);toolbar.replaceChildren(filters)}
  sheet?.querySelector('.homeEstimateNote')?.remove();
+ if(screen.classList.contains('homeMapView')){
+  const controls=document.createElement('div');controls.className='studioMapSizing';
+  controls.innerHTML='<label for="studioMapHeight">Map size</label><input id="studioMapHeight" data-studio-map-height type="range" min="220" max="420" step="20" value="'+studioMapHeight+'"><button type="button" data-studio-map-toggle aria-expanded="'+!studioMapHidden+'">Hide map</button>';
+  screen.querySelector('.streetMapFrame')?.after(controls);studioApplyMapLayout(screen);
+ }
 };
 
 function ask(){

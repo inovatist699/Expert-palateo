@@ -334,13 +334,24 @@
 .studioApp .onboarding-screen .progress i{background:#ffc64f}
 .studioApp .app:has(.onboarding-screen){height:auto;overflow:visible;padding:0 16px;box-sizing:border-box}
 
-/* Browser toolbar changes must not resize the map while results are scrolled.
-   The sheet owns vertical scrolling; the card rail only scrolls horizontally. */
-@media(min-height:601px) and (max-width:839px){
- .studioApp[data-page=home]:has(.homeMapView){height:100svh;overflow:hidden;overscroll-behavior-y:none}
- .studioApp[data-page=home] .app:has(.homeMapView){height:100svh;min-height:0;padding:0;overflow:hidden}
- .studioApp .homeMapView{height:calc(100svh - 92px - env(safe-area-inset-bottom));min-height:0;overflow:hidden}
- .studioApp .homeMapView .streetMapFrame{flex:0 0 36%;min-height:160px}
- .studioApp .homeMapView .homeRecommendations{flex:1;min-height:0;height:auto;overflow-y:auto;overscroll-behavior-y:contain;display:block;padding-bottom:16px!important}
- .studioApp .homeMapView .restaurantGrid{flex:none;height:auto!important;overflow-y:hidden!important;align-items:stretch}
+/* Mobile cards use natural document flow: no clipped rail or nested vertical scroll.
+   Map size is independent of browser toolbar height and can be adjusted or hidden. */
+.studioMapSizing{display:none}
+@media(max-width:839px){
+ .studioApp[data-page=home]:has(.homeMapView){height:auto;overflow:visible}
+ .studioApp[data-page=home] .app:has(.homeMapView){height:auto;min-height:100svh;overflow:visible;padding:0 0 calc(100px + env(safe-area-inset-bottom))}
+ .studioApp .homeMapView{display:flex;flex-direction:column;height:auto;min-height:0;overflow:visible}
+ .studioApp .homeMapView .streetMapFrame{flex:none;height:var(--studio-map-height,220px);min-height:0}
+ .studioApp .homeMapView.studioMapHidden .streetMapFrame{display:none}
+ .studioApp[data-page=home]:has(.homeMapView)>.paloContainer{display:none!important}
+ .studioApp .homeMapView .studioMapSizing{display:flex;align-items:center;gap:10px;padding:8px 12px;background:#142427;color:#bed6db;font-size:12px}
+ .studioMapSizing label{flex:none}
+ .studioMapSizing input{flex:1;min-width:0;min-height:44px;accent-color:#ffc64f}
+ .studioMapSizing button{min-height:44px;padding:8px 12px;background:#20373b;color:#f7fbfc;border:1px solid #638e97;border-radius:12px}
+ .studioApp .homeMapView .homeRecommendations{display:block;flex:none;height:auto;min-height:0;max-height:none;overflow:visible;margin-top:0;padding-bottom:16px!important}
+ .studioApp .homeMapView .restaurantGrid{display:grid!important;grid-template-columns:minmax(0,1fr);height:auto!important;overflow:visible!important;gap:16px!important;margin:0!important;padding:8px 0!important;scroll-snap-type:none}
+ .studioApp .homeMapView .restaurantGrid .studioCard{width:100%;min-width:0!important;max-width:100%;height:auto;scroll-snap-align:none}
+ .studioApp .homeMapView .studioCard .restnameButton,.studioApp .homeMapView .studioKnown,.studioApp .homeMapView .studioMetaRow>span:first-child{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+ .studioApp .homeMapView .studioCardActions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important}
+ .studioApp .homeMapView .studioCardActions button{min-height:44px!important;white-space:normal}
 }

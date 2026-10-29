@@ -37212,7 +37212,7 @@ function legalMetadata(consent){
 function hasLegalConsent(user){const m=user?.user_metadata||{};return m.palateo_legal_version===LEGAL_VERSION&&m.palateo_privacy_consent===true}
 function useAccount(user){
  const id=user?.id||null;
- if(state.userId!==id||(!user&&(state.profile||state.onboarded))){state={selectedCity,userId:id,answers:{},feedback:{},dishFeedback:{},saves:[],follows:[],ai:{likes:0,dislikes:0,visits:0,signals:{}}};userLocation=null;pureVegOnly=false;discoverSort='match';dishRevision++;dishCalibrationIndex=0;dishSyncStatus='';lastCalibratedDish=null;detailRestaurantId=null}
+ if(state.userId!==id||(!user&&(state.profile||state.onboarded))){state={selectedCity,userId:id,answers:{},feedback:{},dishFeedback:{},saves:[],follows:[],ai:{likes:0,dislikes:0,visits:0,signals:{}}};userLocation=null;pureVegOnly=false;currentCraving='all';discoverSort='match';dishRevision++;dishCalibrationIndex=0;dishSyncStatus='';lastCalibratedDish=null;detailRestaurantId=null}
  currentUser=user;backendReady=!!user;authRequired=!user||!hasLegalConsent(user);state.userId=id;state.backendConnected=!!supabaseClient;
  if(user&&['auth','consent'].includes(page))page='home';
  persist();

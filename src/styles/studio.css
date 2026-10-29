@@ -323,3 +323,35 @@
 .studioApp .streetMapFrame .zestMapControls{display:flex;flex-direction:column;gap:1px;border:1px solid #dadce0;border-radius:10px;box-shadow:0 2px 8px #3c404333;overflow:hidden;background:#fff}
 .studioApp .streetMapFrame .zestMapBtn{min-width:44px;min-height:44px;border:0;border-radius:0;background:#fff;color:#3c4043;box-shadow:none}
 .studioApp .streetMapFrame .zestMapBtn:hover{background:#f1f3f4}.studioApp .streetMapFrame .zestMapBtn:focus-visible{outline:3px solid #1a73e8;outline-offset:-3px}
+
+/* Keep the taste quiz readable when the dark studio theme is active. */
+.studioApp .onboarding-screen .studioChoices .choice{background:#20373b;color:#f7fbfc;border-color:#638e97}
+.studioApp .onboarding-screen .studioChoices .choice:hover{background:#294950;color:#f7fbfc;border-color:#ffc64f}
+.studioApp .onboarding-screen .studioChoices .choice.active{background:#ffc64f!important;color:#20373b!important;border-color:#ffc64f!important}
+.studioApp .onboarding-screen .choice small{color:inherit}
+.studioApp .onboarding-screen .tasteStep span:last-child{color:#bed6db}
+.studioApp .onboarding-screen .progress{background:#45646a}
+.studioApp .onboarding-screen .progress i{background:#ffc64f}
+.studioApp .app:has(.onboarding-screen){height:auto;overflow:visible;padding:0 16px;box-sizing:border-box}
+
+/* Mobile cards use natural document flow: no clipped rail or nested vertical scroll.
+   Map size is independent of browser toolbar height and can be adjusted or hidden. */
+.studioMapSizing{display:none}
+@media(max-width:839px){
+ .studioApp[data-page=home]:has(.homeMapView){height:auto;overflow:visible}
+ .studioApp[data-page=home] .app:has(.homeMapView){height:auto;min-height:100svh;overflow:visible;padding:0 0 calc(100px + env(safe-area-inset-bottom))}
+ .studioApp .homeMapView{display:flex;flex-direction:column;height:auto;min-height:0;overflow:visible}
+ .studioApp .homeMapView .streetMapFrame{flex:none;height:var(--studio-map-height,220px);min-height:0}
+ .studioApp .homeMapView.studioMapHidden .streetMapFrame{display:none}
+ .studioApp[data-page=home]:has(.homeMapView)>.paloContainer{display:none!important}
+ .studioApp .homeMapView .studioMapSizing{display:flex;align-items:center;gap:10px;padding:8px 12px;background:#142427;color:#bed6db;font-size:12px}
+ .studioMapSizing label{flex:none}
+ .studioMapSizing input{flex:1;min-width:0;min-height:44px;accent-color:#ffc64f}
+ .studioMapSizing button{min-height:44px;padding:8px 12px;background:#20373b;color:#f7fbfc;border:1px solid #638e97;border-radius:12px}
+ .studioApp .homeMapView .homeRecommendations{display:block;flex:none;height:auto;min-height:0;max-height:none;overflow:visible;margin-top:0;padding-bottom:16px!important}
+ .studioApp .homeMapView .restaurantGrid{display:grid!important;grid-template-columns:minmax(0,1fr);height:auto!important;overflow:visible!important;gap:16px!important;margin:0!important;padding:8px 0!important;scroll-snap-type:none}
+ .studioApp .homeMapView .restaurantGrid .studioCard{width:100%;min-width:0!important;max-width:100%;height:auto;scroll-snap-align:none}
+ .studioApp .homeMapView .studioCard .restnameButton,.studioApp .homeMapView .studioKnown,.studioApp .homeMapView .studioMetaRow>span:first-child{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+ .studioApp .homeMapView .studioCardActions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important}
+ .studioApp .homeMapView .studioCardActions button{min-height:44px!important;white-space:normal}
+}
